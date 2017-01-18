@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/recMenuBut"
+        android:icon="@drawable/record_icon"
+        app:showAsAction="ifRoom"
+        android:title="Record" />
+    <item
+        android:id="@+id/playMenuBut"
+        android:icon="@drawable/play_caption_icon"
+        app:showAsAction="ifRoom"
+        android:title="Play" />
+    <item
+        android:id="@+id/stopMenuBut"
+        android:icon="@drawable/stop_icon"
+        app:showAsAction="ifRoom"
+        android:title="Stop" />
+</menu>

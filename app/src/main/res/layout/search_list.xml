@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:descendantFocusability="blocksDescendants"
+    android:layout_height="match_parent">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:text="10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:textColor="@color/white"
+        android:padding="10dp"
+        android:textSize="20dp"
+        android:elevation="10dp"
+        android:id="@+id/searchHymnNum" />
+
+    <TextView
+        android:text="Sample"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="22dp"
+        android:textAllCaps="false"
+        android:padding="10dp"
+        android:id="@+id/searchLinebut"
+        android:textAlignment="textStart"
+        android:background="@color/fadedBlack"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:fontFamily="sans-serif-medium" />
+
+    <TextView
+        android:text="Sample"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16dp"
+        android:textAllCaps="false"
+        android:padding="10dp"
+        android:id="@+id/subsearchLinebut"
+        android:textAlignment="textStart"
+        android:background="@color/fadedBlack"
+        android:textColor="@color/white"
+        android:fontFamily="sans-serif-medium"
+        android:layout_below="@+id/searchLinebut"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+
+</RelativeLayout>
+
+
+</LinearLayout>

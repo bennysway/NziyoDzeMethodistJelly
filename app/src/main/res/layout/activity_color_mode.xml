@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_color_mode"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.seven.clip.nziyodzemethodist.ColorMode">
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/colorModeRadioGroup">
+
+        <RadioButton
+            android:text="Default Color Mode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/defaultColorCheck"
+            android:layout_weight="1" />
+
+        <RadioButton
+            android:text="Day"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/dayCheck"
+            android:layout_weight="1" />
+
+        <RadioButton
+            android:text="Night"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/nightCheck"
+            android:layout_weight="1" />
+    </RadioGroup>
+
+    <Button
+        android:text="Apply"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textAllCaps="false"
+        android:id="@+id/colorApply"
+        style="@style/Widget.AppCompat.Button.Colored" />
+
+    <Button
+        android:text="Cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/colorApply"
+        android:layout_alignParentRight="true"
+        android:textAllCaps="false"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/colorCancel"
+        style="@style/Widget.AppCompat.Button.ButtonBar.AlertDialog" />
+
+</RelativeLayout>

@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_credits"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.seven.clip.nziyodzemethodist.Credits">
+
+    <TextView
+        android:text="For the Methodist Church in Zimbabwe "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:id="@+id/credit1" />
+    <TextView
+        android:text="by METHOSOC."
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/credit1"
+        android:id="@+id/credit2" />
+    <TextView
+        android:text="..."
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/credit2"
+        android:id="@+id/credit3" />
+    <TextView
+        android:text="Developed by:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/credit3"
+        android:id="@+id/credit4" />
+    <TextView
+        android:text="Blessing Charumbira"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/credit4"
+        android:id="@+id/credit5" />
+
+    <TextView
+        android:text="Acknowledgements:\n"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/credit15" />
+    <TextView
+        android:text="Kudzai Charumbira and Emilda Gwerengwe for app design ideas and UX tesing.\n"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/credit15"
+        android:id="@+id/credit16" />
+    <TextView
+        android:text="syedowaisali\nCrystal Preloader animations"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/credit16"
+        android:id="@+id/credit17" />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/github_circle"
+        android:layout_below="@id/credit17"
+        android:id="@+id/credit18"/>
+
+    <TextView
+        android:text="\n\nYou can show your support by liking the app in any playstore."
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/credit18"
+        android:id="@+id/credit19" />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/thumb_up"
+        android:layout_below="@id/credit19"
+        android:id="@+id/credit20"/>
+
+    <TextView
+        android:text="\nGod Bless!"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/credit20"
+        android:id="@+id/credit21" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/blogger"
+        android:id="@+id/credit14"
+        android:layout_alignTop="@+id/credit13"
+        android:layout_alignParentRight="true" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/instagram"
+        android:id="@+id/credit13"
+        android:layout_alignTop="@+id/credit12"
+        android:layout_toLeftOf="@+id/credit14" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/phone"
+        android:id="@+id/credit12"
+        android:layout_alignTop="@+id/credit11"
+        android:layout_toLeftOf="@+id/credit13" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/google_plus"
+        android:id="@+id/credit11"
+        android:layout_below="@+id/credit5"
+        android:layout_toLeftOf="@+id/credit12" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/youtube_play"
+        android:id="@+id/credit10"
+        android:layout_alignTop="@+id/credit11"
+        android:layout_toLeftOf="@+id/credit11" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/skype"
+        android:id="@+id/credit9"
+        android:layout_alignTop="@+id/credit10"
+        android:layout_toLeftOf="@+id/credit10" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/at"
+        android:id="@+id/credit8"
+        android:layout_alignTop="@+id/credit9"
+        android:layout_toLeftOf="@+id/credit9" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/facebook"
+        android:id="@+id/credit7"
+        android:layout_alignTop="@+id/credit8"
+        android:layout_toLeftOf="@+id/credit8" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/twitter"
+        android:id="@+id/credit6"
+        android:layout_alignTop="@+id/credit7"
+        android:layout_toLeftOf="@+id/credit7" />
+
+
+</RelativeLayout>

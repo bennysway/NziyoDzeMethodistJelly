@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_remove_fav"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.seven.clip.nziyodzemethodist.DeleteCaption">
+
+
+
+    <TextView
+        android:text="TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="cursive"
+        android:textColor="@color/black"
+        android:shadowColor="@color/black"
+        android:shadowRadius="4.0"
+        android:shadowDx="0.0"
+        android:shadowDy="0.0"
+        android:gravity="center"
+        android:layout_alignParentTop="true"
+        android:padding="4dp"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/DeleteCaptionPrompt"
+        android:textSize="30sp" />
+
+    <Button
+        android:text="@string/Deny"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/DeleteCaptionNoBut"
+        style="@style/Widget.AppCompat.Button.Borderless.Colored" />
+
+    <Button
+        android:text="@string/Accept"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/DeleteCaptionYesBut"
+        android:textAllCaps="false"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        style="@style/Widget.AppCompat.Button.Colored" />
+</RelativeLayout>
+

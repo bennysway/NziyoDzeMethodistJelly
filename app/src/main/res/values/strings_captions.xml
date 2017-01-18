@@ -1,0 +1,2617 @@
+<resources>
+	<string-array name="hymn1caption">
+		<item>Doh is E flat</item>
+		<item>8.8.8.8</item>
+		<item>Troyle (2)</item>
+		<item>{|m :m .m|m :- . m|m  : f |s  :- |}</item>
+	</string-array>
+
+	<string-array name="hymn2caption">
+		<item>Doh is A</item>
+		<item>10.10.11.11</item>
+		<item>Hanover</item>
+		<item>{:s, |d :d :r |m   :- :s |d :r :t, |d :- ||}</item>
+	</string-array>
+
+
+	<string-array name="hymn3caption">
+		<item>(Ndebele 18)</item>
+		<item>Doh is G</item>
+		<item>8.8.8.8</item>
+		<item>Mwari wedu</item>
+		<item>{s, :i, :s, |d :- :m |m :r :d |r :- :- |}</item>
+	</string-array>
+
+
+	<string-array name="hymn4caption">
+		<item>Doh is E flat</item>
+		<item>11.10.11.10</item>
+		<item>o Perfect Love</item>
+		<item>{|d :-|m :s |s :- |s :s |d’ :t |t :- |l :-||}</item>
+	</string-array>
+
+
+	<string-array name="hymn5caption">
+		<item>Doh is G</item>
+		<item>7.7 neKorasi</item>
+		<item>Ever Faithful</item>
+		<item>{|d :d |r :r |m :f |r :- ||}</item>
+	</string-array>
+
+
+	<string-array name="hymn6caption">
+		<item>(Ndebele 4)</item>
+		<item>Doh is F</item>
+		<item>8.6.8.6</item>
+		<item>Dundee</item>
+		<item>{:d |m :f |s :d |r :m |f ||}</item>
+	</string-array>
+
+
+	<string-array name="hymn7caption">
+		<item>(Ndebele 15)</item>
+		<item>Doh is F</item>
+		<item>8.8.8.8</item>
+		<item>Rimington</item>
+		<item>{|m :- |r :d |s :m |r :- |r :- |d :-|}</item>
+	</string-array>
+
+
+	<string-array name="hymn8caption">
+		<item>(Ndebele 16)</item>
+		<item>Doh is F</item>
+		<item>8.6.8.6</item>
+		<item>Arlington</item>
+		<item>{d |m .,m:m :r |d .,|d :d ||}</item>
+	</string-array>
+
+
+	<string-array name="hymn9caption">
+		<item>(Ndebele 14)</item>
+		<item>Doh is F</item>
+		<item>8.8.8.8.</item>
+		<item>Ukunxusa</item>
+		<item>{|m .m :r .m|f :m |m :r |d :- |}</item>
+	</string-array>
+
+
+	<string-array name="hymn10caption">
+		<item>(Ndebele 241)</item>
+		<item>Doh is b flat</item>
+		<item>8.6.8.6</item>
+		<item>Lucius</item>
+		<item>{:s, |s, .m, :d  :t,  |t, .l, :l,  |}</item>
+	</string-array>
+
+
+	<string-array name="hymn11caption">
+		<item>Doh is C</item>
+		<item>8.7.8.7</item>
+		<item>Unser Herrscher</item>
+		<item>{|d  :-r |m  :d  |m  :f  |s  :s ||}</item>
+	</string-array>
+
+
+	<string-array name="hymn12caption">
+		<item>Doh is E flat</item>
+		<item>7.7.7.7.7.7</item>
+		<item>Charterhouse</item>
+		<item>{|m :l |s :m |r :m .f |m :- ||}</item>
+	</string-array>
+
+
+	<string-array name="hymn13caption">
+		<item>Doh is A</item>
+		<item>8.6.8.6</item>
+		<item>Richmond</item>
+		<item>{|s, :d :m |s :- :f |m :f :r |d :- ||}</item>
+	</string-array>
+
+
+	<string-array name="hymn14caption">
+		<item>(Ndebele 45)</item>
+		<item>Doh is F</item>
+		<item>7.6.7.6.7.6.7.6</item>
+		<item>bologna</item>
+		<item>{  :m .r|d  :d  |r  :r  |m:- |d  :- ||}</item>
+	</string-array>
+
+
+	<string-array name="hymn15caption">
+		<item>(Ndebele 53)</item>
+		<item>Doh is A</item>
+		<item>6.6.6.6 neKorasi</item>
+		<item>Millenium</item>
+		<item>{:s, |d :d  |d :t,.l,|s, :- |- ||}</item>
+	</string-array>
+
+
+	<string-array name="hymn16caption">
+		<item>Doh is G </item>
+		<item>8.6.8.6</item>
+		<item>Lyngham</item>
+		<item>{|d :-|m :-.f|s.l:s:f|m :f |m :d | r :t,|d:- :-||}</item>
+	</string-array>
+
+
+	<string-array name="hymn17caption">
+		<item>Doh is E flat</item>
+		<item>8.6.8.6</item>
+		<item>St. Peter</item>
+		<item>{| :s |d’ :t |l :s |s :f |m ||}</item>
+	</string-array>
+
+
+	<string-array name="hymn18caption">
+		<item>Doh is A Flat</item>
+		<item>8.8.8.8 neKorasi Precious Name</item>
+		<item>{|s, :d |m -.r:d -.r|d :- |s, :- |}</item>
+	</string-array>
+
+
+	<string-array name="hymn19caption">
+		<item>(Ndebele 42)</item>
+		<item>Doh is D</item>
+		<item>7.7.7.7.7.7</item>
+		<item>Rock of Ages</item>
+		<item>{| :s, -.l,|s  :m, :d -.l |s,  :- ||}</item>
+	</string-array>
+
+
+	<string-array name="hymn20caption">
+		<item>Doh is b flat</item>
+		<item>8.8.8.8</item>
+		<item>wareham</item>
+		<item>{| :d |d :t, :l |s, :- :d |r :d :t, |d :- ||}</item>
+	</string-array>
+
+
+	<string-array name="hymn21caption">
+		<item>Doh is G</item>
+		<item>8.8.8.8 neKorasi </item>
+		<item>bring Them In</item>
+		<item>{|s, :s,.l,|s, :m|m :r |r :- | : | : | : | : }</item>
+	</string-array>
+
+
+	<string-array name="hymn22caption">
+		<item>(Ndebele 85)</item>
+		<item>Doh is C</item>
+		<item>8.8.8.8</item>
+		<item>warrington</item>
+		<item>{|s :s :f |m :s :d’ |d’ :r’</item>
+		<item>:t |d’ :- : }</item>
+	</string-array>
+
+
+	<string-array name="hymn23caption">
+		<item>Doh is E flat</item>
+		<item>Rusina Mwero.......</item>
+		<item>Margaret</item>
+		<item>{|  ;d .r|m :m, .m|f :m .r|d ;r.r|m ||}</item>
+	</string-array>
+
+
+	<string-array name="hymn24caption">
+		<item>Doh is F</item>
+		<item>8.6.8.6</item>
+		<item>Grafenberg</item>
+		<item>{|d :l,s,|d :r |m.m:r | .m :s.f|m :r |d :-||}</item>
+	</string-array>
+
+
+	<string-array name="hymn25caption">
+		<item>(Ndebele 230)</item>
+		<item>Doh is A flat</item>
+		<item>8.8.8.8</item>
+		<item>Mununuri</item>
+		<item>{| : :s, d|m :-.r :d.s,|t, .l,: - : | : : }</item>
+	</string-array>
+
+
+	<string-array name="hymn26caption">
+		<item>Doh is F</item>
+		<item>6.6.8.6.6.8 </item>
+		<item>Ascalon</item>
+		<item>{|  :d  |d .d :r .t, |d  ||}</item>
+	</string-array>
+
+
+	<string-array name="hymn27caption">
+		<item>Doh is D</item>
+		<item>8.8.8.8</item>
+		<item>Festus</item>
+		<item>{:s |d’ :t.l|s  :l  |r  :f |m ||}</item>
+	</string-array>
+
+
+	<string-array name="hymn28caption">
+		<item>Doh is A </item>
+		<item>Rusina Mwero.....</item>
+		<item>Adeste Fideles</item>
+		<item>{| :d |d :- |s, :d |r :- |s, :- ||}</item>
+	</string-array>
+
+
+	<string-array name="hymn29caption">
+		<item>Doh is G</item>
+		<item>8.7.8.7.8.8.7.7 neKorasi</item>
+		<item>berlin</item>
+		<item>{|s, :d |d :- .t,|d :m |m :r ||}</item>
+	</string-array>
+
+
+	<string-array name="hymn30caption">
+		<item>(Ndebele 48)</item>
+		<item>Doh is G</item>
+		<item>7.7.7.7 neKorasi</item>
+		<item>oxford</item>
+		<item>{|d :-.r |d  :t,  |l,  :-.s,|s,  :-  |}</item>
+	</string-array>
+
+
+	<string-array name="hymn31caption">
+		<item>(Ndebele 46)</item>
+		<item>Doh is E flat</item>
+		<item>8.8.8.8</item>
+		<item>Samson</item>
+		<item>{| :d |m :- .f|s :m  |l  :t |d’ ||}</item>
+	</string-array>
+
+
+	<string-array name="hymn32caption">
+		<item>Doh is D</item>
+		<item>10.10.10.10.10.10</item>
+		<item>Yorkshire</item>
+		<item>{|d :-|d :r |m :- |-:f |s :m |f :s |l :- |- :- ||}</item>
+	</string-array>
+
+
+	<string-array name="hymn33caption">
+		<item>(Ndebele 50)</item>
+		<item>Doh is G</item>
+		<item>8.7.8.7.7.7</item>
+		<item>Irby</item>
+		<item>{|s, :t, |d :- .d |d .t. :d .r|r :d ||}</item>
+	</string-array>
+
+
+	<string-array name="hymn34caption">
+		<item>Doh is C</item>
+		<item>Rusina Mwero.....</item>
+		<item>Stille Nacht</item>
+		<item>{|s- :-.l :s |m :- :- |s :-.l:s |m :- :- |}</item>
+	</string-array>
+
+
+	<string-array name="hymn35caption">
+		<item>Doh is C</item>
+		<item>Rusina Mwero.........</item>
+		<item>Ndlovu</item>
+		<item>{|d .r :m .f |s :m |l :- |- :- |}</item>
+	</string-array>
+
+
+	<string-array name="hymn36caption">
+		<item>Doh is E flat</item>
+		<item>6.6.8.6</item>
+		<item>Huddersfield</item>
+		<item>{:s  |m .l :s  :t  |d’  :-  ||}</item>
+	</string-array>
+
+
+	<string-array name="hymn37caption">
+		<item>Doh is F</item>
+		<item>8.6.8.6</item>
+		<item>winchester old</item>
+		<item>{:d |m :- .m |r d |f :f |m ||}</item>
+	</string-array>
+
+
+	<string-array name="hymn38caption">
+		<item>Doh is G</item>
+		<item>8.7.8.7.8.8.7</item>
+		<item>Infant Lowly</item>
+		<item>{|s, .s, :d :d |t,.d :r :r |m.f:s :f |m.r:d :- |}</item>
+	</string-array>
+
+
+	<string-array name="hymn39caption">
+		<item>Doh is G</item>
+		<item>8.6.8.6.7.6.8.6</item>
+		<item>Forest Green</item>
+		<item>{:s, |d :d |d :r |m.r :m.f|s :m |f :m.d|r :r|d :-| - ||}</item>
+	</string-array>
+
+
+	<string-array name="hymn40caption">
+		<item>Doh is F</item>
+		<item>Rusina Mwero........</item>
+		<item>In Dulci Jubilo</item>
+		<item>{:d |d :- :d |m :- :f |s :- :l |s :- ||}</item>
+	</string-array>
+
+
+	<string-array name="hymn41caption">
+		<item>Doh is G</item>
+		<item>8.6.6.8.6.6</item>
+		<item>bonn</item>
+		<item>{|d :r  |m  :-.r |m .s :l |s :- |}</item>
+	</string-array>
+
+
+	<string-array name="hymn42caption">
+		<item>Doh is F</item>
+		<item>10.8.8.7 neKorasi</item>
+		<item>Message</item>
+		<item>{:d .,r| m  :m .,m|f  :m.,re|m  :- |d }</item>
+	</string-array>
+
+
+	<string-array name="hymn43caption">
+		<item>Doh is G</item>
+		<item>8.8.14 neKorasi</item>
+		<item>Kings of orient</item>
+		<item>{|m :-  :r |d :- :l, |t, :d :t, |l, :- : |}</item>
+	</string-array>
+
+
+	<string-array name="hymn44caption">
+		<item>Doh is A</item>
+		<item>7.7 neKorasi</item>
+		<item>who is He?</item>
+		<item>{  :s, .s, |s,  :-  .s, :s, .s, |l, :- }</item>
+	</string-array>
+
+
+	<string-array name="hymn45caption">
+		<item>(Ndebele 83)</item>
+		<item>Doh is F</item>
+		<item>8.8.8.8</item>
+		<item>Ukunxusa</item>
+		<item>{|m .m :r .m |f  :m |m :r |d  :-  |}</item>
+	</string-array>
+
+
+	<string-array name="hymn46caption">
+		<item>Doh is G</item>
+		<item>Rusina Mwero..</item>
+		<item>Rukomborero</item>
+		<item>{s,s,s,:f,f,f:m,f,m:r:d}</item>
+	</string-array>
+
+
+	<string-array name="hymn47caption">
+		<item>Doh is G 8.4.8.4.5.4.5.4</item>
+		<item>Stories of Jesus</item>
+		<item>{|s :m :f |s :t  :l |s :- :- |m :- :- |}</item>
+	</string-array>
+
+
+	<string-array name="hymn48caption">
+		<item>Doh is F</item>
+		<item>9.6.9.6 ne Korasi</item>
+		<item>The Sweetest Name</item>
+		<item>{:s, |d .d :m  :d  |l, .l, :d  :l,}</item>
+	</string-array>
+
+
+	<string-array name="hymn49caption">
+		<item>Doh is C</item>
+		<item>7.6.7.6.7.6.7.6 neKorasi</item>
+		<item>Tell me the old, old Story</item>
+		<item>{|m :m.,f|s :s |l :- |s :s |d’ :d’|d’ :m.,fe|s :- :-||}</item>
+	</string-array>
+
+
+	<string-array name="hymn50caption">
+		<item>(Ndebele 57)</item>
+		<item>Doh is C</item>
+		<item>8.6.8.6</item>
+		<item>Chikomo</item>
+		<item>{ s|s :- :m |l :- :m |s :- :f |f :- ||}</item>
+	</string-array>
+
+
+	<string-array name="hymn51caption">
+		<item>Doh is G</item>
+		<item>5.6.6.6 neKorasi</item>
+		<item>Rangarirai</item>
+		<item>{ s, |m :-| -.r:d .l|s, :-| -:s,|r : -| -.r:m.f |m.:-|-||}</item>
+	</string-array>
+
+
+	<string-array name="hymn52caption">
+		<item>Doh is C</item>
+		<item>7.7.7.8</item>
+		<item>Gethsemane</item>
+		<item>{|s :s |s :m  |d’ :d’  |t  :-  ||}</item>
+	</string-array>
+
+
+	<string-array name="hymn53caption">
+		<item>Doh is F</item>
+		<item>8.8.8.8</item>
+		<item>St. Cross</item>
+		<item>{d :-|d :r |m :-|-:l |s :-|f :- |m :- |-:-||}</item>
+	</string-array>
+
+
+	<string-array name="hymn54caption">
+		<item>(Ndebele 64)</item>
+		<item>Doh is b flat</item>
+		<item>9.9.9.5</item>
+		<item>John brown</item>
+		<item>{ .,s,|s,  :- .f, |m,., s, :d.,r|m :-  :d  : }</item>
+	</string-array>
+
+
+	<string-array name="hymn55caption">
+		<item>Doh is C</item>
+		<item>6.4.6.4.6.7.6.4 Clarion</item>
+		<item>{|d :-  |m  :s  |d’  :-.d’|d’  :- |}</item>
+	</string-array>
+
+
+	<string-array name="hymn56caption">
+		<item>Doh is D</item>
+		<item>8.8.8.8.8.8</item>
+		<item>Mapudzi</item>
+		<item>{|s :s .l|s  :-.d|f :m |r  :- |}</item>
+	</string-array>
+
+
+	<string-array name="hymn57caption">
+		<item>Doh is E flat</item>
+		<item>7.6.8.6.8.6.8.6</item>
+		<item>beneath the Cross</item>
+		<item>{  :s |s :- .s |fe :s |d’ :- |s  : |}</item>
+	</string-array>
+
+
+	<string-array name="hymn58caption">
+		<item>Doh is F</item>
+		<item>7.6.7.6 neKorasi Near the Cross</item>
+		<item>{|m ;- :f |m :- :r |d :- :l, |l,  :- :- }</item>
+	</string-array>
+
+
+	<string-array name="hymn59caption">
+		<item>(Ndebele 65)</item>
+		<item>Doh is F</item>
+		<item>8.6.8.6</item>
+		<item>Arlington</item>
+		<item>{  :d  |m .,m :m  :r  |d .,d :d  ||}</item>
+	</string-array>
+
+
+	<string-array name="hymn60caption">
+		<item>Doh is  E flat</item>
+		<item>8.8.8.8</item>
+		<item>Rockingham</item>
+		<item>{ :d |m :f </item>
+		<item>:r |d :- :m  |s  :- :l  |s :- ||}</item>
+	</string-array>
+
+
+	<string-array name="hymn61caption">
+		<item>Doh is D</item>
+		<item>8.4.8.4.7.4.8.4</item>
+		<item>Easter Morn</item>
+		<item>{|d :m |s :d  |f :l |l :s</item>
+		<item>||}</item>
+	</string-array>
+
+
+	<string-array name="hymn62caption">
+		<item>Doh is C</item>
+		<item>9.9.9.4</item>
+		<item>Victory</item>
+		<item>{|s :s :s |l :- :s |s :f :m  |s :- :- |}</item>
+	</string-array>
+
+
+	<string-array name="hymn63caption">
+		<item>Doh is b flat </item>
+		<item>6.5.6.4 neKorasi</item>
+		<item>Christ Arose</item>
+		<item>{|s, :- |s, :l, |l, :s, |s, :- |}</item>
+	</string-array>
+
+
+	<string-array name="hymn64caption">
+		<item>Doh is F</item>
+		<item>12.12.8.8.12.14</item>
+		<item>Hareruya</item>
+		<item>{|s, :-.l,|s, :d|m :-.r |d :-|s :-.l s :f |m :-|:- |}</item>
+	</string-array>
+
+
+	<string-array name="hymn65caption">
+		<item>Doh is E flat</item>
+		<item>6.6.8.6</item>
+		<item>Huddersfield</item>
+		<item>{|  :s  |m .l :s  :t |d’ :- |}</item>
+	</string-array>
+
+
+	<string-array name="hymn66caption">
+		<item>Doh is G</item>
+		<item>6.6.8.6</item>
+		<item>Ushewokunze</item>
+		<item>{|m :- :r |d :- :s, |l, :- :- |s, :- :- |}</item>
+	</string-array>
+
+
+	<string-array name="hymn67caption">
+		<item>(Ndebele 70)</item>
+		<item>Doh is C</item>
+		<item>8.8.8.8</item>
+		<item>winchester New</item>
+		<item>{:s |:d’ :s  |l  :l  |s  :f |m  ||}</item>
+	</string-array>
+
+
+	<string-array name="hymn68caption">
+		<item>Doh is G</item>
+		<item>12.10.12.10</item>
+		<item>woodhouse Grove</item>
+		<item>{|m :- |m :m |m :- |r :r |f :-|m :r |r :-.d|d :-||}</item>
+	</string-array>
+
+
+	<string-array name="hymn69caption">
+		<item>Doh is C</item>
+		<item>6.6.6.6 neKorasi</item>
+		<item>Mansfield</item>
+		<item>{:s |d’ :t | r’ d’ |m’ || r’ |d’ :l |s :- |s :- |s :-| - ||}</item>
+	</string-array>
+
+
+	<string-array name="hymn70caption">
+		<item>Doh is E flat</item>
+		<item>Rusina Mwero.....</item>
+		<item>Monmouth</item>
+		<item>{|m :- |d :l |s :- |m :- |r :- |m :f |m :- |-:-||}</item>
+	</string-array>
+
+
+	<string-array name="hymn71caption">
+		<item>(Ndebele 75)</item>
+		<item>Doh is b flat</item>
+		<item>8.6.8.6</item>
+		<item>Galilee</item>
+		<item>{:m .s,|r :r :r.s,|d :d :d.d|d :-.l, :d .r|m :- ||}</item>
+	</string-array>
+
+
+	<string-array name="hymn72caption">
+		<item>(Ndebele 74)</item>
+		<item>Doh is A flat</item>
+		<item>8.6.8.6</item>
+		<item>beatitudo</item>
+		<item>{|d :r :m |s :- :m |d :- :f |m :- :- ||}</item>
+	</string-array>
+
+
+	<string-array name="hymn73caption">
+		<item>Doh is A flat</item>
+		<item>8.7.8.7.8.7.8.7</item>
+		<item>Hyfrydol</item>
+		<item>{|d :- :r |d :.r :m |f :- :m |r :d :r ||}</item>
+	</string-array>
+
+
+	<string-array name="hymn74caption">
+		<item>Doh is F</item>
+		<item>8.8.8.8</item>
+		<item>Dumo</item>
+		<item>{:m.,d |m :- .d |s, :m |r :d |l, : |}</item>
+	</string-array>
+
+
+	<string-array name="hymn75caption">
+		<item>Doh is D</item>
+		<item>11.11 neKorasi</item>
+		<item>Dirihora</item>
+		<item>{  :m .r|d  :d  :m  |s :- :-  |}</item>
+	</string-array>
+
+
+	<string-array name="hymn76caption">
+		<item>(Ndebele 282)</item>
+		<item>Doh is A</item>
+		<item>8.6.8.6 neKorasi</item>
+		<item>Ashley</item>
+		<item>{ :s, |d :- |t, :- |d :- |r :- |m :- |r :f |m :- ||}</item>
+	</string-array>
+
+
+	<string-array name="hymn77caption">
+		<item>Doh is F</item>
+		<item>8.6.8.6</item>
+		<item>St Agnes</item>
+		<item>{|m :m :m |r :- :m |f :- :t, |d :- :- |}</item>
+	</string-array>
+
+
+	<string-array name="hymn78caption">
+		<item>Doh is F</item>
+		<item>6.6.8.6</item>
+		<item>Trentham</item>
+		<item>{|m :m :m |f :- :d |m :-  :- ||}</item>
+	</string-array>
+
+
+	<string-array name="hymn79caption">
+		<item>Doh is E flat</item>
+		<item>8.6.8.4</item>
+		<item>St Cuthbert</item>
+		<item>{  :d |d :- .d|r  :m  |f :-.f |m ||}</item>
+	</string-array>
+
+
+	<string-array name="hymn80caption">
+		<item>(Ndebele 106)</item>
+		<item>Doh is G</item>
+		<item>8.6.8.6</item>
+		<item>Richmond</item>
+		<item>{|s, :d :m |s :- :f |m :f :r |d :- ||}</item>
+	</string-array>
+
+
+	<string-array name="hymn81caption">
+		<item>Doh is D</item>
+		<item>6.6.8.6</item>
+		<item>St beuno</item>
+		<item>{m  :m .m |m :r |s :- :- ||}</item>
+	</string-array>
+
+
+	<string-array name="hymn82caption">
+		<item>(Ndebele 96)</item>
+		<item>Doh is F</item>
+		<item>6.6.6.6.6.6.6.6</item>
+		<item>Fara m’Kritsu</item>
+		<item>{|m :d |m :d |m :r |d :- |}</item>
+	</string-array>
+
+
+	<string-array name="hymn83caption">
+		<item>Doh is A</item>
+		<item>7.7.7.7</item>
+		<item>Christus</item>
+		<item>{|d :- :d |d :- :d |m :r :d |d :t, :- ||}</item>
+	</string-array>
+
+
+	<string-array name="hymn84caption">
+		<item>Doh is F </item>
+		<item>8.8.8.8.8.8</item>
+		<item>Mount Sion</item>
+		<item>{:s  |s :s .,I |s :m |f :r |m  ||}</item>
+	</string-array>
+
+
+	<string-array name="hymn85caption">
+		<item>(Ndebele 13)</item>
+		<item>Doh is E 11.12.12.10</item>
+		<item>Nicaea</item>
+		<item>{|d :d |m :m |s :-| :-|1 :1 |s :-|m :- ||}</item>
+	</string-array>
+
+
+	<string-array name="hymn86caption">
+		<item>Doh is G</item>
+		<item>6.6.4.6.6.6.4</item>
+		<item>Moscow</item>
+		<item>{|s :m :d |r :- :t, |d :- :- ||}</item>
+	</string-array>
+
+
+	<string-array name="hymn87caption">
+		<item>Doh is A</item>
+		<item>7.7.7.7.7.7 </item>
+		<item>Dix</item>
+		<item>{|d  :t, .d |r  :d   |f  :f   |m  :-  ||}</item>
+	</string-array>
+
+
+	<string-array name="hymn88caption">
+		<item>Doh is b flat</item>
+		<item>8.8.8.8</item>
+		<item>Fulda</item>
+		<item>{|s, :d :t, |:d :- :r |s, :l, t, |d :- :- |}</item>
+	</string-array>
+
+
+	<string-array name="hymn89caption">
+		<item>(Ndebele 114)</item>
+		<item>Doh is E flat</item>
+		<item>8.6.8.6</item>
+		<item>Dama raMwari</item>
+		<item>{|s :s .s |l  :- .s|f :m  |s  :-  }</item>
+	</string-array>
+
+
+	<string-array name="hymn90caption">
+		<item>Doh is A flat</item>
+		<item>8.6.8.6</item>
+		<item>Yisabata</item>
+		<item>{s,  :- .l,|s,  :d  |m  :d  |l, :d  |}</item>
+	</string-array>
+
+
+	<string-array name="hymn91caption">
+		<item>Doh is C</item>
+		<item>8.8.8.8</item>
+		<item>Ingoma</item>
+		<item>{  :d .m|s :s  |s :l  |s  :- |d  }</item>
+	</string-array>
+
+
+	<string-array name="hymn92caption">
+		<item>Doh is G</item>
+		<item>8.6.8.6</item>
+		<item>Richmond</item>
+		<item>{|s, :d :m  |s :- :f  |m :f :r  |d :-}</item>
+	</string-array>
+
+
+	<string-array name="hymn93caption">
+		<item>Doh is E</item>
+		<item>10.6.10.6 neKorasi</item>
+		<item>I will</item>
+		<item>{ :d |f :f |l  : .f  |s .f :f .r |d :- }</item>
+	</string-array>
+
+
+	<string-array name="hymn94caption">
+		<item>(Ndebele 116)</item>
+		<item>Doh is E flat</item>
+		<item>6.6.8.6 neKorasi</item>
+		<item>Calvary</item>
+		<item>{ :d .m|s :- m:r .d |d :- :d |r :-f :l .s|m :- ||}</item>
+	</string-array>
+
+
+	<string-array name="hymn95caption">
+		<item>(Ndebele 80)</item>
+		<item>Doh is D</item>
+		<item>9.7.9.7</item>
+		<item>Pezulu</item>
+		<item>{|d :m :f |s :- :s |l :- :d’ |l :s : |}</item>
+	</string-array>
+
+
+	<string-array name="hymn96caption">
+		<item>(Ndebele 406)</item>
+		<item>Doh is D</item>
+		<item>8.8.8.8 neKorasi</item>
+		<item>beulah Land</item>
+		<item>{  :s,  |m .,m :m :r  |d .,d :d }</item>
+	</string-array>
+
+
+	<string-array name="hymn97caption">
+		<item>(Ndebele 129)</item>
+		<item>Doh is A</item>
+		<item>8.6.8.6</item>
+		<item>Martyrdom</item>
+		<item>{:s, |d :- :l, |s :- :d .r</item>
+		<item>|m :- :r |d :- ||}</item>
+	</string-array>
+
+
+	<string-array name="hymn98caption">
+		<item>(Ndebele 153)</item>
+		<item>Doh is F</item>
+		<item>10.10. neKorasi</item>
+		<item>Yet there is room</item>
+		<item>{|s : s.s|m :- .d|m.m :r.d |r :- | : | :  }</item>
+	</string-array>
+
+
+	<string-array name="hymn99caption">
+		<item>(Ndebele 183)</item>
+		<item>Doh is G</item>
+		<item>8.7.8.7.3</item>
+		<item>Even Me</item>
+		<item>{| m :- :f |s  :- :d  |f  :-  :m  |m :- :r  |}</item>
+	</string-array>
+
+
+	<string-array name="hymn100caption">
+		<item>Doh is F</item>
+		<item>8.8.8.8</item>
+		<item>Calm</item>
+		<item>{|m :m :m |f :- :f |m :- :r |r :- :- ||}</item>
+	</string-array>
+
+
+	<string-array name="hymn101caption">
+		<item>Doh is E flat</item>
+		<item>9.9.9.9</item>
+		<item>Have Thine own way, Lord</item>
+		<item>{|m :r :m |f :- :- |m :- :-|m :- :- |d :t, :d |r :- :- |}</item>
+	</string-array>
+
+
+	<string-array name="hymn102caption">
+		<item>(Ndebele 262)</item>
+		<item>Doh is F</item>
+		<item>12.12.12.12 neKorasi</item>
+		<item>Noyana</item>
+		<item>{ : .s, |d :m :-.m |r :r  :-.s, |r :f :-.f|m :m : |}</item>
+	</string-array>
+
+
+	<string-array name="hymn103caption">
+		<item>Doh is D</item>
+		<item>7.7.7.7 neKorasi </item>
+		<item>Christ Receiveth</item>
+		<item>{  :m .,f |s  :- .l :m .,l |s :- : }</item>
+	</string-array>
+
+
+	<string-array name="hymn104caption">
+		<item>Doh is G</item>
+		<item>8.8.8.6 neKorasi</item>
+		<item>He Lifted Me</item>
+		<item>{ .s,  |s, .l, :l,  :- .s,|m .m :  :f  :  }</item>
+	</string-array>
+
+
+	<string-array name="hymn105caption">
+		<item>Doh is A </item>
+		<item>8.7.8.7.8.7</item>
+		<item>Dismissal</item>
+		<item>{|d :t, .l,|s,  :m,  |l,  :d  |s,  :m,  ||}</item>
+	</string-array>
+
+
+	<string-array name="hymn106caption">
+		<item>Doh is F</item>
+		<item>7.7.7.7</item>
+		<item>University College</item>
+		<item>{|m :d  |l  :s  |f  :m  |r  :-  ||}</item>
+	</string-array>
+
+
+	<string-array name="hymn107caption">
+		<item>Doh is b flat </item>
+		<item>9.9.9.6 neKorasi</item>
+		<item>Come to the Saviour</item>
+		<item>{|s,  :l, .,s, |m,  :s,  |d  :r .,d |l, :-  |}</item>
+	</string-array>
+
+
+	<string-array name="hymn108caption">
+		<item>Doh is G</item>
+		<item>8.6.8.6 neKorasi</item>
+		<item>I Do belive</item>
+		<item>{  :d  |t, .r :r  :r  |d .m :m :  }</item>
+	</string-array>
+
+
+	<string-array name="hymn109caption">
+		<item>(Ndebele 165)</item>
+		<item>Doh is G </item>
+		<item>8.7.8.7</item>
+		<item>Close to Thee</item>
+		<item>{  :s, .,d |m  :- .d :t, .,r |d :s, : }</item>
+	</string-array>
+
+
+	<string-array name="hymn110caption">
+		<item>(Ndebele 192)</item>
+		<item>Doh is E flat</item>
+		<item>8.8.8.8</item>
+		<item>Musandirasi</item>
+		<item>{|m  :m.m |f  :m  |r :f  |m :- | : | : |}</item>
+	</string-array>
+
+
+	<string-array name="hymn111caption">
+		<item>(Ndebele 170)</item>
+		<item>Doh is D</item>
+		<item>7.7.7.7.7.7</item>
+		<item>wellspring</item>
+		<item>{|s :m :f |s :- :d’ |r’ :d’</item>
+		<item>:t |d’ :- :- ||}</item>
+	</string-array>
+
+
+	<string-array name="hymn112caption">
+		<item>(Ndebele 166)</item>
+		<item>Doh is E flat</item>
+		<item>11.10.11.10</item>
+		<item>o Perfect Love</item>
+		<item>{|d :- |m :s |s :- |s :- |s :s |d’ :t | t:- |l :- ||}</item>
+	</string-array>
+
+
+	<string-array name="hymn113caption">
+		<item>(Ndebele 178)</item>
+		<item>Doh is F</item>
+		<item>6.6.6.6.6.6.6.6 neKorasi </item>
+		<item>Shwele</item>
+		<item>{ :d |m :- .r:d.m|s :- : | :  : }</item>
+	</string-array>
+
+
+	<string-array name="hymn114caption">
+		<item>Doh is F</item>
+		<item>8.8.8.8</item>
+		<item>Chirevo</item>
+		<item>{  :m .f |m :- .f :m .f |m  :r  :  }</item>
+	</string-array>
+
+
+	<string-array name="hymn115caption">
+		<item>(Ndebele 196)</item>
+		<item>Doh is F</item>
+		<item>8.8.8.8</item>
+		<item>Ukunxusa</item>
+		<item>{|m .m :r .m|f  :m  |m  :r  |d  :-  |}</item>
+	</string-array>
+
+
+	<string-array name="hymn116caption">
+		<item>(Ndebele 185)</item>
+		<item>Doh is b flat</item>
+		<item>8.6.8.6</item>
+		<item>Evan</item>
+		<item>1 {  :s,  |s, .d  :m  :r  |d. l, :s,  : }</item>
+	</string-array>
+
+
+	<string-array name="hymn117caption">
+		<item>(Ndebele 86)</item>
+		<item>Doh is E flat</item>
+		<item>8.4.8.4.8.8.8.4</item>
+		<item>Caritas</item>
+		<item>{|d  :-.r |m :s  |l  :s |s  :m ||}</item>
+	</string-array>
+
+
+	<string-array name="hymn118caption">
+		<item>Doh is E flat</item>
+		<item>8.8.8.8</item>
+		<item>Musandirasi</item>
+		<item>{|m :m.m |f :m  |r :f |m :- |  : | : |}</item>
+	</string-array>
+
+
+	<string-array name="hymn119caption">
+		<item>Doh is A</item>
+		<item>8.8.8.8.8.8</item>
+		<item>Sagiora</item>
+		<item>{|d :- |d :-.r|m :- |- :s |f :l, |t, :r</item>
+		<item>|d  :- |- ||}</item>
+	</string-array>
+
+
+	<string-array name="hymn120caption">
+		<item>Doh is D</item>
+		<item>6.6.6.6.8.8</item>
+		<item>Umkululi</item>
+		<item>{|m :l |s :m |r :-  |d  :- |}</item>
+	</string-array>
+
+
+	<string-array name="hymn121caption">
+		<item>Doh is E flat</item>
+		<item>8.8.8.8</item>
+		<item>Samson</item>
+		<item>{  :d |m  :- .f  |s :m |l  :t  |d’  ||}</item>
+	</string-array>
+
+
+	<string-array name="hymn122caption">
+		<item>Doh is F</item>
+		<item>8.8.8.8</item>
+		<item>Holly</item>
+		<item>{|m  :re.m|d :m |r .m :f .s |m :- |}</item>
+	</string-array>
+
+
+	<string-array name="hymn123caption">
+		<item>Doh is E flat</item>
+		<item>8.7.8.7 neKorasi</item>
+		<item>Great Physician</item>
+		<item>{ :s |s :- :m |d :- :r |m :- :1 |s :- :}</item>
+	</string-array>
+
+
+	<string-array name="hymn124caption">
+		<item>Doh is A flat</item>
+		<item>6.5.6.5.6.5.6.5</item>
+		<item>Norfolk Park</item>
+		<item>{|d  :t, .l,|s,  :d .m|s  :- .f|m  :- |}</item>
+	</string-array>
+
+
+	<string-array name="hymn125caption">
+		<item>(Ndebele 209)</item>
+		<item>Doh is D</item>
+		<item>11.10.11.10</item>
+		<item>Pax Dei</item>
+		<item>{|d :- |m :s |s .-.f|m :d |m :- |r :d |d :- |t- ||}</item>
+	</string-array>
+
+
+	<string-array name="hymn126caption">
+		<item>Doh is G</item>
+		<item>7.7.7.7</item>
+		<item>Nottingham</item>
+		<item>{|d :- :d |t, :- :s, |f :- :f |m :- :- |}</item>
+	</string-array>
+
+
+	<string-array name="hymn127caption">
+		<item>(Ndebele186)</item>
+		<item>Doh is A flat</item>
+		<item>8.8.8.6 Just as I am</item>
+		<item>{|s, :l, :d |t, :- :s, |d :- :r |m :- :- |}</item>
+	</string-array>
+
+
+	<string-array name="hymn128caption">
+		<item>Doh is E</item>
+		<item>8.8.8.8 Melcombe</item>
+		<item>{  :s  |s  :f  |m  :r  |  l  |s  ||}</item>
+	</string-array>
+
+
+	<string-array name="hymn129caption">
+		<item>Doh is D</item>
+		<item>8.7.8.7</item>
+		<item>St. oswald</item>
+		<item>{|s  :- .m|l  :d’  |t  :l  |s  :m  ||}</item>
+	</string-array>
+
+
+	<string-array name="hymn130caption">
+		<item>Doh is C</item>
+		<item>8.7.8.7 neKorasi Peace, be still</item>
+		<item>{|s .l :s .s :d .m |r  :- .l :-  }</item>
+	</string-array>
+
+
+	<string-array name="hymn131caption">
+		<item>Doh is G</item>
+		<item>7.6.7.6.7.6.7.6</item>
+		<item>Angels’ Story</item>
+		<item>{  :m  |m :-  .m |r  :d |d  :- |t,  ||}</item>
+	</string-array>
+
+
+	<string-array name="hymn132caption">
+		<item>Doh is D </item>
+		<item>8.8.8.8</item>
+		<item>ombersley</item>
+		<item>{|m :r :d |f :-  :f |f :-  :f |m :- :- ||}</item>
+	</string-array>
+
+
+	<string-array name="hymn133caption">
+		<item>Doh is E flat </item>
+		<item>8.8.8.6</item>
+		<item>Misericordia</item>
+		<item>{|m :r  :d |f  :-  :m  |l  :-  :l  |s :- :- ||}</item>
+	</string-array>
+
+
+	<string-array name="hymn134caption">
+		<item>Doh is E flat</item>
+		<item>6.6.8.6</item>
+		<item>Carlisle</item>
+		<item>{  :d  |s  :d  |m .r</item>
+		<item>:d .t,</item>
+		<item>|d  :- |-  ||}</item>
+	</string-array>
+
+
+	<string-array name="hymn135caption">
+		<item>Doh is E flat</item>
+		<item>8.6.8.6</item>
+		<item>byzantium</item>
+		<item>{  :s  |s  :d’ .t|l  :s  |f  :s .f|m  ||}</item>
+	</string-array>
+
+
+	<string-array name="hymn136caption">
+		<item>(Ndebele 56)</item>
+		<item>Doh is D</item>
+		<item>8.8.8.8</item>
+		<item>Chipo</item>
+		<item>{  :m .l |s  :- .m :r .s |s  :m  :  |}</item>
+	</string-array>
+
+
+	<string-array name="hymn137caption">
+		<item>(Ndebele 41)</item>
+		<item>Doh is G</item>
+		<item>8.7.8.7.4.7</item>
+		<item>Grace</item>
+		<item>{d  :d  |d :r  |m  :m  |m  :f  |}</item>
+	</string-array>
+
+
+	<string-array name="hymn138caption">
+		<item>Doh is G</item>
+		<item>8.8.8.8 neKorasi</item>
+		<item>Happy Day</item>
+		<item>{ .s, :d .r |m  :-  .s, :d .r|m  :-  }</item>
+	</string-array>
+
+
+	<string-array name="hymn139caption">
+		<item>(Ndebele 211)</item>
+		<item>Doh is F</item>
+		<item>6.6.6.6.6.6.6.6</item>
+		<item>Fara m’Kristu</item>
+		<item>{|m :d  |m  :d  |m :r  |d  :- }</item>
+	</string-array>
+
+
+	<string-array name="hymn140caption">
+		<item>(Ndebele 234)</item>
+		<item>Doh is A</item>
+		<item>8.8.8.8 Jesu Nhaka yangu</item>
+		<item>{|s, :m, :s, |d :- :- |d :t, :s, |l, :- :- }</item>
+	</string-array>
+
+
+	<string-array name="hymn141caption">
+		<item>Doh is G </item>
+		<item>10.10.10.10 neKorasi</item>
+		<item>I am so glad</item>
+		<item>{|s, :s, :s, |s, :s, :s, |s, :d :r |m ;- :-  |}</item>
+	</string-array>
+
+
+	<string-array name="hymn142caption">
+		<item>Doh is D</item>
+		<item>8.7.8.7 nekorasi</item>
+		<item>Ubukosi</item>
+		<item>{  :s .s|s  :- .s :l .s |s  :m  :  }</item>
+	</string-array>
+
+
+	<string-array name="hymn143caption">
+		<item>Doh is D</item>
+		<item>8.4.8.4.8.8.8.4</item>
+		<item>Anotida</item>
+		<item>{|d  :r .s :s  |l  :s.s :m  |m :r .,r :d |}</item>
+	</string-array>
+
+
+	<string-array name="hymn144caption">
+		<item>Doh is D…</item>
+		<item>Rusina Mwero…</item>
+		<item>blessed Assurance</item>
+		<item>{|m :r :d |s :- :- |s  :- :- |f :s :l |s :- :- |- :- :- |}</item>
+	</string-array>
+
+
+	<string-array name="hymn145caption">
+		<item>Doh is C</item>
+		<item>13.13.14.13</item>
+		<item>Harare</item>
+		<item>{  : .s |d’ :d’ .s|l :m .m |s .s :f :f |m :m. }</item>
+	</string-array>
+
+
+	<string-array name="hymn146caption">
+		<item>Doh is D</item>
+		<item>8.8.8.8</item>
+		<item>ombersley</item>
+		<item>{|m :r :d  |f  :- :f |f :-  :f |m :- :- ||}</item>
+	</string-array>
+
+
+	<string-array name="hymn147caption">
+		<item>Doh is A flat</item>
+		<item>Rusina Mwero....</item>
+		<item>My Jesus, I love Thee</item>
+		<item>{  :s, |d :- |d :m|s, :- |s, :l|s, f, |m, ; f, |s, :- |-: }</item>
+	</string-array>
+
+
+	<string-array name="hymn148caption">
+		<item>Doh is E falt</item>
+		<item>8.6.8.6</item>
+		<item>St. Peter</item>
+		<item>{  :s  |d’ :t  |l :s  |s :f |m ||}</item>
+	</string-array>
+
+
+	<string-array name="hymn149caption">
+		<item>(Ndebele 232)</item>
+		<item>Doh is G</item>
+		<item>8.7.8.7</item>
+		<item>Dominus regit me</item>
+		<item>{ :m  |s  :f |m  :m |r  :r  |d ||}</item>
+	</string-array>
+
+
+	<string-array name="hymn150caption">
+		<item>Doh is F</item>
+		<item>8.7.8.7.8.7.8.7</item>
+		<item>Austria</item>
+		<item>{|d  :- .r |m :r  |f :m  |r .t, :d ||}</item>
+	</string-array>
+
+
+	<string-array name="hymn151caption">
+		<item>Doh is E</item>
+		<item>8.7.8.7</item>
+		<item>St. Catherine</item>
+		<item>{|m  :r  |m :f  |s  :- .l |l  :s  ||}</item>
+	</string-array>
+
+
+	<string-array name="hymn152caption">
+		<item>(Ndebele 229)</item>
+		<item>Doh is E flat</item>
+		<item>7.7.7.7.7.7.7.7</item>
+		<item>Hollingside</item>
+		<item>{|m  :s  |l  :s  |s  :- .f |m  :-   ||}</item>
+	</string-array>
+
+
+	<string-array name="hymn153caption">
+		<item>Doh is A flat</item>
+		<item>6.4.6.4 neKorasi</item>
+		<item>I need Thee</item>
+		<item>{  :d  |m  :- .r  :d .t, |d  :-  :  }</item>
+	</string-array>
+
+
+	<string-array name="hymn154caption">
+		<item>Doh is E </item>
+		<item>8.8.8.8</item>
+		<item>Duke Street</item>
+		<item>{|d  :m .f |s  :l .t |d’ : t .l</item>
+		<item>|s  :-  ||}</item>
+	</string-array>
+
+
+	<string-array name="hymn155caption">
+		<item>Doh is b flat </item>
+		<item>7.7.7.7 neKorasi</item>
+		<item>Remember me, o Mighty God</item>
+		<item>{ |s,  :m,  .s,  |d  :- .d  |d  :t,  }</item>
+	</string-array>
+
+
+	<string-array name="hymn156caption">
+		<item>Doh is G</item>
+		<item>8.7.8.7</item>
+		<item>Dominus regit me</item>
+		<item>{ :m |s :f  |m  :m  |r  :r  |d  : }</item>
+	</string-array>
+
+
+	<string-array name="hymn157caption">
+		<item>Doh is b flat</item>
+		<item>7.6.7.6.7.6.7.6</item>
+		<item>Morning Light</item>
+		<item>{ :s,  |d  :- .d |m :d  |d  :-  |l, ||}</item>
+	</string-array>
+
+
+	<string-array name="hymn158caption">
+		<item>(Ndebele 36)</item>
+		<item>Doh is F</item>
+		<item>8.8.8.8</item>
+		<item>Hursley</item>
+		<item>{d :d :d|d :td |r :m :r  |d  :-  :- ||}</item>
+	</string-array>
+
+
+	<string-array name="hymn159caption">
+		<item>Doh is F</item>
+		<item>8.6.8.6</item>
+		<item>Dundee</item>
+		<item>{  :d  |m  :f  |s  :d  |r  :m  |f  ||}</item>
+	</string-array>
+
+
+	<string-array name="hymn160caption">
+		<item>Doh is b flat</item>
+		<item>7.7.7.7.7.7</item>
+		<item>Redhead No.76</item>
+		<item>{|d :d  |r  :m  |f  :- .f |m  :-  ||}</item>
+	</string-array>
+
+
+	<string-array name="hymn161caption">
+		<item>Doh is C</item>
+		<item>8.6.8.6</item>
+		<item>Chikomo</item>
+		<item>{  s |s :- :m  |l :- :m  |s :- :f  |f  :- }</item>
+	</string-array>
+
+
+	<string-array name="hymn162caption">
+		<item>(Ndebele 87)</item>
+		<item>Doh is G</item>
+		<item>8.8.8.8</item>
+		<item>Mwari wedu</item>
+		<item>{|s, :l, :s,  |d  :-  :m  |m  :r  :d  |r  :- : }</item>
+	</string-array>
+
+
+	<string-array name="hymn163caption">
+		<item>Doh is F</item>
+		<item>6.6.9.6.6.9 neKorasi</item>
+		<item>Trust and obey</item>
+		<item>{  :d .r |m  :m :r  |d  :-  : }</item>
+	</string-array>
+
+
+	<string-array name="hymn164caption">
+		<item>Doh is C</item>
+		<item>10.10</item>
+		<item>Pax tecum</item>
+		<item>{|s :- |s :s  |s  :- |- :s |l : l  |l  :s |s :- |- :- ||}</item>
+	</string-array>
+
+
+	<string-array name="hymn165caption">
+		<item>Doh is E flat</item>
+		<item>7.7.7.7</item>
+		<item>Azalia</item>
+		<item>{:s |s:- :m |d’ :-:l |s:- :- |m:-:m|r:- t|l:-:l|t:-:-|s:-}</item>
+	</string-array>
+
+
+	<string-array name="hymn166caption">
+		<item>Doh is E flat</item>
+		<item>7.6.7.6.7.6.7.6</item>
+		<item>Aurelia</item>
+		<item>{ :m  |m :m |f  :m |m  :- |r  ||}</item>
+	</string-array>
+
+
+	<string-array name="hymn167caption">
+		<item>Doh is A flat</item>
+		<item>7.7.7.7</item>
+		<item>St. bees</item>
+		<item>{|d  :d  |d  :- .t,|l,  :t, |d  :- ||}</item>
+	</string-array>
+
+
+	<string-array name="hymn168caption">
+		<item>Doh is A flat</item>
+		<item>7.7.7.7</item>
+		<item>St. bees</item>
+		<item>{|d  :d  |d  :-.t,|l,  :t,  d  :-  |}</item>
+	</string-array>
+
+
+	<string-array name="hymn169caption">
+		<item>Doh is F</item>
+		<item>7.6.7.6.7.6.7.6</item>
+		<item>bologna</item>
+		<item>{  :m |d :d |r :r |m :- |d :r.d|l, :r |d :t, |d :-: }</item>
+	</string-array>
+
+
+	<string-array name="hymn170caption">
+		<item>(Ndebele 237)</item>
+		<item>Doh is E flat</item>
+		<item>7.7.7.7</item>
+		<item>waddilove</item>
+		<item>{  :d |m  :- .r :d .d’ |d’  :l  : }</item>
+	</string-array>
+
+
+	<string-array name="hymn171caption">
+		<item>Doh is b flat</item>
+		<item>8.8.8.8</item>
+		<item>wareham</item>
+		<item>{  :d|d  :tl,  |s,  :- :d |r :d :t,  |d  :- : }</item>
+	</string-array>
+
+
+	<string-array name="hymn172caption">
+		<item>Doh is D</item>
+		<item>8.6.8.6</item>
+		<item>Prince of Peace</item>
+		<item>{|s :s  :l  |s :- :f  |m :-  :r  |d  :- :- |}</item>
+	</string-array>
+
+
+	<string-array name="hymn173caption">
+		<item>Doh is F</item>
+		<item>8.7.8.7.8.7.8.7</item>
+		<item>what a Friend</item>
+		<item>{|s  :- .s | l .s :m .d |d  :-  |l,  :  |}</item>
+	</string-array>
+
+
+	<string-array name="hymn174caption">
+		<item>Doh is E flat</item>
+		<item>10.6.10.6 neKorasi</item>
+		<item>l know whom I have believed</item>
+		<item>{  :d  |m  :- .m |f .m :r .d |l :s |s : }</item>
+	</string-array>
+
+
+	<string-array name="hymn175caption">
+		<item>Doh is G</item>
+		<item>7.7.8.8.7</item>
+		<item>Sedera</item>
+		<item>{ :m, .f,|s, :- .d |l, :s, |d :-  |- : }</item>
+	</string-array>
+
+
+	<string-array name="hymn176caption">
+		<item>(Ndebele 316)</item>
+		<item>Doh is F</item>
+		<item>8.8.8.8</item>
+		<item>Ukunxusa</item>
+		<item>{|m .m :r .m |f  :m  |m  :r  |d  :-  |}</item>
+	</string-array>
+
+
+	<string-array name="hymn177caption">
+		<item>(Ndebele 227)</item>
+		<item>Doh is G</item>
+		<item>9.7.9.7.8</item>
+		<item>Ishe wangu</item>
+		<item>{| :  :d ., s,|d  :- .d :d .m |r  :r  :  }</item>
+	</string-array>
+
+
+	<string-array name="hymn178caption">
+		<item>Doh is F</item>
+		<item>8.8.8.8</item>
+		<item>blockley</item>
+		<item>{|m  :d :f |m  :-  :m  |m  :-  :r  |d  :-  ||}</item>
+	</string-array>
+
+
+	<string-array name="hymn179caption">
+		<item>(Ndebele 221)</item>
+		<item>Doh is D</item>
+		<item>8.8.8.8.8.8</item>
+		<item>Mapudzi</item>
+		<item>{|s  :s .l|s :- .d |f :m  |r  :-  |}</item>
+	</string-array>
+
+
+	<string-array name="hymn180caption">
+		<item>Doh is G</item>
+		<item>6.6.8.6</item>
+		<item>Canada</item>
+		<item>{  :d  |m .d :s,  :l,  |s,  :-  ||}</item>
+	</string-array>
+
+
+	<string-array name="hymn181caption">
+		<item>Doh is D</item>
+		<item>8.8.8.8.8.8</item>
+		<item>Mozart</item>
+		<item>{ :s |s  :m :m  |m  :d :d |t, :r</item>
+		<item>:f |f :m : }</item>
+	</string-array>
+
+
+	<string-array name="hymn182caption">
+		<item>Doh is C</item>
+		<item>8.8.8.8</item>
+		<item>Mainzer</item>
+		<item>{ :s |s  :s  |d’  :t  |l  :l  |s  ||}</item>
+	</string-array>
+
+
+	<string-array name="hymn183caption">
+		<item>(Ndebele 311)</item>
+		<item>Doh is F</item>
+		<item>8.8.8.8.8.8</item>
+		<item>Mumanzi</item>
+		<item>{|m  :- :d  |l, :-  :d |m  :-  :d |m :r }</item>
+	</string-array>
+
+
+	<string-array name="hymn184caption">
+		<item>Doh is G</item>
+		<item>7.6.7.6.7.6.7.6</item>
+		<item>Angel’s Story</item>
+		<item>{m  ||m :- .m |r  :d  |d :- |t, : }</item>
+	</string-array>
+
+
+	<string-array name="hymn185caption">
+		<item>Doh is A</item>
+		<item>6.6.8.6</item>
+		<item>St Michael</item>
+		<item>{  :s,  |d  :m  |r  :r  |m  :-  |-  ||}</item>
+	</string-array>
+
+
+	<string-array name="hymn186caption">
+		<item>Doh is G</item>
+		<item>10.11.10.11</item>
+		<item>Jesus bids us shine</item>
+		<item>{ |d .s, :s, .s, |s, :d .r |d :t, |t, :- |}</item>
+	</string-array>
+
+
+	<string-array name="hymn187caption">
+		<item>Doh is D</item>
+		<item>8.8.8.8</item>
+		<item>Francistown</item>
+		<item>{| : :s .s |s  :- .s :l .s |m .s :s  :  }</item>
+	</string-array>
+
+
+	<string-array name="hymn188caption">
+		<item>(Ndebele 245)</item>
+		<item>Doh is A</item>
+		<item>8.7.8.7.4.7</item>
+		<item>Dismissal</item>
+		<item>{||d  :t, .l, |s, :m, |l, :d  |s,  :m,  ||}</item>
+	</string-array>
+
+
+	<string-array name="hymn189caption">
+		<item>Doh is G</item>
+		<item>9.8.9.8.8.8</item>
+		<item>Marienlyst</item>
+		<item>{|m :d  :r |m .m :m :r |r :d  :- ||}</item>
+	</string-array>
+
+
+	<string-array name="hymn190caption">
+		<item>Doh is D</item>
+		<item>7.7.7.7</item>
+		<item>Lubeck</item>
+		<item>{ |d  :m  |s  :s  |l  :t  |d’  :- ||}</item>
+	</string-array>
+
+
+	<string-array name="hymn191caption">
+		<item>Doh is E flat</item>
+		<item>8.6.8.6</item>
+		<item>Muchengeti</item>
+		<item>{| : :d .d |d  :- d :d .m |s :m : }</item>
+	</string-array>
+
+
+	<string-array name="hymn192caption">
+		<item>Doh is G</item>
+		<item>10.4.10.4.10.10</item>
+		<item>Sandon</item>
+		<item>{|m :- |m :m |f :- |- :m |m :r |d :r |m :- |- ||}</item>
+	</string-array>
+
+
+	<string-array name="hymn193caption">
+		<item>Doh is A</item>
+		<item>8.8.8.8</item>
+		<item>Celeste</item>
+		<item>{  :s, |d :d .d |d .r :m .r |d  :- - ||}</item>
+	</string-array>
+
+
+	<string-array name="hymn194caption">
+		<item>Doh is D</item>
+		<item>8.6.8.6</item>
+		<item>Tallis’ ordinal</item>
+		<item>{  :d  |m  :f  |s  :s  |l :l |s  ||}</item>
+	</string-array>
+
+
+	<string-array name="hymn195caption">
+		<item>Doh is G</item>
+		<item>6.6.8.6 neKorasi</item>
+		<item>Revive Thy work, o Lord</item>
+		<item>{  :d .r|m :r .d |l, :s, |d  :-  |- : }</item>
+	</string-array>
+
+
+	<string-array name="hymn196caption">
+		<item>Doh is C</item>
+		<item>8.6.8.6 neKorasi</item>
+		<item>Chinyarara</item>
+		<item>{|s .s :s .m |l .s :s .m |m .d :s m |r :d }</item>
+	</string-array>
+
+
+	<string-array name="hymn197caption">
+		<item>Doh is G</item>
+		<item>8.8.8.8</item>
+		<item>Angels’ Song</item>
+		<item>{ d |m :- :d |r :- :m |f :m :r |d :- ||}</item>
+	</string-array>
+
+
+	<string-array name="hymn198caption">
+		<item>Doh is C</item>
+		<item>Rusina Mwero</item>
+		<item>Pura</item>
+		<item>{:t .t|l  :l .m |s  :- .f |m .l, : }</item>
+	</string-array>
+
+
+	<string-array name="hymn199caption">
+		<item>(Ndebele 244)</item>
+		<item>Doh is F</item>
+		<item>8.8.8.8</item>
+		<item>Arizona</item>
+		<item>{|m :m :m|m :- :m |s :- :f |m :- :- ||}</item>
+	</string-array>
+
+
+	<string-array name="hymn200caption">
+		<item>(Ndebele 347)</item>
+		<item>Doh is D</item>
+		<item>8.6.8.6</item>
+		<item>Zuva rokupera</item>
+		<item>{ :d.m|s :-.s|s :-.f|m :r |d :-.s|l :s |f :r.f|m :- }</item>
+	</string-array>
+
+
+	<string-array name="hymn201caption">
+		<item>Doh is F</item>
+		<item>8.8.8.8.8.8</item>
+		<item>Mumhanzi</item>
+		<item>{|m :- :d |l, :- :d |m :- :d |m :r }</item>
+	</string-array>
+
+
+	<string-array name="hymn202caption">
+		<item>(Ndebele 345)</item>
+		<item>Doh is F</item>
+		<item>12.12.12.12</item>
+		<item>wauya</item>
+		<item>{  :-.s, |d :m :-.d|l, :f :m.,r |d :t, :-.r |r :d }</item>
+	</string-array>
+
+
+	<string-array name="hymn203caption">
+		<item>Doh is D</item>
+		<item>6.6.6.6.8.8</item>
+		<item>Umkululi</item>
+		<item>{|m :l  |s  :m  |r :-  |d  :- |}</item>
+	</string-array>
+
+
+	<string-array name="hymn204caption">
+		<item>(Ndebele 258)</item>
+		<item>Doh is F</item>
+		<item>8.6.8.6</item>
+		<item>Grafenberg</item>
+		<item>{|d  :l, .s, |d  :r  |m .m :r  |}</item>
+	</string-array>
+
+
+	<string-array name="hymn205caption">
+		<item>(Ndebele 253)</item>
+		<item>Doh is E flat</item>
+		<item>8.6.8.6</item>
+		<item>St. Peter</item>
+		<item>{  :s  |d’  :t  |l  :s  |s :f  |m }</item>
+	</string-array>
+
+
+	<string-array name="hymn206caption">
+		<item>(Ndebele 252)</item>
+		<item>Doh is G</item>
+		<item>7.7.7.7</item>
+		<item>Pamsoro</item>
+		<item>{|d :- :r |m :- :d |r :- :m |d :- :- |}</item>
+	</string-array>
+
+
+	<string-array name="hymn207caption">
+		<item>(Ndebele 264)</item>
+		<item>Doh is F</item>
+		<item>8.6.8.6</item>
+		<item>Dundee</item>
+		<item>{  :d  |m :f  |s :d  |r  :m  |f  ||}</item>
+	</string-array>
+
+
+	<string-array name="hymn208caption">
+		<item>Doh is G</item>
+		<item>8.7.8.7</item>
+		<item>Love Divine</item>
+		<item>{|d  :d  |d .r :m  |r  :d  |t,  :s,  ||}</item>
+	</string-array>
+
+
+	<string-array name="hymn209caption">
+		<item>(Ndebele 278)</item>
+		<item>Doh is G</item>
+		<item>6.6.8.6</item>
+		<item>Ripon</item>
+		<item>{  :m |m :d :m |r :tr |d :- ||}</item>
+	</string-array>
+
+
+	<string-array name="hymn210caption">
+		<item>Doh is F</item>
+		<item>6.6.6.6</item>
+		<item>Quam dilecta</item>
+		<item>{  :m  |f  :m  |m  :r  |d  :- |- ||}</item>
+	</string-array>
+
+
+	<string-array name="hymn211caption">
+		<item>Doh is D </item>
+		<item>8.7.8.7</item>
+		<item>St. oswald</item>
+		<item>{|s  :- .m | l  :d’ |t  :l  |s  :m |}</item>
+	</string-array>
+
+
+	<string-array name="hymn212caption">
+		<item>(Ndebele 277)</item>
+		<item>Doh is A flat</item>
+		<item>8.6.8.6</item>
+		<item>beatitudo</item>
+		<item>{|d :r :m |s :- :m |d :- :f |m :- :- ||}</item>
+	</string-array>
+
+
+	<string-array name="hymn213caption">
+		<item>Doh is G</item>
+		<item>8.5.8.3 Stephanos</item>
+		<item>{|m  :m  |m  :r  |m  :s  |s :f ||}</item>
+	</string-array>
+
+
+	<string-array name="hymn214caption">
+		<item>Doh is C</item>
+		<item>8.8.8.8</item>
+		<item>warrington</item>
+		<item>{|s :s :f |m :s :d’ |d’ :r’ :t |d’ :- ||}</item>
+	</string-array>
+
+
+	<string-array name="hymn215caption">
+		<item>Doh is F</item>
+		<item>8.8.8.8</item>
+		<item>Holly</item>
+		<item>{|m :re.m |d :m |r .m :f .s |m  :- |}</item>
+	</string-array>
+
+
+	<string-array name="hymn216caption">
+		<item>Doh is E flat</item>
+		<item>7.7.7.7.7.7</item>
+		<item>Charterhouse</item>
+		<item>{|m  :l  |s  :m  |r  :m .f |m :- ||}</item>
+	</string-array>
+
+
+	<string-array name="hymn217caption">
+		<item>Doh is G</item>
+		<item>6.6.8.6 neKorasi</item>
+		<item>Revive Thy work, o Lord</item>
+		<item>{ :d .r |m :r .d |l, :s,  |d :- |- : }</item>
+	</string-array>
+
+
+	<string-array name="hymn218caption">
+		<item>Doh is F</item>
+		<item>6.6.6.6</item>
+		<item>Ravenshaw</item>
+		<item>{|d  :d  |m  :f  |s  :-  |s  :- ||}</item>
+	</string-array>
+
+
+	<string-array name="hymn219caption">
+		<item>Doh is A flat</item>
+		<item>9.5.9.5 neKorasi</item>
+		<item>The call for reapers</item>
+		<item>{|m :- :m  |m :r :d |d :- :d |r :dl |s, }</item>
+	</string-array>
+
+
+	<string-array name="hymn220caption">
+		<item>(Ndebele 273)</item>
+		<item>Doh is E flat </item>
+		<item>7.7.7.7.7.7.7.7</item>
+		<item>Spanish Chant</item>
+		<item>{d  :- .d |t,  :d  |l, :d  |s, :-  |}</item>
+	</string-array>
+
+
+	<string-array name="hymn221caption">
+		<item>Doh is G</item>
+		<item>8.7.8.7.8.7.8.7</item>
+		<item>Harwel</item>
+		<item>{:s, .,s, |d :- .s, :d .m |r :r }</item>
+	</string-array>
+
+
+	<string-array name="hymn222caption">
+		<item>Doh is E flat</item>
+		<item>8.7.8.7.8.7.8.7</item>
+		<item>Vesper Hymn</item>
+		<item>{|m  :s  |f  :s  |m :s  |r  :s  ||}</item>
+	</string-array>
+
+
+	<string-array name="hymn223caption">
+		<item>Doh is E flat</item>
+		<item>8.8.8.8.8.8.8.8</item>
+		<item>Nettleton</item>
+		<item>{  :m .r |d  :d  :m .s | r  :r  : }</item>
+	</string-array>
+
+
+	<string-array name="hymn224caption">
+		<item>Doh is D</item>
+		<item>8.8.8.8</item>
+		<item>Chipo</item>
+		<item>{  :m .l |s  :- .m :r .s |s  :m  :  |}</item>
+	</string-array>
+
+
+	<string-array name="hymn225caption">
+		<item>Doh is F</item>
+		<item>Fara m’Kristu</item>
+		<item>{|m :d  |m  :d  |m  :r  |d :- |}</item>
+		<item>1.</item>
+		<item>Tinobvisa zvipo</item>
+		<item>Kupa baba wedu,</item>
+		<item>Kuti zvishandiswe</item>
+		<item>Kuparidza shoko.</item>
+		<item>225</item>
+	</string-array>
+
+
+	<string-array name="hymn226caption">
+		<item>Doh is E flat</item>
+		<item>8.8.8.8.8.8.8.7</item>
+		<item>Baba wangu</item>
+		<item>{ d:.r |m :m :m .f|s :s :f.m|r :-.r :s.f|m :m }</item>
+	</string-array>
+
+
+	<string-array name="hymn227caption">
+		<item>Doh is G</item>
+		<item>8.6.8.6</item>
+		<item>bishopthorpe</item>
+		<item>{ :s|m :-.r :d |t, :l, :f |m :d :t, |d :- ||}</item>
+	</string-array>
+
+
+	<string-array name="hymn228caption">
+		<item>Doh is C</item>
+		<item>6.6.8.6</item>
+		<item>St. George</item>
+		<item>{ :m  |f  :l  |s  :f  |m  :- |- ||}</item>
+	</string-array>
+
+
+	<string-array name="hymn229caption">
+		<item>(Ndebele 315)</item>
+		<item>Doh is D</item>
+		<item>12.9.12.9</item>
+		<item>Vawadzani</item>
+		<item>{ :d |m :- |m :l |s :- |m :d |m :- |r :r |d :- |d }</item>
+	</string-array>
+
+
+	<string-array name="hymn230caption">
+		<item>Doh is A</item>
+		<item>6.6.6.6.8.8</item>
+		<item>St. Godric</item>
+		<item>{ :m |r :d |l, :t, |d :- |- ||}</item>
+	</string-array>
+
+
+	<string-array name="hymn231caption">
+		<item>Doh is G</item>
+		<item>8.7.8.7.8.8.7</item>
+		<item>Luther</item>
+		<item>{  :d  |d  :m  |r :d |r :r |m ||}</item>
+	</string-array>
+
+
+	<string-array name="hymn232caption">
+		<item>Doh is E flat</item>
+		<item>8.6.8.6.8.6.8.6 neKorasi</item>
+		<item>Auld Lang Syne</item>
+		<item>{  :s,  |d :- .d |d :m |r  :-.d|r : }</item>
+	</string-array>
+
+
+	<string-array name="hymn233caption">
+		<item>Doh is A</item>
+		<item>7.7.7.7</item>
+		<item>Vienna</item>
+		<item>{|m :r |d :m |s :f  |m :- ||}</item>
+	</string-array>
+
+
+	<string-array name="hymn234caption">
+		<item>(Ndebele 307)</item>
+		<item>Doh is A</item>
+		<item>8.6.8.6</item>
+		<item>St Magnus</item>
+		<item>{  :s,  |d :r |t, :s, |d :r |m ||}</item>
+	</string-array>
+
+
+	<string-array name="hymn235caption">
+		<item>Doh is C</item>
+		<item>6.7.8.6.8.8.11</item>
+		<item>Salem</item>
+		<item>{ :s |d’ :- |t :l |s : - |s :s |l :s |l :t |d’ :- |s }</item>
+	</string-array>
+
+
+	<string-array name="hymn236caption">
+		<item>Doh is C</item>
+		<item>8.8.8.8</item>
+		<item>Rungano</item>
+		<item>{ :s :s |s :- :- |m :l :m |s :- :f |- }</item>
+	</string-array>
+
+
+	<string-array name="hymn237caption">
+		<item>(Ndebele 300)</item>
+		<item>Doh is G</item>
+		<item>8.8.8.8</item>
+		<item>Confidence</item>
+		<item>{|m :m .r |d  :m  |l, .r :d .t, |d  :- . ||}</item>
+	</string-array>
+
+
+	<string-array name="hymn238caption">
+		<item>(Ndebele 303)</item>
+		<item>Doh is E</item>
+		<item>8.8.8.8</item>
+		<item>Melcombe</item>
+		<item>{ :s  |s :f |m :r |d :l |s  ||}</item>
+	</string-array>
+
+
+	<string-array name="hymn239caption">
+		<item>(Ndebele 297)</item>
+		<item>Do is F</item>
+		<item>8.6.8.6</item>
+		<item>Arlington</item>
+		<item>{ :d  |m .,m :m :r |d .,d :d  :  }</item>
+	</string-array>
+
+
+	<string-array name="hymn240caption">
+		<item>(Ndebele 291)</item>
+		<item>Doh is D flat</item>
+		<item>8.8.6.8.8.6</item>
+		<item>Praise</item>
+		<item>{|s :- |m :-.f |s :- |d’ :- |l :r’</item>
+		<item>|d’ :t |d’ :- |- :- ||}</item>
+	</string-array>
+
+
+	<string-array name="hymn241caption">
+		<item>Doh is G</item>
+		<item>6.6.8.6</item>
+		<item>St Augustine</item>
+		<item>{  :s,  |d  :r  |m  :r  |d  :- |-  ||}</item>
+	</string-array>
+
+
+	<string-array name="hymn242caption">
+		<item>Doh is F</item>
+		<item>8.6.8.6</item>
+		<item>Dundee</item>
+		<item>{  :d  |m :f  |s  :d  |r  :m  |f  :  }</item>
+	</string-array>
+
+
+	<string-array name="hymn243caption">
+		<item>(Ndebele 115)</item>
+		<item>Doh is E flat</item>
+		<item>8.6.8.6</item>
+		<item>Vadzidzisi</item>
+		<item>{|m  :-.m|d :m  |f :-.f|m :d |r :-.r|t, :r |s :- |s :- |}</item>
+	</string-array>
+
+
+	<string-array name="hymn244caption">
+		<item>Doh is E</item>
+		<item>6.6.6.6</item>
+		<item>Ravenshaw</item>
+		<item>{|d :d  |m :f  |s :-  |s  :- |}</item>
+	</string-array>
+
+
+	<string-array name="hymn245caption">
+		<item>Doh is A flat</item>
+		<item>8.8.8.6</item>
+		<item>Just as I am</item>
+		<item>{|s, :l, :d |t, :- :s, |d :- :r |m  :- :- |}</item>
+	</string-array>
+
+
+	<string-array name="hymn246caption">
+		<item>Doh is F</item>
+		<item>10.8.10.8</item>
+		<item>Chapapura</item>
+		<item>{ :d.m|s  :s  |s.f :m .r |d  :d  |d .s,:  }</item>
+	</string-array>
+
+
+	<string-array name="hymn247caption">
+		<item>Doh is C</item>
+		<item>8.8.8.8</item>
+		<item>Castle Street</item>
+		<item>{|s :- |l :t |d’ :l |s :- |f :- |m :- ||}</item>
+	</string-array>
+
+
+	<string-array name="hymn248caption">
+		<item>Doh is A</item>
+		<item>6.6.8.6</item>
+		<item>Cambridge</item>
+		<item>{  :d  |m  :r  .d |r  :d.t,|d :- |- ||}</item>
+	</string-array>
+
+
+	<string-array name="hymn249caption">
+		<item>Doh is C</item>
+		<item>8.8.6.8.8.6</item>
+		<item>Hull</item>
+		<item>{  :d |m :m |m :r |s  :s |s ||}</item>
+	</string-array>
+
+
+	<string-array name="hymn250caption">
+		<item>(Ndebele 317)</item>
+		<item>Doh is F</item>
+		<item>11.11.11.11 neKorasi</item>
+		<item>St Getrude</item>
+		<item>{|s :s |s :s |s :-.l|s :- || r :r |d :r |m :- | :- ||}</item>
+	</string-array>
+
+
+	<string-array name="hymn251caption">
+		<item>Doh is b flat</item>
+		<item>7.6.7.6.7.6.7.6</item>
+		<item>Morning Light</item>
+		<item>{ :s,  |d  :- .d |m : d |d  :- |l,  ||}</item>
+	</string-array>
+
+
+	<string-array name="hymn252caption">
+		<item>Doh is G</item>
+		<item>6.6.8.6.... neKorasi</item>
+		<item>Pfumo raShe</item>
+		<item>{ :s,|d :t, |d :r |m :-|-:f |m :r |d :t, |d :-|-:-|}</item>
+	</string-array>
+
+
+	<string-array name="hymn253caption">
+		<item>Doh is F</item>
+		<item>8.7.8.7 neKorsai</item>
+		<item>Fully trusting</item>
+		<item>{  :s .,l |s  :m  :m .,r |m  :d  :  }</item>
+	</string-array>
+
+
+	<string-array name="hymn254caption">
+		<item>Doh is F</item>
+		<item>Rusina Mwero</item>
+		<item>Homba</item>
+		<item>{|m .f :s .s |f .m :r  |d .m :m .m |m .m :l,  |}</item>
+	</string-array>
+
+
+	<string-array name="hymn255caption">
+		<item>(Ndebele 259)</item>
+		<item>Doh is D</item>
+		<item>9.7.9.7</item>
+		<item>Pezulu</item>
+		<item>{|d :m :f |s :- :s |l :- :d’ |l :s : |}</item>
+	</string-array>
+
+
+	<string-array name="hymn256caption">
+		<item>Doh is b flat</item>
+		<item>9.9.9.6 neKorasi Come to the Saviour</item>
+		<item>{|s, :l, .,s, |m, :s, |d :r .,d |l, :- |}</item>
+	</string-array>
+
+
+	<string-array name="hymn257caption">
+		<item>Doh is C</item>
+		<item>Rusina Mwero…</item>
+		<item>Marondera</item>
+		<item>{s .s :s  ,s |s  :m  .r  |d  :-  |}</item>
+	</string-array>
+
+
+	<string-array name="hymn258caption">
+		<item>Doh is G</item>
+		<item>8.8.8.7</item>
+		<item>Quem pastores</item>
+		<item>{d :- :m |s :- :m  |f :s :l  |s :- :r |}</item>
+	</string-array>
+
+
+	<string-array name="hymn259caption">
+		<item>Doh is D</item>
+		<item>12.12.12</item>
+		<item>Wentworth</item>
+		<item>{ :s |d’ :d’ |t :l |s :m |d :r |m :-|l :-|r :- |- }</item>
+	</string-array>
+
+
+	<string-array name="hymn260caption">
+		<item>Doh is G</item>
+		<item>Ishe Komborera.........</item>
+		<item>{|d .d :d .r |m :m  |r :r |d :- }</item>
+	</string-array>
+
+
+	<string-array name="hymn261caption">
+		<item>Doh is E flat</item>
+		<item>11.10.11.10</item>
+		<item>o Perfect Love</item>
+		<item>{|d :-|m :s |s :-|s :-|s :s |d’ :t |t :- |l :- }</item>
+	</string-array>
+
+
+	<string-array name="hymn262caption">
+		<item>Doh is E flat</item>
+		<item>10.6.10.6</item>
+		<item>Praise</item>
+		<item>Him</item>
+		<item>{||d :d |m :s  |l .t :d’ .l |s :m }</item>
+	</string-array>
+
+
+	<string-array name="hymn263caption">
+		<item>Doh is G</item>
+		<item>6.6.7.4</item>
+		<item>Sommerlied</item>
+		<item>{|m  :d  |t, :d  |l,  :-  |l, :-  }</item>
+	</string-array>
+
+
+	<string-array name="hymn264caption">
+		<item>Doh is F</item>
+		<item>6.6.8.6</item>
+		<item>Newland</item>
+		<item>{ :s  |d  :m  |r  :r  |m :- |- : }</item>
+	</string-array>
+
+
+	<string-array name="hymn265caption">
+		<item>Doh is G</item>
+		<item>6.5.6.5</item>
+		<item>over and over</item>
+		<item>{|m :- :m |d :- :d |r :- :- |l, :- :- |t, :- :l, |s, :- :f |m }</item>
+	</string-array>
+
+
+	<string-array name="hymn266caption">
+		<item>Doh is E flat</item>
+		<item>8.7.8.7</item>
+		<item>Mufudzi</item>
+		<item>{| : :d .d |d  :- .d :d .m |s :m : }</item>
+	</string-array>
+
+
+	<string-array name="hymn267caption">
+		<item>Doh is F</item>
+		<item>Rusina Mwero…</item>
+		<item>Away in a manger</item>
+		<item>{  :s, |d :d :r .m|d  :d  :m.f|s  :s :l |f :-  }</item>
+	</string-array>
+
+
+	<string-array name="hymn268caption">
+		<item>Doh is F</item>
+		<item>11.11.11.11</item>
+		<item>Away in a manger</item>
+		<item>{ ;s, |d :d :r .m|d :d :m .f|s :s :l |f :-  :}</item>
+	</string-array>
+
+
+	<string-array name="hymn269caption">
+		<item>Doh is F</item>
+		<item>8.6.8.6</item>
+		<item>winchester old</item>
+		<item>{  :d  |m :-.m |r  :d  |f  :f  |m ||}</item>
+	</string-array>
+
+
+	<string-array name="hymn270caption">
+		<item>Doh is A flat</item>
+		<item>6.5.6.5</item>
+		<item>worship</item>
+		<item>{|s, :d  |d  :t,  |t,  :-  |l, :-  |}</item>
+	</string-array>
+
+
+	<string-array name="hymn271caption">
+		<item>Doh is F</item>
+		<item>8.5.1.1</item>
+		<item>Derwent</item>
+		<item>{|m :- :m |f :m :r |s :- :l |s :- :m |}</item>
+	</string-array>
+
+
+	<string-array name="hymn272caption">
+		<item>Doh is b flat</item>
+		<item>7.6.7.6.7.6.7.6</item>
+		<item>Ellacombe</item>
+		<item>{ :s, |d :t,.l,|s, :d |m, :f, |s, :s, |l,.t,:d |r :r |m :-|- ||}</item>
+	</string-array>
+
+
+	<string-array name="hymn273caption">
+		<item>Doh is E </item>
+		<item>7.7.7.7 neKorasi</item>
+		<item>Infant praise</item>
+		<item>{|d :d .m|m .r</item>
+		<item>:f .r |d :t, |d  :- ||}</item>
+	</string-array>
+
+
+	<string-array name="hymn274caption">
+		<item>Doh is F</item>
+		<item>7.6 naKorasi</item>
+		<item>African Airs 31</item>
+		<item>{|s, :s, |d :r |m :r  |l, :-  |}</item>
+	</string-array>
+
+
+	<string-array name="hymn275caption">
+		<item>Doh is E</item>
+		<item>7.7.7.7</item>
+		<item>Innocents</item>
+		<item>{|m :- .f |s :d’ |t :l |s :- ||}</item>
+	</string-array>
+
+
+	<string-array name="hymn276caption">
+		<item>Doh is G</item>
+		<item>10.4.10.4.10.10</item>
+		<item>Sandon</item>
+		<item>{||m :- |m :m |f :- |- :m |m :r |d :r |m :- :- ||}</item>
+	</string-array>
+
+
+	<string-array name="hymn277caption">
+		<item>Doh is C</item>
+		<item>6.6.6.5 neKorasi  Ndouya kuJesu</item>
+		<item>{|d :- .m |s :d’ |d’  :- |s :- |}</item>
+	</string-array>
+
+
+	<string-array name="hymn278caption">
+		<item>Doh is A</item>
+		<item>7.7.7.7</item>
+		<item>Cross</item>
+		<item>{|m :- :r |d :- :r |d :- :t, |d :- :- }</item>
+	</string-array>
+
+
+	<string-array name="hymn279caption">
+		<item>Doh is F</item>
+		<item>6.5.6.5 neKorasi</item>
+		<item>Marston</item>
+		<item>{ :-.s, |m :f .s |d :d .d |r :f .m |r :- }</item>
+	</string-array>
+
+
+	<string-array name="hymn280caption">
+		<item>Doh is D</item>
+		<item>7.7.7.7</item>
+		<item>buckland</item>
+		<item>{|s :m |r  :d  |r  :r |m :- ||}</item>
+	</string-array>
+
+
+	<string-array name="hymn281caption">
+		<item>Doh is E flat </item>
+		<item>8.6.8.6</item>
+		<item>Capel</item>
+		<item>{ :s .f |m :m .r |m :m .r |m :- .r|d : |}</item>
+	</string-array>
+
+
+	<string-array name="hymn282caption">
+		<item>Doh is D</item>
+		<item>7.5.7.5</item>
+		<item>This Little Light</item>
+		<item>{s .s :s .l |s .m :d  |s .s :s .m |d :- |}</item>
+	</string-array>
+
+
+	<string-array name="hymn283caption">
+		<item>Doh is F</item>
+		<item>10.9.10.9</item>
+		<item>Lead me to Jesus</item>
+		<item>{|m :s .,f |m :d |m :f .,m |m  :r  }</item>
+	</string-array>
+
+
+	<string-array name="hymn284caption">
+		<item>Doh is G</item>
+		<item>6.5.6.5</item>
+		<item>North Coates</item>
+		<item>{|s,  :s,  |l,  l, |d :- |d  :- ||}</item>
+	</string-array>
+
+
+	<string-array name="hymn285caption">
+		<item>Doh is F</item>
+		<item>Rusina Mwero</item>
+		<item>Mudyari</item>
+		<item>(Kuita nokuimba)</item>
+		<item>{|d  :- .d |d  :- .d |t, .d :r .d |}</item>
+	</string-array>
+
+
+	<string-array name="hymn286caption">
+		<item>(Ndebele 384)</item>
+		<item>Doh is F</item>
+		<item>8.8.8.8</item>
+		<item>Holly</item>
+		<item>{|m  :re .m |d  :m  |r .m :f .s |m  :- |}</item>
+	</string-array>
+
+
+	<string-array name="hymn287caption">
+		<item>Doh is E flat</item>
+		<item>11.10.11.10</item>
+		<item>Spean</item>
+		<item>{|m :- |d :l, |s, :-|d :m |s :-|f :r |d :-|t, :- ||}</item>
+	</string-array>
+
+
+	<string-array name="hymn288caption">
+		<item>Doh is A</item>
+		<item>8.6.8.6</item>
+		<item>byzantium</item>
+		<item>{  :s |s :d’ .t |l :s |f :s .f |m : }</item>
+	</string-array>
+
+
+	<string-array name="hymn289caption">
+		<item>Doh is C</item>
+		<item>8.8.8.8</item>
+		<item>Mangwanani</item>
+		<item>{|s  :m’ .r’ |d’  :-  |s  :s .m |r  :- |}</item>
+	</string-array>
+
+
+	<string-array name="hymn290caption">
+		<item>Doh is A</item>
+		<item>7.7.7.7.7.7</item>
+		<item>Dix</item>
+		<item>{|d  :t, .d |r  :d  |f  :f  |m  :-  ||}</item>
+	</string-array>
+
+
+	<string-array name="hymn291caption">
+		<item>Doh is F</item>
+		<item>8.6.8.6</item>
+		<item>winchester old</item>
+		<item>{  :d  |m :- .m |r  :d |f  :f |m ||}</item>
+	</string-array>
+
+
+	<string-array name="hymn292caption">
+		<item>Doh is E flat</item>
+		<item>8.8.8.8</item>
+		<item>Samson</item>
+		<item>{  :d |m :-.f |s :m |l :t  |d’ : }</item>
+	</string-array>
+
+
+	<string-array name="hymn293caption">
+		<item>(Ndebele 377)</item>
+		<item>Doh is E flat</item>
+		<item>10.10.10.10</item>
+		<item>Eventide</item>
+		<item>{|m :-|m :r |d :-|s :-|l :s |s :f |m :- |- :- ||}</item>
+	</string-array>
+
+
+	<string-array name="hymn294caption">
+		<item>Doh is A flat</item>
+		<item>8.8.8.8</item>
+		<item>Mununuri</item>
+		<item>{|  :  s, .d |m  :- .r :d .s, |t, .l, :- |}</item>
+	</string-array>
+
+
+	<string-array name="hymn295caption">
+		<item>Doh is F</item>
+		<item>10.10.10.10</item>
+		<item>Toulon</item>
+		<item>{|d :-|r :m |f :-|m :-|r :d |d :t, |d :-|-:- ||}</item>
+	</string-array>
+
+
+	<string-array name="hymn296caption">
+		<item>Doh is E flat</item>
+		<item>8.8.8.8</item>
+		<item>Angelus</item>
+		<item>{ :d |d :- :r  |m :fe :s |s :- :fe |s :- ||}</item>
+	</string-array>
+
+
+	<string-array name="hymn297caption">
+		<item>Doh is E flat</item>
+		<item>8.8.8.8</item>
+		<item>Saxby</item>
+		<item>{|m :m :m |r |r :- :d |d :- :t, |d :- :- |}</item>
+	</string-array>
+
+
+	<string-array name="hymn298caption">
+		<item>Doh is b flat</item>
+		<item>8.6.8.6</item>
+		<item>Lucius</item>
+		<item>{  :s,  |s, .m, :d  :t,  |t, .l :l,  :  }</item>
+	</string-array>
+
+
+	<string-array name="hymn299caption">
+		<item>Doh is F</item>
+		<item>12.12.12.12</item>
+		<item>wauya</item>
+		<item>{  :s, |d :m :- .d|l, :f :m .,r |d :t, :- .r |r :d }</item>
+	</string-array>
+
+
+	<string-array name="hymn300caption">
+		<item>(Ndebele 391)</item>
+		<item>Doh is E flat</item>
+		<item>8.6.8.6</item>
+		<item>St Peter</item>
+		<item>{  s  |d’ :t |l :s  |s :f  |m : }</item>
+	</string-array>
+
+
+	<string-array name="hymn301caption">
+		<item>Doh is b flat</item>
+		<item>7.6.7.6.7.6.7.6 neKorasi</item>
+		<item>wir pflugen</item>
+		<item>{ :s, |d :d  |s, :s, |m :- |d : }</item>
+	</string-array>
+
+
+	<string-array name="hymn302caption">
+		<item>Doh is G</item>
+		<item>7.7.7.7.7.7.7.7</item>
+		<item>St George</item>
+		<item>{|m :- .m |s :m |d :r  |m :- ||}</item>
+	</string-array>
+
+
+	<string-array name="hymn303caption">
+		<item>Doh is E flat</item>
+		<item>8.8.8.8</item>
+		<item>williams</item>
+		<item>{  .s :s .f |m  :- .m :m .r |d  :  }</item>
+	</string-array>
+
+
+	<string-array name="hymn304caption">
+		<item>Doh is F</item>
+		<item>8.8.8.8</item>
+		<item>Chimanza</item>
+		<item>{| : :d .r |m :- : f|m  :r</item>
+		<item>:d |r :- :d.t|d :- : }</item>
+	</string-array>
+
+
+	<string-array name="hymn305caption">
+		<item>Doh is A</item>
+		<item>8.6.8.6</item>
+		<item>Evan</item>
+		<item>{  :s,  |s, .d :m  :r  |d .l, :s,  :  }</item>
+	</string-array>
+
+
+	<string-array name="hymn306caption">
+		<item>Doh is A</item>
+		<item>9.7.9.7.7.8.9.7</item>
+		<item>A little ship</item>
+		<item>{s, :m:-|r: d;t |l,: s,:- lf,: m,:- ld:l, :d|r :d:-|t :d:- |}</item>
+	</string-array>
+
+
+	<string-array name="hymn307caption">
+		<item>Doh is F</item>
+		<item>8.8.8.8</item>
+		<item>Ukunxusa</item>
+		<item>{ lm.m:r .m| f: m |m: r| d: -| }</item>
+	</string-array>
+
+
+	<string-array name="hymn308caption">
+		<item>Doh is G</item>
+		<item>8.6.8.6</item>
+		<item>Masuku</item>
+		<item>{ s,| d:- |m. d: m|-: rl d:- |l, :s, :-l }</item>
+	</string-array>
+
+
+	<string-array name="hymn309caption">
+		<item>Doh is A</item>
+		<item>8.8.8.8</item>
+		<item>M.b. Masuku</item>
+		<item>{ ls,: m, :s,l d :-:- ld:t, :s,|l ,:-:- }</item>
+	</string-array>
+
+
+	<string-array name="hymn310caption">
+		<item>Doh is G </item>
+		<item>R Vaughan… </item>
+		<item>williams 1872</item>
+		<item>MHb 832</item>
+		<item>{:s |m :r |d :-l-: s,|l, :d \r: s,|m: -l-|| }</item>
+	</string-array>
+
+
+	<string-array name="hymn311caption">
+		<item>Doh is F</item>
+		<item>Hursley…</item>
+		<item>{|d :d :d|d ;td |r :m :r |d :- :- |}</item>
+	</string-array>
+
+
+	<string-array name="hymn312caption">
+		<item>Doh is F</item>
+		<item>Near the cross…</item>
+		<item>{|m :- :s |s  :- :- |f :- :l |l :- :- |}</item>
+	</string-array>
+
+
+	<string-array name="hymn313caption">
+		<item>Doh is G</item>
+		<item>Jesu ari pano…</item>
+		<item>{|f :- :f |f :- :f |f :- :- |m :- :- |}</item>
+	</string-array>
+
+
+	<string-array name="hymn314caption">
+		<item>Doh is F.....</item>
+		<item>{| .d :r .m |f .l, :l, |- .d :t, .l |s, .,d :m :-. : }</item>
+	</string-array>
+
+
+	<string-array name="hymn315caption">
+		<item>Doh is F</item>
+		<item>Joy, joy, joy....</item>
+		<item>{|m :m |m :- .r |d .s, :d .m |l :s |}</item>
+	</string-array>
+
+
+	<string-array name="hymn316caption">
+		<item>Doh is A flat</item>
+		<item>In my heart........</item>
+		<item>{|s  :f  |m  :r  |d-.r :m -.d |s,  :s,  |}</item>
+	</string-array>
+
+
+	<string-array name="hymn317caption">
+		<item>Doh is A flat</item>
+		<item>A little ship.....</item>
+		<item>{ :s |d’ :- :d’  |d’ :t</item>
+		<item>:l |s :- :f |m :- : }</item>
+	</string-array>
+
+
+</resources>

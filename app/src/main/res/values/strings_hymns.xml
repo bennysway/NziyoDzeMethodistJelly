@@ -1,0 +1,10606 @@
+<resources>
+    <string-array name="hymn1">
+<item>
+Pururudzai vanhu mose,\n
+Imbai kuna Jehovha;\n
+Kurumbidzai mumuvonge,\n
+Uyai norufaro kwa’ri.\n
+</item>
+<item>
+Toziva kuti Jehovha,\n
+Ndiye Mwari wechokwadi;\n
+Tiri boka rehwai dzake,\n
+Anotipa kudya kwedu.\n
+</item>
+<item>
+Pindai pamasuo ake,\n
+Musedere kuna Mambo;\n
+Rumbidzai zita rake,\n
+Makafanera kudaro.\n
+</item>
+<item>
+Ndiye Mwari wakanaka,\n
+Tsitsi dzake dzakakomba;\n
+Chokwadi chake chiripo,\n
+Hachichazopere icho.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn2">
+<item>
+Kudzai Mambo, ano utsvene, \n
+Ari kudenga, ana masimba;\n
+Ndiye nhowo yedu nekarekare\n
+Anorumbidzwa pachigaro chake.\n
+</item>
+<item>
+Imbai masimba, nengoni dzake, \n
+wakafukidzwa nezvinopenya;\n
+Hasha dzake dzose dzinotinhira,\n
+Anofamba-famba pachamupupuri\n
+</item>
+<item>
+Ana masimba, wakaisika\n
+Nyika nezvose zviri mairi;\n
+wakaitsigira nomurairo,\n
+wakaikombera negungwa yose.\n
+</item>
+<item>
+Kufudza kwenyu kusingarehwe,\n
+Kuri pamhepo napakupenya,\n
+Kuri pamakomo nepamakan’a,\n
+Kuri pane mvura napane dova.\n
+</item>
+<item>
+Isu venyika hatine simba.\n
+Tinotarira chete kwamuri;\n
+Tsitsi dzenyu dzose dzisingapere,\n
+Musiki nehama nomununuri.\n
+</item>
+<item>
+Muna masimba norudo rwose,\n
+Ngirozi dzinokutunhidzai;\n
+Nesu venyika tokutunhidzai,\n
+Tokurumbidzai kusingapere.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn3">
+<item>
+Mwari muri zuva redu,\n
+Munopenya pauzuru;\n
+Munovhenekera mweya,\n
+Munotiratidza nzira.\n
+</item>
+<item>
+Mwari muri nhowo yedu,\n
+Hatidzitye mhandu dzedu;\n
+Dzose dzinokundwa nemi,\n
+Tigofamba nokufara.\n
+</item>
+<item>
+Munotipa ngoni dzenyu,\n
+Munotipawo utsvene;\n
+Munopa vanonamata\n
+Izvo zvinokomborera.\n
+</item>
+<item>
+Rukomborero rukuru!\n
+Rukomborero rwedenga!\n
+Kunavanovimba nemi,\n
+Vanoziva rudo rwenyu.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn4">
+<item>
+Kudza Jehovha, Mwari ane simba,\n
+Anofarisa mwoyo yavanhu;\n
+Anosimbisa vakati rukutu,\n
+Anovaponisa vakatadza.\n
+</item>
+<item>
+Kudza Jehovha, Ishe ane ngoni,\n
+wakatiitira tsitsi dzake,\n
+wakaregerera kuipa kwedu,\n
+wakatitumidza vana vake.\n
+</item>
+<item>
+Kudza Jehovha wakatifadzisa,\n
+zvose zvipo zvake zvakanaka;\n
+Tinozorora pamaoko ake,\n
+Tino rufaro norunyararo.\n
+</item>
+<item>
+Kudza Jehovha, Mwari Ishe wedu\n
+wakatipa Kristu mwana wake\n
+Kudza Jesu, wakatifira isu,\n
+NaMweya Mutsvene, ngaakudzwe.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn5">
+<item>
+Ngatimukudze Mwari\n
+Nemwoyo inofara:\n
+chorus\n
+Tsitsi dzake ihuru\n
+Dzinoitirwa isu.\n
+</item>
+<item>
+Anoraira zuva\n
+Rivhenekere nyika\n
+</item>
+<item>
+zvinhu zvose zvipenyu\n
+zvinochengetwa naye:\n
+</item>
+<item>
+Anotikwanisawo\n
+Anoda kukumbirwa:\n
+</item>
+<item>
+Kana tiri panhamo\n
+Tinosimbiswa naye:\n
+</item>
+<item>
+Mwana wake wakafa\n
+Kuti tive vapenyu:\n
+</item>
+        <item>
+Ngatimukudze Mwari\n
+Nemwoyo inofara:\n
+chorus\n
+Tsitsi dzake dziripo\n
+Dzisingapere idzo.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn6">
+<item>
+Mukudzei iye Mwari\n
+Mune denga rose;\n
+Mukudzei iye Mwari\n
+Pane nyika yose.\n
+</item>
+<item>
+Imi muri nhume dzake,\n
+Mukudzei iye:\n
+Nemi muri hondo dzake\n
+Mukudzei iye.\n
+</item>
+<item>
+Iwe zuva, newe mwedzi\n
+Mukudzei iye;\n
+Nemiwo imi nyenyedzi,\n
+Mukudzei iye. \n
+</item>
+<item>
+Iwe moto, newe chando,\n
+Mukudzei iye;\n
+Iwe mhepo newe mhute\n
+Mukudzei iye.\n
+</item>
+<item>
+Imi muri vaShe mose,\n
+Mukudzei iye;\n
+Nemi imi vanhu mose,\n
+Mukudzei iye.\n
+</item>
+<item>
+Imi mose vakomana,\n
+Mukudzei iye:\n
+Nemi imi vasikana,\n
+Mukudzei iye.\n
+</item>
+<item>
+Nemi vanhu vachembera.\n
+Mukudzei iye;\n
+Nemi imi mhuri yose,\n
+Mukudzei iye.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn7">
+<item>
+Jehovha ana masimba,\n
+zvose zvakasikwa naye;\n
+Ndiye Ishe wavo vose\n
+Ivo variko kudenga.\n
+</item>
+<item>
+Jehovha ano ruzivo,\n
+Anoziva zvose zvinhu;\n
+Isu vanhu hatizive,\n
+Hapana chatinogona.\n
+</item>
+<item>
+Jehovha wakarurama,\n
+Naiyo mirau yake;\n
+Nyamba isu takatadza,\n
+Tine mhosva mberi kwake.\n
+</item>
+<item>
+Jehovha ari mutsvene,\n
+Takaipa mberi kwake;\n
+Ngatikumbire kwaari\n
+Rwose ruregero rwake.\n
+</item>
+<item>
+Jehovha anadzo ngoni,\n
+wotibata nadzo tose:\n
+wakauya Mwana wake\n
+Kuponisa vanhu vose.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn8">
+<item>
+Makasika zvose zvinhu,\n
+Imi Mwari moga;\n
+Pasina wakuyamurai\n
+Kuzviita kwenyu.\n
+</item>
+<item>
+Aya makomo amire\n
+Akasikwa nemi;\n
+Akamira akasimba\n
+Nokutsigwa nemi.\n
+</item>
+<item>
+Nayo mvura yatinonwa\n
+Takapiwa nemi;\n
+Nako kudya kwatinodya\n
+Takapiwa nemi.\n
+</item>
+<item>
+Makasika vanhu imi \n
+Nokufana nemi:\n
+Mukavapa zvinhu zvose\n
+zvikavakodzera.\n
+</item>
+<item>
+Nhasi vose vanotenda\n
+Nezvi zvipo zvenyu;\n
+Tipei mwoyo inokudai\n
+Sokutida kwenyu.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn9">
+<item>
+Mwari hamuna mavambo,\n
+Mwari hamuna mugumo;\n
+Muri pane nzvimbo dzose,\n
+Muripo nenguva dzose.\n
+</item>
+<item>
+Nokudzi nyenyedzi kose\n
+Muriko napauzuru;\n
+Maingovako nakare,\n
+Dzisati dzavako idzo.\n
+</item>
+        <item>
+Nyange zvikapera zvose,\n
+zvikaparadzika zvose;\n
+Asi imi hamupere\n
+            Mugere kusingapere.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn10">
+<item>
+Mufudzi ndiye Jehovha,\n
+Anondichengeta,\n
+Hapana chandinoshaya\n
+Ndichivimba naye.\n
+</item>
+<item>
+Pana mafuro manyoro\n
+Ndinoguta kwazvo,\n
+Ndinorara norugare\n
+Ndisingavhundutswe.\n
+</item>
+<item>
+Anomutsa mweya wangu\n
+Anondiponisa,\n
+Panzira dzokururama\n
+Anondifambisa.\n
+</item>
+<item>
+Nyangwe ndifambe murima\n
+Handingatye chinhu\n
+Nokuti imi muneni\n
+Munondinyaradza\n
+</item>
+<item>
+Mandigadzirira kudya\n
+Mberi kwavavengi,\n
+Mandizodza namafuta\n
+Handishaye chinhu\n
+</item>
+<item>
+Nduramo netsitsi dzenyu\n
+zvinozova neni,\n
+Ndichagara naJehovha\n
+Nokusingapere.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn11">
+<item>
+Tunhai Ishe, matenga,\n
+Nengirozi dzedenga;\n
+Zuva mwedzi pemberai,\n
+Mutunhei nyenyedzi.\n
+</item>
+<item>
+Tunhai zvaataura\n
+Pasi panzwe ‘zwi rake:\n
+Mirau isazotyorwa\n
+Yokuvatungamira\n
+</item>
+<item>
+Tunhai Ishe nokuti\n
+wakavimbisa kare,\n
+Akagotipa kukunda\n
+Rufu nezvivi zvose.\n
+</item>
+<item>
+NdiMwari woruponiso;\n
+Matenga paridzai;\n
+Denga nenyika nazvose\n
+Kuwai zita rake.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn12">
+<item>
+Ndinoshamiswa kwazvo\n
+Namabasa makuru\n
+Akaitiwa nemi,\n
+ose anorumbidza;\n
+Ukuru hwenyu Mwari\n
+Hunoshamisa kwazvo.\n
+</item>
+<item>
+Kana ndarangarira\n
+Mabasa okudenga,\n
+Kana ndarangarira\n
+Mabasa apanyika,\n
+Inobuda misodzi\n
+Kana ndafunga imi.\n
+</item>
+<item>
+Mwari vatatumumwe,\n
+Itai tikudei;\n
+Nokuti makatida,\n
+Makazotipa Jesu;\n
+Matipa Mweya wenyu\n
+wokutisimbaradza.\n
+</item>
+<item>
+Rumbidza iwe denga!\n
+Rumbidza iwe nyika!\n
+Rumbidza iwe gungwa!\n
+Nesu ngatirumbidze!\n
+Uyu musiki wedu,\n
+Ano rudo rukuru.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn13">
+<item>
+Mununuri ngaakudzwe\n
+Nedzi ndimi zhinji,\n
+Mbiri yaMwari wedenga\n
+Nemabasa ake.\n
+</item>
+<item>
+Ishe Mwari mune nyasha,\n
+Chindibatsirai\n
+Kuparidza pasi pose\n
+zita renyu guru.\n
+</item>
+<item>
+Jesu! zita rine simba\n
+Rinotanda kutya,\n
+Rinonyaradza vatadzi\n
+Rinopa upenyu.\n
+</item>
+<item>
+Nokunzwa kudana kwake\n
+Vakafa vomutswa,\n
+Vanochema vanofadzwa,\n
+Varombo votenda.\n
+</item>
+<item>
+Anoparadza kuipa,\n
+Anosunungura;\n
+Ropa rake rine simba,\n
+Rakandishambidza.\n
+</item>
+<item>
+Onai zvitadzo zvenyu\n
+zviri pana Jesu;\n
+Ndiye wava diramhamba\n
+Rakapirwa vanhu.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn14">
+<item>
+Hozana wokudenga\n
+Ndo’imba nezwi rangu,\n
+Kumwana waDhavhidhi\n
+Wouya kwandiri;\n
+Hozana, ndiyamure\n
+Pakurema kwangu\n
+Wouya asadanwa \n
+Muponisi wangu.\n
+</item>
+<item>
+Ndasunungurwa nemi\n
+Mutorongo rangu;\n
+Rakadimurwa nemi\n
+Iro joti rangu;\n
+Rakandirasikisa\n
+Ndasiya upenyu,\n
+Makandifarisazve\n
+Pakuchema kwangu.\n
+</item>
+<item>
+Ndoshonga dzakadini \n
+zvomondishanyira?\n
+Ndigadzirirei imi\n
+Mwoyo wangu wose;\n
+Ndoupira kwamuri\n
+Mununuri wangu\n
+Ndopfugama kwamuri\n
+Chokwadi She wangu.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn15">
+<item>
+Mununuri wedu\n
+wasvika kwatiri;\n
+Mwoyo yedu yose\n
+Ngaifare nazvo:\n
+chorus\n
+Mununuri wazosvika!\n
+Mununuri tinomunzwa!\n
+</item>
+<item>
+Tose ngatifare\n
+Pane uso hwake;\n
+Tidzokere kwa’ri\n
+Nokudana kwake:\n
+</item>
+<item>
+Tinodiwa naye\n
+Mununuri wedu:\n
+Naye ngatifare\n
+Nayo mwoyo yedu;\n
+</item>
+<item>
+Anotizivisa\n
+Nedzo tsitsi dzake\n
+Anokoka tose\n
+Kune denga rake:\n
+</item>
+    </string-array>
+
+    <string-array name="hymn16">
+<item>
+Ngatiimbe nengirozi\n
+Dziri mberi kwaShe;\n
+Ndimi dzadzo dziri zhinji\n
+‘Faro rumwe chete.\n
+</item>
+<item>
+Rakafanera Gwayana\n
+Dzinodaro idzo,\n
+Nesu tinokurumbidza\n
+watakabayirwa.\n
+</item>
+<item>
+Makafanera Jesu She\n
+Kupiwa rukudzo;\n
+Rudo nokuropafadzwa\n
+Toisa kwamuri.\n
+</item>
+<item>
+zvinhu zvose zvakasikwa\n
+Ngazvimurumbidze;\n
+Iye wagadzwa umambo\n
+Nokumutunhidza.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn17">
+<item>
+Chokwadi zita raJesu\n
+Rakanaka kwazvo;\n
+Rinonyaradza mutendi,\n
+Rinofusa kutya.\n
+</item>
+<item>
+Rinorapa mweya wake,\n
+Rinomunyaradza;\n
+Rinomupa kuzorora\n
+Nokudya komweya.\n
+</item>
+<item>
+Dombo randinovakira,\n
+Nzvimbo yokuvanda;\n
+Dura risingacheredze\n
+Rizere nengoni.\n
+</item>
+<item>
+Jesu, Mambo noMuprista.\n
+Sahwira, mufudzi,\n
+Nzira yangu, noUpenyu,\n
+Ndokurumbidzai.\n
+</item>
+<item>
+Panenge mwoyo waneta,\n
+Usisadziyirwe,\n
+Asi kana ndaone’mi\n
+Ndotunhidza kwazvo. \n
+</item>
+<item>
+Ndinogoparidza rudo\n
+Nguva dzangu dzose,\n
+zita renyu rindifadze\n
+Panguva yorufu.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn18">
+<item>
+Tora zita rake Jesu\n
+Nourombo hwako hwose,\n
+Rinokupa simba rake\n
+Rokukunda zvirunziro.\n
+chorus\n
+zita rake rakanaka,\n
+Mwenje wedu pasi pano,\n
+zita rake rakanaka,\n
+Mwenje wedu pasi pano.\n
+</item>
+<item>
+Jesu ndimurwiri wedu,\n
+Ndiye simba redu rose,\n
+Tinokunda zvakaipa\n
+Nero zita rake Jesu.\n
+</item>
+<item>
+Kunzwa zita rake Jesu\n
+Tinonyararidzwa kwazvo,\n
+Tinopfugamira pasi\n
+Mwoyo inomuombera.\n
+</item>
+<item>
+Mwoyo yadziyirwa kwazvo\n
+Kunzwa zita rake Jesu, \n
+Uyo wakatitambira\n
+wakatipa mwoyo mitsva.\n
+</item>
+<item>
+Iro zita rake Jesu,\n
+Rinotipa runyararo\n
+Saka ngatiriyeuke\n
+Nzvimbo dzose tinoenda.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn19">
+<item>
+Iro zita raJesu,\n
+Iguru rine mbiri;\n
+Rinodiwa kudenga,\n
+Rinotyiwa panyika;\n
+Iguru kuvatendi,\n
+Rokudzwa nokuimba.\n
+</item>
+<item>
+Iro zita raJesu\n
+Ragam’chirwa nom’tadzi\n
+Rodambura makashu\n
+ASatan okuipa;\n
+Anotenda kwariri\n
+Anomutswa parufu.\n
+</item>
+<item>
+Iro zita raJesu\n
+Ndokudza iro roga;\n
+Nomusi wondoenda,\n
+Richarehwa pakufa;\n
+Nero zita raJesu\n
+Ndigoenda kudenga.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn20">
+<item>
+Jesu rufaro rwomwoyo.\n
+Chisipiti choupenyu,\n
+zvenyika hazvitigutse,\n
+Tinodzokera kwamuri.\n
+</item>
+<item>
+Idi renyu haripere,\n
+Vakumbiri voponiswa,\n
+Vatsvaki vokuwanai,\n
+Imi muri pfuma yavo.\n
+</item>
+<item>
+Toravira imi chingwa,\n
+Toda kudya imi chete,\n
+Tonwa imi chisipiti,\n
+Togutsa nyota yomweya.\n
+</item>
+<item>
+Isu tisina zororo\n
+Tichazorora kwamuri;\n
+Kukuonai rufaro,\n
+Kukuzivai upenyu.\n
+</item>
+<item>
+Garai nesu She Jesu,\n
+Norufaro norugare,\n
+Tandai rima rezvivi,\n
+Mupenyere pasi pose.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn21">
+<item>
+Isu vanhu vapanyika\n
+Ngatigare tichikudza;\n
+Mwari wakatuma Jesu\n
+Kuratidza rudo rwake.\n
+chorus\n
+Rumbidzai vanhu mose,\n
+Rumbidzai imi mose.\n
+</item>
+<item>
+wakaona tichitadza,\n
+wakationa murufu,\n
+wakatipa Muponisi,\n
+Hezvi nhasi hohwu’penyu!\n
+</item>
+<item>
+Takanga takarasika\n
+Tigere muzvakaipa,\n
+Tisingazive M’ponisi,\n
+Asi nhasi tamuwana.\n
+</item>
+<item>
+Izwi rake rakasvika\n
+Kunesu takamanikwa;\n
+Takabiswa pane rima,\n
+Tikaiswa pachiedza.\n
+</item>
+<item>
+Rumbidzai vanhu mose!\n
+Taponiswa nhasi naye;\n
+Uyai marudzi ose\n
+Muzowana ruponiso.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn22">
+<item>
+Tarirai mudzione\n
+Tsitsi dzake dzakanyanya\n
+Dzakarehwa noM’ponisi\n
+wakafira isu vanhu.\n
+</item>
+<item>
+Takanga tiri murima\n
+Tisina chatiedzera;\n
+Taifamba tichitadza\n
+Tisingazive nduramo.\n
+</item>
+<item>
+Imi Mwari matitusa\n
+Tsitsi dzenyu dzakakomba\n
+Makatipa Mwana wenyu\n
+wakazotivhenekera.\n
+</item>
+<item>
+Tokuvongai She Jesu\n
+Isu vanhu vakaipa,\n
+Makatora kuipa kwedu,\n
+Makakutakura moga.\n
+</item>
+<item>
+Imi Mweya woutsvene\n
+Uyai muve nesu tose,\n
+Tiyamurei tidzione\n
+Idzo tsitsi dzakakomba.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn23">
+<item>
+Makasiya ngundu\n
+Noumambo hwenyu\n
+zvamauya pano pasi;\n
+Asi mubetrehem\n
+Makashaya imba\n
+Yokuti muzvarirwe;\n
+Pindai mandiri Jesu,\n
+Mugare mumwoyo wangu.\n
+</item>
+<item>
+Vari kudenga \n
+Vakakukudzai\n
+Pakuzvarwa kwenyu Ishe,\n
+Asi makauya\n
+zvakapfavisa\n
+Makazvarwa somurombo;\n
+Pindai mandiri Jesu,\n
+Mugare mumwoyo wangu.\n
+</item>
+<item>
+Makauya Jesu\n
+Neizwi benyu\n
+Rokutisunungura,\n
+Asi makazvidzwa\n
+Nokuroverwa\n
+Pamuchinjikwa, Ishe;\n
+Pindai mandiri Jesu,\n
+Mugare mumwoyo wangu\n
+</item>
+<item>
+Vari kudenga\n
+Vachakukudzai\n
+Pakukunda kwenyu Ishe;\n
+zvino ndichakunzwai\n
+Muchindidaidza\n
+Kuti nzvimbo iri pano;\n
+Ndichafara kwazvo mumwoyo\n
+Kana mondidaidza.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn24">
+<item>
+Ndiye Mwari Muponisi,\n
+wakaita zvose\n
+Ndiye Mwari Muponisi,\n
+wakakurumbira.\n
+</item>
+<item>
+wakava munhu M’ponisi,\n
+Nokuipa kwedu;\n
+wakava munhu M’ponisi,\n
+wakafira isu.\n
+</item>
+<item>
+Ane tsitsi Muponisi,\n
+Navari pamhosva;\n
+Ane tsitsi Muponisi,\n
+Navari pakufa.\n
+</item>
+<item>
+Ari kuda Muponisi,\n
+Kuzotipindura;\n
+Ari kuda Muponisi,\n
+Kutisunungura.\n
+</item>
+<item>
+Ane simba Muponisi,\n
+Rokutiponisa;\n
+Ane simba Muponisi,\n
+Rokutifadzisa.\n
+</item>
+<item>
+Ano rudo Muponisi,\n
+Ane tsitsi nesu;\n
+Ano rudo Muponisi,\n
+Ngatimude iye.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn25">
+<item>
+Mununuri ndinomuda\n
+Kuti anondiponisa,\n
+Ndinobiswa pano rufu\n
+Ndinopinzwa paupenyu.\n
+</item>
+<item>
+Mununuri ndinomuda\n
+Kuti wandiregerera;\n
+wandiparadzira ropa\n
+wakaripa mhosva yangu.\n
+</item>
+<item>
+Mununuri ndinomuda,\n
+Kuti wakandishambidza;\n
+wandibisa zvakaipa,\n
+Nezvitadzo zvangu zvose.\n
+</item>
+<item>
+Mununuri ndinomuda,\n
+Kuti wandivhenekera;\n
+wabisa upofu hwangu\n
+wandiburitsira mwenje.\n
+</item>
+<item>
+Mununuri ndinomuda \n
+Ndimuperekedzi wangu;\n
+Shoko rake ndiwo mwenje\n
+wokuchenga tsoka dzangu.\n
+</item>
+<item>
+Mununuri ndinomuda\n
+Ndiye muyamuri wangu\n
+Kana ndiri pakurwara,\n
+Ndinosimbiswa naiye.\n
+</item>
+<item>
+Mununuri ndinomuda\n
+Kuti ndiye simba rangu,\n
+Anokunda dzose hondo,\n
+Dzinonetsa mwoyo wangu.\n
+</item>
+<item>
+Mununuri ndiye Jesu,\n
+Rakakomba zita rake;\n
+Ngandikwanisiswe ini.\n
+Pano rununuro rwake.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn26">
+<item>
+Ndinokurumbidza\n
+Kristu wamasimba\n
+Ngatimurumbidze tose;\n
+Iye Ishe woga,\n
+wakasika zvose\n
+Nokushovedzera kwake.\n
+</item>
+<item>
+wakava muranda\n
+Kutitakurira\n
+Dambudziko redu rose;\n
+wakaparadzira\n
+Ropa rake dzvene,\n
+Kusunungura vasungwa.\n
+</item>
+<item>
+zvino wakamuka\n
+Mukundi wehondo\n
+wakasunga zvakaipa;\n
+wakavaparadza\n
+Vavengi vabvuma\n
+Kuti ndiye Ishe woga.\n
+</item>
+<item>
+Ari kutitonga\n
+Netsitsi norudo,\n
+Nenjere nokururama;\n
+Vatizira kwa’ri\n
+Vanozoponiswa\n
+Vanozowana upenyu.\n
+</item>
+<item>
+Tinokuomberai\n
+Ishe worufaro,\n
+Umambo hwenyu hukuru;\n
+Kunaka nengoni\n
+zvichawanda kwazvo\n
+Nyika yose ive tsvene.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn27">
+<item>
+Imi makonhi emwoyo,\n
+zarukai, mukwidzike!\n
+Uyu Mambo woutsvene\n
+Anoda kuti apinde.\n
+</item>
+<item>
+Uyu Mambo woutsvene!\n
+Reva, ndianiko iye?\n
+Uyu Mambo woutsvene\n
+Ndiye Jesu uyu Mambo!\n
+</item>
+<item>
+Ane nyasha dzakanyanya\n
+Ane simba rose guru\n
+Nokubvuma kwake kose,\n
+Angakuitire iye.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn28">
+<item>
+Uyai maKristu\n
+No’faro norukundo;\n
+Uyai, uyai kubetrehem;\n
+Onai wazvarwa\n
+Ishe wokudenga;\n
+Uyai, timurumbidze, Kristu Ishe.\n
+</item>
+<item>
+Mwari waMwari,\n
+Kupenya kokupenya;\n
+Haashore mimba yemhandara;\n
+Mwanakomana\n
+waMwari chokwadi;\n
+Uyai, timurumbidze, Kristu Ishe.\n
+</item>
+<item>
+ombai ngirozi,\n
+ombai nokufara,\n
+ombai imi mose vokudenga;\n
+Ngaarumbidzwe\n
+wokumsorosoro;\n
+Uyai, timurumbidze, Kristu Ishe.\n
+</item>
+<item>
+Tokukwazisai\n
+Mazvarwa iri zuva,\n
+Tinokurumbidzai, Kristu Ishe;\n
+Izwi rababa,\n
+zvino muri pano;\n
+Uyai, timurumbidze, Kristu Ishe.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn29">
+<item>
+Ingirozi dzinoimba\n
+Mbiri kuMambo mutsva;\n
+Rugare rwasvika pano\n
+Mwari wakava munhu.\n
+Farai marudzi ose,\n
+Imbai nedzokudenga,\n
+Paridzai mashoko\n
+Kristu wazvarwa pano.\n
+chorus\n
+Ngirozi dzinoimba\n
+Mbiri kuMambo mutsva.\n
+</item>
+<item>
+Kristu wokudzwa kudenga,\n
+Kristu Mambo mukuru,\n
+zvino wakasvika kuno,\n
+wakazvarwa somunhu.\n
+Honai Mwari munyama\n
+Muomberere somunhu,\n
+Anotifarirawo\n
+Mwari wedu anesu.\n
+</item>
+<item>
+Haatsvake kurumbidzwa\n
+wakazvarirwa isu,\n
+Tirege kupera kufa\n
+Asi tizvarwe patsva.\n
+Changamire She wedenga,\n
+Changamire She wengoni,\n
+Zuva redu rabuda\n
+Rinotipa upenyu.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn30">
+<item>
+Inzwai heri izwi\n
+Rinobva kumakore;\n
+Kwakasvika ngirozi\n
+Dzichibvako kudenga.\n
+chorus\n
+Inzwai dzinoimba\n
+Dzinoimba naMambo,\n
+Dzokudza norufaro\n
+Dzosuma nhau dzake.\n
+</item>
+<item>
+NdiJesu uyo Mambo,\n
+Dzinoparidza naye,\n
+Iye achangozvarwa\n
+Ikoko betrehema.\n
+</item>
+<item>
+Faraizve vatadzi\n
+Muvonge kuna Jesu,\n
+Namatai kwaari\n
+Nokuti anotida.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn31">
+<item>
+Rumbidzai vanhu mose!\n
+zvirumbidze, zvinhu zvose!\n
+Nhasi musi wokukudza.\n
+Nhasi musi worufaro.\n
+</item>
+<item>
+Mununuri watozvarwa,\n
+Ngoni dzake dzaratidzwa,\n
+Nhasi nguva yakodzera\n
+Izuva roruponiso.\n
+</item>
+<item>
+Haana ku’ya nehasha\n
+wakativinga netsitsi,\n
+wakauya kutifira,\n
+Fambisai idzi nhau.\n
+</item>
+<item>
+Jesu anoti kwatiri:\n
+Dzidzisai ndudzi dzose,\n
+Dziuye dzose kwandiri,\n
+Ndinemi mazuva ose.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn32">
+<item>
+Mukai, maKristu, mufare nhasi,\n
+Muponisi wavanhu wazvarwa;\n
+Kudzai rudo rwake rwakakomba\n
+Rwakaimbwa nengirozi zhinji;\n
+Ndidzo dzakaparidza mashoko\n
+Kuti Mwari wakazova nyama.\n
+</item>
+<item>
+Vafudzi vakatanga kuudzwa\n
+Vakainzwa ngirozi ichiti:\n
+Ndauya neshoko rakakomba\n
+Kwamuri navose vapanyika;\n
+Shoko raMwari razadzisika\n
+Nhasi wazvarwa Kristu M’ponisi.\n
+</item>
+<item>
+Ngirozi yapedza; pakarepo\n
+Dzimwe dzakaimba rwiyo rutsva\n
+Dzakarumbidza rudo rwaMwari.\n
+Denga rakatinhira nenziyo,\n
+Dzichimutenda netsitsi dzake\n
+Norugare kuvanhu venyika.\n
+</item>
+<item>
+Vafudzi vakagomhanya kwazvo\n
+Kundoona zvavakaitirwa;\n
+Vakadzokera kuhwai  dzavo\n
+Vachikurumbidza Mwari wavo;\n
+Vakaparidza zvavakaona,\n
+Vanyai vokutanga vaKristu.\n
+</item>
+<item>
+Ngatirangarire tichifunga\n
+Urwu rudo rukuru rwaMwari;\n
+Titarise kuMwana Mutsvene,\n
+zvaakananga kumuchinjikwa;\n
+Nengoni dzake timutevere\n
+Tidakare tisvike kudenga.\n
+</item>
+<item>
+Kana tasangana nengirozi \n
+Taponiswa tichafara kwazvo,\n
+Iye wazvarwa nomusi uno\n
+Timuone nokubwinya kwake;\n
+Takaponiswa norudo rwake\n
+Tichamukudza Mambo wedenga.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn33">
+<item>
+Mumusha waShe Dhavhidhi\n
+Muimba yezvipfuwo;\n
+Makaradzikwa mucheche\n
+Muchidyiro chemombe;\n
+Maria ndiye mai,\n
+Jesu ndiye mucheche.\n
+</item>
+<item>
+wakaburuka panyika\n
+Iye Ishe mukuru,\n
+Imba yake ndeyemombe,\n
+wakaiswa muzamba;\n
+wakafambidzanawo\n
+Navarombo venyika.\n
+</item>
+<item>
+Pauduku hwake hwose\n
+wakadzidza pana mai;\n
+waikudza nokuvada,\n
+Achinzwa mazwi avo;\n
+Vana vari maKristu\n
+Ngavapfave saiye.\n
+</item>
+<item>
+wakapa muenzaniso\n
+worugare kunesu;\n
+waichema, waiseka,\n
+Achiita sesuwo;\n
+Anowadzana nesu\n
+Munhamo norufaro.\n
+</item>
+<item>
+Meso edu achaona\n
+Jesu norufarowo,\n
+Mwana uyu ndiShe wedu\n
+Anogara kudenga;\n
+Anotitungamira\n
+Tigosvitswa ikoko.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn34">
+<item>
+Pausiku hwoutsvene\n
+Kune nyika iri kure,\n
+Yakapenya nyenyedzi yaTenzi,\n
+Chioneso chaMwari wediko,\n
+Iye Tenzi wazvarwa,\n
+Iye wazvarwa Mesiya.\n
+</item>
+<item>
+Baba wakashama\n
+Mai vake vakafara,\n
+Mwana wavo M’ponisi wavanhu,\n
+wakakudzwa zvikuru naMwari,\n
+Pasi pose chifarai!\n
+Mwari wazotishanyira.\n
+</item>
+<item>
+Mune danga radzo mombe,\n
+wazozvarwa mwana mutsva,\n
+Ndiye mwana waMwari mupenyu\n
+Ndiye rudo rwababa kunesu,\n
+Ndiye mudi wavanhu,\n
+Nomudikanwa wavose.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn35">
+<item>
+Vafudzi vebetrehem\n
+Vaigara musango,\n
+Vakaona ngirozi\n
+Yakauya ichiti:\n
+Musatye! Ndauya norufaro\n
+Rwavanhu vose!\n
+Mazvarirwa Muponisi,\n
+zita rake ndiye Jesu;\n
+Endai mumuone\n
+Muimba yezvipfuwo.\n
+</item>
+<item>
+Kwakauya vazhinji\n
+Veboka rokudenga,\n
+Namazwi erumbidzo\n
+Voimba pamwe chete;\n
+Tererai mazwi avatumwa\n
+Vanorumbidza:\n
+Ngaarumbidzwe kumsoro,\n
+Mwari mambo wokudenga,\n
+Rugare panyika\n
+Pane vaanofarira.\n
+</item>
+<item>
+Nhasi tinonyeverwa\n
+Ayo mazwi ekare;\n
+Ngirozi hatione\n
+Asi tine chokwadi\n
+wazvarwa mumwoyo yedu,\n
+Mwana waMwari,\n
+Tinorumbidza norudo\n
+Kristu Ishe Muponisi,\n
+Rugare panyika\n
+Nokusingapere.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn36">
+<item>
+Kristu, ‘Manueri!\n
+NdiMwari anesu!\n
+Tinovonga uyu musi\n
+wokuzvarwa kwenyu.\n
+</item>
+<item>
+Tinofunga nhasi\n
+Nokupfava kwenyu;\n
+Mune mbiri seyaMwari\n
+Mukava muranda.\n
+</item>
+<item>
+Izvo zvamaita\n
+Maitira isu;\n
+Tigoti nebasa renyu\n
+Tiwanewo nzira.\n
+</item>
+<item>
+Takarasikiswa\n
+Nokuipa kwedu,\n
+Makazotidzora isu\n
+Mune chakaipa.\n
+</item>
+<item>
+Jesu muri nzira \n
+Iyo yechokwadi,\n
+Vose vanofamba nayo\n
+Vanowana ngoni.\n
+</item>
+<item>
+zvino toti Jesu\n
+Tokurumbidzai,\n
+Tinoimba tichifara\n
+Nokuuya kwenyu.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn37">
+<item>
+Vafudzi zvavakarinda\n
+Usiku musango,\n
+Vakatumirwa ngirozi\n
+Ichipenya kwazvo.\n
+</item>
+<item>
+Ikati: Regai kutya,\n
+Ndokupai mose\n
+Mashoko anofadzisa\n
+Kwamuri navose.\n
+</item>
+<item>
+Ikoko kubetrehema\n
+Nhasi mazvarirwa\n
+Kristu Ishe noM’ponisi\n
+wavanhu venyika.\n
+</item>
+<item>
+Mucheche wabva kudenga\n
+Muchanomuona\n
+wafukidzwa nemicheka\n
+Arere muzamba\n
+</item>
+<item>
+Ngirozi zvayakapedza\n
+Dzimwe dzakauya;\n
+Dzikaimba kuna Mwari\n
+Dzikamurumbidza.\n
+</item>
+<item>
+Ngaarumbidzwe kum’soro,\n
+Mwari wedu nhasi,\n
+Norunyararo ruvepo\n
+Kuvanhu venyika.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn38">
+<item>
+Mwana M’tsvene, wakapfava\n
+Anorara muzamba;\n
+Mombe idzo hadzizive\n
+Kuti Mwana ndiMambo;\n
+Ingirozi dzinokudza\n
+Nokufara, dzichiimba\n
+Kuti Mwana ndiMambo.\n
+</item>
+<item>
+zvakanzwiwa navafudzi\n
+Nyaya dzakanakisa;\n
+Ingirozi dzichiimba\n
+Kuti Kristu wazvarwa;\n
+Naizvozvo ngatifare,\n
+Tichiimba nziyo dzedu\n
+Kuti Kristu wazvarwa.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn39">
+<item>
+Tarirai kubetrehem,\n
+Musha waDhavhidhi\n
+Pam’soro perima rawo\n
+Nyenyedzi dzopenya;\n
+Pa’ri urimo Mwenje\n
+Unopenya kwazvo\n
+Vanhu vose vamakore\n
+Vanofadzwa nawo.\n
+</item>
+<item>
+Imi nyenyedzi dzose.\n
+Paridzai shoko,\n
+Rumbidzai kuna Mwari,\n
+Fadzisai vanhu;\n
+Nokuti wakazvarwa\n
+Mwana waMaria,\n
+Imbai imi ngirozi\n
+Norudo rukuru.\n
+</item>
+<item>
+wauya chinyararire\n
+Chipo chakakomba\n
+zvinouya nokudaro\n
+zvipo zvokudenga;\n
+Hapana anomunzwa.\n
+Asi vanomuda\n
+Nemwoyo yakapfavisa\n
+Vachamugam’chira.\n
+</item>
+<item>
+Mwana M’tsvene webetrehem\n
+burukirai isu,\n
+Tandanisai kuipa,\n
+Muzvarwe matiri;\n
+Ngirozi dzinoimba\n
+Nyaya dzakanaka;\n
+Pindai zvino, garai nesu,\n
+Ishe Manueri.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn40">
+<item>
+MaKristu ngatirumbidzei\n
+Nemwoyo namazwi edu,\n
+Tererai kwatiri,\n
+A! A!\n
+Jesu Kristu wazvarwa,\n
+Mombe dzinomukudza\n
+Arere mudanga zvino;\n
+Kristu wazvarwa,\n
+Kristu wazvarwa.\n
+</item>
+<item>
+MaKristu ngatirumbidzei\n
+Nemwoyo namazwi edu,\n
+Rufaro harugume,\n
+A! A!\n
+Jesu Kristu wazvarwa,\n
+Tazarurirwa denga,\n
+Takomborerwa zvikuru;\n
+Kristu wazvarwa,\n
+Kristu wazvarwa.\n
+</item>
+<item>
+MaKristu ngatirumbidzei\n
+Nemwoyo namazwi edu,\n
+Hatichazotya kufa,\n
+A! A!\n
+Jesu Kristu wazvarwa,\n
+Anokudaidzai\n
+Kuti mupinde kwaari;\n
+Kristu wazvarwa,\n
+Kristu wazvarwa.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn41">
+<item>
+Mwoyo wangu unofara\n
+Nokunzwa kuimba\n
+Kwengirozi dzose:\n
+Mazvarirwa Kristu Ishe!\n
+Mashoko om’faro\n
+Anonzwiwa kose.\n
+</item>
+<item>
+Izwi riri kutaura:\n
+Tizai panhamu,\n
+Mubve pane ngozi;\n
+Uyai, vazvarwa vangu\n
+Ndokupai pachena\n
+zvorusununguko.\n
+</item>
+<item>
+Uyai, tiende uko,\n
+Tipfugame tose\n
+Nokushamisika;\n
+Timude nomwoyo wose\n
+Tarisai kwaari\n
+Ano rudo rwose.\n
+</item>
+<item>
+Paupenyu hwangu hwose,\n
+Ndinoda kufadza\n
+Imi moga Ishe;\n
+Shure kokufa ndigare\n
+Kudenga, ndichinzwa\n
+Rufaro rukuru.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn42">
+<item>
+Takazvarirwa Mwanakomana,\n
+Takapiwa Muponisi\n
+Anonzi, Emanueri,\n
+Mwari ega anesu.\n
+chorus\n
+Vanhu vaifamba murima\n
+Vakachiona chiedza\n
+Jesu Kristu takazvarirwa\n
+Tigashire chiedza.\n
+</item>
+<item>
+Achanzi, Gota rinoshamisa,\n
+Mwari ane simba rose,\n
+Baba wokusingapere,\n
+Muchinda worugare.\n
+</item>
+<item>
+Ushe huchava pafudzi rake,\n
+Iye achahusimbisa,\n
+Ushe hwake huchakura,\n
+Nokuzvipira kwake.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn43">
+<item>
+Tinouya madzimambo,\n
+Touya nezvipo zvedu;\n
+Tabva kumasowi, tichitevera nyenyedzi.\n
+chorus\n
+o! Nyenyedzi yousiku\n
+Inopenyera Mambo;\n
+Titungamire tione mwenje wakanakisa.\n
+</item>
+<item>
+wakazvarwa Mambo wedu,\n
+Ndinomupa ngundu yake;\n
+Mambo wedu nguva dzose anozotitonga.\n
+</item>
+<item>
+Ndinopa zvinonhuhwira\n
+Chiratidzo choumambo\n
+Vanhu vose murumbidze Ishe wokudenga.\n
+</item>
+<item>
+Mura yangu inoreva \n
+Noupenyu hwokusuwa;\n
+Kurwadza, nyatwa, kufa nokuvigwa muguva.\n
+</item>
+<item>
+Honaika, wakamuka,\n
+Mambo, Mwari, Muponisi,\n
+Rumbidzai vanhu vose, pamwe nengirozi\n
+</item>
+    </string-array>
+
+    <string-array name="hymn44">
+<item>
+Ndiani pane zamba\n
+Vafudzi vopfugama?\n
+chorus\n
+Ndiye Jesu! zvoshamisa!\n
+Ndiye Mambo wokubwinya!\n
+Topfugama kwaari,Mutunhidze ndiMwari.\n
+</item>
+<item>
+Ndiani ane nzara\n
+Pasango ari oga?\n
+</item>
+<item>
+Ndiani wodzidzisa\n
+Dama rakanakisa?\n
+</item>
+<item>
+Ndiani anorapa\n
+Vose vanorwadziwa?\n
+</item>
+<item>
+Ndiani anochema\n
+Paguva raRazaro?\n
+</item>
+<item>
+Ndiani wokwaziswa\n
+Nedzimbo nokufara?\n
+</item>
+<item>
+Ndiani woteura\n
+Pausiku mumuda?\n
+</item>
+<item>
+Ndiani pam’chinjikwa\n
+woregerera mhandu?\n
+</item>
+<item>
+Ndiani anomuka\n
+Kutinunura isu?\n
+</item>
+<item>
+Ndiani anotonga\n
+Nengoni nokubwinya?\n
+</item>
+    </string-array>
+
+    <string-array name="hymn45">
+<item>
+Jesu, imi muri nzira,\n
+Toenda nemi kudenga;\n
+Munotitungamirira,\n
+Tiponiswe pakaipa.\n
+</item>
+<item>
+Jesu, muri zvirokwazvo,\n
+Nawo ose mazwi enyu;\n
+Namakuhwa akaipa\n
+Mberi kwamaziso enyu.\n
+</item>
+<item>
+Jesu muri upenyuzve,\n
+Tinopona nemi tose;\n
+Kunozodaro tapinda\n
+Pakudenga, tive nemi.\n
+</item>
+<item>
+Imi, Jesu, muri nzira,\n
+zvirokwazvo, noupenyu;\n
+Nayo yose mwoyo yedu\n
+Tinovonga nokuvonga.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn46">
+<item>
+Vakafara vano urombo\n
+Vachawana ushe hwedenga,\n
+Kunzi ndohwavo.\n
+</item>
+<item>
+Vakafara vanozvichema,\n
+Vachawana chivaraidze,\n
+Mweya wedenga.\n
+</item>
+<item>
+Vakafara vanyoronyoro,\n
+Vachawana zvikurukuru,\n
+Nhaka yedenga.\n
+</item>
+<item>
+Vochemera zvokururama,\n
+Vachagutswa zvikurukuru\n
+Nokururama.\n
+</item>
+<item>
+Vakafara vazere nyasha.\n
+Vachapiwa nyasha dzedenga,\n
+Dzavanotsvaka.\n
+</item>
+<item>
+Vano mwoyo wakacheneka,\n
+Vachafara kuona Mwari,\n
+wavanotsvaka.\n
+</item>
+<item>
+Vanoshinga kutsvaka Mwari,\n
+Vachapiwa Mweya wokuva,\n
+Vana vedenga.\n
+</item>
+<item>
+Ivavo vokuyananisa,\n
+Vachazonzi vana vaMwari,\n
+Vana vedenga.\n
+</item>
+<item>
+Vakafara vatambudziki,\n
+Pam’sana pokururama,\n
+Ushe ndohwavo.\n
+</item>
+<item>
+Faraika vari munyatwa,\n
+Muchatuswa zvikurukuru,\n
+Tuso ndiJesu.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn47">
+<item>
+Ndiudze nhau dzaJesu,\n
+Ndinodzida,\n
+zvinhu zvandingamubvunze\n
+Dai aripo;\n
+Mifananidzo,\n
+zvishamiso,\n
+Nhau dzaJesu\n
+Ndinodzida.\n
+</item>
+<item>
+Chindiudza nezvavana\n
+Vakamunzwa,\n
+Nemi ndichakomborerwa\n
+Pamwe navo;\n
+Mazwi etsitsi\n
+Namabasa,\n
+Akaitiwa,\n
+NaJesu She.\n
+</item>
+<item>
+Tsanangura nezveshiri\n
+Namaruva\n
+Kuti zvinotaura sei\n
+Kuna vanhu;\n
+Ndoda kudzidza\n
+Kuna Jesu\n
+Rudo rwababa\n
+Kuna vana.\n
+</item>
+<item>
+Ndiudze nechishamiso\n
+Chakaitwa\n
+Muchampupuri chikuru\n
+PaGariri;\n
+Dutu remhepo \n
+Rakamuka\n
+Rikanyaradzwa\n
+Nezwi raShe.\n
+</item>
+<item>
+Nganditevere navana\n
+Muguta’ ro,\n
+Ndichipembera zvikuru\n
+Kuna Jesu,\n
+Ndishowerere,\n
+Nokuimba\n
+Ndichimukudza\n
+Jesu Ishe.\n
+</item>
+<item>
+Ndiudze zvakaitika\n
+Mumunda’mo,\n
+zvokurwadziwa nokufa\n
+KwaShe wangu.\n
+Ndiudze zvose,\n
+Ndoda kunzwa\n
+Nhau dzaJesu\n
+Ndinodzida.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn48">
+<item>
+Hakuna zita seraJesu\n
+Kana nekudenga,\n
+Hakuna rimwe rakadaro,\n
+zita roM’ponisi.\n
+chorus\n
+Tinoda kuimbira Jesu\n
+Tichimupa mbiri;\n
+Nokuti hatizive zita\n
+Rinokunda iri.\n
+</item>
+<item>
+NdiJesu wakafira vose,\n
+wakatida kwazvo;\n
+zvatanga takaraswa tose\n
+Nezvitadzo zvedu.\n
+</item>
+<item>
+NdiJesu wakaita nyasha\n
+Takamukanganwa;\n
+wakati: “Enda zvako mwana”,\n
+Usazotadzazve.\n
+</item>
+<item>
+NdiJesu wakatiudzira\n
+Kutunhidza Mwari,\n
+Nokusarura vashamwari\n
+Vakanaka chete.\n
+</item>
+<item>
+NdiJesu wakarapa vanhu\n
+Akavasimbisa;\n
+Jesu wakadzosera vafi\n
+Kune hama dzavo.\n
+</item>
+<item>
+NdiJesu anoenda nesu\n
+Kwose tinoenda;\n
+NdiJesu anotibatsira\n
+Muupenyu hwedu.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn49">
+<item>
+Ndiudzewo rungano\n
+Rwakabvirwa kare\n
+RwaJesu wokubwinya\n
+Nezvo rudo rwake.\n
+Nyatso kundidudzira\n
+Sokumudukwana;\n
+Nokuti ndakaneta\n
+Ndakarukutika.\n
+chorus\n
+Ndiudzezve rungano,\n
+RwaJesu worudo.\n
+</item>
+<item>
+Taura zvishomanana,\n
+Ndigorunzwisisa\n
+Ruponiso rwapiwa\n
+Kuvatadzi seni.\n
+Pamhidza undiudze,\n
+Ndisakanganwezve\n
+Sedova rinopera\n
+Nokukurumidza.\n
+</item>
+<item>
+Taura zvinyoronyoro\n
+Nokugwinyisisa;\n
+Yeuka, ndiri m’tadzi\n
+Ndavingwa naJesu.\n
+Ndiudze nguva dzose\n
+Kana uchizove\n
+Munyaradzi panguva\n
+Dzamadzudzo angu.\n
+</item>
+<item>
+Taura rwakarerwo zve\n
+Kana uri kutya\n
+Kuti zvenyika ino,\n
+zvondirasikisa.\n
+Kana zvedenga iro\n
+zvondivhenekera,\n
+Ndiudzezve rungano\n
+RwaJesu M’ ponisi.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn50">
+<item>
+Chiriko chikomo kure\n
+Kunze kwoyo musha,\n
+Paakaroverwa Ishe,\n
+Paakatifira.\n
+</item>
+<item>
+Hatizive isu vanhu \n
+Kurwadza kwakadii;\n
+wakarembedzwa pamuti\n
+Nokutadza kwedu.\n
+</item>
+<item>
+zvino takaregererwa\n
+Nako kufa kwake,\n
+Kuti tiende kudenga,\n
+Taponiswa naye.\n
+</item>
+<item>
+Pakanga pasina mumwe\n
+wokutinunura;\n
+Ndiye wakava nesimba\n
+Kutipinza denga.\n
+</item>
+<item>
+Jesu wakatida isu,\n
+Ngatimudisewo,\n
+Tivimbe neropa rake,\n
+Tichimushandira.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn51">
+<item>
+Riripo gomo\n
+Kunze kwoyo musha,\n
+Pane chifungiso\n
+ChoM’ponisi wedu.\n
+chorus\n
+Kana tichifunga\n
+zvaJesu pam’chinjikwa\n
+Kana tichiimba \n
+Misodzi inobuda.\n
+</item>
+<item>
+Rangarirai\n
+Jesu pam’chinjikwa,\n
+Paakaroverwa,\n
+Ishe wokudenga.\n
+</item>
+<item>
+Mumutarise,\n
+Ari pakurema,\n
+Kusuwa, kurwadza,\n
+Nengundu yeminzwa.\n
+</item>
+<item>
+Ngatirione\n
+Ropa roM’ponisi,\n
+Nemvura kakare,\n
+Rukova rwetsitsi.\n
+</item>
+<item>
+wakatakura\n
+Dzose mhosva dzedu,\n
+Mutoro mukuru\n
+wezvitadzo zvedu.\n
+</item>
+<item>
+Mutendei Kristu.\n
+wakatiripira,\n
+wakazvipirawo\n
+Norudo netsitsi.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn52">
+<item>
+Wokusuwa! wakanzi,\n
+Iye Mwana waMwari;\n
+wakavada vatadzi;\n
+Hareruya! Muponisi!\n
+</item>
+<item>
+Vanhu vakamuseka,\n
+wakatongerwa kufa\n
+Panzvimbo yangu ini;\n
+Hareruya! Muponisi!\n
+</item>
+<item>
+Isu tiri vatadzi,\n
+Asi iye Mutsvene;\n
+Angatiyananise;\n
+Hareruya! Muponisi!\n
+</item>
+<item>
+wasimutsirwa kufa;\n
+wakakuwa: “zvapera!”\n
+wakagadzwa kudenga;\n
+Hareruya! Muponisi!\n
+</item>
+<item>
+Kana Ishe ouya, \n
+Kuti azotitora,\n
+Tichaimba zvakare,\n
+Hareruya! Muponisi!\n
+</item>
+    </string-array>
+
+    <string-array name="hymn53">
+<item>
+Uyai mose ticheme,\n
+Tisedere kuM’chinjikwa;\n
+Ngatisangane ticheme:\n
+Jesu, Ishe, waroverwa.\n
+</item>
+<item>
+Hatimuchemere here\n
+Vanhu vachimutsvinyira?\n
+Tarisai, waturikwa:\n
+Jesu, Ishe, waroverwa.\n
+</item>
+<item>
+zvanza netsoka zvasungwa,\n
+Miromo yake yaoma;\n
+wakaona rudzerere:\n
+Jesu, Ishe, waroverwa.\n
+</item>
+<item>
+wakataura kanomwe\n
+Mazwi orudo netsitsi\n
+Kuti tigoregererwa:\n
+Jesu, Ishe, waroverwa.\n
+</item>
+<item>
+Tsime rorutivi rwake\n
+Rinoshambidza zvitadzo:\n
+Ngatimire noM’chinjikwa:\n
+Jesu, Ishe, waroverwa.\n
+</item>
+<item>
+Vanokumbira vopiwa\n
+Mwoyo wakapfava chose;\n
+Mwoyo ungakure rudo:\n
+Jesu, Ishe waroverwa.\n
+</item>
+<item>
+Kuipa, norudo rwaShe\n
+zvino zviri kurwisana;\n
+Asi rudo runokunda:\n
+Nokuti She, waroverwa.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn54">
+<item>
+Tsitsi hedzi dzamira dzoga,\n
+zvirwadzo zvakamira zvoga,\n
+Kusuwa kwakamira koga,\n
+Pamuchinjikwa.\n
+</item>
+<item>
+Ishe waburuka kudenga,\n
+Akazova munhu kuvanhu,\n
+Nediramhamba kuvatadzi,\n
+Pamuchinjikwa.\n
+</item>
+<item>
+Rutendo rwedu rwomirepi?\n
+Ruvimbo rwedu rwomirepi?\n
+Norudo rwedu rwomirepi?\n
+Pamuchinjikwa.\n
+</item>
+<item>
+Nengozi dzingapere dzose,\n
+Nemhaka dzingaripwe dzose,\n
+zvoregererwa zvivi zvose,\n
+Pamuchinjikwa.\n
+</item>
+<item>
+Ngirozi dzakaona pasi,\n
+Dzakati gwanan’wana pasi,\n
+Dzichiona mashura ayo!\n
+Pamuchinjikwa.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn55">
+<item>
+Ngatitende Mwari,\n
+Baba wedu,\n
+Iye wakasika\n
+Isu tose\n
+Kuti timuzive\n
+Nemwoyo yedu yose\n
+Nokusingapere.\n
+Hareruya!\n
+</item>
+<item>
+Ngatitende Mwari,\n
+Baba wedu,\n
+wakatipa Jesu,\n
+Mwana wake,\n
+wakatifirapo\n
+Pano iwoyo muti\n
+Kuti tiponiswe\n
+Isu tose.\n
+</item>
+<item>
+zvakaipa zvedu\n
+zvakashambwa\n
+Nero ropa rake\n
+Pam’chinjikwa;\n
+Ngatifare tose\n
+Takanatsiwa naye;\n
+Rumbidzai mose!\n
+Hareruya!\n
+</item>
+<item>
+Garai vatendi\n
+Muna Jesu,\n
+Ndiye dangwe redu\n
+Pakumuka,\n
+Nesu tichamuka\n
+Kana tomutevera,\n
+Achatipinzako\n
+Kuna baba.\n
+</item>
+<item>
+Ridzai hwamanda\n
+Dzokukudza!\n
+Ridzaiwo nyere\n
+Namarimba!\n
+Rumbidzai baba!\n
+Mupemberere Ishe!\n
+Rumbidzai mose!\n
+Hereruya!\n
+</item>
+    </string-array>
+
+    <string-array name="hymn56">
+<item>
+Mutadzi anofirirei?\n
+Jesu waturikirwei?\n
+Kukuwa kwake ndokwei?\n
+Anoteurira isu:\n
+Baba, varegererei,\n
+Nokuti havandizive.\n
+</item>
+<item>
+Gwayana rorununuro!\n
+Nokutambudzika kwenyu,\n
+Ropa, nokunyadzwa kwenyu,\n
+Muchinjikwa norusuwo,\n
+Nokufa, noupenyuwo,\n
+bisai, mudzime zvivi.\n
+</item>
+<item>
+Ndisvipure tsoka dzenyu,\n
+Dzishambidzwe nemisodzi;\n
+Ngandiudze rudo rwenyu\n
+Munzeve dzavo vatadzi;\n
+Kuti vose vaponiswe,\n
+Nokuti ndanzwirwa ngoni.\n
+</item>
+<item>
+Rudo rwenyu rundimutse,\n
+Rudo rwenyu rwepachena;\n
+Kuti vakatadza vose\n
+Vanzwe tsitsi dzandiwana,\n
+Kuti vose vazivise\n
+Rudo rwenyu rusingafe.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn57">
+<item>
+Pasi poMuchinjikwa\n
+Ndinoda kugara,\n
+Ndichawana mumvuripo\n
+Pakuneta kwangu;\n
+Unozondipa zororo\n
+Pane nzira yangu,\n
+wondidzivirira zuva\n
+Ndisapiswe naro.\n
+</item>
+<item>
+Apo paMuchinjikwa\n
+Ndinoona Jesu\n
+wakandirovererwa’po\n
+wakafira ini.\n
+Ndinoona zvishamiso\n
+zvikuru zviviri;\n
+Rudo rwake rwakakomba\n
+Nokuipa kwangu.\n
+</item>
+<item>
+Pedyo noMuchinjikwa\n
+Ndozogara apo,\n
+Pauso hwake Jesu\n
+Ndichafara kwazvo;\n
+Handine hanya nepfuma \n
+Kana nokushaya,\n
+Ndanyadzwa nezvivi zvangu\n
+Ndodada noM’chinjikwa.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn58">
+<item>
+Jesu ndisededzei\n
+Pedyo nom’chinjikwa\n
+Patsime rinokosha\n
+Rinorapa vose.\n
+chorus\n
+Ipo pam’chinjikwa\n
+Ndichakudza Jesu\n
+Dakara mweya wangu\n
+wawana zororo.\n
+</item>
+<item>
+Pedyo nomuchinjikwa\n
+Rudo rwandiwana;\n
+Nyamatsatsi yedenga\n
+Yandivhenekera.\n
+</item>
+<item>
+Pedyo nomuchinjikwa,\n
+Gwayana raMwari.\n
+Yamurai ndifambe\n
+Ndichiutondera.\n
+</item>
+<item>
+Pedyo nomuchinjikwa\n
+Ndinozorindira: \n
+Ndichivimba dakara;\n
+Ndiwane zororo.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn59">
+<item>
+Makatakura kuipa\n
+Kusi kwenyu Jesu,\n
+Makaripa mhosva Jesu,\n
+Isi mhosva yenyu.\n
+</item>
+<item>
+Mairwadzwa nokuipa \n
+Musiri mutadzi\n
+Raparara ropa renyu\n
+Muri m’tsvene imi.\n
+</item>
+<item>
+Kudarika kwedu kose\n
+Kwamakapomerwa,\n
+Nezvirandu zvedu zvose\n
+zvamakapomerwa.\n
+</item>
+<item>
+Taregererwa, tapona\n
+Nezvirwadzo zvenyu;\n
+Tashambidzwa pakuipa\n
+Nero ropa renyu.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn60">
+<item>
+Ndakayeva Muchinjikwa,\n
+Paakaroverwa Ishe,\n
+Ndinobva ndamhura zvose,\n
+Nako kuzvikudza kwangu.\n
+</item>
+<item>
+Ramba Mwari, ndisadade,\n
+Asi nako kufa kwake,\n
+zvose zvinhu zvave nhando,\n
+Ndazvipa kuropa rake.\n
+</item>
+<item>
+Honai maoko, tsoka,\n
+Mobva rudo nokurwadza,\n
+zvisati zvakamboonwa,\n
+Kunyange ngundu yeminzwa.\n
+</item>
+<item>
+Dai zvose zviri zvangu,\n
+Hazvikwane diramhamba,\n
+Kufana norudo rwake,\n
+Rwoda zvouzima hwangu.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn61">
+<item>
+Kristu Tenzi wakamuka,\n
+Hareruya, \n
+Ingirozi dzinoimba,\n
+Hareruya \n
+Vanhu vapindurawo,\n
+Hareruya,\n
+Imbai denga, nenyika,\n
+Hareruya.\n
+</item>
+<item>
+wakapedza basa rake,\n
+warwa hondo, akakunda,\n
+watikundira rufu,\n
+wabuda muguva rake.\n
+</item>
+<item>
+Mambo wedu mupenyuzve,\n
+Kufa hakuchine simba,\n
+Wafa kutiponisa,\n
+Guva harichakurira.\n
+</item>
+<item>
+Tinotapatira naye\n
+Kutevera Mambo wedu,\n
+Izvi zvose ndezvedu,\n
+Muchinjikwa, guva, denga.\n
+</item>
+        <item>
+Mambo wokubwinya kose!\n
+Upenyu husingapere \n
+Kukuzivai imi\n
+Namasimba orumuko.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn62">
+<item>
+Kurwa nedzivo zvazopedzwa;\n
+zvino Kristu wava Mukundi;\n
+Nziyo dzorukudzo dziimbwe\n
+Hareruya!\n
+</item>
+<item>
+Mhandu yakarwa, asi Kristu\n
+wakaparadza hondo dzayo:\n
+zvino kuwai nokufara:\n
+Hareruya!\n
+</item>
+<item>
+Misi yokuchema yapera\n
+Jesu She wamuka parufu;\n
+Rukudzo kuna She mupenyu;\n
+Hareruya!\n
+</item>
+<item>
+Ishe, nedambudziko renyu,\n
+Tisunungurei pazvivi,\n
+Kuti tigorarama nemi:\n
+Hareruya!\n
+</item>
+    </string-array>
+
+    <string-array name="hymn63">
+<item>
+Mukati meguva,\n
+Jesu M’ponisi,\n
+wagarira musi,\n
+Jesu Ishe.\n
+chorus\n
+wamuka Jesu Ishe,\n
+Navavengi vakakundiwa.\n
+wamuka mukundi kuvashakabvu,\n
+Achagara nesu kusingapere;\n
+wamuka! wamuka!Hareruya! wamuka!\n
+</item>
+<item>
+Vakarinda nhando,\n
+Jesu M’ponisi,\n
+Ibwe rave nhando,\n
+Jesu Ishe.\n
+</item>
+<item>
+Haanakuora,\n
+Jesu M’ponisi,\n
+Kufa kwakakundwa,\n
+Jesu Ishe.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn64">
+<item>
+Kristu wamuka nhasi! wamuka kwazvo!\n
+Kristu wamuka nhasi! wamuka kwazvo!\n
+Ngavafare vanhu vose.\n
+Ngavaimbe pamwe chete,\n
+Farai wamuka! Farai wamuka!\n
+Hareruya! Hareruya! Hareruya! Amen.\n
+</item>
+<item>
+Kristu wamuka nhasi! wamuka kwazvo!\n
+Kristu wamuka nhasi! wamuka kwazvo!\n
+basa guru rakapera,\n
+Mharadzi yakaparadzwa,\n
+Rufu rwazokundwa, rufu rwazokundwa.\n
+Hareruya! Hareruya! Hareruya! Amen.\n
+</item>
+<item>
+Kristu wamuka nhasi! wamuka kwazvo!\n
+Kristu wamuka nhasi! wamuka kwazvo!\n
+watakura kuipa kwedu,\n
+Tose tinowana tsitsi.\n
+Hozana kwaari! Hozana kwaari!\n
+Hareruya! Hareruya! Hareruya! Amen.\n
+</item>
+<item>
+Kristu wamuka nhasi! wamuka kwazvo!\n
+Kristu wamuka nhasi! wamuka kwazvo!\n
+Ngavaimbe vanhu vose,\n
+Ngavaimbe norufaro,\n
+Nziyo dzakanaka, nziyo dzakanaka,\n
+Hareruya! Hareruya! Hareruya! Amen.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn65">
+<item>
+Tinofara nhasi,\n
+Isu tinotenda,\n
+Tirumbidze Ishe wedu\n
+Nokumuka kwake.\n
+</item>
+<item>
+Achiri mupenyu\n
+Nyamba wakambofa;\n
+Guva, kukunda kuripi?\n
+No’turu hwokufa?\n
+</item>
+<item>
+Rose basa rake,\n
+Rose wakapedza,\n
+Ruponiso rwawanikwa,\n
+Toponiswa tose.\n
+</item>
+<item>
+Farai vaKristu\n
+Hoyo, Mambo wedu;\n
+Ngaaberekwe mapudzi\n
+orutendo rwedu.\n
+</item>
+<item>
+Ikoko kudenga\n
+Ari kutishuva;\n
+Nokumuka kwaShe wedu\n
+Nesu tichamuka.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn66">
+<item>
+Nomusi weSvondo\n
+Ishe wakamuka\n
+Jesu wabuda muguva\n
+Ishe wokudenga.\n
+</item>
+<item>
+Kwakakundwa kufa,\n
+Ratorerwa guva,\n
+wakamuka Muponisi;\n
+Shumai mashoko.\n
+</item>
+<item>
+Farai vatendi\n
+Imbai ngirozi\n
+wakakoniswa Satani,\n
+NaShe asingafe.\n
+</item>
+<item>
+Onai vatsvene!\n
+Iro guva raShe\n
+Rasara rega, wamuka\n
+wakaenda Ishe.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn67">
+<item>
+Makamuka Ishe Jesu,\n
+Makabuda pane guva,\n
+Makamuka noumambo,\n
+Imi maiva murufu.\n
+</item>
+<item>
+Jesu woupenyu hwose\n
+Hamuna kuora imi;\n
+Munomira namasimba\n
+Nokukunda kwamawana.\n
+</item>
+<item>
+Jesu tinokurumbidzai\n
+Nawo muchinjikwa wenyu;\n
+Dzose mhandu dzakakundwa\n
+Nokumuka kwenyu, Jesu.\n
+</item>
+<item>
+Jesu, zvirokwazvo zvenyu\n
+zvinowonekwa zvokwadi;\n
+Maita umambo hwenyu\n
+Huve chinhu chakakura.\n
+</item>
+<item>
+Nomusi wenyu mukuru\n
+wamuchamutsa vatendi;\n
+Ivo vari pachokwadi\n
+Vachagoverwa rufaro.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn68">
+<item>
+Ndinobva kwamuri, ndoenda kudenga,\n
+Ndoenda kuimba yababa;\n
+Mumba yavo tsvene, imba yorufaro,\n
+Ndinokugadzirirai nzvimbo.\n
+</item>
+<item>
+Kana ndichienda, ndinozouyazve,\n
+Handikusiye muri moga;\n
+Asi ndinozokugamchirai ini,\n
+Kuti mugovapowo pandiri.\n
+</item>
+<item>
+Iri’zwi raMambo, izwi rorufaro,\n
+Farai,vaKristu farai!\n
+Ishe wakaenda, asi achadzoka,\n
+Apinze kudenga imi mose.\n
+</item>
+<item>
+Ipapo tinozogara pautsvene,\n
+Navazhinjizhinji chokwadi;\n
+Tinozoimbawo, tiri pamwe chete,\n
+Tichikudza Ishe wokudenga.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn69">
+<item>
+Namangwanangwana\n
+Yaburuka pasi\n
+Ngirozi yaIshe\n
+Yasaira ibwe.\n
+chorus\n
+Simudzai mazwi\n
+mose,\n
+Murumbidzei, wamuka She.\n
+</item>
+<item>
+Vachengeti vanzwa\n
+Nokutya kukuru,\n
+Vakawira pasi\n
+Vakange vakafa.\n
+</item>
+<item>
+wamuka pakufa\n
+Kusingaonekwe,\n
+wakurira guva\n
+Tenzi wazvo zvose.\n
+</item>
+<item>
+Vana vokuyedza\n
+Simukai naye;\n
+Ndiye nyamatsatsi\n
+Anotipenyera.\n
+</item>
+<item>
+Chisiyai muguva\n
+Kuipa kwakare;\n
+Vigwai pamwe naye;\n
+Murarame naye.\n
+</item>
+<item>
+Tinoimba Tenzi\n
+Nemwoyo nesimba;\n
+Isu tiri venyu\n
+Imi muri wedu.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn70">
+<item>
+Jesu, makati mamuka\n
+Mukazviratidza kuna vadzidzi,\n
+Imi zviratidzei kwatiri.\n
+She makaita mwoyo yavanhu kuti ipise,\n
+Pfutidzai pfungwa dzedu nokunzwira kwedu kuti \n
+Tigamuchire chokwadi chenyu.\n
+</item>
+<item>
+Makabisa nokupedza\n
+Kutya kwemwoyo yeshamwari dzenyu,\n
+Tipeiwo runyararo rwenyu,\n
+Jesu imi makapa vadzidzi venyu zvokudya,\n
+Tipeiwo chingwa icho chokudenga tigochidya,\n
+Tigogutsa hwai dzenyu nacho.\n
+</item>
+<item>
+She Jesu zvamakatumwa,\n
+Imi makatuma vapostoriwo,\n
+Mukavaraira kupupura;\n
+Titumirei simba rokuita basa renyu,\n
+Tiite uchapupu kusvikira kunyika dzose\n
+Kuti vakurumbidzei vose.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn71">
+<item>
+Unotii nhasi, Kufa?\n
+Newe Gara guru?\n
+Makurirwa mose imi\n
+NaShe wokudenga.\n
+</item>
+<item>
+Jesu wakambofa kare\n
+wakapinda guva;\n
+Asi wakazomukazve\n
+Agere kudenga.\n
+</item>
+<item>
+Muvongei, imi vanhu,\n
+Nhasi wakakwira,\n
+Anogara paupenyu\n
+wakambenge afa.\n
+</item>
+<item>
+Muvongeiwo ngirozi,\n
+Ikoko kudenga;\n
+basa wakaripedzisa\n
+Rapanyika ino.\n
+</item>
+<item>
+wakagadzwa namasimba,\n
+Noumambo hwose;\n
+Anokudzwa negovero\n
+Rengirozi dzose.\n
+</item>
+<item>
+Kana takatendeseka\n
+Tichakwidzwa naye,\n
+Tichamurumbidza iye\n
+Pamwe nengirozi.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn72">
+<item>
+Ari m’penyu Muponisi\n
+Ari m’penyu iye:\n
+Tafariswa isu vanhu\n
+Ari m’penyu iye.\n
+</item>
+<item>
+wanga afa Muponisi\n
+wanga afa iye;\n
+wabairwa isu vanhu,\n
+wabaiwa iye.\n
+</item>
+<item>
+wakakwira pakudenga\n
+wakakwira iye;\n
+Anoteurira isu\n
+woteura iye.\n
+</item>
+<item>
+Anotonga Muponisi\n
+Kutongera isu;\n
+NdiMambo wamadzimambo\n
+NdiShe wamadzishe.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn73">
+<item>
+Changamire! Muponisi,\n
+Ishe makambozvidzwa,\n
+Nezvirwadzo zvenyu, Tenzi,\n
+Takawana kupona;\n
+Changamire! Mambo Jesu,\n
+Mutakuri wemhosva,\n
+Nako kufa kwakakomba,\n
+Takapiwa upenyu.\n
+</item>
+<item>
+Gwayana raMwari baba.\n
+Diramhamba ravanhu,\n
+Nenzira yorudo rwenyu,\n
+Takaripirwa mhosva\n
+Tose tinoregererwa\n
+Neropa renyu Ishe,\n
+Tinozopinda kudenga,\n
+Tayananiswa naShe.\n
+</item>
+<item>
+Changamire! Makagadzwa\n
+Pachigaro chitsvene;\n
+Hondo dzose dzokudenga,\n
+Dzinokukurumbidzai;\n
+Munoteurira isu,\n
+Munotigadzirira,\n
+Kuti tigowana nzvimbo,\n
+Pautsvene hwedenga.\n
+</item>
+<item>
+Makafanera kupiwa\n
+Rukudzo noutsvene;\n
+Takafanera kuimba\n
+Nziyo dzisingapere;\n
+Tiyamurei ngirozi\n
+Imbai nziyo dzenyu,\n
+Dzokunaka kwoM’ponisi,\n
+Noukuru hwaIshe.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn74">
+<item>
+Zadzisai chirevo chenyu.\n
+Mwari, Ishe wechokwadi;\n
+ose marudzi enyika\n
+Ngaawane ruponiso.\n
+</item>
+<item>
+Namabvi kuneyi nyika\n
+Ngaapfugame panemi,\n
+Dzidzamare dzose ndimi\n
+Dzireve ukuru hwenyu.\n
+</item>
+<item>
+Tongai, Jesu, tongai!\n
+Rwouya nemi rufaro;\n
+Nezvikanganiso zvedu\n
+Yatadzika yose nyika.\n
+</item>
+<item>
+Tarirai nyika yedu,\n
+Regererai zvitadzo;\n
+Ishe musatitsamwire\n
+Isingafe mhuri yayo.\n
+</item>
+<item>
+Rambai She, tisazvidze\n
+zvidzidziso zvezwi renyu;\n
+Mutimutsirire baba,\n
+Tigonzwa chokwadi chenyu.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn75">
+<item>
+Ndimi baba makasika zvapasi,\n
+Yose nyika namatenga ndeenyu.\n
+chorus\n
+Ngakuitwe kuda kwenyu,\n
+Ngakuitwe panyika,\n
+Sezva kunoitiwawo,Mudenga routsvene.\n
+</item>
+<item>
+Isu vanhu vamarudzi nendimi,\n
+Naro gungwa nezvisikwa ndezvenyu.\n
+</item>
+<item>
+Noumambo hwapanyika ndohwenyu,\n
+Navatongi vatinavo ndevenyu.\n
+</item>
+<item>
+Namasvondo atinawo ndeenyu,\n
+Naro Shoko rinobvamo nderenyu.\n
+</item>
+<item>
+Naye Jesu wakauya ndowenyu,\n
+Naye Mweya watinaye ndowenyu.\n
+</item>
+<item>
+Imi vanhu muri pano panyika,\n
+Pfugamai kuna Mwari wedenga,\n
+</item>
+<item>
+Ndimi nawo mabvi ari panyika,\n
+Ngazvityoke kuna baba wedenga.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn76">
+<item>
+Ruponiso! Runofadza!\n
+Rumbo rwakanaka!\n
+Runorapa vakuvari\n
+Runobisa kutya.\n
+chorus\n
+Mbiri, simba norukudzo\n
+zvese ndezvake narini!\n
+Jesu Kristu Mununuri:\n
+Hareruya! Hareruya!\n
+Hareruya! Kudzai She.\n
+</item>
+<item>
+Ruponiso rweGwayana\n
+Tinorutunhidza\n
+Ruchamutsa mwoyo yedu,\n
+Ndimi dzirumbidze.\n
+</item>
+<item>
+Ruponiso! Ngarunzwike\n
+Nayo nyika yose,\n
+Nehondo dzedenga dzose\n
+Dzitaure narwo.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn77">
+<item>
+Mweya Mutsvene waMwari!\n
+Garai muno mumba,\n
+burukai zvino nesimba,\n
+Uyai Mweya, uyai.\n
+</item>
+<item>
+Uyai Mweya, kufanana\n
+Kupenya kwezuva;\n
+Vhenekerai mwoyo yedu,\n
+onisai kuipa.\n
+</item>
+<item>
+onisai rushavashava\n
+Nezvirwere zvose\n
+Titungamirei panzira\n
+Panenda vatsvene.\n
+</item>
+<item>
+Uyai serimi romoto,\n
+Pisai mwoyo yedu,\n
+Tichive zviteuriro\n
+Kuna Ishe wedu.\n
+</item>
+<item>
+Uyai Mweya kufanana,\n
+Dova rokudenga,\n
+Mwoyo isingabereke\n
+Ive namapudzi.\n
+</item>
+<item>
+Uyai senjiva yedenga,\n
+Mutivhumbamire \n
+Namapapiro orudo\n
+Noruregerero.\n
+</item>
+<item>
+Uyai sedutu remhepo\n
+Nesimba renyasha,\n
+Kuti vanhu vakuonei,\n
+Noutsvene hwenyu.\n
+</item>
+<item>
+Uyai Mweya wokudenga\n
+Mukugara kwedu;\n
+Mutiite musha wenyu,\n
+Uyai, Mweya, uyai.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn78">
+<item>
+Tinovonga Jesu,\n
+Shoko renyu iro\n
+Ramakavimbisa kare\n
+Kuvadzidzi venyu.\n
+</item>
+<item>
+Ndinozoti baba\n
+Nomuzita rangu\n
+Atumire Munyaradzi\n
+Pakuenda kwangu.\n
+</item>
+<item>
+Chivimbiso chenyu\n
+Takachimirira,\n
+Ngachizadziswe nazvino\n
+Tifadziswe nacho.\n
+</item>
+<item>
+Pindai mwoyo yedu\n
+Noruregerero,\n
+Rupedze kusuwa kwose\n
+Nako kutya kwedu.\n
+</item>
+<item>
+Uyai Munyaradzi\n
+Namasimba enyu;\n
+Tishambidzwe tizadziswe\n
+Noutsvene hwenyu.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn79">
+<item>
+Chivimbiso choM’ponisi\n
+Asati aenda,\n
+wakativimbisa Mweya,\n
+Munyaradzi.\n
+</item>
+<item>
+wakaburuka senjiva,\n
+Inovhumbamira\n
+Rurapo rwokunyarara\n
+wakatipa.\n
+</item>
+<item>
+wakauyazve somoto,\n
+Kuzotikonisa,\n
+Semhepo inovhuvhuta\n
+Yakavanda.\n
+</item>
+<item>
+Norunako anouya,\n
+Mushanyi womutsa;\n
+Pano mwoyo wakapfava\n
+wozorora.\n
+</item>
+<item>
+Izwi rake rinonzwika\n
+Kutsiura mhosva;\n
+Rinodzikamisa kutya\n
+Tigarike.\n
+</item>
+<item>
+Kururama kwatinako,\n
+Nokukunda kwose,\n
+Nepfungwawo dzoutsvene\n
+zviri kw’ari.\n
+</item>
+<item>
+Mweya mutsvene, wenyasha,\n
+Tinzwirei tsitsi;\n
+Pindai mumwoyo yedu\n
+Mugaremo.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn80">
+<item>
+Simudzai pfungwa dzedu\n
+Mweya woutsvene,\n
+Tifunge zviito zvenyu,\n
+Tidzidzise nazvo.\n
+</item>
+<item>
+Zuva rokuuya kwenyu\n
+Ngaripamhidzwezve;\n
+Kuti iwo moto wenyu\n
+Usvike kwatiri.\n
+</item>
+<item>
+Tambanudzai ndimi dzedu\n
+Dziparidze imi\n
+Pisai nayo mwoyo yedu\n
+Idanane nemi.\n
+</item>
+<item>
+Kusangana kwamashoko\n
+Takakumirira;\n
+Uyai Mweya woutsvene\n
+Itai basa pano.\n
+</item>
+<item>
+Uyai nesimba zvikuru\n
+zadzai iyi nzvimbo;\n
+Tigonzwa masimba enyu\n
+Nokuita kwawo.\n
+</item>
+<item>
+Todokwairira imi\n
+Mweya woutsvene;\n
+Inzwai miteuro yedu\n
+Mutiburukire.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn81">
+<item>
+Dondifemerai,\n
+Mweya woutsvene;\n
+Kuti ndide zvamunoda,\n
+Nokuita semi.\n
+</item>
+<item>
+Dondifemerai,\n
+Mwoyo ucheniswe;\n
+Kuda kwenyu kuve kwangu,\n
+Nditsungewo semi.\n
+</item>
+<item>
+Dondifemerai,\n
+Ndive wenyu chose;\n
+Kuti zvoupenyu hwangu\n
+zvijekeswe nemi.\n
+</item>
+<item>
+Dondifemerai,\n
+Kugoti ndisafe;\n
+Asi ndigogara nemi\n
+Nokusingapere.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn82">
+<item>
+Mweya woutsvene\n
+Uyai kwatiri;\n
+Mutivhenekere\n
+Nomumwoyo yedu;\n
+Tanga tarasika\n
+Tikakwezvwa nemi,\n
+Nhasi totarira\n
+Nemwoyo kwamuri.\n
+</item>
+<item>
+Mweya woutsvene\n
+Uyai kwatiri,\n
+Mutizarurire\n
+Mununuri wedu;\n
+Titungamire\n
+Pane tsoka dzake, \n
+Mutipupurirei        \n
+Noruregerero.\n
+</item>
+<item>
+Mweya woutsvene\n
+Uyai kwatiri,\n
+Mutitsvenisire\n
+Mwoyo yedu yose;\n
+Ndimi muvimbisi\n
+wezvo kuna Ishe; \n
+Ndimi mufadzisi\n
+Nezvo zvokudenga.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn83">
+<item>
+Mweya Mutsvene, Idi,\n
+Vhenekai mandiri;\n
+Rujeko rwomukati\n
+Rundionese ini.\n
+</item>
+<item>
+Mweya Mutsvene, Rudo,\n
+Dziyisai mumwoyo,\n
+Mutsai pfungwa tsvene,\n
+Kuzvida kwangu kufe.\n
+</item>
+<item>
+Mweya Mutsvene, Simba,\n
+zadzai mwoyo wangu;\n
+Mugaremo mandiri\n
+Kuti nditsungirire.\n
+</item>
+<item>
+Mweya M’tsvene, Nduramo,\n
+Tongai hana yangu,\n
+Kana mava She wangu,\n
+Munondisunungura.\n
+</item>
+<item>
+Mweya M’tsvene, Rugare\n
+Nyaradzai mumwoyo;\n
+Ngamugarike kwazvo,\n
+Murudzikamo rwenyu.\n
+</item>
+<item>
+Mweya M’tsvene, Rufaro,\n
+Fadzai mwoyo wangu;\n
+Murenje ngandiimbe,\n
+Rufaro ruve tsime.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn84">
+<item>
+Mweya musiki, muvambi\n
+weidzo nheyo dzenyika;\n
+Shanyirai pfungwa dzese,\n
+Mutidire namafaro;\n
+bvisai zvivi mumwoyo,\n
+Ticheniswe, mugaremo.\n
+</item>
+<item>
+Mweya usina kusikwa,\n
+wakapikirwa nababa;\n
+Imi tsime routsvene,\n
+Nomoto unochenisa;\n
+Uyai patinoimba\n
+Mugotiita vatsvene\n
+</item>
+<item>
+Mweya wenyasha, burukai,\n
+Muzere nesimba guru;\n
+Simba roruoko rwake\n
+Rotonga denga nenyika;\n
+Chenurai kuda kwedu,\n
+Mwoyo ifanane nemi.\n
+</item>
+<item>
+Tisikei tose patsva;\n
+Tandanisai Satani;\n
+Tigamuchire chokwadi,\n
+Tiite zvatinotenda\n
+Tipei uzima hwenyu,\n
+Tione baba naKristu.\n
+</item>
+<item>
+Rukudzo rusingapere\n
+Ngaruvepo kunababa;\n
+Mwanakomana akudzwe\n
+Uyo wakafa pamuti;\n
+Nemiwo Mweya mukudzwe\n
+Kudzamarare narini\n
+</item>
+    </string-array>
+
+    <string-array name="hymn85">
+<item>
+M’tsvene, M’tsvene, M’tsvene, Mwari wesimba!\n
+Namangwanangwana toimba kwamuri;\n
+M’tsvene, M’tsvene, M’tsvene, wetsitsi nesimba!\n
+Mwari Mutsvene, Vatatumumwe!\n
+</item>
+<item>
+M’tsvene, M’tsvene, M’tsvene, vokurumbidza\n
+Vanhu venyu vose kudenga kunemi;\n
+Ingirozi dzose pachigaro chenyu\n
+Dzinopfugama pamberi penyu.\n
+</item>
+<item>
+M’tsvene, M’tsvene, M’tsvene, makavanzika,\n
+Vanhu vakaipa havakuonei;\n
+Asi ndimi M’tsvene; hapanazve mumwe,\n
+Mune chokwadi, simba norudo.\n
+</item>
+<item>
+M’tsvene, M’tsvene, M’tsvene, Mwari wesimba!\n
+Munokurumbidzwa namabasa enyu;\n
+M’tsvene, M’tsvene, M’tsvene, wetsitsi nesimba!\n
+Mwari Mutsvene, Vatatumumwe!\n
+</item>
+    </string-array>
+
+    <string-array name="hymn86">
+<item>
+Izwi renyu Mwari\n
+Ranzwikwa nerima\n
+Raparara;\n
+Tinzwe isu nhasi\n
+Kuti nyika dzose\n
+Dzisati dzarinzwa\n
+Dziyedzerwe.\n
+</item>
+<item>
+Makauya Jesu\n
+Nesimba no’penyu\n
+Kuponisa;\n
+Mapofu mumwoyo\n
+Akarapwa nemi,\n
+Itai pasi pose\n
+Payedzerwe.\n
+</item>
+<item>
+Mweya wechokwadi\n
+Upenyu norudo,\n
+Chiburukai;\n
+Pararirai kwese\n
+Nomwenje wengoni;\n
+Nzvimbo ine rima\n
+Iyedzerwe.\n
+</item>
+<item>
+Mwari mumwe chete,\n
+Vatatu Mutsvene,\n
+Mwari wedu;\n
+Muri ngoni dzose\n
+Norudo, nesimba.\n
+Nokubwinya kose,\n
+Tiyedzere!\n
+</item>
+    </string-array>
+
+    <string-array name="hymn87">
+<item>
+Imi Mweya waMwari\n
+Itai kuti tinzwe,\n
+Mutitsanangurire,\n
+Mashoko outsvene,\n
+Anovapa upenyu\n
+Vanoateerera.\n
+</item>
+<item>
+Vanogokomborerwa\n
+Vanonzwa shoko renyu,\n
+Vanoriita pano\n
+Vachakuonaiwo;\n
+Pamunozodzokazve\n
+Vachava pedyo nemi.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn88">
+<item>
+Vakaropafadzwa avo.\n
+Vane tsika yenduramo,\n
+Vanofamba mumurau\n
+waJehovha, Mwari wavo.\n
+</item>
+<item>
+Swededzai mwoyo wangu\n
+Kuzvipupuriro zvenyu;\n
+Ndizvo zvinondipa mano,\n
+Ndinorida shoko renyu.\n
+</item>
+<item>
+Kana ndichirangarira\n
+Shoko renyu randinoda,\n
+Ndipeiwo kunzwisisa\n
+Ndidzidze zvirevo zvenyu.\n
+</item>
+<item>
+Handingatongokanganwa\n
+Shoko iro roupenyu;\n
+Makandiponisa naro,\n
+Ndikaropafadzwa kwazvo.\n
+</item>
+<item>
+Pazvirevo zvenyu Ishe\n
+Ini ndinowana njere;\n
+Shoko renyu ndiwo mwenje\n
+Kuti handizogumburwa.\n
+</item>
+<item>
+Shoko renyu nhaka yangu\n
+Kusvikira pakuguma;\n
+Shoko renyu rakasimba\n
+Nokusingapere Mwari\n
+</item>
+    </string-array>
+
+    <string-array name="hymn89">
+<item>
+Tine dama renyu, Mwari,\n
+Noupenyu naro;\n
+Rinotizivisa zvivi\n
+NoM’ponisi wedu.\n
+</item>
+<item>
+Rakafamba iro dama\n
+Richafamba iro;\n
+ose marudzi enyika\n
+Amirira iro.\n
+</item>
+<item>
+Dzinokundwa hondo dzose\n
+Neri dama Ishe;\n
+Ichazara nyika yose\n
+Neri dama Ishe.\n
+</item>
+<item>
+Dzose nzizi dzapanyika\n
+Dzichafara naro;\n
+Navanhu vose venyika\n
+Vopfumiswa naro.\n
+</item>
+<item>
+Dzichapera hondo dzose\n
+Nezwi renyu Mwari;\n
+Kuchauya kuwadzana\n
+Nezwi renyu Mwari.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn90">
+<item>
+Heri dama rokudenga\n
+RoMusiki wedu,\n
+Ngatirinzwise zvikuru\n
+Nayo mwoyo yedu.\n
+</item>
+<item>
+Rinoreva nguva dzose\n
+Nokuipa kwedu,\n
+Rinotiratidza isu\n
+zvourema hwedu.\n
+</item>
+<item>
+Chakaipa imharadzi\n
+Chinotiparadza;\n
+Asi Jesu ndiye Shoko\n
+Rinotiponisa.\n
+</item>
+<item>
+Ndero kuti ngatidzoke\n
+Pakuipa kwedu;\n
+Tizvirasire kwaari\n
+Muponisi wedu.\n
+</item>
+<item>
+Ngatibatirire iye\n
+Nokushingirira;\n
+Tinoponiswa naiye\n
+Mune chakaipa.\n
+</item>
+<item>
+Nhasi ndiro zuva rake\n
+Rokutiponisa;\n
+wamira nengoni dzake\n
+Kuti atifadze.\n
+</item>
+<item>
+Ngatimuke tigam’chire\n
+Iri dama rake\n
+Anozotiropafadza\n
+Nokutiponisa.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn91">
+<item>
+Mwari nedzo tsitsi dzenyu\n
+Makatipa dama renyu,\n
+Iro dama renyu guru,\n
+Rinobva iko kudenga.\n
+</item>
+<item>
+Iro rinotidzidzisa,\n
+Iro rinotifadzisa,\n
+Rinobvisa rima rose\n
+Rinouyisa chiedza.\n
+</item>
+<item>
+Taifamba pane nzira\n
+Inoenda kuna rufu.\n
+Dama renyu rakasvika,\n
+Tinovonga nazvo chose\n
+</item>
+<item>
+Neri dama tapindutswa,\n
+Neri dama taponiswa,\n
+Rakatidzora pazvivi,\n
+Kuti tiende kudenga.\n
+</item>
+<item>
+Ngarifambe iri dama,\n
+Ngadzirinzwe nyika dzose,\n
+Ridzidzise vanhu vose\n
+Vari kune nzvimbo dzose.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn92">
+<item>
+Svikai, Mweya Mutsvene,\n
+Timutswe mumwoyo;\n
+Muri moto wavatumwa,\n
+Tsime rechiedza.\n
+</item>
+<item>
+Sederai, makamutsa\n
+Vaprofita kare;\n
+Tizarurirwe chokwadi\n
+Nero bhuku dzvene.\n
+</item>
+<item>
+Tambanudza’ mapapiro\n
+Mutivhumbamire;\n
+Mweya yedu itwasurwe,\n
+Ngakuve chiedza.\n
+</item>
+<item>
+Tozomuziviswa Mwari\n
+NoMweya mumwoyo;\n
+Tinzwisise navatsvene\n
+Udzame hworudo.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn93">
+<item>
+Mweya wangu uno Muponisi\n
+wauri kupiwa;\n
+Ndafanera kusarudza zvino;\n
+Ndichagam’chira su?\n
+chorus\n
+Ndoda, ndoda, ndoda,\n
+Mwari muyamuri muri wangu\n
+Ndakatengwa neropa raIshe\n
+Ndava wenyu chose.\n
+</item>
+<item>
+Nengoni ndichagam’chira tsitsi;\n
+Rudo rwenyu Kristu\n
+Rwaukunda mwoyo wangu kwazvo,\n
+Ndichavimba nemi.\n
+</item>
+<item>
+Munoziva kusasimba kwangu,\n
+Ndotya kurasika;\n
+Asi imi muri simba rangu,\n
+Munondipa simba.\n
+</item>
+<item>
+Hongu, Ishe, tipei isu tose\n
+Ngoni dzenyu nhasi,\n
+Nezvinobva mumwoyo tichiti:\n
+Ndichava waKristu.\n
+</item>
+<item>
+Vakauya vamwe vachibvunza;\n
+Tingapone here?\n
+Hongu, ndinoda muponiswewo,\n
+Nesu tinodaro.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn94">
+<item>
+Ndanzwa izwi renyu,\n
+Rinondidaidza,\n
+Kuzoshambidzwa muropa\n
+Robva pam’chinjikwa.\n
+chorus\n
+Ndouya Jesu\n
+Kwamuri Ishe,\n
+Kushambidzwa muropa\n
+Robva pam’chinjikwa.\n
+</item>
+<item>
+Ndashaya masimba,\n
+Imi muchandipa;\n
+Munondishambidza kwazvo\n
+Munonditsvenisa.\n
+</item>
+<item>
+Jesu wandidana\n
+Ndiwane rutendo,\n
+Norudo norunyararo\n
+Pasi nokudenga.\n
+</item>
+<item>
+Jesu wosimbisa\n
+Nduramo mukati;\n
+wapamhidza ngoni dzake\n
+Panzvimbo pechivi.\n
+</item>
+<item>
+Toombera ropa!\n
+Toombera ngoni!\n
+Chipo chabva kunaKristu\n
+Iye Mwari wedu.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn95">
+<item>
+Farai nesu, vanotenda,\n
+Tapiwa rufadziso;\n
+Tichifunga nazvo, tinoti,\n
+Chokwadi chishamiso!\n
+</item>
+<item>
+Jesu waburuka kudenga\n
+Rwauya ruponiso;\n
+Tinodaidzirwa upenyu\n
+Inzwai zvoshamisa!\n
+</item>
+<item>
+wafira vakaipa vose\n
+wabvisa zvidariko,\n
+watakura zvitadza zvedu,\n
+Kakare zvoshamisa!\n
+</item>
+<item>
+Murima roupenyu hwedu\n
+watiisira mwenje,\n
+Unopedza upofu hwose,\n
+Honai zvoshamisa!\n
+</item>
+<item>
+Anenge akarukutika\n
+Nenzira yezvitadzo,\n
+Angapiwe ruregerero,\n
+Chokwadi chishamiso!\n
+</item>
+<item>
+Hendei tose takatadza\n
+Kuti tiregererwe;\n
+Tigopiwa masimba matsva\n
+Naye nyakushamisa!\n
+</item>
+    </string-array>
+
+    <string-array name="hymn96">
+<item>
+Wandiitirei Jesu?\n
+ona! waburuka denga,\n
+wasiya umambo uko\n
+Kuti ndive muupenyu.\n
+chorus\n
+Ndiye Jesu! Ndiye Jesu!\n
+Mununuri ano rudo,\n
+Anondipa nhaka uko,\n
+Kune nzvimbo inopenya.\n
+</item>
+<item>
+wakandiitireizve\n
+wandibvisa mukutadza\n
+wakawana chinhu here?\n
+Kwete! wakauraiwa.\n
+</item>
+<item>
+Aripiko Jesu zvino?\n
+wakakwira pakudenga,\n
+Achazodzoka kakare\n
+Noumambo nokubwinya.\n
+</item>
+<item>
+Ndinomuda Jesu here?\n
+Hongu! Ndinomudisisa!\n
+Ndichamuona pachake\n
+Narini ndimurumbidze.\n
+</item>
+<item>
+Tingamuzive seiko?\n
+Dzokai mumutevere,\n
+Haarambe munhu kwete\n
+Chimbidzai mumugam’chire.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn97">
+<item>
+Tadaidzirwa utsvene,\n
+Isu vanhu tose;\n
+Paridzai shoko rake\n
+Kumarudzi ose.\n
+</item>
+<item>
+Kwanzi ngatibude tose\n
+Pane zvakaipa;\n
+Kwanzi ngatirege zvose\n
+zvokupenga kwedu.\n
+</item>
+<item>
+zviyevedzo zvapanyika\n
+zvakatinyengedza;\n
+Asi chokwadi chaMwari\n
+Chabuda pachena.\n
+</item>
+<item>
+Nyasha noruregerero\n
+Ndezvoko kudenga\n
+Horwo rudo norufaro\n
+Ndezva paupenyu.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn98">
+<item>
+Paimba yeGwayana raMwari,\n
+Panotikwevera mukupenya,\n
+Pindai, pindai, nzvimbo ichiripo.\n
+</item>
+<item>
+wopera musi rovira zuva,\n
+Kwaita mimvuri nokuvira,\n
+Pindai, pindai, nzvimbo ichiripo.\n
+</item>
+<item>
+Imba yesvitsa heyo yozara,\n
+Achakazarurirwa mukwasha,\n
+Pindai, pindai, nzvimbo ichiripo.\n
+</item>
+<item>
+Imba yozara ino rufaro,\n
+Kurumidza isatiyazara,\n
+Pindai, pindai, nzvimbo ichiripo.\n
+</item>
+<item>
+Iripo nzvimbo kuchakashama,\n
+Ruripo rudo, wakamirirwa.\n
+Pindai, pindai, nzvimbo ichiripo.\n
+</item>
+<item>
+Hezvo kopfigwa, wozovachii?\n
+Kana zvichinzi; Nzvimbo haipo,\n
+Haipo, haipo, nzvimbo haipo.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn99">
+<item>
+Ishe! Ndinzwei nokufara\n
+Ndinzwe netsitsi dzenyu,\n
+Dzamunopa vanhu vose\n
+Ngadziuye mandiri.\n
+Mandiri.\n
+</item>
+<item>
+Regai kundisiya, baba\n
+Kana ndiri mutadzi,\n
+Ndino kuipa pamwoyo,\n
+Asi uyai mandiri,\n
+Mandiri.\n
+</item>
+<item>
+Uyai pano, Muponisi,\n
+Ngandichengetwe nemi,\n
+Kana muchindishovedza\n
+Ndichauya kwamuri,\n
+Kwamuri.\n
+</item>
+<item>
+Mweya Mutsvene waMwari,\n
+Regai kundipfuura,\n
+Ngandione ndiri bofu,\n
+Taurai izwi resimba,\n
+Resimba.\n
+</item>
+<item>
+Rudo rwenyu Mwari baba,\n
+Ropa raIshe wangu,\n
+Nokuwadzana kwoMweya,\n
+Kungavepo kwandiri,\n
+Kwandiri.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn100">
+<item>
+Kwete! Idzo tsitsi dzenyu\n
+Kuna ivo vane mhosva,\n
+Munoda kuregerera,\n
+Munoda kuvaponisa.\n
+</item>
+<item>
+Jesu Ishe wokudenga\n
+Tererai vatadzi vose,\n
+Mudzorere, muponise,\n
+Vatyori vemirairo.\n
+</item>
+<item>
+Tsitsi dzenyu huru, Jesu,\n
+Dzakakwana nyika yose,\n
+Hadzingaenzaniswe,\n
+Hadzingapere narini.\n
+</item>
+<item>
+Makororo nedzomvemve\n
+Mhombwe navo vanokorwa,\n
+Vose vashovedzwa nemi\n
+Kuti vose vaponiswe.\n
+</item>
+<item>
+Vanobvuma nokuchema,\n
+Muvanzwe netsitsi Ishe,\n
+Muvaregerere chose,\n
+Simbisai rutendo rwavo.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn101">
+<item>
+Sipiti retsitsi nengoni\n
+Tinaro muna Ishe wedu;\n
+Iro razarurirwa isu,\n
+Naani anoda kuuya.\n
+</item>
+<item>
+Ishe Jehovha ano rudo,\n
+Anotipa mvura yedenga,\n
+Kana tichienda kurwizi\n
+Tinonwa Mvura youpenyu.\n
+</item>
+<item>
+Ndiyo inopedzisa nyota,\n
+Ndiyo inofadzisa mweya,\n
+Tose tingapiwe pachena,\n
+Tigogamuchidzwa ngoni dzake.\n
+</item>
+<item>
+Norudo rwake, tinopiwa\n
+Mvura iyo yechisipiti,\n
+Tigowana upenyu nayo\n
+Hunobva kuna Jesu Kristu.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn102">
+<item>
+Tirimo munzira yenyika yo’penyu\n
+Kumusha wavanhu vari parufaro.\n
+Imi makatsauka nokutadzira She\n
+Munoenda here, ikoko kudenga?\n
+chorus\n
+Munoenda here? Munoenda here?\n
+Munoenda here, ikoko kudenga?\n
+</item>
+<item>
+Kusuwa, kusuwa, hakungambovako\n
+Mune iyo nyika igere vatsvene.\n
+Vafambi panhamu, pane chakaipa,\n
+Munoenda here, ikoko kudenga?\n
+</item>
+<item>
+Ikoko hakuna urombo zvokwadi\n
+Ipfuma nepfuma izere ikoko;\n
+Chirwere hakuna? Kwete hakunaba\n
+Munoenda here, ikoko kudenga?\n
+</item>
+<item>
+Fambai vatendi, nyika’yo ndeyedu,\n
+Tinozopupura runako ruriko;\n
+Hongu tichafamba pamsoro pegomo\n
+Tichazonwa mvura yo’faro kudenga.\n
+</item>
+<item>
+Funga iwe m’tadzi, haunakuraswa,\n
+Tomira chinguva, timirire iwe;\n
+Uya kuna Ishe anokugam’chira,\n
+Akuise zvino ikoko kudenga.\n
+</item><item>
+Ndinoziva kuti uri pakurema\n
+Uchiti ndiyani angakuyamure,\n
+Pamhosva irimo mukati memwoyo\n
+Ndiye Jesu chete, teura kwaari,\n
+chorus\n
+Ndoenda, ndoenda, ndoenda, ndoenda,\n
+Hongu, ndinoenda ndinange kudenga.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn103">
+<item>
+Vatadzi munodiwa,\n
+Imi makarasika\n
+NdiJesu wodaidza\n
+Vadariki vakawa\n
+chorus\n
+Imbai zvakarezve\n
+Vatadzi vogam’chirwa\n
+NaKristu Muponisi,\n
+Nhau inoshamisa.\n
+</item>
+<item>
+Anokupa zororo,\n
+Tenda chete kwaari;\n
+Anokoka vatadzi\n
+Anokuregerera.\n
+</item>
+<item>
+Handichapiwa mhosva\n
+Nokudarika kwangu,\n
+Ndakachenurwa zvivi\n
+Nokufa kwaShe wangu.\n
+</item>
+<item>
+Jesu wandigam’chira\n
+Ini mutadzi kwazvo,\n
+Achandigadzirira\n
+Nzvimbo yangu kudenga.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn104">
+<item>
+Jesu wakauya pasi\n
+Kuponisa mweya wangu;\n
+Ndanyururwa muzvitadzo\n
+Nengoni norudo.\n
+chorus\n
+Ndainyudzwa mumatope;\n
+Jesu wakandinyurura;\n
+Ndakabviswa mune rima;\n
+Ndanyururwa, ndinotenda.\n
+</item>
+<item>
+wakandidana norudo\n
+Ini ndichiri mutadzi;\n
+zvandakazoti ndabvuma\n
+Akandinyurura.\n
+</item>
+<item>
+wakakuvadzwa neminzwa\n
+Akaroverwa pamuti,\n
+Asi mumadzudzo angu\n
+wakandinyurura.\n
+</item>
+<item>
+zvino ndava wokudenga,\n
+Mweya wangu unofara;\n
+Ndinoshama, ndinofara,\n
+wakandinyurura.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn105">
+<item>
+Ndakanga ndakundikana\n
+Nokuipa kwenyika,\n
+Ndakachema ndakuvadzwa\n
+Ndapererwa nesimba;\n
+Asi Mwari wakandinzwa\n
+Akandigamuchira.\n
+</item>
+<item>
+Uyaiwo vakaneta \n
+Nokuda kwezvitadzo,\n
+Vanoshonha navakorwi,\n
+Vashinhwi navatuki,\n
+Uyaika munodanwa,\n
+Munoshovedzwa mose.\n
+</item>
+<item>
+Siya nyika urarame,\n
+Tura mutoro wako,\n
+Tora jokwe rakanaka,\n
+Udzidze kuna Jesu,\n
+Hapana mumwe M’ponisi\n
+Saka uya kwaari.\n
+</item>
+<item>
+Kwaari kuno kupona,\n
+Pamwe nokuzorodzwa,\n
+Rufaro, ruregerero\n
+Simba idzva zviripo;\n
+Nemi madaidzwa naye,\n
+Uyai muponiswe.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn106">
+<item>
+Mweni anogogodza\n
+zvakapfava zvikuru,\n
+Anodisa kupinda\n
+Ano rudo rukuru.\n
+</item>
+<item>
+Usapfigire kunze\n
+Mudzidzisi mukuru\n
+Nokuti anouya\n
+Namashoko makuru.\n
+</item>
+<item>
+Vazhinji vakapona,\n
+Nesu tingaponewo\n
+Kana tagamuchira\n
+Mazwi oruponiso.\n
+</item>
+<item>
+Mweni uyu ndiJesu,\n
+Angafare zvikuru\n
+Kuva newe kudenga;\n
+zvipire iye zvino.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn107">
+<item>
+Uyai kuna Muponisi;\n
+Takaratidzwa nzira naye;\n
+zvino ari pakati pedu,\n
+Anoti: Uyai.\n
+chorus\n
+Tichazofara taungana,\n
+Mwoyo yacheniswa pazvivi;\n
+Taungana noMuponisi\n
+Ikoko kudenga.\n
+</item>
+<item>
+Uyai vanangu, tererai;\n
+Izwi raIshe rinodana;\n
+Ngatipembere norufaro:\n
+Uyai! Uyai!\n
+</item>
+<item>
+Ngatifungezve achinesu;\n
+Titerere kudana kwake;\n
+Inzwai zvino anodana:\n
+Uyai vanangu.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn108">
+<item>
+Pane sipiti rizere\n
+Neropa raJesu;\n
+Vatadzi vanoshambwamo\n
+Vocheneswa zvivi.\n
+chorus\n
+Ndinotenda, ndinofara,\n
+Jesu wandifira,\n
+Napamuchinjikwa ropa\n
+Randaparadzirwa.\n
+</item>
+<item>
+Uyo m’pati wakafara\n
+Kuona sipiti,\n
+Neni mutadzi mukuru\n
+Ndinonatswa naro.\n
+</item>
+<item>
+Handifanere kupinda\n
+Kudenga kutsvene,\n
+Asi imi makaripa\n
+Mhosva dzangu dzose.\n
+</item>
+<item>
+Ropa renyu rine simba\n
+Gwayana raMwari,\n
+Rokutsikinura vose\n
+Kuti vatsveniswe.\n
+</item>
+<item>
+zvandakaona sipiti\n
+Kusvikira nhasi,\n
+Ndikabva ndasuma rudo\n
+Runotiponisa.\n
+</item>
+<item>
+Ndichaimba nero shoko\n
+Nguva dzangu dzose;\n
+Nokudenga ndichakudza\n
+Rudo rwenyu Tenzi.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn109">
+<item>
+Baba, nedzo tsitsi dzenyu,\n
+Tarisai mweya wangu,\n
+Ndinochema mberi kwenyu:\n
+bvisai zvitadzo zvangu.\n
+</item>
+<item>
+Ini ndiri mberi kwenyu,\n
+Inzwai kuteta kwangu,\n
+Mhosva dzinondinyadzisa:\n
+bvisai zvitadzo zvangu.\n
+</item>
+<item>
+Handimanikidzwe nemi,\n
+Inzwai kudana kwangu,\n
+Ndoziva handifanire:\n
+bvisai zvitadzo zvangu.\n
+</item>
+<item>
+Ishe baba ndine tsvina,\n
+Shambidzai mwoyo wangu,\n
+Ndipei ruregerero,\n
+bvisai zvitadzo zvangu.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn110">
+<item>
+Mwari Ishe makavanzwa\n
+Nyange ndokurwarirai,\n
+Hamuonekwe kwandiri\n
+Kunyange ndazvikumbira.\n
+</item>
+<item>
+Ndine zvivi zvechokwadi\n
+Ndine mhosva mberi kwenyu\n
+Ndanga ndino kunyengedza \n
+Nyange ndave nezwi renyu.\n
+</item>
+<item>
+Ndakakundwa nokuzvida\n
+Mwoyo ukakurambai,\n
+Nyange makandidaidza\n
+Ndakatozviita matsi.\n
+</item>
+<item>
+Musandirasewo Ishe\n
+Nyange ndakaite’zvi\n
+Ndodiiko ndoendepi\n
+Kana ndikaraswa nemi?\n
+</item>
+<item>
+Shewe! Tenzi ndakatadza\n
+Ndaizvidza izwi renyu,\n
+Asi rudo rwenyu Kristu\n
+Rwandidzumbunura zvino.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn111">
+<item>
+Kudai ndichibvuma\n
+Nomwoyo wangu wose,\n
+Kutsaukana nazvo\n
+zvose zvitadzo zvangu,\n
+Ndiuyewo kwamuri\n
+KuMuponisi wangu.\n
+</item>
+<item>
+Kudai ndino kunzwa\n
+Urombo hwomumwoyo,\n
+Hunonditungamira\n
+Mukutendeukawo;\n
+Ndifambe nayo nzira\n
+Yoguma murufaro.\n
+</item>
+<item>
+Kudai ndichitenda\n
+Nemwoyo wangu wose,\n
+Ndinamatire kwa’ri\n
+wafira mhosva yangu;\n
+Ndigare ndichivimba\n
+NoMuripiri wangu.\n
+</item>
+<item>
+Kudai ndine simba\n
+Rinobva kuna Ishe\n
+Rokuramba zvenyika\n
+Ndinangewo kudenga;\n
+Ndimutsirirei She,\n
+Ndibude pakuipa.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn112">
+<item>
+Baba nditarisei netsitsi dzenyu,\n
+Mundiregerere zvivi zvangu;\n
+Neropa roMwanakomana wenyu\n
+Chimboteererai izwi rangu.\n
+</item>
+<item>
+Ishe wangu ndinayo tsvina bedzi,\n
+Handingashambidze mwoyo wangu;\n
+Ndovimba chete nedzo tsitsi dzenyu\n
+Nokuti ihuru mhosva yangu.\n
+</item>
+<item>
+zvose zvakaipa zvandakaita\n
+Ndinozviona mupfungwa dzangu,\n
+zviito zvangu zvinondinyadzisa\n
+Ndinoremerwa nemhosva yangu.\n
+</item>
+<item>
+Asi ndakanzwa noruregerero\n
+Kuti ruripo kuMuponisi.\n
+Ndicharuwana, ndinobvuma chose,\n
+Ndiye wandidana Ishe wangu.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn113">
+<item>
+Hakusi kurema\n
+Kwedzi mhosva dzangu,\n
+Dzandinadzo ini\n
+Dzokuzvarwa nadzo;\n
+Dzakandipinzawo\n
+Murushavashava\n
+Rwakandikonzera\n
+Kufa kwangu kose.\n
+chorus\n
+Ishe Jesu, Ishe\n
+Ivai netsitsi;\n
+Ishe, Jesu, Ishe\n
+Ivai nengoni.\n
+</item>
+<item>
+Handisayamurwa\n
+Namabasa angu;\n
+Ndakasungwa kwazvo\n
+Nezvitadzo zvangu;\n
+Iye Jesu Kristu\n
+Pamusana pangu\n
+wakanzwa kurema\n
+wakafira ini.\n
+</item>
+<item>
+Dai asauya\n
+Mununuri wangu,\n
+Dai asafira\n
+Mhosva dzangu ini,\n
+Ndaizotakura\n
+Nokurangwa kwangu\n
+Asi zvose izvi\n
+zvakabva pana She.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn114">
+<item>
+Ndinochema Ishe Mwari\n
+Baba muri m’tsvene ndinzwe;\n
+Handinakufara Mambo,\n
+Ndiponisei Ishe wangu.\n
+</item>
+<item>
+Ndiri hwai, ndarasika,\n
+Nganditsvakwe ndidzoswezve;\n
+Ndiri pasi pamapako,\n
+Chindirondai Ishe wangu.\n
+</item>
+<item>
+Ndakarasa nzira yenyu,\n
+Ndikashora tsitsi dzenyu,\n
+Ndikakwira pamikwidza,\n
+Ndikanyura pakaipa.\n
+</item>
+<item>
+Pane rima rakakomba,\n
+buda, zuva rakanaka;\n
+Ngandipinde pane nzira,\n
+Ndiponisei Ishe Jesu.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn115">
+<item>
+Jesu ndanga ndakurasai\n
+Nyange manga mandifira,\n
+Asi nhasi ndinonyara,\n
+Pamhidzai mundigam’chire.\n
+</item>
+<item>
+Handina kufanera ini\n
+Kuitirwa idzo tsitsi;\n
+zvino ndinoita seiko?\n
+Pamhidzai mundigam’chire.\n
+</item>
+<item>
+Ndinokuipa kukuru,\n
+Nhasi kwandimanikidza;\n
+Ndinotarisa kudenga,\n
+Pamhidzai mundigam’chire.\n
+</item>
+<item>
+zvose zvandanga ndaita\n
+zvaipa, ndinozvinyara;\n
+zvirokwazvo, Ishe wangu,\n
+Pamhidzai mundigam’chire\n
+</item>
+<item>
+Ishe. Jesu, ndinochema,\n
+Ndochemera mhosva yangu,\n
+Ndinonyara, ndinopfidza,\n
+Pamhidzai mundigam’chire.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn116">
+<item>
+Baba ndiri mwana wenyu\n
+Nyange ndakatadza;\n
+Ndinochema mberi kwenyu,\n
+Mundiregerere.\n
+</item>
+<item>
+zvitadzo zvangu zvizhinji\n
+Hazvingaverengwe;\n
+Ndinozviisa kwamuri\n
+Mundiregerere.\n
+</item>
+<item>
+Mirau yenyu ndakatyora,\n
+Ndakakuzvidzai,\n
+Mununuri ndamurasa\n
+Mundiregerere.\n
+</item>
+<item>
+Ndakatadza nokureva\n
+Nokufunga kwangu,\n
+Ndakatadza namabasa,\n
+Mundiregerere.\n
+</item>
+<item>
+Nyange ndanga ndafanera\n
+Kukukurumbidza;\n
+Ndatadza nokukanganwa;\n
+Mundiregerere.\n
+</item>
+<item>
+Nezvakaipa zvizhinji \n
+Baba, ndakatadza,\n
+Ndakakunyadzisai imi,\n
+Mundiregerere.\n
+</item>
+<item>
+Muri Mwari mune ngoni\n
+Dzisingazopera.\n
+Naizvozvo ndinochema;\n
+Mundiregerere.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn117">
+<item>
+Nditarirei nokufara\n
+Ishe wangu;\n
+Ndimi makazondifira\n
+Ishe wangu.\n
+Makasiya denga renyu\n
+Makazvideredza chose\n
+Kuti mugondiponisa\n
+Ishe wangu.\n
+</item>
+<item>
+Ndandigere mune rima\n
+Ishe wangu;\n
+Ndaienda kuno rufu\n
+Ishe wangu.\n
+Dzakauya nhume dzenyu\n
+Kuti ndinzwe dama renyu\n
+Dzandiudza tsitsi dzenyu\n
+Ishe wangu.\n
+</item>
+<item>
+Ngandinzwiswe ngoni dzenyu\n
+Ishe wangu;\n
+Ndive muponiswa wenyu\n
+Ishe wangu.\n
+zvakaipa ngazvipere,\n
+Mwoyo wangu utsveniswe\n
+Inzwai, mundiregerere,\n
+Ishe wangu!\n
+</item>
+    </string-array>
+
+    <string-array name="hymn118">
+<item>
+Inzwai mununuri wedu,\n
+Tererai kuchema kwedu;\n
+Tarasika nokutadza\n
+Takatsaukana nemi.\n
+</item>
+<item>
+Kunyange taimboramba\n
+Pakusvika kwezwi renyu;\n
+Kunyange takambodaro\n
+Takazonzwa izwi renyu.\n
+</item>
+<item>
+Iko kurasika kwedu\n
+Kwakabva munharo dzedu,\n
+Tikada kutadza bedzi\n
+Pakufunga kwedu kose.\n
+</item>
+<item>
+Nhasi tose tinokundwa,\n
+Nhasi tose toshambidzwa;\n
+zvose zvakaipa zvedu\n
+zvakatarisana nesu.\n
+</item>
+<item>
+Ishe Jesu tiri pano;\n
+Ngatiregererwe nemi;\n
+Dururai ropa renyu\n
+Tibve tashambidzwa naro.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn119">
+<item>
+Zvingagova sei kuti\n
+Ndisunungurwe naIshe?\n
+Ndiye wakafira ini\n
+Ndakamukonzera kufa?\n
+Chishamiso chakadini!\n
+Mwari makafira ini!\n
+</item>
+<item>
+Ndimashura! Mwari kufa?\n
+Mazano anoshamisa!\n
+Ngirozi dzokundikana\n
+Kunzwisisa rudo rwake.\n
+Tsitsi dzake! Ngatikudze,\n
+Ngirozi dzoshamisika.\n
+</item>
+<item>
+wakasiya denga rake\n
+Nenzira yengoni dzake;\n
+wakazvidurura chose,\n
+wakafira isu vanhu\n
+Tsitsi dzake dzakanyanya\n
+Dzakasvikawo kwandiri.\n
+</item>
+<item>
+Mweya wangu wakasungwa\n
+Namajoto ezvitadzo,\n
+ziso renyu randiona\n
+Randipenyera zvikuru\n
+Ndakabiswawo majoto,\n
+Ndabva ndatevera imi.\n
+</item>
+<item>
+Handitye zvino kutongwa,\n
+Jesu nezvake ndowangu,\n
+Maari ndava mupenyu,\n
+Ndaruramiswa naIshe,\n
+Ndosedera kuna Mwari,\n
+Ndipiwe chiremba naShe.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn120">
+<item>
+Muka, mweya wangu,\n
+Rasa kutya kwako,\n
+Diramhamba rako\n
+Riri pana Mwari;\n
+Muponisi wakanyora\n
+zita rangu nero ropa.\n
+</item>
+<item>
+Ariko kudenga\n
+Kundireverera,\n
+Norudo nengoni\n
+Nero ropa rake.\n
+Rakaparadzirwa tose\n
+Ririko mberi kwaMwari.\n
+</item>
+<item>
+Maronda aJesu\n
+Apa muchinjikwa,\n
+Anonyengetera,\n
+Anondirevera;\n
+Anochema: Regererai!\n
+Kanganwirai uyu m’tadzi!\n
+</item>
+<item>
+Baba anomunzwa\n
+Mwana mudikanwa,\n
+Haadi kuramba\n
+Mukumbiro wake;\n
+Mweya wandiudza zvino\n
+Kuti ndazvarwa naMwari.\n
+</item>
+<item>
+Ndakaregererwa,\n
+Ndakayananiswa,\n
+Ndava mwana wake,\n
+Handitye Kakare;\n
+Ndinosedera, ndichiti:\n
+Mwari baba! Mwari baba!\n
+</item>
+    </string-array>
+
+    <string-array name="hymn121">
+<item>
+Norumuko rwenyu Kristu\n
+Munomutsa vanhu vose,\n
+Mava upenyu hwavose\n
+Ivo vari murutendo.\n
+</item>
+<item>
+Nokuzvarirwa muchivi\n
+Ndakanga ndiri murufu,\n
+Ndakamutswa, ndararama\n
+Nemi Jesu Muponisi.\n
+</item>
+<item>
+Ndingatye chiiko ini\n
+Kana ndasvika pakufa?\n
+Kufa ndiyo nzira yangu\n
+Yokupinda muupenyu.\n
+</item>
+<item>
+Makakwira pakudenga,\n
+Munonditungamirako\n
+Kuti ndigogara nemi;\n
+Jesu muri ‘penyu hwangu.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn122">
+<item>
+Ngandiite munamato\n
+Kuna Ishe wokupona;\n
+Mandiitira rufaro\n
+Ndochifara, Muponisi.\n
+</item>
+<item>
+Ndandigere pakaipa,\n
+Ndakabatwa nemirandu;\n
+Ndaienda pakutongwa\n
+Mandidzora, Muponisi.\n
+</item>
+<item>
+Mandinzwisa dama renyu,\n
+Mandinzwira tsitsi dzenyu,\n
+Ndichava mwana waMwari\n
+Ndokuvongai, Muponisi,\n
+</item>
+<item>
+Makandibvisa pakufa\n
+Makazondipa upenyu,\n
+Ndonanga zvino kudenga\n
+Nedzo tsitsi, Muponisi.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn123">
+<item>
+N’anga huru yava pedyo,\n
+Ane tsitsi ndiJesu;\n
+Anoda kutifarisa\n
+Inzwa izwi raJesu.\n
+chorus\n
+zita rakanakisa\n
+Rinotipa rufaro,\n
+Rumbo rwakanakisa\n
+Jesu, Ishe, Jesu.\n
+</item>
+<item>
+Anobvuma shoko rake\n
+Anozosunungurwa;\n
+Agofamba zvakanaka\n
+Aende kuna Jesu.\n
+</item>
+<item>
+Utsvene huri kwaari,\n
+zvino ndotenda Jesu;\n
+Ndinorida zita rake,\n
+zita raKristu Jesu.\n
+</item>
+<item>
+Kutya kwangu kwaparadzwa\n
+Nezita rake Jesu;\n
+Mwoyo wangu unofara\n
+Kunzwa zita raJesu.\n
+</item>
+<item>
+Kana tazosvika uko\n
+Tichazova naJesu;\n
+Tichakurumbidza zita\n
+zita raIshe Jesu.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn124">
+<item>
+Ndomukurumbidza\n
+Musununguri;\n
+Anondiponisa\n
+Pazvakaipa;\n
+Anondifarisa\n
+Pamwoyo wangu,\n
+Ngandikurumbidze\n
+Musununguri.\n
+</item>
+<item>
+Ndakabatikana\n
+Pamhosva yangu;\n
+Ndakasvipisiswa\n
+Nezvivi zvangu;\n
+Ndakanga ndakafa\n
+Mumweya wangu,\n
+wakandiponisa\n
+Musununguri.\n
+</item>
+<item>
+Ndichagara naye\n
+Musununguri,\n
+Ndichifamba naye\n
+Panzira yake;\n
+woenda kudenga,\n
+Ndoenda naye,\n
+Ndive noupenyu\n
+NoM’sununguri.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn125">
+<item>
+Ishe ndoimba nadzo tsitsi dzenyu,\n
+Idzo dzondipa rufaro rwangu;\n
+Rinondifadza irori ‘zwi renyu.\n
+Rinondipawo ruvimbo rwangu.\n
+</item>
+<item>
+Makatumira idzo nhumwa dzenyu,\n
+Dzikazodzidzisa mweya wangu;\n
+Dzakaparidza nemirau yenyu,\n
+Ikaratidza kutadza kwangu.\n
+</item>
+<item>
+Ndakachema mberi kwenyu zvikuru,\n
+zvandakaona zvitadzo zvangu;\n
+Asi zvino ruregerero rwenyu;\n
+Rwapedza chose kuchema kwangu.\n
+</item>
+<item>
+Ropa roMwanakomana waMwari\n
+Rakapedza dzose mhosva dzangu;\n
+Ndakashambidzwa nesimba rengoni,\n
+Ndotenda kwazvo M’ponisi wangu.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn126">
+<item>
+Rukuru ruponiso\n
+RwaIshe wokudenga\n
+Rwatengwa nezvikuru\n
+zvichibva pakudenga.\n
+</item>
+<item>
+Rukuru ruponiso\n
+Irworwo rwakatengwa\n
+Neropa rake Kristu\n
+Iro rakaparara.\n
+</item>
+<item>
+Rukuru ruponiso,\n
+Ndorwavo vakaipa;\n
+Kusina anorambwa\n
+Kana aipa sei.\n
+</item>
+<item>
+Rukuru ruponiso\n
+Rwobisa pakuipa,\n
+Pakuwa, nokutadza,\n
+Nokufa pano moto.\n
+</item>
+<item>
+Rukuru ruponiso,\n
+Tinoshambidzwa narwo\n
+Tinotsveniswa narwo\n
+Tifanane naJesu.\n
+</item>
+<item>
+Rukuru ruponiso\n
+Ruripo pana Ishe;\n
+Tinodya nhaka narwo \n
+Youpenyu kudenga.\n
+</item>
+<item>
+Tinozodini isu\n
+Kana tikaruramba?\n
+Topona nechiiko\n
+Tikarurambisisa?\n
+</item>
+    </string-array>
+
+    <string-array name="hymn127">
+<item>
+Sezva ndiri, ndinouya\n
+Ndisina chandakanatsa,\n
+Asi ndimi mandidana,\n
+Ndinouya Ishe.\n
+</item>
+<item>
+Handinonoke kubviswa\n
+zvitadzo zvandakaita,\n
+Kwamuri munochenisa\n
+Ndinouya Ishe.\n
+</item>
+<item>
+Kunyange ndodzungaidzwa\n
+Namadzudzo omumwoyo.\n
+Ndichinzwa kurwa nokutya\n
+Ndinouya Ishe.\n
+</item>
+<item>
+Murombo, bofu razvidzwa,\n
+Ndichapona nemi chose,\n
+Ndichapfumiswa kwamuri,\n
+Ndinouya Ishe,\n
+</item>
+<item>
+Munozondiregerera\n
+Ndigam’chirwe, ndicheniswe,\n
+Nokuti ndokubvumai\n
+Ndinouya Ishe.\n
+</item>
+<item>
+Rudo runondishamisa\n
+Rwakakunda chakaipa;\n
+Kuti ndive wenyu chose\n
+Ndinouya Ishe.\n
+</item>
+<item>
+Nenzira yorudo rwenyu\n
+Kuzorunzwa zvakakwana\n
+Pano zvino nokudenga,\n
+Ndinouya Ishe.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn128">
+<item>
+Imi makabva ku’zuru\n
+Kutungidza moto pasi,\n
+Vesai rudo rutsvene \n
+Ipapo pamwoyo wangu;\n
+</item>
+<item>
+Ubvirire mbiri yenyu\n
+Nerimi risingadzimwe,\n
+Rimire seshongwe yangu,\n
+Uve muteuro wangu.\n
+</item>
+<item>
+Simbisai nhuna dzangu\n
+Kuti ndikushandirei;\n
+Rudo rwenyu ruchipfuta\n
+Rumutse chipo mandiri.\n
+</item>
+<item>
+Ndigadzirire kuita\n
+Kuda kwenyu kwakakwana,\n
+Dakara ndive pakufa\n
+Diramhamba rigokwana.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn129">
+<item>
+Mwoyo wangu uchimutsva\n
+Ndoupira kwamuri,\n
+Namasimba angu ose\n
+Achashandiswa nemi.\n
+</item>
+<item>
+Ndigam’chirei She Jesu,\n
+Mwoyo wangu ndowenyu,\n
+Ngandive muranda wenyu\n
+Mundizadze norudo.\n
+</item>
+<item>
+Nditumei kwamunoda\n
+Munditungamirire,\n
+Ngoni dzenyu dzindichenge\n
+Ndishande nokufara.\n
+</item>
+<item>
+Ngandiite kuda kwenyu\n
+Ndinoda kwenyu chete;\n
+Paupenyu napakufa\n
+Ndozvipira kwamuri.\n
+</item>
+<item>
+Ndava wenyu chose Ishe\n
+Ndasarudzirwa basa;\n
+Ndirege kubva kwamuri\n
+Chigarai mandiri.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn130">
+<item>
+Makati: zvose siyai,\n
+Kuti munditevere\n
+Takasiya zvose Tenzi,\n
+Tomirira kwamuri.\n
+chorus\n
+Torai mwoyo yedu\n
+Pamwe nesimba\n
+zviitiswe basa, Tenzi,\n
+Tozvipira kwamuri.\n
+</item>
+<item>
+Tizadzisei nesimba\n
+Kuti tive zvapupu\n
+zvounhu hwenyuwo Ishe,\n
+Kuti huri matiri.\n
+</item>
+<item>
+Yamurai vanhu vedu\n
+Vakutevere iwo,\n
+Itai nzeve dzavowo\n
+Dziterere kwamuri.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn131">
+<item>
+Ndoisa pana Jesu\n
+zvivi zvangu zvose;\n
+Anonditakurira\n
+Mutoro mukuru;\n
+Ndounza kuna Jesu\n
+Mhosva dzangu dzose,\n
+Ndinoda kushambidzwa,\n
+Nditsveniswe kwazvo.\n
+</item>
+<item>
+Ndoisa pana Jesu\n
+Nhamo dzangu dzose\n
+Anorapa zvirwere\n
+Anondinunura;\n
+Ndounza kuna Jesu\n
+Dambudziko rangu,\n
+Anonditakurira,\n
+Ndigorerukirwa.\n
+</item>
+<item>
+Ndozorodza kwaari\n
+Mweya wakaneta,\n
+Ndorinda zvakanaka\n
+Pachipfuva chake;\n
+Jesu Emanueri,\n
+Ndoda zita rake;\n
+Anesu nguva dzose\n
+Ndiye Muyamuri.\n
+</item>
+<item>
+Ndoda kuva saJesu,\n
+wanga akapfava,\n
+Ndiye mwana mutsvene\n
+wababa wedenga;\n
+Ndoda kuva naJesu,\n
+Agondidzidzisa\n
+Kuti ndikurumbidze\n
+Pamwe nengirozi.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn132">
+<item>
+Makandinzvera, Jehovha\n
+Munoziva zvose zvangu,\n
+Kuzorora, kusimuka,\n
+Nokufunga kwakavanda.\n
+</item>
+<item>
+Nzira nechimiro changu\n
+Munocherekedza zvose;\n
+Shoko risati rataurwa\n
+Munotoriziva rose.\n
+</item>
+<item>
+Ruzivo runoshamisa\n
+Rwandikomberedza chose;\n
+Nyange ndotizira kure\n
+Muripo pamberi pangu.\n
+</item>
+<item>
+Rima harindifukidze\n
+Harindivanze kwamuri,\n
+Asi rima nechiedza\n
+zvakafanana kwamuri.\n
+</item>
+<item>
+zviri nhando kukutizai,\n
+Handigone kuzvivanza,\n
+Saka zvino ndozvipira,\n
+Mandikunda Mwari wangu.\n
+</item>
+<item>
+Ndinzverei mundizive,\n
+Mundiedze, mundidzore,\n
+Mundifambise munzira\n
+Yenyu nokusingapere.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn133">
+<item>
+Sezva ndakadai, Ishe,\n
+Kuzozvipira kwamuri,\n
+Shamwari yezarukira,\n
+Jesu ndinouya.\n
+</item>
+<item>
+Ndinouya norufaro\n
+Kuzopa upenyu hwangu,\n
+Kuzvipira ini chose,\n
+Ndouya kwamuri.\n
+</item>
+<item>
+Ndoda kuve muchiedza,\n
+Ndishandire kururama;\n
+Ndoda kushanda nesimba,\n
+Nezvo ndinouya.\n
+</item>
+<item>
+Sezva ndakadai, Ishe,\n
+Ndiri mutsva, ndakasimba,\n
+Kuita zvandinogona,\n
+Ndinouya Ishe.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn134">
+<item>
+Mwari samasimba\n
+wengoni norudo,\n
+Mwoyo wangu unotsvaka\n
+Chiso chenyu Ishe.\n
+</item>
+<item>
+Gam’chirai ini\n
+Muna Jesu Kristu,\n
+Ndodokwaira kuvimba\n
+Nenduramo yenyu.\n
+</item>
+<item>
+zvose zvandoita\n
+Ndiitire imi;\n
+Ndinopira zvipo zvangu\n
+Muzita renyu She.\n
+</item>
+<item>
+Jesu ziso rangu\n
+Rokutarirai;\n
+Ngarikudzwe zita renyu\n
+Pasi nekudenga.\n
+</item>
+<item>
+Mweya worutendo\n
+Mundimutse ini,\n
+Ndizadzwe nomoto wenyu\n
+NouMwari hwenyu.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn135">
+<item>
+Zvaanotitonga iye\n
+Ane chiremera,\n
+Ngaagam’chire kuvonga\n
+Norudo rwomwoyo.\n
+</item>
+<item>
+Iye anotikambira\n
+Savatengwa vake;\n
+Paupenyu tiri vake\n
+Nyange nepakufa.\n
+</item>
+<item>
+Jesu, gam’chirai venyu,\n
+Tigutiswe nemi,\n
+Tishandire mbiri yenyu\n
+Dakara pakufa.\n
+</item>
+<item>
+Mitumbi yedu nemweya\n
+Topira kwamuri;\n
+zvino isu tava venyu\n
+Nokusingapere.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn136">
+<item>
+Tine chipo chakakomba,\n
+Chatakapiwa iyesu;\n
+Takapiwa naJehovha\n
+Icho chipo chatinacho.\n
+</item>
+<item>
+Chakakomba icho chipo,\n
+Kwavari vakachiwana;\n
+Vanochida kwazvo icho,\n
+Pam’soro pezvinhu zvose.\n
+</item>
+<item>
+Chine simba icho chipo,\n
+Kwavari vakachiwana;\n
+Choupenyu icho chipo,\n
+Kwavari vakagam’chira.\n
+</item>
+<item>
+Icho chipo ndiye Jesu\n
+Chatakapiwa iyesu;\n
+Ndiye chipo chakakomba\n
+Kwavari vanomutenda.\n
+</item>
+<item>
+Tinomuvonga Jehovha,\n
+Naicho chipo chikuru;\n
+Tomuvonga Mwari oga,\n
+Nokutipa Mwana wake.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn137">
+<item>
+Ngatitende kuna Jesu,\n
+Ndiye wakatifira;\n
+wakatiitira tsitsi,\n
+Nokutifira kwake;\n
+Ishe, baba!\n
+Ivai netsitsi nesu.\n
+</item>
+<item>
+Isu vanhu voupofu,\n
+wakauya kunesu \n
+wakafira vanhu vose,\n
+wakafira mapofu;\n
+Ishe, baba!\n
+Ivai netsitsi nesu.\n
+</item>
+<item>
+Marudzi enyika yose,\n
+Vatende pamwe chete;\n
+Ngavakurumbidze vose,\n
+Vaimbe kuna IShe;\n
+Ishe, baba!\n
+Iva netsitsi nesu.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn138">
+<item>
+Rakanaka iro zuva\n
+Randakatenda kuna She!\n
+Mwoyo wangu fara zvako,\n
+Udza vanhu vose naro.\n
+chorus\n
+Ranaka, ranaka,\n
+RaJesu wakandishamba!\n
+Iye wakandidzidzisa\n
+Kurinda nokuteura:\n
+Ranaka, ranaka,RaJesu wakandishamba!\n
+</item>
+<item>
+Chanaka chitenderano\n
+Chinondisunga kuna She!\n
+Ngaizadzwe imba yake\n
+Norwiyo rwandinoimba.\n
+</item>
+<item>
+Rakapera basa guru!\n
+Ndiri wake, uri wangu;\n
+wakandizvuva norudo\n
+Ndikamutevera ini.\n
+</item>
+<item>
+Mwoyo wangu chizorora!\n
+wakatsaukaniswa kare;\n
+Rega kubva kuna Ishe,\n
+Kwa’ri zvose zvakanaka.\n
+</item>
+<item>
+Nokudenga chakanzwikwa\n
+I’chitenderano changu;\n
+Napakufa ndingatende\n
+Nokuti’ni ndiri wake.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn139">
+<item>
+Fare iwe m’Kristu!\n
+Fara kuna Ishe;\n
+waponiswa naye,\n
+Fara nomumwoyo;\n
+Nokutenda kwaari\n
+Nawo mwoyo wako,\n
+wakaregererwa\n
+zvose zvivi zvako.\n
+</item>
+<item>
+Fara iwe m’Kristu!\n
+watongerwa zvino;\n
+Yakaripwa naye\n
+Yose mhosva yako;\n
+Naikoko kufa\n
+Kwaakafa nako\n
+waponiswa naye     \n
+Iwo mweya wako.\n
+</item>
+<item>
+Fara iwe m’Kristu!\n
+Fara kuna Ishe;\n
+Uri wake iwe\n
+Fara nomumwoyo;\n
+Nemisodzi yako\n
+Upisike yose;\n
+Fara iwe m’Kristu\n
+Nawo mwoyo wose.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn140">
+<item>
+Vazhinji vanayo nhaka\n
+Yavanozviinzwa nayo;\n
+Vazhinji vanayo pfuma\n
+Vanozvifarisa nayo.\n
+</item>
+<item>
+Handizvidze zvipo zvenyu\n
+zvohwu upenyu huripo;\n
+Asi imi Ishe Jesu\n
+Muri nhaka yangu kwazvo.\n
+</item>
+<item>
+Kunyange ndanga ndisina\n
+zvinhu zvoruno rugaro;\n
+Ndinemi muridzi wazvo,\n
+Ndine zvinhu zvose nemi.\n
+</item>
+<item>
+Kana mava wangu Jesu\n
+Ndakwana nezvinhu zvose;\n
+Nezvi zviripo ndezvangu,\n
+Nezvinouya ndezvangu.\n
+</item>
+<item>
+Neino nyika ndeyangu,\n
+Nairo denga nderangu;\n
+Nahwo upenyu ndohwangu,\n
+Nokunakirwa ndokwangu.\n
+</item>
+<item>
+Hahupere uhwo’penyu\n
+Huri nhaka yangu nemi;\n
+Kunakirwa hakupere,\n
+Kwandakawana kunemi.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn141">
+<item>
+Ndinofara kuti baba wedu\n
+wareva rudo rwake rukuru,\n
+Murugwaro rwake rwakanaka\n
+Ndonzwa kuti Jesu anondida.\n
+chorus\n
+Ndinofara Jesu wandida,\n
+Anondida, anondida;\n
+Ndinofara Jesu wandida,\n
+Ini anondida.\n
+</item>
+<item>
+Kana ini ndichimukanganwa\n
+Iye anogondiyeuchidza;\n
+zvino kwaari ndinodzokera,\n
+Ndonzwa kuti Jesu anondida.\n
+</item>
+<item>
+Jesu anondida ini kwazvo,\n
+Saka wandipa upenyu hwake ;\n
+Kutadza kwangu wakakufira;\n
+Ndonzwa kuti Jesu anondida.\n
+</item>
+<item>
+Mwoyo wangu uno Muyamuri\n
+Ndinotenda Jesu Mununuri;\n
+zvino ndinogomubatirira\n
+Nokuti ndonzwa Jesu wandida.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn142">
+<item>
+Nhasi ini ndinofara\n
+Nairo ropa rangu;\n
+Vashamwari munotii?\n
+Ngandifare nemiwo.\n
+chorus\n
+Ishe Jesu ndinotenda\n
+Ndimi mandifarisa;\n
+Ndinovonga Ishe wangu\n
+Nokundifadza kwenyu.\n
+</item>
+<item>
+Kana ndiri murufaro\n
+Ngandivonge Jesu She;\n
+Mumatambudziko ese\n
+Ndione zano renyu.\n
+</item>
+<item>
+Pane ino nyika yedu\n
+Munotipa zvizhinji.\n
+Ngatigashire tivonge\n
+Tikudze zita renyu.\n
+</item>
+<item>
+Ngandigare ndichitenda,\n
+Ndichionisa rudo,\n
+Kudzamarare kupere\n
+Kugara pano pasi.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn143">
+<item>
+Mumwe ariko kum’soro;\n
+Anotida!\n
+Rudo rwake rwakakomba;\n
+Anotida!\n
+Hama dzedu dzinotiza,\n
+zvimwe dzingatitambudze\n
+Haana kutinyengedza;\n
+Anotida!\n
+</item>
+<item>
+Kumuziva ndoupenyu:\n
+Anotida!\n
+wakatipa zvinhu zvose:\n
+Anotida!\n
+Tanga tiri kure naye,\n
+wakatitenga neropa;\n
+zvino tachengetwa naye:\n
+Anotida!\n
+</item>
+<item>
+Jesu ndiShamwari wedu:\n
+Anotida!\n
+woda kutiropafadza:\n
+Anotida!\n
+Mwoyo yedu inomuda,\n
+Yoda kushovedzwa naye,\n
+zvirokwazvo nechokwadi:\n
+Anotida!\n
+</item>
+<item>
+Anoregerera zvivi:\n
+Anotida!\n
+Hondo dzedu dzinokundwa;\n
+Anotida!\n
+Anotipa zvipo zvose\n
+wopa namakomborero,\n
+Achatipa noutsvene;\n
+Anotida!\n
+</item>
+    </string-array>
+
+    <string-array name="hymn144">
+<item>
+Ichokwadi, Jesu ndowangu,\n
+Ndizvo zvandinogonda nazvo,\n
+Ndova mudyi wenhaka yaShe,\n
+Ndasukwa neRopa noMweya.\n
+chorus\n
+Heyi nyaya nechimbo changu\n
+Kutunha Muponisi wangu.\n
+</item>
+<item>
+Kuzvipira kwangu kwaari,\n
+Ndabva ndaona ‘faro rutsva,\n
+Naidzo nhume dzokudenga.\n
+Dzouya nenyaya dzetsitsi.\n
+</item>
+<item>
+Kuzvipira kwangu kwaari,\n
+Ini maari ndoshangara,\n
+Ndakataririra kudenga,\n
+Ndozadzwa nenduramo dzake.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn145">
+<item>
+Vongai Jehovha, mudane zita rake,\n
+zivisai zvikuru zvaakaita iye:\n
+Mwoyo yavanotsvaka Jehovha ngaifare,\n
+Imbai kwaari nenziyo dzokukudza.\n
+</item>
+<item>
+Tsvakai Jehovha nesimba rake rose,\n
+Tonderai naniso dzaakaita Iye;\n
+Mwoyo yavanotsvaka Jehovha ngaifare,\n
+Kudzai Jehovha nezita rake dzvene.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn146">
+<item>
+Mwari mune simba rose,\n
+Baba wadzo dzose tsitsi,\n
+Tinokutendai kwazvo\n
+Nenzira yetsitsi dzenyu.\n
+</item>
+<item>
+Tinokukurumbidzai\n
+Nokuti makatisika,\n
+Makatichengeta imi\n
+Makatiropafadzawo.\n
+</item>
+<item>
+Asi pam’soro pazvose\n
+Tinokutendai baba\n
+Norudo rwenyu rukuru\n
+Pamakatisunungura.\n
+</item>
+<item>
+Tinokukurumbidzai\n
+Nenzira yengoni dzenyu\n
+Dzokuwanikwa kwetsitsi,\n
+Netariro youtsvene,\n
+</item>
+<item>
+Tinoteura mutipe\n
+Mwoyo ive nokuvonga,\n
+Tionise rurumbidzo\n
+Mukugara kwedu kwose.\n
+</item>
+<item>
+Tozvipira kushandira\n
+Jesu Kristu, Ishe wedu,\n
+Tifambe pachiso chake\n
+Noutsvene misi yose.\n
+</item>
+<item>
+Kurumbidzwa nokubwinya\n
+Ngakuvepo kuna baba\n
+Nokuno Mwanakomana\n
+Nokuna Mweya Mutsvene.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn147">
+<item>
+Jesu ndokudai Muponisi wangu,\n
+Ndosiya zvose zvakaipa zvangu,\n
+Imi M’sununguri, imi M’chengeti,\n
+Ndokudai Jesu, ndokudai Jesu, ndokudai\n
+Jesu, ndokudai zvino.\n
+</item>
+<item>
+Ndokudai nokuti Imi mandida,\n
+Makandibayirwa pamuchinjikwa,\n
+Ndokudai nokuti makandifira,\n
+Ndokudai Jesu, ndokuti Jesu, ndokudai\n
+Jesu, ndokudai zvino.\n
+</item>
+<item>
+Ndinogokudai ndichiri mupenyu,\n
+Ndichakurumbidzai mazuva ose,\n
+Nomusi wokufa ndinogoimba,\n
+Ndokudai Jesu, ndokuti Jesu, ndokudai\n
+Jesu, ndokudai zvino.\n
+</item>
+<item>
+Kakare kana ndavako kudenga,\n
+Ndichagara nemi, ndichakukudzai,\n
+Ndichaimba kwazvo, navanhu vose,\n
+Ndokudai Jesu, ndokuti Jesu, ndokudai\n
+Jesu, ndokudai zvino.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn148">
+<item>
+Kwaendepi Ishe Jesu\n
+Kufariswa kwangu,\n
+Iko kwandaiva nako,\n
+Pakutanga kwangu?\n
+</item>
+<item>
+Kufadziswa kwakadaro,\n
+Pano mwoyo wangu!\n
+Nyamba zvino kwakaenda\n
+Kufadziswa kwangu.\n
+</item>
+<item>
+Iko kurasika Jesu\n
+Kwakandinyadzisa;\n
+Pamhidzai kundigam’chira,\n
+zvino ndinopfidza.\n
+</item>
+<item>
+Nemi Mweya woutsvene\n
+Pamhidzai kuuya\n
+Ndinovenga zvakaipa\n
+zvakandiparadza.\n
+</item>
+<item>
+Ndiyamurei Ishe wangu,\n
+Ndisiyane neyo\n
+Midzimu inondirasa,\n
+Yandirasikisa.\n
+</item>
+<item>
+Ndive nokufamba nemi,\n
+Ndiri hama yenyu;\n
+Kuti ndikwanise yose,\n
+Mirairo yenyu.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn149">
+<item>
+Ndiri wenyu Ishe Jesu,\n
+Munondiregerera;\n
+zvamabvisa zvivi zvangu\n
+Mukati: Uri wangu.\n
+</item>
+<item>
+Ndiri wenyu Ishe Jesu,\n
+zvamunondinyaradza;\n
+Munondiudza nengoni,\n
+Kuti muri wanguwo.\n
+</item>
+<item>
+zvandigere Ishe Jesu,\n
+Ndosimbaradzwa nemi;\n
+Ndinofadzwa ndinofara,\n
+Muri wanguwo Jesu.\n
+</item>
+<item>
+zvandiri muno munyika\n
+Ndoperekedzwa nemi,\n
+Ndiri wenyu, muri wangu,\n
+Kudakara narini.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn150">
+<item>
+Jesu asati auya\n
+Taigara murima,\n
+Rima rokusamuziva\n
+Iye Mwari sababa;\n
+zvino nyika inofara\n
+Noruvheneko urwu;\n
+Jesu chiedza chenyika\n
+Chakatumwa naMwari.\n
+</item>
+<item>
+Chiedza chomwoyo wangu\n
+NdiJesu Ishe wangu;\n
+Kugara kwake mandiri\n
+Kwafusa rima rangu;\n
+Dzose nharo nokuzvida\n
+Kunobiswa mandiri;\n
+Kutya nokubvunda kwangu\n
+Kunopedzwa naJesu.\n
+</item>
+<item>
+zvino ndonzwa norufaro\n
+Kuti Jesu ndinaye;\n
+Iye agere mandiri,\n
+Neni ndiri maari;\n
+wese anobvuma Jesu\n
+Angave nechiedza;\n
+Hongu, ndiyamurei She\n
+Kuti ndive nomwenje.\n
+</item>
+<item>
+Ishe nguva dzangu dzose\n
+Pfutisa mwenje wangu;\n
+Kuti vamwe vauone\n
+Mwenje woruponiso;\n
+Vagopinda muchiedza,\n
+Vafare nemi Jesu;\n
+Kudakara nyika yose\n
+Ikurumbidze Jesu.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn151">
+<item>
+Tinoda kugara nemi,\n
+Jesu muri mutsvene,\n
+Muno rudo rwakakomba,\n
+Kunesu tiri pasi.\n
+</item>
+<item>
+Tinoda kufara nemi,\n
+Muyeni wakavanda,\n
+Tinoda kushanyirwawo\n
+Nemi shamwari huru.\n
+</item>
+<item>
+Tinoda kufara nemi,\n
+Mudi wemweya yedu,\n
+Mwanakomana waMwari,\n
+wakabva kuna baba.\n
+</item>
+<item>
+Tinoda kufara nemi,\n
+Shamwari yavarombo;\n
+Mutigutsewo mumweya,\n
+Tizadzwe nerutendo.\n
+</item>
+<item>
+Tinoda kugara nemi,\n
+Usiku, masikati,\n
+Patinenge takarara,\n
+Timutswe norufaro.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn152">
+<item>
+Mudi womweya wangu;\n
+Ndotizira kwamuri;\n
+Mhepo inovhuvhuta,\n
+Ndiri pacham’pupuri;\n
+Ndivanzei, Muponisi,\n
+Pana madutu ose;\n
+Nomusi wokupera\n
+Gam’chirai mweya wangu.\n
+</item>
+<item>
+Handina mudziviri\n
+Ndozembera kwamuri;\n
+Murege kundisiya,\n
+Nditsigirwe nesimba;\n
+Ndinovimba kwamuri,\n
+Ndinoyamurwa nemi;\n
+Fukidzai m’soro wangu,\n
+Namapapiro enyu.\n
+</item>
+<item>
+Ndinoda imi moga,\n
+Handidi chimwe chinhu;\n
+Munomutsa vakawa,\n
+Munorapa varwere;\n
+Makarurama imi,\n
+Handina kururama\n
+Ndizere zvakaipa,\n
+Muzere noutsvene.\n
+</item>
+<item>
+Nyasha dzenyu izhinji,\n
+Dzokukunda kuipa;\n
+Dziyerere kwandiri\n
+Ndicheniswe pamwoyo;\n
+Sipiti roupenyu,\n
+Ndinoda kunwa iro;\n
+bvirai mumwoyo wangu,\n
+Muyerere narini.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn153">
+<item>
+Ndinoinzva nemi,\n
+Muponisi;\n
+Hapanazve izwi\n
+Rinofadza.\n
+chorus\n
+Ndinogoinzva nemi,\n
+Nguva dzose dzose\n
+Ropafadzai Ishe,\n
+Ndava pano.\n
+</item>
+<item>
+Ndinoinzva nemi,\n
+Garai pedyo;\n
+Ndokunda zviedzo\n
+Muri pedyo.\n
+</item>
+<item>
+Ndinoinzva nemi,\n
+Muupenyu.\n
+Garaiwo neni\n
+Ndigarike.\n
+</item>
+<item>
+Ndinoinzva nemi\n
+Ndidzidziswe,\n
+zvamakavimbisa\n
+zvizadziswe.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn154">
+<item>
+Irwa kurwa kwakanaka,\n
+Kristu ndiye simba rako;\n
+Ita zvose zvakanaka,\n
+Uchafara nguva dzose.\n
+</item>
+<item>
+Famba nengoni dzaMwari,\n
+Tarisa uchamuona;\n
+Nzira yako iri mberi,\n
+Kristu ndiye nzira yako.\n
+</item>
+<item>
+Parwendo rwako usatye,\n
+Ngoni dzake dzakanyanya;\n
+Kana uchivimba naye\n
+Anozokutungamira.\n
+</item>
+<item>
+Rega kutya, ari pedyo,\n
+Iye asingapinduke;\n
+Tenda chete, uchaona\n
+Kristu ndiye muyamuri.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn155">
+<item>
+Apo ndatambudzika\n
+Nezvakaipa zvangu\n
+Nezvirunziro zvangu,\n
+Ndizwei baba wangu.\n
+chorus\n
+Ndicherechedzei baba we,\n
+Ndicherechedzei baba we.\n
+</item>
+<item>
+o baba samasimba\n
+Ndipei simba renyu\n
+Nokuti ndinoshaya\n
+Kugara zvakanaka.\n
+</item>
+<item>
+Panguva yokuchema,\n
+Nenguva yokutamba,\n
+Nenguva yousiku,\n
+Pabasa rangu rose:\n
+</item>
+<item>
+Parwendo rwoupenyu\n
+Munyatwa nomurufu,\n
+Mudenda rakaipa\n
+Ndichengetei baba.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn156">
+<item>
+Mwari runondishamisa.\n
+Rudo rwenyu kwandiri,\n
+Kutambura ndatambura,\n
+Asi imi muneni.\n
+</item>
+<item>
+Pakurwara ndakarara.\n
+Ndovimba nemi Jesu;\n
+Ndigadzirirei nzira\n
+Yokuuya kwamuri.\n
+</item>
+<item>
+Hamunete kubatsira\n
+Varwere vatambura\n
+Nokurwara kwamakore\n
+Nezvirwere zvizhinji.\n
+</item>
+<item>
+Itaiwo kuti hama\n
+Neshamwari dzitende;\n
+Varege kuora mwoyo\n
+Nokuti ndiri ndonda.\n
+</item>
+<item>
+Musi womondidaidza\n
+Ndingafara zvikuru,\n
+Nokuti ndinozogara\n
+Pachigare chitsvene.\n
+</item>
+<item>
+Kunyange rima rouya\n
+Romumvuri wokufa\n
+Imi Jesu, Mununuri\n
+Munondiperekedza.\n
+</item>
+<item>
+Kumusha wenyu kudenga\n
+Kunogara vatsvene,\n
+Vadyi venhaka yedenga\n
+Nokusingazopera.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn157">
+<item>
+Ndiani mhandu iyi\n
+Inorondomara,\n
+Yoringa vari pasi\n
+Nehanzu yesimbi?\n
+Yovirima nesimba,\n
+Pfumo, nebakatwa,\n
+Yosangana naMwari\n
+wuto ndokutiza.\n
+</item>
+<item>
+Nako kureba kwayo\n
+Vose vakaitya,\n
+Votiza Goriati\n
+Somukundi wavo;\n
+Reva kuti ndiani\n
+Mhandu yedu nhasi?\n
+Ndihwo utadzi hwangu,\n
+Nechitadzo changu.\n
+</item>
+<item>
+Musimba rake Jesu\n
+Ndorwa saDavhidhi,\n
+Nyange ndisina zvombo\n
+Simba ndiye Jesu;\n
+Ndofunga tsitsi dzake,\n
+Ndinokonya nadzo,\n
+Ndotsveta mweya wangu\n
+Pano rudo rwake.\n
+</item>
+<item>
+Ndonanga nechimvii\n
+Kuna Goriati;\n
+Mwari wati zvidaro\n
+Ndichakunda chivi;\n
+Necho chitsidzo chake\n
+Ndinokonya naShe,\n
+Ndinokunda chokwadi\n
+Nokuti wadaro.\n
+</item>
+<item>
+Musimba rake Mwari\n
+Ndonanga kumhandu,\n
+Simba ndirwo rutendo\n
+Rinokunda mhandu;\n
+Rutendo muna Jesu\n
+Runodema chivi,\n
+Rwonanga pane simba,\n
+Rwomuwisa pasi.\n
+</item>
+<item>
+Simukai maKristu,\n
+Muchitanda mhandu\n
+Mutunhe wematenga\n
+Anokunda chivi;\n
+Anosvika ndiJesu\n
+Kuzokupa simba,\n
+Haabate bakatwa,\n
+Kurwa ndiko kwake.\n
+</item>
+<item>
+Ishe musi nomusi \n
+woonesa simba \n
+wodzikamisa mhandu\n
+Nokuiuraya;\n
+Mwari, tiyamurei\n
+Kuti tiparidze,\n
+Kuti nyika izive\n
+Simba rake Jesu.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn158">
+<item>
+Mwari ndiye tsvingo yedu,\n
+Ndiye simba redu iye;\n
+Pakumanikidzwa kose,\n
+Ruyamuro rwechokwadi,\n
+</item>
+<item>
+Nyange nyika yosandurwa,\n
+Nyange makomo okandwa\n
+Mugungwa rakadzikisa,\n
+Hatimbotya, tinovimba.\n
+</item>
+<item>
+Nyangwe gungwa roriridza,\n
+Richimedza namafuro;\n
+Mweya unovimba naye,\n
+Unogonzwa runyararo.\n
+</item>
+<item>
+Pane rwizi rwakanaka\n
+Rwofadza guta raMwari;\n
+Upenyu, rudo, rufaro,\n
+zvinoyerera mariri.\n
+</item>
+<item>
+Mwari agere mariri,\n
+Haringambozunungutswa;\n
+Rinozobatsirwa naye,\n
+Rinunurwe pakarepo.\n
+</item>
+<item>
+Ndiye Jehovha wesimba,\n
+Ndiye Mwari ano rudo,\n
+Ndi Mwari agere nesu;\n
+Mwari ndiye tsvingo yedu.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn159">
+<item>
+Vongai kuna Jehovha,\n
+Nokunaka kwake,\n
+Kuti dzose ngoni dzake \n
+Hadzina magumo.\n
+</item>
+<item>
+Ndudzi dzose ngadzidaro\n
+Ne’mba dzavo dzose,\n
+Kuti dzose ngoni dzake\n
+Hadzina magumo.\n
+</item>
+<item>
+Ndakashovedza Jehovha\n
+Pakutambudzika;\n
+Akandinzwa, ndikaiswa\n
+Pakufarikana.\n
+</item>
+<item>
+Ishe ari pedyo neni\n
+Anondiyamura,\n
+Anozondisimbaradza\n
+Pazviyedzo zvose.\n
+</item>
+<item>
+Kana Ishe ari pedyo\n
+Handitye chinhu;\n
+Kufa, nzara, nokurwara\n
+Hazvizondikunda.\n
+</item>
+<item>
+Kuvimba naye Jehovha.\n
+Nokunzvenga naye;\n
+Kusavimbazve navanhu,\n
+Ndizvo zvinodiwa.\n
+</item>
+<item>
+Imi muri Mwari wangu,\n
+Ndichakuvongai;\n
+zvirokwazvo muri wangu,\n
+Ndichakukudzai.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn160">
+<item>
+Dombo rakarekare,\n
+Matsemurirwa ini,\n
+Ngandivande mamuri,\n
+Ndiponiswe paviri\n
+Pasimba rokuipa,\n
+Nemhosva yandibata.\n
+</item>
+<item>
+basa randinoita\n
+Haringakufadzisei,\n
+Nyange kutsungirira\n
+Nokuchemera zvivi;\n
+Handiponiswe nazvo,\n
+Ndimi moga M’ponisi.\n
+</item>
+<item>
+Handina chimwe changu\n
+Ndobata muchinjikwa;\n
+Mutwi, mundisimidze\n
+Rombe mundiyamure,\n
+Ndine tsvina M’ponisi,\n
+Mundishambidze chose.\n
+</item>
+<item>
+Kana ndigere pano,\n
+Kana rufu rwasvika\n
+Ndoyambukira mhiri,\n
+Ndoiswa pakutongwa,\n
+Jesu, Dombo rakare,\n
+Ndichavanda mamuri.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn161">
+<item>
+Baba! mune simba rose\n
+Muchengi wavose,\n
+Kana ndikabva kwamuri\n
+Ndingahwanda kupi?\n
+</item>
+<item>
+Baba! Musiki wazvose\n
+Hapana mumwezve,\n
+Mutongi wezvinhu zvose,\n
+Mukundi wemhandu.\n
+</item>
+<item>
+Baba munovada vose\n
+Vanovimba nemi;\n
+Mufudzi wezvirokwazvo\n
+Munovazorodza.\n
+</item>
+<item>
+Baba mune simba rose\n
+Muchengi wavose\n
+Ndouya zvino kwamuri\n
+Mwari wezvokwadi.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn162">
+<item>
+Kristu Mununuri wedu,\n
+Ndimi muri simba redu\n
+Muri simba ravo vose\n
+Varipo munyika yose.\n
+</item>
+<item>
+Muri simba rechokwadi,\n
+Hamunako kunyengedza,\n
+Muri tariro narini\n
+Iyo isingapinduke.\n
+</item>
+<item>
+Muri tariro panyika.\n
+Yavanodzoka pazvivi,\n
+Vachibvuma zvivi zvavo\n
+Kwamuri, tariro yavo.\n
+</item>
+<item>
+Muri simba ravachemi,\n
+Voti, Yowe! Takatadza.\n
+Muri simba ravaKristu,\n
+Muri simba roga roga.\n
+</item>
+<item>
+Nezvo ngativimbe tose\n
+Kunemi, nenguva dzose;\n
+Tiuye napaumambo,\n
+Mberi kwenyu pakudenga.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn163">
+<item>
+Kana tichifamba\n
+Muizwi raMwari\n
+Anotifadzisa munzira;\n
+Anoropafadza\n
+Vose vanomuda\n
+Vanovimba nokuterera.\n
+chorus\n
+Kutererera,\n
+Ndiyo bedzi nzira\n
+Yorufaro naJesu,\n
+Vimba uterere.\n
+</item>
+<item>
+Hatizogumburwa\n
+Hatizotsutsumwa\n
+Tinofarira rudo rwake;\n
+Kutya nemisodzi\n
+zvopera kunavo\n
+Vanovimba nokuterera.\n
+</item>
+<item>
+Kana taremerwa\n
+Pano kunzwirana\n
+Anotitusa basa redu,\n
+Ivo vane nhamo \n
+Vanokomborerwa\n
+Nokuvimba nokuterera.\n
+</item>
+<item>
+Hatingazoziva\n
+Rufaro rwaIshe\n
+Kudzamare tamupa zvose;\n
+zvino ticharunzwa \n
+Rugare rwaivo\n
+Vanovimba nokuterera.\n
+</item>
+<item>
+zvino ngatigare\n
+Patsoka dzaJesu,\n
+Kana pakufamba munzira\n
+Tichiita zvake,\n
+Tichitumwa naye\n
+Tichivimba  nokuterera.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn164">
+<item>
+Runyararo munyika yerima?\n
+Ropa raJesu rinonyaradza.\n
+</item>
+<item>
+Runyararo mukati mebasa?\n
+Ita kuda kwaShe, izororo.\n
+</item>
+<item>
+Runyararo, tiri mumadzudzo?\n
+Kuna Jesu tinodzikamiswa.\n
+</item>
+<item>
+Runyararo vadiwa vasipo?\n
+Jesu anochenga isu navo.\n
+</item>
+<item>
+Runyararo, pasingazikanwe?\n
+Toziva Jesu, wobata zvose.\n
+</item>
+<item>
+Runyararo, rufu ruri pedyo?\n
+Jesu wakunda simba rokufa.\n
+</item>
+<item>
+Nhamu dzedu dziri kuzopera,\n
+Towana runyararo kudenga.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn165">
+<item>
+Nyange ndiri murombo\n
+Mwari anondichenga\n
+Anondipa zvokudya\n
+Anondifukidzawo.\n
+</item>
+<item>
+Kana ndichiteura\n
+Anonzwa nguva dzose;\n
+Kana ndichikotsira\n
+Haasiyane neni.\n
+</item>
+<item>
+Mubati wokudenga\n
+wakazviita rombe\n
+Nenzira yangu ini\n
+Kuti andikuputse.\n
+</item>
+<item>
+Kana ndiri mubasa\n
+Anondikomborera;\n
+Kuzoti ndabva pano\n
+Ndichazorora naye.\n
+</item>
+<item>
+zvino ndinomukudza\n
+Nokutenda kwaari;\n
+Uko kufara kwangu\n
+Ndachengetwa naMwari.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn166">
+<item>
+Totarirepi Ishe\n
+Panze pokwamuri?\n
+Toyamurwa naniko\n
+Panze penyu imi?\n
+Makasikawo vanhu\n
+Makasika zvose;\n
+Madzika sununguko,\n
+Tiponiswe tose.\n
+</item>
+<item>
+Hamuna zvipingidzo,\n
+Mune simba rose;\n
+Hamunawo hanganwa,\n
+Munoziva zvose;\n
+Tichengetei baba,\n
+Nero simba renyu;\n
+Tivhenekereiwo\n
+Noruzivo rwenyu.\n
+</item>
+<item>
+Mutikombe netsitsi\n
+Pane rwendo rwedu\n
+Tiyamurei munzira\n
+Nezvatinoshaya;\n
+Tinunurei mukufa\n
+Tisabve kwamuri;\n
+Tigashirwe kudenga\n
+NoMwanakomana.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn167">
+<item>
+Ndicharumbidza Mwari\n
+Mazuva ose angu;\n
+Vanyoro vachazvinzwa,\n
+Vachagofarisisa.\n
+</item>
+<item>
+Kudzai Mwari neni,\n
+Kudzai zita rake;\n
+zvandakatsvaka Mwari\n
+Akazondipindura.\n
+</item>
+<item>
+Akandisunungura\n
+Pakutya kwangu kwose,\n
+Vatumwa vaJehovha\n
+Vanondikomberedza.\n
+</item>
+<item>
+Ravirai, muone\n
+Jehovha wakanaka;\n
+Anovakomborera.\n
+Vanovimba kwaari.\n
+</item>
+<item>
+Imi vatsvene vake,\n
+Ityai Mwari chete,\n
+Nokuti vanomutya\n
+Havana kumwe kutya.\n
+</item>
+<item>
+Kudzai Mwari mose\n
+Munoshandira iye;\n
+Vanovimba kwaari\n
+Vachazofarisisa.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn168">
+<item>
+Gadzira miteuro\n
+Jesu anoda kunzwa\n
+Iye wakaratidza\n
+Haarambi kukunzwa.\n
+</item>
+<item>
+Unouya kwaMambo\n
+Uya nemikumbiro,\n
+Ane ngoni nesimba\n
+Kumbira unopiwa.\n
+</item>
+<item>
+Ndotanga nomutoro;\n
+bisai zvitadzo zvangu;\n
+Shambidzai mwoyo wangu\n
+Neropa renyu, Ishe.\n
+</item>
+<item>
+Ndotsvaka kuzorora,\n
+Garai mumwoyo wangu;\n
+Imi Mufiri wangu,\n
+Ndive temberi yenyu.\n
+</item>
+<item>
+zvandichiri mufambi\n
+Ndifarisei norudo;\n
+Muve mutungamiri,\n
+Muvewo nhowo yangu.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn169">
+<item>
+Famba mangwanangwana\n
+Famba masikati,\n
+Famba zuva rovira,\n
+Famba pausiku;\n
+Famba nomwoyo m’tsvene\n
+Urege kutyiswa\n
+Upfugame namabvi\n
+Teura ruvande.\n
+</item>
+<item>
+Kumbirira shamwari\n
+Vose vaunoda\n
+Kumbirira vavengi,\n
+Rega kuvasiya;\n
+Shure kwazvo kumbira \n
+Chowotsvaga woga;\n
+Muzita rake Jesu\n
+Mununuri  wako.\n
+</item>
+<item>
+Kana washaya nzvimbo\n
+Yokuteurira\n
+Kana varipo vamwe,\n
+zvimwe unebasa;\n
+Simudza mwoyo wako,\n
+Mwari anokunzwa;\n
+Kufunga kwedu kose\n
+Kunozibwa naye.\n
+</item>
+<item>
+Kana wawona nhamo\n
+Teura kwaari;\n
+Nomurufaro rwako\n
+Funga ngoni dzake;\n
+Simba raakatipa\n
+Rinokunda zvose,\n
+Simba rokuteura \n
+Kuna Mwari wedu.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn170">
+<item>
+Kuna Mwari zvitaure\n
+zvinosuwisa zvose,\n
+Uchimuudza iye\n
+zvinokumanikidza.\n
+</item>
+<item>
+Anozviziva ega\n
+Kuwanda kwazvo zvose;\n
+Anozviona ega\n
+Norudzi rwazvo zvose.\n
+</item>
+<item>
+Haati azvidza’ni\n
+Anozviisa ega;\n
+Haati atanda’ni\n
+watizira kwaari.\n
+</item>
+<item>
+Uchichema misodzi\n
+Anokuona iye;\n
+Kana uchitambura\n
+Anozokununura.\n
+</item>
+<item>
+MuKristu unochema\n
+Chiudza Mununuri;\n
+zvaaiva panyika\n
+wakachema misodzi.\n
+</item>
+<item>
+Unonyaradzwa naye\n
+Pane nhamburo dzako;\n
+Ndiye anopa simba\n
+Rokukunda madzudzo.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn171">
+<item>
+Kunamata kuna Mwari\n
+Hakusi kom’romo chete;\n
+Nokunanga ‘ko kudenga\n
+Hakusi kureva chete.\n
+</item>
+<item>
+Kugara nokwenduramo,\n
+Kuchengetanwe netsitsi,\n
+Kutaurwe zvirokwazvo,\n
+Kugara kuno utsvene.\n
+</item>
+<item>
+Kubva pane chakaipa,\n
+Nomwoyo wakasimbisa,\n
+Kutarisa kuna Ishe\n
+Nokutya nokurumbidza.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn172">
+<item>
+Baba wedu wokudenga\n
+Baba wedu tose,\n
+Mune ngoni dzakanyanya\n
+Kuna vanhu vose.\n
+</item>
+<item>
+Ngaribatwe noutsvene\n
+Iro zita renyu\n
+Ngarikurumbidzwe Ishe\n
+Navo vanhu vose.\n
+</item>
+<item>
+Ihwohwo umambo hwenyu\n
+Ngahwuuye ihwo;\n
+Hudzikunde hondo dzenyu\n
+Dzigam’chire ihwo.\n
+</item>
+<item>
+Ngakuitwe kuda kwenyu\n
+Pane nyika yose\n
+Sezva kunoitiwawo\n
+Pane denga rose.\n
+</item>
+<item>
+Nhasi tipei kudya kwedu\n
+Komusi nomusi\n
+Dyisai nemweya yedu\n
+Nokudya kwayowo.\n
+</item>
+<item>
+Mutiregerere zvivi\n
+Nezvitadzo zvedu,\n
+Sezva tinoregerera\n
+Vanotitadzira.\n
+</item>
+<item>
+Musatiisewo baba\n
+Isu mukuedzwa.\n
+Asi tinunurei She\n
+Pano wakaipa,\n
+</item>
+<item>
+Umambo hwose ndohenyu\n
+Namasimba ose\n
+Naiko kubwinya kwenyu\n
+Hakuchazopera.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn173">
+<item>
+Tine hama yedu Jesu,\n
+Shamwari yavatadzi!\n
+Takaropafadzwa chose,\n
+Teurai anonzwa.\n
+Kana takasurukirwa\n
+Tine matambudziko\n
+Tisisade kuteura\n
+Titeure kuna She.\n
+</item>
+<item>
+Kana tavamukuedzwa,\n
+Matambudzo asvika,\n
+Hatichambozotya chinhu\n
+Titeure kuna She.\n
+Hatinazve imwe hama\n
+Yakafanana naShe;\n
+Mumatambudziko ese\n
+Titeure kuna She.\n
+</item>
+<item>
+Kana tavamukuneta\n
+Tonetswa nemitoro,\n
+Jesu ndiye tsvingo yedu;\n
+Titeure kuna She,\n
+Kana musisina hama\n
+Titeure kuna She.\n
+Anokugamuchirai\n
+Mugowana zororo.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn174">
+<item>
+Rudo runopfuura kuziva\n
+Ndipei irworwo;\n
+Rudo ngaruzadze mwoyo wangu,\n
+Rudo rwaShe Jesu.\n
+chorus\n
+Urwu rudo rwakaoneswa\n
+NaJesu Kristu, M’ponisi wangu,\n
+Urwu rudo ruve mandiri,\n
+Ndizadziswe norudo.\n
+</item>
+<item>
+Kunyange ndichinzwisisa zvose,\n
+Ndisinarwo rudo,\n
+Kunyange ndinokutenda kwose,\n
+Handisiri chinhu.\n
+</item>
+<item>
+Kunyange ndagovera varombo\n
+zvose zvandinazvo\n
+Ndikabvumira kuti ndipiswe,\n
+Handiwane chinhu.\n
+</item>
+<item>
+Rudo runo mwoyo murefuwo,\n
+Rudo rune tsitsi,\n
+Harutsamwe, haruite shanje,\n
+Haruna manyawi.\n
+</item>
+<item>
+Rudo haruzvitsvakire zvarwo,\n
+Harunazve shura,\n
+Harufarire kusarurama.\n
+Asi idi chete.\n
+</item>
+<item>
+Rudo rune tariro pazvose,\n
+Runotenda zvose,\n
+Rudo runoshirira pazvose,\n
+Harutongopere.\n
+</item>
+<item>
+Kutenda, netariro, norudo,\n
+Ndizvo zvinogara.\n
+Asi chikuru pakati pazvo\n
+Ndirwo urwu rudo.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn175">
+<item>
+Sedera, mweya wangu.\n
+Uya kuna She wangu,\n
+Uya sezva wakaita.\n
+Usanange panorufu,\n
+Sedera, mweya wangu.\n
+</item>
+<item>
+zvicheme, mweya wangu,\n
+zvose zvitadzo zvangu;\n
+zvakaipa zvinonyadza,\n
+Asi ini ndichinazvo,\n
+zvicheme mweya wangu.\n
+</item>
+<item>
+Namata mweya wangu,\n
+Uya kuMununuri;\n
+Daidza iwe kuna She\n
+Anonzwa iye kudenga;\n
+Namata, mweya wangu.\n
+</item>
+<item>
+Vimbazve, mweya wangu,\n
+Tenda kuna She wangu;\n
+wakambouya panyika\n
+Kuti ndiende kudenga;\n
+Vimbazve, mweya wangu.\n
+</item>
+<item>
+Pembera, mweya wangu\n
+Pano M’ponisi wangu;\n
+wakauya kundifira,\n
+Ndakaregererwa naye;\n
+Pembera, mweya wangu.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn176">
+<item>
+Jesu Mambo worugare\n
+Ngatibvumirane nemi;\n
+Revai shoko mupedze\n
+Nharo nako kupesana.\n
+</item>
+<item>
+zvose zvinokanganisa,\n
+Nezvo zvinowanzonetsa,\n
+Ngazviraswe kure zvose\n
+zvigokundwa nokudana.\n
+</item>
+<item>
+Uchenye, nokutsutsumwa,\n
+Nezvinotsamwisa zvose,\n
+zvigobviswa, zvipedziswe\n
+Nokuregerera kwenyu.\n
+</item>
+<item>
+Itai kuti tidane,\n
+Takapfava, tine tsitsi,\n
+Pakufunga, napamazwi,\n
+Tive semi, Ishe wedu.\n
+</item>
+<item>
+Titakudzane mitoro,\n
+Tinzwirane, tiyam’rane,\n
+Tiratidze vose vanhu\n
+Mugariro waMaKristu.\n
+</item>
+<item>
+Tichenjerere kudada,\n
+Ngatifambe norukudzo;\n
+Nomu udzame hworudo,\n
+Nourefu hwoutsvene.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn177">
+<item>
+Ishe wangu maindidisa\n
+Pakurasika kwangu;\n
+Ishe wangu maindironda\n
+Chete mugwara rangu\n
+Ndawanikwa Ishe wangu.\n
+</item>
+<item>
+Ishe wangu iro’zwi renyu\n
+Ndiwoyo mwenje wangu;\n
+Ishe wangu nengoni dzenyu\n
+Dzinondifarisawo;\n
+Ndinofara Ishe wangu.\n
+</item>
+<item>
+Ishe wangu nomweya wenyu\n
+wondiita mutsvene;\n
+Ishe wangu kudenga renyu\n
+Iroro musha wangu;\n
+Ngandipinde, Ishe wangu.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn178">
+<item>
+Farai mazuva ose,\n
+Rambai muchinamata,\n
+Vongai pazvinhu zvose,\n
+Ndizvo zvaanoda Mwari.\n
+</item>
+<item>
+Regai kudzima Mweya,\n
+Musazvidze zvaprofitwa,\n
+Regai kuipa kwose,\n
+Mubatise zvakanaka.\n
+</item>
+<item>
+Mwari wakatendeseka,\n
+Ndiye anotidanidza\n
+Tive vatsvene saJesu;\n
+Achazviita pachake.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn179">
+<item>
+Ngandibereke mapudzi,\n
+Ayo oMweya Mutsvene,\n
+ohunhu nokururama\n
+Nduramo nomwoyochena,\n
+Izvo zvose zvorutendo,\n
+Nezvorudo norufaro.\n
+</item>
+<item>
+Izvo zvinhu ngazvikure\n
+Mumwoyo nenguva dzose,\n
+zvindiyamure ndidzure\n
+Kose uku kumanikwa\n
+Kousvinu nokwetsino\n
+Nokwezvinhu zvinobvako.\n
+</item>
+<item>
+Hongu, Ishe, nganditunge\n
+Ndivewo anobereka,\n
+Ndivavarire kuwana\n
+zvosewo zvakarurama\n
+zvigorega kuzorambwa\n
+Hwose unhu nadzo tsika.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn180">
+<item>
+Vakaropafadzwa\n
+Varombo pamweya;\n
+Nokuti Ushe hwaMwari\n
+Ndohwavo kudenga.\n
+</item>
+<item>
+Vakaropafadzwa\n
+Vanochema pano;\n
+Vachanyaradzwa naIShe\n
+Vachafara kwazvo.\n
+</item>
+<item>
+Vakaropafadzwa\n
+Vasingazvikudze;\n
+Vachagara nhaka huru\n
+Yokunyika yose.\n
+</item>
+<item>
+Vakaropafadzwa\n
+Vose vane nzara;\n
+Vanotsvaka kururama\n
+Vanozogutiswa.\n
+</item>
+<item>
+Vakaropafadzwa\n
+Vose vane ngoni;\n
+Kana vachitongwa ivo\n
+Vachanzwirwa tsitsi.\n
+</item>
+<item>
+Vakaropafadzwa\n
+Vane mwoyochena;\n
+Vanotsvaka Mwari\n
+Vachazomuona.\n
+</item>
+<item>
+Vakaropafadzwa\n
+Vanoyananisa;\n
+Voita basa raMwari\n
+Ndivo vana vake\n
+</item>
+<item>
+Vakaropafadzwa\n
+Vanotambudzwawo;\n
+Nokuti Ushe hwaMwari\n
+Ndohwavo kudenga.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn181">
+<item>
+Hoyo mushandiri waShe!\n
+Ndoda kurairwa nemi\n
+Kuchengeta shoko renyu\n
+Nokuedza kuda kwenyu;\n
+Ndisaite kuda kwangu,\n
+Ndizadzise kururama.\n
+</item>
+<item>
+Kana mandinzwira ngoni\n
+Kuti ndiitiswe basa,\n
+Sarudzai zvamunoda,\n
+Asi garai mandiri;\n
+zviito ngazvive zvenyu\n
+zvakanaka, zvakakwana.\n
+</item>
+<item>
+Pfungwa dzangu dzose Ishe\n
+Ngadzitungamirwe nemi,\n
+basa rangu rive renyu,\n
+Ndiro rakakwana chose;\n
+Ndiro rinofadza baba,\n
+Renyu roga rakanaka.\n
+</item>
+<item>
+Ndinozviisa kwamuri,\n
+Ndiri ivhu, mundiumbe;\n
+Mundiite hari yenyu,\n
+Ndikutererei chose;\n
+Ndive mushandiri wenyu\n
+Paupenyu napakufa.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn182">
+<item>
+Tenzi ngandifambe nemi,\n
+Munzira dzokushandira;\n
+Ndikuridzirei ini,\n
+Ndisatye kudikitira.\n
+</item>
+<item>
+Ndimutse vane chinepfu,\n
+zvimwe neshoko rorudo,\n
+Ndidzore varitairi\n
+Kuti vanange kumusha.\n
+</item>
+<item>
+Ndidzidziswe kuva nemi\n
+Ndirambe ndakakwamira\n
+Mumabasa orutendo,\n
+Noruvimbo runokunda.\n
+</item>
+<item>
+Kwamuri ndine tariro\n
+Inovhenekera mberi\n
+Murugare rwamunopa\n
+Ngandigare nemi Tenzi.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn183">
+<item>
+Urwo rutendo rukuru\n
+Rwokutenda somucheche,\n
+Norudo rwebasa renyu,\n
+Ngandipiwe Mwari irwo,\n
+Ngarwukunde mwoyo wangu\n
+Ndiparidze dama renyu.\n
+</item>
+<item>
+Ndipei rudo neshungu\n
+Ndichemere vanotadza,\n
+Ngarwuvepo rwundipise\n
+Ndivadzore pane ngozi,\n
+Ndivadzorere panzira\n
+Yamunoponisa nayo.\n
+</item>
+<item>
+Ngandibvume nazvinoka\n
+Ndizvipire vakatadza\n
+Vasingazive M’ponisi;\n
+Ndivavarire ndiwane\n
+Vose navari murima\n
+Vasafe vasamuziva.\n
+</item>
+<item>
+Matarenda nezvipiwo\n
+zvose baba zvandinazvo\n
+zvishandiswe basa nemi;\n
+Ndifambise dama renyu\n
+Ndiudze vatadzi vose\n
+Kuti Jesu hama yavo.\n
+</item>
+<item>
+Ngaupiswe mwoyo wangu,\n
+Uzadziswe rudo rwenyu,\n
+Ndiedze nesimba rose\n
+Ndivade kufana nemi,\n
+Ndiuye navo kwamuri\n
+Mufudzi wakavafira.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn184">
+<item>
+Timutsirei Ishe,\n
+Tikuteurei;\n
+Titsungisei Ishe,\n
+Tivimbe kwamuri;\n
+Kukushandira Jesu\n
+Ngakutifadzise;\n
+Norudo rwenyu Jesu\n
+Rupise matiri.\n
+</item>
+<item>
+Ngatirege kuneta\n
+Pakukushandirai;\n
+Tisatonhore isu\n
+Pano rudo rwenyu;\n
+Tibvumirei Ishe,\n
+Tikushandirei;\n
+Tisimbisei, Ishe,\n
+Tikudisisei.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn185">
+<item>
+Musimba renyasha,\n
+Mwoyo uchifara,\n
+Ndozvitsaurira imi\n
+Nguva dzangu dzose.\n
+</item>
+<item>
+Ndakadzikinurwa\n
+Ndozvipira imi;\n
+Kubvira zvino ndinoda\n
+Kukushandirai.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn186">
+<item>
+Jesu anoti tivhenekere\n
+Sekanjera nduku murima guru\n
+Nyika ine rima, ngativheneke\n
+Iwe pako neni pandigere.\n
+</item>
+<item>
+Takabatidza mwenje kwaari\n
+Anogozviziva kana todzima,\n
+Anotipa simba rokuvhenekera\n
+Iwe pako neni pandigere.\n
+</item>
+<item>
+Anoda kuti tivhenekere\n
+Vose vakarasikira murima,\n
+Rima rokusanzwa kana kutadza,\n
+Saka ngatibvire patigere.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn187">
+<item>
+Muzita raShe ndoenda\n
+Kunoita basa rangu,\n
+Ndichida kuziva imi\n
+Pazvose zvandinoita.\n
+</item>
+<item>
+Mubato wamunondipa\n
+Ngandiite norufaro,\n
+Muvepo neni pabasa\n
+Ndigoita kuda kwenyu.\n
+</item>
+<item>
+Ndinokugadzai mberi\n
+Mundiongorore mwoyo,\n
+Ndoshanda ndichiterera,\n
+Ndiise zvose kwamuri,\n
+</item>
+<item>
+Nditakudzei joko renyu\n
+Ndigare ndakarindira,\n
+Nditarire zvinouya,\n
+Ndichimbidzike kusvika.\n
+</item>
+<item>
+Ndichafara kushandisa\n
+zvamakandipa nenyasha,\n
+Ndimhanye murwendo rwangu\n
+Ndichiperekedzwa nemi.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn188">
+<item>
+Nditungamire Jehovha\n
+Ndichifamba murenje;\n
+Ini handina masimba\n
+Muna masimba ose;\n
+Muponisi!\n
+Ndimi inhowo yangu.\n
+</item>
+<item>
+Sipiti roruponiso\n
+Ngarifashukire’ni;\n
+Chipapata chokudenga\n
+Ngachipiwe kwandiri;\n
+Muponisi!\n
+Ini ndosimba nemi.\n
+</item>
+<item>
+Kana ndasvika Jodhani\n
+bisai kutya kwangu;\n
+Ndiyambutsei ndouya\n
+Ndisvike kuKanani.\n
+Muponisi!\n
+Ini ndovimba nemi.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn189">
+<item>
+Nhungamiri yaIsraeri\n
+Yavo vanotsvaka denga,\n
+Tinotavirirwa negore\n
+Gore rorudo rwenyu She;\n
+Simba redu nomurau\n
+zvinobva munyasha dzenyu.\n
+</item>
+<item>
+Mweya wenyu uri pamberi,\n
+Hatirasike murenje,\n
+Hatichashaya gwara redu,\n
+Hatitsauke munzira;\n
+Hapana ngozi nokutya\n
+Pano rudo rwakakwana.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn190">
+<item>
+Mwari muna masimba\n
+Ndibvisei Ijipita;\n
+Noruoko rwesimba\n
+Nditungamirwe Ishe.\n
+</item>
+<item>
+Munyika yezvitadzo\n
+Ndiburitsei Ishe,\n
+Pachimo chakaipa,\n
+Jehovha, ndinunurei.\n
+</item>
+<item>
+Mugungwa iri dzvuku\n
+Ndione ruponiso;\n
+Ndifukidzwe neshongwe\n
+Yegore neyomoto.\n
+</item>
+<item>
+Muurefu hwerenje\n
+Ngandione kubwinya;\n
+Kunyange ndine nzara\n
+Ndidyiseiwo mana.\n
+</item>
+<item>
+Kana nyoka dzoruma,\n
+Nganditarire imi;\n
+Ndinozovimba nemi\n
+Pane zviedzo zvose.\n
+</item>
+<item>
+Kana ndosvika Jodhani,\n
+Munozondiyambutsa\n
+Kumhiri kuKunana\n
+Kudenga musha wangu.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn191">
+<item>
+Muna vanhu venyu Mwari\n
+Kudzo dzose nguva;\n
+Munovachengeta imi\n
+Pane nzvimbo dzose.\n
+</item>
+<item>
+Kana voyambuka nzizi\n
+Munova navo She;\n
+Kana vopiswa nomoto\n
+Vanochengwa nemi.\n
+</item>
+<item>
+Pavanokutambudzika\n
+Vanosimba nemi,\n
+Napane zvinovaruma\n
+Munovachengeta.\n
+</item>
+<item>
+Vanotarira kwamuri,\n
+Ivo vanhu venyu;\n
+Vanotenda, vanofunga,\n
+Ivo vanhu venyu.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn192">
+<item>
+Jesu tokuvongai, matifira, \n
+Muponisi!\n
+Kutadza kwedu kwaregererwa,\n
+Muponisi!\n
+Shambidzai mwoyo yedu yose;\n
+Tizadzisei norufaro rwenyu.\n
+</item>
+<item>
+Jesu makunda muvengi wedu,\n
+Mununuri!\n
+Tasunungurwa pazvakaipa\n
+Mununuri!\n
+Kana tosangana nomuyedzi\n
+Ngatiwane ruyamuro rwenyu.\n
+</item>
+<item>
+Jesu tidzidzisei kuda kwenyu,\n
+Mudzidzisi!\n
+Kufunga kwedu kuri murima,\n
+Mudzidzisi!\n
+Tivhenekerei nedama renyu,\n
+Kuda kwenyu kuve murau wedu.\n
+</item>
+<item>
+Jesu chengetai tsoka dzedu,\n
+Muchengeti!\n
+Kuti tisagumburwe panzira\n
+Muchengeti!\n
+Tidzivirirei pane ngozi,\n
+Titungamirirei kumusha.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn193">
+<item>
+Hoyu Mwari, Changamire,\n
+Hama isingapinduke;\n
+Rudo namasimba ake\n
+Hazviyerwe, hazvipere.\n
+</item>
+<item>
+Jesu, Muvambi, Mugumo,\n
+Achatiisa kumusha;\n
+Tinomutenda pazvose\n
+zvitsaru pamwe nezvitsva.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn194">
+<item>
+Imi Mwari webheteri\n
+Mupi wezvokudya;\n
+Nhungamiri yavababa\n
+Murwendo rurefu;\n
+</item>
+<item>
+Heyi miteuro yedu\n
+Mberi pamugere;\n
+Mwari wavababa vedu\n
+Muve Mwari wedu.\n
+</item>
+<item>
+Patenge todzingaira\n
+Mutitungamire;\n
+Tipei chingwa chemisi\n
+Pamwe nezvifugo.\n
+</item>
+<item>
+Vhumbamirai sehuku\n
+Tisaritaire;\n
+Kudzamarare tisvike\n
+Muimba yababa.\n
+</item>
+<item>
+Munopa makomborero\n
+Atinokumbira;\n
+Imi munozova Mwari\n
+watakasarudza.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn195">
+<item>
+Kwasara makore,\n
+Nenguva shomana\n
+Tinoenda kuva navo\n
+Vari kuzorora.\n
+chorus\n
+Mweya wangu Ishe,\n
+Ngaururamiswe;\n
+Ndigoshambidzwa muropa,\n
+Ndibviswe kuipa.\n
+</item>
+<item>
+Kwasara mazuva\n
+Atinawo isu;\n
+Shure kwezvo tichaenda\n
+Kuno Mutongisi.\n
+</item>
+<item>
+Kwasara nenhamu,\n
+Dzatinogoona;\n
+Tin’enda pasina nhamu,\n
+Nyika yakanaka.\n
+</item>
+<item>
+Kwasara misodzi,\n
+Nezvo zvinorema;\n
+Tichaonana nababa,\n
+Pasina kuchema.\n
+</item>
+<item>
+Kwasara masvondo,\n
+Mazuva matsvene;\n
+Tichamunamata Mwari\n
+Kune denga rake.\n
+</item>
+<item>
+Kwasara chinguva,\n
+Achauya Jesu,\n
+wakambotifira kuti\n
+Tive noumambo.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn196">
+<item>
+Mwoyo yenyu ngairege\n
+Kuchemera vafi,\n
+Vose vanotenda Jesu\n
+Vaponiswa naye.\n
+chorus\n
+Ndiye M’ponisi,\n
+Ndiye upenyu\n
+Norumuko rwedu.\n
+</item>
+<item>
+Mwoyo yenyu ngairege\n
+Kuva nourombo;\n
+Munotenda kuna Mwari,\n
+Tendaiwo kuneni.\n
+</item>
+<item>
+Mwoyo yenyu ngairege\n
+Kungochema-chema;\n
+Jesu wakamuka zvake\n
+Nesu tinomuka.\n
+</item>
+<item>
+Mwoyo yenyu ngairege\n
+Kungochema-chema;\n
+Jesu anodisa vana\n
+Anovachengeta.\n
+</item>
+<item>
+Mwoyo yenyu ngairege\n
+Kungochema-chema;\n
+Vana vose ndava Mwari\n
+Vanozoda Jesu.\n
+</item>
+<item>
+Mwoyo yenyu ngairege\n
+Kungochema-chema;\n
+Mwari anotipa vana,\n
+Ndiye anotora.\n
+</item>
+<item>
+Mwoyo yenyu ngairege\n
+Kungochema-chema;\n
+Muchaenda kuna iye\n
+Kuti muchitenda.\n
+</item>
+<item>
+zvino tinocherechedza\n
+Uyu mwana wedu,\n
+Iye anotungamira\n
+Kuna baba wedu.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn197">
+<item>
+Jesu ndiyo nzira yedu\n
+Yokukwira pakudenga,\n
+Kumusha wedu naJesu\n
+Kwatichazofara naye.\n
+</item>
+<item>
+Kufa murau waMwari,\n
+Hauna waunosiya;\n
+Hupenyu hwedu hupfupi,\n
+Nesuwo tiri kuzofa.\n
+</item>
+<item>
+Vose vakawana Jesu\n
+Havana nhamu nokufa.\n
+Kufa ndiro suo ravo\n
+Rokupinda paupenyu.\n
+</item>
+<item>
+Ngatigadzirire tose\n
+Musi usati wasvika;\n
+Tibve pane zvakaipa\n
+Tigam’chire Tenzi Jesu.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn198">
+<item>
+Nokuchema kwandiinako,\n
+Ngozi yakandibata ichakundwa,\n
+zvandarindira\n
+Mwana wepfumo jena achauya,\n
+Nhasi muvengi wangu achaona.\n
+</item>
+<item>
+Nokusungwa kwandiinako,\n
+Gasho romwoyo wangu richachekwa\n
+zvandarindira\n
+Jesu wokumatenga achauya,\n
+Yose misungo achaidimura.\n
+</item>
+<item>
+Norufaro rwenyika ino,\n
+Nyika yamunoona ichatongwa,\n
+Musi unenge\n
+Mwana wepfumo jena ava pano,\n
+zvose zvamunoona zvichapera.\n
+</item>
+<item>
+Noupfumi hwamunoona,\n
+Nhaka yenyika ino ichapera,\n
+Musi unenge\n
+Jesu wokumatenga ava pano.\n
+zvose zvamunoona zvichapera.\n
+</item>
+<item>
+Nomutongi wenyika ino,\n
+Mambo wenyika ino achatongwa,\n
+Musi unenge\n
+Mwana wokumatenga ava pano,\n
+Jinda renyika ino richachema.\n
+</item>
+<item>
+Nhasi pano, dzokai mose,\n
+Mambo wokumatenga ari pano\n
+watinoreva\n
+Jesu wokumatenga ari pano,\n
+Uyai mose mose muponiswe.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn199">
+<item>
+Musi wehasha nokutya,\n
+Musi wokuchema kwazvo \n
+Unozadziswa matama,\n
+Avaprofita vakare.\n
+</item>
+<item>
+Munhu achafa nokutya,\n
+Kana Mutongi asvika,\n
+Mutongi mukuru Jesu,\n
+Isu tinogomirepi?\n
+</item>
+<item>
+Ndinogodiiko ini?\n
+Ndogotetererwa nani?\n
+Panenge tsitsi dzodiwa,\n
+Nawo musi wokutongwa.\n
+</item>
+<item>
+Jesu ruponiso rwangu,\n
+Imi makazova munhu,\n
+Rega kundisiya ndega,\n
+Ndive mutandwi naMwari.\n
+</item>
+<item>
+Makazonditsvaka ini,\n
+Mukanditenga neropa,\n
+Ngoni dzakadaro Ishe,\n
+Hadzingaitirwe nhando.\n
+</item>
+<item>
+Hongu, ndine mhosva ini\n
+Ndiri munyadzisi ini,\n
+Ndinochema zvakanyanya,\n
+Mwari ndinzwirei tsitsi.\n
+</item>
+<item>
+Yose miteuro yangu,\n
+Haine basa kwamuri,\n
+bedzi ngoni dzenyu Ishe,\n
+Dzingandinunure ini.\n
+</item>
+<item>
+Ndinopfugama netsitsi,\n
+Ndinorwarira zvitadzo,\n
+Onai mwoyo wangu She,\n
+Uyai mundiponise.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn200">
+<item>
+Chinhu chinotyisa kwazvo,\n
+Zuva rokupera;\n
+Kana Ishe achitonga\n
+Kokupedzisira.\n
+</item>
+<item>
+Kuripo kuvanzirana\n
+Pane ino nyika;\n
+Naikoku kurevana\n
+Kwouya pachena.\n
+</item>
+<item>
+Pane nyika kunotadzwa\n
+Kusina kunzwika;\n
+Nyamba kose kwakanzwikwa\n
+Nomuzivi zvose.\n
+</item>
+<item>
+Nero zuva pamibvunzo\n
+Kunonzwikwa zvose\n
+zvakaitiwa panyika\n
+Kumarudzi ose.\n
+</item>
+<item>
+Chidzokai vakaipa\n
+Pakuipa kwenyu;\n
+Teurai nhasi mese\n
+KuMusununguri.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn201">
+<item>
+Mumhanzi uri kudenga,\n
+Kana wozoridzwa iwo,\n
+Nokuriridza kukuru,\n
+Kana kozonzwika iko,\n
+Kunoparura makuva\n
+Kutsemure napanyika.\n
+</item>
+<item>
+Negungwa rinovabisa\n
+Vose varakambomedza,\n
+Nenyika inovabisa\n
+Vose vakanga vavigwa,\n
+Vagomuka mumakuva\n
+Vagoenda pakutongwa.\n
+</item>
+<item>
+Vati ivo vakafira\n
+Pane zvakaipa zvavo\n
+Vachamiswa pakachena\n
+Pamberi paChangamire,\n
+Vazvipindurire vega\n
+Vagorangwa zvinorwadza.\n
+</item>
+<item>
+bedzi vakabvuma Jesu\n
+Vanopona noyu musi,\n
+Vachafara pamwe chete\n
+Vanozopinda kudenga,\n
+Vaine mibairo yavo\n
+Vaino Muponisi wavo.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn202">
+<item>
+Wouya, wouya, Mucheki mukuru,\n
+Vanhu vachaona Ishe wokudenga;\n
+Vanogozomutswa vari kumakuva,\n
+Kuti vaonekwe vose pakachena.\n
+</item>
+<item>
+Mucheki ndiJesu wakatambudzika,\n
+Kuti vaponiswe norudo rwababa,\n
+Avo vakamuda havachatongiswa\n
+Nokuti vamire naIshe wedenga.\n
+</item>
+<item>
+Asi vasingadi kunzwa dama rake,\n
+Rokuti vadzoke pane chakaipa,\n
+Vakatozvikona pamberi poM’cheki\n
+Vakatozvipinza pakutambudzika.\n
+</item>
+<item>
+Ngatidzoke tose pakuipa kwedu,\n
+Tinzwe izwi rake, tinamate tose,\n
+Ishe ari pano anotsvaka iwe,\n
+Inguva nazvino, uya ugam’chire.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn203">
+<item>
+Nzvimbo yakanaka!\n
+Musha waJehovha,\n
+Denga ramatenga,\n
+Denga routsvene!\n
+Iyo nzvimbo yakanaka\n
+Ndoenda rini kwairi?\n
+</item>
+<item>
+Som’fambi panyika\n
+Anopanga musha,\n
+Neniwo ndinoda\n
+zororo kudenga.\n
+Iyo nzvimbo yakanaka\n
+Ndoenda rini kwairi?\n
+</item>
+<item>
+Pano patigere\n
+Matumba enyika,\n
+Musha wechokwadi\n
+Tinawo kudenga.\n
+Iyo nzvimbo yakanaka\n
+Ndoenda rini kwairi?\n
+</item>
+<item>
+Hakuna misodzi\n
+Kumsoro kudenga,\n
+Kuchema, nokufa\n
+Nokutambudzika.\n
+Iyo nzvimbo yakanaka\n
+Ndoenda rini kwairi?\n
+</item>
+<item>
+zviedzo, zvitadzo\n
+zvichange zvapera\n
+Ndichazororako\n
+NaSahwira, Jesu.\n
+Iyo nzvimbo yakanaka\n
+Ndoenda rini kwairi?\n
+</item>
+    </string-array>
+
+    <string-array name="hymn204">
+<item>
+Jerusarem, musha wangu!\n
+Musha wakanaka!\n
+Kana ndapedza mabasa\n
+Ndinenda kwauri.\n
+</item>
+<item>
+Ndichauona riniko,\n
+Uyo musha wangu?\n
+Une dzimba dzakanaka,\n
+Nokudya kutsvene.\n
+</item>
+<item>
+Hapasisina kuipa,\n
+Hapana nenhamu,\n
+Ndinoramba ndichienda\n
+Kumusha mutsvene\n
+</item>
+<item>
+Ndingatye here kurwadza?\n
+Ndingatize kufa?\n
+Kwete, ndinoenda Kanana,\n
+Nyika yandinoda.\n
+</item>
+<item>
+Vaprofita, vapostori,\n
+Vakafira Jesu\n
+Varipo pamwe naKristu;\n
+Neni ndichaenda.\n
+</item>
+<item>
+Jerusarem musha wangu,\n
+wandinotsvakisa!\n
+Kana ndasvika kwauri,\n
+Ndichafara kwazvo.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn205">
+<item>
+Pakudenga kuna baba\n
+Kwakanaka kwazvo;\n
+Pakudenga kuna baba\n
+Kunofarwa kwazvo.\n
+</item>
+<item>
+Hakupinde chakaipa\n
+Kana chivi chimwe;\n
+Hakupinde zvokurwara\n
+Nechirwere chimwe.\n
+</item>
+<item>
+Ndavatsvene ivo vose\n
+Vanogara iko;\n
+Vanomuda vanamate\n
+Iye Mwari wavo.\n
+</item>
+<item>
+Vakawana musha wavo\n
+Musha wakagara;\n
+Vakawanawo upenyu\n
+Husingapfuure.\n
+</item>
+<item>
+Ndiri mweni nyika ino\n
+Ndinosuva denga;\n
+Ngandipinde nemi Jesu\n
+Ndiende kudenga.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn206">
+<item>
+Pam’soro pakudenga,\n
+Ndavakanaka vega;\n
+Pam’soro pakudenga\n
+Kuna vatsvene vega.\n
+</item>
+<item>
+Anoda kuendako,\n
+Ngaazviteurire\n
+Kuti agadzirirwe\n
+Naye Mweya Mutsvene.\n
+</item>
+<item>
+Jesu wakatifira\n
+Kupedza mhosva yedu;\n
+Dakara itsveniswe \n
+Naiyo mweya yedu.\n
+</item>
+<item>
+Kuti kana tavingwa\n
+Norufu pano pasi,\n
+Tirege kuzorambwa\n
+Kuenda pakudenga.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn207">
+<item>
+Musi weSvondo nhasi, She,\n
+Ndiro zuva renyu,\n
+Vanofara vanhu venyu\n
+Nero zuva renyu.\n
+</item>
+<item>
+Makamuka nhasi Ishe\n
+Mune guva renyu,\n
+Makakunda rufu nhasi\n
+Nokumuka kwenyu.\n
+</item>
+<item>
+Makamuka imi, m’soro\n
+wavo vanotenda;\n
+Tichamuka nesu tose\n
+Isu tinotenda.\n
+</item>
+<item>
+Ngarinzwiwe izwi renyu\n
+Navazhinji nhasi;\n
+Ngavamutswe pano rufu\n
+Vave nemi nhasi.\n
+</item>
+<item>
+Tinovonga imi, Jesu\n
+Muno mumba menyu\n
+Tine zvinhu zose isu\n
+Nokumuka kwenyu.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn208">
+<item>
+Musi weSvondo waIShe\n
+Tauona kakare;\n
+Imba yenyu youtsvene\n
+Taipinda kakare.\n
+</item>
+<item>
+Baba chipindai nesu,\n
+Tinzwe kuti murimo;\n
+Igoti nemwoyo yedu\n
+Igamchire zwi renyu.\n
+</item>
+<item>
+Tarirai nhumwa dzenyu\n
+Mugodzisimbaradza;\n
+Kuti nhasi dzitaure\n
+Matama enyu oga.\n
+</item>
+<item>
+Tandai zvinhu zvenhando\n
+zvisatikanganise;\n
+Tigonyatsokufungai,\n
+Nemwoyo yedu yose.\n
+</item>
+<item>
+Ratidzai kushaya kwedu,\n
+Rudo netsitsi dzenyu\n
+Kuti tizvikumbirire\n
+Kuti tizadzwe nazvo.\n
+</item>
+<item>
+Muvaropafadze vose\n
+Vasipo pano nhasi.\n
+Kuti vanhu venyu vose\n
+Vawane rudo rwenyu.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn209">
+<item>
+Ishe taungana\n
+Muno mumba yenyu;\n
+Uyaiwo, zvatapinda\n
+Ishe mberi kwenyu.\n
+</item>
+<item>
+Iyo mwoyo yedu\n
+Yokurwarirai;\n
+Nayo mweya yedu Ishe\n
+Yokutarirai.\n
+</item>
+<item>
+Hurukuro dzenyu\n
+Baba, ngatidzinzwe;\n
+Razarurwa dama renyu\n
+Nemi tikunzwei.\n
+</item>
+<item>
+Tinatswewo, Ishe,\n
+Isu vanhu venyu;\n
+Kana tafa, tipinzwewo\n
+Mune denga renyu.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn210">
+<item>
+Ishe nzvimbo yenyu\n
+Inodiwa kwazvo,\n
+Imba yakanaka,\n
+Inofadza isu.\n
+</item>
+<item>
+Vanhu vanouya\n
+Kuzonamatamo;\n
+Imi Ishe Jesu\n
+Munovagam’chira.\n
+</item>
+<item>
+Tinorida izwi,\n
+Izwi roupenyu,\n
+Rinotinyaradza,\n
+Rinotifadzisa.\n
+</item>
+<item>
+Tinoda kuimba\n
+Tsitsi dzenyu pano;\n
+Toshuwa kuziva\n
+Rwiyo rwokudenga.\n
+</item>
+<item>
+Jesu, tipei ngoni\n
+Kukudisa kwazvo,\n
+Nokukunamata \n
+Navatsvene vose.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn211">
+<item>
+Nguva yakanaka Jesu\n
+Yokuuya kwamuri\n
+Kuti tinzwe zvivimbiso\n
+zvarehwa nemi Ishe.\n
+</item>
+<item>
+Muve nesu musi uno\n
+Kuti tinzwe chaizvo,\n
+Tibatise idi renyu\n
+Ramazwi oupenyu.\n
+</item>
+<item>
+Pfungwa dzedu dzizarurwe,\n
+Tinangiswe kudenga;\n
+Chokwadi chivhenekere\n
+Kuti tisarasike.\n
+</item>
+<item>
+Tipfavise, titivise,\n
+Tirambe takashinga;\n
+Tipei simba rokuita,\n
+zvinhu zvakarurama.\n
+</item>
+<item>
+Matama enyu ngaave\n
+Sembiriso muupfu,\n
+Inoita basa ravo\n
+Kuti upfu huvire.\n
+</item>
+<item>
+Tinoda kuve zvapupu\n
+zveidi ratinaro\n
+Kuti hama dzirinzwewo\n
+Dzigozvizivirawo.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn212">
+<item>
+Zvatapinda Ishe wedu\n
+Kune imba yenyu\n
+Titarirei Mwari wedu\n
+Ne’dzi tsitsi dzenyu.\n
+</item>
+<item>
+Imba iyi, imba yenyu,\n
+Imba youtsvene;\n
+Ishe uyai tisangane,\n
+Mutiropafadze.\n
+</item>
+<item>
+Tinobvuma zvivi zvedu\n
+Mberi kwenyu Ishe;\n
+Tinokukumbirai isu\n
+zvino mberi kwenyu.\n
+</item>
+<item>
+zvitadzo zvatakaita,\n
+Imi munoziva;\n
+Tinochema naizvozvo\n
+Nawo mweya wose.\n
+</item>
+<item>
+Tifadzisei Ishe wedu\n
+Noruregerero;\n
+Tipupurei Mwari wedu\n
+Noya Mweya wenyu.\n
+</item>
+<item>
+Kana dama rotaurwa\n
+Ngatirinzwe tose.\n
+Tichiva nemwenje wenyu,\n
+Pane nguva dzose.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn213">
+<item>
+Baba wedu tinouya\n
+Kuzonamata,\n
+Kuti makatichengeta\n
+Nokuda.\n
+</item>
+<item>
+Imi makatuma Jesu\n
+Munyika yedu,\n
+Kuti munotida isu\n
+zvikuru.\n
+</item>
+<item>
+wakaparadzira isu\n
+Rudo netsitsi;\n
+wakashuma kuti Mwari\n
+Ndibaba.\n
+</item>
+<item>
+Jesu akagotifira\n
+Pamuchinjikwa;\n
+Akagotiregerera\n
+Netsitsi.\n
+</item>
+<item>
+zvakaipa zvedu zvose\n
+wakazvitora;\n
+Mhosva dzedu wakaripa\n
+Nokufa.\n
+</item>
+<item>
+Baba tinokutendai\n
+Kuti matida;\n
+Tichaedza basa renyu\n
+Nokuda.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn214">
+<item>
+Mwari wedu tiri pano\n
+Panzvimbo yokunamata;\n
+Imi matipinza isu\n
+Tidzidzisei kururama.\n
+</item>
+<item>
+Yamurai muranda wenyu\n
+Pakutidzidzisa kwake;\n
+burukisai mwenje wenyu,\n
+Vhenekerai mweya wake.\n
+</item>
+<item>
+zarurai nzeve dzedu,\n
+Tirizive iri dama;\n
+bisai kuremara kwedu\n
+Nourema hwamarudzi.\n
+</item>
+<item>
+Ngatipone pakuipa\n
+Nairori dama renyu;\n
+Ngatipinde pakudenga\n
+Naidzodzo ngoni dzenyu.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn215">
+<item>
+Taurai Ishe wedu,\n
+Tinzwise kuvapo kwenyu;\n
+Ivai nemwoyo yedu,\n
+Mutinzwise rudo rwenyu.\n
+</item>
+<item>
+Kana tiri mberi kwenyu,\n
+Ngaauye Mununuri;\n
+Rubvire mumwoyo yedu\n
+Irwo runyararo rwenyu.\n
+</item>
+<item>
+Inzwai muteuro wedu,\n
+Mutipindure netsitsi;\n
+Mutsaiwo zvido zvedu,\n
+Tidise utsvene hwenyu.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn216">
+<item>
+Ishe muno utsvene\n
+Topfugama kwamuri,\n
+Tigadzirei tose,\n
+Pakuteura kwedu,\n
+Muve nesu M’ponisi,\n
+Tinoda kuva nemi.\n
+</item>
+<item>
+Tosedera kwamuri,\n
+Tinzwise simba renyu;\n
+Tinochema savana\n
+Kuna baba wavose,\n
+Tiri pamberi penyu\n
+Tinotsvaka utsvene\n
+</item>
+<item>
+Tinofunga M’ponisi,\n
+Chitenderano chenyu,\n
+Makati: Ndinotuma\n
+Mweya Mutsvene wangu.\n
+Tizarurei mwoyo\n
+Kuti timugam’chire.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn217">
+<item>
+Timutsirei She,\n
+Uyai nesimba,\n
+Taurai nezwi guru\n
+Vanhu venyu vanzwe.\n
+chorus\n
+Timutsirei She, kana toteura,\n
+burukai, burukai, mutikomborere.\n
+</item>
+<item>
+Timutsirei She,\n
+NoMweya Mutsvene,\n
+Ngarubvire rudo rwenyu,\n
+Mune mwoyo yedu.\n
+</item>
+<item>
+Timutsirei She,\n
+Mutiropafadze,\n
+Ngarinzwiwe shoko renyu\n
+Rakanaka kwazvo.\n
+</item>
+<item>
+Timutsirei She,\n
+Tidirei Mweya,\n
+Rukudzo ndorwenyu Ishe,\n
+Mutiropafadze.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn218">
+<item>
+Mwari baba wedu,\n
+Anotichengeta\n
+Muyamure vose\n
+Vari pakushaya.\n
+</item>
+<item>
+Navari munhamu\n
+Nomukuremerwa,\n
+Muvaropafadze\n
+Vose vanyaradzwe.\n
+</item>
+<item>
+Baba, tarisai\n
+Vose vanofamba;\n
+onisai ngoni\n
+Kuna vakasungwa.\n
+</item>
+<item>
+Muchengete avo\n
+Vose vanorwara,\n
+Nadzo chirikadzi,\n
+Murere nherera.\n
+</item>
+<item>
+Ivo vakaraswa,\n
+Navakamanikwa,\n
+batai nengoni\n
+Ava vanhu vose.\n
+</item>
+<item>
+Tipeiwo ngoni\n
+Tive tinoshanda \n
+Pamwe chete nemi\n
+Kuna vanoshaya\n
+</item>
+    </string-array>
+
+    <string-array name="hymn219">
+<item>
+Zvose zvinhu tinopa zvedu\n
+Kuna Jehovha;\n
+Chiripo chimwe chatisina\n
+Kupa Jehovha\n
+chorus\n
+Kunzi mwoyo yedu yose\n
+Tipire kuna Ishe;\n
+Usipo mwoyo hazvikwane\n
+Kuna Jehovha.\n
+</item>
+<item>
+Mwoyo wako ngaude Ishe\n
+Mwari Jehovha\n
+Iye wakaisvoda isu\n
+Tisingazive.\n
+</item>
+<item>
+Hama dzose dzinoda rudo\n
+Rwatakapiwa\n
+Pfuudza kunavo vasina\n
+Mweya wokupa.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn220">
+<item>
+Svondo inopfuura.\n
+Murayiri wopedza;\n
+Ngative nokuvonga\n
+Izwi iro ratanzwa;\n
+Izwi i’guru kwazvo\n
+RaIshe wokudenga,\n
+Vasati vari matsi,\n
+Vabva vakwanisiswa.\n
+</item>
+<item>
+Murayi watiraya\n
+Izwi dai richigara,\n
+Rirege kanganikwa\n
+Imo mumwoyo yedu;\n
+Izwi rokuvheneka\n
+Izwi rokuratidza,\n
+Izwi rokufarisa,\n
+Ipo pamweya yedu.\n
+</item>
+<item>
+Svondo inopfuura\n
+Dai tichiterera,\n
+Tichirirangarira,\n
+Izwi raIshe wedu;\n
+Tigozonoti kana\n
+Tabva pano panyika,\n
+Tigopinda muChechi\n
+Yapam’soro kudenga.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn221">
+<item>
+Mutiropafadze, Mwari\n
+Endai nesu kudzimba;\n
+Tichifunga dama renyu,\n
+Tichirirangarira;\n
+Tinyaradzei isu tose;\n
+Simbisai mwoyo yedu,\n
+Kana tosvika kudenga,\n
+Tichakurumbidzai!\n
+</item>
+    </string-array>
+
+    <string-array name="hymn222">
+<item>
+Ngoni dzaKristu M’ponisi,\n
+Rudo rwababa wedu\n
+Nokuwadzana kwoMweya\n
+Ngazvivepo kwatiri!\n
+Naizvozvo tinogara\n
+Pamwe chete naIshe;\n
+Mwoyo yedu ichifara\n
+Nenguva dzose dzedu.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn223">
+<item>
+Tauya nezvipo baba,\n
+zvifambise basa renyu,\n
+Tinozvipa nokufara,\n
+Takakomborerwa nemi,\n
+Tipei mwoyo muchena,\n
+Kuna vose vanoshaya\n
+Ruponiso rwatinarwo\n
+Rusvitswe nezvipo zvedu.\n
+</item>
+<item>
+zvipo izvi zvatinopa\n
+Ngazviende kwesekwese\n
+zviendese shoko renyu\n
+Kumarudzi ari kure,\n
+Asati aziva Kristu,\n
+Kunyange noMuponisi,\n
+Mwanakomana waMwari,\n
+Hama yedu, Mununuri.\n
+</item>
+<item>
+Ngatirinzwe shoko renyu,\n
+Rinoda vatadzi vose,\n
+Kunyange zvivi zvatsvuka,\n
+Panokutaurirana.\n
+Jesu Kristu Ishe wedu\n
+wakafa kuti tipone,\n
+Rushanu wakakuvadzwa\n
+Kuti tive vake Mwari.\n
+</item>
+<item>
+Patinopa zvipo zvedu,\n
+Ngatipewo mweya yedu,\n
+Ive diramhamba dzvene,\n
+Rinogamuchirwa nemi;\n
+Takashambidzwa mumwoyo,\n
+Tava venyu nokomweya,\n
+Samaita, Nyakusika,\n
+Mwari kudenga napasi.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn224">
+<item>
+Tinouya baba wedu\n
+Nezvipo zvedu zvorudo,\n
+Tichivonga kuna Ishe\n
+wakatipa zvinhu zvose.\n
+</item>
+<item>
+Ngazvishambidzwe zvikuru\n
+Vamwe vagokuzivai\n
+Namasimba edu ose\n
+Aitiswe basa nemi.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn225">
+<item>
+Tinobvisa zvipo\n
+Kupa baba wedu,\n
+Kuti zvishandiswe\n
+Kuparidza shoko.\n
+</item>
+    </string-array>
+    <string-array name="hymn226">
+<item>
+Baba wangu ndinodisa\n
+Kuva wakadai semi,\n
+Ndinodisa Mweya wenyu\n
+Kuti uchigara neni.\n
+Munoziva nungo dzangu,\n
+Munoziva zvirokwazvo,\n
+Ndiri kukumbira zvino\n
+Munondipindurawo.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn227">
+<item>
+Onai  vadzidzi venyu\n
+Jesu taungana\n
+Muzita renyu, M’ponisi,\n
+Takataririra.\n
+</item>
+<item>
+Tokugarirai Ishe\n
+Takasanganiswa;\n
+Tinovimba nezwi renyu\n
+Tichakuwanai.\n
+</item>
+<item>
+Muri pano pamwe nesu,\n
+Chizviratidzai,\n
+Mwana, waMwari mupenyu,\n
+Tigokuzivai.\n
+</item>
+<item>
+watinoda timuwane,\n
+Jesu wakambofa;\n
+Tione maronda enyu,\n
+Imi M’firi wedu.\n
+</item>
+<item>
+Itai kuti titende,\n
+Muchiti kunesu;\n
+“Musave vasingatende”,\n
+Chivimbai neni.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn228">
+<item>
+Tichiri vapenyu,\n
+Tichionanazve;\n
+Ngaakurumbidzwe Jesu\n
+Nadzo ngoni dzake.\n
+</item>
+<item>
+Takachengeterwa\n
+Ruponiso pano;\n
+Ngatikurumbidze Jesu\n
+Tiri mberi kwake.\n
+</item>
+<item>
+Takaona nyatwa,\n
+Pamwe namadzudzo;\n
+Takarwisana nokutya,\n
+Chingotasangana.\n
+</item>
+<item>
+Jesu muna zvose\n
+wakatiburitsa;\n
+Nesimba rorudo rwake\n
+wotivhumbamira.\n
+</item>
+<item>
+Ngatidade naye\n
+Naro simba rake,\n
+Simba rotiponisisa,\n
+Tisazotadzazve.\n
+</item>
+<item>
+zvino ngatitore\n
+Muchinjikwa wake,\n
+Tirase zvose zvenyika,\n
+Timuwane Jesu.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn229">
+<item>
+Tiri vawadzani, tiri vawadzani,\n
+Mhuri yaJesu Mambo wedu!\n
+Dai tichidana, dai tichidana,\n
+Hakuna usvinu kudenga.\n
+</item>
+<item>
+Tinoyamurana, tinoyamurana,\n
+Vatendi vaIshe mukuru;\n
+Tisatsaukane, tisatsaukane,\n
+Hakuna kudaro kudenga.\n
+</item>
+<item>
+Tiri hondo imwe, tiri hondo imwe,\n
+Mbirimi dzaMambo mukuru;\n
+Ngatimurwirei nomwoyo mumwewo,\n
+Panzira inoenda kudenga.\n
+</item>
+<item>
+Ikoko kudenga pakufara kwedu\n
+Tozovonga Mambo mukuru;\n
+Naiwo masimba anobva kuna She,\n
+Tinosvika nawo kwaari.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn230">
+<item>
+Mwari ano rudo\n
+Toda nzira yenyu\n
+Yamatimisira\n
+Tichitererazve\n
+Tive mune zvenyu zvose,\n
+Tipererewo mamuri.\n
+</item>
+<item>
+Matiunzirei\n
+Pano pamwe chete,\n
+Tava pamwe sei\n
+Kuti tionane,\n
+Tive pamwe tinzwirane\n
+Takakanyana mamuri?\n
+</item>
+<item>
+Matiita mumwe\n
+Kuti tive pamwe \n
+Tigofamba pamwe\n
+Tigoyamurana;\n
+Dakara nduramo dzenyu\n
+Dzionwe pamwe norudo.\n
+</item>
+<item>
+Ngatinange tose\n
+Patinogumira\n
+Takangwaririra\n
+Tirwe kwenda mberi;\n
+Tisusukidzane tose\n
+Dakara tiwane ngundu.\n
+</item>
+<item>
+Tidirei Mweya\n
+Kuti musi uyo,\n
+Tigozova nemi\n
+Kuti tisimutswe;\n
+Titakurwe tiendeswe\n
+Tisvitswe kuMununuri.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn231">
+<item>
+Tinouya kuna Mwari\n
+wavadzibaba vedu;\n
+Tinogara mumaoko\n
+Mavakagara ivo;\n
+Tinoisa kurumbidza,\n
+Tinotsvaka uso hwake,\n
+Savatsvene vakare.\n
+</item>
+<item>
+Uyu wakatungamira,\n
+Achi’kutungamira,\n
+Uyu wakavadzivira,\n
+Achiri kudzivira;\n
+Ngoni dzakavandudza\n
+Vatadzi vasine simba\n
+Dzinotivandudzawo.\n
+</item>
+<item>
+zvivi zvakavaderedza\n
+zvichi’kutiremera;\n
+Saivo tinobvumira\n
+Nyadzi dzemwoyo yedu;\n
+Saivo tinoteura\n
+Kuna Mwari anotinzwa\n
+Anotiropafadza.\n
+</item>
+<item>
+Rufaro rwavo norwedu,\n
+Rufaro rumwe chete,\n
+Mweya waiva mavari,\n
+Agere matiriwo.\n
+Rwiyo rwakabva kwavari,\n
+Tinorupfuudza mberi\n
+Rwiyo rusingapere.\n
+</item>
+<item>
+Imi vatsvene mouya.\n
+Imbai rwiyo urwo,\n
+Imbai rwiyo rwenhaka,\n
+Rwiyo rusingapere;\n
+Garai mumaoko aShe,\n
+Mugam’chire ngoni dzake\n
+Mumurumbidze iye.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn232">
+<item>
+Nguva yakanakisisa\n
+Yokukurumbidza,\n
+Kana tadzoredzaniswa\n
+Pam’soro kudenga;\n
+Ndizvozvo tichanzwa mazwi\n
+Echisimbisiso,\n
+Chokuti kana tikafa\n
+Pane ino nyika,\n
+chorus\n
+Tinosangana kudenga\n
+Neropa raJesu,\n
+Nokutenda kuna Jesu\n
+Tichasanganiswa.\n
+</item>
+<item>
+Kunakisa korugare\n
+Rwakasunga mwoyo;\n
+Isu kana taungana\n
+Muzita raKristu,\n
+Mwanakomana wababa,\n
+wakakomborerwa!\n
+Ndiye chivimbo chokuti\n
+Tichasanganiswa.\n
+</item>
+<item>
+Nyangwe, tsoka dzakaneta\n
+Dzichayambukira\n
+zambuko rinendarama\n
+Nokukurumidza;\n
+Apo patakagarirwa\n
+Navo vanotida\n
+Vanokuridzira isu\n
+Kuti tiyambuke.\n
+</item>
+<item>
+Nyangwe takatsaukaniswa\n
+Navo vatinoda\n
+Tichazosangana navo\n
+Patsoka dzaIshe;\n
+Tigogara naye Jesu\n
+Pane iyo nzvimbo\n
+Tisingatsaukaniswe\n
+Pahukama humwe.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn233">
+<item>
+Kristu mukomboreri,\n
+Munonatsa vatsvene,\n
+Tinzwei,nhengo dzenyu\n
+Dzomuviri mutsvene.\n
+</item>
+<item>
+Ngatiwadzane nemi,\n
+Tigamuchire zvenyu,\n
+Todaidza kwamuri,\n
+Munozadzisa zvose.\n
+</item>
+<item>
+Ngatishandiswe nemi,\n
+Tigovaniswe zvipo;\n
+Ndimi munotimisa\n
+Tiite basa renyu.\n
+</item>
+<item>
+Ngatibvumiranei,\n
+Tichinzwirana tsitsi;\n
+Kuti tichengetane\n
+Mumwe nomumwe nemi.\n
+</item>
+<item>
+Rudo runoparadza\n
+zvose zvinotsautsa;\n
+Mapoka anopera,\n
+Kristu Musoro wedu.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn234">
+<item>
+Imi Jesu, ndimi M’fudzi\n
+weri boka renyu;\n
+Fungatai ava vana\n
+Mumaoko enyu.\n
+</item>
+<item>
+Ngavauye, makadaro,\n
+Vauye kwandiri,\n
+Vakadaro vokudenga,\n
+Musavarambise.\n
+</item>
+<item>
+Havoka, Ishe, ndevenyu,\n
+Muvatsvenisise;\n
+Vaisei mudanga renyu,\n
+Vakutererei.\n
+</item>
+<item>
+Ngavazvarwe nokomweya,\n
+Vakunamatei;\n
+Vagoenda pakudenga,\n
+Vagogara nemi.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn235">
+<item>
+Amai navana\n
+Vauya kuna Jesu,\n
+Vadzidzi vavadzivira,\n
+Vachiti, Ibvai;\n
+Asi Jesu haabvume\n
+wati kuna vakukutu;\n
+Regai vaduku musavarambise.\n
+</item>
+<item>
+Ndinovagam’chira,\n
+Ndinogovafungata,\n
+Ndichava Mufudzi wavo,\n
+Musavarambise;\n
+Ndinoda vaduku vose\n
+Vagare upenyu neni;\n
+Regai vaduku musavarambise.\n
+</item>
+<item>
+Jesu wakapfava,\n
+wakavaropafadza;\n
+Nyamba zviuru zvavana\n
+Vasati vam’ziva,\n
+Havana mashoko ake,\n
+Havanzwe kuti wadaro;\n
+Regai vaduku musavarambise.\n
+</item>
+<item>
+Tokuteurai\n
+Kuti marudzi ose\n
+Asiye vamwari vavo\n
+Auye kwamuri;\n
+Muvavhenekere Mwari,\n
+Muve navo noupenyu\n
+Muvadzidzise vauye kwamuri.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn236">
+<item>
+Makati vana vaduku\n
+Ngavauyiswe kwamuri,\n
+Umambo huri kudenga\n
+Hwakamisirwa vaduku.\n
+</item>
+<item>
+Tinouya navo Tenzi\n
+Ndivava vatakabata,\n
+Vagamuchirei nhasi,\n
+Vave venyu nguva dzose.\n
+</item>
+<item>
+Mweya wenyu uye Tenzi\n
+Ngaugarewo mavari,\n
+Kuti kuipa kwenyika\n
+Kusazovanyonganisa.\n
+</item>
+<item>
+Itaiwo kuti tose\n
+Mufambiro wedu wose\n
+Usazovarasikisa\n
+Tisavadzosere shure.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn237">
+<item>
+Maisa murau Jesu\n
+Kwavari vadzidzi venyu,\n
+Endai kunyika dzose\n
+Mudzidzise ndudzi dzose.\n
+</item>
+<item>
+Vanorinzwa, vakatenda,\n
+Vakagamuchira dama\n
+Makati vabhapatidzwe\n
+Vachengete tsika yenyu.\n
+</item>
+<item>
+Hava, vakadaro Ishe\n
+Vakarinzwa vakatenda,\n
+Vanoda kubhapatidzwa\n
+Kuzadzisa dama renyu.\n
+</item>
+<item>
+Torumbidza imi baba\n
+NoMwanakomana Ishe\n
+Nemi Mweya woutsvene,\n
+Torumbidza Mwari oga.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn238">
+<item>
+Baba wedu tarirai\n
+Vapfugama mberi kwenyu;\n
+Vanzwei, muvagamchire,\n
+Muvaite vana venyu.\n
+</item>
+<item>
+Vakatengwa nemi, Jesu,\n
+Nokuti makavafira;\n
+Vakarinzwa ropa renyu\n
+Ravakanzwa nezwi renyu.\n
+</item>
+<item>
+Chibvisai mhosva dzavo,\n
+Dzisarove hana dzavo,\n
+Varegererwe zvitadzo;\n
+Varegererei zvino.\n
+</item>
+<item>
+Shambidzai mwoyo yavo,\n
+Pachenyu, Mweya Mutsvene;\n
+Pakunyengetera kwavo\n
+burukirai pavari.\n
+</item>
+<item>
+Mwari, mumimhu mitatu,\n
+Garai mumwoyo yavo;\n
+Vazova kwamuri chose\n
+Vagoenda pakudenga.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn239">
+<item>
+Makatora chingwa, Jesu\n
+Mukachimedura,\n
+Mukati, Torai, mudye;\n
+Ndomuviri wangu.\n
+</item>
+<item>
+Jesu, matora mukombe,\n
+Mukati mavonga;\n
+Ndochitenderano chitsva\n
+Mune ropa rangu.\n
+</item>
+<item>
+Tinotora chingwa, Jesu,\n
+Totarira imi;\n
+Tinotora tidye icho\n
+Tichifunga imi.\n
+</item>
+<item>
+Tinotora nomukombe,\n
+Tichivimba nemi,\n
+Tinonwa kwauri tose\n
+Tichifunga imi.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn240">
+<item>
+Wafa, wafa, Muponisi!\n
+wakafira vakatyora\n
+zvemirau yake;\n
+wakafira kuponisa,\n
+wakafira kuvapinza\n
+Mune denga rake.\n
+</item>
+<item>
+Tsitsi dzenyu hadzipere!\n
+Ngoni dzenyu dzichiripo\n
+Nyamba takatadza;\n
+Ishe munotinanisa,\n
+Ishe munotinyadzisa,\n
+Nezva munoita.\n
+</item>
+<item>
+Ichi chifungiso chenyu\n
+Chokutiripira kwenyu\n
+Mhosva dzedu dzose;\n
+Ngachigare nguva dzose\n
+Tinzwe ngoni dzenyu, Tenzi,\n
+Pane mwoyo yedu.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn241">
+<item>
+Jesu tinoita\n
+zvamakatiudza;\n
+Nenzira yamakatipa\n
+Tinouya Ishe.\n
+</item>
+<item>
+Tozarura mwoyo\n
+Kukupai nzvimbo;\n
+ona Gwayana rasvika\n
+Shamwari yom’tadzi\n
+</item>
+<item>
+Kuvapo kwaIshe\n
+Kunogutsa mwoyo,\n
+Tinzwe kubwinya kwaMwari\n
+Kusingataurike.\n
+</item>
+<item>
+Rufaro rwedenga,\n
+Rufaro rwomweya,\n
+Ruripo pachidyo chenyu\n
+Chatagadzirirwa.\n
+</item>
+<item>
+Tipeiwo kudya\n
+Kutsvene kwedenga,\n
+Tifukidzei norudo\n
+Rusingazopera.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn242">
+<item>
+Ngatishandisei nyasha\n
+Tose pamwe chete\n
+Tiite chitenderano\n
+NaKristu She wedu.\n
+</item>
+<item>
+Nero simba rake Jesu,\n
+Ngatizvipirei;\n
+Tovimbisa iyezvino\n
+Kuve vake chose.\n
+</item>
+<item>
+Chitenderano chanhasi\n
+Ngachigare nesu;\n
+Tisasiye Mwari wedu,\n
+Kana izwi rake.\n
+</item>
+<item>
+Tigare tichitya Ishe,\n
+Munzwi wechitsidzo;\n
+Kana Mwari muchifadzwa,\n
+Sanganai nesu.\n
+</item>
+<item>
+Ropa rechitenderano\n
+Rinobvisa zvivi;\n
+Nyorai mazita edu\n
+Kum’soro kudenga.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn243">
+<item>
+Dzidzisai vadzidzisi,\n
+Imi vanhu vake!\n
+Mudzidzise shoko rake\n
+Kudzo dzose nyika.\n
+</item>
+<item>
+Asi ngoro yezwi renyu\n
+Ngaifambe iyo;\n
+Kudzo dzose nzvimbo Jesu,\n
+Ngaisvike iko.\n
+</item>
+<item>
+Vadzidzisi dzidzisai,\n
+Imi vanhu vake!\n
+Ngarinzwiwe dama rake\n
+Navatadzi vose.\n
+</item>
+<item>
+Asi dama renyu Ishe,\n
+Ngarisvike muno;\n
+Ngarikwane nyika yose,\n
+Ridzidzise vanhu.\n
+</item>
+<item>
+Idzo nyika dziri kure\n
+Ngadzirizivewo,\n
+Dzitarire kuna Jesu\n
+Dzichitenda Iye.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn244">
+<item>
+Tivhenekerei\n
+Chiedza chavanhu;\n
+Nezwi rakanyorwa\n
+Tiratidzwe imi- \n
+</item>
+<item>
+Kuti vana venyu\n
+Vadzidze nenyasha,\n
+Nokunanganidza\n
+Muuso hwaMwari.\n
+</item>
+<item>
+Tumai kwatiri\n
+Mweya woupenyu,\n
+Kuti titunhidze\n
+zita renyu chete;\n
+</item>
+<item>
+zarurai nzeve,\n
+Pfungwa dzitsigiswe,\n
+Kuti vana vanzwe\n
+zvinhu zvakaitwa.\n
+</item>
+<item>
+Tireverei, She,\n
+Titaure zvenyu;\n
+Nezve shoko renyu\n
+Tigodzidzisawo;\n
+</item>
+<item>
+Hwayana dzizive\n
+Izwi roMufudzi,\n
+Dzigomutevera\n
+Dzifare murudo.\n
+</item>
+<item>
+Garai matiri\n
+Tikutodzei She\n
+Mudiwe, mukudzwe,\n
+Mushandirwe nesu …\n
+</item>
+<item>
+Kuti nzira dzedu\n
+Dzidzidzise vana\n
+Kutevera imi\n
+Nayo mwoyo yose.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn245">
+<item>
+Mwari mundidzore imi,\n
+Ndizwe nyaya dzakanaka,\n
+Dzinorehwa namaKristu,\n
+Neni ndinodzida.\n
+</item>
+<item>
+Kana ndadzigamuchira,\n
+Ngandiparidze kuvamwe,\n
+Avo vasingadzizive,\n
+Vagotenda imi.\n
+</item>
+<item>
+Vamwe vanokutsvakai,\n
+Asi vanoshaya munhu\n
+Angavatsanangurire\n
+Ayo mazwi enyu.\n
+</item>
+<item>
+zvandazvipira kwamuri\n
+Imi shandai mumwoyo,\n
+Mundibise zvakaipa\n
+Ndisare ndachena.\n
+</item>
+<item>
+Femerai vanhu vose\n
+Vanodisa kuparidza,\n
+Vachiwane ichi chipo\n
+Chokudzora vanhu.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn246">
+<item>
+Ko, handingaite kuda kwaShe\n
+Nenzira yokutya vanhu?\n
+Kana ndingapupure neidi\n
+Nokureva nokuita?\n
+</item>
+<item>
+Jesu, munoziva pfungwa dzangu;\n
+Ko, ndiri kutsvaka here\n
+Kukudza nokunaka kwenyika\n
+Kana kukudza kwamuri?\n
+</item>
+<item>
+Rudo rwaShe rwandimanikidza\n
+Kuti ndigotsungirira\n
+Kutsvaka avo vanorasika,\n
+Kuvaponisa murufu.\n
+</item>
+<item>
+Ndinokupai upenyu hwangu\n
+Kuti hushandiswe nemi;\n
+Kuda kwenyu, Ishe ngakuitwe,\n
+zita renyu ngarikudzwe.\n
+</item>
+<item>
+Ndipei rusimbaradzo rwenyu;\n
+Kunyange ngozi dziripo,\n
+Ndinozopupura nechokwadi\n
+Muchindipa mweya wenyu.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn247">
+<item>
+Tiyamurei nengoni\n
+Pakuteurira vamwe\n
+Votoisa mberi kwenyu,\n
+Ishe wedu wakanaka.\n
+</item>
+<item>
+Tokuteurai Ishe\n
+Kuti mutonge, mubate\n
+Chechi yenyu tsvene kwose\n
+Ifambe munzira yenyu.\n
+</item>
+<item>
+Ishe, tinoteurira\n
+Vaparidzi, vadzidzisi,\n
+Kuti muvavhenekere \n
+Vazivise izwi renyu.\n
+</item>
+<item>
+Tokuteurai Ishe\n
+Kuti nokugara kwavo\n
+Napakudzidzisa kwavo\n
+Vazarure izwi renyu.\n
+</item>
+<item>
+Ishe, tinoteurira\n
+Vose vanhu venyu kuti\n
+Varinzwe, variterere\n
+Izwi renyu nokurida.\n
+</item>
+<item>
+Ishe tinoteurira\n
+Ivavo vakanyengedzwa,\n
+Muvadzorere munzira\n
+Yorudo nezvirokwazvo.\n
+</item>
+<item>
+Tokuteurai Ishe\n
+Musimbise vakaneta\n
+Muyamure vanoedza\n
+Mubate vose nengoni.\n
+</item>
+<item>
+Jesu makareva kare,\n
+Anokumbira wopiwa;\n
+Tiitirei She zvino,\n
+Sezvakafanera isu.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn248">
+<item>
+Kana todyara, She,\n
+Shoko roupenyu,\n
+Richazodiridzwa nemi,\n
+Richanyatsomera.\n
+</item>
+<item>
+Nyasha dzichaita\n
+Kukohwa kukuru;\n
+Vazhinji vachazotenda\n
+Nokukukudzai.\n
+</item>
+<item>
+Unzai kwatiri\n
+Makomborero, She;\n
+Vashandi vave nesimba,\n
+Vanhu vagodzoka.\n
+</item>
+<item>
+Ipai vazhinji\n
+Rudo norufaro;\n
+Rudo runovavandudza,\n
+Vafarire denga.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn249">
+<item>
+Tiitei savashanu\n
+Vakarindira nemwenje\n
+Dakara masvika,\n
+zvamunotipa mafuta,\n
+Dirai nyasha matiri\n
+Mwenje isadzime.\n
+</item>
+<item>
+Tisave nenungo asi\n
+Nokuteura nebasa\n
+Mwenje igadzirwe;\n
+Kuti vatadzi vazhinji\n
+Vadzoke vapinde nesu\n
+Mubira renyu She.\n
+</item>
+<item>
+Hatidi kuuya toga\n
+Kubira rapaugere\n
+Tifare tiyeve;\n
+Tiuyise varasiki\n
+Navarwere navaduku\n
+Vagoona imi.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn250">
+<item>
+Fambai vaKristu, somunondorwa,\n
+Munotungamirwa noMuchinjikwa;\n
+Kristu Ishe wedu, Mutungamiri,\n
+Fambai sehondo nesimba rake;\n
+chorus\n
+Fambai vaKristu, somundorwa,\n
+Munotungamirwa noMuchinjikwa.\n
+</item>
+<item>
+Satan achatiza, anotya kwazvo.\n
+Fambai vaKristu, munogokunda;\n
+Anozungizika namazwi enyu,\n
+Simudzai mazwi, imbai mose.\n
+</item>
+<item>
+Inenda sehondo Chechi yaMwari\n
+Tichivatevera vatsvene vose;\n
+Tisatsaukaniswe, muviri mumwe,\n
+Pamwe murutendo, pamwe murudo.\n
+</item>
+<item>
+Hunogoparadzwa umambo hwose,\n
+Chechi yake Jesu inogosara;\n
+Simba reHadesi richazokundwa,\n
+Matama aJesu achazadziswa.\n
+</item>
+<item>
+Ndizvozvo fambai, fambai nesu,\n
+Rwiyo rwokukunda, ngatiombei,\n
+Kristu Ishe wedu ngaarumbidzwe,\n
+Kwamazuva ose asingapere.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn251">
+<item>
+Simukirai Jesu.\n
+Imi varwi vake;\n
+Simudzai m’chinjikwa,\n
+Tirege kukundwa;\n
+Kukunda nokukunda\n
+Tichatungamirwa,\n
+Nemhandu dzichakundwa,\n
+Jesu ndiShe kwazvo.\n
+</item>
+<item>
+Simukirai Jesu,\n
+Anotidaidza;\n
+Tiende kunorwisa\n
+Simba rokuipa;\n
+Ngatishandire iye\n
+Nyange pavavengi;\n
+Tive mbirimi dzake\n
+Tigozvidza ngozi.\n
+</item>
+<item>
+Simukirai Jesu;\n
+Vimba naye ega;\n
+Iro simba renyama\n
+Rinokundikana;\n
+Shonga nhumbi dzokurwa\n
+Rinda unamate;\n
+Pabasa zvimwe njodzi\n
+Tisashaikwepo.\n
+</item>
+<item>
+Simukirai Jesu,\n
+Kurwa kozopera;\n
+Nhasi bishi rehondo,\n
+Mangwana toimba;\n
+Kuwana anokunda\n
+Anopiwa ngundu,\n
+Achagara naMambo\n
+Nokusingapere.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn252">
+<item>
+Tiri pfumo raShe,\n
+Tin’enda kundorwa,\n
+zvino tasimuka kurwa,\n
+Hondo yaShe Kristu,\n
+Tiri pane ngozi\n
+Asi tinofara\n
+Mwoyo yedu yasimbiswa\n
+NoMutungamiri.\n
+chorus\n
+Tiri pfumo raShe,\n
+Tinomurumbidza,\n
+Tinomushandira iye\n
+Mambo ane mbiri.\n
+</item>
+<item>
+Tiri pfumo raShe,\n
+Tine zita rake,\n
+zita rakambonyoriwa\n
+Pam’chinjikwa wake\n
+Rinotipfumisa,\n
+Hatishaye chinhu\n
+Kunyange tarasikirwa,\n
+Nepfuma yapasi.\n
+</item>
+<item>
+Tiri pfumo raShe,\n
+Tichazova naye,\n
+Mukati menyatwa dzose,\n
+Ticharambwa sa’ye.\n
+Simudza mureza,\n
+Musi wasedera\n
+Musi wokukundisisa\n
+Kwepfumo raIshe.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn253">
+<item>
+Izwi raShe rakasvika,\n
+Semhodzi ndukunduku;\n
+Yakamera pavhu raShe,\n
+Mhodzi yokururama.\n
+chorus\n
+Ngaikure Tenzi wangu,\n
+Nesimba noupenyu;\n
+Ikurire miti yose,\n
+Mhodzi yokururama.\n
+</item>
+<item>
+Izwi raShe rakamera,\n
+Semhodzi m’nyika ino;\n
+Rakaita muti waShe,\n
+Chechi yoMununuri.\n
+</item>
+<item>
+Izwi rashe rinofusa\n
+Masimba echarima,\n
+Samasimba emidzimu\n
+Anetsa vana vaShe.\n
+</item>
+<item>
+Anobvuma izwi raShe \n
+Angave norufaro;\n
+Rinofusa chakaipa,\n
+Rinopa mweya mutsva.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn254">
+<item>
+Tiri vana vaMwari,\n
+Isu tiri vakundi;\n
+Nokupfuurisa\n
+Naiye wakatida.\n
+</item>
+<item>
+Musimboti ndiJesu,\n
+Isu tiri vakundi;\n
+Tinovimba naye;\n
+Isu tiri vakundi.\n
+</item>
+<item>
+Hatitye hukukutu,\n
+Isu tiri vakundi;\n
+Hatitye kurwara,\n
+Isu tiri vakundi.\n
+</item>
+<item>
+Hatichatya pakufa,\n
+Isu tiri vakundi;\n
+Kana paupenyu,\n
+Isu tiri vakundi.\n
+</item>
+<item>
+Anotinyengeterera,\n
+Isu tiri vakundi;\n
+Pane zvivi zvedu,\n
+Isu tiri vakundi.\n
+</item>
+<item>
+Ndiani wotirwisa?\n
+Isu tiri vakundi;\n
+Mwari anotirwira,\n
+Isu tiri vakundi.\n
+</item>
+<item>
+Pazvinhu izvi zvose,\n
+Isu tiri vakundi;\n
+Nokupfuurisa\n
+Naiye wakatida.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn255">
+<item>
+Dombondipa meso ndione,\n
+Pauzuru kudenga;\n
+Ndionepo vano utsvene,\n
+Vanofara kunaShe.\n
+</item>
+<item>
+zviya zvaiva panyika\n
+Vaichema misodzi;\n
+Vaimanikwa nokuedzwa\n
+Kusina kuzorora.\n
+</item>
+<item>
+Ndakabvunza ivo vakundi;\n
+Rabvepi simba renyu?\n
+Vakati: Rabva kuna iye\n
+wakatifira isu.\n
+</item>
+<item>
+Vakaona rutsoka rwake\n
+Rwananga paupenyu;\n
+Vakarondedza gwara rake,\n
+Vazorora kudenga.\n
+</item>
+<item>
+Ngaarumbidzwe M’tungamiri\n
+Nomuratidzo wake\n
+Kusashaike muteveri\n
+Panero gwara rake.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn256">
+<item>
+Ngatiimbei rwiyo rutsva\n
+Navazhinjizhinji kudenga,\n
+Ndivo vanhu vakadaidzwa\n
+Vakatendeseka.\n
+chorus\n
+Kubwinya nokukurumbidza\n
+Nesimba ngazvive zvaJesu,\n
+Gwayana robata ushe\n
+Hareruya! Amen!\n
+</item>
+<item>
+Mwari wedu wesimba rose,\n
+Ndiye wakasika zviripo,\n
+zvikasikwa nokuda kwake;\n
+NdiMambo wazvose,\n
+</item>
+<item>
+Mwari ana masimba ose,\n
+Mabasa ake akakura,\n
+Nzira dzake dzakarurama,\n
+NdiShe wamarudzi.\n
+</item>
+<item>
+Gwayana rakabayiwa\n
+Ndiye wakatengera Mwari\n
+Vanhu vendimi dzose dzose\n
+Namarudzi ose.\n
+</item>
+<item>
+Mwari wedu wesimba rose\n
+wobata ushe. Hareruya!\n
+Ndiye Mambo wamadzimambo.\n
+NdiShe wamadzishe.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn257">
+<item>
+Ishe makamboburuka,\n
+Muchigombosiya denga,\n
+Pamwe noushe hwenyu;\n
+Ndimi Ishe makaiteri.\n
+</item>
+<item>
+Ishe, makavinga munhu\n
+Kuti muzomununura\n
+Nokumupa Mweya wenyu;\n
+Ndimi Ishe makaiteri.\n
+</item>
+<item>
+Ishe makavinga nyika,\n
+Kuti mugoinunura\n
+Nokupira ropa renyu;\n
+Ndimi Ishe makaiteri.\n
+</item>
+<item>
+Ishe tungamirai nyika\n
+Kuti inange kwamuri,\n
+Ichiita kuda kwenyu;\n
+Ndimi Ishe mungaiteri,\n
+</item>
+<item>
+Ishe, dzimai kubayana,\n
+Kusina chakunotipa,\n
+Kunopunza misha yedu;\n
+Ndimi Ishe mungaiteri.\n
+</item>
+<item>
+Mirai nesu Changamire,\n
+Tisamire tiri toga,\n
+Munoziva shumba yedu;\n
+Ndimi Ishe mungaiteri.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn258">
+<item>
+Baba munotipa zvipo\n
+zvakanaka zvakanyanya,\n
+Tipei njere namasimba\n
+zvokushandisa zvose.\n
+</item>
+<item>
+Tipei rugare pabasa,\n
+Tizvibate pakufara;\n
+Tishandise nhengo dzedu\n
+Sokuda kwenyu, Mwari.\n
+</item>
+<item>
+bisai zvinonyadza zvose\n
+Murudzi rwedu namamwe;\n
+Mundikundire zviyedzo,\n
+Simba razvo ripere.\n
+</item>
+<item>
+Ivai nesu tisimbiswe\n
+Pakushingirira kwedu,\n
+Tigokunda mhandu dzose,\n
+Tisanete pakurwa.\n
+</item>
+<item>
+Tenzi wedu nguva dzose\n
+Mutitungamire mberi;\n
+Kuti nyika iponiswe\n
+Tipei simba nenjere.\n
+</item>
+<item>
+Baba ndimi matitsvaka,\n
+Rudo rwenyu rwatibata,\n
+Mweya wenyu watikomba;\n
+Tinzwei Mwari wedenga.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn259">
+<item>
+Mwari ane simba, tinoteurira\n
+Vane simba rokutonga pasi pano,\n
+Vagare vachitsvaka kukudzwa kwenyu.\n
+</item>
+<item>
+Muvazadze noMweya Mutsvene wenyu\n
+zviito zvavo zvitungamirwe nemi,\n
+Vapote vachiita zvakarurama.\n
+</item>
+<item>
+Muvape ngoni dzenyu vatongi vose,\n
+Dzokuti vatonge zvakanakisisa;\n
+Vachengete chokwadi nokururama.\n
+</item>
+<item>
+Muropafadze ndudzi dzose dzenyika,\n
+Ngadzive idzo nomwoyo mumwe chete,\n
+Mudzipe kubvumirana nokunzwana.\n
+</item>
+<item>
+Tipei mwoyo tose yokukudai,\n
+Tisimbe kuchengeta mirau yenyu,\n
+Tigare tichitsvaka kukudzwa kwenyu. \n
+</item>
+    </string-array>
+
+    <string-array name="hymn260">
+<item>
+Ishe komborera Afrika\n
+Ngaisimudzirwe zita rayo;\n
+Inzwai miteuro yedu,\n
+Ishe, komborera\n
+Isu mhuri yayo.\n
+Uya Mweya\n
+(Uya, uya, komborera)\n
+Uya Mweya,\n
+Uya, Mweya Mutsvene;\n
+Utikomborere isu mhuri yayo.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn261">
+<item>
+Imba yorufaro mamunodiwa\n
+Shamwari wedu noMuponisi,\n
+Imi muri pamusoro pavo vose\n
+Vanouya kuzoishanyira.\n
+</item>
+<item>
+Imba yorufaro ina vaviri\n
+Nomwoyo mumwe chete norudo\n
+Rufu rwovatsaura chinguvana\n
+Asi humwe hwavo huchiripo.\n
+</item>
+<item>
+Imba yorufaro ina vaduku\n
+Vakapiwa imi paucheche;\n
+Imi shamwari wavo wokudenga\n
+Munovachenga kukunda ‘mai.\n
+</item>
+<item>
+Imba yorufaro mamunodiwa\n
+Vanonamata nebasa rose;\n
+ose mabasa achinge matsvene\n
+Amunoitirwa imi IShe.\n
+</item>
+<item>
+Imba yorufaro munoti vose\n
+Vanorega kukanganwa imi;\n
+Vane rufaro runofashukira,\n
+Vanokudai vanodawo.\n
+</item>
+<item>
+Imba yorufaro munoti vose\n
+Vane mwoyo inotambudzika,\n
+Vanonzwa kwamuri Munyaradzi,\n
+N’anga yakanakisa yomwoyo.\n
+</item>
+<item>
+Kana vose vapedza basa pano\n
+Vachasangana nemi kudenga,\n
+Uko makabva makazokwirazve\n
+Kumusha wenyu usingapere.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn262">
+<item>
+Kudzai Jesu, imi vana mose\n
+Anoda, anoda,\n
+Kudzai Jesu, imi vana mose,\n
+Anoda, anoda.\n
+</item>
+<item>
+Vongai Jesu, imi vana mose,\n
+Anoda, anoda,\n
+Vongai Jesu, imi vana mose,\n
+Anoda, anoda.\n
+</item>
+<item>
+Idai Jesu, imi vana mose\n
+Anoda, anoda.\n
+Idai Jesu, imi vana mose,\n
+Anoda, anoda.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn263">
+<item>
+Mwari wakasika\n
+Nyika, mhepo, denga;\n
+wakasikazve zuva\n
+Anondida.\n
+</item>
+<item>
+Mwari wakasika\n
+Maruva nemiti,\n
+Usiku nesikati,\n
+Anondida.\n
+</item>
+<item>
+Mwari wakasika\n
+Mwedzi nenyenyedzi,\n
+Mwari wakandisika,\n
+Anondida.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn264">
+<item>
+Mwana angazive\n
+Kuti Mwari rudo,\n
+wakaruisa pachena\n
+Pasi nokudenga\n
+</item>
+<item>
+Kana ndatarisa\n
+Kumabasa ake,\n
+Ndinorava kwesekwese\n
+Kuti Mwari rudo.\n
+</item>
+<item>
+Maruva mazhinji\n
+Anondidzidzisa,\n
+Pamwe neshiri dzoimba\n
+Kuti Mwari rudo.\n
+</item>
+<item>
+Nenyenyedzi dzose\n
+Dzinopenya kure,\n
+Dzinondiudza zvaMwari\n
+Kuti ari pedyo.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn265">
+<item>
+Mwari baba wedu\n
+Tichengetei,\n
+Pahope tarara\n
+Tivhumbamirwe.\n
+</item>
+<item>
+Yamurai mai\n
+Pamwe nababa,\n
+Vagotirerera\n
+Pakutya imi.\n
+</item>
+<item>
+Tipeiwo rudo\n
+Kuvanhu vose\n
+Tive vana venyu\n
+SaIshe Jesu.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn266">
+<item>
+Mufudzi ropafadzai\n
+Ini hwayana yenyu;\n
+Ndichengei pausiku\n
+Kudakara mangwana.\n
+</item>
+<item>
+Mandiperekedza nhasi,\n
+Ndinotenda maurano;\n
+Makandipa imba yangu;\n
+Inzwai ndoteura.\n
+</item>
+<item>
+Mundiregerere zvivi;\n
+Fadzai hama dzangu;\n
+Ngandiendewo kudenga\n
+Kwandinoda kugara.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn267">
+<item>
+Kure muzamba iro, pasina rukukwe,\n
+Ishe Jesu muuduku akakotsirapo;\n
+Nyenyedzi dzakapenya, dzikamutarisa\n
+Ishe Jesu muduku arere pauswa.\n
+</item>
+<item>
+Nemombe dzakakuma, Mwana wakamutswa,\n
+Ishe Jesu muuduku haana kuchema;\n
+Ndokudai Ishe Jesu, nditarisei pano\n
+Muve neni dakara zuva rabudazve.\n
+</item>
+<item>
+Ndinokukumbirai kuti muve neni,\n
+Mugare muchindida, muchindidzidzisa;\n
+Chengetai vana vose, muvaropafadze,\n
+Mutigadzire kuti tiende kudenga.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn268">
+<item>
+Uyai imi vana, uyai unganai\n
+Kumusha webetrehema mose uyai\n
+Manenji aitwa panyika, onai!\n
+Ndibaba wedenga waita kudai!\n
+</item>
+<item>
+watuma Mwana’ke, waberekwa ‘po;\n
+Uyai timuone maaiswa ‘mo;\n
+Avete mudanga; wanakawo sei,\n
+Uyai vana mose, mugwadamirei!\n
+</item>
+<item>
+Maria naJosefa ndivo varipo,\n
+Vafudzi naivo vatosvikawo;\n
+Vakanzwa vatumwa voimba: Farai!\n
+Chinzwai nemi mose, vachikuudzai!\n
+</item>
+<item>
+Vatumwa vakati: Musatye onai,\n
+Mufaro mukuru ndowatokupai;\n
+Onai, maponerwa mumusha uko,\n
+wamakamboshuva wazosvika ‘po.\n
+</item>
+<item>
+wauya, togoraramiswa naye;\n
+Isu, tarasika, tigodzoswazve;\n
+NdiMwana wababa avete apo;\n
+Hendei betrehema tinamate’ko.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn269">
+<item>
+Jesu wakambova mwana\n
+Kufanana nesu,\n
+waichibatsira baba\n
+Naamai vake.\n
+</item>
+<item>
+Jesu wakambova mwana\n
+wakadzidziswawo,\n
+wakadzidza kuverenga\n
+Nokunyora sesu.\n
+</item>
+<item>
+Jesu wakambova mwana\n
+waida kutamba,\n
+waitamba nokufara\n
+Neshamwari dzake.\n
+</item>
+<item>
+Ngatigare zvakanaka\n
+Kufanana naye,\n
+Timufadze pakutamba\n
+Napabasa redu.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn270">
+<item>
+Vachenjeri ivo\n
+Vabva kure sei\n
+Kuzoona Jesu,\n
+Mwana Mutsvene!\n
+</item>
+<item>
+zvatinomushuva\n
+Achava pedyo,\n
+Nyika yatigere\n
+Inyika yake.\n
+</item>
+<item>
+Vanomunamata\n
+Vachamuwana,\n
+Vasangane naye\n
+Mangwanangwana.\n
+</item>
+<item>
+Nomuminda yedu\n
+Nomukukohwa,\n
+Nyangwe pamisika\n
+Towana Jesu.\n
+</item>
+<item>
+Vabati vehove\n
+Votaura naye\n
+Savadzidzi vake\n
+PaGaririya.\n
+</item>
+<item>
+wese musha, muno\n
+Munyika yedu,\n
+Unganatswe naye,\n
+Sowebhetani.\n
+</item>
+<item>
+Kana tichimuda\n
+Ari pedyo sei!\n
+wotsvaka kugara\n
+Mumwoyo yedu\n
+</item>
+    </string-array>
+
+    <string-array name="hymn271">
+<item>
+Jesu shamwari yavana\n
+Shamwari yedu\n
+Ndichengetei, ndive pedyo kwamuri.\n
+</item>
+<item>
+Ngandidzidze ndichikura\n
+Nokururama,\n
+Maiva muduku makachenjera.\n
+</item>
+<item>
+Regai kundisiya ndoga,\n
+Shamwari yangu,\n
+Ndichakudai kudzamara pakufa.\n
+Copyright: by permission of oxford University Press.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn272">
+<item>
+Vaduku vakaimba\n
+Hozana! Hozana!\n
+MuTemberi rekare\n
+Vakaimba rwiyo;\n
+Kuna Jesu Shamwari,\n
+waivada kwazvo,\n
+Vaduku vakaimba\n
+Nziyo dzinofadza.\n
+</item>
+<item>
+Vakamuperekedza\n
+Pamwe navazhinji\n
+Vachiimba zvikuru\n
+Nokupemberera.\n
+Ngirozi dzakaimba\n
+Pamwe chete navo;\n
+Hozana wokudenga;\n
+Mwari ngaakudzwe.\n
+</item>
+<item>
+Mashizha akanaka\n
+Akawaridzwapo,\n
+Maungira erwiyo\n
+Akanzwikwa kose.\n
+She wedenga nepasi\n
+wakatasva dhongi,\n
+Asingashore vana\n
+Vakamuimbira.\n
+</item>
+<item>
+Hozana wokudenga!\n
+Tinoimba navo,\n
+Jesu M’ponisi wedu,\n
+Mambo wokudenga.\n
+Ngatiimbire Jesu\n
+Nomwoyo namazwi,\n
+Tigare nokufara\n
+Nokusingapere.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn273">
+<item>
+Vana veJerusarema\n
+Vakaimbira Jesu,\n
+Navana vanhasiwo\n
+Vanorumbidza Jesu.\n
+chorus\n
+Inzwai,Vadiki voimba,\n
+Inzwai,Vadiki voimba,\n
+o hozana, o hozana,\n
+o hozana kuna Mambo.\n
+</item>
+<item>
+Todzidza kuda Mwari,\n
+Torava shoko rake;\n
+Tigonanga kudenga,\n
+Tigorumbidza Mwari.\n
+</item>
+<item>
+Vakuru navaduku\n
+Tinomukurumbidza,\n
+Noku kuwa kukuru\n
+Hozana kuna Mambo.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn274">
+<item>
+Zuva redu ravapo,Jesu wakamuka.\n
+Jesu wakamuka,\n
+chorus\n
+Chifarai, uchirai,\n
+Chitendai, chivongai,\n
+Jesu wakamuka,Pfugamirai.\n
+</item>
+<item>
+Nhasi ndiyo Svondo ‘yo\n
+Yaakamuka Jesu.\n
+</item>
+<item>
+Tirirangarirewo\n
+Tichipira iye.\n
+</item>
+<item>
+Nokumuka kwake She\n
+Takaruramiswa.\n
+</item>
+<item>
+Guva rakakundzwa sei!\n
+Rufu tichatyirei?\n
+</item>
+<item>
+Iye wakakwira ‘ko\n
+Kuna baba wedu.\n
+</item>
+<item>
+watigadzirirawo\n
+Pokugara uko.\n
+</item>
+<item>
+Jesu tichaonazve\n
+Pakudzoka kwake.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn275">
+<item>
+Jesu makapfavisa\n
+Onai ini mwana\n
+Mundiitire tsitsi\n
+Kuti ndigare nemi.\n
+</item>
+<item>
+Ndinoda kusedera,\n
+Musazondirambidza\n
+Muumambo hworudo\n
+Ndipei nzvimbo yangu.\n
+</item>
+<item>
+Ndinokukumbirai\n
+Kuti mundipfavise,\n
+Hamushatirwe nhando\n
+Ndinoda kuva semi.\n
+</item>
+<item>
+Jesu mufudzi wangu\n
+Mundibate norudo\n
+Ndive anokudai\n
+Nomwoyo wangu wose.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn276">
+<item>
+Jesu munoshovedza vaduku,\n
+Ndinouya;\n
+Ndibatei mutaure neni\n
+Muponisi,\n
+Kuti ndisatsauke panzira,\n
+Ndibatwe naSatani muvengi.\n
+</item>
+<item>
+zvinondifadza kuti She wangu\n
+Makafamba\n
+Netsoka tsvene panzira yangu\n
+Pano pasi;\n
+Izvo makanga muri mucheche,\n
+Makavakudza vazvari venyu.\n
+</item>
+<item>
+Jesu pindurai mwoyo wangu\n
+Uve m’tsvene,\n
+Somwoyo wenyu, mwoyo muchena,\n
+Mugare’mo,\n
+zvino ndichaziva Mwari baba, \n
+Ndinogokura nokuchenjera.\n
+</item>
+<item>
+Ndinogokurumbidza M’ponisi\n
+Misi yose;\n
+Pakutamba napabasa rangu\n
+Ndichaimba.\n
+Ndiyamurei ndikufadzei\n
+Ndichengete yose mirau yenyu.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn277">
+<item>
+Ndouya kuJesu\n
+Anondifarisa,\n
+Anondinyaradza,\n
+Panhamu yangu.\n
+chorus\n
+Ndouya kuJesu\n
+Ndinogofara,\n
+Anovashovedza\n
+Vaduku se’ni.\n
+</item>
+<item>
+Ndouya kuJesu\n
+Anondinzwa kwazvo\n
+wondiregerera\n
+Anondidisa.\n
+</item>
+<item>
+Ndouya kuJesu\n
+Achandibatsira\n
+Andiperekedze\n
+Kunyika yake.\n
+</item>
+<item>
+Ikoko navamwe\n
+Tichafarisisa\n
+Tichiona Jesu,\n
+M’ponisi wedu.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn278">
+<item>
+Ndiropafadzei She,\n
+Mundidzidzise Jesu;\n
+Ndoda mwoyo muchena;\n
+Mufudzi, ndichengetei.\n
+</item>
+<item>
+Ndiri muduku asi\n
+Makadanidza vose;\n
+Ndipei kudya kwenyu;\n
+Mufudzi, ndichengetei\n
+</item>
+<item>
+Ndiyamurei Jesu;\n
+Handina simba ini;\n
+Ndinotenda kwamuri;\n
+Mufudzi, ndichengetei.\n
+</item>
+<item>
+Handidi kutsauka,\n
+Ndoda kugara nemi\n
+Panzvimbo yakanaka;\n
+Mufudzi, ndichengetei.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn279">
+<item>
+Baba, tinotenda,\n
+Nezvipo zvenyu,\n
+Miti namaruva,\n
+Mhuka neshiri.\n
+chorus\n
+Tidzidzisei She\n
+Kuva netsitsi\n
+Kuzvisikwa zvose\n
+zviri panyika.\n
+</item>
+<item>
+Mhuka dzokurima\n
+Nokutakura,\n
+Dzimwe dzinochenga\n
+Isu mumisha.\n
+</item>
+<item>
+Neshiri dzedenga\n
+Dzinoimbisa,\n
+Dzinorwisa mhandu\n
+Dzedu muminda.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn280">
+<item>
+Ndokutendai baba\n
+Nesimba randinaro,\n
+Nokuti ndinogona \n
+Kufamba nokumhanya.\n
+</item>
+<item>
+Ndokutendai baba\n
+Navashamwari vangu,\n
+Nokuti tinotamba\n
+Tifare pamwe chete.\n
+</item>
+<item>
+Ndokutendai baba\n
+Nebasa randinaro,\n
+Kudzidza nokuimba\n
+Nokubatsira vamwe.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn281">
+<item>
+Ishe Mwari ndiitei\n
+Kuti ndive mwenje,\n
+Unovhenekera vose\n
+Pandinenge ndiri.\n
+</item>
+<item>
+Ishe Mwari ndiitei\n
+Kuti ndive ruva,\n
+Rinofadzisa vanhu\n
+Vanogara neni.\n
+</item>
+<item>
+Ishe Mwari ndiitei\n
+Kuti ndive  rwiyo\n
+Runofadza vanochema,\n
+Runondifadzawo.\n
+</item>
+<item>
+Ishe Mwari ndiitei\n
+Kuti ndive m’donzvo\n
+Kuti ndiyamure ivo\n
+Vakapera simba.\n
+</item>
+<item>
+Ishe Mwari ndiitei\n
+Kuti ndive rumbo,\n
+Rworudo norwokutenda\n
+Mune nzira dzenyu.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn282">
+<item>
+Kamwenje kangu aka\n
+Ndoda kabvire,\n
+Kamwenje kangu aka           \n
+Ndoda kabvire.\n
+chorus\n
+Kabvire, kabvire, kabvire.\n
+</item>
+<item>
+Kasavande mumbiya\n
+Ndoda kabvire.\n
+</item>
+<item>
+Handidi kukadzima,\n
+Ndoda kabvire.\n
+</item>
+<item>
+Kabvire She asvike,\n
+Ndoda kabvire.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn283">
+<item>
+Nditungamire kuna She Jesu;\n
+Ndiyamure kuti ndimude,\n
+Ndiye M’ponisi, ndingamutende,\n
+Ndoda kumuona, ndiratidze.\n
+</item>
+<item>
+Nditungamire, ndiye Mufudzi,\n
+Mwoyo wake wakapfavisa;\n
+Anotinzwira tsitsi norudo,\n
+Anondidana mwana wake.\n
+</item>
+<item>
+Ndouya Jesu, M’ponisi wangu,\n
+Ndokutendai, ndozvipira,\n
+Ndigam’chirei netsitsi dzenyu,\n
+Ndinoda kufanana nemi.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn284">
+<item>
+Ishe woutsvene.\n
+Tinzwei isu;\n
+zvatinopfugama,\n
+Tiropafadzwe.\n
+</item>
+<item>
+Nyange muri m’tsvene,\n
+Ishe wedenga,\n
+Munotiterera\n
+Pakunamata\n
+</item>
+<item>
+Tichiri vaduku,\n
+Hatina simba;\n
+Titungamirei\n
+Munzira yenyu.\n
+</item>
+<item>
+Tidzivei pamhosva\n
+Mazuva ose;\n
+Yamurai isu\n
+Tide’mi moga.\n
+</item>
+<item>
+zvatinoshovedzwa\n
+Nemi kudenga,\n
+Tichazodaira:\n
+Tauya  Ishe.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn285">
+<item>
+Mudzongeri wakabuda\n
+Kundokusha mbeu dzake.\n
+wakakusha mbeu dzake\n
+Dzaakanga asarudza.\n
+</item>
+<item>
+Dzimwe mbeu dzakawira\n
+Pane ivhu romunzira\n
+Dzakatsikwa Idzombeu\n
+Shiri dzikanonga yose.\n
+</item>
+<item>
+Dzimwe mbeu dzakawira \n
+Muvhu ririparuware\n
+Hadzina kukura mbewu\n
+Muvhu risina zvokudya.\n
+</item>
+<item>
+Dzimwe mbeu dzakawira\n
+Muvhu rakamera minzwa\n
+Minzwa ikakura nadzo\n
+Minzwa ikavhunga mbeu.\n
+</item>
+<item>
+Dzimwe mbeu dzakawira\n
+Muvhu riya rakanaka\n
+Dzamera dzakabereka\n
+zvibereko zvine zana.\n
+</item>
+<item>
+Mbeu ishoko raMwari\n
+Mwoyo wangu ndiro ivhu\n
+Mwoyo wangu ubereke\n
+zvibereko zvamazana.\n
+</item>
+<item>
+Baba ngandidzivirirwe\n
+Kune mhandu dzomunyika\n
+Ndivewo anobereka\n
+zvibereko zvamazana.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn286">
+<item>
+Mati imi baba wedu\n
+Pakusika kwenyu vanhu,\n
+Makavasika vaviri,\n
+Murume nomunhukadzi.\n
+</item>
+<item>
+Makariburitsa izwi;\n
+Munhu ngaasiye baba\n
+Agare nom’kadzi wake,\n
+Vave nyama imwe chete.\n
+</item>
+<item>
+Naivava vatsva vedu\n
+Murume nomusikana\n
+Vauya kusvitswa pano\n
+Seyo tsika ye’zwi renyu.\n
+</item>
+<item>
+Vaitei vave mumwe\n
+Nokubvuma nokuita;\n
+Vati pakugara kwavo\n
+Vayamurane norudo.\n
+</item>
+<item>
+Vasimbaradzei baba\n
+Vaibate nzira yenyu\n
+Pamakore avo ose\n
+Vachengetwe nemi baba\n
+</item>
+    </string-array>
+
+    <string-array name="hymn287">
+<item>
+Mwari worudo, rudo rwakakwana\n
+Topfugama paterone yenyu\n
+Tichikumbirira ava vaviri\n
+Vave norudo rusingapere.\n
+</item>
+<item>
+Mwari wo’penyu wakakwana chose\n
+Vasimbisisei murutendo;\n
+Vapei mwoyo inoshingirira\n
+Isingatye kurwadza nokufa.\n
+</item>
+<item>
+Panhamo dzavo vapei rufaro,\n
+Norunyararo padambudziko;\n
+Ngavarindire musi unouya\n
+Musi worudo rusingapere.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn288">
+<item>
+Ishe! Ikoku kusvitswa\n
+Kwavaranda venyu;\n
+Ngavakomborerwe nemi\n
+Nokuvapo kwenyu.\n
+</item>
+<item>
+Ngavasanganiswe nemi\n
+Vafadziswe nemi,\n
+Vaite mumwe kwamuri\n
+Vanzwe rudo rwenyu.\n
+</item>
+<item>
+Hatikumbire rufaro\n
+Rusina maturo,\n
+Rukomborero rwababa\n
+Tovakumbirira.\n
+</item>
+<item>
+Mune dzose nzira dzavo\n
+Ngavabvume imi;\n
+Pakufamba kose kwavo\n
+Kugadzirwe nemi.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn289">
+<item>
+Mangwanani zvinhu zvose\n
+zvinovonga imi Ishe;\n
+Imi muno ‘penyu hwose,\n
+Nesu takachengwa nemi.\n
+</item>
+<item>
+Hero zuva rinobuda\n
+Richifamba nzira yaro;\n
+Naro rinotizivisa\n
+Kuti muri Ishe waro.\n
+</item>
+<item>
+Nokusvika kwoyo musi\n
+Kwava nokuyedza kwawo;\n
+Hoyu! Nawo unoreva,\n
+Hunzi, muri Muiti wawo.\n
+</item>
+<item>
+Namatenga akakomba,\n
+Amire neminamato,\n
+Naiwo anodzidzisa\n
+Achiti, Muri muchengi.\n
+</item>
+<item>
+zvose zvinhu zvatarira,\n
+Imi kose kudya kwazvo;\n
+zvinenge zvinokumbira\n
+Kwamuri, Musiki wazvo.\n
+</item>
+<item>
+Tinogoti baba wedu,\n
+Imi tinokuvongai,\n
+Imi M’sununguri wedu,\n
+Nemiwo Mweya Mutsvene.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn290">
+<item>
+Denga rizere nemi\n
+Kristu Mwenje mukuru,\n
+Zuva rokururama \n
+Rima rakundwa nemi;\n
+Nyamatsatsi, budai\n
+Yedzera mwoyo wangu.\n
+</item>
+<item>
+Handingafumofara\n
+Kana musipo imi;\n
+Rufaro haruvepo\n
+Kudzamara musvike;\n
+Kana mandiyedzera\n
+Ndinofara zvikuru.\n
+</item>
+<item>
+Vheneka mwoyo wangu\n
+Rima rangu ritandwe;\n
+Ndizadzwe noutsvene,\n
+Kutya kugoparadzwa;\n
+Mundiyedzere kwazvo\n
+Kuve samasikati.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn291">
+<item>
+Zuva rabuda kakare\n
+Tinonamatazve,\n
+Kuti kupenya kwaMwari\n
+Kutitungamire.\n
+</item>
+<item>
+Tisatsaukane naMwari\n
+Nenzira yezvivi;\n
+Titaure chokwadi chete,\n
+Tizere norudo.\n
+</item>
+<item>
+Tiyamureiwo Kristu\n
+Musi wose uno,\n
+Pakunyengedza kwaSatani\n
+Kunotikombera.\n
+</item>
+<item>
+Tinoda kukudza imi\n
+Namabasa edu;\n
+Kana atangiswa nemi\n
+Angabudirire.\n
+</item>
+<item>
+Ngatizvibatei, Mwari,\n
+Tirege kukundwa\n
+Nokukanuka kwenyama\n
+Kwakaipa kwazvo.\n
+</item>
+<item>
+Ngakuve ruropafadzo\n
+Kuna Mwari baba\n
+Nokuna Mwanakomana,\n
+NoMweya Mutsvene.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn292">
+<item>
+Muka mweya wangu, famba\n
+Enda kundoita basa;\n
+Rasa nungo dzako, muka\n
+Inguva yokuteura.\n
+</item>
+<item>
+Upfidze kukanganisa\n
+Nhasi uno uchenjere,\n
+Ushandise matarenda\n
+Sezva uchiri mupenyu.\n
+</item>
+<item>
+Taura mazwi echokwadi\n
+Uve nomwoyo mutsvene;\n
+Mwari anoona zvose\n
+Pfungwa nezviito zvako.\n
+</item>
+<item>
+Muka mwoyo wangu, fara,\n
+Imba pamwe nengirozi,\n
+Dzinoramba dzichiimba\n
+Dzichikurumbidza Mwari.\n
+</item>
+<item>
+Rukurumbidzo ngaruve\n
+Kwamuri Ishe wedenga,\n
+Mandichengeta usiku\n
+Mandipamhidzira simba.\n
+</item>
+<item>
+Ndauyazve kuzopika\n
+Tive nechitenderano;\n
+Chengai pfungwa dzangu dzose\n
+Ndizadzwe nomweya wenyu.\n
+</item>
+<item>
+Nditungamirei nhasi\n
+Pabasa randinoita,\n
+Muzvifungo namashoko\n
+Ndikukudzei nazvose.\n
+</item>
+<item>
+Mwari mupi wezvitsvene\n
+Ngaarumbidzwe nazvose;\n
+Rumbidzai vokudenga\n
+Baba, Mwana, naye Mweya.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn293">
+<item>
+Garai neni! zuva radoka;\n
+Rima rasvika; garai neni!\n
+Vamwe vayamuri vakoniwa\n
+Ishe Muyamuri, garai neni.\n
+</item>
+<item>
+Ndinokutsvakai nguva dzose;\n
+Ngoni dzenyu dzokunda muedzi;\n
+Ndimi chete nhungamiri yangu,\n
+Parima, pachena, garai neni.\n
+</item>
+<item>
+Handitye kana muri pedyo;\n
+Nhamo haireme, handicheme;\n
+Rufu kukunda kwako kuripi?\n
+Ndokunda kana mugere neni.\n
+</item>
+<item>
+Misai muchinjikwa ndotandadza;\n
+Ndivhenekerwe kuti ndione\n
+Kuyedza kunogouya zvino;\n
+Mu’penyu, murufu, garai neni.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn294">
+<item>
+Ndinokukurumbidzai,\n
+Mwari mukuru, mauro ano;\n
+Ndivhumbamirwe sehuku,\n
+Nawo mapapiro enyu,\n
+</item>
+<item>
+Ndiregererei baba,\n
+Nenzira yaJesu Kristu,\n
+zvose zvakaipa zvangu\n
+zvandaita musi uno.\n
+</item>
+<item>
+Ndidzidzisei Jehovha.\n
+Ndigere pano panyika,\n
+Ndisingatye kufa uku\n
+Kunouya mumwe musi.\n
+</item>
+<item>
+Mweya wangu ngaugare\n
+Uve nemi pane rima,\n
+Ngandirinde zvakanaka\n
+Kuti ndimuke nesimba.\n
+</item>
+<item>
+Kana ndashayiwa hope\n
+Ndipei pfungwa dzedenga;\n
+zvibve kwandiri zviroto\n
+zvakaipa zvousiku.\n
+</item>
+<item>
+Ngandimire nguva dzose\n
+Ndakabata mwenje wangu,\n
+Ndifare kuona denga\n
+Kana rufu ruchisvika.\n
+</item>
+<item>
+Mukurumbira kwamuri\n
+Unoratidzwa nemwenje,\n
+Nomwenje wakabatidzwa\n
+Ndimirire ushe hwenyu.\n
+</item>
+<item>
+Mwari, mupi wezvitsvene,\n
+Ngaarumbidzwe nazvose;\n
+Rumbidzai vokudenga,\n
+Baba, Mwana, naye Mweya.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn295">
+<item>
+Ishe imi mandisimbaradza\n
+Masikati pakudikitira,\n
+Garai neni zuva radoka\n
+Muve neni kakare usiku.\n
+</item>
+<item>
+Kana mwoyo uchinge waneta,\n
+Izwi renyu rinondizorodza;\n
+Taurai izwi rorufaro,\n
+Riropafadze, rindinyaradze.\n
+</item>
+<item>
+Kana muchinditara maurano,\n
+Ndaropafadzwa Jehovha Ishe;\n
+Kana ndinemi zuva ravira,\n
+Handidi chimwe chokukwanisa.\n
+</item>
+<item>
+Uyai She muve mweni wangu\n
+Shure kwebesanwa nhasi uno,\n
+Ndipei rufaro nezororo,\n
+Ruponiso noruregerero.\n
+</item>
+<item>
+Rapai maronda, nezvirwere\n
+zvauya kwandiri musi uno,\n
+Kuti ndirege kugungudzika,\n
+Ndizorore pane mwoyo wenyu.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn296">
+<item>
+Mumwe musi ava mauro,\n
+Varwere vakaungana,\n
+Panyasi paJesu Ishe,\n
+Vakaenda norufaro.\n
+</item>
+<item>
+Nanhasi isu tauya,\n
+Tosedera nezvirwere;\n
+Mumhu wenyu hatione,\n
+Toziva kuti muripo.\n
+</item>
+<item>
+Tandai madzudzo edu;\n
+Vamwe vanorwara kwazvo;\n
+Vamwe havanyatsokudai;\n
+Vamwe vakarasa rudo.\n
+</item>
+<item>
+Vamwe vakaneta pano,\n
+Vakashaya ruyamuro;\n
+Vamwe vane hama dzavo\n
+Dzinovatambudza kwazvo.\n
+</item>
+<item>
+Vose vanoda zororo,\n
+Vanoda ruregerero;\n
+Vanoda kukushandirai\n
+Tonzwa kuipa mumwoyo.\n
+</item>
+<item>
+Kristu imi muri Munhu,\n
+Makamboedzwa zvikuru;\n
+Meso enyu anoona\n
+zvatinotsvaka kuvanza.\n
+</item>
+<item>
+Simba renyu richigere;\n
+Hamuna zvinokundika.\n
+Tinzweiwo maurano\n
+Tirapwe netsitsi dzenyu.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn297">
+<item>
+Mwari baba, muve nesu,\n
+Mutichengete usiku\n
+Mutiite vana venyu,\n
+Parima tivhenekerwe\n
+</item>
+<item>
+Jesu, runyararo rwedu,\n
+bvisai zvakaipa zvedu;\n
+Revai dama, tinunurwe,\n
+Parima tivhenekerwe.\n
+</item>
+<item>
+Mweya douyai kwatiri,\n
+Titsvenisei usiku;\n
+Mwoyo ive musha wenyu,\n
+Parima tivhenekerwe.\n
+</item>
+<item>
+Vatatumumwe sederai;\n
+Ivai nesu paupenyu,\n
+Ivai nesu napakufa;\n
+Parima tivhenekerwe.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn298">
+<item>
+Kudzai Mwari mukuru!\n
+Rumbidzai mose!\n
+wakatipa gore idzva\n
+Ngaakurumbidzwe.\n
+</item>
+<item>
+wakatichengeta Iye\n
+Gore rapfuura;\n
+Tose tiri mberi kwake,\n
+Nezvipiko zvedu.\n
+</item>
+<item>
+Tinokuvongai baba\n
+Nedzo tsitsi dzenyu\n
+Tinozvipira kwamuri\n
+Nayo mwoyo yedu.\n
+</item>
+<item>
+Toda kukurumbidzai\n
+Namabasa edu\n
+Toda kutevera Jesu\n
+Tiende kudenga.\n
+</item>
+<item>
+Dzose nguva dzatinadzo\n
+Dzive dzenyu Ishe;\n
+Namasimba edu ose\n
+Apirwe kwamuri.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn299">
+<item>
+Mvura yazonaya, chipo chenyu baba,\n
+Musiki wazvose kudenga napasi;\n
+Panguva yapera takamhura isu;\n
+Mvura yanonoka, Mwari wakanganwa\n
+</item>
+<item>
+Torima nesimba rinobva kwamuri,\n
+Tirere kuhope zvodiridzwa nemi,\n
+Tose tinorerwa mweya nomuviri,\n
+Narwo rudo rwenyu rusingasarudze.\n
+</item>
+<item>
+Munotipa chando pamwaka wegore,\n
+Kotevera zuva, koita makore;\n
+Todyara mbeu dzamakatipa zvino.\n
+Murongi mukuru, Musiki wazvose.\n
+</item>
+<item>
+Makasika zvose, nyenyedzi kudenga,\n
+Nzizi, namakomo, masvosve neshiri;\n
+Tipei kutenda, tipire kwamuri\n
+zvose zvapanyika, miviri nemweya.\n
+</item>
+<item>
+Jesu wozokohwa nemhuri yedenga,\n
+Ngative mukati medura raMwari,\n
+Tiri vanorerwa murudo rwaJesu,\n
+Vadyi venhaka pamwe naye kudenga.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn300">
+<item>
+Ishe baba titarirei,\n
+Nedzo tsitsi dzenyu,\n
+Isu tese tasangana\n
+Tiri mberi kwenyu.\n
+</item>
+<item>
+Inzwai kuchema kwedu\n
+Tinosuwa kwazvo;\n
+Onai kushaya kwedu\n
+Tiitirei tsitsi.\n
+</item>
+<item>
+Nyika yose yakaoma\n
+Nokuoma uku,\n
+Heyi mhuri ine nzara\n
+zvose zvinopera.\n
+</item>
+<item>
+Tiitirei tsitsi She\n
+Tinovimba nemi;\n
+Tokumbira mvura zvino\n
+Kunyorozva pasi.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn301">
+<item>
+Tinoirima minda.\n
+Tinodyara mbeu,\n
+Asi dzose dzinokudzwa\n
+Nesimba raMwari;\n
+Anozvituma zvose\n
+zvokukudza mbeu,\n
+Mhepo pamwe nezuva,\n
+Mvura yakanaka.\n
+chorus\n
+zvose zvatinazvo\n
+zvobva kuna Mwari;\n
+Ngativonge Ishe wedu\n
+Tivongere rudo.\n
+</item>
+<item>
+Ndiye Musiki bedzi\n
+wazvo zvose zvinhu,\n
+Anoshongedza nyika\n
+Namaruva ose.\n
+Mhepo yamuterera,\n
+Anodyisa shiri,\n
+zvikuru nokwatiri\n
+Anotipa kudya.\n
+</item>
+<item>
+Tinovongera zvose\n
+zvinotinakira,\n
+Kudyara nokukohwa,\n
+Noupenyu hwedu.\n
+Torai zvatinopa\n
+Tichivonga kwazvo;\n
+Gam’chirai nengoni\n
+Mwoyo yedu tose.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn302">
+<item>
+Uyai, vanhu, tiimbe\n
+Rwiyo rwapamasutso;\n
+zviyo zvose zvachekwa,\n
+Takakohwa muminda;\n
+Jehovha wakatipa\n
+zvose zvatinoshaya;\n
+Uyai kumba yake,\n
+Ngatimukurumbidze.\n
+</item>
+<item>
+Tiri munda waMwari,\n
+Anotsvaka kwatiri\n
+zviyo zvakanakisa\n
+zvibve mumwoyo yedu;\n
+Mapumhuri nehura,\n
+Shure kwezvo zvoibva,\n
+Ishe tinoda kuva\n
+zviyo zvakanakisa.\n
+</item>
+<item>
+Nokuti Mwari wedu\n
+Achauya kucheka,\n
+Achapisa nomoto\n
+Sawi rose romunda;\n
+Achatuma kumunda\n
+Nhume dzake dzedenga\n
+Kuzoisa zvokudya \n
+Mudura rake guru.\n
+</item>
+<item>
+Nazvino uyai She\n
+Kohwai zviyo zvenyu;\n
+Kukurai vatendi,\n
+Vabvisei muzvivi;\n
+Muvatsvenise chose\n
+Vave mudura renyu;\n
+Uyai nengirozi,\n
+Uyai, Ishe Jesu.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn303">
+<item>
+Hongu, Mwari wakanaka;\n
+Panyika napamakungwa\n
+Kuna mazwi anorira\n
+Kuti Mwari wakanaka.\n
+</item>
+<item>
+Nero zuva rovheneka\n
+Rofuka pasi nechedza,\n
+Nenyenyedzi dzenge dzoti:\n
+Idi Mwari wakanaka.\n
+</item>
+<item>
+Neshiriwo dzinorira\n
+Nemvura yomunhuruka,\n
+Nomwando wofefetera,\n
+zvoti: Mwari wakanaka.\n
+</item>
+<item>
+Ndinozvinzwawo nemhepo,\n
+Pamwe nomo mumakomo,\n
+Nechadenga chotaura,\n
+zvoti: Mwari wakanaka.\n
+</item>
+<item>
+zvose zvisikwa zvodaro;\n
+Takasikwa naNyadenga;\n
+Nomunhuwo arumbidze,\n
+Ati: Mwari wakanaka,\n
+</item>
+<item>
+Nezvi zvipo zvenyu Ishe,\n
+zvikuru kudya kwedenga\n
+Kwengoni neshoko zvoti,\n
+Titi: Mwari wakanaka.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn304">
+<item>
+Tinokutendai baba\n
+Nemvura yamunotipa\n
+Inokudza mbeu dzedu,\n
+Tinokohwa nokufara.\n
+</item>
+<item>
+Panguva yomunhuruka\n
+Tinorima minda yedu,\n
+Tichidyara mbeu dzose\n
+Dzinochengwa nemi baba.\n
+</item>
+<item>
+Dakara nguva isvike\n
+zvose zvaibva muminda,\n
+Tigokohwa zvakawanda\n
+Mapfunde, zvose nezviyo.\n
+</item>
+<item>
+Tinokuomberai baba\n
+Norudo rwenyu rukuru\n
+Ruripo rini narini\n
+Kumazuva namakore.\n
+</item>
+<item>
+Uyai vanhu tiimbe\n
+Rwiyo rwokukudza baba\n
+Titende zvipo zvikuru\n
+zvatakakohwa muminda.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn305">
+<item>
+Tokupai zvino baba,\n
+Iyi imba yenyu,\n
+Yatakakuvakirai,\n
+Igamuchirei.\n
+</item>
+<item>
+Vamwe vakadikitira,\n
+Pakuvakwa kwayo,\n
+Vamwe vakabisa zvipo\n
+zvokuivakisa.\n
+</item>
+<item>
+Ngatiropafadzwe muno\n
+Nokuvapo kwenyu,\n
+Vatadzi varopafadzwe\n
+Nokunatsa kwenyu.\n
+</item>
+<item>
+Komborerai vapinda\n
+Vonamata muno,\n
+Mukomborere navana,\n
+Vave mhuri yenyu.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn306">
+<item>
+Zuva ranhasi Ishe wedu\n
+Tinokudza chose\n
+Nokuti imi matsaura\n
+Hwayana dzenyu baba\n
+Kuti isuwo vana\n
+Togopa humbowo tose\n
+Hwokuti ivo vana voga\n
+Vazvipira kushanda.\n
+</item>
+<item>
+Baba samasimba musiki\n
+Ropafadzai vana\n
+Vazvipira savashandiri\n
+Vachazomuimbirai\n
+Isu hatina simba\n
+Rokuchengeta chipo\n
+Asi tinovimba naMwari\n
+Mharidzo ichafamba.\n
+</item>
+<item>
+Vamwe makavapa zvipo’zvo\n
+zvokuita basaro\n
+Asi vamwe havambogona\n
+Kuona tarendaro\n
+Vamwe vanoparidza\n
+Vamwe vachidzidzisa\n
+Vamwe vanorapa zvirwere\n
+Nhasi ava vaimbi.\n
+</item>
+<item>
+Titsigisei mukumuzivai\n
+Tigowanawo simba\n
+Rokukunda muedzi Satani\n
+Ari pakati pedu\n
+Ishe nyakusika baba\n
+Tatenda rubatsiro’rwo\n
+zvotoenda kudzimba dzedu\n
+Mutichengete imi.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn307">
+<item>
+Jesu ini ndasarudza\n
+Somukomana ane shungu\n
+Kushandira Tenzi wangu\n
+Mabasa pazera rangu.\n
+</item>
+<item>
+Pakugamuchira kwangu\n
+Rupawo rweboka iri\n
+Ravakomana muSvondo\n
+Ndasarudza gwara renyu.\n
+</item>
+<item>
+Ndasarudza ndazvipira\n
+Kushanda nesimba rose\n
+Ndokumbira kurairwa\n
+Kuda kwenyu ndikuite\n
+</item>
+<item>
+Hupenyu hwangu She Jesu\n
+Ngahupupure chokwadi\n
+Mururimi namabasa\n
+Rudo rwenyu ndiparidze.\n
+</item>
+<item>
+Jekesai kuda kwenyu,\n
+Ndishande mubindu renyu,\n
+Ndimi Jesu simba rangu,\n
+M’enzaniso, Musimboti.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn308">
+<item>
+Mwari baba samasimba\n
+Tinokukudzayi\n
+Imi makatipa chipo\n
+Chokukuimbirai\n
+</item>
+<item>
+Hezvi nhasi tasangana\n
+Mubasa guru sei\n
+Rokupfekedza vaimbi\n
+Nokuvasimbisa\n
+</item>
+<item>
+Ichi chipfeko ndechenyu\n
+Ngachiropafadzwe\n
+Chishandiswe basa renyu\n
+Mukumurumbidzai\n
+</item>
+<item>
+Chiropafadzai vana\n
+Vazvipira nhasi\n
+Vashandise tarendaro\n
+Vachikuimbirai\n
+</item>
+<item>
+Ngakuti Mweya Mutsvene\n
+Uvafudze vose\n
+Vagoparidza nenziyo\n
+Marudzi apone.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn309">
+<item>
+Nhasi tose taungana\n
+Kuti titsidze kwamuri\n
+Mwari wedu wechokwadi\n
+Nyasha dzenyu dzakakomba.\n
+</item>
+<item>
+Hava vana vazvipira\n
+Kuti vaparidze shoko\n
+Vachishandisa tarenda\n
+Iri ravo rokuimba.\n
+</item>
+<item>
+Vavengi vazhinji kwazvo\n
+Vangade kuvarasisa\n
+Konzai kuti vabate\n
+Chipo ichi chamavapa.\n
+</item>
+<item>
+zvino vava kuzopfeka\n
+Hanzu idzi dzemachira\n
+Asi mwoyo yavo Ishe\n
+Ngaipfeke imi baba\n
+</item>
+    </string-array>
+
+    <string-array name="hymn310">
+<item>
+Nevatsvene avo vazorora\n
+Vakarumbidza namabasa\n
+zita raJesu kusingapere\n
+Ha-areruya! Ha-reruya!\n
+</item>
+<item>
+Ndimi dombo, bako, namasimba\n
+Mbirimi yavo muhondo huru\n
+Murima guru imi mwenje wavo\n
+Ha-areruya! Ha-reruya!\n
+</item>
+<item>
+Varwi venyu, vakarwa nesimba\n
+Savo varwi vazorora nemi\n
+Vawanewo ngundu yavo vakundi\n
+Ha-areruya! Ha-reruya!\n
+</item>
+<item>
+Ruwadzano rwakaropafadzwa\n
+Toshinga vatsvene vachibwinya\n
+Vose pamwe vose ndevenyu\n
+Ha-areruya! Ha-reruya!\n
+</item>
+<item>
+Kana kurwa kwaremesa kwazvo\n
+Tonzwa kure nziyo dzokukunda\n
+Mwoyo yosimba kwazvo\n
+Ha-areruya! Ha-reruya!\n
+</item>
+<item>
+Runako rwekudoka kwezuva\n
+Kuzorora kwevari vakundi \n
+Nerunyararo muParadhisi\n
+Ha-areruya! Ha-reruya!\n
+</item>
+<item>
+Kozosvika kubwinya kwezuva\n
+Vakundi nenguwo dzinobwinya\n
+Mbiri kuna baba, Mwana Mweya\n
+Ha-areruya! Ha-reruya!\n
+</item>
+<item>
+Nyika Yose pamwe nemakungwa\n
+Nzizi nezvisikwa zvorumbidza \n
+Mbiri kuna Mwari, vatatu’mwe\n
+Ha-areruya! Ha-reruya!\n
+</item>
+    </string-array>
+
+    <string-array name="hymn311">
+<item>
+Tiri mberi kwenyu Ishe\n
+Chibatai pfungwa dzedu,\n
+Tidzidze zvakarurama,\n
+Tizvipire basa renyu.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn312">
+<item>
+Tarisa, tarisa\n
+Mutarise Jesu;\n
+Siya zvose zvenyika.\n
+Mutarise Jesu.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn313">
+<item>
+Jesu ari pano\n
+Usamukanganwe,\n
+Shamwari yakanaka\n
+Anokutungamira.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn314">
+<item>
+Hama yandinayo,\n
+Ndiye Jesu Kristu,\n
+Anosedera kukomborera;\n
+Ndofamba pamberi\n
+Naye muponisi,\n
+Nengoni dzake ndichiimba.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn315">
+<item>
+Rufaro ruri mumwoyo wangu,\n
+Rufaro ndanzwa rudo rwake,\n
+zvivi zvaregererwa,\n
+Ndinonanga kudenga,\n
+Mwoyo unofashaira norufaro.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn316">
+<item>
+Mwoyo wangu unofara sei!\n
+Jesu anondida,\n
+Ndingavonge sei!\n
+Mwoyo wangu unofara sei!\n
+Unofarisisa sei!\n
+Jesu zita rake \n
+Rakanakisa,\n
+Rinondifarisa\n
+Ndofamba ndichiimba.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn317">
+<item>
+Jesu haanakuuya\n
+Kuzotonga nyika,\n
+wakauya kuzotsvaka\n
+Vatadzi vapasi;\n
+Tinom’tumidza Ishe\n
+NoMuponisi wedu\n
+</item>
+    </string-array>
+</resources>

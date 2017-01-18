@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:text="Sample"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/listTextSize"
+        android:textAllCaps="false"
+        android:padding="10dp"
+        android:id="@+id/hymnFirstLinebut"
+        android:textAlignment="textStart"
+        android:gravity="start"
+        android:background="@drawable/grad_list_but"
+        android:textColor="@color/white"
+        android:fontFamily="sans-serif-medium" />
+
+</LinearLayout>

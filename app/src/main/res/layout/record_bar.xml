@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_alignParentBottom="true"
+    android:id="@+id/recBarLinearLayout">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:background="@color/burn"
+        android:id="@+id/recRele">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Record"
+            android:textSize="25sp"
+            android:textColor="@color/white"
+            android:id="@+id/recordingBarText"/>
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentEnd="true"
+            android:id="@+id/deleteRecording"
+            app:srcCompat="@drawable/delete_icon"
+            android:layout_alignParentRight="true" />
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentEnd="true"
+            android:id="@+id/deleteUnavailRecording"
+            android:visibility="invisible"
+            app:srcCompat="@drawable/delete_unavail_icon"
+            android:layout_alignParentRight="true" />
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_toLeftOf="@id/deleteRecording"
+            android:id="@+id/playRecordingBut"
+            android:layout_marginEnd="10dp"
+            app:srcCompat="@drawable/play_caption_icon"
+            android:layout_marginRight="10dp" />
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_toLeftOf="@id/deleteRecording"
+            android:id="@+id/stopRecordingBut"
+            android:layout_marginEnd="10dp"
+            app:srcCompat="@drawable/stop_icon"
+            android:visibility="invisible"
+            android:layout_marginRight="10dp" />
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_toLeftOf="@id/playRecordingBut"
+            android:id="@+id/recordBut"
+            android:layout_marginEnd="10dp"
+            app:srcCompat="@drawable/record_icon"
+            android:layout_marginRight="10dp" />
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_toLeftOf="@id/playRecordingBut"
+            android:id="@+id/recordUnavailBut"
+            android:visibility="invisible"
+            android:layout_marginEnd="10dp"
+            app:srcCompat="@drawable/record_unavail_icon"
+            android:layout_marginRight="10dp" />
+
+
+    </RelativeLayout>
+
+</LinearLayout>

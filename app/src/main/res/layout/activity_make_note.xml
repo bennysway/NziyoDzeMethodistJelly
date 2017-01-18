@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_make_note"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context="com.seven.clip.nziyodzemethodist.makeNote">
+
+    <TextView
+        android:text="Notebook"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:gravity="center"
+        android:textColor="@color/burn"
+        android:background="@color/burn"
+        android:shadowDy="0.0"
+        android:shadowDx="0.0"
+        android:shadowRadius="10.0"
+        android:shadowColor="@color/white"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/noteTitle"
+        android:textSize="40sp" />
+
+    <TextView
+        android:text="sample Author"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:layout_below="@+id/noteTitle"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/author" />
+
+    <TextView
+        android:text="time and date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="6dp"
+        android:layout_below="@+id/author"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/editDate" />
+
+    <Button
+        android:text="Save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/saveNote"
+        android:textAllCaps="false"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        style="@style/Widget.AppCompat.Button.Colored" />
+
+    <Button
+        android:text="Share"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@+id/saveNote"
+        android:textAllCaps="false"
+        android:layout_toStartOf="@+id/saveNote"
+        android:id="@+id/shareNote"
+        style="@style/Widget.AppCompat.Button.Borderless.Colored" />
+
+    <Button
+        android:text="Cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/undoNote"
+        android:textAllCaps="false"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/saveNote"
+        android:layout_toEndOf="@+id/saveNote"
+        style="@style/Widget.AppCompat.Button.Borderless" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:gravity="start"
+        android:ems="10"
+        android:layout_below="@+id/editDate"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/textField"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_above="@+id/saveNote" />
+
+</RelativeLayout>

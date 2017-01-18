@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "622909826164",
+    "firebase_url": "https://nziyodzemethodistoffical.firebaseio.com",
+    "project_id": "nziyodzemethodistoffical",
+    "storage_bucket": "nziyodzemethodistoffical.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:622909826164:android:8f1f7ae690fa1240",
+        "android_client_info": {
+          "package_name": "com.seven.clip.nziyodzemethodist"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "622909826164-ri220v293o4s0g803dtm8nrs40gvbo9r.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.seven.clip.nziyodzemethodist",
+            "certificate_hash": "83EBA43B58CB6F98166BFD8F080E68874698B248"
+          }
+        },
+        {
+          "client_id": "622909826164-tob0vv9j469091okd3j5la24qqej2j7q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCRifUF4vmZCrqj8i4Fd31DIObJbgRHa_w"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "622909826164-tob0vv9j469091okd3j5la24qqej2j7q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
