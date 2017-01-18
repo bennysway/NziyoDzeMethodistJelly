@@ -5,6 +5,7 @@ import android.content.ClipboardManager;
 import android.content.Intent;
 
 import android.content.pm.PackageManager;
+import android.graphics.Typeface;
 import android.graphics.drawable.AnimatedVectorDrawable;
 import android.graphics.drawable.Drawable;
 import android.media.MediaRecorder;
@@ -141,6 +142,11 @@ public class hymnDisplay extends AppCompatActivity {
         hymnpop.setText(s);
         final int textcolor,capColor,hymnnumColor;
         float textSize;
+
+        Typeface custom_font = Typeface.createFromAsset(getAssets(),  "fonts/bh.ttf");
+        title.setTypeface(custom_font);
+        num.setTypeface(custom_font);
+        hymnpop.setTypeface(custom_font);
 
 
 

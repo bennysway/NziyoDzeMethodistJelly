@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Typeface;
 import android.graphics.drawable.AnimatedVectorDrawable;
 import android.os.Build;
 import android.os.Handler;
@@ -69,6 +70,7 @@ public class MainDrawer extends AppCompatActivity {
         ImageView appPic = (ImageView) headerLayout.findViewById(R.id.imageOwner);
         Button hymnNumBut = (Button) findViewById(R.id.hymnNumberBut);
         Button hymnListBut = (Button) findViewById(R.id.hymnListBut);
+        TextView mainAppTile = (TextView) findViewById(R.id.mainAppTitle);
         Button favBut = (Button) findViewById(R.id.favBut);
         Button recentBut = (Button) findViewById(R.id.recentBut);
         final View startSearch =  findViewById(R.id.searchButton);
@@ -128,6 +130,9 @@ public class MainDrawer extends AppCompatActivity {
             Bitmap bitmap = BitmapFactory.decodeFile(imagePath,options);
             appPic.setImageBitmap(bitmap);
         }
+
+        Typeface custom_font = Typeface.createFromAsset(getAssets(),  "fonts/bh.ttf");
+        mainAppTile.setTypeface(custom_font);
 
 
         mDrawerLayout.setDrawerListener(new DrawerLayout.DrawerListener() {
@@ -283,6 +288,11 @@ public class MainDrawer extends AppCompatActivity {
 
     public void openCredits(MenuItem menuItem){
         Intent intent = new Intent(this,Credits.class);
+        startActivity(intent);
+    }
+
+    public void openNotifications(MenuItem menuItem){
+        Intent intent = new Intent(this,Notifications.class);
         startActivity(intent);
     }
 

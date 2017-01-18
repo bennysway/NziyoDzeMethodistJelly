@@ -1,6 +1,7 @@
 package com.seven.clip.nziyodzemethodist;
 
 import android.content.SharedPreferences;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
@@ -26,6 +27,8 @@ public class ClearData extends AppCompatActivity {
         DisplayMetrics dm = new DisplayMetrics();
         getWindowManager().getDefaultDisplay().getMetrics(dm);
 
+
+
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_BLUR_BEHIND);
         int width = dm.widthPixels;
         int height = dm.heightPixels;
@@ -38,6 +41,9 @@ public class ClearData extends AppCompatActivity {
         final Data color = new Data(this,"color");
         final Data size = new Data(this,"textsize");
         final Data recordFlag = new Data(this,"recordflag");
+
+        Typeface custom_font = Typeface.createFromAsset(getAssets(),  "fonts/bh.ttf");
+        prompt.setTypeface(custom_font);
 
 
         prompt.setText("Clear All saved Favourites and Recent history?" );

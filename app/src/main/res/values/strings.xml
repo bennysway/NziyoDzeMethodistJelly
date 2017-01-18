@@ -11,6 +11,18 @@
     <string name="norecs">No Recent songs yet…</string>
     <string name="title_activity_settings">Settings</string>
 
+    <string name="notification_date_string">18 January 2017</string>
+    <string name="notification_text_string">
+        It took hard work to build this app, especially making it compatible with JellyBean devices(Android 4.x.x) but with determination, I did my best.\n\n
+        Sad to say I worked this without a coding team. If you\'re interested in making the app more at home, contact me and I\'ll give you access to its Git Repository.\n\n
+
+        The good news, the app is a success, on most devices. If its not updating,(such as not seeing this message), uninstall it and get the latest version from Play Stores. As for you, who is reading this, you\'re safe, and more good updates are on the way.\n\n
+        Ideas are there: proper sync, change hymn background color, and its image, pinch to change text size rather than zooming,volume buttons to quick scroll and more, ideas are still overflowing.\n\n
+
+        I leave you with these words. Praise God, in the best way you can.\n\n
+
+        Blessing F. Charumbira\n\n
+    </string>
 
     <string name="is_maindrawer_open">false</string>
 

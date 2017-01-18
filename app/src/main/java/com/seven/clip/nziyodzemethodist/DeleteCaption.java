@@ -1,5 +1,6 @@
 package com.seven.clip.nziyodzemethodist;
 
+import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
@@ -38,6 +39,8 @@ public class DeleteCaption extends AppCompatActivity {
 
 
         prompt.setText("Delete this caption?" );
+        Typeface custom_font = Typeface.createFromAsset(getAssets(),  "fonts/bh.ttf");
+        prompt.setTypeface(custom_font);
 
 
         no.setOnClickListener(new View.OnClickListener() {

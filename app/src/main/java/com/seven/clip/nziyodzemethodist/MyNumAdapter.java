@@ -2,6 +2,7 @@ package com.seven.clip.nziyodzemethodist;
 
 import android.content.Context;
 import android.graphics.Color;
+import android.graphics.Typeface;
 import android.support.annotation.NonNull;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -34,6 +35,9 @@ class MyNumAdapter extends ArrayAdapter {
                 counter++;
             }
         }
+
+        Typeface custom_font = Typeface.createFromAsset(MyNumAdapter.super.getContext().getAssets(),  "fonts/bh.ttf");
+        theTextView.setTypeface(custom_font);
         for(int i=0;i<counter;i++){
             if(Integer.parseInt(favs[i])==position+1){
                 theTextView.setBackgroundResource(R.drawable.grad_but_is_fav);

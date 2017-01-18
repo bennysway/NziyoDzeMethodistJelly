@@ -43,6 +43,7 @@ public class pickNum2 extends AppCompatActivity {
         ListView listView = (ListView) findViewById(R.id.numberList);
         listView.setAdapter(adapter);
 
+
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {

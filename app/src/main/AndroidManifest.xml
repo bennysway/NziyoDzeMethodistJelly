@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.seven.clip.nziyodzemethodist"
     android:versionCode="16001"
-    android:versionName="1.16.001"
-    package="com.seven.clip.nziyodzemethodist">
+    android:versionName="1.16.001">
 
     <uses-sdk android:minSdkVersion="16" />
+
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
     <uses-permission android:name="android.permission.STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
 
     <application
         android:allowBackup="true"
@@ -17,47 +19,47 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name="com.seven.clip.nziyodzemethodist.MainActivity"
+            android:name=".MainActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.seven.clip.nziyodzemethodist.hymnDisplay"
+            android:name=".hymnDisplay"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.seven.clip.nziyodzemethodist.pickNum2"
+            android:name=".pickNum2"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.Popups" />
         <activity
-            android:name="com.seven.clip.nziyodzemethodist.hymnList2"
+            android:name=".hymnList2"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.Popups" />
         <activity
-            android:name="com.seven.clip.nziyodzemethodist.MainDrawer"
+            android:name=".MainDrawer"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.seven.clip.nziyodzemethodist.FavList"
+            android:name=".FavList"
             android:noHistory="true"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.seven.clip.nziyodzemethodist.MakeFav"
-            android:noHistory="true"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.Popups" />
-        <activity
-            android:name="com.seven.clip.nziyodzemethodist.ClearData"
+            android:name=".MakeFav"
             android:noHistory="true"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.Popups" />
         <activity
-            android:name="com.seven.clip.nziyodzemethodist.removeFav"
+            android:name=".ClearData"
             android:noHistory="true"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.Popups" />
         <activity
-            android:name="com.seven.clip.nziyodzemethodist.RecList"
+            android:name=".removeFav"
+            android:noHistory="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.Popups" />
+        <activity
+            android:name=".RecList"
             android:noHistory="true"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.seven.clip.nziyodzemethodist.Splash"
+            android:name=".Splash"
             android:noHistory="true"
             android:screenOrientation="portrait"
             android:theme="@style/SplashTheme">
@@ -68,13 +70,13 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.seven.clip.nziyodzemethodist.Settings"
+            android:name=".Settings"
             android:label="@string/title_activity_settings"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.Fullscreen" />
-        <activity android:name="com.seven.clip.nziyodzemethodist.SandBox" />
+        <activity android:name=".SandBox" />
         <activity
-            android:name="com.seven.clip.nziyodzemethodist.ChoosePic"
+            android:name=".ChoosePic"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="clipseven.action.choosepic" />
@@ -83,11 +85,11 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.seven.clip.nziyodzemethodist.ShareCustom"
+            android:name=".ShareCustom"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.Popups" />
         <activity
-            android:name="com.seven.clip.nziyodzemethodist.ColorMode"
+            android:name=".ColorMode"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="clipseven.action.choosecolor" />
@@ -95,43 +97,45 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name="com.seven.clip.nziyodzemethodist.Search" />
+        <activity android:name=".Search" />
         <activity
-            android:name="com.seven.clip.nziyodzemethodist.SearchDialogue"
+            android:name=".SearchDialogue"
             android:noHistory="true"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.Popups"
             android:windowSoftInputMode="adjustPan|adjustResize" />
         <activity
-            android:name="com.seven.clip.nziyodzemethodist.AdjustTextSize"
+            android:name=".AdjustTextSize"
             android:noHistory="true"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.Popups" />
-        <activity android:name="com.seven.clip.nziyodzemethodist.Credits" />
+        <activity android:name=".Credits" />
         <activity
-            android:name="com.seven.clip.nziyodzemethodist.Recorder"
+            android:name=".Recorder"
             android:noHistory="true"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.Popups" />
-        <activity android:name="com.seven.clip.nziyodzemethodist.Captions" />
+        <activity android:name=".Captions" />
         <activity
-            android:name="com.seven.clip.nziyodzemethodist.addCaption"
-            android:noHistory="true"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.Popups" />
-        <activity
-            android:name="com.seven.clip.nziyodzemethodist.DeleteCaption"
+            android:name=".addCaption"
             android:noHistory="true"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.Popups" />
         <activity
-            android:name="com.seven.clip.nziyodzemethodist.makeNote"
+            android:name=".DeleteCaption"
+            android:noHistory="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.Popups" />
+        <activity
+            android:name=".makeNote"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.seven.clip.nziyodzemethodist.readNote"
+            android:name=".readNote"
             android:screenOrientation="portrait" />
-        <activity android:name="com.seven.clip.nziyodzemethodist.IntroActivity"
-            android:label="@string/app_name"/>
+        <activity
+            android:name=".IntroActivity"
+            android:label="@string/app_name" />
+        <activity android:name=".Notifications"></activity>
     </application>
 
 </manifest>

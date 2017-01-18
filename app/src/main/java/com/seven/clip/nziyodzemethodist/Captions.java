@@ -1,6 +1,7 @@
 package com.seven.clip.nziyodzemethodist;
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -40,7 +41,9 @@ public class Captions extends AppCompatActivity {
 
         Data recordFlag = new Data(this,"recordflag");
         Data withCaption = new Data(this,"withcaption");
-
+        Typeface custom_font = Typeface.createFromAsset(getAssets(),  "fonts/bh.ttf");
+        TextView cap = (TextView) findViewById(R.id.captionTitle);
+        cap.setTypeface(custom_font);
 
         recordFlag.deleteAll();
 

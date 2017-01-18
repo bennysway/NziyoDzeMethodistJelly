@@ -21,6 +21,11 @@
         android:title="Credits"
         android:icon="@android:drawable/ic_menu_myplaces"
         android:onClick="openCredits"/>
+    <item
+        android:id="@+id/notifications"
+        android:title="Notifications"
+        android:icon="@android:drawable/stat_notify_chat"
+        android:onClick="openNotifications"/>
 
 
 </menu>
