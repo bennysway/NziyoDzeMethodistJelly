@@ -44,22 +44,21 @@ import static android.graphics.Color.parseColor;
 
 public class hymnDisplay extends AppCompatActivity {
     ScrollView myScroll;
-    int bound,totalHeight;
+    int bound,totalHeight,clength,textcolor,capColor,hymnnumColor;
     Boolean chorusAvail = false;
-    int clength;
+    ImageView bg;
+    RelativeLayout display;
     TextView captionShow;
     String [] captionStrings;
     Button showCaption;
     View loadCaption;
     boolean favBool,shareBool,optBool;
     long starttime = 0;
-    String AudioSavePathInDevice = null;
+    String AudioSavePathInDevice = null,RandomAudioFileName = "ABCDEFGHIJKLMNOP",hymnNum,capStoreKey;;
     MediaRecorder mediaRecorder ;
-    Random random ;
-    String RandomAudioFileName = "ABCDEFGHIJKLMNOP";
+    Random random;
     public static final int RequestPermissionCode = 1;
-    String hymnNum,capStoreKey;
-    Data favList,recordFlag;
+    Data favList,recordFlag,color;
 
 
     @Override
@@ -71,7 +70,7 @@ public class hymnDisplay extends AppCompatActivity {
 
         favList = new Data(this,"favlist");
         Data recList = new Data(this,"reclist");
-        Data color = new Data(this,"color");
+        color = new Data(this,"color");
         Data textSizeData = new Data(this,"textsize");
         recordFlag = new Data(this,"recordflag");
 
@@ -95,8 +94,8 @@ public class hymnDisplay extends AppCompatActivity {
         showCaption = (Button) findViewById(R.id.showCaption);
         loadCaption =findViewById(R.id.loadCaption);
         final Intent toPasteBin = new Intent(this,ShareCustom.class);
-        ImageView bg = (ImageView) findViewById(R.id.imageView);
-        RelativeLayout display = (RelativeLayout) findViewById(R.id.activity_hymn_display);
+        bg = (ImageView) findViewById(R.id.imageView);
+        display = (RelativeLayout) findViewById(R.id.activity_hymn_display);
 
         final View favToggle = findViewById(R.id.hymnFavBut);
         final View favToggle_on = findViewById(R.id.hymnFavBut_on);
@@ -113,13 +112,6 @@ public class hymnDisplay extends AppCompatActivity {
         final RelativeLayout shrstanza = (RelativeLayout) findViewById(R.id.hymnShareButStanzaLayout);
         final RelativeLayout optcaptions = (RelativeLayout) findViewById(R.id.hymnMoreOptionsCaptionsLayout);
         final RelativeLayout shrwhole = (RelativeLayout) findViewById(R.id.hymnShareButWholeLayout);
-
-        final View butoptfont =  findViewById(R.id.hymnMoreOptionsFont);
-        final View butshrapp =  findViewById(R.id.hymnShareButApp);
-        final View butoptnight = findViewById(R.id.hymnMoreOptionsNight);
-        final View butshrstanza =  findViewById(R.id.hymnShareButStanza);
-        final View butoptcaptions =  findViewById(R.id.hymnMoreOptionsCaptions);
-        final View butshrwhole =  findViewById(R.id.hymnShareButWhole);
 
         opt.setVisibility(View.INVISIBLE);
         fav.setVisibility(View.INVISIBLE);
@@ -140,7 +132,6 @@ public class hymnDisplay extends AppCompatActivity {
         clength =getResources().getStringArray(getResourceId(c,"array",getPackageName())).length;
         num.setText(s);
         hymnpop.setText(s);
-        final int textcolor,capColor,hymnnumColor;
         float textSize;
 
         Typeface custom_font = Typeface.createFromAsset(getAssets(),  "fonts/bh.ttf");
@@ -582,10 +573,18 @@ public class hymnDisplay extends AppCompatActivity {
         },time);
     }
     public static void vis(View v){
+        v.setAlpha(0f);
         v.setVisibility(View.VISIBLE);
+        v.animate().alpha(1f);
     }
-    public static void invis(View v){
-        v.setVisibility(View.INVISIBLE);
+    public static void invis(final View v){
+        v.animate().alpha(0f).withEndAction(new Runnable() {
+            @Override
+            public void run() {
+                v.setVisibility(View.INVISIBLE);
+            }
+        });
+
     }
     public void makeCaption(){
         Handler but = new Handler();
@@ -837,6 +836,32 @@ public class hymnDisplay extends AppCompatActivity {
 
 
 
+    }
+    @Override
+    public void onResume()
+    {
+        // After a pause OR at startup
+        super.onResume();
+
+        switch (color.get()){
+            case "night":
+                bg.setImageDrawable(getResources().getDrawable(R.color.black));
+                display.setBackground(getResources().getDrawable(R.color.black));
+                hymnnumColor = parseColor("#50ffffff");
+                textcolor= capColor = WHITE;
+                break;
+            case "day":
+                bg.setImageDrawable(getResources().getDrawable(R.color.white));
+                display.setBackground(getResources().getDrawable(R.color.white));
+                textcolor= capColor = BLACK;
+                hymnnumColor = parseColor("#50000000");
+                break;
+            default:
+                bg.setImageDrawable(getResources().getDrawable(R.drawable.natured));
+                textcolor = WHITE;
+                capColor = BLACK;
+                hymnnumColor = parseColor("#50000000");
+        }
     }
 }
 

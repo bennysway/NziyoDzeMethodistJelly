@@ -6,6 +6,7 @@ import android.content.SharedPreferences;
 import static android.content.Context.MODE_PRIVATE;
 
 //keys include: favlist,reclist,showsplash,color,image,textsize,recordflag,withcaptions
+//              colorflag,textsizeflag,
 
 
 public class Data {

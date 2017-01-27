@@ -26,12 +26,10 @@
             android:screenOrientation="portrait" />
         <activity
             android:name=".pickNum2"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.Popups" />
+            android:screenOrientation="portrait" />
         <activity
             android:name=".hymnList2"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.Popups" />
+            android:screenOrientation="portrait" />
         <activity
             android:name=".MainDrawer"
             android:screenOrientation="portrait" />

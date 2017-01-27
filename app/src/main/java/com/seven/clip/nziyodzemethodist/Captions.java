@@ -19,6 +19,9 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.Collections;
 
+import static com.seven.clip.nziyodzemethodist.hymnDisplay.invis;
+import static com.seven.clip.nziyodzemethodist.hymnDisplay.vis;
+
 public class Captions extends AppCompatActivity {
 
     ListView ls;
@@ -137,12 +140,6 @@ public class Captions extends AppCompatActivity {
     }
     public String IntToStr(int i){
         return Integer.toString(i);
-    }
-    public static void vis(View v){
-        v.setVisibility(View.VISIBLE);
-    }
-    public static void invis(View v){
-        v.setVisibility(View.INVISIBLE);
     }
     public void QuickToast(String s){
         Toast.makeText(this, s,

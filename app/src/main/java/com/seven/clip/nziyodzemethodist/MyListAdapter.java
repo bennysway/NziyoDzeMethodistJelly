@@ -3,18 +3,78 @@ package com.seven.clip.nziyodzemethodist;
 import android.content.Context;
 import android.graphics.Color;
 import android.support.annotation.NonNull;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.SectionIndexer;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Set;
 
 
-class MyListAdapter extends ArrayAdapter {
+class MyListAdapter extends ArrayAdapter implements SectionIndexer {
     MyListAdapter(Context context, String[] values) {
         super(context, R.layout.hymn_list, values);
+
+        alphaIndexer = new HashMap<>();
+        positionIndexer = new HashMap<>();
+
+        int size = values.length;
+        for (int x = 0; x < size; x++) {
+            String s = values[x];
+            // get the first letter of the store
+            String ch = s.substring(0, 1);
+            // convert to uppercase otherwise lowercase a -z will be sorted
+            // after upper A-Z
+            ch = ch.toUpperCase();
+            // put only if the key does not exist
+            if (!alphaIndexer.containsKey(ch))
+                alphaIndexer.put(ch, x);
+        }
+        Set<String> sectionLetters = alphaIndexer.keySet();
+        ArrayList<String> sectionList = new ArrayList<>(
+                sectionLetters);
+
+        Collections.sort(sectionList);
+
+        sections = new String[sectionList.size()];
+
+        sectionList.toArray(sections);
+
+
+        ArrayList numberVals = new ArrayList();
+        for (int i : alphaIndexer.values()) {
+            numberVals.add(i);
+        }
+        numberVals.add(values.length-1);
+        Collections.sort(numberVals);
+
+        int k = 0;
+        int z = 0;
+        for(int i = 0; i < numberVals.size()-1; i++) {
+            int temp = (int) numberVals.get(i+1);
+            do {
+                positionIndexer.put(k, z);
+                k++;
+            } while(k < temp);
+            z++;
+        }
+
+
+
     }
 
+
+    private HashMap<String, Integer> alphaIndexer;
+    private HashMap<Integer, Integer> positionIndexer;
+    private String[] sections;
     @NonNull
     @Override
     public View getView(int position, View convertView, @NonNull ViewGroup parent) {
@@ -24,7 +84,7 @@ class MyListAdapter extends ArrayAdapter {
 
         TextView theTextView = (TextView) theView.findViewById(R.id.hymnFirstLinebut);
         theTextView.setText(hymnEntry);
-        Data favList = new Data(MyListAdapter.super.getContext(),"favlist");
+        Data favList = new Data(MyListAdapter.super.getContext(), "favlist");
         String list = favList.get();
         String[] favs = list.split(",");
         int counter = 0;
@@ -35,11 +95,12 @@ class MyListAdapter extends ArrayAdapter {
             }
         }
 
-        for(int i=0;i<counter;i++){
+        for (int i = 0; i < counter; i++) {
             favs[i] = String.valueOf(cvt(Integer.valueOf(favs[i])));
         }
 
-        for (int i = 0; i < counter; i++) {
+
+    for (int i = 0; i < counter; i++) {
             if (Integer.parseInt(favs[i]) == position + 1) {
                 theTextView.setShadowLayer(10.0f, 0.0f, 0.0f, Color.parseColor("#cc5f00"));
             }
@@ -47,7 +108,7 @@ class MyListAdapter extends ArrayAdapter {
         return theView;
     }
 
-    public int cvt(int x){
+    private int cvt(int x){
         int sorted[] = new int[317];
         int found=0;
         sorted[0]=235;
@@ -375,5 +436,24 @@ class MyListAdapter extends ArrayAdapter {
         return found+1;
     }
 
+    @Override
+    public Object[] getSections() {
+        return sections;
+    }
+
+    @Override
+    public int getPositionForSection(int section) {
+        return alphaIndexer.get(sections[section]);
+    }
+
+    @Override
+    public int getSectionForPosition(int position) {
+        return positionIndexer.get(position);
+    }
+
+    public void QuickToast(String s) {
+        Toast.makeText(getContext(), s,
+                Toast.LENGTH_SHORT).show();
+    }
 }
 

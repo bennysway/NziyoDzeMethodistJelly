@@ -192,8 +192,6 @@ public class MainDrawer extends AppCompatActivity {
                     }
                 });
 
-                overridePendingTransition(R.anim.slide_right_in, R.anim.fade_in);
-
             }
         });
 
@@ -215,7 +213,6 @@ public class MainDrawer extends AppCompatActivity {
                     }
                 });
 
-                overridePendingTransition(R.anim.slide_right_in, R.anim.fade_in);
 
             }
         });
@@ -239,7 +236,6 @@ public class MainDrawer extends AppCompatActivity {
                     }
                 });
 
-                overridePendingTransition(R.anim.fade_in, R.anim.zoom_out);
 
             }
         });

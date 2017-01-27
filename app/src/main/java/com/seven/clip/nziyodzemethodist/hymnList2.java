@@ -2,30 +2,45 @@ package com.seven.clip.nziyodzemethodist;
 
 import android.content.Context;
 import android.content.Intent;
+import android.os.Handler;
+import android.support.annotation.IntegerRes;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.DisplayMetrics;
+import android.view.KeyEvent;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.Arrays;
 
+import static com.seven.clip.nziyodzemethodist.hymnDisplay.invis;
+import static com.seven.clip.nziyodzemethodist.hymnDisplay.vis;
+
 public class hymnList2 extends AppCompatActivity {
+
+    ListView listView;
+    int [] scroller;
+    String [] alphaScrollShow;
+    int iterator=0;
+    TextView pop;
+    Handler timer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_hymn_list2);
-        getWindow().addFlags(WindowManager.LayoutParams.FLAG_BLUR_BEHIND);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
         final Intent toHymn = new Intent(this,hymnDisplay.class);
         final Intent toFav = new Intent(this,MakeFav.class);
         toFav.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
 
-
+        pop = (TextView) findViewById(R.id.scrollerPop);
+        timer = new Handler();
 
         final String [] sample = new String[317];
         final String [] sorted = new String[317];
@@ -353,13 +368,60 @@ public class hymnList2 extends AppCompatActivity {
         sorted[315]="119";
         sorted[316]="219";
 
+        scroller = new int[21];
+        scroller[0]=0;
+        scroller[1]=3;
+        scroller[2]=13;
+        scroller[3]=18;
+        scroller[4]=23;
+        scroller[5]=28;
+        scroller[6]=30;
+        scroller[7]=38;
+        scroller[8]=66;
+        scroller[9]=88;
+        scroller[10]=109;
+        scroller[11]=178;
+        scroller[12]=226;
+        scroller[13]=227;
+        scroller[14]=234;
+        scroller[15]=242;
+        scroller[16]=250;
+        scroller[17]=286;
+        scroller[18]=293;
+        scroller[19]=305;
+        scroller[20]=309;
+
+        alphaScrollShow = new String[21];
+        alphaScrollShow[0]="A";
+        alphaScrollShow[1]="B";
+        alphaScrollShow[2]="C";
+        alphaScrollShow[3]="D";
+        alphaScrollShow[4]="F";
+        alphaScrollShow[5]="G";
+        alphaScrollShow[6]="H";
+        alphaScrollShow[7]="I";
+        alphaScrollShow[8]="J";
+        alphaScrollShow[9]="K";
+        alphaScrollShow[10]="M";
+        alphaScrollShow[11]="N";
+        alphaScrollShow[12]="O";
+        alphaScrollShow[13]="P";
+        alphaScrollShow[14]="R";
+        alphaScrollShow[15]="S";
+        alphaScrollShow[16]="T";
+        alphaScrollShow[17]="U";
+        alphaScrollShow[18]="V";
+        alphaScrollShow[19]="W";
+        alphaScrollShow[20]="Z";
+
+
 
         MyListAdapter adapter =
                 new MyListAdapter(
                         this,
                         sample
                 );
-        final ListView listView = (ListView) findViewById(R.id.hymnList);
+        listView = (ListView) findViewById(R.id.hymnList);
         listView.setAdapter(adapter);
 
 
@@ -368,6 +430,7 @@ public class hymnList2 extends AppCompatActivity {
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 toHymn.putExtra("hymnNum",sorted[i]);
                 startActivity(toHymn);
+                //QuickToast(Integer.toString(i));
             }
         });
 
@@ -386,6 +449,46 @@ public class hymnList2 extends AppCompatActivity {
         String packageName = getPackageName();
         int resId = getResources().getIdentifier(aString, "string", packageName);
         return getString(resId);
+    }
+
+    public boolean dispatchKeyEvent(KeyEvent event) {
+        int action = event.getAction();
+        int keyCode = event.getKeyCode();
+        switch (keyCode) {
+            case KeyEvent.KEYCODE_VOLUME_UP:
+                if (action == KeyEvent.ACTION_DOWN && iterator>0) {
+                    iterator--;
+                    showPop();
+                    listView.smoothScrollToPosition(scroller[iterator]);
+                }
+                return true;
+            case KeyEvent.KEYCODE_VOLUME_DOWN:
+                if (action == KeyEvent.ACTION_DOWN && iterator<20) {
+                    iterator++;
+                    showPop();
+                    listView.smoothScrollToPosition(scroller[iterator]);
+                }
+                return true;
+            default:
+                return super.dispatchKeyEvent(event);
+        }
+    }
+
+    public void showPop() {
+        pop.setText(alphaScrollShow[iterator]);
+        vis(pop);
+        pop.animate().scaleY(1.05f).scaleX(1.05f).withEndAction(new Runnable() {
+            @Override
+            public void run() {
+                timer.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        invis(pop);
+                    }
+                },2000);
+
+            }
+        });
     }
 
     public Context getActivity() {

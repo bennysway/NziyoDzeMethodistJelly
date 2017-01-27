@@ -67,8 +67,9 @@
 
     <ImageView
         app:srcCompat="@drawable/close_icon"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:scaleType="center"
         android:gravity="center"
         android:layout_alignParentTop="true"
         android:layout_alignParentRight="true"
