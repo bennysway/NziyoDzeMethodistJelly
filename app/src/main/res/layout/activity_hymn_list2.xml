@@ -13,14 +13,14 @@
         android:gravity="center"
         android:textColor="@color/white"
         android:visibility="invisible"
-        android:textSize="30sp"
+        android:textSize="60sp"
         android:elevation="10dp"
         android:background="@drawable/scroll_prev"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:id="@+id/scrollerPop"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:id="@+id/hymnScrollPop"
         android:layout_alignParentRight="true" />
 
     <ImageView

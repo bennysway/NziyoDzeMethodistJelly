@@ -31,33 +31,8 @@ public class FavList extends AppCompatActivity {
         toRemoveFav.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
         Data favList = new Data(this,"favlist");
 
-
-
-
-
-        String s = getIntent().getStringExtra("hymnNum");
-        String push = getIntent().getStringExtra("push");
         int counter = 0;
         list = favList.get();
-
-
-
-        switch (push){
-            case "yes":
-                list = favList.pushBack(s);
-                QuickToast("Added hymn " + s);
-                break;
-            case "no":
-                //QuickToast("got no");
-                break;
-            default:
-                //QuickToast("Empty push");
-
-        }
-
-
-
-
 
         for( int i=0; i<list.length(); i++ ) {
             if( list.charAt(i) == ',' ) {

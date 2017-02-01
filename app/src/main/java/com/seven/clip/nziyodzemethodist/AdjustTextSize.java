@@ -1,5 +1,6 @@
 package com.seven.clip.nziyodzemethodist;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
@@ -25,13 +26,13 @@ public class AdjustTextSize extends AppCompatActivity {
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_BLUR_BEHIND);
         int width = dm.widthPixels;
         int height = dm.heightPixels;
+        final Intent intent = new Intent();
 
         getWindow().setLayout((int)(width*.9),(int)(height*.5));
 
         SeekBar track = (SeekBar)findViewById(R.id.textSizeSeekBar);
         final TextView sample = (TextView)findViewById(R.id.textSizeSample);
-        Button acceptSize = (Button) findViewById(R.id.textSizeApplyBut);
-        Button defaultSize = (Button) findViewById(R.id.textSizeDefaultBut);
+        final Button acceptSize = (Button) findViewById(R.id.textSizeApplyBut);
         final Data size = new Data(this,"textsize");
 
         track.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
@@ -40,6 +41,7 @@ public class AdjustTextSize extends AppCompatActivity {
                 r=progress+25;
                 sample.setText(IntToStr(progress+25));
                 sample.setTextSize((float)(progress+25));
+                acceptSize.setText("Apply");
             }
 
             @Override
@@ -56,22 +58,19 @@ public class AdjustTextSize extends AppCompatActivity {
         acceptSize.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if(r==0)
+                    r=40;
                 size.update(IntToStr(r));
-                QuickToast("Text size set to "+IntToStr(r)+" sp");
+                intent.putExtra("size",r);
+                if(r==40)
+                QuickToast("Set to default text size");
+                else
+                QuickToast("Text size changed");
+                setResult(2,intent);
                 finish();
 
             }
         });
-        defaultSize.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                size.update("40");
-                QuickToast("Text size set to 40 sp");
-                finish();
-
-            }
-        });
-
 
 
     }

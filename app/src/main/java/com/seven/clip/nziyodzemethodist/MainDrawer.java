@@ -6,12 +6,9 @@ import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Typeface;
-import android.graphics.drawable.AnimatedVectorDrawable;
-import android.os.Build;
 import android.os.Handler;
 import android.preference.PreferenceActivity;
 import android.preference.PreferenceManager;
-import android.support.annotation.RequiresApi;
 import android.support.design.widget.NavigationView;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
@@ -26,8 +23,6 @@ import android.widget.Toast;
 
 import java.util.Calendar;
 
-import static com.seven.clip.nziyodzemethodist.hymnDisplay.invis;
-import static com.seven.clip.nziyodzemethodist.hymnDisplay.vis;
 
 public class MainDrawer extends AppCompatActivity {
     Intent toHymnNums,toSettings,toClearData;
@@ -58,7 +53,7 @@ public class MainDrawer extends AppCompatActivity {
         toHymnNums.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
         final Intent toFavList = new Intent(this, FavList.class);
         final Intent toRecList = new Intent(this, RecList.class);
-        final Intent toTest = new Intent(this, IntroActivity.class);
+        final Intent toTest = new Intent(this, SandBox.class);
         final Intent toSearchBox = new Intent(this,SearchDialogue.class);
         toSettings = new Intent(this, Settings.class);
         toClearData = new Intent(this, ClearData.class);
@@ -103,8 +98,7 @@ public class MainDrawer extends AppCompatActivity {
         test.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Calendar cal = Calendar.getInstance();
-                QuickToast(String.valueOf(cal.get(Calendar.DATE)));
+                startActivity(toTest);
             }
         });
 
@@ -158,8 +152,7 @@ public class MainDrawer extends AppCompatActivity {
 
             }
         });
-        vis(opDrawer);
-        invis(opDrawer_on);
+
         opDrawer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -255,6 +248,19 @@ public class MainDrawer extends AppCompatActivity {
         Toast.makeText(getActivity(), s,
                 Toast.LENGTH_SHORT).show();
     }
+    public void vis(View v){
+        v.setAlpha(0f);
+        v.setVisibility(View.VISIBLE);
+        v.animate().alpha(1f);
+    }
+    public void invis(final View v) {
+        v.animate().alpha(0f).withEndAction(new Runnable() {
+            @Override
+            public void run() {
+                v.setVisibility(View.INVISIBLE);
+            }
+        });
+    }
 
     public void openSettings(MenuItem item) {
         startActivity(toSettings);
@@ -262,8 +268,6 @@ public class MainDrawer extends AppCompatActivity {
     public void openClearData(MenuItem item) {
         startActivity(toClearData);
     }
-
-
     public void shareApp(MenuItem item) {
         try {
             Intent i = new Intent(Intent.ACTION_SEND);
@@ -281,17 +285,14 @@ public class MainDrawer extends AppCompatActivity {
             //e.toString();
         }
     }
-
     public void openCredits(MenuItem menuItem){
         Intent intent = new Intent(this,Credits.class);
         startActivity(intent);
     }
-
     public void openNotifications(MenuItem menuItem){
         Intent intent = new Intent(this,Notifications.class);
         startActivity(intent);
     }
-
     public void openGeneral(){
         toSettings.putExtra( PreferenceActivity.EXTRA_SHOW_FRAGMENT, Settings.GeneralPreferenceFragment.class.getName() );
         toSettings.putExtra( PreferenceActivity.EXTRA_NO_HEADERS, true );

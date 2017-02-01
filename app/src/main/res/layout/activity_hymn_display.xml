@@ -301,14 +301,16 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentStart="true"
-                    android:id="@+id/hymnMoreOptions"/>
+                    android:id="@+id/hymnMoreOptions"
+                    android:layout_alignParentLeft="true" />
                 <ImageView
                     app:srcCompat="@drawable/options_icon_on"
                     android:layout_alignParentStart="true"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:visibility="invisible"
-                    android:id="@+id/hymnMoreOptions_on"/>
+                    android:id="@+id/hymnMoreOptions_on"
+                    android:layout_alignParentLeft="true" />
 
             </RelativeLayout>
 
@@ -327,7 +329,8 @@
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:id="@+id/hymnFavBut"
-                    android:contentDescription="Set Favourite" />
+                    android:contentDescription="Set Favourite"
+                    android:layout_alignParentLeft="true" />
 
                 <ImageView
                     app:srcCompat="@drawable/heart_icon_on"
@@ -337,7 +340,8 @@
                     android:gravity="center"
                     android:id="@+id/hymnFavBut_on"
                     android:visibility="invisible"
-                    android:contentDescription="Set Favourite" />
+                    android:contentDescription="Set Favourite"
+                    android:layout_alignParentLeft="true" />
             </RelativeLayout>
 
             <RelativeLayout
@@ -353,14 +357,16 @@
                     android:layout_alignParentStart="true"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/hymnShareBut"/>
+                    android:id="@+id/hymnShareBut"
+                    android:layout_alignParentLeft="true" />
                 <ImageView
                     app:srcCompat="@drawable/share_icon_on"
                     android:layout_alignParentStart="true"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:visibility="invisible"
-                    android:id="@+id/hymnShareBut_on"/>
+                    android:id="@+id/hymnShareBut_on"
+                    android:layout_alignParentLeft="true" />
 
             </RelativeLayout>
 

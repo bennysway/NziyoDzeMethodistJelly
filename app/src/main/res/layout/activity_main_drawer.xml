@@ -194,7 +194,7 @@
                 android:layout_alignParentBottom="true"
                 android:layout_alignParentEnd="true"
                 android:id="@+id/test"
-                android:visibility="invisible"
+                android:visibility="visible"
                 android:shadowColor="@color/black"
                 android:layout_alignParentRight="true" />
 
@@ -207,9 +207,9 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_alignParentTop="true"
-            android:shadowDy="0.0"
-            android:shadowDx="0.0"
             android:shadowRadius="15.0"
+            android:shadowDy="12.0"
+            android:shadowDx="5.0"
             android:shadowColor="@color/black"
             android:layout_centerHorizontal="true"
             android:id="@+id/mainAppTitle" />

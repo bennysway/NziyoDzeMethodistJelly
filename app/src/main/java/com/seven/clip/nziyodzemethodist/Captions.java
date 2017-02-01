@@ -19,9 +19,6 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.Collections;
 
-import static com.seven.clip.nziyodzemethodist.hymnDisplay.invis;
-import static com.seven.clip.nziyodzemethodist.hymnDisplay.vis;
-
 public class Captions extends AppCompatActivity {
 
     ListView ls;
@@ -131,9 +128,8 @@ public class Captions extends AppCompatActivity {
                 ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
         params.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM, bar.getId());
         bar.setLayoutParams(params);
+        bar.setVisibility(View.INVISIBLE);
         parentLayout.addView(bar);
-        invis(bar);
-
 
 
 
@@ -235,5 +231,17 @@ public class Captions extends AppCompatActivity {
             }
         });
     }
-
+    public void vis(View v){
+        v.setAlpha(0f);
+        v.setVisibility(View.VISIBLE);
+        v.animate().alpha(1f);
+    }
+    public void invis(final View v) {
+        v.animate().alpha(0f).withEndAction(new Runnable() {
+            @Override
+            public void run() {
+                v.setVisibility(View.INVISIBLE);
+            }
+        });
+    }
 }

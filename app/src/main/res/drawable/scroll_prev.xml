@@ -8,5 +8,8 @@
     <padding
         android:paddingLeft="22dp"
         android:paddingRight="22dp" />
+    <stroke
+        android:width="10dp"
+        android:color="@color/burnFaded"/>
 
     <solid android:color="@color/burn" /></shape>

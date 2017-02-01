@@ -9,8 +9,11 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MakeFav extends AppCompatActivity {
+
+    Intent MakeFavIntent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +25,8 @@ public class MakeFav extends AppCompatActivity {
         Button yes = (Button) findViewById(R.id.makeFavYesBut);
         Button no = (Button) findViewById(R.id.makeFavNoBut);
         final Intent addFav = new Intent(this,FavList.class);
+        MakeFavIntent = new Intent();
+        final Data favList = new Data(this,"favlist");
 
         Typeface custom_font = Typeface.createFromAsset(getAssets(),  "fonts/bh.ttf");
         prompt.setTypeface(custom_font);
@@ -32,29 +37,61 @@ public class MakeFav extends AppCompatActivity {
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_BLUR_BEHIND);
         int width = dm.widthPixels;
         int height = dm.heightPixels;
-
         getWindow().setLayout((int)(width*.8),(int)(height*.2));
 
-        prompt.setText("Add hymn " + s + " to favourites?" );
+        if(favList.find(s)){
+            prompt.setText("Remove hymn " + s + " from favourites?" );
+            no.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    finish();
+                }
+            });
+            yes.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    MakeFavIntent.putExtra("isFav",false);
+                    MakeFavIntent.putExtra("hymnNum",s);
+                    setResult(1,MakeFavIntent);
+                    favList.delete(s);
+                    QuickToast("Removed hymn " + s);
+                    finish();
+                }
+            });
+        }
+        else {
+            prompt.setText("Add hymn " + s + " to favourites?" );
+            no.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    finish();
+                }
+            });
+            yes.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    MakeFavIntent.putExtra("isFav",true);
+                    MakeFavIntent.putExtra("hymnNum",s);
+                    setResult(1,MakeFavIntent);
+                    favList.pushBack(s);
+                    QuickToast("Added hymn " + s);
+                    finish();
+                }
+            });
+        }
 
 
-        no.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                finish();
-            }
-        });
 
-        yes.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                addFav.putExtra("hymnNum",s);
-                addFav.putExtra("push","yes");
-                startActivity(addFav);
-            }
-        });
+
+
+
 
 
     }
+    public void QuickToast(String s) {
+        Toast.makeText(this, s,
+                Toast.LENGTH_SHORT).show();
+    }
+
 
 }

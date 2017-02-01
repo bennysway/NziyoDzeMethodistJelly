@@ -8,10 +8,19 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.SectionIndexer;
 import android.widget.TextView;
 
+import java.util.HashMap;
 
-class MyNumAdapter extends ArrayAdapter {
+
+class MyNumAdapter extends ArrayAdapter implements SectionIndexer {
+
+    private HashMap<String, Integer> alphaIndexer;
+    private HashMap<Integer, Integer> positionIndexer;
+    private String[] sections;
+
+
     MyNumAdapter(Context context, String[] values) {
         super(context,R.layout.num_list ,values);
     }
@@ -53,4 +62,18 @@ class MyNumAdapter extends ArrayAdapter {
         return theView;
     }
 
+    @Override
+    public Object[] getSections() {
+        return new Object[0];
     }
+
+    @Override
+    public int getPositionForSection(int sectionIndex) {
+        return 0;
+    }
+
+    @Override
+    public int getSectionForPosition(int position) {
+        return 0;
+    }
+}

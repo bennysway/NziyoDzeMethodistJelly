@@ -1,5 +1,6 @@
 package com.seven.clip.nziyodzemethodist;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -21,6 +22,7 @@ public class ColorMode extends AppCompatActivity {
         Button yes = (Button) findViewById(R.id.colorApply);
         Button no = (Button) findViewById(R.id.colorCancel);
         final Data color = new Data(this,"color");
+        final Intent intent = new Intent();
 
         no.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -38,13 +40,17 @@ public class ColorMode extends AppCompatActivity {
                 switch (t){
                     case "Day":
                         color.update("day");
+                        intent.putExtra("mode","day");
                         break;
                     case "Night":
                         color.update("night");
+                        intent.putExtra("mode","night");
                         break;
                     default:
                         color.deleteAll();
+                        intent.putExtra("mode","");
                 }
+                setResult(3,intent);
                 finish();
             }
         });
