@@ -3,6 +3,7 @@ package com.seven.clip.nziyodzemethodist;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Typeface;
@@ -21,13 +22,19 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.util.Calendar;
-
+import com.adcolony.sdk.AdColony;
+import com.adcolony.sdk.AdColonyAdViewActivity;
+import com.adcolony.sdk.AdColonyInterstitial;
+import com.adcolony.sdk.AdColonyInterstitialListener;
+import com.adcolony.sdk.AdColonyReward;
+import com.adcolony.sdk.AdColonyRewardListener;
 
 public class MainDrawer extends AppCompatActivity {
     Intent toHymnNums,toSettings,toClearData;
     private DrawerLayout mDrawerLayout;
     private NavigationView navView;
+    ImageView appPic;
+    TextView appOwner;
 
 
 
@@ -55,14 +62,17 @@ public class MainDrawer extends AppCompatActivity {
         final Intent toRecList = new Intent(this, RecList.class);
         final Intent toTest = new Intent(this, SandBox.class);
         final Intent toSearchBox = new Intent(this,SearchDialogue.class);
+        final Zvinokosha moreFeatures = new Zvinokosha(this);
         toSettings = new Intent(this, Settings.class);
         toClearData = new Intent(this, ClearData.class);
         mDrawerLayout = (DrawerLayout) findViewById(R.id.activity_main_drawer);
         navView = (NavigationView) findViewById(R.id.startNavigationView);
+        String zone = "vze62659b1ea5241fb86";
+        AdColony.configure(this,"appc167511230224bdbb5",zone);
 
         View headerLayout = navView.inflateHeaderView(R.layout.nav_header_layout);
-        TextView appOwner = (TextView) headerLayout.findViewById(R.id.navHeaderSubTitle);
-        ImageView appPic = (ImageView) headerLayout.findViewById(R.id.imageOwner);
+        appOwner = (TextView) headerLayout.findViewById(R.id.navHeaderSubTitle);
+        appPic = (ImageView) headerLayout.findViewById(R.id.imageOwner);
         Button hymnNumBut = (Button) findViewById(R.id.hymnNumberBut);
         Button hymnListBut = (Button) findViewById(R.id.hymnListBut);
         TextView mainAppTile = (TextView) findViewById(R.id.mainAppTitle);
@@ -70,10 +80,10 @@ public class MainDrawer extends AppCompatActivity {
         Button recentBut = (Button) findViewById(R.id.recentBut);
         final View startSearch =  findViewById(R.id.searchButton);
         final View startSearch_on =  findViewById(R.id.searchButton_on);
-        final View loadNum = (View) findViewById(R.id.loadingNums);
-        final View loadList = (View) findViewById(R.id.loadingList);
-        final View loadFav = (View) findViewById(R.id.loadingFavs);
-        final View loadRec = (View) findViewById(R.id.loadingRecents);
+        final View loadNum = findViewById(R.id.loadingNums);
+        final View loadList = findViewById(R.id.loadingList);
+        final View loadFav = findViewById(R.id.loadingFavs);
+        final View loadRec = findViewById(R.id.loadingRecents);
         Button test = (Button) findViewById(R.id.test);
         final View opDrawer =findViewById(R.id.openMainDrawer);
         final View opDrawer_on =findViewById(R.id.openMainDrawer_on);
@@ -98,36 +108,13 @@ public class MainDrawer extends AppCompatActivity {
         test.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(toTest);
+                QuickToast(moreFeatures.check());
+                moreFeatures.set();
             }
         });
-
-
-
-
-        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
-        Data image = new Data(this,"image");
-        String clr = preferences.getString("example_text","Set name");
-        appOwner.setText(clr);
-        appOwner.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openGeneral();
-            }
-        });
-        String imagePath =  image.get();
-        if(imagePath.equals(""))
-            appPic.setImageDrawable(getResources().getDrawable(R.drawable.nouser));
-        else{
-            BitmapFactory.Options options = new BitmapFactory.Options();
-            options.inSampleSize = 3;
-            Bitmap bitmap = BitmapFactory.decodeFile(imagePath,options);
-            appPic.setImageBitmap(bitmap);
-        }
 
         Typeface custom_font = Typeface.createFromAsset(getAssets(),  "fonts/bh.ttf");
         mainAppTile.setTypeface(custom_font);
-
 
         mDrawerLayout.setDrawerListener(new DrawerLayout.DrawerListener() {
             @Override
@@ -139,6 +126,7 @@ public class MainDrawer extends AppCompatActivity {
             public void onDrawerOpened(View drawerView) {
                 invis(opDrawer);
                 vis(opDrawer_on);
+
             }
 
             @Override
@@ -150,6 +138,14 @@ public class MainDrawer extends AppCompatActivity {
             @Override
             public void onDrawerStateChanged(int newState) {
 
+            }
+        });
+
+        appPic.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent toChangePic = new Intent(MainDrawer.this,ChoosePic.class);
+                startActivity(toChangePic);
             }
         });
 
@@ -240,6 +236,64 @@ public class MainDrawer extends AppCompatActivity {
             }
         });
 
+        AdColonyRewardListener listener = new AdColonyRewardListener() {
+            @Override
+            public void onReward(AdColonyReward reward) {
+                moreFeatures.set();
+            }
+        };
+
+        AdColonyInterstitialListener ilistener = new AdColonyInterstitialListener() {
+            @Override
+            public void onRequestFilled(AdColonyInterstitial ad) {
+                /** Store and use this ad object to show your ad when appropriate */
+            }
+        };
+
+        AdColony.requestInterstitial(zone, ilistener);
+        AdColony.setRewardListener(listener);
+
+
+
+    }
+    @Override
+    public void onResume(){
+        super.onResume();
+        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
+        Data picFlag = new Data(this,"picflag");
+        String clr = preferences.getString("example_text","Set name");
+        appOwner.setText(clr);
+        appOwner.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openGeneral();
+            }
+        });
+
+
+    }
+    @Override
+    public void onWindowFocusChanged(boolean hasFocus) {
+        super.onWindowFocusChanged(hasFocus);
+        updatePicture();
+
+    }
+    public void updatePicture(){
+        Data image = new Data(this,"image");
+        String imagePath =  image.get();
+        if(imagePath.equals("")){
+            appPic.setImageDrawable(getResources().getDrawable(R.drawable.nouser));
+
+        }
+        else{
+            appPic.setImageBitmap(decodeSampledBitmapFromResource(
+                    getResources(),
+                    R.id.imageOwner,
+                    appPic.getMeasuredWidth(),
+                    appPic.getMeasuredHeight()
+            ));
+        }
+
     }
     public Context getActivity() {
         return this;
@@ -261,7 +315,42 @@ public class MainDrawer extends AppCompatActivity {
             }
         });
     }
+    public static int calculateInSampleSize(BitmapFactory.Options options, int reqWidth, int reqHeight) {
+        // Raw height and width of image
+        final int height = options.outHeight;
+        final int width = options.outWidth;
+        int inSampleSize = 1;
 
+        if (height > reqHeight || width > reqWidth) {
+
+            final int halfHeight = height / 2;
+            final int halfWidth = width / 2;
+
+            // Calculate the largest inSampleSize value that is a power of 2 and keeps both
+            // height and width larger than the requested height and width.
+            while ((halfHeight / inSampleSize) >= reqHeight
+                    && (halfWidth / inSampleSize) >= reqWidth) {
+                inSampleSize *= 2;
+            }
+        }
+        return inSampleSize;
+    }
+    public Bitmap decodeSampledBitmapFromResource(Resources res, int resId,int reqWidth, int reqHeight) {
+        Data image = new Data(this,"image");
+        String imagePath =  image.get();
+
+        // First decode with inJustDecodeBounds=true to check dimensions
+        final BitmapFactory.Options options = new BitmapFactory.Options();
+        options.inJustDecodeBounds = true;
+        BitmapFactory.decodeFile(imagePath,options);
+
+        // Calculate inSampleSize
+        options.inSampleSize = calculateInSampleSize(options, reqWidth, reqHeight);
+
+        // Decode bitmap with inSampleSize set
+        options.inJustDecodeBounds = false;
+        return BitmapFactory.decodeFile(imagePath,options);
+    }
     public void openSettings(MenuItem item) {
         startActivity(toSettings);
     }
@@ -298,5 +387,7 @@ public class MainDrawer extends AppCompatActivity {
         toSettings.putExtra( PreferenceActivity.EXTRA_NO_HEADERS, true );
         startActivity(toSettings);
         QuickToast("Click Display Name to change.");
+    }
+    public void ActivateFeatures(MenuItem menuItem){
     }
 }

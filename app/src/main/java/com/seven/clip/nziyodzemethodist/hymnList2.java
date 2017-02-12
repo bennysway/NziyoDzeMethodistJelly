@@ -8,7 +8,6 @@ import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.WindowManager;
-import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -363,8 +362,8 @@ public class hymnList2 extends AppCompatActivity {
         sorted[315]="119";
         sorted[316]="219";
 
-        MyListAdapter adapter =
-                new MyListAdapter(
+        MyHymnListAdapter adapter =
+                new MyHymnListAdapter(
                         this,
                         sample
                 );
@@ -372,7 +371,7 @@ public class hymnList2 extends AppCompatActivity {
         listView.setAdapter(adapter);
 
 
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+       /* listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 toHymn.putExtra("hymnNum",sorted[i]);
@@ -389,7 +388,7 @@ public class hymnList2 extends AppCompatActivity {
                 overridePendingTransition(R.anim.zoom_in, R.anim.zoom_out);
                 return true;
             }
-        });
+        });*/
     }
     public void vis(View v){
         v.setAlpha(0f);

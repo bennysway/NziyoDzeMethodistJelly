@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.seven.clip.nziyodzemethodist"
     android:versionCode="16001"
     android:versionName="1.16.001">
@@ -11,6 +12,15 @@
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
     <uses-permission android:name="android.permission.STORAGE" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="com.google.android.gms.permission.ACTIVITY_RECOGNITION" />
+    <uses-permission android:name="android.permission.READ_CALENDAR" />
+    <uses-permission android:name="android.permission.WRITE_CALENDAR" />
+    <uses-permission android:name="android.permission.VIBRATE" />
 
     <application
         android:allowBackup="true"
@@ -18,6 +28,10 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
         <activity
             android:name=".MainActivity"
             android:screenOrientation="portrait" />
@@ -35,7 +49,6 @@
             android:screenOrientation="portrait" />
         <activity
             android:name=".FavList"
-            android:noHistory="true"
             android:screenOrientation="portrait" />
         <activity
             android:name=".MakeFav"
@@ -95,7 +108,9 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name=".Search" />
+        <activity
+            android:name=".Search"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".SearchDialogue"
             android:noHistory="true"
@@ -107,13 +122,18 @@
             android:noHistory="true"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.Popups" />
-        <activity android:name=".Credits" />
+        <activity
+            android:name=".Credits"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".Recorder"
             android:noHistory="true"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.Popups" />
-        <activity android:name=".Captions" />
+        <activity
+            android:name=".Captions"
+            android:noHistory="true"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".addCaption"
             android:noHistory="true"
@@ -132,12 +152,27 @@
             android:screenOrientation="portrait" />
         <activity
             android:name=".IntroActivity"
-            android:label="@string/app_name" />
-        <activity android:name=".Notifications" />
-        <activity android:name=".TextSizePrompt"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Notifications"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".TextSizePrompt"
             android:noHistory="true"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.Popups"/>
+            android:theme="@style/AppTheme.Popups" />
+        <activity android:name=".CaptionList" />
+        <activity
+            android:name="com.adcolony.sdk.AdColonyInterstitialActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:hardwareAccelerated="true" />
+        <activity
+            android:name="com.adcolony.sdk.AdColonyAdViewActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:hardwareAccelerated="true" />
+        <activity android:name=".FeaturesPrompt" />
+        <activity android:name=".AdVideo"></activity>
     </application>
 
 </manifest>

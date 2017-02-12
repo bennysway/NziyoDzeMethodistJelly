@@ -26,6 +26,11 @@
         android:title="Notifications"
         android:icon="@android:drawable/stat_notify_chat"
         android:onClick="openNotifications"/>
+    <item
+        android:id="@+id/MoreFeatures"
+        android:title="Activate Features"
+        android:icon="@android:drawable/star_off"
+        android:onClick="openNotifications"/>
 
 
 </menu>

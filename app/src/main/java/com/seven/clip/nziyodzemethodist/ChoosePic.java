@@ -44,7 +44,7 @@ public class ChoosePic extends AppCompatActivity {
             Data image = new Data(this,"image");
             image.update(picturePath);
         }
-        QuickToast("Picture will update after restarting the hymn book application.");
+        QuickToast("Picture changed");
         finish();
 
 

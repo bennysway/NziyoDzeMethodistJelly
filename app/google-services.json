@@ -49,6 +49,37 @@
           "status": 2
         }
       }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:622909826164:android:05429786502eb184",
+        "android_client_info": {
+          "package_name": "com.clipseven.nziyodzemethodist"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "622909826164-tob0vv9j469091okd3j5la24qqej2j7q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCRifUF4vmZCrqj8i4Fd31DIObJbgRHa_w"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
     }
   ],
   "configuration_version": "1"

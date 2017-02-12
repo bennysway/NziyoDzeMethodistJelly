@@ -16,7 +16,6 @@ public class RecList extends AppCompatActivity {
 
     ListView ls;
     String list = "";
-    ArrayAdapter<String> adapter;
     Data recordFlag,recList;
 
     @Override
@@ -55,26 +54,15 @@ public class RecList extends AppCompatActivity {
             norecText.animate().scaleY(2f).scaleX(2f).setDuration(100000);
         }
         else {
-            adapter =
-                    new ArrayAdapter<String>(
+            MyRecListAdapter adapter =
+                    new MyRecListAdapter(
                             this,
-                            R.layout.hymn_list,R.id.hymnFirstLinebut,
                             names
                     );
             ls.setAdapter(adapter);
             ls.setVisibility(View.VISIBLE);
             norecText.setVisibility(View.INVISIBLE);
         }
-
-
-        ls.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                toHymn.putExtra("hymnNum",recHymns[i]);
-                startActivity(toHymn);
-            }
-        });
-
         del.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -83,17 +71,6 @@ public class RecList extends AppCompatActivity {
                 startActivity(toHome);
             }
         });
-
-        ls.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
-            @Override
-            public boolean onItemLongClick(AdapterView<?> adapterView, View view, int i, long l) {
-                toFav.putExtra("hymnNum",recHymns[i]);
-                startActivity(toFav);
-                overridePendingTransition(R.anim.zoom_in, R.anim.zoom_out);
-                return true;
-            }
-        });
-
     }
 
     private String getStringResourceByName(String aString) {

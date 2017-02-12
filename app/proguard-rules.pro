@@ -107,3 +107,11 @@
 
 -keep class android.support.v13.app.** { *; }
 -keep interface android.support.v13.app.** { *; }
+
+-dontwarn com.immersion.**
+-dontnote com.immersion.**
+
+# For communication with AdColony's WebView
+-keepclassmembers class * {
+    @android.webkit.JavascriptInterface <methods>;
+}

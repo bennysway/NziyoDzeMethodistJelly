@@ -14,14 +14,14 @@ import android.widget.TextView;
 import java.util.HashMap;
 
 
-class MyNumAdapter extends ArrayAdapter implements SectionIndexer {
+class MyNumListAdapter extends ArrayAdapter implements SectionIndexer {
 
     private HashMap<String, Integer> alphaIndexer;
     private HashMap<Integer, Integer> positionIndexer;
     private String[] sections;
 
 
-    MyNumAdapter(Context context, String[] values) {
+    MyNumListAdapter(Context context, String[] values) {
         super(context,R.layout.num_list ,values);
     }
 
@@ -34,7 +34,7 @@ class MyNumAdapter extends ArrayAdapter implements SectionIndexer {
 
         TextView theTextView = (TextView) theView.findViewById(R.id.hymnbutton);
         theTextView.setText(hymnEntry);
-        Data favList = new Data(MyNumAdapter.super.getContext(),"favlist");
+        Data favList = new Data(MyNumListAdapter.super.getContext(),"favlist");
         String list = favList.get();
         String[] favs = list.split(",");
         int counter=0;
@@ -45,7 +45,7 @@ class MyNumAdapter extends ArrayAdapter implements SectionIndexer {
             }
         }
 
-        Typeface custom_font = Typeface.createFromAsset(MyNumAdapter.super.getContext().getAssets(),  "fonts/bh.ttf");
+        Typeface custom_font = Typeface.createFromAsset(MyNumListAdapter.super.getContext().getAssets(),  "fonts/bh.ttf");
         theTextView.setTypeface(custom_font);
         for(int i=0;i<counter;i++){
             if(Integer.parseInt(favs[i])==position+1){

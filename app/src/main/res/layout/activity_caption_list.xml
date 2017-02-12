@@ -5,13 +5,13 @@
     android:id="@+id/activity_fav_list"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.seven.clip.nziyodzemethodist.FavList">
+    tools:context="com.seven.clip.nziyodzemethodist.CaptionList">
 
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:src="@drawable/dark"
-        android:id="@+id/favBg"
+        android:id="@+id/capBg"
         android:scaleType="centerCrop"/>
 
     <TextView

@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -15,7 +14,11 @@ public class FavList extends AppCompatActivity {
 
     ListView ls;
     String list;
-    ArrayAdapter<String> adapter;
+    MyFavListAdapter adapter;
+    Data favList;
+    String[] names;
+    int counter = 0;
+    TextView nofavText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,64 +27,63 @@ public class FavList extends AppCompatActivity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
-        TextView nofavText = (TextView) findViewById(R.id.nofavText);
+        nofavText = (TextView) findViewById(R.id.nofavText);
         ls = (ListView) findViewById(R.id.FavListView);
+        View back = findViewById(R.id.favBackBut);
         final Intent toHymn = new Intent(this,hymnDisplay.class);
         final Intent toRemoveFav = new Intent(this,removeFav.class);
         toRemoveFav.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
-        Data favList = new Data(this,"favlist");
+        favList = new Data(this,"favlist");
 
-        int counter = 0;
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+
         list = favList.get();
-
         for( int i=0; i<list.length(); i++ ) {
             if( list.charAt(i) == ',' ) {
                 counter++;
             }
         }
         final String[]favHymns =list.split(",");
-        String[] names = new String[counter];
+        names = new String[counter];
         for(int i=0;i<counter;i++){
             names[i] =favHymns[i]+". "+ getStringResourceByName("hymn"+favHymns[i]+"firstline");
         }
-
         if(counter==0){
             nofavText.animate().scaleY(2f).scaleX(2f).setDuration(100000);
         }
         else {
             adapter =
-                    new ArrayAdapter<String>(
+                    new MyFavListAdapter(
                             this,
-                            R.layout.hymn_list,R.id.hymnFirstLinebut,
                             names
                     );
             ls.setAdapter(adapter);
             ls.setVisibility(View.VISIBLE);
+            ls.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                @Override
+                public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                    Intent toRemoveFav = new Intent(FavList.this,removeFav.class);
+                    toRemoveFav.putExtra("hymnNum",favHymns[position]);
+                    startActivityForResult(toRemoveFav,2);
+                }
+            });
             nofavText.setVisibility(View.INVISIBLE);
         }
 
 
-        ls.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                toHymn.putExtra("hymnNum",favHymns[i]);
-                startActivity(toHymn);
-            }
-        });
 
-        ls.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
-            @Override
-            public boolean onItemLongClick(AdapterView<?> adapterView, View view, int i, long l) {
-                toRemoveFav.putExtra("hymnNum",favHymns[i]);
-                startActivity(toRemoveFav);
-                return true;
-            }
-        });
-
-
-
-
-
+    }
+    @Override
+    public void onResume(){
+        super.onResume();
+        if(ls.getAdapter()!=null){
+            ls.invalidateViews();
+        }
     }
     public void QuickToast(String s){
         Toast.makeText(this, s,
@@ -92,5 +94,4 @@ public class FavList extends AppCompatActivity {
         int resId = getResources().getIdentifier(aString, "string", packageName);
         return getString(resId);
     }
-
 }

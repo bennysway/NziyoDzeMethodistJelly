@@ -61,8 +61,9 @@ public class Captions extends AppCompatActivity {
 
         final String raw = storedKey.get();
         if(!raw.equals("")){
-            if(!withCaption.find(capStoreKey))
-                withCaption.pushBack(capStoreKey);
+            if(!withCaption.find(hymnNum))
+                withCaption.pushBack(hymnNum);
+            QuickToast(withCaption.get());
 
             rawArray = raw.split(",");
 
@@ -106,8 +107,8 @@ public class Captions extends AppCompatActivity {
         }
         else {
             QuickToast("No captions available");
-            if(withCaption.find(capStoreKey))
-                withCaption.delete(capStoreKey);
+            if(withCaption.find(hymnNum))
+                withCaption.delete(hymnNum);
 
 
         }

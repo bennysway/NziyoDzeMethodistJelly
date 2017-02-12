@@ -43,7 +43,7 @@ import static android.graphics.Color.parseColor;
 
 public class hymnDisplay extends AppCompatActivity {
     ScrollView myScroll;
-    int bound,totalHeight,clength,textcolor,capColor,hymnnumColor,length,buttonLayoutBg;
+    int bound,totalHeight,clength,textcolor,capColor,hymnnumColor,length,buttonLayoutBg,type;
     Boolean chorusAvail = false;
     ImageView bg;
     float textSize;
@@ -53,26 +53,17 @@ public class hymnDisplay extends AppCompatActivity {
     String [] captionStrings;
     Button showCaption;
     View loadCaption;
-    boolean favBool,shareBool,optBool,textSizeChanged,menuOpen,favInit;
+    boolean favBool,shareBool,optBool,textSizeChanged,menuOpen,favInit, chorusTrasparent;
     long starttime = 0;
     String AudioSavePathInDevice = null,RandomAudioFileName = "ABCDEFGHIJKLMNOP",hymnNum,capStoreKey,s,t,safe;
-    MediaRecorder mediaRecorder ;
+    MediaRecorder mediaRecorder;
     Random random;
     public static final int RequestPermissionCode = 1;
     Data favList,recordFlag,color;
     ScaleGestureDetector scaleGestureDetector;
     Intent hymnDisplayIntent;
 
-    RelativeLayout opt;
-    RelativeLayout fav;
-    RelativeLayout shr;
-    RelativeLayout optfont;
-            RelativeLayout shrapp;
-    RelativeLayout optnight;
-            RelativeLayout shrstanza;
-    RelativeLayout optcaptions;
-    RelativeLayout shrwhole;
-
+    RelativeLayout opt,fav,shr,optfont,shrapp,optnight,shrstanza,optcaptions,shrwhole,opten;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -87,8 +78,10 @@ public class hymnDisplay extends AppCompatActivity {
         Data textSizeData = new Data(this,"textsize");
         recordFlag = new Data(this,"recordflag");
         hymnDisplayIntent = new Intent();
+        final EnResource engCheck = new EnResource(this);
 
         s = getIntent().getStringExtra("hymnNum");
+        type = getIntent().getIntExtra("hymnType",0);
         safe = NumToWord.convert(StrToInt(s)) + "key";
         capStoreKey = safe;
         t = "hymn" + s + "firstline";
@@ -117,6 +110,7 @@ public class hymnDisplay extends AppCompatActivity {
         final View shareBut_on = findViewById(R.id.hymnShareBut_on);
         final View butopt =findViewById(R.id.hymnMoreOptions);
         final View butopt_on =findViewById(R.id.hymnMoreOptions_on);
+        final ImageView engBut = (ImageView) findViewById(R.id.hymnMoreOptionsEnglish);
         opt = (RelativeLayout) findViewById(R.id.hymnMoreOptionsLayout);
         fav = (RelativeLayout) findViewById(R.id.hymnFavButLayout);
         shr = (RelativeLayout) findViewById(R.id.hymnShareButLayout);
@@ -126,6 +120,7 @@ public class hymnDisplay extends AppCompatActivity {
         shrstanza = (RelativeLayout) findViewById(R.id.hymnShareButStanzaLayout);
         optcaptions = (RelativeLayout) findViewById(R.id.hymnMoreOptionsCaptionsLayout);
         shrwhole = (RelativeLayout) findViewById(R.id.hymnShareButWholeLayout);
+        opten = (RelativeLayout) findViewById(R.id.hymnMoreOptionsEnglishLayout);
 
         opt.setVisibility(View.INVISIBLE);
         fav.setVisibility(View.INVISIBLE);
@@ -138,6 +133,13 @@ public class hymnDisplay extends AppCompatActivity {
 
         textSizeChanged = false;
         menuOpen = false;
+        chorusTrasparent = false;
+
+
+        if(type!=0){
+            h = "en" + h;
+            t = "en" + t;
+        }
 
 
         int resourceId = getResourceId(h,"array",getPackageName());
@@ -213,6 +215,10 @@ public class hymnDisplay extends AppCompatActivity {
             }
         });
 
+        if(engCheck.isEn(s))
+            engBut.setBackgroundDrawable(getResources().getDrawable(R.drawable.en_avail));
+
+
         if(length==1)
             BottomMenu(menuOpen);
 
@@ -268,6 +274,20 @@ public class hymnDisplay extends AppCompatActivity {
             }
         });
 
+        chorus.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(chorusTrasparent){
+                    chorus.animate().alpha(1f);
+                    chorusTrasparent = false;
+                }
+                else {
+                    chorus.animate().alpha(.45f);
+                    chorusTrasparent = true;
+                }
+            }
+        });
+
         shareBool = false;
         invis(shareBut_on);
         vis(shareBut);
@@ -304,14 +324,16 @@ public class hymnDisplay extends AppCompatActivity {
                 if(optBool){
                     invis(butopt_on);
                     vis(butopt);
-                    floatDownButtons(optcaptions,0);
-                    floatDownButtons(optnight,100);
-                    floatDownButtons(optfont,200);
+                    floatDownButtons(opten,0);
+                    floatDownButtons(optcaptions,100);
+                    floatDownButtons(optnight,200);
+                    floatDownButtons(optfont,300);
                     optBool=false;
                 }
                 else {
                     vis(butopt_on);
                     invis(butopt);
+                    floatUpButtons(opten,150);
                     floatUpButtons(optcaptions,100);
                     floatUpButtons(optnight,50);
                     floatUpButtons(optfont,0);
@@ -377,9 +399,10 @@ public class hymnDisplay extends AppCompatActivity {
                 startActivityForResult(toColor,3);
                 invis(butopt_on);
                 vis(butopt);
-                floatDownButtons(optcaptions,0);
-                floatDownButtons(optnight,100);
-                floatDownButtons(optfont,200);
+                floatDownButtons(opten,0);
+                floatDownButtons(optcaptions,100);
+                floatDownButtons(optnight,200);
+                floatDownButtons(optfont,300);
 
                 optBool=false;
             }
@@ -392,9 +415,10 @@ public class hymnDisplay extends AppCompatActivity {
                 startActivityForResult(toTextSize,2);
                 invis(butopt_on);
                 vis(butopt);
-                floatDownButtons(optcaptions,0);
-                floatDownButtons(optnight,100);
-                floatDownButtons(optfont,200);
+                floatDownButtons(opten,0);
+                floatDownButtons(optcaptions,100);
+                floatDownButtons(optnight,200);
+                floatDownButtons(optfont,300);
                 optBool=false;
 
             }
@@ -408,11 +432,36 @@ public class hymnDisplay extends AppCompatActivity {
                 toCaptions.putExtra("hymnNum",s);
                 invis(butopt_on);
                 vis(butopt);
-                floatDownButtons(optcaptions,0);
-                floatDownButtons(optnight,100);
-                floatDownButtons(optfont,200);
+                floatDownButtons(opten,0);
+                floatDownButtons(optcaptions,100);
+                floatDownButtons(optnight,200);
+                floatDownButtons(optfont,300);
                 optBool=false;
                 startActivity(toCaptions);
+            }
+        });
+
+        if(engCheck.isEn(s)){
+            opten.setAlpha(1f);
+            engBut.setAlpha(1f);
+        }
+        opten.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(engCheck.isEn(s)){
+                    Intent enIntent = new Intent(hymnDisplay.this,hymnDisplay.class);
+                    invis(butopt_on);
+                    vis(butopt);
+                    floatDownButtons(opten,0);
+                    floatDownButtons(optcaptions,100);
+                    floatDownButtons(optnight,200);
+                    floatDownButtons(optfont,300);
+                    optBool=false;
+                    enIntent.putExtra("hymnType",1);
+                    enIntent.putExtra("hymnNum",s);
+                    startActivity(enIntent);
+
+                }
             }
         });
 
@@ -554,6 +603,7 @@ public class hymnDisplay extends AppCompatActivity {
                     floatDownButtons(optcaptions,0);
                     floatDownButtons(optnight,0);
                     floatDownButtons(optfont,0);
+                    floatDownButtons(opten,0);
                     opt.setVisibility(View.VISIBLE);
                     opt.animate().y(100f);
                 }
@@ -586,6 +636,7 @@ public class hymnDisplay extends AppCompatActivity {
                     opt.setVisibility(View.VISIBLE);
                     opt.animate().y(0f);
                     if(optBool){
+                        floatUpButtons(opten,150);
                         floatUpButtons(optcaptions,100);
                         floatUpButtons(optnight,50);
                         floatUpButtons(optfont,0);
@@ -846,6 +897,7 @@ public class hymnDisplay extends AppCompatActivity {
                 h2.removeCallbacks(run);
 
                 mediaRecorder.stop();
+                QuickToast("Recording saved.");
                 recordFlag.deleteAll();
                 finish();
 
@@ -864,13 +916,17 @@ public class hymnDisplay extends AppCompatActivity {
                 starttime = System.currentTimeMillis();
 
                 if(checkPermission()) {
+                    Data save = new Data(hymnDisplay.this,key);
 
                     AudioSavePathInDevice =
                             Environment.getExternalStorageDirectory().getAbsolutePath() + "/Recordings/" +
                                     CreateRandomAudioFileName(5) + "AudioRecording.3gp";
-                    MainActivity.userData(hymnDisplay.this,key,"pushBack",timeStamp());
-                    MainActivity.userData(hymnDisplay.this,key,"pushBack","recording");
-                    MainActivity.userData(hymnDisplay.this,key,"pushBack",AudioSavePathInDevice);
+                    //MainActivity.userData(hymnDisplay.this,key,"pushBack",timeStamp());
+                    save.pushBack(timeStamp());
+                    //MainActivity.userData(hymnDisplay.this,key,"pushBack","recording");
+                    save.pushBack("recording");
+                    //MainActivity.userData(hymnDisplay.this,key,"pushBack",AudioSavePathInDevice);
+                    save.pushBack(AudioSavePathInDevice);
 
                     MediaRecorderReady();
 
@@ -879,7 +935,6 @@ public class hymnDisplay extends AppCompatActivity {
                         mediaRecorder.prepare();
                         mediaRecorder.start();
                     } catch (IllegalStateException | IOException e) {
-                        // TODO Auto-generated catch block
                         e.printStackTrace();
                     }
 

@@ -60,31 +60,16 @@
 
     </LinearLayout>
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/scrollHymn"
-        android:layout_marginTop="30dp"
-        android:layout_below="@+id/hymnTitle">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:id="@+id/hymnLayout" />
-    </ScrollView>
-
     <TextView
         android:text="TextView"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="100dp"
         android:textSize="40sp"
         android:gravity="center"
         android:textColor="@color/white"
         android:fontFamily="cursive"
         android:background="@drawable/square_hymn"
         android:id="@+id/hymnTitle"
-        android:layout_marginTop="46dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true" />
@@ -100,7 +85,7 @@
         android:gravity="center"
         android:id="@+id/hymnDisplayNum"
         android:layout_marginStart="17dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="70dp"
         android:layout_alignTop="@id/hymnTitle"
         android:layout_marginLeft="17dp" />
 
@@ -115,7 +100,7 @@
         android:gravity="center"
         android:id="@+id/hymnDisplayNumlight"
         android:layout_marginStart="17dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="70dp"
         android:visibility="invisible"
         android:layout_alignTop="@id/hymnTitle"
         android:layout_marginLeft="17dp" />
@@ -133,14 +118,52 @@
         android:elevation="10dp"
         android:layout_alignTop="@id/hymnTitle"
         android:visibility="invisible"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="100dp"
         android:layout_centerHorizontal="true" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollHymn"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/captionDisplay">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/hymnLayout" />
+    </ScrollView>
 
     <TableLayout
         android:layout_width="match_parent"
-        android:layout_height="160dp"
+        android:layout_height="200dp"
         android:layout_alignParentBottom="true"
         android:stretchColumns="0,1,2">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="40dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:layout_height="@dimen/smallTableSizeButton"
+                android:background="@color/transBlack"
+                android:visibility="invisible"
+                android:clickable="true"
+                android:id="@+id/hymnMoreOptionsEnglishLayout">
+                <ImageView
+                    app:srcCompat="@drawable/en_unavail"
+                    android:layout_width="40dp"
+                    android:alpha=".3"
+                    android:layout_height="40dp"
+                    android:id="@+id/hymnMoreOptionsEnglish"/>
+            </RelativeLayout>
+        </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
@@ -373,6 +396,7 @@
         </TableRow>
 
     </TableLayout>
+
 
 
 </RelativeLayout>

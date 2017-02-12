@@ -11,14 +11,13 @@ import android.widget.Button;
 import android.widget.TextView;
 
 public class removeFav extends AppCompatActivity {
-
+    Intent intent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_remove_fav);
-        final Intent intent = new Intent(this,FavList.class);
-        intent.putExtra("push","no");
+        intent = new Intent(this,FavList.class);
         final Data favList = new Data(this,"favlist");
 
         final String s = getIntent().getStringExtra("hymnNum");
@@ -44,7 +43,6 @@ public class removeFav extends AppCompatActivity {
         no.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(intent);
                 finish();
             }
         });
@@ -53,7 +51,7 @@ public class removeFav extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 favList.delete(s);
-                startActivity(intent);
+                setResult(2,intent);
                 finish();
             }
         });
