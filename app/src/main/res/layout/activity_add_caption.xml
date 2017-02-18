@@ -4,7 +4,7 @@
     android:id="@+id/activity_add_caption"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#00000000"
+    android:background="@drawable/circle"
     tools:context="com.seven.clip.nziyodzemethodist.addCaption">
 
     <TextView
@@ -16,27 +16,39 @@
         android:layout_centerHorizontal="true"
         android:id="@+id/captionPrompt" />
 
-    <Button
-        android:text="Note"
-        android:layout_width="wrap_content"
+    <TableLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:padding="10dp"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:textAllCaps="false"
-        android:id="@+id/addNote"
-        style="@style/Widget.AppCompat.Button.Colored"
-        android:background="@drawable/but_one" />
+        android:stretchColumns="0,1">
+        <TableRow>
+            <Button
+                android:text="Note"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:textAllCaps="false"
+                android:id="@+id/addNote"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:background="@drawable/but_one" />
 
-    <Button
-        android:text="Recording"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAllCaps="false"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:id="@+id/addAudio"
-        style="@style/Widget.AppCompat.Button.Colored"
-        android:background="@drawable/but_two" />
+            <Button
+                android:text="Recording"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="false"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:id="@+id/addAudio"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:background="@drawable/but_two" />
+        </TableRow>
+
+    </TableLayout>
+
+
 </RelativeLayout>

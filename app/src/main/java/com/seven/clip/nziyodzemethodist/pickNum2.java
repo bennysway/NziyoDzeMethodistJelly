@@ -5,145 +5,160 @@ import android.content.Intent;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.InputFilter;
+import android.text.TextWatcher;
+import android.util.DisplayMetrics;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.WindowManager;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 public class pickNum2 extends AppCompatActivity {
 
-    ListView listView;
-    MyNumListAdapter adapter;
-    NumListScroll scroll;
-    TextView pop, theTextView;
-    Handler timer;
-
+    EditText numberField;
+    Intent toHymn;
+    InputMethodManager imm;
+    int pressCounter=0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pick_num2);
+        DisplayMetrics dm = new DisplayMetrics();
+        getWindowManager().getDefaultDisplay().getMetrics(dm);
+
+
+
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_BLUR_BEHIND);
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
-                WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        final Intent toHymn = new Intent(this,hymnDisplay.class);
-        final Intent toFav = new Intent(this,MakeFav.class);
-        toFav.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+        int width = dm.widthPixels;
+        int height = dm.heightPixels;
+        getWindow().setLayout((int)(width*.8),(int)(height*.3));
+
+        toHymn = new Intent(this,hymnDisplay.class);
+
+        numberField = (EditText) findViewById(R.id.pickNumSearchBox);
+        Button openHymn = (Button) findViewById(R.id.pickNumButton);
+        final Button makeFavBut = (Button) findViewById(R.id.pickNumMakeFavButton);
+
         Data recordFlag = new Data(this,"recordflag");
-        pop = (TextView) findViewById(R.id.numScrollPop);
-        timer = new Handler();
-        scroll = new NumListScroll();
+        final Data favList = new Data(this,"favlist");
         recordFlag.deleteAll();
 
+        numberField.setFilters(new InputFilter[]{ new HymnNumberFilter("1", "317")});
 
-        final String [] sample = new String[317];
-        for(int i=0;i<317;i++)
-            sample[i] = String.valueOf(i+1);
-
-
-        adapter =
-                new MyNumListAdapter(
-                        this,
-                        sample
-                );
-        listView = (ListView) findViewById(R.id.numberList);
-        listView.setAdapter(adapter);
-
-
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        openHymn.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                toHymn.putExtra("hymnNum",String.valueOf(i+1));
-                startActivityForResult(toHymn,1);
+            public void onClick(View v) {
+                gotoHymn();
+            }
+        });
+        numberField.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                String num = s.toString();
+                if(num.length()>0){
+                    if(favList.find(num)){
+                        makeFavBut.animate().scaleX(1.5f).scaleY(1.5f).withEndAction(new Runnable() {
+                            @Override
+                            public void run() {
+                                makeFavBut.animate().scaleY(1f).scaleX(1f).alpha(1f);
+                            }
+                        });
+                    }
+                    else {
+                        makeFavBut.setAlpha(.5f);
+                    }
+                }
             }
         });
 
-
-        listView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+        makeFavBut.setOnClickListener(new View.OnClickListener() {
             @Override
-            public boolean onItemLongClick(AdapterView<?> adapterView, View view, int i, long l) {
-                toFav.putExtra("hymnNum",String.valueOf(i+1));
-                startActivityForResult(toFav,1);
-                overridePendingTransition(R.anim.zoom_in, R.anim.zoom_in);
-                return true;
+            public void onClick(View v) {
+                if(numberField.getText().length()>0){
+                    if(pressCounter==0){
+                        String s = numberField.getText().toString();
+                        if(favList.find(s)){
+                            QuickToast("Hymn " + s + " is a favourite. Press again to remove.");
+                            pressCounter++;
+                        }
+                        else {
+                            QuickToast("Hymn " + s + " is not a favourite. Press again to add.");
+                            pressCounter++;
+                        }
+                    }
+                    else if(pressCounter==1){
+                        String s = numberField.getText().toString();
+                        if(favList.find(s)){
+                            favList.delete(s);
+                            QuickToast("Hymn " + s + " removed.");
+                            pressCounter=0;
+                        }
+                        else {
+                            favList.pushBack(s);
+                            QuickToast("Hymn " + s + " added.");
+                            pressCounter=0;
+                        }
+                    }
+                }
             }
         });
 
+        imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
+        imm.toggleSoftInput(InputMethodManager.SHOW_FORCED, InputMethodManager.HIDE_IMPLICIT_ONLY);
 
-
-    }
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-
-        if(requestCode==1)
-        {
-            if(null!=data)
-                listView.invalidateViews();
-        }
+        numberField.setOnKeyListener(new View.OnKeyListener() {
+            public boolean onKey(View v, int keyCode, KeyEvent event) {
+                if ((event.getAction() == KeyEvent.ACTION_DOWN) &&
+                        (keyCode == KeyEvent.KEYCODE_ENTER)) {
+                    gotoHymn();
+                    hideSoftKeyboard();
+                    return true;
+                }
+                return false;
+            }
+        });
 
     }
     public Context getActivity() {
         return this;
     }
-    public void vis(View v){
-        v.setAlpha(0f);
-        v.setVisibility(View.VISIBLE);
-        v.animate().alpha(1f);
-    }
-    public void invis(final View v) {
-        v.animate().alpha(0f).withEndAction(new Runnable() {
-            @Override
-            public void run() {
-                v.setVisibility(View.INVISIBLE);
-            }
-        });
-    }
     public void QuickToast(String s) {
         Toast.makeText(getActivity(), s,
                 Toast.LENGTH_SHORT).show();
     }
-    public boolean dispatchKeyEvent(KeyEvent event) {
-        int action = event.getAction();
-        int keyCode = event.getKeyCode();
-        switch (keyCode) {
-            case KeyEvent.KEYCODE_VOLUME_UP:
-                if (action == KeyEvent.ACTION_DOWN) {
-                    scroll.up(listView.getFirstVisiblePosition());
-                    showPop(scroll.letter());
-                    listView.smoothScrollToPositionFromTop(scroll.pos(),0,1);
+    public void gotoHymn(){
+        if(numberField.getText().toString().equals("")){
+            QuickToast("Please put hymn number 1-317...");
+        }
+        else {
+            toHymn.putExtra("hymnNum",numberField.getText().toString());
+            startActivity(toHymn);
+        }
 
-                }
-                return true;
-            case KeyEvent.KEYCODE_VOLUME_DOWN:
-                if (action == KeyEvent.ACTION_DOWN) {
-                    scroll.down(listView.getLastVisiblePosition());
-                    showPop(scroll.letter());
-                    listView.smoothScrollToPositionFromTop(scroll.pos(),0,1);
-                }
-                return true;
-            default:
-                return super.dispatchKeyEvent(event);
+    }
+    public void hideSoftKeyboard() {
+        if(getCurrentFocus()!=null) {
+            InputMethodManager inputMethodManager = (InputMethodManager) getSystemService(INPUT_METHOD_SERVICE);
+            inputMethodManager.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(), 0);
         }
     }
-    public void showPop(String a) {
-        Runnable rr = new Runnable() {
-            @Override
-            public void run() {invis(pop);}
-        };
-        pop.setText(a);
-        timer.removeCallbacks(rr);
-        vis(pop);
-        timer.postDelayed(rr,3000);
-    }
-
-
-
-
-
-
 
 }

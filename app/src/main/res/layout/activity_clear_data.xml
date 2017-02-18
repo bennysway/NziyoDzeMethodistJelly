@@ -5,12 +5,14 @@
     android:layout_width="match_parent"
     android:padding="10dp"
     android:layout_height="match_parent"
+    android:background="@drawable/circle"
     tools:context="com.seven.clip.nziyodzemethodist.MakeFav">
 
     <TextView
         android:text="TextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:padding="10dp"
         android:fontFamily="cursive"
         android:textColor="@color/white"
         android:shadowColor="@color/black"

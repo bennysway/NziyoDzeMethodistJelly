@@ -5,36 +5,41 @@
     android:id="@+id/activity_pick_num2"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/square_white"
     tools:context="com.seven.clip.nziyodzemethodist.pickNum2">
 
-    <TextView
-        android:text="A"
-        android:gravity="center"
-        android:textColor="@color/white"
-        android:visibility="invisible"
-        android:textSize="30sp"
-        android:elevation="10dp"
-        android:background="@drawable/scroll_prev"
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:id="@+id/numScrollPop"
-        android:layout_alignParentRight="true" />
+        android:stretchColumns="0,1">
+        <TableRow>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/pickNumMakeFavButton"
+                android:drawableTop="@drawable/heart_normal"
+                style="@style/Widget.AppCompat.Button.ButtonBar.AlertDialog"/>
 
-    <ImageView
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/pickNumButton"
+                android:drawableTop="@drawable/open_hymn_icon"
+                style="@style/Widget.AppCompat.Button.ButtonBar.AlertDialog" />
+        </TableRow>
+    </TableLayout>
+
+    <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/natured"
-        android:scaleType="centerCrop"
-        android:id="@+id/pickNumBg" />
+        android:inputType="number"
+        android:hint="Hymn number..."
+        android:gravity="center"
+        android:ems="10"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:imeOptions="actionDone"
+        android:id="@+id/pickNumSearchBox" />
 
-    <ListView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/numberList"
-        android:divider="@color/burn"
-        android:fastScrollEnabled="true"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
 </RelativeLayout>

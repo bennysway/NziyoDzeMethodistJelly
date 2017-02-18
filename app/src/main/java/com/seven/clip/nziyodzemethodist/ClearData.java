@@ -41,6 +41,7 @@ public class ClearData extends AppCompatActivity {
         final Data color = new Data(this,"color");
         final Data size = new Data(this,"textsize");
         final Data recordFlag = new Data(this,"recordflag");
+        final Zvinokosha access = new Zvinokosha(this);
 
         Typeface custom_font = Typeface.createFromAsset(getAssets(),  "fonts/bh.ttf");
         prompt.setTypeface(custom_font);
@@ -64,6 +65,7 @@ public class ClearData extends AppCompatActivity {
                 color.deleteAll();
                 size.deleteAll();
                 recordFlag.deleteAll();
+                access.clear();
                 SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(ClearData.this);
                 SharedPreferences.Editor editor = preferences.edit();
                 editor.putString("example_text", "Set name");

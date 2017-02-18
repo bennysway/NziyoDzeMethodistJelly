@@ -2,12 +2,15 @@ package com.seven.clip.nziyodzemethodist;
 
 import android.content.ClipData;
 import android.content.ClipboardManager;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.graphics.Typeface;
 import android.media.MediaRecorder;
 import android.os.Environment;
 import android.os.Handler;
+import android.preference.PreferenceManager;
 import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
@@ -23,6 +26,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewTreeObserver;
 import android.view.WindowManager;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -30,6 +34,9 @@ import android.widget.RelativeLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.adcolony.sdk.AdColony;
+
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -43,8 +50,8 @@ import static android.graphics.Color.parseColor;
 
 public class hymnDisplay extends AppCompatActivity {
     ScrollView myScroll;
-    int bound,totalHeight,clength,textcolor,capColor,hymnnumColor,length,buttonLayoutBg,type;
-    Boolean chorusAvail = false;
+    int bound,totalHeight,clength,textcolor,capColor,hymnnumColor,length,buttonLayoutBg,type,hasOptions=0;
+    Boolean chorusAvail = false, isInEnglish = false;
     ImageView bg;
     float textSize;
     RelativeLayout display;
@@ -60,6 +67,7 @@ public class hymnDisplay extends AppCompatActivity {
     Random random;
     public static final int RequestPermissionCode = 1;
     Data favList,recordFlag,color;
+    Zvinokosha access;
     ScaleGestureDetector scaleGestureDetector;
     Intent hymnDisplayIntent;
 
@@ -79,6 +87,7 @@ public class hymnDisplay extends AppCompatActivity {
         recordFlag = new Data(this,"recordflag");
         hymnDisplayIntent = new Intent();
         final EnResource engCheck = new EnResource(this);
+        access = new Zvinokosha(this);
 
         s = getIntent().getStringExtra("hymnNum");
         type = getIntent().getIntExtra("hymnType",0);
@@ -139,6 +148,7 @@ public class hymnDisplay extends AppCompatActivity {
         if(type!=0){
             h = "en" + h;
             t = "en" + t;
+            isInEnglish = true;
         }
 
 
@@ -282,7 +292,7 @@ public class hymnDisplay extends AppCompatActivity {
                     chorusTrasparent = false;
                 }
                 else {
-                    chorus.animate().alpha(.45f);
+                    chorus.animate().alpha(.0f);
                     chorusTrasparent = true;
                 }
             }
@@ -430,6 +440,10 @@ public class hymnDisplay extends AppCompatActivity {
                 Intent toCaptions = new Intent(hymnDisplay.this,Captions.class);
                 toCaptions.putExtra("hymnNumWord",safe);
                 toCaptions.putExtra("hymnNum",s);
+                /*
+                * TODO
+                * set english hymn handler
+                * */
                 invis(butopt_on);
                 vis(butopt);
                 floatDownButtons(opten,0);
@@ -448,19 +462,28 @@ public class hymnDisplay extends AppCompatActivity {
         opten.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(engCheck.isEn(s)){
-                    Intent enIntent = new Intent(hymnDisplay.this,hymnDisplay.class);
-                    invis(butopt_on);
-                    vis(butopt);
-                    floatDownButtons(opten,0);
-                    floatDownButtons(optcaptions,100);
-                    floatDownButtons(optnight,200);
-                    floatDownButtons(optfont,300);
-                    optBool=false;
-                    enIntent.putExtra("hymnType",1);
-                    enIntent.putExtra("hymnNum",s);
-                    startActivity(enIntent);
+                if(access.hasAccess()){
+                    if(engCheck.isEn(s)){
+                        Intent enIntent = new Intent(hymnDisplay.this,hymnDisplay.class);
+                        invis(butopt_on);
+                        vis(butopt);
+                        floatDownButtons(opten,0);
+                        floatDownButtons(optcaptions,100);
+                        floatDownButtons(optnight,200);
+                        floatDownButtons(optfont,300);
+                        optBool=false;
+                        enIntent.putExtra("hymnType",1);
+                        enIntent.putExtra("hymnNum",s);
+                        startActivity(enIntent);
 
+                    }
+                }
+                if(!access.hasAccess()){
+                    Intent toDisplay = new Intent(hymnDisplay.this,MainDrawer.class);
+                    toDisplay.putExtra("option",1);
+                    QuickToast("Activate this feature in the menu on the Main Screen of the hymnbook");
+                    startActivity(toDisplay);
+                    hasOptions = 1;
                 }
             }
         });
@@ -513,6 +536,14 @@ public class hymnDisplay extends AppCompatActivity {
         }
         favInit = favBool;
     }
+
+    @Override
+    public void onResume(){
+        super.onResume();
+        if(hasOptions==1)
+            finish();
+    }
+
     public void changeTextSize(float value){
         for(int l=0; l<length; l++)
         {
@@ -984,6 +1015,12 @@ public class hymnDisplay extends AppCompatActivity {
             size = pairs[0].getTextSize();
             Log.d("TextSizeEnd", String.valueOf(size));
             return true;
+        }
+    }
+    public void hideSoftKeyboard() {
+        if(getCurrentFocus()!=null) {
+            InputMethodManager inputMethodManager = (InputMethodManager) getSystemService(INPUT_METHOD_SERVICE);
+            inputMethodManager.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(), 0);
         }
     }
 }

@@ -14,6 +14,7 @@ import android.support.design.widget.NavigationView;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.WindowManager;
@@ -23,11 +24,14 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.adcolony.sdk.AdColony;
+import com.adcolony.sdk.AdColonyAdOptions;
 import com.adcolony.sdk.AdColonyAdViewActivity;
+import com.adcolony.sdk.AdColonyAppOptions;
 import com.adcolony.sdk.AdColonyInterstitial;
 import com.adcolony.sdk.AdColonyInterstitialListener;
 import com.adcolony.sdk.AdColonyReward;
 import com.adcolony.sdk.AdColonyRewardListener;
+import com.adcolony.sdk.AdColonyZone;
 
 public class MainDrawer extends AppCompatActivity {
     Intent toHymnNums,toSettings,toClearData;
@@ -35,8 +39,18 @@ public class MainDrawer extends AppCompatActivity {
     private NavigationView navView;
     ImageView appPic;
     TextView appOwner;
+    boolean request = false;
+    Zvinokosha moreFeatures;
+    MenuItem EnableEnglish;
+    int fromPrevActivity=0;
 
+    final private String APP_ID = "appc167511230224bdbb5";
+    final private String ZONE_ID = "vze62659b1ea5241fb86";
+    final private String TAG = "NziyoDzeMethodist";
 
+    private AdColonyInterstitial ad;
+    private AdColonyInterstitialListener listener;
+    private AdColonyAdOptions ad_options;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,13 +76,19 @@ public class MainDrawer extends AppCompatActivity {
         final Intent toRecList = new Intent(this, RecList.class);
         final Intent toTest = new Intent(this, SandBox.class);
         final Intent toSearchBox = new Intent(this,SearchDialogue.class);
-        final Zvinokosha moreFeatures = new Zvinokosha(this);
+        moreFeatures = new Zvinokosha(this);
         toSettings = new Intent(this, Settings.class);
         toClearData = new Intent(this, ClearData.class);
         mDrawerLayout = (DrawerLayout) findViewById(R.id.activity_main_drawer);
         navView = (NavigationView) findViewById(R.id.startNavigationView);
-        String zone = "vze62659b1ea5241fb86";
-        AdColony.configure(this,"appc167511230224bdbb5",zone);
+
+        AdColonyAppOptions app_options = new AdColonyAppOptions()
+                .setUserID( "unique_user_id" );
+        AdColony.configure( this, app_options, APP_ID, ZONE_ID );
+        ad_options = new AdColonyAdOptions()
+                .enableConfirmationDialog( false )
+                .enableResultsDialog( false );
+
 
         View headerLayout = navView.inflateHeaderView(R.layout.nav_header_layout);
         appOwner = (TextView) headerLayout.findViewById(R.id.navHeaderSubTitle);
@@ -88,6 +108,57 @@ public class MainDrawer extends AppCompatActivity {
         final View opDrawer =findViewById(R.id.openMainDrawer);
         final View opDrawer_on =findViewById(R.id.openMainDrawer_on);
         MenuItem settings = (MenuItem) findViewById(R.id.navSettings);
+        EnableEnglish = (MenuItem) findViewById(R.id.MoreFeatures);
+
+        ///////////////////ads
+        /** Create and set a reward listener */
+        AdColonyRewardListener rewardListener = new AdColonyRewardListener() {
+            @Override
+            public void onReward(AdColonyReward reward) {
+                moreFeatures.set();
+                QuickToast("English hymns set.");
+                if(fromPrevActivity==1)
+                    finish();
+            }
+        };
+
+        /** Set reward listener for your app to be alerted of reward events */
+        AdColony.setRewardListener(rewardListener);
+
+
+        listener = new AdColonyInterstitialListener()
+        {
+            /** Ad passed back in request filled callback, ad can now be shown */
+            @Override
+            public void onRequestFilled( AdColonyInterstitial ad )
+            {
+                MainDrawer.this.ad = ad;
+                Log.d( TAG, "onRequestFilled" );
+                request = true;
+            }
+
+            /** Ad request was not filled */
+            @Override
+            public void onRequestNotFilled( AdColonyZone zone )
+            {
+                request=false;
+            }
+
+            /** Ad opened, reset UI to reflect state change */
+            @Override
+            public void onOpened( AdColonyInterstitial ad )
+            {
+                Log.d( TAG, "onOpened" );
+            }
+
+            /** Request a new ad if ad is expiring */
+            @Override
+            public void onExpiring( AdColonyInterstitial ad )
+            {
+                AdColony.requestInterstitial( ZONE_ID, this, ad_options );
+                Log.d( TAG, "onExpiring" );
+            }
+        };
 
         startSearch.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -235,26 +306,8 @@ public class MainDrawer extends AppCompatActivity {
                 startActivity(toRecList);
             }
         });
-
-        AdColonyRewardListener listener = new AdColonyRewardListener() {
-            @Override
-            public void onReward(AdColonyReward reward) {
-                moreFeatures.set();
-            }
-        };
-
-        AdColonyInterstitialListener ilistener = new AdColonyInterstitialListener() {
-            @Override
-            public void onRequestFilled(AdColonyInterstitial ad) {
-                /** Store and use this ad object to show your ad when appropriate */
-            }
-        };
-
-        AdColony.requestInterstitial(zone, ilistener);
-        AdColony.setRewardListener(listener);
-
-
-
+        fromPrevActivity = getIntent().getIntExtra("option",0);
+        Options(fromPrevActivity);
     }
     @Override
     public void onResume(){
@@ -269,6 +322,11 @@ public class MainDrawer extends AppCompatActivity {
                 openGeneral();
             }
         });
+        if (ad == null || ad.isExpired())
+        {
+            AdColony.requestInterstitial( ZONE_ID, listener, ad_options );
+            request = true;
+        }
 
 
     }
@@ -389,5 +447,19 @@ public class MainDrawer extends AppCompatActivity {
         QuickToast("Click Display Name to change.");
     }
     public void ActivateFeatures(MenuItem menuItem){
+        if(request){
+            ad.show();
+        }
+        else
+            QuickToast("Please wait while files load...");
+    }
+    public void Options(int o){
+        switch (o){
+            case 1:
+                mDrawerLayout.openDrawer(navView);
+                break;
+            default:
+                break;
+        }
     }
 }

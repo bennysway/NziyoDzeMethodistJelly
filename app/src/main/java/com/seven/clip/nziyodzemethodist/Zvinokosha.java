@@ -24,6 +24,10 @@ public class Zvinokosha {
         savedDate = today;
     }
 
+    public void clear(){
+        access.deleteAll();
+    }
+
     public boolean hasAccess(){
         return today.equals(savedDate);
     }

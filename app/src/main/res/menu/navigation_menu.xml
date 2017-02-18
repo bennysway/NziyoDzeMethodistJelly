@@ -30,7 +30,7 @@
         android:id="@+id/MoreFeatures"
         android:title="Activate Features"
         android:icon="@android:drawable/star_off"
-        android:onClick="openNotifications"/>
+        android:onClick="ActivateFeatures"/>
 
 
 </menu>
