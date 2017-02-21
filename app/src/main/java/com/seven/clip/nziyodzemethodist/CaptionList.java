@@ -1,6 +1,7 @@
 package com.seven.clip.nziyodzemethodist;
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -27,9 +28,13 @@ public class CaptionList extends AppCompatActivity {
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         noCapsText = (TextView) findViewById(R.id.noCaptionsText);
+        TextView capTitle = (TextView) findViewById(R.id.captionsTitle);
         ls = (ListView) findViewById(R.id.captionsListView);
         View back = findViewById(R.id.captionsBackButton);
         withCaption = new Data(this,"withcaption");
+
+        Typeface custom_font = Typeface.createFromAsset(getAssets(),  "fonts/bh.ttf");
+        capTitle.setTypeface(custom_font);
 
         back.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -47,6 +47,15 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/notification_text" />
+            <Button
+                android:text="Event log"
+                android:textAllCaps="false"
+                android:padding="4dp"
+                android:textSize="18dp"
+                android:id="@+id/eventLogButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/Widget.AppCompat.Button.Borderless.Colored" />
         </LinearLayout>
     </ScrollView>
 </RelativeLayout>

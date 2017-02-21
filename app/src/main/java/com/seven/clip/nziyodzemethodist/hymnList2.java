@@ -36,6 +36,14 @@ public class hymnList2 extends AppCompatActivity {
         pop = (TextView) findViewById(R.id.hymnScrollPop);
         timer = new Handler();
         scroll = new HymnListScroll();
+        View back = findViewById(R.id.hymnListBackButton);
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+
 
         final String [] sample = new String[317];
         final String [] sorted = new String[317];

@@ -103,10 +103,6 @@ public class MainDrawer extends AppCompatActivity {
         Button captionsBut = (Button) findViewById(R.id.captionsListBut);
         final View startSearch =  findViewById(R.id.searchButton);
         final View startSearch_on =  findViewById(R.id.searchButton_on);
-        final View loadNum = findViewById(R.id.loadingNums);
-        final View loadList = findViewById(R.id.loadingList);
-        final View loadFav = findViewById(R.id.loadingFavs);
-        final View loadRec = findViewById(R.id.loadingRecents);
         Button test = (Button) findViewById(R.id.test);
         final View opDrawer =findViewById(R.id.openMainDrawer);
         final View opDrawer_on =findViewById(R.id.openMainDrawer_on);
@@ -241,66 +237,21 @@ public class MainDrawer extends AppCompatActivity {
 
         hymnNumBut.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                loadNum.animate().alpha(1f).setDuration(400).withEndAction(new Runnable() {
-                    @Override
-                    public void run() {
-                        Handler handler = new Handler();
-                        handler.postDelayed(new Runnable() {
-                            @Override
-                            public void run() {
-                                startActivity(toHymnNums);
-                                loadNum.animate().alpha(0f).setDuration(7000);
-                            }
-                        },1000);
-                    }
-                });
-
+            public void onClick(View view) { startActivity(toHymnNums);
             }
         });
 
         hymnListBut.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                loadList.animate().alpha(1f).setDuration(400).withEndAction(new Runnable() {
-                    @Override
-                    public void run() {
-                        Handler handler = new Handler();
-                        handler.postDelayed(new Runnable() {
-                            @Override
-                            public void run() {
-                                startActivity(toHymnList);
-                                loadList.animate().alpha(0f).setDuration(7000);
-
-                            }
-                        },1000);
-                    }
-                });
-
-
+            public void onClick(View view) {startActivity(toHymnList);
             }
         });
 
         favBut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                loadFav.animate().alpha(1f).setDuration(400).withEndAction(new Runnable() {
-                    @Override
-                    public void run() {
-                        Handler handler = new Handler();
-                        handler.postDelayed(new Runnable() {
-                            @Override
-                            public void run() {
-                                toFavList.putExtra("push","no");
-                                startActivity(toFavList);
-                                loadFav.animate().alpha(0f).setDuration(7000);
-
-                            }
-                        },1000);
-                    }
-                });
-
-
+                toFavList.putExtra("push","no");
+                startActivity(toFavList);
             }
         });
 
@@ -317,7 +268,6 @@ public class MainDrawer extends AppCompatActivity {
                 startActivity(toCaptionList);
             }
         });
-
 
         fromPrevActivity = getIntent().getIntExtra("option",0);
         Options(fromPrevActivity);
@@ -468,7 +418,7 @@ public class MainDrawer extends AppCompatActivity {
                 QuickToast("Please wait while files load...");
         }
         else
-            QuickToast("Check your connection to load hymn files.");
+            QuickToast("Check your internet connection to load hymn files.");
     }
     public void Options(int o){
         switch (o){

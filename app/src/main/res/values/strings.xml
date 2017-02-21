@@ -34,11 +34,11 @@
 
         -Image memory leak fixed (you can now use an HD image to set as profile without crashes)\n
         -Favourite button toggle fixed\n
+        -Tap to hide Chorus
         -zero text size (happens if you just set text size without adjusting, result would be zero)fixed\n\n\n
-
         I would go on and on about the bugs crashes and fixes I went through, but that\'s not the point of this hymn book. Wonderfully coded, just for praise. If what I do isn\'t for God\'s glory, then let me glorify God instead.\n\n
 
-        Blessing F. Charumbira\n\n
+        Blessing F. Charumbira\n\n\n
     </string>
 
     <string name="is_maindrawer_open">false</string>

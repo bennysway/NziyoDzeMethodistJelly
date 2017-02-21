@@ -140,9 +140,15 @@ public class pickNum2 extends AppCompatActivity {
                 Toast.LENGTH_SHORT).show();
     }
     public void gotoHymn(){
-        if(numberField.getText().toString().equals("")){
+        String aS = numberField.getText().toString();
+        int aI=0;
+        if(aS.length()>0)
+            aI = Integer.valueOf(aS);
+        if(aS.equals("")){
             QuickToast("Please put hymn number 1-317...");
         }
+        else if(aI<1||aI>317)
+            QuickToast("Please don't try to be smart. :) enter a number out of the range 1 to 317");
         else {
             toHymn.putExtra("hymnNum",numberField.getText().toString());
             startActivity(toHymn);

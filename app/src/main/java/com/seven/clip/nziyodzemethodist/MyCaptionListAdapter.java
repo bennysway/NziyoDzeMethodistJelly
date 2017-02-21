@@ -41,7 +41,7 @@ class MyCaptionListAdapter extends ArrayAdapter{
         theTextView.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View v) {
-                Intent toRemoveFav = new Intent(MyCaptionListAdapter.super.getContext(),removeFav.class);
+                Intent toRemoveFav = new Intent(MyCaptionListAdapter.super.getContext(),MakeFav.class);
                 toRemoveFav.putExtra("hymnNum",captions[position]);
                 getContext().startActivity(toRemoveFav);
 

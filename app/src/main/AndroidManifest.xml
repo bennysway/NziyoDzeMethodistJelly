@@ -23,9 +23,9 @@
     <uses-permission android:name="android.permission.VIBRATE" />
 
     <application
+        android:name=".NziyoDzeMethodist"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:name=".NziyoDzeMethodist"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
@@ -38,8 +38,8 @@
             android:screenOrientation="portrait" />
         <activity
             android:name=".hymnDisplay"
-            android:windowSoftInputMode="stateHidden"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
         <activity
             android:name=".pickNum2"
             android:screenOrientation="portrait"
@@ -176,6 +176,7 @@
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:hardwareAccelerated="true" />
         <activity android:name=".FeaturesPrompt" />
+        <activity android:name=".EventLog"></activity>
     </application>
 
 </manifest>

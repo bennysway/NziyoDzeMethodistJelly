@@ -7,6 +7,7 @@ import android.widget.Toast;
 import java.util.Arrays;
 import java.util.Deque;
 import java.util.LinkedList;
+import java.util.Objects;
 
 import static android.content.Context.MODE_PRIVATE;
 
@@ -78,7 +79,7 @@ public class Data {
 
     void update(String data) {
         list = data;
-        editor.putString("list", list);
+        editor.putString("list", check(list));
         editor.apply();
     }
 
@@ -86,19 +87,31 @@ public class Data {
         return storage.contains(data);
     }
 
+    private String check(String test){
+        if(test.length()>0){
+            if(test.charAt(0)==',')
+                test=test.replaceFirst(",","");
+            int listLength = test.length();
+            if(test.charAt(listLength-2)==','&&listLength>2)
+                test=test.substring(0,listLength-1);
+            if(test.contains(",,"))
+                test=test.replace(",,",",");
+        }
+        return test;
+
+    }
+
     private void commitData(){
         list = "";
         int size = storage.size();
         for(int i=0; i<size; i++)
             list = list + storage.get(i) + ",";
-        if(list.charAt(0)==',')
-            list=list.replaceFirst(",","");
-        editor.putString("list", list);
+        editor.putString("list", check(list));
         editor.apply();
     }
 
     String get(){
-        return list;
+        return check(list);
     }
 
 }

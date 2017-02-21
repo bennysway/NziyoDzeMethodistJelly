@@ -1,6 +1,7 @@
 package com.seven.clip.nziyodzemethodist;
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -31,12 +32,15 @@ public class RecList extends AppCompatActivity {
 
 
         TextView norecText = (TextView) findViewById(R.id.norecText);
+        TextView recTitle = (TextView) findViewById(R.id.recentsTitle);
+        View back = findViewById(R.id.recentBackButton);
         ls = (ListView) findViewById(R.id.RecListView);
-        final Intent toHymn = new Intent(this,hymnDisplay.class);
         final Intent toHome = new Intent(this,MainDrawer.class);
-        final Intent toFav = new Intent(this,MakeFav.class);
         FloatingActionButton del = (FloatingActionButton) findViewById(R.id.deleteHistory);
         int counter = 0;
+
+        Typeface custom_font = Typeface.createFromAsset(getAssets(),  "fonts/bh.ttf");
+        recTitle.setTypeface(custom_font);
 
         list =recList.get();
         for( int i=0; i<list.length(); i++ ) {
@@ -71,6 +75,14 @@ public class RecList extends AppCompatActivity {
                 startActivity(toHome);
             }
         });
+
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+
     }
 
     private String getStringResourceByName(String aString) {

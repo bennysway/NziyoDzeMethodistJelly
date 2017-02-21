@@ -74,59 +74,6 @@
                 android:layout_row="1"
                 android:layout_column="2" />
 
-            <com.crystal.crystalpreloaders.widgets.CrystalPreloader
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_gravity="center"
-                app:crs_pl_style="tornado_circle_1"
-                android:layout_row="0"
-                android:layout_column="0"
-                app:crs_pl_size="small"
-                app:crs_pl_fg_color="#ffffff"
-                app:crs_pl_bg_color="#000000"
-                android:alpha="0"
-                android:id="@+id/loadingNums"/>
-
-            <com.crystal.crystalpreloaders.widgets.CrystalPreloader
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_gravity="center"
-                app:crs_pl_style="tornado_circle_3"
-                android:layout_row="0"
-                android:layout_column="1"
-                app:crs_pl_size="small"
-                app:crs_pl_fg_color="#ffffff"
-                app:crs_pl_bg_color="#000000"
-                android:alpha="0"
-                android:id="@+id/loadingList"/>
-
-            <com.crystal.crystalpreloaders.widgets.CrystalPreloader
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                app:crs_pl_style="expandable_balls"
-                android:layout_row="1"
-                android:layout_column="1"
-                android:layout_marginTop="15dp"
-                android:layout_marginLeft="10dp"
-                app:crs_pl_size="small"
-                app:crs_pl_fg_color="#ffffff"
-                app:crs_pl_bg_color="#000000"
-                android:layout_gravity="center_horizontal"
-                android:alpha="0"
-                android:id="@+id/loadingFavs"/>
-
-            <com.crystal.crystalpreloaders.widgets.CrystalPreloader
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                app:crs_pl_style="hasher"
-                android:layout_row="0"
-                android:layout_column="2"
-                app:crs_pl_size="small"
-                app:crs_pl_fg_color="#ffffff"
-                app:crs_pl_bg_color="#000000"
-                android:alpha="0"
-                android:id="@+id/loadingRecents"/>
-
             <TextView
                 android:text="@string/hymnNumberButtonText"
                 android:textSize="@dimen/mainTextButtonsSize"

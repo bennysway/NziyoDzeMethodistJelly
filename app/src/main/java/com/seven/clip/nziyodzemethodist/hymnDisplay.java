@@ -174,6 +174,8 @@ public class hymnDisplay extends AppCompatActivity {
 
         int resourceId = getResourceId(h,"array",getPackageName());
         int captionResourceId = getResourceId(c,"array",getPackageName());
+        title.setText(getResourceId(t,"string",getPackageName()));
+        hymnName = title.getText().toString();
         captionStrings = getResources().getStringArray(captionResourceId);
         hymn = getResources().getStringArray(resourceId);
         length =getResources().getStringArray(getResourceId(h,"array",getPackageName())).length;
