@@ -221,7 +221,7 @@
                 android:layout_alignParentBottom="true"
                 android:layout_alignParentEnd="true"
                 android:id="@+id/test"
-                android:visibility="visible"
+                android:visibility="invisible"
                 android:shadowColor="@color/black"
                 android:layout_alignParentRight="true" />
 

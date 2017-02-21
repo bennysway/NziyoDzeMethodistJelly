@@ -13,7 +13,7 @@ import android.widget.Toast;
 public class CaptionList extends AppCompatActivity {
     ListView ls;
     String list;
-    MyFavListAdapter adapter;
+    MyCaptionListAdapter adapter;
     Data withCaption;
     String[] names;
     int counter = 0;
@@ -27,7 +27,7 @@ public class CaptionList extends AppCompatActivity {
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         noCapsText = (TextView) findViewById(R.id.noCaptionsText);
-        ls = (ListView) findViewById(R.id.captionListView);
+        ls = (ListView) findViewById(R.id.captionsListView);
         View back = findViewById(R.id.captionsBackButton);
         withCaption = new Data(this,"withcaption");
 
@@ -54,7 +54,7 @@ public class CaptionList extends AppCompatActivity {
         }
         else {
             adapter =
-                    new MyFavListAdapter(
+                    new MyCaptionListAdapter(
                             this,
                             names
                     );
@@ -65,6 +65,13 @@ public class CaptionList extends AppCompatActivity {
 
 
 
+    }
+    @Override
+    public void onResume(){
+        super.onResume();
+        if(ls.getAdapter()!=null){
+            ls.invalidateViews();
+        }
     }
     public void QuickToast(String s){
         Toast.makeText(this, s,

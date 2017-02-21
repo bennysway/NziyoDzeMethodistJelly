@@ -80,6 +80,7 @@ public class MainDrawer extends AppCompatActivity {
         moreFeatures = new Zvinokosha(this);
         toSettings = new Intent(this, Settings.class);
         toClearData = new Intent(this, ClearData.class);
+
         mDrawerLayout = (DrawerLayout) findViewById(R.id.activity_main_drawer);
         navView = (NavigationView) findViewById(R.id.startNavigationView);
 
@@ -459,11 +460,15 @@ public class MainDrawer extends AppCompatActivity {
         QuickToast("Click Display Name to change.");
     }
     public void ActivateFeatures(MenuItem menuItem){
-        if(request){
-            ad.show();
+        if(CheckNetwork.isInternetAvailable(this)){
+            if(request&&ad!=null){
+                ad.show();
+            }
+            else
+                QuickToast("Please wait while files load...");
         }
         else
-            QuickToast("Please wait while files load...");
+            QuickToast("Check your connection to load hymn files.");
     }
     public void Options(int o){
         switch (o){

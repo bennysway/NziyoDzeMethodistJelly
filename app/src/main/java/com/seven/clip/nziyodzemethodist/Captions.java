@@ -28,7 +28,7 @@ public class Captions extends AppCompatActivity {
     int barId;
     boolean barAvail=false;
     RelativeLayout parentLayout;
-    String capStoreKey;
+    String capStoreKey,hymnName;
     View bar;
     int hasOption;
 
@@ -43,7 +43,7 @@ public class Captions extends AppCompatActivity {
         Data recordFlag = new Data(this,"recordflag");
         Data withCaption = new Data(this,"withcaption");
         Typeface custom_font = Typeface.createFromAsset(getAssets(),  "fonts/bh.ttf");
-        TextView cap = (TextView) findViewById(R.id.captionTitle);
+        final TextView cap = (TextView) findViewById(R.id.captionTitle);
         cap.setTypeface(custom_font);
 
         recordFlag.deleteAll();
@@ -52,6 +52,7 @@ public class Captions extends AppCompatActivity {
         final String hymnNumWord = getIntent().getStringExtra("hymnNumWord");
         final String hymnNum = getIntent().getStringExtra("hymnNum");
         hasOption = getIntent().getIntExtra("isEn",0);
+        hymnName = getIntent().getStringExtra("hymnName");
         capStoreKey = hymnNumWord;
         Data storedKey = new Data(this,capStoreKey);
 
@@ -153,6 +154,25 @@ public class Captions extends AppCompatActivity {
         parentLayout.addView(bar);
 
 
+        cap.animate().alpha(0f).setStartDelay(3000).withEndAction(new Runnable() {
+            @Override
+            public void run() {
+                cap.setText(hymnName);
+                cap.animate().alpha(1f).setStartDelay(10).withEndAction(new Runnable() {
+                    @Override
+                    public void run() {
+                        cap.animate().alpha(0f).setStartDelay(7000).withEndAction(new Runnable() {
+                            @Override
+                            public void run() {
+                                cap.setText("Captions");
+                                cap.animate().alpha(1f).setStartDelay(10);
+                            }
+                        });
+                    }
+                });
+
+            }
+        });
 
     }
     public String IntToStr(int i){

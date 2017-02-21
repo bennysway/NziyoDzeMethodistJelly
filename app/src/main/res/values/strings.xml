@@ -15,15 +15,28 @@
 
     <string name="en_hymn_list">5,10,17,18,23,44,48,49,57,58,63,85,94,98,99,103,104,107,108,120,123,127,138,141,144,147,152,154,153,155,160,164,163,173,181,186,195,204,217,250,251,267,293,</string>
 
-    <string name="notification_date_string">18 January 2017</string>
+    <string name="notification_date_string">21 February 2017</string>
     <string name="notification_text_string">
-        It took hard work to build this app, especially making it compatible with JellyBean devices(Android 4.x.x) but with determination, I did my best.\n\n
-        Sad to say I worked this without a coding team. If you\'re interested in making the app more at home, contact me and I\'ll give you access to its Git Repository.\n\n
+        English Hymns\n\n
 
-        The good news, the app is a success, on most devices. If its not updating,(such as not seeing this message), uninstall it and get the latest version from Play Stores. As for you, who is reading this, you\'re safe, and more good updates are on the way.\n\n
-        Ideas are there: proper sync, change hymn background color, and its image, pinch to change text size rather than zooming,volume buttons to quick scroll and more, ideas are still overflowing.\n\n
+        This is the new feature I am proud to present. Check if its available in the hymn list, open it, press options (or scroll down to options), and click the "EN" button. Well I had to go hymn by hymn, one by one, looking for perfect matches. This tiresome effort (oh have mercy lol) prompted me to make those English hymn available online, actually they stay just for the whole day. The next day you might have to activate them again.\n\n
 
-        I leave you with these words. Praise God, in the best way you can.\n\n
+        Luckily this is just a feature, the whole hymn is perfectly offline, and all other new updates mentioned below are offline as well, for your Android UI comfort. So enough jargon, these are some new updates to the hymn book:\n\n
+
+        -Quick Hymn Number Goto\n
+        -Pinch to Zoom Text\n
+        -Immidate Color Mode switch\n
+        -Immidate Text Size change\n
+        -Captions in one place\n
+        -Scroll Hymn List with volume buttons\n\n
+
+        Fixes:\n\n
+
+        -Image memory leak fixed (you can now use an HD image to set as profile without crashes)\n
+        -Favourite button toggle fixed\n
+        -zero text size (happens if you just set text size without adjusting, result would be zero)fixed\n\n\n
+
+        I would go on and on about the bugs crashes and fixes I went through, but that\'s not the point of this hymn book. Wonderfully coded, just for praise. If what I do isn\'t for God\'s glory, then let me glorify God instead.\n\n
 
         Blessing F. Charumbira\n\n
     </string>

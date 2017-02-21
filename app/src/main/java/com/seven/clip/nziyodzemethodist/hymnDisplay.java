@@ -63,7 +63,7 @@ public class hymnDisplay extends AppCompatActivity {
     View loadCaption;
     boolean favBool,shareBool,optBool,textSizeChanged,menuOpen,favInit, chorusTrasparent;
     long starttime = 0;
-    String AudioSavePathInDevice = null,RandomAudioFileName = "ABCDEFGHIJKLMNOP",hymnNum,capStoreKey,s,t,safe;
+    String AudioSavePathInDevice = null,RandomAudioFileName = "ABCDEFGHIJKLMNOP",hymnNum,capStoreKey,s,t,safe,hymnName;
     MediaRecorder mediaRecorder;
     Random random;
     public static final int RequestPermissionCode = 1;
@@ -146,6 +146,8 @@ public class hymnDisplay extends AppCompatActivity {
         menuOpen = false;
         chorusTrasparent = false;
 
+        title.setText(getResourceId(t,"string",getPackageName()));
+        hymnName = title.getText().toString();
 
         switch (type){
             case 1:
@@ -158,6 +160,7 @@ public class hymnDisplay extends AppCompatActivity {
                 Intent toCaptions = new Intent(hymnDisplay.this,Captions.class);
                 toCaptions.putExtra("hymnNumWord",safe);
                 toCaptions.putExtra("hymnNum",s);
+                toCaptions.putExtra("hymnName",hymnName);
                 finish();
                 startActivity(toCaptions);
                 break;
@@ -171,7 +174,6 @@ public class hymnDisplay extends AppCompatActivity {
 
         int resourceId = getResourceId(h,"array",getPackageName());
         int captionResourceId = getResourceId(c,"array",getPackageName());
-        title.setText(getResourceId(t,"string",getPackageName()));
         captionStrings = getResources().getStringArray(captionResourceId);
         hymn = getResources().getStringArray(resourceId);
         length =getResources().getStringArray(getResourceId(h,"array",getPackageName())).length;
@@ -458,6 +460,7 @@ public class hymnDisplay extends AppCompatActivity {
                 toCaptions.putExtra("hymnNumWord",safe);
                 toCaptions.putExtra("hymnNum",s);
                 toCaptions.putExtra("isEn",optionsSet);
+                toCaptions.putExtra("hymnName",hymnName);
                 invis(butopt_on);
                 vis(butopt);
                 floatDownButtons(opten,0);
