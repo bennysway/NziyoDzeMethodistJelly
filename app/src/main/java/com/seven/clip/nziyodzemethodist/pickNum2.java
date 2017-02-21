@@ -16,6 +16,7 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -25,6 +26,8 @@ public class pickNum2 extends AppCompatActivity {
     EditText numberField;
     Intent toHymn;
     InputMethodManager imm;
+    Data favList;
+    ImageView makeFavBut;
     int pressCounter=0;
 
     @Override
@@ -44,11 +47,11 @@ public class pickNum2 extends AppCompatActivity {
         toHymn = new Intent(this,hymnDisplay.class);
 
         numberField = (EditText) findViewById(R.id.pickNumSearchBox);
-        Button openHymn = (Button) findViewById(R.id.pickNumButton);
-        final Button makeFavBut = (Button) findViewById(R.id.pickNumMakeFavButton);
+        ImageView openHymn = (ImageView) findViewById(R.id.pickNumButton);
+        makeFavBut = (ImageView) findViewById(R.id.pickNumMakeFavButton);
 
         Data recordFlag = new Data(this,"recordflag");
-        final Data favList = new Data(this,"favlist");
+        favList = new Data(this,"favlist");
         recordFlag.deleteAll();
 
         numberField.setFilters(new InputFilter[]{ new HymnNumberFilter("1", "317")});
@@ -74,17 +77,7 @@ public class pickNum2 extends AppCompatActivity {
             public void afterTextChanged(Editable s) {
                 String num = s.toString();
                 if(num.length()>0){
-                    if(favList.find(num)){
-                        makeFavBut.animate().scaleX(1.5f).scaleY(1.5f).withEndAction(new Runnable() {
-                            @Override
-                            public void run() {
-                                makeFavBut.animate().scaleY(1f).scaleX(1f).alpha(1f);
-                            }
-                        });
-                    }
-                    else {
-                        makeFavBut.setAlpha(.5f);
-                    }
+                    favAni(num);
                 }
             }
         });
@@ -110,11 +103,13 @@ public class pickNum2 extends AppCompatActivity {
                             favList.delete(s);
                             QuickToast("Hymn " + s + " removed.");
                             pressCounter=0;
+                            favAni(s);
                         }
                         else {
                             favList.pushBack(s);
                             QuickToast("Hymn " + s + " added.");
                             pressCounter=0;
+                            favAni(s);
                         }
                     }
                 }
@@ -158,6 +153,19 @@ public class pickNum2 extends AppCompatActivity {
         if(getCurrentFocus()!=null) {
             InputMethodManager inputMethodManager = (InputMethodManager) getSystemService(INPUT_METHOD_SERVICE);
             inputMethodManager.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(), 0);
+        }
+    }
+    public void favAni(String num){
+        if(favList.find(num)){
+            makeFavBut.animate().scaleX(1.5f).scaleY(1.5f).setDuration(100).withEndAction(new Runnable() {
+                @Override
+                public void run() {
+                    makeFavBut.animate().scaleY(1f).scaleX(1f).alpha(1f);
+                }
+            });
+        }
+        else {
+            makeFavBut.setAlpha(.5f);
         }
     }
 

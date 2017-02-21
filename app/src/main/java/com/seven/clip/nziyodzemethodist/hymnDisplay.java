@@ -6,6 +6,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
+import android.graphics.Rect;
 import android.graphics.Typeface;
 import android.media.MediaRecorder;
 import android.os.Environment;
@@ -50,8 +51,8 @@ import static android.graphics.Color.parseColor;
 
 public class hymnDisplay extends AppCompatActivity {
     ScrollView myScroll;
-    int bound,totalHeight,clength,textcolor,capColor,hymnnumColor,length,buttonLayoutBg,type,hasOptions=0;
-    Boolean chorusAvail = false, isInEnglish = false;
+    int bound,totalHeight,clength,textcolor,capColor,hymnnumColor,length,buttonLayoutBg,type,hasOptions=0,optionsSet=0;
+    Boolean chorusAvail = false, isInEnglish = false,isRecording = false;
     ImageView bg;
     float textSize;
     RelativeLayout display;
@@ -91,6 +92,7 @@ public class hymnDisplay extends AppCompatActivity {
 
         s = getIntent().getStringExtra("hymnNum");
         type = getIntent().getIntExtra("hymnType",0);
+
         safe = NumToWord.convert(StrToInt(s)) + "key";
         capStoreKey = safe;
         t = "hymn" + s + "firstline";
@@ -145,11 +147,26 @@ public class hymnDisplay extends AppCompatActivity {
         chorusTrasparent = false;
 
 
-        if(type!=0){
-            h = "en" + h;
-            t = "en" + t;
-            isInEnglish = true;
+        switch (type){
+            case 1:
+                h = "en" + h;
+                t = "en" + t;
+                isInEnglish = true;
+                optionsSet=1;
+                break;
+            case 2:
+                Intent toCaptions = new Intent(hymnDisplay.this,Captions.class);
+                toCaptions.putExtra("hymnNumWord",safe);
+                toCaptions.putExtra("hymnNum",s);
+                finish();
+                startActivity(toCaptions);
+                break;
+            default:
+                recList.pushFront(s);
+                break;
+
         }
+
 
 
         int resourceId = getResourceId(h,"array",getPackageName());
@@ -171,7 +188,7 @@ public class hymnDisplay extends AppCompatActivity {
 
 
 
-        recList.pushFront(s);
+
         String g = textSizeData.get();
         if(g.equals(""))
             textSize = 40f;
@@ -440,10 +457,7 @@ public class hymnDisplay extends AppCompatActivity {
                 Intent toCaptions = new Intent(hymnDisplay.this,Captions.class);
                 toCaptions.putExtra("hymnNumWord",safe);
                 toCaptions.putExtra("hymnNum",s);
-                /*
-                * TODO
-                * set english hymn handler
-                * */
+                toCaptions.putExtra("isEn",optionsSet);
                 invis(butopt_on);
                 vis(butopt);
                 floatDownButtons(opten,0);
@@ -456,34 +470,39 @@ public class hymnDisplay extends AppCompatActivity {
         });
 
         if(engCheck.isEn(s)){
-            opten.setAlpha(1f);
-            engBut.setAlpha(1f);
+            if(optionsSet==0){
+                opten.setAlpha(1f);
+                engBut.setAlpha(1f);
+            }
         }
         opten.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(access.hasAccess()){
-                    if(engCheck.isEn(s)){
-                        Intent enIntent = new Intent(hymnDisplay.this,hymnDisplay.class);
-                        invis(butopt_on);
-                        vis(butopt);
-                        floatDownButtons(opten,0);
-                        floatDownButtons(optcaptions,100);
-                        floatDownButtons(optnight,200);
-                        floatDownButtons(optfont,300);
-                        optBool=false;
-                        enIntent.putExtra("hymnType",1);
-                        enIntent.putExtra("hymnNum",s);
-                        startActivity(enIntent);
-
+                if(optionsSet==0){
+                    if(engCheck.isEn(s)) {
+                        if (access.hasAccess()) {
+                            Intent enIntent = new Intent(hymnDisplay.this, hymnDisplay.class);
+                            invis(butopt_on);
+                            vis(butopt);
+                            floatDownButtons(opten, 0);
+                            floatDownButtons(optcaptions, 100);
+                            floatDownButtons(optnight, 200);
+                            floatDownButtons(optfont, 300);
+                            optBool = false;
+                            enIntent.putExtra("hymnType", 1);
+                            enIntent.putExtra("hymnNum", s);
+                            startActivity(enIntent);
+                        }
+                        if (!access.hasAccess()) {
+                            Intent toDisplay = new Intent(hymnDisplay.this, MainDrawer.class);
+                            toDisplay.putExtra("option", 1);
+                            QuickToast("Activate this feature in the menu on the Main Screen of the hymnbook");
+                            startActivity(toDisplay);
+                            hasOptions = 1;
+                        }
                     }
-                }
-                if(!access.hasAccess()){
-                    Intent toDisplay = new Intent(hymnDisplay.this,MainDrawer.class);
-                    toDisplay.putExtra("option",1);
-                    QuickToast("Activate this feature in the menu on the Main Screen of the hymnbook");
-                    startActivity(toDisplay);
-                    hasOptions = 1;
+                    else
+                        QuickToast("Hymn not available in english yet");
                 }
             }
         });
@@ -695,6 +714,7 @@ public class hymnDisplay extends AppCompatActivity {
             },200);
             menuOpen = true;
         }
+
     }
     public void saveFavState(){
         if(favBool)
@@ -860,6 +880,11 @@ public class hymnDisplay extends AppCompatActivity {
                 toTextPrompt.putExtra("size",textSize);
                 startActivity(toTextPrompt);
             }
+            if(isRecording){
+                mediaRecorder.stop();
+                isRecording = false;
+            }
+            recordFlag.deleteAll();
             finish();
 
         }
@@ -926,7 +951,7 @@ public class hymnDisplay extends AppCompatActivity {
                 vis(delete);
                 invis(noDel);
                 h2.removeCallbacks(run);
-
+                isRecording = false;
                 mediaRecorder.stop();
                 QuickToast("Recording saved.");
                 recordFlag.deleteAll();
@@ -945,6 +970,7 @@ public class hymnDisplay extends AppCompatActivity {
                 vis(noDel);
                 h2.postDelayed(run, 0);
                 starttime = System.currentTimeMillis();
+                isRecording = true;
 
                 if(checkPermission()) {
                     Data save = new Data(hymnDisplay.this,key);
@@ -1015,12 +1041,6 @@ public class hymnDisplay extends AppCompatActivity {
             size = pairs[0].getTextSize();
             Log.d("TextSizeEnd", String.valueOf(size));
             return true;
-        }
-    }
-    public void hideSoftKeyboard() {
-        if(getCurrentFocus()!=null) {
-            InputMethodManager inputMethodManager = (InputMethodManager) getSystemService(INPUT_METHOD_SERVICE);
-            inputMethodManager.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(), 0);
         }
     }
 }

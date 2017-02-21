@@ -137,6 +137,16 @@ class MyHymnListAdapter extends ArrayAdapter implements SectionIndexer {
             }
         });
 
+        theTextView.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                Intent toHymn = new Intent(MyHymnListAdapter.super.getContext(),MakeFav.class);
+                toHymn.putExtra("hymnNum",String.valueOf(hym(position)));
+                getContext().startActivity(toHymn);
+                return true;
+            }
+        });
+
         return theView;
     }
 

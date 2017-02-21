@@ -14,19 +14,18 @@
         android:layout_alignParentBottom="true"
         android:stretchColumns="0,1">
         <TableRow>
-            <Button
+            <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:padding="20dp"
                 android:id="@+id/pickNumMakeFavButton"
-                android:drawableTop="@drawable/heart_normal"
-                style="@style/Widget.AppCompat.Button.ButtonBar.AlertDialog"/>
-
-            <Button
+                app:srcCompat="@drawable/heart_normal"/>
+            <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/pickNumButton"
-                android:drawableTop="@drawable/open_hymn_icon"
-                style="@style/Widget.AppCompat.Button.ButtonBar.AlertDialog" />
+                android:padding="20dp"
+                app:srcCompat="@drawable/open_hymn_icon" />
         </TableRow>
     </TableLayout>
 
@@ -34,12 +33,16 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="number"
-        android:hint="Hymn number..."
+        android:textSize="45sp"
+        android:hint="hymn number..."
+        android:shadowColor="@color/black"
+        android:shadowDy="0.0"
+        android:shadowDx="0.0"
+        android:shadowRadius="10.0"
         android:gravity="center"
-        android:ems="10"
+        android:ems="7"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
-        android:imeOptions="actionDone"
         android:id="@+id/pickNumSearchBox" />
 
 </RelativeLayout>

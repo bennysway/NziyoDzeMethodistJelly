@@ -24,7 +24,6 @@ public class MakeFav extends AppCompatActivity {
         TextView prompt = (TextView) findViewById(R.id.makeFavPrompt);
         Button yes = (Button) findViewById(R.id.makeFavYesBut);
         Button no = (Button) findViewById(R.id.makeFavNoBut);
-        final Intent addFav = new Intent(this,FavList.class);
         MakeFavIntent = new Intent();
         final Data favList = new Data(this,"favlist");
 

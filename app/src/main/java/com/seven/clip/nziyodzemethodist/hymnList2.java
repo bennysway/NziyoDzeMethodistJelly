@@ -18,7 +18,6 @@ public class hymnList2 extends AppCompatActivity {
 
     ListView listView;
     HymnListScroll scroll;
-    int iterator=0;
     TextView pop;
     Handler timer;
 
@@ -31,6 +30,8 @@ public class hymnList2 extends AppCompatActivity {
         final Intent toHymn = new Intent(this,hymnDisplay.class);
         final Intent toFav = new Intent(this,MakeFav.class);
         toFav.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+        Data recFlag = new Data(this, "recordflag");
+        recFlag.deleteAll();
 
         pop = (TextView) findViewById(R.id.hymnScrollPop);
         timer = new Handler();
@@ -419,14 +420,14 @@ public class hymnList2 extends AppCompatActivity {
                 if (action == KeyEvent.ACTION_DOWN) {
                     scroll.up(listView.getFirstVisiblePosition());
                     showPop(scroll.letter());
-                    listView.smoothScrollToPositionFromTop(scroll.pos(),0,5000);
+                    listView.smoothScrollToPositionFromTop(scroll.pos(),0,400);
                 }
                 return true;
             case KeyEvent.KEYCODE_VOLUME_DOWN:
                 if (action == KeyEvent.ACTION_DOWN) {
-                    scroll.down(listView.getLastVisiblePosition());
+                    scroll.down(listView.getFirstVisiblePosition());
                     showPop(scroll.letter());
-                    listView.smoothScrollToPositionFromTop(scroll.pos(),0,1);
+                    listView.smoothScrollToPositionFromTop(scroll.pos(),0,100);
                 }
                 return true;
             default:

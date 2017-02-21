@@ -1,12 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_make_fav"
+    android:id="@+id/activity_clear_data"
     android:layout_width="match_parent"
-    android:padding="10dp"
     android:layout_height="match_parent"
-    android:background="@drawable/circle"
-    tools:context="com.seven.clip.nziyodzemethodist.MakeFav">
+    android:background="@drawable/card_white"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.seven.clip.nziyodzemethodist.ClearData">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:stretchColumns="0,1">
+        <TableRow>
+            <Button
+                android:text="@string/Deny"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="false"
+                android:id="@+id/clearDataNoBut"
+                style="@style/Widget.AppCompat.Button.Borderless.Colored" />
+            <Button
+                android:text="@string/Accept"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/clearDataYesBut"
+                android:textAllCaps="false"
+                style="@style/Widget.AppCompat.Button.Borderless.Colored" />
+
+        </TableRow>
+
+    </TableLayout>
 
     <TextView
         android:text="TextView"
@@ -14,47 +42,16 @@
         android:layout_height="wrap_content"
         android:padding="10dp"
         android:fontFamily="cursive"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
+        android:shadowRadius="15.0"
+        android:shadowDy="12.0"
+        android:shadowDx="5.0"
         android:shadowColor="@color/black"
-        android:shadowDx="0.0"
-        android:shadowRadius="10.0"
-        android:shadowDy="0.0"
         android:gravity="center"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
         android:id="@+id/clearDataPrompt"
-        android:textSize="30sp" />
+        android:textSize="40sp"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
 
-    <Button
-        android:text="@string/Deny"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/but_two"
-        android:textColor="@color/white"
-        android:shadowColor="@color/black"
-        android:shadowDx="0.0"
-        android:shadowRadius="10.0"
-        android:shadowDy="0.0"
-        android:textAllCaps="false"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true"
-        android:id="@+id/clearDataNoBut"
-        style="@style/Widget.AppCompat.Button.Borderless.Colored"
-        android:layout_alignParentRight="true" />
 
-    <Button
-        android:text="@string/Accept"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/clearDataYesBut"
-        android:background="@drawable/but_one"
-        android:shadowColor="@color/black"
-        android:shadowDx="0.0"
-        android:shadowRadius="10.0"
-        android:shadowDy="0.0"
-        android:textAllCaps="false"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true"
-        style="@style/Widget.AppCompat.Button.Colored"
-        android:layout_alignParentLeft="true" />
 </RelativeLayout>

@@ -74,6 +74,7 @@ public class MainDrawer extends AppCompatActivity {
         toHymnNums.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
         final Intent toFavList = new Intent(this, FavList.class);
         final Intent toRecList = new Intent(this, RecList.class);
+        final Intent toCaptionList = new Intent(this,CaptionList.class);
         final Intent toTest = new Intent(this, SandBox.class);
         final Intent toSearchBox = new Intent(this,SearchDialogue.class);
         moreFeatures = new Zvinokosha(this);
@@ -98,6 +99,7 @@ public class MainDrawer extends AppCompatActivity {
         TextView mainAppTile = (TextView) findViewById(R.id.mainAppTitle);
         Button favBut = (Button) findViewById(R.id.favBut);
         Button recentBut = (Button) findViewById(R.id.recentBut);
+        Button captionsBut = (Button) findViewById(R.id.captionsListBut);
         final View startSearch =  findViewById(R.id.searchButton);
         final View startSearch_on =  findViewById(R.id.searchButton_on);
         final View loadNum = findViewById(R.id.loadingNums);
@@ -176,11 +178,12 @@ public class MainDrawer extends AppCompatActivity {
                 },3000);
             }
         });
+
+        final Data withCaptions = new Data(this, "withcaption");
         test.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                QuickToast(moreFeatures.check());
-                moreFeatures.set();
+                QuickToast(withCaptions.get());
             }
         });
 
@@ -306,6 +309,15 @@ public class MainDrawer extends AppCompatActivity {
                 startActivity(toRecList);
             }
         });
+
+        captionsBut.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(toCaptionList);
+            }
+        });
+
+
         fromPrevActivity = getIntent().getIntExtra("option",0);
         Options(fromPrevActivity);
     }

@@ -30,6 +30,7 @@ public class Captions extends AppCompatActivity {
     RelativeLayout parentLayout;
     String capStoreKey;
     View bar;
+    int hasOption;
 
 
     @Override
@@ -50,6 +51,7 @@ public class Captions extends AppCompatActivity {
 
         final String hymnNumWord = getIntent().getStringExtra("hymnNumWord");
         final String hymnNum = getIntent().getStringExtra("hymnNum");
+        hasOption = getIntent().getIntExtra("isEn",0);
         capStoreKey = hymnNumWord;
         Data storedKey = new Data(this,capStoreKey);
 
@@ -62,8 +64,7 @@ public class Captions extends AppCompatActivity {
         final String raw = storedKey.get();
         if(!raw.equals("")){
             if(!withCaption.find(hymnNum))
-                withCaption.pushBack(hymnNum);
-            QuickToast(withCaption.get());
+                withCaption.pushFront(hymnNum);
 
             rawArray = raw.split(",");
 
@@ -104,13 +105,31 @@ public class Captions extends AppCompatActivity {
                     }
                 }
             });
+            ls.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+                @Override
+                public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
+                    Intent toDelete = new Intent(Captions.this,DeleteCaption.class);
+                    toDelete.putExtra("key",capStoreKey);
+                    toDelete.putExtra("record",list.get(position).getTitle()+
+                            ","+list.get(position).getType()+
+                            ","+list.get(position).getPath()+",");
+                    toDelete.putExtra("path",list.get(position).getPath());
+                    toDelete.putExtra("type","recording");
+                    startActivity(toDelete);
+                    finish();
+                    return true;
+                }
+            });
         }
         else {
             QuickToast("No captions available");
             if(withCaption.find(hymnNum))
                 withCaption.delete(hymnNum);
-
-
+            Intent askType = new Intent(Captions.this,addCaption.class);
+            askType.putExtra("hymnNum",hymnNum);
+            askType.putExtra("hymnNumWord",hymnNumWord);
+            askType.putExtra("isEn",hasOption);
+            startActivity(askType);
         }
 
         addCaption.setOnClickListener(new View.OnClickListener() {
@@ -119,6 +138,7 @@ public class Captions extends AppCompatActivity {
                 Intent askType = new Intent(Captions.this,addCaption.class);
                 askType.putExtra("hymnNum",hymnNum);
                 askType.putExtra("hymnNumWord",hymnNumWord);
+                askType.putExtra("isEn",hasOption);
                 startActivity(askType);
             }
         });

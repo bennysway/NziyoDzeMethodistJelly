@@ -11,6 +11,7 @@ import android.widget.Toast;
 
 public class addCaption extends AppCompatActivity {
     String hymnNum,hymnNumWord;
+    int hasOption;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -18,6 +19,7 @@ public class addCaption extends AppCompatActivity {
 
         hymnNum = getIntent().getStringExtra("hymnNum");
         hymnNumWord = getIntent().getStringExtra("hymnNumWord");
+        hasOption = getIntent().getIntExtra("isEn",0);
         final Data recordCheck = new Data(this,"recordflag");
 
         DisplayMetrics dm = new DisplayMetrics();
@@ -38,6 +40,7 @@ public class addCaption extends AppCompatActivity {
                 Intent toRecord = new Intent(addCaption.this,hymnDisplay.class);
                 toRecord.putExtra("hymnNum",hymnNum);
                 toRecord.putExtra("hymnNumWord",hymnNumWord);
+                toRecord.putExtra("hymnType",hasOption);
                 recordCheck.update("true");
                 startActivity(toRecord);
                 finish();
@@ -48,6 +51,7 @@ public class addCaption extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent toNote = new Intent(addCaption.this,makeNote.class);
+                toNote.putExtra("hymnNum",hymnNum);
                 toNote.putExtra("captionKey",hymnNumWord);
                 toNote.putExtra("captionType","note");
                 startActivity(toNote);

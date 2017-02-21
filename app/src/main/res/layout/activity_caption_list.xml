@@ -19,8 +19,8 @@
         android:layout_height="match_parent"
         android:gravity="center"
         android:layout_centerInParent="true"
-        android:text="@string/nofavs"
-        android:id="@+id/nofavText"
+        android:text="No Captions loaded\nrevisit a hymn with a caption to update this list"
+        android:id="@+id/noCaptionsText"
         android:textColor="@color/white"
         android:textSize="23sp"
         android:shadowColor="#ffd6a1"
@@ -29,7 +29,7 @@
         android:shadowRadius="25.0"/>
 
     <TextView
-        android:text="@string/favButtonText"
+        android:text="@string/captionButtonText"
         android:textColor="@color/white"
         android:textSize="30sp"
         android:gravity="center"
@@ -42,10 +42,10 @@
         android:shadowDx="5.0"
         android:shadowColor="@color/black"
         android:layout_centerHorizontal="true"
-        android:id="@+id/favTitle" />
+        android:id="@+id/captionsTitle" />
     <ImageView
         app:srcCompat="@drawable/back_icon"
-        android:id="@+id/favBackBut"
+        android:id="@+id/captionsBackButton"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_alignParentTop="true"
@@ -58,6 +58,6 @@
         android:layout_height="match_parent"
         android:layout_centerHorizontal="true"
         android:visibility="invisible"
-        android:id="@+id/FavListView"
-        android:layout_below="@+id/favTitle" />
+        android:id="@+id/captionsListView"
+        android:layout_below="@+id/captionsTitle" />
 </RelativeLayout>

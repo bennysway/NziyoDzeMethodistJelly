@@ -13,6 +13,7 @@
     <color name="black">#ff000000</color>
     <color name="fadedBlack">#50000000</color>
     <color name="softGray">#50ffffff</color>
+    <color name="fadedWhite">#efffffff</color>
     <color name="ogBurn">#cc5f00</color>
 
     <color name="lightbookbg">#e8e8e8</color>

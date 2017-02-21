@@ -22,7 +22,7 @@ import java.util.Random;
 public class makeNote extends AppCompatActivity {
     String RandomNoteFileName = "abcdefghijklmnop";
     Random random ;
-    String fullFile,key;
+    String fullFile,key,hymnNum;
     Data dataKey;
 
 
@@ -31,6 +31,7 @@ public class makeNote extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_make_note);
         key = getIntent().getStringExtra("captionKey");
+        hymnNum = getIntent().getStringExtra("hymnNum");
         dataKey = new Data(this,key);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
@@ -38,7 +39,7 @@ public class makeNote extends AppCompatActivity {
 
         Button share = (Button) findViewById(R.id.shareNote);
         Button save = (Button) findViewById(R.id.saveNote);
-        Button cancel = (Button) findViewById(R.id.undoNote);
+        final Button cancel = (Button) findViewById(R.id.undoNote);
         final EditText textField = (EditText) findViewById(R.id.textField);
         TextView author = (TextView) findViewById(R.id.author);
         TextView lastEditTime = (TextView) findViewById(R.id.editDate);
@@ -49,6 +50,9 @@ public class makeNote extends AppCompatActivity {
                 String data = textField.getText().toString();
                 if(!data.equals("")){
                     writeToFile(data);
+                    Data withCaption = new Data(makeNote.this,"withcaption");
+                    if(!withCaption.find(hymnNum))
+                        withCaption.pushFront(hymnNum);
                     finish();
                     QuickToast("Saved.");
                 }
