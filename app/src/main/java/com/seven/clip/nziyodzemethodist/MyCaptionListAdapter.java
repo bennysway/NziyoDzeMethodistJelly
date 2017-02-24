@@ -20,7 +20,7 @@ class MyCaptionListAdapter extends ArrayAdapter{
     public View getView(final int position, View convertView, @NonNull ViewGroup parent) {
         LayoutInflater theInflater = (LayoutInflater.from(getContext()));
         View theView = theInflater.inflate(R.layout.hymn_list2, parent, false);
-        String hymnEntry = (String) getItem(position);
+        final String hymnEntry = (String) getItem(position);
 
         Button theTextView = (Button) theView.findViewById(R.id.hymnFirstLinebut);
         theTextView.setText(hymnEntry);
@@ -31,10 +31,14 @@ class MyCaptionListAdapter extends ArrayAdapter{
         theTextView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent toHymn = new Intent(MyCaptionListAdapter.super.getContext(),hymnDisplay.class);
-                toHymn.putExtra("hymnNum",captions[position]);
-                toHymn.putExtra("hymnType",2);
-                getContext().startActivity(toHymn);
+                String s = captions[position];
+                String safe = NumToWord.convert(StrToInt(s)) + "key";
+
+                Intent toCaptions = new Intent(MyCaptionListAdapter.super.getContext(),Captions.class);
+                toCaptions.putExtra("hymnNumWord",safe);
+                toCaptions.putExtra("hymnNum",captions[position]);
+                toCaptions.putExtra("hymnName",hymnEntry);
+                getContext().startActivity(toCaptions);
             }
         });
 
@@ -58,5 +62,9 @@ class MyCaptionListAdapter extends ArrayAdapter{
         Toast.makeText(getContext(), s,
                 Toast.LENGTH_SHORT).show();
     }
+    private int StrToInt(String s){
+        return Integer.valueOf(s);
+    }
+
 }
 

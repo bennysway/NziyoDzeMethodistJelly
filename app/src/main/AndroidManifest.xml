@@ -166,7 +166,10 @@
             android:noHistory="true"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.Popups" />
-        <activity android:name=".CaptionList" />
+        <activity
+            android:name=".CaptionList"
+            android:noHistory="true"
+            />
         <activity
             android:name="com.adcolony.sdk.AdColonyInterstitialActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
@@ -175,8 +178,7 @@
             android:name="com.adcolony.sdk.AdColonyAdViewActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:hardwareAccelerated="true" />
-        <activity android:name=".FeaturesPrompt" />
-        <activity android:name=".EventLog"></activity>
+        <activity android:name=".EventLog"/>
     </application>
 
 </manifest>

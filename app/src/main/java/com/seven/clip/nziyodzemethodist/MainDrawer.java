@@ -23,15 +23,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.adcolony.sdk.AdColony;
-import com.adcolony.sdk.AdColonyAdOptions;
-import com.adcolony.sdk.AdColonyAdViewActivity;
-import com.adcolony.sdk.AdColonyAppOptions;
-import com.adcolony.sdk.AdColonyInterstitial;
-import com.adcolony.sdk.AdColonyInterstitialListener;
-import com.adcolony.sdk.AdColonyReward;
-import com.adcolony.sdk.AdColonyRewardListener;
-import com.adcolony.sdk.AdColonyZone;
+import com.adcolony.sdk.*;
 
 public class MainDrawer extends AppCompatActivity {
     Intent toHymnNums,toSettings,toClearData;
@@ -51,6 +43,7 @@ public class MainDrawer extends AppCompatActivity {
     private AdColonyInterstitial ad;
     private AdColonyInterstitialListener listener;
     private AdColonyAdOptions ad_options;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

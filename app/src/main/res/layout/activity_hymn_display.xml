@@ -46,18 +46,6 @@
             android:layout_weight="1">
         </Button>
 
-        <com.crystal.crystalpreloaders.widgets.CrystalPreloader
-            android:layout_width="100dp"
-            android:layout_height="match_parent"
-            app:crs_pl_style="ball_beat"
-            app:crs_pl_size="very_small"
-            app:crs_pl_fg_color="#ffffff"
-            app:crs_pl_bg_color="#000000"
-            android:layout_marginTop="-20dp"
-            android:layout_gravity="center"
-            android:visibility="invisible"
-            android:id="@+id/loadCaption"/>
-
     </LinearLayout>
 
     <TextView

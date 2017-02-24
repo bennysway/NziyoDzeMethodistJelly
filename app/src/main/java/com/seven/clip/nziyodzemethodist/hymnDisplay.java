@@ -60,7 +60,6 @@ public class hymnDisplay extends AppCompatActivity {
     TextView [] pairs;
     String [] captionStrings;
     Button showCaption;
-    View loadCaption;
     boolean favBool,shareBool,optBool,textSizeChanged,menuOpen,favInit, chorusTrasparent;
     long starttime = 0;
     String AudioSavePathInDevice = null,RandomAudioFileName = "ABCDEFGHIJKLMNOP",hymnNum,capStoreKey,s,t,safe,hymnName;
@@ -109,7 +108,6 @@ public class hymnDisplay extends AppCompatActivity {
         LinearLayout hymnDispl = (LinearLayout) findViewById(R.id.hymnLayout);
         myScroll = (ScrollView) findViewById(R.id.scrollHymn);
         showCaption = (Button) findViewById(R.id.showCaption);
-        loadCaption =findViewById(R.id.loadCaption);
         final Intent toPasteBin = new Intent(this,ShareCustom.class);
         bg = (ImageView) findViewById(R.id.imageView);
         display = (RelativeLayout) findViewById(R.id.activity_hymn_display);
@@ -146,23 +144,12 @@ public class hymnDisplay extends AppCompatActivity {
         menuOpen = false;
         chorusTrasparent = false;
 
-        title.setText(getResourceId(t,"string",getPackageName()));
-        hymnName = title.getText().toString();
-
         switch (type){
             case 1:
                 h = "en" + h;
                 t = "en" + t;
                 isInEnglish = true;
                 optionsSet=1;
-                break;
-            case 2:
-                Intent toCaptions = new Intent(hymnDisplay.this,Captions.class);
-                toCaptions.putExtra("hymnNumWord",safe);
-                toCaptions.putExtra("hymnNum",s);
-                toCaptions.putExtra("hymnName",hymnName);
-                finish();
-                startActivity(toCaptions);
                 break;
             default:
                 recList.pushFront(s);
@@ -241,7 +228,6 @@ public class hymnDisplay extends AppCompatActivity {
             public void onClick(View view) {
                 makeCaption();
                 showCaption.setVisibility(View.INVISIBLE);
-                loadCaption.setVisibility(View.INVISIBLE);
 
             }
         });
@@ -766,7 +752,6 @@ public class hymnDisplay extends AppCompatActivity {
                 @Override
                 public void run() {
                     showCaption.setVisibility(View.VISIBLE);
-                    loadCaption.setVisibility(View.VISIBLE);
 
                 }
             },(clength*3000));
