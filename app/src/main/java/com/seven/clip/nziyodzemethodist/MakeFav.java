@@ -78,15 +78,8 @@ public class MakeFav extends AppCompatActivity {
                 }
             });
         }
-
-
-
-
-
-
-
-
     }
+
     public void QuickToast(String s) {
         Toast.makeText(this, s,
                 Toast.LENGTH_SHORT).show();

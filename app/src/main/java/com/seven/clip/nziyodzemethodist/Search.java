@@ -57,7 +57,7 @@ public class Search extends AppCompatActivity {
                     if(back>end)
                         back=end;
                     String cap = x.substring(front,back);
-                    cap = cap.replace("\n",". ");
+                    cap = cap.replace("\n"," ");
                     cap +="...";
                     p.setCaption(cap);
                     results.add(p);

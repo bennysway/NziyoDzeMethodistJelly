@@ -67,14 +67,26 @@ public class Splash extends AppCompatActivity {
         int resourceId = getResourceId(h,"array",getPackageName());
         hymn = getResources().getStringArray(resourceId);
 
-        final String [] lines = hymn[0].split("\n");
-        lines[2]= "Hymn " + IntToStr(i);
-        line1.setText(lines[0]);
-        line2.setText(lines[1]);
-        line3.setText(lines[2]);
-        line1.setAlpha(0);
-        line2.setAlpha(0);
-        line3.setAlpha(0);
+        try {
+            final String [] lines = hymn[0].split("\n");
+            lines[2]= "Hymn " + IntToStr(i);
+            line1.setText(lines[0]);
+            line2.setText(lines[1]);
+            line3.setText(lines[2]);
+            line1.setAlpha(0);
+            line2.setAlpha(0);
+            line3.setAlpha(0);
+        }
+        catch(ArrayIndexOutOfBoundsException exception) {
+            final String [] lines = hymn[0].split("\n");
+            lines[1]= "Hymn " + IntToStr(i);
+            line1.setText(lines[0]);
+            line2.setText(lines[1]);
+            line3.setText("");
+            line1.setAlpha(0);
+            line2.setAlpha(0);
+            line3.setAlpha(0);
+        }
 
         //////Runnables
         beginActivity = (new Runnable() {

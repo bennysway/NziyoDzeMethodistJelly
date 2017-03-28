@@ -11,6 +11,8 @@
     <string name="nofavs">No Favorites yet…</string>
     <string name="nocaps">No Captions found by the update yet…</string>
     <string name="norecs">No Recent songs yet…</string>
+    <string name="banner_ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>
+
     <string name="title_activity_settings">Settings</string>
 
     <string name="en_hymn_list">5,10,17,18,23,44,48,49,57,58,63,85,94,98,99,103,104,107,108,120,123,127,138,141,144,147,152,154,153,155,160,164,163,173,181,186,195,204,217,250,251,267,293,</string>

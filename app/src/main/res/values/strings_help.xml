@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="topic1">Splash and Start up</string>
+    <string name="topic2">Main Screen</string>
+    <string name="topic3">Hymn Screen</string>
+    <string name="topic4">Hymn Number</string>
+    <string name="topic5">English Hymns</string>
+    <string name="topic6">Favourites</string>
+    <string name="topic7">Recents</string>
+    <string name="topic8">Captions</string>
+    <string name="topic9">Hymn List</string>
+
+    <string name="topic2sub1">Side Drawer</string>
+    <string name="topic2sub2">Search</string>
+
+    <string name="topic2sub1sub1">Clear Data</string>
+    <string name="topic2sub1sub2">Share</string>
+    <string name="topic2sub1sub3">Credits</string>
+    <string name="topic2sub1sub4">Notifications</string>
+
+
+
+
+    <!-- Splash and Start up -->
+    <string name="body1Para1">
+        This topic will tell you all you need to know about how the application starts and what you can change.\n
+        When the application start, you are shown the Methodist Logo and after that, a hymn is quoted.
+        This is just a feature which makes this application unique.
+    </string>
+    <!-- Insert body1picture1 -->
+    <string name="body1Para2">
+        This might be a slow start to a user and can be easily disabled by going to Settings > General > Show a Himn Verse
+        on Splash and then disable it.
+    </string>
+    <!-- Insert body1shortcut1 -->
+    <string name="body1Para3">
+        Sometimes after disabling the feature, a user might still feel that the application is taking time to start.
+        I have Included a faint Close Button which is always on the top right of the Splash screen.
+    </string>
+    <!--inserts body1picture2 -->
+    <string name="body1Para4">
+        The moment you click this button the Splash will end, taking you straight into the Main Screen.\n
+        Also, the moment you press the back button while the hymnbook is loading, it will close the whole hymnbook
+        ,assuming you did not intend to open the application in the first place.
+    </string>
+
+
+    <!-- Main Screen Side Drawer -->
+    <string name="body2Para1">
+
+    </string>
+
+</resources>

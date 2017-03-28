@@ -5,6 +5,9 @@ import android.content.SharedPreferences;
 import android.widget.Toast;
 
 import java.util.Arrays;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.Deque;
 import java.util.LinkedList;
 import java.util.Objects;
@@ -12,7 +15,7 @@ import java.util.Objects;
 import static android.content.Context.MODE_PRIVATE;
 
 //keys include: favlist,reclist,showsplash,color,image,textsize,recordflag,withcaption
-//              colorflag,textsizeflag,accflag
+//              colorflag,textsizeflag,accflag,faviterator,reciterator,
 
 
 public class Data {
@@ -32,6 +35,15 @@ public class Data {
         storage = new LinkedList<>(Arrays.asList(list.split(",")));
         if(key.equals("withcaption")){
             clearKeys();
+        }
+        else if(key.equals("favlist")){
+            Collections.sort(storage, new Comparator<String>() {
+                @Override
+                public int compare(String o1, String o2) {
+                    return Integer.valueOf(o1).compareTo(Integer.valueOf(o2));
+                }
+            });
+            commitData();
         }
     }
 
@@ -92,8 +104,8 @@ public class Data {
             if(test.charAt(0)==',')
                 test=test.replaceFirst(",","");
             int listLength = test.length();
-            if(test.charAt(listLength-2)==','&&listLength>2)
-                test=test.substring(0,listLength-1);
+            //if(test.charAt(listLength-2)==','&&listLength>2)
+                //test=test.substring(0,listLength-1);
             if(test.contains(",,"))
                 test=test.replace(",,",",");
         }
@@ -113,6 +125,20 @@ public class Data {
     String get(){
         return check(list);
     }
+    String next(String a) {
+        int next = storage.lastIndexOf(a)+1;
+        if(next<0)
+            return "false";
+        return storage.get(next);
+    }
+    ///special functions
+    String nextHistory (int a){
+        return storage.get(a+1);
+    }
+    String prevHistory (int a){
+        return storage.get(a-1);
+    }
 
 }
+
 

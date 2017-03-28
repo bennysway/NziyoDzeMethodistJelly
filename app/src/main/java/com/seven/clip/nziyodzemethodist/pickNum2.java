@@ -9,6 +9,8 @@ import android.text.Editable;
 import android.text.InputFilter;
 import android.text.TextWatcher;
 import android.util.DisplayMetrics;
+import android.util.TypedValue;
+import android.view.Gravity;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.WindowManager;
@@ -18,17 +20,21 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.TableRow;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import static android.graphics.Color.parseColor;
 
 public class pickNum2 extends AppCompatActivity {
 
     EditText numberField;
-    Intent toHymn;
+    Intent toHymn,toTest;
     InputMethodManager imm;
     Data favList;
     ImageView makeFavBut;
     int pressCounter=0;
+    boolean hasEn=false,isEn=false,hasChorus=false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,10 +51,15 @@ public class pickNum2 extends AppCompatActivity {
         getWindow().setLayout((int)(width*.8),(int)(height*.3));
 
         toHymn = new Intent(this,hymnDisplay.class);
+        toTest = new Intent(this,SandBox.class);
 
         numberField = (EditText) findViewById(R.id.pickNumSearchBox);
         ImageView openHymn = (ImageView) findViewById(R.id.pickNumButton);
         makeFavBut = (ImageView) findViewById(R.id.pickNumMakeFavButton);
+        TableRow notifications = (TableRow) findViewById(R.id.hymnNumNotification);
+        Button test = (Button) findViewById(R.id.toSandboxBut);
+        TextView englishAvailable = new TextView(this);
+        TextView withChorus = new TextView(this);
 
         Data recordFlag = new Data(this,"recordflag");
         favList = new Data(this,"favlist");
@@ -56,12 +67,37 @@ public class pickNum2 extends AppCompatActivity {
 
         numberField.setFilters(new InputFilter[]{ new HymnNumberFilter("1", "317")});
 
+        englishAvailable.setText("in English");
+        englishAvailable.setBackground(getResources().getDrawable(R.drawable.square_cap));
+        englishAvailable.setTextColor(parseColor("#ffffff"));
+        englishAvailable.setPadding(5,5,5,5);
+        englishAvailable.setGravity(Gravity.CENTER);
+        englishAvailable.setTextSize(TypedValue.COMPLEX_UNIT_SP, 25);
+
+        withChorus.setText("with chorus");
+        withChorus.setBackground(getResources().getDrawable(R.drawable.square_cap));
+        withChorus.setTextColor(parseColor("#ffffff"));
+        withChorus.setPadding(5,5,5,5);
+        withChorus.setGravity(Gravity.CENTER);
+        withChorus.setTextSize(TypedValue.COMPLEX_UNIT_SP, 25);
+
+
+
         openHymn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 gotoHymn();
             }
         });
+
+        test.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                gotoHymnTest();
+            }
+        });
+
+
         numberField.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -155,6 +191,29 @@ public class pickNum2 extends AppCompatActivity {
         }
 
     }
+
+    public void gotoHymnTest(){
+        String aS = numberField.getText().toString();
+        int aI=0;
+        if(aS.length()>0)
+            aI = Integer.valueOf(aS);
+        if(aS.equals("")){
+            QuickToast("Please put hymn number 1-317...");
+        }
+        else if(aI<1||aI>317)
+            QuickToast("Please don't try to be smart. :) enter a number out of the range 1 to 317");
+        else {
+            toTest.putExtra("hymnNum",numberField.getText().toString());
+            startActivity(toTest);
+        }
+
+    }
+    @Override
+    protected void onPause(){
+        super.onPause();
+        hideSoftKeyboard();
+    }
+
     public void hideSoftKeyboard() {
         if(getCurrentFocus()!=null) {
             InputMethodManager inputMethodManager = (InputMethodManager) getSystemService(INPUT_METHOD_SERVICE);

@@ -24,12 +24,11 @@ public class ClearData extends AppCompatActivity {
         Button no = (Button) findViewById(R.id.clearDataNoBut);
 
 
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_BLUR_BEHIND);
+
         DisplayMetrics dm = new DisplayMetrics();
         getWindowManager().getDefaultDisplay().getMetrics(dm);
 
-
-
-        getWindow().addFlags(WindowManager.LayoutParams.FLAG_BLUR_BEHIND);
         int width = dm.widthPixels;
         int height = dm.heightPixels;
 

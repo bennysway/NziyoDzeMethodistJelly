@@ -151,7 +151,6 @@ public class MainDrawer extends AppCompatActivity {
                 Log.d( TAG, "onExpiring" );
             }
         };
-
         startSearch.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

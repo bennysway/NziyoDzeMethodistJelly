@@ -26,6 +26,9 @@
                 android:id="@+id/pickNumButton"
                 android:padding="20dp"
                 app:srcCompat="@drawable/open_hymn_icon" />
+            <Button
+                android:text="Test"
+                android:id="@+id/toSandboxBut"/>
         </TableRow>
     </TableLayout>
 
@@ -44,5 +47,24 @@
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
         android:id="@+id/pickNumSearchBox" />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:stretchColumns="0,1,2"
+        android:animateLayoutChanges="true">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:id="@+id/hymnNumNotification">
+
+        </TableRow>
+
+    </TableLayout>
 
 </RelativeLayout>

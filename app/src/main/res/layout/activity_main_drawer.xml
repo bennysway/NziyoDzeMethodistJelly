@@ -21,7 +21,7 @@
             android:layout_height="match_parent"
             android:src="@drawable/naturehd"
             android:scaleType="centerCrop"
-            android:id="@+id/bg" />
+            android:id="@+id/mainBg" />
 
         <GridLayout
             android:layout_width="wrap_content"
@@ -174,7 +174,8 @@
 
         <TextView
             android:text=" Nziyo DzeMethodist"
-            android:textColor="@color/white"
+            android:background="@drawable/top_rounded_white"
+            android:textColor="@color/burn"
             android:textSize="30sp"
             android:gravity="center"
             android:fontFamily="cursive"
