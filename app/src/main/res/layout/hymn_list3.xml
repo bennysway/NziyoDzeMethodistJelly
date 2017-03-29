@@ -24,7 +24,7 @@
         android:layout_centerInParent="true"
         android:layout_alignParentRight="true"
         android:alpha="0.0"
-        app:srcCompat="@drawable/en_avail"
+        app:srcCompat="@drawable/en_icon_on"
         android:id="@+id/en3" />
 
 </RelativeLayout>

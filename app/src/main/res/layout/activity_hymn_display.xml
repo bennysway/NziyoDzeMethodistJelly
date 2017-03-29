@@ -125,6 +125,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:animateLayoutChanges="true"
             android:orientation="vertical"
             android:id="@+id/hymnLayout" />
     </ScrollView>
@@ -145,7 +146,8 @@
         android:layout_above="@+id/adView"
         android:layout_alignParentTop="true"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true">
+        android:layout_alignParentEnd="true"
+        android:id="@+id/hymnMenuLayout">
 
         <TableRow
             android:layout_height="wrap_content"
