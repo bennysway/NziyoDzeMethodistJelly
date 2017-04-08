@@ -23,8 +23,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.adcolony.sdk.*;
-
 public class MainDrawer extends AppCompatActivity {
     Intent toHymnNums,toSettings,toClearData;
     private DrawerLayout mDrawerLayout;
@@ -33,16 +31,8 @@ public class MainDrawer extends AppCompatActivity {
     TextView appOwner;
     boolean request = false;
     Zvinokosha moreFeatures;
-    MenuItem EnableEnglish;
+    MenuItem HelpMenu;
     int fromPrevActivity=0;
-
-    final private String APP_ID = "appc167511230224bdbb5";
-    final private String ZONE_ID = "vze62659b1ea5241fb86";
-    final private String TAG = "NziyoDzeMethodist";
-
-    private AdColonyInterstitial ad;
-    private AdColonyInterstitialListener listener;
-    private AdColonyAdOptions ad_options;
 
 
     @Override
@@ -77,14 +67,6 @@ public class MainDrawer extends AppCompatActivity {
         mDrawerLayout = (DrawerLayout) findViewById(R.id.activity_main_drawer);
         navView = (NavigationView) findViewById(R.id.startNavigationView);
 
-        AdColonyAppOptions app_options = new AdColonyAppOptions()
-                .setUserID( "unique_user_id" );
-        AdColony.configure( this, app_options, APP_ID, ZONE_ID );
-        ad_options = new AdColonyAdOptions()
-                .enableConfirmationDialog( false )
-                .enableResultsDialog( false );
-
-
         View headerLayout = navView.inflateHeaderView(R.layout.nav_header_layout);
         appOwner = (TextView) headerLayout.findViewById(R.id.navHeaderSubTitle);
         appPic = (ImageView) headerLayout.findViewById(R.id.imageOwner);
@@ -100,57 +82,8 @@ public class MainDrawer extends AppCompatActivity {
         final View opDrawer =findViewById(R.id.openMainDrawer);
         final View opDrawer_on =findViewById(R.id.openMainDrawer_on);
         MenuItem settings = (MenuItem) findViewById(R.id.navSettings);
-        EnableEnglish = (MenuItem) findViewById(R.id.MoreFeatures);
+        HelpMenu = (MenuItem) findViewById(R.id.Help);
 
-        ///////////////////ads
-        /** Create and set a reward listener */
-        AdColonyRewardListener rewardListener = new AdColonyRewardListener() {
-            @Override
-            public void onReward(AdColonyReward reward) {
-                moreFeatures.set();
-                QuickToast("English hymns set.");
-                if(fromPrevActivity==1)
-                    finish();
-            }
-        };
-
-        /** Set reward listener for your app to be alerted of reward events */
-        AdColony.setRewardListener(rewardListener);
-
-
-        listener = new AdColonyInterstitialListener()
-        {
-            /** Ad passed back in request filled callback, ad can now be shown */
-            @Override
-            public void onRequestFilled( AdColonyInterstitial ad )
-            {
-                MainDrawer.this.ad = ad;
-                Log.d( TAG, "onRequestFilled" );
-                request = true;
-            }
-
-            /** Ad request was not filled */
-            @Override
-            public void onRequestNotFilled( AdColonyZone zone )
-            {
-                request=false;
-            }
-
-            /** Ad opened, reset UI to reflect state change */
-            @Override
-            public void onOpened( AdColonyInterstitial ad )
-            {
-                Log.d( TAG, "onOpened" );
-            }
-
-            /** Request a new ad if ad is expiring */
-            @Override
-            public void onExpiring( AdColonyInterstitial ad )
-            {
-                AdColony.requestInterstitial( ZONE_ID, this, ad_options );
-                Log.d( TAG, "onExpiring" );
-            }
-        };
         startSearch.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -277,13 +210,6 @@ public class MainDrawer extends AppCompatActivity {
                 openGeneral();
             }
         });
-        if (ad == null || ad.isExpired())
-        {
-            AdColony.requestInterstitial( ZONE_ID, listener, ad_options );
-            request = true;
-        }
-
-
     }
     @Override
     public void onWindowFocusChanged(boolean hasFocus) {
@@ -328,7 +254,7 @@ public class MainDrawer extends AppCompatActivity {
             }
         });
     }
-    public static int calculateInSampleSize(BitmapFactory.Options options, int reqWidth, int reqHeight) {
+    public int calculateInSampleSize(BitmapFactory.Options options, int reqWidth, int reqHeight) {
         // Raw height and width of image
         final int height = options.outHeight;
         final int width = options.outWidth;
@@ -401,16 +327,9 @@ public class MainDrawer extends AppCompatActivity {
         startActivity(toSettings);
         QuickToast("Click Display Name to change.");
     }
-    public void ActivateFeatures(MenuItem menuItem){
-        if(CheckNetwork.isInternetAvailable(this)){
-            if(request&&ad!=null){
-                ad.show();
-            }
-            else
-                QuickToast("Please wait while files load...");
-        }
-        else
-            QuickToast("Check your internet connection to load hymn files.");
+    public void OpenHelp(MenuItem menuItem){
+        //Todo
+        //Make help Intent
     }
     public void Options(int o){
         switch (o){

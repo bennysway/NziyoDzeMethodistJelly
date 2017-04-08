@@ -8,6 +8,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:animateLayoutChanges="true"
+    android:background="@color/black"
 
     tools:context="com.seven.clip.nziyodzemethodist.hymnDisplay">
 
@@ -287,7 +288,7 @@
 
     </TableLayout>
 
-    <ImageView
+    <android.support.v7.widget.AppCompatImageView
         android:id="@+id/helpIcon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

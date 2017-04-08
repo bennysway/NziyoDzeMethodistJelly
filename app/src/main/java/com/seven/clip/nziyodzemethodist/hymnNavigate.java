@@ -9,7 +9,7 @@ import java.util.LinkedList;
 
 public class hymnNavigate {
     private String favIterator, recIterator,output="0";
-    private boolean isFavAffected=false,anyChange=false;
+    private boolean isFavAffected=false,anyChange=false,isThereNext=true,isTherePrev=true;
     private LinkedList<String> favList;
     private LinkedList<String> recList;
 
@@ -23,6 +23,11 @@ public class hymnNavigate {
 
         favList = new LinkedList<>(Arrays.asList(fav.split(",")));
         recList = new LinkedList<>(Arrays.asList(rec.split(",")));
+
+        if(favList.size()==0)
+            isThereNext = false;
+        if(recList.size()==0)
+            isTherePrev = false;
 
     }
 
@@ -92,19 +97,26 @@ public class hymnNavigate {
         if (recIterator.equals("0") && favIterator.equals("0")) {
             if(favList.size()-1<Integer.valueOf(favIterator)){
                 output = "Next Favourite not available";
+                isThereNext = false;
             }
-            else
+            else{
                 output = "Next Favourite (hymn " + favList.get(Integer.valueOf(favIterator)) +")";
+                isThereNext = true;
+            }
         }
         else if (!favIterator.equals("0")){
             if(favList.size()-1<Integer.valueOf(favIterator)){
                 output = "Next Favourite not available";
+                isThereNext = false;
             }
-            else
+            else{
                 output = "Next Favourite (hymn " + favList.get(Integer.valueOf(favIterator)) +")";
+                isThereNext = true;
+            }
         }
         else if (!recIterator.equals("0")){
             output = "Forward (hymn " + recList.get(Integer.valueOf(recIterator)-1) +")";
+            isThereNext = true;
         }
         return output;
     }
@@ -113,19 +125,26 @@ public class hymnNavigate {
         if (recIterator.equals("0") && favIterator.equals("0")) {
             if(recList.size()-1<Integer.valueOf(recIterator)){
                 output = "No Recent Hymns";
+                isTherePrev = false;
             }
-            else
+            else{
                 output = "Previous (hymn " + recList.get(Integer.valueOf(recIterator)) +")";
+                isTherePrev = true;
+            }
         }
         else if (!favIterator.equals("0")){
             output = "Previous Favourite (hymn " + favList.get(Integer.valueOf(favIterator)-1) + ")";
+            isTherePrev = true;
         }
         else if (!recIterator.equals("0")){
             if(recList.size()-1<Integer.valueOf(recIterator)){
                 output = "No more Recent Hymns";
+                isTherePrev = false;
             }
-            else
+            else{
                 output = "Previous (hymn " + recList.get(Integer.valueOf(recIterator)) + ")";
+                isTherePrev = true;
+            }
         }
         return output;
     }
@@ -133,6 +152,14 @@ public class hymnNavigate {
     void update(String fav, String rec){
         favIterator = fav;
         recIterator = rec;
+    }
+
+    boolean nextAccess(){
+        return isThereNext;
+    }
+
+    boolean prevAccess(){
+        return isTherePrev;
     }
 
     boolean changes(){

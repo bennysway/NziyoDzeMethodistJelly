@@ -2,35 +2,27 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/sandboxLayout"
-    android:orientation="vertical">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/sandboxLayout">
 
-    <Button
-        android:layout_width="wrap_content"
+    <com.flask.colorpicker.ColorPickerView
+        android:id="@+id/color_picker_view"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Next fav"
-        android:id="@+id/sandboxNext"/>
+        app:alphaSlider="true"
+        app:density="12"
+        app:lightnessSlider="true"
+        app:wheelType="FLOWER"
+        app:lightnessSliderView="@+id/v_lightness_slider"
+        app:alphaSliderView="@+id/v_alpha_slider"
+        />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Prev Hymn"
-        android:id="@+id/sandboxPrev"
-        android:layout_below="@+id/sandboxNext"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="16dp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="40sp"
-        android:text="hymn..."
-        android:id="@+id/sandyText"
-        android:layout_below="@+id/sandboxPrev"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="32dp" />
+    <com.flask.colorpicker.slider.LightnessSlider
+        android:id="@+id/v_lightness_slider"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_below="@id/color_picker_view"
+        />
 
 
 </RelativeLayout>

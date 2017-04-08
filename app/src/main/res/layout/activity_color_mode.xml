@@ -19,7 +19,7 @@
         android:id="@+id/colorModeRadioGroup">
 
         <RadioButton
-            android:text="Default Color Mode"
+            android:text="Default Hymnbook Theme"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/defaultColorCheck"
@@ -38,7 +38,24 @@
             android:layout_height="wrap_content"
             android:id="@+id/nightCheck"
             android:layout_weight="1" />
+
+        <RadioButton
+            android:text="Custom Color"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/customColorCheck"
+            android:enabled="false"
+            android:layout_weight="1" />
     </RadioGroup>
+    <Button
+        android:text="Set Color"
+        android:textAllCaps="false"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/pickColorBut"
+        android:layout_below="@+id/colorModeRadioGroup"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <Button
         android:text="Apply"
