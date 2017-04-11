@@ -2,6 +2,7 @@ package com.seven.clip.nziyodzemethodist;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.PorterDuff;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -31,7 +32,7 @@ public class pickNum2 extends AppCompatActivity {
     EditText numberField;
     Intent toHymn,toTest;
     InputMethodManager imm;
-    Data favList;
+    Data favList,color;
     ImageView makeFavBut;
     int pressCounter=0;
     boolean hasEn=false,isEn=false,hasChorus=false;
@@ -51,37 +52,27 @@ public class pickNum2 extends AppCompatActivity {
         getWindow().setLayout((int)(width*.8),(int)(height*.3));
 
         toHymn = new Intent(this,hymnDisplay.class);
-        toTest = new Intent(this,SandBox.class);
 
         numberField = (EditText) findViewById(R.id.pickNumSearchBox);
         ImageView openHymn = (ImageView) findViewById(R.id.pickNumButton);
         makeFavBut = (ImageView) findViewById(R.id.pickNumMakeFavButton);
-        TableRow notifications = (TableRow) findViewById(R.id.hymnNumNotification);
-        Button test = (Button) findViewById(R.id.toSandboxBut);
-        TextView englishAvailable = new TextView(this);
-        TextView withChorus = new TextView(this);
 
         Data recordFlag = new Data(this,"recordflag");
         favList = new Data(this,"favlist");
+        color = new Data(this,"color");
+        Data favIt = new Data(this,"faviterator");
+        Data recIt = new Data(this,"reciterator");
+        favIt.update("0");
+        recIt.update("0");
         recordFlag.deleteAll();
 
         numberField.setFilters(new InputFilter[]{ new HymnNumberFilter("1", "317")});
-
-        englishAvailable.setText("in English");
-        englishAvailable.setBackground(getResources().getDrawable(R.drawable.square_cap));
-        englishAvailable.setTextColor(parseColor("#ffffff"));
-        englishAvailable.setPadding(5,5,5,5);
-        englishAvailable.setGravity(Gravity.CENTER);
-        englishAvailable.setTextSize(TypedValue.COMPLEX_UNIT_SP, 25);
-
-        withChorus.setText("with chorus");
-        withChorus.setBackground(getResources().getDrawable(R.drawable.square_cap));
-        withChorus.setTextColor(parseColor("#ffffff"));
-        withChorus.setPadding(5,5,5,5);
-        withChorus.setGravity(Gravity.CENTER);
-        withChorus.setTextSize(TypedValue.COMPLEX_UNIT_SP, 25);
-
-
+        String tintColor = color.get();
+        if(tintColor.contains("#")){
+            numberField.getBackground().mutate().setColorFilter(parseColor(tintColor), PorterDuff.Mode.SRC_ATOP);
+            openHymn.setColorFilter(parseColor(tintColor));
+            makeFavBut.setColorFilter(parseColor(tintColor));
+        }
 
         openHymn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -89,14 +80,6 @@ public class pickNum2 extends AppCompatActivity {
                 gotoHymn();
             }
         });
-
-        test.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                gotoHymnTest();
-            }
-        });
-
 
         numberField.addTextChangedListener(new TextWatcher() {
             @Override
@@ -190,28 +173,6 @@ public class pickNum2 extends AppCompatActivity {
             startActivity(toHymn);
         }
 
-    }
-
-    public void gotoHymnTest(){
-        String aS = numberField.getText().toString();
-        int aI=0;
-        if(aS.length()>0)
-            aI = Integer.valueOf(aS);
-        if(aS.equals("")){
-            QuickToast("Please put hymn number 1-317...");
-        }
-        else if(aI<1||aI>317)
-            QuickToast("Please don't try to be smart. :) enter a number out of the range 1 to 317");
-        else {
-            toTest.putExtra("hymnNum",numberField.getText().toString());
-            startActivity(toTest);
-        }
-
-    }
-    @Override
-    protected void onPause(){
-        super.onPause();
-        hideSoftKeyboard();
     }
 
     public void hideSoftKeyboard() {

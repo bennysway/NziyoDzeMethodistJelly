@@ -12,16 +12,12 @@ import android.widget.RadioGroup;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 
-import com.flask.colorpicker.ColorPickerView;
-import com.flask.colorpicker.OnColorSelectedListener;
-import com.flask.colorpicker.builder.ColorPickerClickListener;
-import com.flask.colorpicker.builder.ColorPickerDialogBuilder;
-
-import static android.graphics.Color.parseColor;
 
 public class ColorMode extends AppCompatActivity {
 
     RelativeLayout bg;
+    Data color,theme,themeName;
+    RadioButton customColorRadioBut;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,23 +30,42 @@ public class ColorMode extends AppCompatActivity {
         final RadioGroup colorList = (RadioGroup) findViewById(R.id.colorModeRadioGroup);
         Button yes = (Button) findViewById(R.id.colorApply);
         Button no = (Button) findViewById(R.id.colorCancel);
-        final Data color = new Data(this,"color");
-        final Data theme = new Data(this,"themecolor");
+        color = new Data(this,"color");
+        theme = new Data(this,"themecolor");
+        themeName = new Data(this,"themename");
         final Intent intent = new Intent();
 
-        RadioButton customColorRadioBut = (RadioButton) findViewById(R.id.customColorCheck);
+        customColorRadioBut = (RadioButton) findViewById(R.id.customColorCheck);
         Button setCustomColorBut = (Button) findViewById(R.id.pickColorBut);
 
         if(!theme.get().equals("")){
             customColorRadioBut.setEnabled(true);
+            customColorRadioBut.setText(themeName.get());
         }
 
         setCustomColorBut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent toThemer = new Intent(ColorMode.this,ThemeChooser.class);
+                startActivity(toThemer);
             }
         });
+
+        String selector = color.get();
+        switch (selector){
+            case "":
+                colorList.check(colorList.getChildAt(0).getId());
+                break;
+            case "day":
+                colorList.check(colorList.getChildAt(1).getId());
+                break;
+            case "night":
+                colorList.check(colorList.getChildAt(2).getId());
+                break;
+            default:
+                colorList.check(colorList.getChildAt(3).getId());
+
+        }
 
 
 
@@ -68,6 +83,10 @@ public class ColorMode extends AppCompatActivity {
                 RadioButton s = (RadioButton) findViewById(choosen);
                 String t = s.getText().toString();
                 switch (t){
+                    case "Default Hymnbook Theme":
+                        color.deleteAll();
+                        intent.putExtra("mode","");
+                        break;
                     case "Day":
                         color.update("day");
                         intent.putExtra("mode","day");
@@ -77,12 +96,24 @@ public class ColorMode extends AppCompatActivity {
                         intent.putExtra("mode","night");
                         break;
                     default:
-                        color.deleteAll();
-                        intent.putExtra("mode","");
+                        if(!t.isEmpty()){
+                            color.update(theme.get());
+                            intent.putExtra("mode",theme.get());
+                        }
+
                 }
                 setResult(3,intent);
                 finish();
             }
         });
+    }
+
+    @Override
+    public void onResume(){
+        super.onResume();
+        if(!theme.get().equals("")){
+            customColorRadioBut.setEnabled(true);
+            customColorRadioBut.setText(themeName.get());
+        }
     }
 }

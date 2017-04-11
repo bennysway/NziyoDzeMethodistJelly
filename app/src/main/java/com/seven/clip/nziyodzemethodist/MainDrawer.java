@@ -82,7 +82,11 @@ public class MainDrawer extends AppCompatActivity {
         final View opDrawer =findViewById(R.id.openMainDrawer);
         final View opDrawer_on =findViewById(R.id.openMainDrawer_on);
         MenuItem settings = (MenuItem) findViewById(R.id.navSettings);
-        HelpMenu = (MenuItem) findViewById(R.id.Help);
+
+        Data favIt = new Data(this,"faviterator");
+        Data recIt = new Data(this,"reciterator");
+        favIt.update("0");
+        recIt.update("0");
 
         startSearch.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -326,10 +330,6 @@ public class MainDrawer extends AppCompatActivity {
         toSettings.putExtra( PreferenceActivity.EXTRA_NO_HEADERS, true );
         startActivity(toSettings);
         QuickToast("Click Display Name to change.");
-    }
-    public void OpenHelp(MenuItem menuItem){
-        //Todo
-        //Make help Intent
     }
     public void Options(int o){
         switch (o){

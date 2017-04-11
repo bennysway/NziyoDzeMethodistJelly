@@ -31,7 +31,13 @@ public class hymnList2 extends AppCompatActivity {
         final Intent toFav = new Intent(this,MakeFav.class);
         toFav.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
         Data recFlag = new Data(this, "recordflag");
+        Data favIt = new Data(this,"faviterator");
+        Data recIt = new Data(this,"reciterator");
+        favIt.update("0");
+        recIt.update("0");
         recFlag.deleteAll();
+
+
 
         pop = (TextView) findViewById(R.id.hymnScrollPop);
         timer = new Handler();

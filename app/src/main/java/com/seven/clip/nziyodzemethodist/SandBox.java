@@ -2,22 +2,20 @@ package com.seven.clip.nziyodzemethodist;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.support.annotation.IntegerRes;
-import android.support.v7.widget.DefaultItemAnimator;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.view.MotionEvent;
-import android.view.ScaleGestureDetector;
-import android.view.ScaleGestureDetector.SimpleOnScaleGestureListener;
+import android.util.DisplayMetrics;
+import android.view.Gravity;
 import android.view.View;
+import android.view.ViewGroup;
+import android.view.WindowManager;
 import android.widget.Button;
-import android.widget.TextView;
+import android.widget.RelativeLayout;
+import android.widget.Toast;
 
-import com.seven.clip.nziyodzemethodist.R;
+import com.flask.colorpicker.ColorPickerView;
+import com.flask.colorpicker.OnColorChangedListener;
+import com.flask.colorpicker.slider.LightnessSlider;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import static android.graphics.Color.parseColor;
 
 public class SandBox extends Activity {
 

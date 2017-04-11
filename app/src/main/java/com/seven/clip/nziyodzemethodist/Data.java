@@ -15,7 +15,7 @@ import java.util.Objects;
 import static android.content.Context.MODE_PRIVATE;
 
 //keys include: favlist,reclist,showsplash,color,image,textsize,recordflag,withcaption
-//              colorflag,textsizeflag,accflag,faviterator,reciterator,themecolor
+//              colorflag,textsizeflag,accflag,faviterator,reciterator,themecolor,themename
 
 
 public class Data {

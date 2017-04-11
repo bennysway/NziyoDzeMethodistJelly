@@ -32,6 +32,9 @@ public class ClearData extends AppCompatActivity {
         int width = dm.widthPixels;
         int height = dm.heightPixels;
 
+        //favlist,reclist,showsplash,color,image,textsize,recordflag,withcaption
+        //colorflag,textsizeflag,accflag,faviterator,reciterator,themecolor,themename
+
         getWindow().setLayout((int)(width*.8),(int)(height*.3));
         final Data favList = new Data(this,"favlist");
         final Data recList = new Data(this,"reclist");
@@ -40,6 +43,10 @@ public class ClearData extends AppCompatActivity {
         final Data color = new Data(this,"color");
         final Data size = new Data(this,"textsize");
         final Data recordFlag = new Data(this,"recordflag");
+        final Data withCaption = new Data(this,"withcaption");
+        final Data textSize = new Data(this,"textsize");
+        final Data themeColor = new Data(this,"themecolor");
+        final Data themeName = new Data(this,"themename");
         final Zvinokosha access = new Zvinokosha(this);
 
         Typeface custom_font = Typeface.createFromAsset(getAssets(),  "fonts/bh.ttf");
@@ -65,6 +72,10 @@ public class ClearData extends AppCompatActivity {
                 size.deleteAll();
                 recordFlag.deleteAll();
                 access.clear();
+                withCaption.deleteAll();
+                themeColor.deleteAll();
+                themeName.deleteAll();
+                textSize.deleteAll();
                 SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(ClearData.this);
                 SharedPreferences.Editor editor = preferences.edit();
                 editor.putString("example_text", "Set name");

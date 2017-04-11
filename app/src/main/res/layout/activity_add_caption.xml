@@ -42,7 +42,6 @@
         android:layout_height="wrap_content"
         android:textSize="40sp"
         android:padding="20dp"
-        android:fontFamily="cursive"
         android:textColor="@color/black"
         android:shadowRadius="15.0"
         android:shadowDy="12.0"

@@ -109,6 +109,7 @@
             android:theme="@style/AppTheme.Popups" />
         <activity
             android:name=".ColorMode"
+            android:noHistory="true"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="clipseven.action.choosecolor" />
@@ -174,6 +175,10 @@
             android:name=".CaptionList"
             android:noHistory="true" />
         <activity android:name=".EventLog" />
+        <activity
+            android:name=".ThemeChooser"
+            android:screenOrientation="portrait"
+            />
     </application>
 
 </manifest>

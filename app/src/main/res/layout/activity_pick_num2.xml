@@ -26,9 +26,6 @@
                 android:id="@+id/pickNumButton"
                 android:padding="20dp"
                 app:srcCompat="@drawable/open_hymn_icon" />
-            <Button
-                android:text="Test"
-                android:id="@+id/toSandboxBut"/>
         </TableRow>
     </TableLayout>
 

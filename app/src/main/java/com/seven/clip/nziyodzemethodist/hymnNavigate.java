@@ -9,7 +9,7 @@ import java.util.LinkedList;
 
 public class hymnNavigate {
     private String favIterator, recIterator,output="0";
-    private boolean isFavAffected=false,anyChange=false,isThereNext=true,isTherePrev=true;
+    private boolean isFavAffected=false,anyChange=false,isThereNext=false,isTherePrev=false;
     private LinkedList<String> favList;
     private LinkedList<String> recList;
 
@@ -24,10 +24,10 @@ public class hymnNavigate {
         favList = new LinkedList<>(Arrays.asList(fav.split(",")));
         recList = new LinkedList<>(Arrays.asList(rec.split(",")));
 
-        if(favList.size()==0)
-            isThereNext = false;
-        if(recList.size()==0)
-            isTherePrev = false;
+        if(!fav.equals(""))
+            isThereNext = true;
+        if(!rec.equals(""))
+            isTherePrev = true;
 
     }
 
@@ -36,28 +36,35 @@ public class hymnNavigate {
             if(favList.size()-1<Integer.valueOf(favIterator)){
                 output = "0";
                 anyChange = false;
+                isThereNext = false;
+                isTherePrev = false;
             }
             else{
                 output = favList.get(Integer.valueOf(favIterator));
                 isFavAffected = true;
                 anyChange = true;
+                isTherePrev = true;
             }
         }
         else if (!favIterator.equals("0")){
             if(favList.size()-1<Integer.valueOf(favIterator)){
                 output = "0";
                 anyChange = false;
+                isThereNext = false;
+                isTherePrev = true;
             }
             else{
                 output = favList.get(Integer.valueOf(favIterator));
                 isFavAffected = true;
                 anyChange = true;
+                isTherePrev = true;
             }
         }
         else if (!recIterator.equals("0")){
             output = recList.get(Integer.valueOf(recIterator)-1);
             isFavAffected = false;
             anyChange = true;
+            isTherePrev = true;
         }
         return output;
     }
@@ -67,27 +74,34 @@ public class hymnNavigate {
             if(recList.size()-1<Integer.valueOf(recIterator)){
                 output = "0";
                 anyChange = false;
+                isTherePrev = false;
+                isThereNext = false;
             }
             else{
                 output = recList.get(Integer.valueOf(recIterator));
                 isFavAffected = false;
                 anyChange = true;
+                isThereNext = true;
             }
         }
         else if (!favIterator.equals("0")){
                 output = favList.get(Integer.valueOf(favIterator)-1);
                 isFavAffected = true;
                 anyChange = true;
+                isThereNext = true;
         }
         else if (!recIterator.equals("0")){
             if(recList.size()-1<Integer.valueOf(recIterator)){
                 output = "0";
                 anyChange = false;
+                isTherePrev = false;
+                isThereNext = true;
             }
             else{
                 output = recList.get(Integer.valueOf(recIterator));
                 isFavAffected = false;
                 anyChange = true;
+                isThereNext = true;
             }
         }
         return output;

@@ -1,5 +1,6 @@
 package com.seven.clip.nziyodzemethodist;
 
+import android.content.Intent;
 import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -27,6 +28,7 @@ public class DeleteCaption extends AppCompatActivity {
         TextView prompt = (TextView) findViewById(R.id.DeleteCaptionPrompt);
         Button yes = (Button) findViewById(R.id.DeleteCaptionYesBut);
         Button no = (Button) findViewById(R.id.DeleteCaptionNoBut);
+        final Intent intent = new Intent();
 
         DisplayMetrics dm = new DisplayMetrics();
         getWindowManager().getDefaultDisplay().getMetrics(dm);
@@ -64,6 +66,8 @@ public class DeleteCaption extends AppCompatActivity {
                     if(deleted)
                         QuickToast("File deleted");
                 }
+                intent.putExtra("data","true");
+                setResult(1,intent);
                 finish();
             }
         });

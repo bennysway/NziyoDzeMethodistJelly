@@ -1,0 +1,158 @@
+package com.seven.clip.nziyodzemethodist;
+
+import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.GradientDrawable;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.util.DisplayMetrics;
+import android.view.View;
+import android.view.ViewGroup;
+import android.view.WindowManager;
+import android.widget.Button;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import com.flask.colorpicker.ColorPickerView;
+import com.flask.colorpicker.OnColorChangedListener;
+import com.flask.colorpicker.slider.LightnessSlider;
+
+import static android.graphics.Color.parseColor;
+
+public class ThemeChooser extends AppCompatActivity {
+
+    Data color,theme,themeName;
+    GradientDrawable gd;
+    int lastSave;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_theme_chooser);
+
+        RelativeLayout themeChooserLayout = (RelativeLayout) findViewById(R.id.themeChooserLayout);
+        DisplayMetrics dm = new DisplayMetrics();
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        getWindowManager().getDefaultDisplay().getMetrics(dm);
+        final float scale = getResources().getDisplayMetrics().density;
+        int pixels = (int) (1 * scale + 0.5f);
+
+        theme = new Data(this,"themecolor");
+        themeName = new Data(this,"themename");
+        color = new Data(this,"color");
+
+        final Intent intent = new Intent();
+
+        final ColorPickerView colorPickerView = new ColorPickerView(this);
+        LightnessSlider lightnessSlider = new LightnessSlider(this);
+        RelativeLayout.LayoutParams colorPickParams= new RelativeLayout.LayoutParams(
+                ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
+        colorPickParams.addRule(RelativeLayout.CENTER_IN_PARENT, RelativeLayout.TRUE);
+
+        RelativeLayout.LayoutParams lightnessSliderParams= new RelativeLayout.LayoutParams(
+                ViewGroup.LayoutParams.MATCH_PARENT, 48 * pixels);
+        lightnessSliderParams.addRule(RelativeLayout.CENTER_HORIZONTAL, RelativeLayout.TRUE);
+        lightnessSliderParams.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM, RelativeLayout.TRUE);
+        lightnessSliderParams.setMargins(0, 0, 0, 60 * pixels);
+        lightnessSlider.setLayoutParams(lightnessSliderParams);
+
+        colorPickerView.setLayoutParams(colorPickParams);
+        colorPickerView.setLightnessSlider(lightnessSlider);
+
+        themeChooserLayout.addView(colorPickerView);
+        themeChooserLayout.addView(lightnessSlider);
+
+        Button accept = (Button) findViewById(R.id.themeAcceptBut);
+        Button deny = (Button) findViewById(R.id.themeRejectBut);
+        final TextView themeTitle = (TextView) findViewById(R.id.themeName);
+        final ColorToName colorToName = new ColorToName();
+        gd = new GradientDrawable();
+        gd.setGradientType(GradientDrawable.LINEAR_GRADIENT);
+        gd.setCornerRadius(100f);
+
+        if(theme.get().equals("")){
+            colorPickerView.setInitialColor(getResources().getColor(R.color.burn),false);
+            themeTitle.setText("DefaultHymnTheme");
+        } else {
+            colorPickerView.setInitialColor(parseColor(theme.get()),false);
+            themeTitle.setText(colorToName.getColorNameFromHex(theme.get()));
+            gd.setColors(new int[] {getLighterColor(theme.get()),parseColor(theme.get())});
+            themeTitle.setBackground(gd);
+            if(isColorDark(theme.get()))
+                themeTitle.setTextColor(parseColor("#ffffff"));
+            else
+                themeTitle.setTextColor(parseColor("#000000"));
+
+        }
+        try{
+            colorPickerView.addOnColorChangedListener(new OnColorChangedListener() {
+                @Override
+                public void onColorChanged(int i) {
+                    String text = "Theme : " + colorToName.getColorNameFromHex(intToColor(i));
+                    themeTitle.setText(text);
+                    gd.setColors(new int[] {getLighterColor(intToColor(i)),i});
+                    themeTitle.setBackground(gd);
+                    lastSave = i;
+                    if(isColorDark(intToColor(i)))
+                        themeTitle.setTextColor(parseColor("#ffffff"));
+                    else
+                        themeTitle.setTextColor(parseColor("#000000"));
+
+                }
+            });
+
+        } catch (Exception e){
+            QuickToast("Theme picker is not yet stable, but the Theme : " + themeTitle.getText().toString() + " was set");
+            theme.update(intToColor(lastSave));
+            color.update(intToColor(lastSave));
+            themeName.update(themeTitle.getText().toString());
+            intent.putExtra("mode",theme.get());
+            setResult(3,intent);
+            finish();
+        }
+
+        accept.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                theme.update(intToColor(colorPickerView.getSelectedColor()));
+                color.update(intToColor(colorPickerView.getSelectedColor()));
+                themeName.update(themeTitle.getText().toString());
+                intent.putExtra("mode",theme.get());
+                setResult(3,intent);
+                finish();
+            }
+        });
+
+
+    }
+
+    public void QuickToast(String s){
+        Toast.makeText(this, s,
+                Toast.LENGTH_SHORT).show();
+    }
+
+    public int getLighterColor(String test){
+        float[] hsv = new float[3];
+        int color = parseColor(test);
+        Color.colorToHSV(color, hsv);
+        hsv[0] = 1.0f - 0.8f * (1.0f - hsv[0]); // value component
+        color = Color.HSVToColor(hsv);
+        return color;
+    }
+    public boolean isColorDark(String test){
+        int color = parseColor(test);
+        double darkness = 1-(0.299*Color.red(color) + 0.587*Color.green(color) + 0.114*Color.blue(color))/255;
+        if(darkness<0.333){
+            return false; // It's a light color
+        }else{
+            return true; // It's a dark color
+        }
+    }
+
+    public String intToColor(int a){
+        return String.format("#%06X", (0xFFFFFF & a));
+    }
+
+}

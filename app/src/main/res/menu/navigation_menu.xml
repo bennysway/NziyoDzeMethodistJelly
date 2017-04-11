@@ -26,11 +26,6 @@
         android:title="Notifications"
         android:icon="@android:drawable/stat_notify_chat"
         android:onClick="openNotifications"/>
-    <item
-        android:id="@+id/Help"
-        android:title="Help"
-        android:icon="@android:drawable/ic_menu_help"
-        android:onClick="OpenHelp"/>
 
 
 </menu>

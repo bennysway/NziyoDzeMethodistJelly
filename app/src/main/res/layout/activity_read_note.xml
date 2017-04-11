@@ -10,17 +10,19 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.seven.clip.nziyodzemethodist.readNote">
 
-    <TextView
-        android:text="TextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:id="@+id/displayNoteText"
-        android:textSize="50sp"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/shareOpenedNote">
+        <TextView
+            android:text="TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/displayNoteText"
+            android:textSize="50sp"
+            />
+    </ScrollView>
+
 
     <Button
         android:text="Share"
