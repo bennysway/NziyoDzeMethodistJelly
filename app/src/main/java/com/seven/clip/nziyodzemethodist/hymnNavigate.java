@@ -39,6 +39,10 @@ public class hymnNavigate {
                 isThereNext = false;
                 isTherePrev = false;
             }
+            else if(favList.size()==1) {
+                output = "0";
+                isThereNext = false;
+            }
             else{
                 output = favList.get(Integer.valueOf(favIterator));
                 isFavAffected = true;
@@ -77,6 +81,10 @@ public class hymnNavigate {
                 isTherePrev = false;
                 isThereNext = false;
             }
+            else if(recList.size()==1){
+                output = "0";
+                isTherePrev = false;
+            }
             else{
                 output = recList.get(Integer.valueOf(recIterator));
                 isFavAffected = false;
@@ -113,6 +121,10 @@ public class hymnNavigate {
                 output = "Next Favourite not available";
                 isThereNext = false;
             }
+            else if(favList.size()==1){
+                output = "Next Favourite not available";
+                isThereNext = false;
+            }
             else{
                 output = "Next Favourite (hymn " + favList.get(Integer.valueOf(favIterator)) +")";
                 isThereNext = true;
@@ -138,6 +150,10 @@ public class hymnNavigate {
     public String prevText(){
         if (recIterator.equals("0") && favIterator.equals("0")) {
             if(recList.size()-1<Integer.valueOf(recIterator)){
+                output = "No Recent Hymns";
+                isTherePrev = false;
+            }
+            else if(recList.size()==1){
                 output = "No Recent Hymns";
                 isTherePrev = false;
             }

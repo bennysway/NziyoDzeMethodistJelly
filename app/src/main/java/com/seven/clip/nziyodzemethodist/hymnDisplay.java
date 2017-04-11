@@ -11,13 +11,13 @@ import android.graphics.Color;
 import android.graphics.Typeface;
 import android.graphics.drawable.GradientDrawable;
 import android.media.MediaRecorder;
+import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
 import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.support.v7.app.AppCompatDelegate;
 import android.util.DisplayMetrics;
 import android.util.Log;
@@ -41,10 +41,9 @@ import android.widget.TableRow;
 import android.widget.TableRow.LayoutParams;
 import android.widget.TextView;
 import android.widget.Toast;
+
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
-
-
 import com.google.android.gms.ads.MobileAds;
 
 import java.io.IOException;
@@ -53,6 +52,7 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.Locale;
 import java.util.Random;
+
 import static android.Manifest.permission.RECORD_AUDIO;
 import static android.Manifest.permission.WRITE_EXTERNAL_STORAGE;
 import static android.graphics.Color.BLACK;
@@ -60,6 +60,12 @@ import static android.graphics.Color.WHITE;
 import static android.graphics.Color.parseColor;
 
 public class hymnDisplay extends AppCompatActivity {
+    public static final int RequestPermissionCode = 1;
+
+    static {
+        AppCompatDelegate.setCompatVectorFromResourcesEnabled(true);
+    }
+
     ScrollView myScroll;
     int bound,en_bound,totalHeight,en_totalHeight,clength,textcolor,capColor,hymnnumColor,length,en_length,buttonLayoutBg,hasOptions=0,optionsSet=0;
     int menuSlideStep = 0,windowWidth,windowHeight;
@@ -82,7 +88,6 @@ public class hymnDisplay extends AppCompatActivity {
     String AudioSavePathInDevice = null,RandomAudioFileName = "ABCDEFGHIJKLMNOP",hymnNum,capStoreKey,c,h,en_h,s,t,en_t,safe,hymnName,en_hymnName;
     MediaRecorder mediaRecorder;
     Random random;
-    public static final int RequestPermissionCode = 1;
     Data favList,recordFlag,color,textSizeData,recList,favIterator,recIterator,withCaption;
     Zvinokosha access;
     ScaleGestureDetector scaleGestureDetector;
@@ -90,10 +95,22 @@ public class hymnDisplay extends AppCompatActivity {
     LinearLayout hymnDispl;
     hymnNavigate navigate;
 
-    static {
-        AppCompatDelegate.setCompatVectorFromResourcesEnabled(true);
+    public static void vis(View v){
+        v.setAlpha(0f);
+        v.setVisibility(View.VISIBLE);
+        v.animate().alpha(1f);
     }
 
+    public static void invis(final View v){
+        v.animate().alpha(0f).withEndAction(new Runnable() {
+            @Override
+            public void run() {
+                v.setVisibility(View.INVISIBLE);
+            }
+        });
+
+
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -115,7 +132,7 @@ public class hymnDisplay extends AppCompatActivity {
         adHandler.postDelayed(new Runnable() {
             @Override
             public void run() {
-                MobileAds.initialize(getApplicationContext(), "ca-app-pub-2945410942325181~3930353152");
+                MobileAds.initialize(getApplicationContext(), "ca-app-pub-2945410942325181~6133597558");
                 AdView mAdView = (AdView) findViewById(R.id.adView);
                 AdRequest adRequest = new AdRequest.Builder()
                         .addTestDevice(AdRequest.DEVICE_ID_EMULATOR)        // All emulators
@@ -761,6 +778,7 @@ public class hymnDisplay extends AppCompatActivity {
         ////TODO
         //end of functions
     }
+
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
@@ -791,6 +809,7 @@ public class hymnDisplay extends AppCompatActivity {
 
 
     }
+
     @Override
     protected void onPause(){
         super.onPause();
@@ -1047,6 +1066,7 @@ public class hymnDisplay extends AppCompatActivity {
             });
         }
     }
+
     public void flipHeartIcon(){
         if(heartButBool){
             heartBut.animate().scaleX(0f).setDuration(100).withEndAction(new Runnable() {
@@ -1146,10 +1166,10 @@ public class hymnDisplay extends AppCompatActivity {
         });
     }
 
-
     public boolean isAnyMenuOpen(){
             return (micButBool||editButBool||enButBool||fontButBool||colorButBool||shareButBool||nextButBool||prevButBool||helpOptions);
     }
+
     public boolean retractMenu(){
         boolean menuRetracted = false;
         if(helpOptions){
@@ -1288,6 +1308,7 @@ public class hymnDisplay extends AppCompatActivity {
         }
 
     }
+
     public void changeTextSize(int unit,float value){
 
         if(isInEnglish){
@@ -1403,28 +1424,13 @@ public class hymnDisplay extends AppCompatActivity {
         return color;
     }
 
-
     public void saveFavState(){
         if(heartButBool)
             favList.pushBack(s);
         else
             favList.delete(s);
     }
-    public static void vis(View v){
-        v.setAlpha(0f);
-        v.setVisibility(View.VISIBLE);
-        v.animate().alpha(1f);
-    }
-    public static void invis(final View v){
-        v.animate().alpha(0f).withEndAction(new Runnable() {
-            @Override
-            public void run() {
-                v.setVisibility(View.INVISIBLE);
-            }
-        });
 
-
-    }
     public void makeCaption(){
         for(int f = 0; f<clength; f++){
             Handler but = new Handler();
