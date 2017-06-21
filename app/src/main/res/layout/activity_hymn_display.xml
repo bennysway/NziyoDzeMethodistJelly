@@ -17,8 +17,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:scaleType="centerCrop"
-        app:srcCompat="@drawable/natured"
-        android:id="@+id/imageView" />
+        app:srcCompat="@drawable/natured_small"
+        android:id="@+id/hymnDisplayBg" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -29,12 +29,12 @@
         android:layout_centerHorizontal="true"
         android:orientation="vertical">
 
-        <TextView
+        <TextSwitcher
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_gravity="center"
-            android:background="#30ffffff"
-            android:textSize="20dp"
+            android:background="#ddffffff"
+            android:textSize="20sp"
             android:gravity="center"
             android:id="@+id/caption"/>
 
@@ -49,6 +49,13 @@
         </Button>
 
     </LinearLayout>
+
+    <ImageView
+        android:id="@+id/loadBar"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/captionDisplay"
+        android:background="@drawable/load_bar"/>
 
     <TextView
         android:text="Hymn Name"

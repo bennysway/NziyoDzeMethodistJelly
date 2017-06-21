@@ -126,11 +126,6 @@ public class Captions extends AppCompatActivity {
             QuickToast("No captions available");
             if(withCaption.find(hymnNum))
                 withCaption.delete(hymnNum);
-            Intent askType = new Intent(Captions.this,addCaption.class);
-            askType.putExtra("hymnNum",hymnNum);
-            askType.putExtra("hymnNumWord",hymnNumWord);
-            askType.putExtra("isEn",hasOption);
-            startActivity(askType);
         }
 
         addCaption.setOnClickListener(new View.OnClickListener() {
@@ -152,7 +147,6 @@ public class Captions extends AppCompatActivity {
         bar.setLayoutParams(params);
         bar.setVisibility(View.INVISIBLE);
         parentLayout.addView(bar);
-
 
         cap.animate().alpha(0f).setStartDelay(3000).withEndAction(new Runnable() {
             @Override

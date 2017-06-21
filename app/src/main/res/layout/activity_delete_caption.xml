@@ -49,7 +49,7 @@
         android:shadowColor="@color/black"
         android:gravity="center"
         android:id="@+id/DeleteCaptionPrompt"
-        android:textSize="40sp"
+        android:textSize="30sp"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true" />
 

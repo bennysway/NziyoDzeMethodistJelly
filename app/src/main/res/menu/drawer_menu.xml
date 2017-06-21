@@ -1,0 +1,31 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:id="@+id/menu_group_1">
+        <item
+            android:id="@+id/notifications"
+            android:title="Notifications"
+            android:icon="@android:drawable/stat_notify_chat"
+            android:onClick="openNotifications"/>
+        <item
+            android:id="@+id/navShare"
+            android:title="Share"
+            android:icon="@android:drawable/ic_menu_share"
+            android:onClick="shareApp"/>
+        <item
+            android:id="@+id/navClear"
+            android:title="Clear App Data"
+            android:icon="@android:drawable/ic_delete"
+            android:onClick="openClearData"/>
+    </group>
+    <group android:id="@+id/menu_group_2">
+        <item
+            android:id="@+id/navSettings"
+            android:title="Settings"
+            android:icon="@android:drawable/ic_menu_manage"
+            android:onClick="openSettings"/>
+        <item
+            android:id="@+id/credits"
+            android:title="Credits"
+            android:icon="@android:drawable/ic_menu_myplaces"
+            android:onClick="openCredits"/>
+    </group>
+</menu>

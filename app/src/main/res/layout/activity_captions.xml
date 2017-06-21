@@ -10,16 +10,17 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:src="@drawable/darktexture"
+        android:src="@drawable/darktexture_small"
         android:scaleType="centerCrop"/>
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="40sp"
         android:padding="12dp"
         android:text="Captions"
-        android:textColor="@color/white"
+        android:background="@drawable/top_rounded_white"
+        android:textColor="@color/burn"
         android:shadowDy="0.0"
         android:shadowRadius="10.0"
         android:shadowColor="@color/white"
@@ -43,6 +44,7 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
         app:srcCompat="@drawable/add_caption_icon"
+        android:tint="@color/burn"
         android:id="@+id/addCaptionBut" />
 
 </RelativeLayout>

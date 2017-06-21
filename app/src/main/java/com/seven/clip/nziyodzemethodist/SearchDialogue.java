@@ -1,6 +1,7 @@
 package com.seven.clip.nziyodzemethodist;
 
 import android.content.Intent;
+import android.graphics.drawable.ColorDrawable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
@@ -25,7 +26,8 @@ public class SearchDialogue extends AppCompatActivity {
         DisplayMetrics dm = new DisplayMetrics();
         getWindowManager().getDefaultDisplay().getMetrics(dm);
 
-        getWindow().addFlags(WindowManager.LayoutParams.FLAG_BLUR_BEHIND);
+        //getWindow().addFlags(WindowManager.LayoutParams.FLAG_BLUR_BEHIND);
+        //getWindow().setBackgroundDrawable(new ColorDrawable(0));
         int width = dm.widthPixels;
         int height = dm.heightPixels;
 

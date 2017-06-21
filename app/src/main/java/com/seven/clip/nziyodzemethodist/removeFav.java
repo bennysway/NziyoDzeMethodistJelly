@@ -31,7 +31,6 @@ public class removeFav extends AppCompatActivity {
         Typeface custom_font = Typeface.createFromAsset(getAssets(),  "fonts/bh.ttf");
         prompt.setTypeface(custom_font);
 
-        getWindow().addFlags(WindowManager.LayoutParams.FLAG_BLUR_BEHIND);
         int width = dm.widthPixels;
         int height = dm.heightPixels;
 

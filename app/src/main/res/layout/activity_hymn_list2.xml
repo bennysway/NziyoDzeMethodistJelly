@@ -27,7 +27,7 @@
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/natured"
+        app:srcCompat="@drawable/natured_small"
         android:scaleType="centerCrop"
         android:id="@+id/hymnNumBg" />
 

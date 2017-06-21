@@ -23,23 +23,20 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:src="@drawable/dark"
+        android:src="@drawable/dark_small"
         android:id="@+id/recBg"
         android:scaleType="centerCrop"/>
 
     <TextView
         android:text="@string/recentButtonText"
-        android:textColor="@color/white"
+        android:textColor="@color/burn"
+        android:background="@drawable/top_rounded_white"
         android:textSize="30sp"
         android:gravity="center"
         android:fontFamily="cursive"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_alignParentTop="true"
-        android:shadowRadius="15.0"
-        android:shadowDy="12.0"
-        android:shadowDx="5.0"
-        android:shadowColor="@color/black"
         android:layout_centerHorizontal="true"
         android:id="@+id/recentsTitle" />
 

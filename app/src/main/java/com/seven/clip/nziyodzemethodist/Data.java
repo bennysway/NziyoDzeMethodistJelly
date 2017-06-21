@@ -16,6 +16,7 @@ import static android.content.Context.MODE_PRIVATE;
 
 //keys include: favlist,reclist,showsplash,color,image,textsize,recordflag,withcaption
 //              colorflag,textsizeflag,accflag,faviterator,reciterator,themecolor,themename
+//              bookmark
 
 
 public class Data {

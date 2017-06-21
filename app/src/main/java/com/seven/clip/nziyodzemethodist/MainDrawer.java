@@ -1,38 +1,51 @@
 package com.seven.clip.nziyodzemethodist;
 
-import android.content.Context;
+import android.Manifest;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.content.res.Resources;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
 import android.graphics.Typeface;
+import android.net.Uri;
 import android.os.Handler;
-import android.preference.PreferenceActivity;
 import android.preference.PreferenceManager;
-import android.support.design.widget.NavigationView;
-import android.support.v4.widget.DrawerLayout;
+import android.support.annotation.NonNull;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
-import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.remoteconfig.FirebaseRemoteConfig;
+import com.google.firebase.remoteconfig.FirebaseRemoteConfigSettings;
+import com.mxn.soul.flowingdrawer_core.ElasticDrawer;
+import com.mxn.soul.flowingdrawer_core.FlowingDrawer;
+
 public class MainDrawer extends AppCompatActivity {
     Intent toHymnNums,toSettings,toClearData;
-    private DrawerLayout mDrawerLayout;
-    private NavigationView navView;
-    ImageView appPic;
-    TextView appOwner;
+    private FlowingDrawer mDrawer;
+    MenuListFragment mMenuFragment;
     boolean request = false;
     Zvinokosha moreFeatures;
-    MenuItem HelpMenu;
     int fromPrevActivity=0;
+    RelativeLayout.LayoutParams layoutParams1;
+    int verCode;
+
+    public static final int RequestPermissionCode = 1;
+    private static final int RECORD_REQUEST_CODE = 101;
+    private static final int STORAGE_REQUEST_CODE = 102;
+    private static final String CURRENT_VERSION_CODE = "current_version_code";
+
+    private FirebaseRemoteConfig remoteConfig;
 
 
     @Override
@@ -64,15 +77,17 @@ public class MainDrawer extends AppCompatActivity {
         toSettings = new Intent(this, Settings.class);
         toClearData = new Intent(this, ClearData.class);
 
-        mDrawerLayout = (DrawerLayout) findViewById(R.id.activity_main_drawer);
-        navView = (NavigationView) findViewById(R.id.startNavigationView);
+        mDrawer = (FlowingDrawer) findViewById(R.id.activity_main_drawer);
+        mDrawer.setTouchMode(ElasticDrawer.TOUCH_MODE_BEZEL);
+        checkPermissions();
+        setupMenu();
 
-        View headerLayout = navView.inflateHeaderView(R.layout.nav_header_layout);
-        appOwner = (TextView) headerLayout.findViewById(R.id.navHeaderSubTitle);
-        appPic = (ImageView) headerLayout.findViewById(R.id.imageOwner);
+
         Button hymnNumBut = (Button) findViewById(R.id.hymnNumberBut);
         Button hymnListBut = (Button) findViewById(R.id.hymnListBut);
-        TextView mainAppTile = (TextView) findViewById(R.id.mainAppTitle);
+        final Button updateHymnBut = (Button) findViewById(R.id.updateHymnBut);
+        final TextView updateHymnButText = (TextView) findViewById(R.id.updateHymnButText);
+        final TextView mainAppTitle = (TextView) findViewById(R.id.mainAppTitle);
         Button favBut = (Button) findViewById(R.id.favBut);
         Button recentBut = (Button) findViewById(R.id.recentBut);
         Button captionsBut = (Button) findViewById(R.id.captionsListBut);
@@ -81,12 +96,54 @@ public class MainDrawer extends AppCompatActivity {
         Button test = (Button) findViewById(R.id.test);
         final View opDrawer =findViewById(R.id.openMainDrawer);
         final View opDrawer_on =findViewById(R.id.openMainDrawer_on);
-        MenuItem settings = (MenuItem) findViewById(R.id.navSettings);
 
         Data favIt = new Data(this,"faviterator");
         Data recIt = new Data(this,"reciterator");
         favIt.update("0");
         recIt.update("0");
+
+        FirebaseRemoteConfigSettings remoteConfigSettings = new FirebaseRemoteConfigSettings.Builder()
+                .setDeveloperModeEnabled(BuildConfig.DEBUG)
+                .build();
+
+        remoteConfig = FirebaseRemoteConfig.getInstance();
+        remoteConfig.setConfigSettings(remoteConfigSettings);
+        remoteConfig.setDefaults(R.xml.remote_config_defaults);
+        PackageInfo pInfo;
+        try {
+            pInfo = getPackageManager().getPackageInfo(getPackageName(), 0);
+            verCode = pInfo.versionCode;
+        } catch (PackageManager.NameNotFoundException e) {
+            verCode = 0;
+            e.printStackTrace();
+        }
+        Runnable get = new Runnable() {
+            @Override
+            public void run() {
+                long cacheExpiration = 3600;
+                if (remoteConfig.getInfo().getConfigSettings().isDeveloperModeEnabled()) {
+                    cacheExpiration = 0;
+                }
+
+                remoteConfig.fetch(cacheExpiration)
+                        .addOnCompleteListener(new OnCompleteListener<Void>() {
+                            @Override
+                            public void onComplete(@NonNull Task<Void> task) {
+                                if (task.isSuccessful()) {
+                                    // Once the config is successfully fetched it must be activated before newly fetched
+                                    // values are returned.
+                                    remoteConfig.activateFetched();
+                                }
+                                int onlineVersion = Integer.valueOf(remoteConfig.getString(CURRENT_VERSION_CODE));
+                                if(onlineVersion>verCode){
+                                    updateHymnBut.setVisibility(View.VISIBLE);
+                                    updateHymnButText.setVisibility(View.VISIBLE);
+                                }
+                            }
+                        });
+            }
+        };
+
 
         startSearch.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -105,47 +162,33 @@ public class MainDrawer extends AppCompatActivity {
             }
         });
 
-        final Data withCaptions = new Data(this, "withcaption");
         test.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                QuickToast(withCaptions.get());
+                startActivity(toTest);
             }
         });
 
         Typeface custom_font = Typeface.createFromAsset(getAssets(),  "fonts/bh.ttf");
-        mainAppTile.setTypeface(custom_font);
+        mainAppTitle.setTypeface(custom_font);
 
-        mDrawerLayout.setDrawerListener(new DrawerLayout.DrawerListener() {
+
+
+        mDrawer.setOnDrawerStateChangeListener(new ElasticDrawer.OnDrawerStateChangeListener() {
             @Override
-            public void onDrawerSlide(View drawerView, float slideOffset) {
+            public void onDrawerStateChange(int oldState, int newState) {
 
             }
 
             @Override
-            public void onDrawerOpened(View drawerView) {
-                invis(opDrawer);
-                vis(opDrawer_on);
-
-            }
-
-            @Override
-            public void onDrawerClosed(View drawerView) {
-                vis(opDrawer);
-                invis(opDrawer_on);
-            }
-
-            @Override
-            public void onDrawerStateChanged(int newState) {
-
-            }
-        });
-
-        appPic.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent toChangePic = new Intent(MainDrawer.this,ChoosePic.class);
-                startActivity(toChangePic);
+            public void onDrawerSlide(float openRatio, int offsetPixels) {
+                if(openRatio==0){
+                    vis(opDrawer);
+                    invis(opDrawer_on);
+                } else if(openRatio==1) {
+                    invis(opDrawer);
+                    vis(opDrawer_on);
+                }
             }
         });
 
@@ -158,7 +201,7 @@ public class MainDrawer extends AppCompatActivity {
                 handler.postDelayed(new Runnable() {
                     @Override
                     public void run() {
-                        mDrawerLayout.openDrawer(navView);
+                        mDrawer.toggleMenu();
                     }
                 },600);
             }
@@ -173,6 +216,17 @@ public class MainDrawer extends AppCompatActivity {
         hymnListBut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {startActivity(toHymnList);
+            }
+        });
+
+        updateHymnBut.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                try {
+                    startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=com.seven.clip.nziyodzemethodist")));
+                } catch (android.content.ActivityNotFoundException anfe) {
+                    startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=com.seven.clip.nziyodzemethodist")));
+                }
             }
         });
 
@@ -200,49 +254,11 @@ public class MainDrawer extends AppCompatActivity {
 
         fromPrevActivity = getIntent().getIntExtra("option",0);
         Options(fromPrevActivity);
+        get.run();
     }
-    @Override
-    public void onResume(){
-        super.onResume();
-        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
-        Data picFlag = new Data(this,"picflag");
-        String clr = preferences.getString("example_text","Set name");
-        appOwner.setText(clr);
-        appOwner.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openGeneral();
-            }
-        });
-    }
-    @Override
-    public void onWindowFocusChanged(boolean hasFocus) {
-        super.onWindowFocusChanged(hasFocus);
-        updatePicture();
 
-    }
-    public void updatePicture(){
-        Data image = new Data(this,"image");
-        String imagePath =  image.get();
-        if(imagePath.equals("")){
-            appPic.setImageDrawable(getResources().getDrawable(R.drawable.nouser));
-
-        }
-        else{
-            appPic.setImageBitmap(decodeSampledBitmapFromResource(
-                    getResources(),
-                    R.id.imageOwner,
-                    appPic.getMeasuredWidth(),
-                    appPic.getMeasuredHeight()
-            ));
-        }
-
-    }
-    public Context getActivity() {
-        return this;
-    }
     public void QuickToast(String s){
-        Toast.makeText(getActivity(), s,
+        Toast.makeText(this, s,
                 Toast.LENGTH_SHORT).show();
     }
     public void vis(View v){
@@ -257,42 +273,6 @@ public class MainDrawer extends AppCompatActivity {
                 v.setVisibility(View.INVISIBLE);
             }
         });
-    }
-    public int calculateInSampleSize(BitmapFactory.Options options, int reqWidth, int reqHeight) {
-        // Raw height and width of image
-        final int height = options.outHeight;
-        final int width = options.outWidth;
-        int inSampleSize = 1;
-
-        if (height > reqHeight || width > reqWidth) {
-
-            final int halfHeight = height / 2;
-            final int halfWidth = width / 2;
-
-            // Calculate the largest inSampleSize value that is a power of 2 and keeps both
-            // height and width larger than the requested height and width.
-            while ((halfHeight / inSampleSize) >= reqHeight
-                    && (halfWidth / inSampleSize) >= reqWidth) {
-                inSampleSize *= 2;
-            }
-        }
-        return inSampleSize;
-    }
-    public Bitmap decodeSampledBitmapFromResource(Resources res, int resId,int reqWidth, int reqHeight) {
-        Data image = new Data(this,"image");
-        String imagePath =  image.get();
-
-        // First decode with inJustDecodeBounds=true to check dimensions
-        final BitmapFactory.Options options = new BitmapFactory.Options();
-        options.inJustDecodeBounds = true;
-        BitmapFactory.decodeFile(imagePath,options);
-
-        // Calculate inSampleSize
-        options.inSampleSize = calculateInSampleSize(options, reqWidth, reqHeight);
-
-        // Decode bitmap with inSampleSize set
-        options.inJustDecodeBounds = false;
-        return BitmapFactory.decodeFile(imagePath,options);
     }
     public void openSettings(MenuItem item) {
         startActivity(toSettings);
@@ -325,19 +305,43 @@ public class MainDrawer extends AppCompatActivity {
         Intent intent = new Intent(this,Notifications.class);
         startActivity(intent);
     }
-    public void openGeneral(){
-        toSettings.putExtra( PreferenceActivity.EXTRA_SHOW_FRAGMENT, Settings.GeneralPreferenceFragment.class.getName() );
-        toSettings.putExtra( PreferenceActivity.EXTRA_NO_HEADERS, true );
-        startActivity(toSettings);
-        QuickToast("Click Display Name to change.");
-    }
+
     public void Options(int o){
         switch (o){
             case 1:
-                mDrawerLayout.openDrawer(navView);
+                mDrawer.toggleMenu();
                 break;
             default:
                 break;
+        }
+    }
+
+    private void setupMenu() {
+        FragmentManager fm = getSupportFragmentManager();
+        mMenuFragment = (MenuListFragment) fm.findFragmentById(R.id.id_container_menu);
+        if (mMenuFragment == null) {
+            mMenuFragment = new MenuListFragment();
+            fm.beginTransaction().add(R.id.id_container_menu, mMenuFragment).commit();
+        }
+    }
+
+    public void checkPermissions(){
+        if (ContextCompat.checkSelfPermission(this,
+                Manifest.permission.READ_EXTERNAL_STORAGE)
+                != PackageManager.PERMISSION_GRANTED) {
+            if (ActivityCompat.shouldShowRequestPermissionRationale(this,
+                    Manifest.permission.READ_EXTERNAL_STORAGE)) {
+
+            } else {
+
+                ActivityCompat.requestPermissions(this,
+                        new String[]{Manifest.permission.READ_EXTERNAL_STORAGE,Manifest.permission.WRITE_EXTERNAL_STORAGE,Manifest.permission.RECORD_AUDIO},
+                        RECORD_REQUEST_CODE);
+
+                // MY_PERMISSIONS_REQUEST_READ_CONTACTS is an
+                // app-defined int constant. The callback method gets the
+                // result of the request.
+            }
         }
     }
 }

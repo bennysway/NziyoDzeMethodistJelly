@@ -5,7 +5,7 @@
     android:id="@+id/activity_pick_num2"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/square_white"
+    android:background="@drawable/card_white"
     tools:context="com.seven.clip.nziyodzemethodist.pickNum2">
 
     <TableLayout
@@ -30,11 +30,12 @@
     </TableLayout>
 
     <EditText
+        android:hint="hymn number..."
+        android:id="@+id/pickNumSearchBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="number"
-        android:textSize="45sp"
-        android:hint="hymn number..."
+        android:textSize="35sp"
         android:shadowColor="@color/black"
         android:shadowDy="0.0"
         android:shadowDx="0.0"
@@ -42,8 +43,7 @@
         android:gravity="center"
         android:ems="7"
         android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"
-        android:id="@+id/pickNumSearchBox" />
+        android:layout_centerHorizontal="true"/>
 
     <TableLayout
         android:layout_width="match_parent"

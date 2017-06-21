@@ -14,6 +14,28 @@
         android:id="@+id/searchBg"
         android:scaleType="centerCrop"/>
 
+    <TextSwitcher
+        android:id="@+id/searchTitle"
+        android:background="@drawable/top_rounded_white"
+        android:textColor="@color/burn"
+        android:textSize="22sp"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:elevation="@dimen/white_card_elevation"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"/>
+
+    <ImageView
+        app:srcCompat="@drawable/back_icon"
+        android:id="@+id/searchBackBut"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:elevation="@dimen/white_card_elevation"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -31,8 +53,8 @@
     <ListView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:visibility="visible"
-        android:id="@+id/searchListView"/>
+        android:id="@+id/searchListView"
+        android:layout_below="@+id/searchTitle" />
 </RelativeLayout>

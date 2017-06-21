@@ -27,7 +27,6 @@ public class addCaption extends AppCompatActivity {
         DisplayMetrics dm = new DisplayMetrics();
         getWindowManager().getDefaultDisplay().getMetrics(dm);
 
-        getWindow().addFlags(WindowManager.LayoutParams.FLAG_BLUR_BEHIND);
         int width = dm.widthPixels;
         int height = dm.heightPixels;
 
@@ -35,7 +34,6 @@ public class addCaption extends AppCompatActivity {
 
         Button record = (Button) findViewById(R.id.addAudio);
         Button note = (Button) findViewById(R.id.addNote);
-        TextView prompt = (TextView) findViewById(R.id.changeTextPrompt);
 
         record.setOnClickListener(new View.OnClickListener() {
             @Override

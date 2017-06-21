@@ -25,6 +25,9 @@ public class Splash extends AppCompatActivity {
     Runnable show1,show2,show3,showTitle,hideshows;
     Handler start,timer;
     Intent toStart;
+    ImageView spl;
+    int i;
+    boolean isBookmarkAvail;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,8 +38,12 @@ public class Splash extends AppCompatActivity {
 
         Typeface custom_font = Typeface.createFromAsset(getAssets(),  "fonts/bh.ttf");
 
+        final Button bookmark = (Button) findViewById(R.id.bookmarkSplashBut);
+        final Data booking = new Data(this,"bookmark");
+        isBookmarkAvail = false;
+
         Random r=new Random();
-        ImageView spl = (ImageView) findViewById(R.id.splashImage);
+        spl = (ImageView) findViewById(R.id.splashImage);
         final TextView line1 = (TextView) findViewById(R.id.line1);
         final TextView line2 = (TextView) findViewById(R.id.line2);
         final TextView line3 = (TextView) findViewById(R.id.hymnline);
@@ -45,10 +52,10 @@ public class Splash extends AppCompatActivity {
         line2.setTypeface(custom_font);
         line3.setTypeface(custom_font);
 
-        View skip =findViewById(R.id.skipSplash);
+        final View skip =findViewById(R.id.skipSplash);
         toStart = new Intent(this,MainDrawer.class);
         timer = new Handler();
-        int i=r.nextInt(317)+1;
+        i=r.nextInt(317)+1;
         String h = "hymn" + IntToStr(i);
         String [] hymn;
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
@@ -86,6 +93,24 @@ public class Splash extends AppCompatActivity {
             line1.setAlpha(0);
             line2.setAlpha(0);
             line3.setAlpha(0);
+        }
+
+        if(!booking.get().isEmpty()){
+            isBookmarkAvail = true;
+            bookmark.setVisibility(View.VISIBLE);
+            bookmark.setText(booking.get());
+            bookmark.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    stopAnimation();
+                    Intent toHymn = new Intent(Splash.this,hymnDisplay.class);
+                    toHymn.putExtra("hymnNum", booking.get());
+                    bookmark.animate().y(-200f);
+                    startActivity(toHymn);
+                }
+            });
+            bookmark.setY(-200f);
+            bookmark.animate().y(0f);
         }
 
         //////Runnables
@@ -127,6 +152,9 @@ public class Splash extends AppCompatActivity {
         showTitle = new Runnable() {
             @Override
             public void run() {
+                if(isBookmarkAvail)
+                    bookmark.animate().y(-200);
+                skip.animate().y(-200);
                 line1.setText("Nziyo DzeMethodist");
                 start.postDelayed(beginActivity,4000);
                 line1.animate().alpha(1).setDuration(100);
@@ -158,14 +186,19 @@ public class Splash extends AppCompatActivity {
         skip.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                timer.removeCallbacks(show1);
-                timer.removeCallbacks(show2);
-                timer.removeCallbacks(show3);
-                timer.removeCallbacks(showTitle);
-                start.removeCallbacks(beginActivity);
-                startActivity(toStart);
+                stopAnimation();
             }
         });
+        line3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                stopAnimation();
+                Intent toHymn = new Intent(Splash.this,hymnDisplay.class);
+                toHymn.putExtra("hymnNum", String.valueOf(i));
+                startActivity(toHymn);
+            }
+        });
+
         skip.setAlpha(0f);
         skip.animate().alpha(.5f).setDuration(2000);
 
@@ -189,6 +222,15 @@ public class Splash extends AppCompatActivity {
     public void QuickToast(String s){
         Toast.makeText(this, s,
                 Toast.LENGTH_SHORT).show();
+    }
+
+    public void stopAnimation(){
+        timer.removeCallbacks(show1);
+        timer.removeCallbacks(show2);
+        timer.removeCallbacks(show3);
+        timer.removeCallbacks(showTitle);
+        start.removeCallbacks(beginActivity);
+        startActivity(toStart);
     }
 
     @Override

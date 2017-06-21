@@ -23,9 +23,6 @@ public class ClearData extends AppCompatActivity {
         Button yes = (Button) findViewById(R.id.clearDataYesBut);
         Button no = (Button) findViewById(R.id.clearDataNoBut);
 
-
-        getWindow().addFlags(WindowManager.LayoutParams.FLAG_BLUR_BEHIND);
-
         DisplayMetrics dm = new DisplayMetrics();
         getWindowManager().getDefaultDisplay().getMetrics(dm);
 
@@ -47,6 +44,7 @@ public class ClearData extends AppCompatActivity {
         final Data textSize = new Data(this,"textsize");
         final Data themeColor = new Data(this,"themecolor");
         final Data themeName = new Data(this,"themename");
+        final Data booking = new Data(this,"bookmark");
         final Zvinokosha access = new Zvinokosha(this);
 
         Typeface custom_font = Typeface.createFromAsset(getAssets(),  "fonts/bh.ttf");
@@ -76,6 +74,7 @@ public class ClearData extends AppCompatActivity {
                 themeColor.deleteAll();
                 themeName.deleteAll();
                 textSize.deleteAll();
+                booking.deleteAll();
                 SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(ClearData.this);
                 SharedPreferences.Editor editor = preferences.edit();
                 editor.putString("example_text", "Set name");

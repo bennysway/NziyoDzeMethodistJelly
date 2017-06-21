@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="win">
+        <item>Pretending to notice what you have done…</item>
+        <item>Awesome Achievement</item>
+        <item>Your finger will be in good shape, now repeat</item>
+        <item>Changes to Life made</item>
+        <item>This could be a job, you\'re too good</item>
+        <item>This is not a gaming app :)</item>
+        <item>Nice try</item>
+        <item>Handing invisible trophy to you</item>
+        <item>Expect nothing from this</item>
+        <item>On the other hand, are other fingers too</item>
+        <item>Expecting something from this?</item>
+        <item>What did you do?</item>
+        <item>What time is it?</item>
+        <item>Mind the mileage of your fingers ey</item>
+        <item>Well done, keep doing</item>
+    </string-array>
+</resources>

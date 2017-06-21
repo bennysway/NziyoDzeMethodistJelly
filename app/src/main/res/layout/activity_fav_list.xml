@@ -10,7 +10,7 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:src="@drawable/dark"
+        android:src="@drawable/dark_small"
         android:id="@+id/favBg"
         android:scaleType="centerCrop"/>
 
@@ -23,31 +23,28 @@
         android:id="@+id/nofavText"
         android:textColor="@color/white"
         android:textSize="23sp"
-        android:shadowColor="#ffd6a1"
-        android:shadowDx="0.0"
-        android:shadowDy="0.0"
-        android:shadowRadius="25.0"/>
+        />
 
     <TextView
         android:text="@string/favButtonText"
-        android:textColor="@color/white"
+        android:id="@+id/favTitle"
+        android:background="@drawable/top_rounded_white"
+        android:textColor="@color/burn"
         android:textSize="30sp"
         android:gravity="center"
         android:fontFamily="cursive"
         android:layout_width="match_parent"
         android:layout_height="50dp"
+        android:elevation="@dimen/white_card_elevation"
         android:layout_alignParentTop="true"
-        android:shadowRadius="15.0"
-        android:shadowDy="12.0"
-        android:shadowDx="5.0"
-        android:shadowColor="@color/black"
-        android:layout_centerHorizontal="true"
-        android:id="@+id/favTitle" />
+        android:layout_centerHorizontal="true"/>
+
     <ImageView
         app:srcCompat="@drawable/back_icon"
         android:id="@+id/favBackBut"
         android:layout_width="50dp"
         android:layout_height="50dp"
+        android:elevation="@dimen/white_card_elevation"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />

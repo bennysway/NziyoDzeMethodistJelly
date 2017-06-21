@@ -50,7 +50,7 @@
         android:shadowColor="@color/black"
         android:gravity="center"
         android:id="@+id/makeFavPrompt"
-        android:textSize="40sp"
+        android:textSize="25sp"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true" />
 

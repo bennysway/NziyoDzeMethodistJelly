@@ -167,18 +167,21 @@
             android:name=".Notifications"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".TextSizePrompt"
-            android:noHistory="true"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.Popups" />
-        <activity
             android:name=".CaptionList"
             android:noHistory="true" />
         <activity android:name=".EventLog" />
         <activity
             android:name=".ThemeChooser"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ChangeNameDialog"
             android:screenOrientation="portrait"
-            />
+            android:theme="@style/AppTheme.Popups"
+            android:windowSoftInputMode="adjustPan|adjustResize" />
+        <activity
+            android:name=".MakeCard"
+            android:screenOrientation="portrait" />
+
     </application>
 
 </manifest>

@@ -2,6 +2,7 @@
     <string name="app_name">Nziyo DzeMethodist</string>
     <string name="hymnNumberButtonText">Hymn Number</string>
     <string name="hymnListButtonText">Hymn List</string>
+    <string name="updateHymnButtonText">Update</string>
     <string name="favButtonText">Favourites</string>
     <string name="recentButtonText">Recent</string>
     <string name="captionButtonText">Captions</string>

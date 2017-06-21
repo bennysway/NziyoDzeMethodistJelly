@@ -1,10 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<com.mxn.soul.flowingdrawer_core.FlowingDrawer
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main_drawer"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    app:edPosition="1"
+    app:edMenuSize="300dp"
+    app:edMenuBackground="@color/white"
     tools:context="com.seven.clip.nziyodzemethodist.MainDrawer">
 
     <RelativeLayout
@@ -19,7 +25,7 @@
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:src="@drawable/naturehd"
+            android:src="@drawable/nature"
             android:scaleType="centerCrop"
             android:id="@+id/mainBg" />
 
@@ -50,6 +56,16 @@
                 android:layout_row="0"
                 android:layout_column="1"
                 android:id="@+id/hymnListBut" />
+
+            <Button
+                android:layout_width="@dimen/buttonSquareSize"
+                android:layout_height="@dimen/buttonSquareSize"
+                android:background="@drawable/circle"
+                android:layout_row="0"
+                android:layout_column="2"
+                android:visibility="invisible"
+                android:id="@+id/updateHymnBut" />
+
             <Button
                 android:layout_width="@dimen/buttonSquareSize"
                 android:layout_height="@dimen/buttonSquareSize"
@@ -105,6 +121,25 @@
                 android:layout_row="0"
                 android:elevation="100dp"
                 android:id="@+id/hymnListText"
+                android:fontFamily="sans-serif"
+                android:textAlignment="center" />
+
+
+            <TextView
+                android:text="@string/updateHymnButtonText"
+                android:textSize="@dimen/mainTextButtonsSize"
+                android:layout_width="wrap_content"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content"
+                android:rotation="-45"
+                android:textColor="@color/white"
+                android:layout_marginTop="0dp"
+                android:layout_marginLeft="0dp"
+                android:visibility="invisible"
+                android:layout_column="2"
+                android:layout_row="0"
+                android:elevation="100dp"
+                android:id="@+id/updateHymnButText"
                 android:fontFamily="sans-serif"
                 android:textAlignment="center" />
 
@@ -174,6 +209,7 @@
 
         <TextView
             android:text=" Nziyo DzeMethodist"
+            android:id="@+id/mainAppTitle"
             android:background="@drawable/top_rounded_white"
             android:textColor="@color/burn"
             android:textSize="30sp"
@@ -181,13 +217,9 @@
             android:fontFamily="cursive"
             android:layout_width="match_parent"
             android:layout_height="50dp"
+            android:elevation="@dimen/white_card_elevation"
             android:layout_alignParentTop="true"
-            android:shadowRadius="15.0"
-            android:shadowDy="12.0"
-            android:shadowDx="5.0"
-            android:shadowColor="@color/black"
-            android:layout_centerHorizontal="true"
-            android:id="@+id/mainAppTitle" />
+            android:layout_centerHorizontal="true"/>
 
         <ImageView
             app:srcCompat="@drawable/menu_icon"
@@ -195,6 +227,7 @@
             android:layout_margin="5dp"
             android:layout_width="50dp"
             android:layout_height="50dp"
+            android:elevation="@dimen/white_card_elevation"
             android:layout_alignParentTop="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true" />
@@ -205,6 +238,7 @@
             android:layout_margin="5dp"
             android:layout_width="50dp"
             android:layout_height="50dp"
+            android:elevation="@dimen/white_card_elevation"
             android:visibility="invisible"
             android:layout_alignParentTop="true"
             android:layout_alignParentLeft="true"
@@ -214,6 +248,7 @@
             app:srcCompat="@drawable/search_icon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:elevation="@dimen/white_card_elevation"
             android:id="@+id/searchButton"
             android:layout_margin="7dp"
             android:layout_alignParentTop="true"
@@ -225,6 +260,7 @@
             app:srcCompat="@drawable/search_icon_on"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:elevation="@dimen/white_card_elevation"
             android:layout_margin="7dp"
             android:id="@+id/searchButton_on"
             android:visibility="invisible"
@@ -234,19 +270,19 @@
 
     </RelativeLayout>
 
-    <android.support.design.widget.NavigationView
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:background="@drawable/square_nav"
-        app:itemTextColor="@color/burn"
+    <com.mxn.soul.flowingdrawer_core.FlowingMenuLayout
         android:id="@+id/startNavigationView"
-        app:menu="@menu/navigation_menu"
-        android:layout_gravity="start">
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:id="@+id/id_container_menu"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </com.mxn.soul.flowingdrawer_core.FlowingMenuLayout>
 
 
-    </android.support.design.widget.NavigationView>
 
-
-
-</android.support.v4.widget.DrawerLayout>
+</com.mxn.soul.flowingdrawer_core.FlowingDrawer>
 

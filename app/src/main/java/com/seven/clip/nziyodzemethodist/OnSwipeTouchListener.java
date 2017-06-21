@@ -6,6 +6,7 @@ import android.view.GestureDetector.SimpleOnGestureListener;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnTouchListener;
+import android.widget.Toast;
 
 public class OnSwipeTouchListener implements OnTouchListener {
 
@@ -22,14 +23,21 @@ public class OnSwipeTouchListener implements OnTouchListener {
 
     private final class GestureListener extends SimpleOnGestureListener {
 
-        private static final int SWIPE_THRESHOLD = 100;
+        private static final int SWIPE_THRESHOLD = 20;
         private static final int SWIPE_VELOCITY_THRESHOLD = 100;
 
 
         @Override
         public boolean onDown(MotionEvent e) {
+            tap();
             return true;
         }
+
+        @Override
+        public void onLongPress(MotionEvent event) {
+            longPress();
+        }
+
 
         @Override
         public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX, float velocityY) {
@@ -73,6 +81,13 @@ public class OnSwipeTouchListener implements OnTouchListener {
 
     public void onSwipeBottom() {
     }
+
+    public void longPress(){
+    }
+
+    public void tap(){
+    }
+
 
 
 }

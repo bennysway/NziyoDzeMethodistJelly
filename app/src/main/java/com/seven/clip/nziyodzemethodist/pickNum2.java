@@ -2,6 +2,7 @@ package com.seven.clip.nziyodzemethodist;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.graphics.PorterDuff;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
@@ -30,12 +31,11 @@ import static android.graphics.Color.parseColor;
 public class pickNum2 extends AppCompatActivity {
 
     EditText numberField;
-    Intent toHymn,toTest;
+    Intent toHymn;
     InputMethodManager imm;
     Data favList,color;
     ImageView makeFavBut;
     int pressCounter=0;
-    boolean hasEn=false,isEn=false,hasChorus=false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,7 +46,6 @@ public class pickNum2 extends AppCompatActivity {
 
 
 
-        getWindow().addFlags(WindowManager.LayoutParams.FLAG_BLUR_BEHIND);
         int width = dm.widthPixels;
         int height = dm.heightPixels;
         getWindow().setLayout((int)(width*.8),(int)(height*.3));
@@ -72,6 +71,10 @@ public class pickNum2 extends AppCompatActivity {
             numberField.getBackground().mutate().setColorFilter(parseColor(tintColor), PorterDuff.Mode.SRC_ATOP);
             openHymn.setColorFilter(parseColor(tintColor));
             makeFavBut.setColorFilter(parseColor(tintColor));
+            if(!isColorDark(tintColor)){
+                openHymn.setBackgroundDrawable(getResources().getDrawable(R.drawable.faded_black_center));
+                makeFavBut.setBackgroundDrawable(getResources().getDrawable(R.drawable.faded_black_center));
+            }
         }
 
         openHymn.setOnClickListener(new View.OnClickListener() {
@@ -192,6 +195,22 @@ public class pickNum2 extends AppCompatActivity {
         }
         else {
             makeFavBut.setAlpha(.5f);
+        }
+    }
+
+    @Override
+    protected void onPause(){
+        super.onPause();
+        hideSoftKeyboard();
+    }
+
+    public boolean isColorDark(String test){
+        int color = parseColor(test);
+        double darkness = 1-(0.299* Color.red(color) + 0.587*Color.green(color) + 0.114*Color.blue(color))/255;
+        if(darkness<0.333){
+            return false; // It's a light color
+        }else{
+            return true; // It's a dark color
         }
     }
 

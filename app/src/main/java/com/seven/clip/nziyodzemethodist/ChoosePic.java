@@ -43,8 +43,10 @@ public class ChoosePic extends AppCompatActivity {
             cursor.close();
             Data image = new Data(this,"image");
             image.update(picturePath);
-        }
-        QuickToast("Picture changed");
+            QuickToast("Picture changed");
+        } else
+            QuickToast("No changes made");
+
         finish();
 
 

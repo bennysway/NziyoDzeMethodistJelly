@@ -5,5 +5,10 @@
         <key>event_logs</key>
         <value>Not yet updated</value>
     </entry>
+    <entry>
+        <key>current_version_code</key>
+        <value>0</value>
+    </entry>
+
 </defaultsMap>
     <!-- END xml_defaults -->
