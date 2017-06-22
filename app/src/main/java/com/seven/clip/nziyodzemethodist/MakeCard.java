@@ -18,6 +18,10 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.InterstitialAd;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -38,6 +42,9 @@ public class MakeCard extends AppCompatActivity {
     RelativeLayout cardHolder;
     ScaleGestureDetector scaleGestureDetector;
     Random random;
+    int click;
+    private InterstitialAd mInterstitialAd;
+
 
 
     @Override
@@ -45,12 +52,24 @@ public class MakeCard extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_make_card);
 
+
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
+        mInterstitialAd = new InterstitialAd(this);
+        mInterstitialAd.setAdUnitId("ca-app-pub-2945410942325181/4881702358");
+        mInterstitialAd.loadAd(new AdRequest.Builder()
+                .addTestDevice("37AF7727CC5B392008ACD1C889F79F4E")  // An example device ID
+                .addTestDevice("6064FEE7D614C18C447097456EC84AC6")
+                .build());
+
+
 
         text = getIntent().getStringExtra("text");
         title = getIntent().getStringExtra("title");
         number = getIntent().getStringExtra("number");
+
+        click = 0;
 
         color = new Data(this,"color");
         textSizeData = new Data(this,"textsize");
@@ -84,6 +103,7 @@ public class MakeCard extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent share = new Intent(Intent.ACTION_SEND);
+                click++;
                 share.setType("image/png");
                 yourimagename = CreateRandomAudioFileName(5) ;
                 cardHolder.setDrawingCacheEnabled(true);
@@ -222,6 +242,25 @@ public class MakeCard extends AppCompatActivity {
                 Log.d("TextSizeEnd", String.valueOf(size));
 
             return true;
+        }
+    }
+
+    public void QuickToast(String s){
+        Toast.makeText(this, s,
+                Toast.LENGTH_SHORT).show();
+    }
+
+
+    @Override
+    public void onResume(){
+        super.onResume();
+        if(click>0) {
+            if (mInterstitialAd.isLoaded()) {
+                mInterstitialAd.show();
+            } else {
+                Log.d("TAG", "The interstitial wasn't loaded yet.");
+            }
+
         }
     }
 

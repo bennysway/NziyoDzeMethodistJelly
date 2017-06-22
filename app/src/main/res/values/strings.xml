@@ -18,27 +18,32 @@
 
     <string name="en_hymn_list">5,10,17,18,23,44,48,49,57,58,63,85,94,98,99,103,104,107,108,120,123,127,138,141,144,147,152,154,153,155,160,164,163,173,181,186,195,204,217,250,251,267,293,</string>
 
-    <string name="notification_date_string">11 April 2017</string>
+    <string name="notification_date_string">21 June 2017</string>
     <string name="notification_text_string">
-        A new interface and representation\n\n
+        Android 7 SDK! A revamped interface and new features\n\n
 
-        A wise man said, The building blocks of ideas, are ideas. When a person tells me how well my idea has progressed, I make sure the point of not having an idle mind is shown. In this update, I have slightly changed how it looks.\n\n
+        I would like to present this app, now running with the Android 7 SDK. Its now blazingly fast, less errors and I have to admit, its as more pleasing to use than before.
 
-        The change is focused on the hymn representation, not the application interface itself, for I am worried if old users might get lost of dislike the new taste. Therefore, this app should be a legacy and dependable in all cases. Changes include:\n\n
+        I recall when the shift was necessary: latest phones slowed down, I had optimized for lower devices, at their expense. In short, everything is balanced and everyone has the same experience.\n
+        Small features were added, feel free to try them.\n\n
 
-        -Bottom Menu, now Side menu drawer\n
-        -Fast toggle to day and night modes\n
-        -Introduced Custom color Themes\n
-        -English hymns now easily accessible without opening any menu\n
-        -Quick navigation through Favourites and History within the side menu\n
-        -A color library, for the artistic intricates\n\n
+        -New Cloth animation added to main side drawer\n
+        -Permissions rechecked\n
+        -Speed optimized for ultra HD screens\n
+        -New Bookmark Feature. Immediately open your bookmark before you do anything\n
+        -Access the Bookmark Feature by clicking your stanza 3 times\n
+        -Access to Splash Hymn Quote, by clicking the hymn number when the app loads\n
+        -Smooth navigation through Recent and Favourites directly in the menu bar\n
+        -New Card Feature. Share your favourite stanza as an image to Twitter,Snapchat,Whatsapp, Facebook etc\n
+        -Access Card Feature by clicking your stanza 3 times\n
+        -Small changes in the interface, but however, it is still the same\n\n
 
         Fixes:\n\n
 
-        -Image memory leak fixed (you can now use an HD image to set as profile without crashes)\n
-        -Catching most crashes, although the color library has issues on weak devices\n
-        -Non recording error catches\n\n\n
-        I am happy to say that the month of March til 10 April, I have had just 24 crashes. I am yet to adopt to the new Android 7 SDK, and to listen to every advice I get. Wonderfully coded, just for praise. If what I do isn\'t for God\'s glory, then let me glorify God instead.\n\n
+        -Speed optimized (thanks to Android 7 SDK and compatibility)\n
+        -Scrolling, activity transition, optimized\n\n\n
+
+        Working on this app has been a journey and it is still long before done. Planning on writing a Help Manual in the next update, add a web app that cloud syncs. As for Apple, sadly, development might not start early. However I am sure a masterpiece is worth waiting for. Let our might be used for praise. If what I do isn\'t for God\'s glory, then let me glorify God instead.\n\n
 
         Blessing F. Charumbira\n\n\n
     </string>
