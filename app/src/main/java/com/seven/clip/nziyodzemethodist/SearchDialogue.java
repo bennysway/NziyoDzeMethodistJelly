@@ -11,11 +11,12 @@ import android.view.WindowManager;
 import android.view.inputmethod.EditorInfo;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 public class SearchDialogue extends AppCompatActivity {
     EditText input;
-    Button startSearch;
+    ImageView startSearch;
     Intent toSearch;
 
     @Override
@@ -34,7 +35,7 @@ public class SearchDialogue extends AppCompatActivity {
         getWindow().setLayout((int)(width*.9),(int)(height*.3));
 
         input = (EditText) findViewById(R.id.searchBox);
-        startSearch = (Button) findViewById(R.id.searchDialogueButton);
+        startSearch = (ImageView) findViewById(R.id.searchDialogueButton);
         toSearch = new Intent(this,Search.class);
 
         startSearch.setOnClickListener(new View.OnClickListener() {

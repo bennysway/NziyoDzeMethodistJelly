@@ -5,6 +5,7 @@ import android.graphics.Typeface;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
@@ -26,7 +27,7 @@ public class Captions extends AppCompatActivity {
     String[] rawArray;
     long starttime = 0;
     int barId;
-    boolean barAvail=false;
+    boolean barAvail=false,playing;
     RelativeLayout parentLayout;
     String capStoreKey,hymnName;
     View bar;
@@ -169,9 +170,6 @@ public class Captions extends AppCompatActivity {
         });
 
     }
-    public String IntToStr(int i){
-        return Integer.toString(i);
-    }
     public void QuickToast(String s){
         Toast.makeText(this, s,
                 Toast.LENGTH_SHORT).show();
@@ -223,6 +221,7 @@ public class Captions extends AppCompatActivity {
         play.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                playing = true;
                 invis(play);
                 vis(stop);
                 invis(delete);
@@ -236,6 +235,7 @@ public class Captions extends AppCompatActivity {
         stop.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                playing = false;
                 invis(stop);
                 vis(play);
                 vis(delete);
@@ -278,5 +278,15 @@ public class Captions extends AppCompatActivity {
                 v.setVisibility(View.INVISIBLE);
             }
         });
+    }
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if (keyCode == KeyEvent.KEYCODE_BACK && event.getRepeatCount() == 0) {
+            if(playing){
+                QuickToast("You might need to stop the player first...");
+                playing=!playing;
+            } else finish();
+        }
+        return true;
     }
 }

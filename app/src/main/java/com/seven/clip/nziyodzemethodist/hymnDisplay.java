@@ -12,6 +12,8 @@ import android.media.MediaRecorder;
 import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
+import android.os.storage.StorageManager;
+import android.os.storage.StorageVolume;
 import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
@@ -49,6 +51,7 @@ import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.MobileAds;
 
+import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -92,7 +95,7 @@ public class hymnDisplay extends AppCompatActivity {
     Button showCaption;
     boolean textSizeChanged,menuOpen,favInit, chorusTrasparent, canSlideRight,canSlideLeft;
     long starttime = 0;
-    String AudioSavePathInDevice = null,RandomAudioFileName = "ABCDEFGHIJKLMNOP",hymnNum,capStoreKey,s,safe,hymnName;
+    String AudioSavePathInDevice,RandomAudioFileName = "ABCDEFGHIJKLMNOP",hymnNum,capStoreKey,s,safe,hymnName;
     MediaRecorder mediaRecorder;
     Random random;
     Data favList,recordFlag,color,textSizeData,recList,favIterator,recIterator,withCaption;
@@ -1721,12 +1724,24 @@ public class hymnDisplay extends AppCompatActivity {
             //e.toString();
         }
     }
-    public void MediaRecorderReady(){
+    public boolean MediaRecorderReady(){
+        boolean canRecord;
         mediaRecorder=new MediaRecorder();
         mediaRecorder.setAudioSource(MediaRecorder.AudioSource.MIC);
         mediaRecorder.setOutputFormat(MediaRecorder.OutputFormat.THREE_GPP);
         mediaRecorder.setAudioEncoder(MediaRecorder.OutputFormat.AMR_NB);
         mediaRecorder.setOutputFile(AudioSavePathInDevice);
+        try {
+            mediaRecorder.prepare();
+            mediaRecorder.start();
+            canRecord = true;
+        } catch (IOException e) {
+            Log.e("Recorder", "prepare() failed");
+            canRecord = false;
+        }
+
+
+        return canRecord;
     }
     public String CreateRandomAudioFileName(int string){
         StringBuilder stringBuilder = new StringBuilder( string );
@@ -1813,7 +1828,20 @@ public class hymnDisplay extends AppCompatActivity {
                 textSizeData.update(String.valueOf(pixelsToSp(textSize)));
             }
             if(isRecording){
-                mediaRecorder.stop();
+                try {
+                    mediaRecorder.stop();
+                    mediaRecorder.release();
+                    mediaRecorder = null;
+
+                    QuickToast("Recording saved.");
+                    isRecordingSaved = true;
+                } catch (Exception e) {
+                    QuickToast("The application had difficulty in recording and saving.");
+                    isRecordingSaved = false;
+                }
+
+                recordFlag.deleteAll();
+                isRecording = false;
                 isRecording = false;
             }
             recordFlag.deleteAll();
@@ -1865,6 +1893,9 @@ public class hymnDisplay extends AppCompatActivity {
                     h2.removeCallbacks(run);
                     try {
                         mediaRecorder.stop();
+                        mediaRecorder.release();
+                        mediaRecorder = null;
+
                         QuickToast("Recording saved.");
                         isRecordingSaved = true;
                         rec.setOnClickListener(new View.OnClickListener() {
@@ -1893,37 +1924,41 @@ public class hymnDisplay extends AppCompatActivity {
                 if(!isRecording){
                     flipRecIcon();
 
+                    StorageManager sm = (StorageManager)getSystemService(Context.STORAGE_SERVICE);
+                    if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.N){
+                        StorageVolume volume = sm.getPrimaryStorageVolume();
+                        Intent intent = null;
+                        intent = volume.createAccessIntent(getRecordingDir().getPath());
+                        startActivityForResult(intent, 1);
+                    }
+
+                    AudioSavePathInDevice= getRecordingDir().getPath() +  File.separator + CreateRandomAudioFileName(5) + "AudioRecording.3gp";
+
 
                     if(checkPermission()) {
-                        h2.postDelayed(run, 0);
-                        starttime = System.currentTimeMillis();
-                        isRecording = true;
                         Data save = new Data(hymnDisplay.this,key);
 
-                        AudioSavePathInDevice =
-                                Environment.getExternalStorageDirectory().getAbsolutePath() + "/Recordings/" +
-                                        CreateRandomAudioFileName(5) + "AudioRecording.3gp";
 
 
-                        //MainActivity.userData(hymnDisplay.this,key,"pushBack",timeStamp());
-                        save.pushBack(timeStamp());
-                        //MainActivity.userData(hymnDisplay.this,key,"pushBack","recording");
-                        save.pushBack("recording");
-                        //MainActivity.userData(hymnDisplay.this,key,"pushBack",AudioSavePathInDevice);
-                        save.pushBack(AudioSavePathInDevice);
-
-                        MediaRecorderReady();
-
-
-                        try {
-                            mediaRecorder.prepare();
-                            mediaRecorder.start();
-                        } catch (IllegalStateException | IOException e) {
-                            e.printStackTrace();
+                        if(MediaRecorderReady()){
+                            Toast.makeText(hymnDisplay.this, "Recording started",
+                                    Toast.LENGTH_LONG).show();
+                            isRecording = true;
+                            h2.postDelayed(run, 0);
+                            starttime = System.currentTimeMillis();
+                            //MainActivity.userData(hymnDisplay.this,key,"pushBack",timeStamp());
+                            save.pushBack(timeStamp());
+                            //MainActivity.userData(hymnDisplay.this,key,"pushBack","recording");
+                            save.pushBack("recording");
+                            //MainActivity.userData(hymnDisplay.this,key,"pushBack",AudioSavePathInDevice);
+                            save.pushBack(AudioSavePathInDevice);
+                        } else {
+                            Toast.makeText(hymnDisplay.this, "Recording cannot start...",
+                                    Toast.LENGTH_LONG).show();
+                            isRecording = false;
                         }
 
-                        Toast.makeText(hymnDisplay.this, "Recording started",
-                                Toast.LENGTH_LONG).show();
+
                     } else {
                         requestPermission();
                     }
@@ -1932,6 +1967,22 @@ public class hymnDisplay extends AppCompatActivity {
             }
         });
     }
+
+    public File getRecordingDir() {
+        File previewDir = new File(Environment.getExternalStorageDirectory(),"Recordings");
+        if (!previewDir.exists()) previewDir.mkdir();
+        return previewDir;
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+        if (mediaRecorder != null) {
+            mediaRecorder.release();
+            mediaRecorder = null;
+        }
+    }
+
 
     //Android 6+ Recording and playback permissions
 

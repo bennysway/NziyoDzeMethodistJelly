@@ -33,7 +33,7 @@ import static android.graphics.Color.parseColor;
 
 public class MakeCard extends AppCompatActivity {
 
-    String text,title,number,RandomAudioFileName = "ABCDEFGHIJKLMNOP", yourimagename;
+    String text,title,number,RandomAudioFileName = "ABCDEFGHIJKLMNOP", yourimagename,fullPath;
     Data color,textSizeData;
     float textSize;
     TextView cardText,hymnNum,hymnTitle;
@@ -108,7 +108,9 @@ public class MakeCard extends AppCompatActivity {
                 yourimagename = CreateRandomAudioFileName(5) ;
                 cardHolder.setDrawingCacheEnabled(true);
                 Bitmap bitmap = cardHolder.getDrawingCache();
-                File file = new File(Environment.getExternalStorageDirectory() + File.separator + yourimagename + ".png");
+                fullPath = getCardDir().getPath() + File.separator + yourimagename + ".png";
+
+                File file = new File(fullPath);
                 try {
                     if (!file.exists()) {
                         file.createNewFile();
@@ -122,10 +124,16 @@ public class MakeCard extends AppCompatActivity {
                 } finally {
                     cardHolder.setDrawingCacheEnabled(false);
                 }
-                share.putExtra(Intent.EXTRA_STREAM, Uri.parse("file:///sdcard/" + yourimagename +  ".png"));
+                share.putExtra(Intent.EXTRA_STREAM, Uri.parse("file://" +fullPath));
                 startActivity(Intent.createChooser(share, "Share Image"));
             }
         });
+    }
+
+    public File getCardDir() {
+        File previewDir = new File(Environment.getExternalStorageDirectory(),"HymnCards");
+        if (!previewDir.exists()) previewDir.mkdir();
+        return previewDir;
     }
 
     public String CreateRandomAudioFileName(int string){
