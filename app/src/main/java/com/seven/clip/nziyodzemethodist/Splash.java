@@ -55,7 +55,7 @@ public class Splash extends AppCompatActivity {
         final View skip =findViewById(R.id.skipSplash);
         toStart = new Intent(this,MainDrawer.class);
         timer = new Handler();
-        i=r.nextInt(317)+1;
+        i=r.nextInt(321)+1;
         String h = "hymn" + IntToStr(i);
         String [] hymn;
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
@@ -154,7 +154,6 @@ public class Splash extends AppCompatActivity {
             public void run() {
                 if(isBookmarkAvail)
                     bookmark.animate().y(-200);
-                skip.animate().y(-200);
                 line1.setText("Nziyo DzeMethodist");
                 start.postDelayed(beginActivity,4000);
                 line1.animate().alpha(1).setDuration(100);

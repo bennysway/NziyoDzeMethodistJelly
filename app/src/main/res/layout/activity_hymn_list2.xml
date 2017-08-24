@@ -37,15 +37,28 @@
         android:id="@+id/hymnList"
         android:layout_height="match_parent"
         android:fastScrollEnabled="true"
+        android:paddingTop="50dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:text="@string/hymnListButtonText"
+        android:textColor="@color/burn"
+        android:background="@drawable/top_rounded_white"
+        android:textSize="30sp"
+        android:gravity="center"
+        android:fontFamily="cursive"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/hymnListTitle" />
 
     <ImageView
         app:srcCompat="@drawable/back_icon"
         android:id="@+id/hymnListBackButton"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:alpha="0.3"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />

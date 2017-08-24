@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.seven.clip.nziyodzemethodist.ReadingList">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/dark_small"
+        android:id="@+id/readingListBg"
+        android:scaleType="centerCrop"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:layout_centerInParent="true"
+        android:text="@string/noReadings"
+        android:visibility="invisible"
+        android:id="@+id/noReadingListText"
+        android:textColor="@color/white"
+        android:textSize="23sp"/>
+
+    <com.crystal.crystalpreloaders.widgets.CrystalPreloader
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        app:crs_pl_bg_color="#00000000"
+        app:crs_pl_fg_color="@color/burn"
+        app:crs_pl_size="extra_large"
+        app:crs_pl_style="tornado_circle_1"
+        android:id="@+id/readingListLoadingAnimation"/>
+
+
+    <ImageView
+        app:srcCompat="@drawable/back_icon"
+        android:id="@+id/readingListBackBut"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:elevation="@dimen/white_card_elevation"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="50dp"
+        android:layout_centerHorizontal="true"
+        android:visibility="invisible"
+        android:id="@+id/readingListListView"/>
+
+    <TextView
+        android:text="@string/readingsText"
+        android:id="@+id/readingListTopTitle"
+        android:background="@drawable/top_rounded_white"
+        android:textColor="@color/burn"
+        android:textSize="30sp"
+        android:gravity="center"
+        android:fontFamily="cursive"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"/>
+
+</RelativeLayout>

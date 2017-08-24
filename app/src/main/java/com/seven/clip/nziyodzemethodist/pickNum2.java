@@ -59,13 +59,9 @@ public class pickNum2 extends AppCompatActivity {
         Data recordFlag = new Data(this,"recordflag");
         favList = new Data(this,"favlist");
         color = new Data(this,"color");
-        Data favIt = new Data(this,"faviterator");
-        Data recIt = new Data(this,"reciterator");
-        favIt.update("0");
-        recIt.update("0");
         recordFlag.deleteAll();
 
-        numberField.setFilters(new InputFilter[]{ new HymnNumberFilter("1", "317")});
+        numberField.setFilters(new InputFilter[]{ new HymnNumberFilter("1", "321")});
         String tintColor = color.get();
         if(tintColor.contains("#")){
             numberField.getBackground().mutate().setColorFilter(parseColor(tintColor), PorterDuff.Mode.SRC_ATOP);
@@ -167,10 +163,10 @@ public class pickNum2 extends AppCompatActivity {
         if(aS.length()>0)
             aI = Integer.valueOf(aS);
         if(aS.equals("")){
-            QuickToast("Please put hymn number 1-317...");
+            QuickToast("Please put hymn number 1-321...");
         }
-        else if(aI<1||aI>317)
-            QuickToast("Please don't try to be smart. :) enter a number out of the range 1 to 317");
+        else if(aI<1||aI>321)
+            QuickToast("Please don't try to be smart. :) enter a number out of the range 1 to 321");
         else {
             toHymn.putExtra("hymnNum",numberField.getText().toString());
             startActivity(toHymn);

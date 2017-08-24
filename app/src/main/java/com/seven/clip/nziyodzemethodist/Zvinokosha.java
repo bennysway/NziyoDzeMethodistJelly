@@ -4,8 +4,8 @@ import android.content.Context;
 
 import java.util.Calendar;
 
-/**
- * Created by bennysway on 07.02.17.
+/*
+ * Created by Bennysway on 07.02.17.
  */
 
 public class Zvinokosha {

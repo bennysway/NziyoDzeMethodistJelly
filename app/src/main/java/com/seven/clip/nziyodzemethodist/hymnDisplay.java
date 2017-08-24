@@ -63,6 +63,7 @@ import java.util.Random;
 import static android.Manifest.permission.RECORD_AUDIO;
 import static android.Manifest.permission.WRITE_EXTERNAL_STORAGE;
 import static android.graphics.Color.BLACK;
+import static android.graphics.Color.GRAY;
 import static android.graphics.Color.WHITE;
 import static android.graphics.Color.parseColor;
 
@@ -80,7 +81,7 @@ public class hymnDisplay extends AppCompatActivity {
     ScrollView myScroll;
     int bound,en_bound,totalHeight,en_totalHeight,clength,textcolor,capColor,hymnnumColor,length,en_length,buttonLayoutBg,hasOptions=0,optionsSet=0;
     int menuSlideStep = 0,windowWidth,windowHeight,click=0;
-    Boolean chorusAvail = false,historyChanged = false, isInEnglish = false,isRecording = false,isEnglishAvailable = false,
+    Boolean chorusAvail = false,chorusShown = false,historyChanged = false, isInEnglish = false,isRecording = false,isEnglishAvailable = false,
     isRecordingSaved=false;
     ImageView bg,auxBut,makeBookmark,makeCardBut,loadBar;
     ImageView micBut,editBut,enBut,heartBut,fontBut,colorBut,shareBut,nextBut,prevBut;
@@ -104,7 +105,6 @@ public class hymnDisplay extends AppCompatActivity {
     ScaleGestureDetector scaleGestureDetector;
     Intent hymnDisplayIntent;
     LinearLayout hymnDispl;
-    hymnNavigate navigate;
     //stanza handling
     ArrayList<Integer> stanzaBarStack;
     Runnable passId,clickDuration;
@@ -153,12 +153,12 @@ public class hymnDisplay extends AppCompatActivity {
         favIterator = new Data(this,"faviterator");
         recIterator = new Data(this,"reciterator");
         withCaption = new Data(this,"withcaption");
-        navigate = new hymnNavigate(favList.get(),recList.get(),favIterator.get(),recIterator.get());
         hymnDisplayIntent = new Intent();
         engCheck = new EnResource(this);
         access = new Zvinokosha(this);
 
         s = getIntent().getStringExtra("hymnNum");
+        boolean setToEnglish = getIntent().getBooleanExtra("isInEnglish",false);
         recList.pushFront(s);
 
         safe = NumToWord.convert(StrToInt(s)) + "key";
@@ -206,7 +206,7 @@ public class hymnDisplay extends AppCompatActivity {
 
         menuLayout = (TableLayout) findViewById(R.id.hymnMenuLayout);
 
-        stanzaBarStack = new ArrayList<Integer>();
+        stanzaBarStack = new ArrayList<>();
 
 
 
@@ -289,24 +289,7 @@ public class hymnDisplay extends AppCompatActivity {
 
         changeColorMode(color.get());
 
-        populateHymn(s,false);
-
-        final Handler handler = new Handler();
-        handler.postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                totalHeight = myScroll.getChildAt(0).getHeight();
-                bound =  (totalHeight/length);
-                TextView firstStanza = (TextView) hymnDispl.getChildAt(0);
-                String check =firstStanza.getText().toString();
-                if(check.contains("chorus")){
-                    chorus.setText(check.substring(check.lastIndexOf("chorus")));
-                    chorusAvail = true;
-                }
-
-            }
-        },300);
-
+        populateHymn(s,setToEnglish);
 
         myScroll.getViewTreeObserver().addOnScrollChangedListener(new ViewTreeObserver.OnScrollChangedListener() {
             @Override
@@ -318,11 +301,13 @@ public class hymnDisplay extends AppCompatActivity {
                 if(scrollY>bound&&chorusAvail){
                     chorus.setVisibility(View.VISIBLE);
                     hymnpop.setVisibility(View.VISIBLE);
+                    chorusShown = true;
+
                 }
                 else {
                     chorus.setVisibility(View.INVISIBLE);
                     hymnpop.setVisibility(View.INVISIBLE);
-
+                    chorusShown = false;
                 }
             }
         });
@@ -331,14 +316,7 @@ public class hymnDisplay extends AppCompatActivity {
 
         if(favList.find(s)){
             Handler heartNotificationHandler = new Handler();
-            heartRow.addView(createFadedButton("isFav"));
             heartBut.setImageResource(R.drawable.heart_icon_on);
-            heartNotificationHandler.postDelayed(new Runnable() {
-                @Override
-                public void run() {
-                    heartRow.removeViewAt(1);
-                }
-            },4000);
             heartButBool = true;
         }
         favInit = heartButBool;
@@ -709,26 +687,15 @@ public class hymnDisplay extends AppCompatActivity {
         prevBut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(navigate.prevAccess()){
+                if(Integer.valueOf(s)>1){
+                    nextBut.setColorFilter(null);
                     finalizeFavoriteState();
                     historyChanged = true;
-                    populateHymn(navigate.prev(),false);
+                    populateHymn(String.valueOf(Integer.valueOf(s)-1),false);
                     checkFavorite();
                     checkEnglish();
-                    if(navigate.changes()){
-                        if(navigate.isFavChanged())
-                            favIterator.update(String.valueOf(Integer.valueOf(favIterator.get())-1));
-                        else
-                            recIterator.update(String.valueOf(Integer.valueOf(recIterator.get())+1));
-                        navigate.update(favIterator.get(),recIterator.get());
-                        prevRow.addView(createMenuHelpCaption("prev"));
-                        handler.postDelayed(new Runnable() {
-                            @Override
-                            public void run() {
-                                prevRow.removeViewAt(1);
-                            }
-                        },1000);
-                    }
+                } else {
+                    prevBut.setColorFilter(GRAY);
                 }
             }
         });
@@ -736,26 +703,15 @@ public class hymnDisplay extends AppCompatActivity {
         nextBut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(navigate.nextAccess()){
+                if(Integer.valueOf(s)<321){
+                    prevBut.setColorFilter(null);
                     finalizeFavoriteState();
                     historyChanged = true;
-                    populateHymn(navigate.next(),false);
+                    populateHymn(String.valueOf(Integer.valueOf(s)+1),false);
                     checkFavorite();
                     checkEnglish();
-                    if(navigate.changes()){
-                        if(navigate.isFavChanged())
-                            favIterator.update(String.valueOf(Integer.valueOf(favIterator.get())+1));
-                        else
-                            recIterator.update(String.valueOf(Integer.valueOf(recIterator.get())-1));
-                        navigate.update(favIterator.get(),recIterator.get());
-                        nextRow.addView(createMenuHelpCaption("next"));
-                        handler.postDelayed(new Runnable() {
-                            @Override
-                            public void run() {
-                                nextRow.removeViewAt(1);
-                            }
-                        },1000);
-                    }
+                } else {
+                    nextBut.setColorFilter(GRAY);
                 }
             }
         });
@@ -911,10 +867,10 @@ public class hymnDisplay extends AppCompatActivity {
                 textView.setText("Sharing options");
                 break;
             case "prev":
-                textView.setText(navigate.prevText());
+                textView.setText("Previous Hymn");
                 break;
             case "next":
-                textView.setText(navigate.nextText());
+                textView.setText("Next Hymn");
                 break;
             case "date":
                 Calendar calendar = Calendar.getInstance();
@@ -2073,6 +2029,11 @@ public class hymnDisplay extends AppCompatActivity {
 
             TextView[] hymnStanzas = getHymnTextviews(hymns.getHymn(num, isInEnglish));
             for (TextView hymnStanza : hymnStanzas) hymnDispl.addView(hymnStanza);
+            if(chorusShown){
+                chorus.setVisibility(View.INVISIBLE);
+                hymnpop.setVisibility(View.INVISIBLE);
+                chorusShown = false;
+            }
         } else {
             String[] errorMessages = {"There has been a problem","loading the hymn","Please pressback"};
             hymnDispl.removeAllViews();
@@ -2082,6 +2043,24 @@ public class hymnDisplay extends AppCompatActivity {
             hymnpop.setText(num);
         }
         s = num;
+        final Handler handler = new Handler();
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                totalHeight = myScroll.getChildAt(0).getHeight();
+                bound =  (totalHeight/length);
+                TextView firstStanza = (TextView) hymnDispl.getChildAt(0);
+                String check =firstStanza.getText().toString();
+                if(check.contains("chorus")){
+                    chorus.setText(check.substring(check.lastIndexOf("chorus")));
+                    chorusAvail = true;
+                } else {
+                    chorus.setText("");
+                    chorusAvail = false;
+                }
+
+            }
+        },300);
     }
 
     public TextView[] getHymnTextviews(String[] arr){

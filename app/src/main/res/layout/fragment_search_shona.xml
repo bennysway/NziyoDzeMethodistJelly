@@ -1,0 +1,24 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.seven.clip.nziyodzemethodist.SearchShonaFragment">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/noResultsText"
+            android:id="@+id/noShonaResultText"
+            android:textColor="@color/white"
+            android:textSize="23sp"
+            android:shadowColor="#ffd6a1"
+            android:shadowDx="0.0"
+            android:shadowDy="0.0"
+            android:shadowRadius="25.0"/>
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible"
+            android:id="@+id/searchShonaListView" />
+</FrameLayout>

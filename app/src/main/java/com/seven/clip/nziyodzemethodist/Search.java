@@ -1,36 +1,32 @@
 package com.seven.clip.nziyodzemethodist;
 
-import android.content.Intent;
-import android.graphics.Color;
+import android.content.res.ColorStateList;
 import android.os.Handler;
 import android.support.annotation.NonNull;
-import android.support.v7.app.AppCompatActivity;
+import android.support.v4.app.FragmentActivity;
+import android.support.v4.view.ViewPager;
 import android.os.Bundle;
-import android.view.Gravity;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.view.ViewGroup;
 import android.view.WindowManager;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
-import android.widget.AdapterView;
-import android.widget.FrameLayout;
-import android.widget.ListView;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextSwitcher;
 import android.widget.TextView;
 import android.widget.Toast;
-import android.widget.ViewSwitcher;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 
-import static android.graphics.Color.parseColor;
 
 public class Search extends AppCompatActivity {
 
-    ListView ls;
-    TextSwitcher searchTitle;
-    int it;
+    LinearLayout searchTitle;
+    ArrayList<SearchResults> results;
+    ArrayList<SearchResults> enResults;
+
+    ViewPager viewPager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,14 +35,69 @@ public class Search extends AppCompatActivity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
-
-        TextView noResults = (TextView) findViewById(R.id.noResultText);
-        searchTitle = (TextSwitcher) findViewById(R.id.searchTitle);
+        viewPager = (ViewPager) findViewById(R.id.searchViewPager);
+        searchTitle = (LinearLayout) findViewById(R.id.searchTitle);
+        final ImageView shBut = (ImageView) findViewById(R.id.searchShBut);
+        final ImageView enBut = (ImageView) findViewById(R.id.searchEnBut);
+        final CircularTextView shonaCount = (CircularTextView) findViewById(R.id.shonaSearchCount);
+        final CircularTextView englishCount = (CircularTextView) findViewById(R.id.englishSearchCount);
         View backBut = findViewById(R.id.searchBackBut);
-        ls = (ListView) findViewById(R.id.searchListView);
-        final Intent toHymn = new Intent(this,hymnDisplay.class);
         Data recordFlag = new Data(this,"recordflag");
         recordFlag.deleteAll();
+        int enCounter=0;
+
+        SearchTabAdapter mAdapter = new SearchTabAdapter(getSupportFragmentManager());
+
+        viewPager.setAdapter(mAdapter);
+
+        shBut.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                viewPager.setCurrentItem(0,true);
+            }
+        });
+
+        enBut.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                viewPager.setCurrentItem(1,true);
+            }
+        });
+
+        viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+                if(position==0){
+                    shBut.setAlpha(1-positionOffset + .2f);
+                    enBut.setAlpha(positionOffset + .2f);
+                    englishCount.setScaleX(positionOffset);
+                    englishCount.setScaleY(positionOffset);
+                    shonaCount.setScaleX(1-positionOffset);
+                    shonaCount.setScaleY(1-positionOffset);
+
+                }
+                if(position==1){
+                    enBut.setAlpha(1-positionOffset + .2f);
+                    shBut.setAlpha(positionOffset + .2f);
+                    shonaCount.setScaleX(positionOffset);
+                    shonaCount.setScaleY(positionOffset);
+                    englishCount.setScaleX(1-positionOffset);
+                    englishCount.setScaleY(1-positionOffset);
+                }
+            }
+
+            @Override
+            public void onPageSelected(int position) {
+
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int state) {
+
+            }
+        });
+
+
 
         backBut.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -55,33 +106,20 @@ public class Search extends AppCompatActivity {
             }
         });
 
-        searchTitle.setFactory(new ViewSwitcher.ViewFactory() {
-
-            public View makeView() {
-                TextView text = new TextView(Search.this);
-                text.setGravity(Gravity.CENTER | Gravity.CENTER_VERTICAL);
-                text.setBackground(getResources().getDrawable(R.drawable.top_rounded_white));
-                text.setTextColor(parseColor("#cc5f00"));
-                text.setTextSize(22);
-                return text;
-            }
-        });
-
-        // Declare the in and out animations and initialize them
-        Animation in = AnimationUtils.loadAnimation(this,android.R.anim.fade_in);
-        Animation out = AnimationUtils.loadAnimation(this,android.R.anim.fade_out);
-
-        // set the animation type of textSwitcher
-        searchTitle.setInAnimation(in);
-        searchTitle.setOutAnimation(out);
-
         String search = getIntent().getStringExtra("search");
-        final ArrayList<SearchResults> results = new ArrayList<>();
+        results = new ArrayList<>();
+        enResults = new ArrayList<>();
 
-        String title = "You searched for: \"" + search + "\"";
-        final String textToShow[]={"Search Results",title,"hits"};
+        String list = getStringResourceByName("en_hymn_list");
 
-        for(int i=1;i<=317; i++){
+        for( int i=0; i<list.length(); i++ ) {
+            if( list.charAt(i) == ',' ) {
+                enCounter++;
+            }
+        } enCounter--;
+        final String[]engNumList =list.split(",");
+
+        for(int i=1;i<=321; i++){
             String h = "hymn" + String.valueOf(i) ;
             int resourceId = getResourceId(h,"array",getPackageName());
             String [] hymn = getResources().getStringArray(resourceId);
@@ -92,6 +130,7 @@ public class Search extends AppCompatActivity {
                     SearchResults p = new SearchResults();
                     p.setHymnNum(IntToStr(i));
                     p.setTitle(getStringResourceByName("hymn"+IntToStr(i)+"firstline"));
+                    p.setInEnglish(false);
                     int front = x.indexOf(search);
                     int end= x.length();
                     if(front<0)
@@ -108,11 +147,38 @@ public class Search extends AppCompatActivity {
 
             }
         }
-        int counter = results.size();
-        if(counter==1)
-            textToShow[2] = "Found " + String.valueOf(counter) + " hit.";
-        else
-            textToShow[2] = "Found " + String.valueOf(counter) + " hits.";
+
+        for(int i=0;i<=enCounter; i++){
+            String h = "enhymn" + engNumList[i] ;
+            int resourceId = getResourceId(h,"array",getPackageName());
+            String [] hymn = getResources().getStringArray(resourceId);
+            final int length =getResources().getStringArray(getResourceId(h,"array",getPackageName())).length;
+            for(int j=0;j<length;j++){
+                String x = hymn[j];
+                if((x.toLowerCase()).contains(search.toLowerCase())){
+                    SearchResults p = new SearchResults();
+                    p.setHymnNum(engNumList[i]);
+                    p.setTitle(getStringResourceByName("enhymn"+engNumList[i]+"firstline"));
+                    p.setInEnglish(true);
+                    int front = x.indexOf(search);
+                    int end= x.length();
+                    if(front<0)
+                        front=0;
+                    int back = front + search.length()+30;
+                    if(back>end)
+                        back=end;
+                    String cap = x.substring(front,back);
+                    cap = cap.replace("\n"," ");
+                    cap +="...";
+                    p.setCaption(cap);
+                    enResults.add(p);
+                }
+
+            }
+        }
+
+        shonaCount.setText(String.valueOf(results.size()));
+        englishCount.setText(String.valueOf(enResults.size()));
 
         if (results.size() > 0) {
             Collections.sort(results, new Comparator<SearchResults>() {
@@ -121,53 +187,37 @@ public class Search extends AppCompatActivity {
                     return object1.getTitle().compareTo(object2.getTitle());
                 }
             });
+            shBut.setColorFilter(getResources().getColor(R.color.burn));
+            shonaCount.setSolidColor("#cc5f00");
+
+        } else{
+            shBut.setColorFilter(getResources().getColor(R.color.fadedBlack));
+            shonaCount.setSolidColor("#70000000");
         }
 
-        Runnable animateTitle = new Runnable() {
-            @Override
-            public void run() {
-                Handler handler = new Handler();
-                it=0;
-                for(int i=0;i<3;i++){
-                    handler.postDelayed(new Runnable() {
-                        @Override
-                        public void run() {
-                            searchTitle.setText(textToShow[it]);
-                            it++;
-                        }
-                    },4000 * i);
+        if (enResults.size() > 0) {
+            Collections.sort(results, new Comparator<SearchResults>() {
+                @Override
+                public int compare(final SearchResults object1, final SearchResults object2) {
+                    return object1.getTitle().compareTo(object2.getTitle());
                 }
-                handler.postDelayed(new Runnable() {
-                    @Override
-                    public void run() {
-                        searchTitle.setText(textToShow[0]);
-                    }
-                },12000);
-            }
-        };
-
-        if(counter==0){
-            animateTitle.run();
-            noResults.animate().scaleY(2f).scaleX(2f).setDuration(100000);
-        }
-        else {
-            ls.setAdapter(new MySearchListApdapter(this, results));
-            ls.setVisibility(View.VISIBLE);
-            noResults.setVisibility(View.INVISIBLE);
-            animateTitle.run();
+            });
+            enBut.setColorFilter(getResources().getColor(R.color.burn));
+            englishCount.setSolidColor("#cc5f00");
+        } else{
+            enBut.setColorFilter(getResources().getColor(R.color.fadedBlack));
+            englishCount.setSolidColor("#70000000");
         }
 
-
-        ls.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                toHymn.putExtra("hymnNum",results.get(i).getHymnNum());
-                startActivity(toHymn);
-            }
-        });
-
-
-
+        if(enResults.size() > 0 && !(results.size()>0)){
+            Handler handler = new Handler();
+            handler.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    viewPager.setCurrentItem(1,true);
+                }
+            },600);
+        }
     }
 
     public String IntToStr(int i){
@@ -193,4 +243,14 @@ public class Search extends AppCompatActivity {
         int resId = getResources().getIdentifier(aString, "string", packageName);
         return getString(resId);
     }
+
+    public ArrayList<SearchResults> getShonaResults() {
+        return results;
+    }
+
+    public ArrayList<SearchResults> getEnglishResults() {
+        return enResults;
+    }
+
+
 }

@@ -114,7 +114,7 @@
         android:textAlignment="center"
         android:gravity="center"
         android:id="@+id/chorusFloat"
-        android:elevation="10dp"
+        android:elevation="5dp"
         android:layout_alignTop="@id/hymnTitle"
         android:visibility="invisible"
         android:layout_marginTop="100dp"
@@ -145,13 +145,14 @@
         android:layout_centerHorizontal="true"
         android:layout_alignParentBottom="true"
         ads:adSize="BANNER"
-        ads:adUnitId="@string/banner_ad_unit_id">
+        ads:adUnitId="@string/hymn_banner_ad_unit_id">
     </com.google.android.gms.ads.AdView>
 
     <TableLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_above="@+id/adView"
+        android:elevation="15dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
@@ -181,7 +182,8 @@
             <ImageView
                 app:srcCompat="@drawable/edit_icon"
                 android:layout_height="match_parent"
-                android:layout_width="wrap_content"                android:background="@color/transBlack"
+                android:layout_width="wrap_content"
+                android:background="@color/transBlack"
                 android:id="@+id/hymnWriteNoteBut"
                 android:padding="10dp"/>
         </TableRow>

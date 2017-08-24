@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_clear_data"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/square_round"
@@ -9,6 +8,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:id="@+id/activity_clear_data"
     tools:context="com.seven.clip.nziyodzemethodist.ClearData">
 
     <TableLayout

@@ -316,4 +316,332 @@
     <string name="hymn315firstline">Rufaro ruri mumwoyo wangu,</string>
     <string name="hymn316firstline">Mwoyo wangu unofara sei!</string>
     <string name="hymn317firstline">Jesu haanakuuya</string>
+    <string name="hymn318firstline">Isu maKristu, tiri kufamba</string>
+    <string name="hymn319firstline">Ndiri kudya chingwa choupenyu,</string>
+    <string name="hymn320firstline">Muzviratidze kwatiri,</string>
+    <string name="hymn321firstline">Tinovonga Ishe wedu</string>
+
+   <string-array name="hymnfirstlines">
+    <item>Pururudzai vanhu mose,</item>
+    <item>Kudzai Mambo, ano utsvene, </item>
+    <item>Mwari muri  zuva redu,</item>
+    <item>Kudza Jehovha, Mwari ane simba,</item>
+    <item>Ngatimukudze Mwari</item>
+    <item>Mukudzei iye Mwari</item>
+    <item>Jehovha ana masimba,</item>
+    <item>Makasika zvose zvinhu,</item>
+    <item>Mwari hamuna mavambo,</item>
+    <item>Mufudzi ndiye Jehovha,</item>
+    <item>Tunhai Ishe, matenga,</item>
+    <item>Ndinoshamiswa kwazvo</item>
+    <item>Mununuri ngaakudzwe</item>
+    <item>Hozana wokudenga</item>
+    <item>Mununuri wedu</item>
+    <item>Ngatiimbe nengirozi</item>
+    <item>Chokwadi zita raJesu</item>
+    <item>Tora zita rake Jesu</item>
+    <item>Iro zita raJesu,</item>
+    <item>Jesu rufaro rwomwoyo.</item>
+    <item>Isu vanhu vapanyika</item>
+    <item>Tarirai mudzione</item>
+    <item>Makasiya ngundu</item>
+    <item>Ndiye Mwari Muponisi,</item>
+    <item>Mununuri ndinomuda</item>
+    <item>Ndinokurumbidza</item>
+    <item>Imi makonhi emwoyo,</item>
+    <item>Uyai maKristu</item>
+    <item>Ingirozi dzinoimba</item>
+    <item>Inzwai heri izwi</item>
+    <item>Rumbidzai vanhu mose!</item>
+    <item>Mukai, maKristu, mufare nhasi,</item>
+    <item>Mumusha waShe Dhavhidhi</item>
+    <item>Pausiku hwoutsvene</item>
+    <item>Vafudzi  vebetrehem</item>
+    <item>Kristu, ‘Manueri!</item>
+    <item>Vafudzi zvavakarinda</item>
+    <item>Mwana M’tsvene, wakapfava</item>
+    <item>Tarirai kubetrehem,</item>
+    <item>MaKristu ngatirumbidzei</item>
+    <item>Mwoyo wangu unofara</item>
+    <item>Takazvarirwa Mwanakomana,</item>
+    <item>Tinouya madzimambo,</item>
+    <item>Ndiani pane zamba</item>
+    <item>Jesu, imi muri nzira,</item>
+    <item>Vakafara vano urombo</item>
+    <item>Ndiudze nhau dzaJesu,</item>
+    <item>Hakuna zita  seraJesu</item>
+    <item>Ndiudzewo rungano</item>
+    <item>Chiriko chikomo kure</item>
+    <item>Riripo gomo</item>
+    <item>Wokusuwa!  wakanzi,</item>
+    <item>Uyai mose ticheme,</item>
+    <item>Tsitsi hedzi dzamira dzoga,</item>
+    <item>Ngatitende Mwari,</item>
+    <item>Mutadzi anofirirei?</item>
+    <item>Pasi poMuchinjikwa</item>
+    <item>Jesu ndisededzei</item>
+    <item>Makatakura kuipa</item>
+    <item>Ndakayeva Muchinjikwa,</item>
+    <item>Kristu Tenzi wakamuka,</item>
+    <item>Kurwa nedzivo zvazopedzwa;</item>
+    <item>Mukati meguva,</item>
+    <item>Kristu wamuka nhasi!  wamuka kwazvo!</item>
+    <item>Tinofara nhasi,</item>
+    <item>Nomusi weSvondo</item>
+    <item>Makamuka Ishe Jesu,</item>
+    <item>Ndinobva kwamuri, ndoenda kudenga,</item>
+    <item>Namangwanangwana</item>
+    <item>Jesu, makati mamuka</item>
+    <item>Unotii nhasi, Kufa?</item>
+    <item>Ari  m’penyu Muponisi</item>
+    <item>Changamire! Muponisi,</item>
+    <item>Zadzisai chirevo chenyu.</item>
+    <item>Ndimi baba makasika zvapasi,</item>
+    <item>Ruponiso! Runofadza!</item>
+    <item>Mweya Mutsvene waMwari!</item>
+    <item>Tinovonga Jesu,</item>
+    <item>Chivimbiso choM’ponisi</item>
+    <item>Simudzai pfungwa dzedu</item>
+    <item>Dondifemerai,</item>
+    <item>Mweya woutsvene</item>
+    <item>Mweya Mutsvene, Idi,</item>
+    <item>Mweya musiki, muvambi</item>
+    <item>M’tsvene, M’tsvene, M’tsvene, Mwari wesimba!</item>
+    <item>Izwi renyu Mwari</item>
+    <item>Imi Mweya waMwari</item>
+    <item>Vakaropafadzwa avo.</item>
+    <item>Tine dama renyu, Mwari,</item>
+    <item>Heri dama rokudenga</item>
+    <item>Mwari nedzo tsitsi dzenyu</item>
+    <item>Svikai, Mweya Mutsvene,</item>
+    <item>Mweya wangu uno Muponisi</item>
+    <item>Ndanzwa izwi renyu,</item>
+    <item>Farai nesu, vanotenda,</item>
+    <item>Wandiitirei Jesu?</item>
+    <item>Tadaidzirwa utsvene,</item>
+    <item>Paimba yeGwayana raMwari,</item>
+    <item>Ishe! Ndinzwei nokufara</item>
+    <item>Kwete! Idzo tsitsi dzenyu</item>
+    <item>Sipiti retsitsi nengoni</item>
+    <item>Tirimo  munzira yenyika yo’penyu</item>
+    <item>Vatadzi munodiwa,</item>
+    <item>Jesu wakauya pasi</item>
+    <item>Ndakanga ndakundikana</item>
+    <item>Mweni anogogodza</item>
+    <item>Uyai kuna Muponisi;</item>
+    <item>Pane sipiti rizere</item>
+    <item>Baba, nedzo tsitsi dzenyu,</item>
+    <item>Mwari Ishe makavanzwa</item>
+    <item>Kudai ndichibvuma</item>
+    <item>Baba nditarisei netsitsi dzenyu,</item>
+    <item>Hakusi kurema</item>
+    <item>Ndinochema Ishe Mwari</item>
+    <item>Jesu ndanga ndakurasai</item>
+    <item>Baba ndiri mwana wenyu</item>
+    <item>Nditarirei nokufara</item>
+    <item>Inzwai mununuri wedu,</item>
+    <item>Zvingagova sei kuti</item>
+    <item>Muka, mweya wangu,</item>
+    <item>Norumuko rwenyu Kristu</item>
+    <item>Ngandiite munamato</item>
+    <item>N’anga huru yava  pedyo,</item>
+    <item>Ndomukurumbidza</item>
+    <item>Ishe ndoimba nadzo tsitsi dzenyu,</item>
+    <item>Rukuru ruponiso</item>
+    <item>Sezva ndiri, ndinouya</item>
+    <item>Imi makabva ku’zuru</item>
+    <item>Mwoyo wangu uchimutsva</item>
+    <item>Makati: zvose siyai,</item>
+    <item>Ndoisa pana Jesu</item>
+    <item>Makandinzvera, Jehovha</item>
+    <item>Sezva ndakadai, Ishe,</item>
+    <item>Mwari samasimba</item>
+    <item>Zvaanotitonga iye</item>
+    <item>Tine chipo chakakomba,</item>
+    <item>Ngatitende kuna Jesu,</item>
+    <item>Rakanaka iro zuva</item>
+    <item>Fare iwe m’Kristu!</item>
+    <item>Vazhinji vanayo nhaka</item>
+    <item>Ndinofara kuti baba wedu</item>
+    <item>Nhasi ini ndinofara</item>
+    <item>Mumwe ariko kum’soro;</item>
+    <item>Ichokwadi, Jesu ndowangu,</item>
+    <item>Vongai Jehovha, mudane zita rake,</item>
+    <item>Mwari mune simba rose,</item>
+    <item>Jesu ndokudai Muponisi wangu,</item>
+    <item>Kwaendepi Ishe Jesu</item>
+    <item>Ndiri wenyu Ishe Jesu,</item>
+    <item>Jesu asati auya</item>
+    <item>Tinoda kugara nemi,</item>
+    <item>Mudi womweya wangu;</item>
+    <item>Ndinoinzva nemi,</item>
+    <item>Irwa kurwa kwakanaka,</item>
+    <item>Apo ndatambudzika</item>
+    <item>Mwari runondishamisa.</item>
+    <item>Ndiani mhandu iyi</item>
+    <item>Mwari ndiye tsvingo  yedu,</item>
+    <item>Vongai kuna Jehovha,</item>
+    <item>Dombo rakarekare,</item>
+    <item>Baba! mune simba rose</item>
+    <item>Kristu Mununuri wedu,</item>
+    <item>Kana tichifamba</item>
+    <item>Runyararo munyika yerima?</item>
+    <item>Nyange ndiri murombo</item>
+    <item>Totarirepi Ishe</item>
+    <item>Ndicharumbidza Mwari</item>
+    <item>Gadzira miteuro</item>
+    <item>Famba mangwanangwana</item>
+    <item>Kuna Mwari zvitaure</item>
+    <item>Kunamata kuna Mwari</item>
+    <item>Baba wedu wokudenga</item>
+    <item>Tine hama yedu Jesu,</item>
+    <item>Rudo runopfuura kuziva</item>
+    <item>Sedera, mweya wangu.</item>
+    <item>Jesu Mambo worugare</item>
+    <item>Ishe wangu maindidisa</item>
+    <item>Farai mazuva ose,</item>
+    <item>Ngandibereke mapudzi,</item>
+    <item>Vakaropafadzwa</item>
+    <item>Hoyo mushandiri waShe!</item>
+    <item>Tenzi ngandifambe nemi,</item>
+    <item>Urwo rutendo rukuru</item>
+    <item>Timutsirei Ishe,</item>
+    <item>Musimba renyasha,</item>
+    <item>Jesu anoti  tivhenekere</item>
+    <item>Muzita raShe ndoenda</item>
+    <item>Nditungamire Jehovha</item>
+    <item>Nhungamiri yaIsraeri</item>
+    <item>Mwari muna masimba</item>
+    <item>Muna vanhu  venyu Mwari</item>
+    <item>Jesu tokuvongai, matifira, </item>
+    <item>Hoyu Mwari, Changamire,</item>
+    <item>Imi  Mwari webheteri</item>
+    <item>Kwasara makore,</item>
+    <item>Mwoyo yenyu ngairege</item>
+    <item>Jesu ndiyo nzira yedu</item>
+    <item>Nokuchema kwandiinako,</item>
+    <item>Musi wehasha nokutya,</item>
+    <item>Chinhu chinotyisa kwazvo,</item>
+    <item>Mumhanzi uri kudenga,</item>
+    <item>Wouya, wouya, Mucheki mukuru,</item>
+    <item>Nzvimbo yakanaka!</item>
+    <item>Jerusarem, musha wangu!</item>
+    <item>Pakudenga kuna baba</item>
+    <item>Pam’soro pakudenga,</item>
+    <item>Musi weSvondo nhasi, She,</item>
+    <item>Musi weSvondo waIShe</item>
+    <item>Ishe taungana</item>
+    <item>Ishe nzvimbo yenyu</item>
+    <item>Nguva  yakanaka Jesu</item>
+    <item>Zvatapinda Ishe  wedu</item>
+    <item>Baba wedu tinouya</item>
+    <item>Mwari wedu tiri pano</item>
+    <item>Taurai Ishe wedu,</item>
+    <item>Ishe muno utsvene</item>
+    <item>Timutsirei She,</item>
+    <item>Mwari baba wedu,</item>
+    <item>Zvose zvinhu tinopa zvedu</item>
+    <item>Svondo inopfuura.</item>
+    <item>Mutiropafadze, Mwari</item>
+    <item>Ngoni dzaKristu M’ponisi,</item>
+    <item>Tauya nezvipo baba,</item>
+    <item>Tinouya baba wedu</item>
+    <item>Tinobvisa zvipo</item>
+    <item>Baba wangu ndinodisa</item>
+    <item>Onai   vadzidzi venyu</item>
+    <item>Tichiri vapenyu,</item>
+    <item>Tiri vawadzani, tiri vawadzani,</item>
+    <item>Mwari ano rudo</item>
+    <item>Tinouya kuna Mwari</item>
+    <item>Nguva yakanakisisa</item>
+    <item>Kristu mukomboreri,</item>
+    <item>Imi Jesu, ndimi M’fudzi</item>
+    <item>Amai  navana</item>
+    <item>Makati vana vaduku</item>
+    <item>Maisa murau Jesu</item>
+    <item>Baba wedu tarirai</item>
+    <item>Makatora chingwa, Jesu</item>
+    <item>Wafa, wafa, Muponisi!</item>
+    <item>Jesu tinoita</item>
+    <item>Ngatishandisei nyasha</item>
+    <item>Dzidzisai vadzidzisi,</item>
+    <item>Tivhenekerei</item>
+    <item>Mwari mundidzore imi,</item>
+    <item>Ko, handingaite kuda kwaShe</item>
+    <item>Tiyamurei nengoni</item>
+    <item>Kana todyara, She,</item>
+    <item>Tiitei savashanu</item>
+    <item>Fambai vaKristu,  somunondorwa,</item>
+    <item>Simukirai Jesu.</item>
+    <item>Tiri pfumo raShe,</item>
+    <item>Izwi raShe rakasvika,</item>
+    <item>Tiri vana vaMwari,</item>
+    <item>Dombondipa meso ndione,</item>
+    <item>Ngatiimbei  rwiyo rutsva</item>
+    <item>Ishe  makamboburuka,</item>
+    <item>Baba munotipa zvipo</item>
+    <item>Mwari ane simba,  tinoteurira</item>
+    <item>Ishe komborera Afrika</item>
+    <item>Imba  yorufaro mamunodiwa</item>
+    <item>Kudzai Jesu, imi vana mose</item>
+    <item>Mwari wakasika</item>
+    <item>Mwana angazive</item>
+    <item>Mwari baba wedu</item>
+    <item>Mufudzi ropafadzai</item>
+    <item>Kure muzamba iro, pasina rukukwe,</item>
+    <item>Uyai imi vana, uyai unganai</item>
+    <item>Jesu wakambova mwana</item>
+    <item>Vachenjeri ivo</item>
+    <item>Jesu shamwari yavana</item>
+    <item>Vaduku vakaimba</item>
+    <item>Vana veJerusarema</item>
+    <item>Zuva redu ravapo,</item>
+    <item>Jesu makapfavisa</item>
+    <item>Jesu munoshovedza vaduku,</item>
+    <item>Ndouya kuJesu</item>
+    <item>Ndiropafadzei She,</item>
+    <item>Baba, tinotenda,</item>
+    <item>Ndokutendai baba</item>
+    <item>Ishe Mwari ndiitei</item>
+    <item>Kamwenje kangu aka</item>
+    <item>Nditungamire kuna She Jesu;</item>
+    <item>Ishe woutsvene.</item>
+    <item>Mudzongeri  wakabuda</item>
+    <item>Mati imi baba wedu</item>
+    <item>Mwari worudo, rudo rwakakwana</item>
+    <item>Ishe! Ikoku kusvitswa</item>
+    <item>Mangwanani zvinhu zvose</item>
+    <item>Denga rizere nemi</item>
+    <item>Zuva rabuda kakare</item>
+    <item>Muka mweya wangu, famba</item>
+    <item>Garai neni! zuva radoka;</item>
+    <item>Ndinokukurumbidzai,</item>
+    <item>Ishe imi mandisimbaradza</item>
+    <item>Mumwe musi ava mauro,</item>
+    <item>Mwari baba, muve nesu,</item>
+    <item>Kudzai Mwari mukuru!</item>
+    <item>Mvura yazonaya, chipo chenyu baba,</item>
+    <item>Ishe baba titarirei,</item>
+    <item>Tinoirima minda.</item>
+    <item>Uyai, vanhu, tiimbe</item>
+    <item>Hongu, Mwari wakanaka;</item>
+    <item>Tinokutendai baba</item>
+    <item>Tokupai zvino baba,</item>
+    <item>Zuva ranhasi Ishe wedu</item>
+    <item>Jesu ini ndasarudza</item>
+    <item>Mwari baba samasimba</item>
+    <item>Nhasi tose taungana</item>
+    <item>Nevatsvene  avo vazorora</item>
+    <item>Tiri mberi kwenyu Ishe</item>
+    <item>Tarisa, tarisa</item>
+    <item>Jesu ari pano</item>
+    <item>Hama  yandinayo,</item>
+    <item>Rufaro ruri mumwoyo wangu,</item>
+    <item>Mwoyo wangu unofara sei!</item>
+    <item>Jesu haanakuuya</item>
+    <item>Isu maKristu, tiri kufamba</item>
+    <item>Ndiri kudya chingwa choupenyu,</item>
+    <item>Muzviratidze kwatiri,</item>
+    <item>Tinovonga Ishe wedu</item>
+   </string-array>
 </resources>

@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.seven.clip.nziyodzemethodist"
-    android:versionCode="16001"
-    android:versionName="1.16.001">
-
-    <uses-sdk android:minSdkVersion="16" />
+    package="com.seven.clip.nziyodzemethodist">
 
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
@@ -98,7 +94,7 @@
             android:name=".ChoosePic"
             android:screenOrientation="portrait">
             <intent-filter>
-                <action android:name="clipseven.action.choosepic" />
+                <action android:name="seven.clip.action.choosepic" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
@@ -112,7 +108,7 @@
             android:noHistory="true"
             android:screenOrientation="portrait">
             <intent-filter>
-                <action android:name="clipseven.action.choosecolor" />
+                <action android:name="seven.clip.action.choosecolor" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
@@ -120,12 +116,6 @@
         <activity
             android:name=".Search"
             android:screenOrientation="portrait" />
-        <activity
-            android:name=".SearchDialogue"
-            android:noHistory="true"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.Popups"
-            android:windowSoftInputMode="adjustPan|adjustResize" />
         <activity
             android:name=".AdjustTextSize"
             android:noHistory="true"
@@ -168,8 +158,11 @@
             android:screenOrientation="portrait" />
         <activity
             android:name=".CaptionList"
-            android:noHistory="true" />
-        <activity android:name=".EventLog" />
+            android:noHistory="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".EventLog"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".ThemeChooser"
             android:screenOrientation="portrait" />
@@ -181,7 +174,24 @@
         <activity
             android:name=".MakeCard"
             android:screenOrientation="portrait" />
+        <activity
+            android:name=".BiblePicker"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ReadingList"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ManageLogin"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.Popups">
+            <intent-filter>
+                <action android:name="seven.clip.action.manageLogin" />
 
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ReadingDisplay"
+            android:screenOrientation="portrait"/>
     </application>
 
 </manifest>

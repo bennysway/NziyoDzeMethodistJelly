@@ -1,6 +1,7 @@
 package com.seven.clip.nziyodzemethodist;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,13 +11,15 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 
-public class MySearchListApdapter extends BaseAdapter {
+class MySearchEnglishListAdapter extends BaseAdapter {
     private static ArrayList<SearchResults> searchArrayList;
+    private Context mContext;
 
     private LayoutInflater mInflater;
 
-    public MySearchListApdapter(Context context, ArrayList<SearchResults> results) {
+    MySearchEnglishListAdapter(Context context, ArrayList<SearchResults> results) {
         searchArrayList = results;
+        mContext = context;
         mInflater = LayoutInflater.from(context);
     }
 
@@ -32,32 +35,36 @@ public class MySearchListApdapter extends BaseAdapter {
         return position;
     }
 
-    public View getView(int position, View convertView, ViewGroup parent) {
+    public View getView(final int position, View convertView, ViewGroup parent) {
         ViewHolder holder;
         if (convertView == null) {
-            convertView = mInflater.inflate(R.layout.search_list, null);
+            convertView = mInflater.inflate(R.layout.search_list,null);
             holder = new ViewHolder();
-            holder.txtName = (TextView) convertView.findViewById(R.id.searchLinebut);
-            holder.txtCityState = (TextView) convertView
+            holder.mTitle = (TextView) convertView.findViewById(R.id.searchLinebut);
+            holder.mCaption = (TextView) convertView
                     .findViewById(R.id.subsearchLinebut);
-            holder.txtPhone = (TextView) convertView.findViewById(R.id.searchHymnNum);
+            holder.mNumber = (TextView) convertView.findViewById(R.id.searchHymnNum);
 
             convertView.setTag(holder);
         } else {
             holder = (ViewHolder) convertView.getTag();
         }
 
-        holder.txtName.setText(searchArrayList.get(position).getTitle());
-        holder.txtCityState.setText(searchArrayList.get(position)
+        holder.mTitle.setText(searchArrayList.get(position).getTitle());
+        holder.mCaption.setText(searchArrayList.get(position)
                 .getCaption());
-        holder.txtPhone.setText(searchArrayList.get(position).getHymnNum());
+        holder.mNumber.setText(searchArrayList.get(position).getHymnNum());
+        holder.isInEnglish = searchArrayList.get(position).getIsInEnglish();
+
+
 
         return convertView;
     }
 
     static class ViewHolder {
-        TextView txtName;
-        TextView txtCityState;
-        TextView txtPhone;
+        TextView mTitle;
+        TextView mCaption;
+        TextView mNumber;
+        boolean isInEnglish;
     }
 }

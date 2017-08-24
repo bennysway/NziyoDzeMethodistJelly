@@ -10,21 +10,59 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:src="@drawable/dark"
+        android:src="@drawable/dark_small"
         android:id="@+id/searchBg"
         android:scaleType="centerCrop"/>
 
-    <TextSwitcher
+    <LinearLayout
         android:id="@+id/searchTitle"
         android:background="@drawable/top_rounded_white"
-        android:textColor="@color/burn"
-        android:textSize="22sp"
         android:gravity="center"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:elevation="@dimen/white_card_elevation"
+        android:animateLayoutChanges="true"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"/>
+        android:layout_centerHorizontal="true">
+
+        <com.seven.clip.nziyodzemethodist.CircularTextView
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:layout_marginEnd="20dp"
+            android:text="77"
+            android:textColor="@color/white"
+            android:padding="5dp"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:id="@+id/shonaSearchCount"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/searchShBut"
+            app:srcCompat="@drawable/sh_icon"
+            android:paddingTop="5dp"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/searchEnBut"
+            app:srcCompat="@drawable/en_icon_on"/>
+
+        <com.seven.clip.nziyodzemethodist.CircularTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="44"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:padding="5dp"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:id="@+id/englishSearchCount"/>
+
+    </LinearLayout>
 
     <ImageView
         app:srcCompat="@drawable/back_icon"
@@ -36,25 +74,10 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
-    <TextView
+    <android.support.v4.view.ViewPager
+        android:id="@+id/searchViewPager"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center"
-        android:layout_centerInParent="true"
-        android:text="No Results found"
-        android:id="@+id/noResultText"
-        android:textColor="@color/white"
-        android:textSize="23sp"
-        android:shadowColor="#ffd6a1"
-        android:shadowDx="0.0"
-        android:shadowDy="0.0"
-        android:shadowRadius="25.0"/>
-
-    <ListView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_centerHorizontal="true"
-        android:visibility="visible"
-        android:id="@+id/searchListView"
-        android:layout_below="@+id/searchTitle" />
+        android:layout_below="@+id/searchTitle">
+    </android.support.v4.view.ViewPager>
 </RelativeLayout>

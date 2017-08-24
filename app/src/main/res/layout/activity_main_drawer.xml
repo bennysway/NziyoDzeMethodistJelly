@@ -33,8 +33,8 @@
             android:layout_width="wrap_content"
             android:layout_height="380dp"
             android:layout_marginLeft="-100dp"
-            android:rowCount="3"
-            android:columnCount="3"
+            android:rowCount="4"
+            android:columnCount="4"
             android:rotation="45"
             android:layout_alignParentBottom="true"
             android:layout_alignParentStart="true"
@@ -89,6 +89,15 @@
                 android:id="@+id/recentBut"
                 android:layout_row="1"
                 android:layout_column="2" />
+
+            <Button
+                android:layout_width="@dimen/buttonSquareSize"
+                android:layout_height="@dimen/buttonSquareSize"
+                android:background="@drawable/circle"
+                android:id="@+id/readingsBut"
+                android:layout_row="1"
+                android:layout_column="3" />
+
 
             <TextView
                 android:text="@string/hymnNumberButtonText"
@@ -194,6 +203,23 @@
                 android:fontFamily="sans-serif"
                 android:textAlignment="center" />
 
+            <TextView
+                android:text="@string/readingsText"
+                android:textSize="@dimen/mainTextButtonsSize"
+                android:layout_width="wrap_content"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content"
+                android:rotation="-45"
+                android:textColor="@color/white"
+                android:layout_marginTop="0dp"
+                android:layout_marginLeft="0dp"
+                android:layout_column="3"
+                android:layout_row="1"
+                android:elevation="100dp"
+                android:id="@+id/readingsText"
+                android:fontFamily="sans-serif"
+                android:textAlignment="center" />
+
         </GridLayout>
 
             <Button
@@ -207,7 +233,7 @@
                 android:shadowColor="@color/black"
                 android:layout_alignParentRight="true" />
 
-        <TextView
+        <!--TextView
             android:text=" Nziyo DzeMethodist"
             android:id="@+id/mainAppTitle"
             android:background="@drawable/top_rounded_white"
@@ -219,7 +245,43 @@
             android:layout_height="50dp"
             android:elevation="@dimen/white_card_elevation"
             android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"/>
+            android:layout_centerHorizontal="true"/-->
+
+        <ViewSwitcher
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/mainDrawerTitleSwitcher"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/top_rounded_white"
+            android:elevation="5dp"
+            android:animateLayoutChanges="true">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/app_name"
+                android:textSize="30sp"
+                android:id="@+id/mainAppTitle"
+                android:textColor="@color/burn"
+                android:gravity="center"
+                android:fontFamily="cursive"/>
+
+            <AutoCompleteTextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/mainSearchBar"
+                android:imeOptions="actionSearch"
+                android:textSize="30sp"
+                android:textColor="@color/burn"
+                android:gravity="center"
+                android:inputType="textNoSuggestions"
+                android:background="#00000000"
+                />
+
+
+        </ViewSwitcher>
 
         <ImageView
             app:srcCompat="@drawable/menu_icon"
@@ -257,7 +319,7 @@
 
 
         <ImageView
-            app:srcCompat="@drawable/search_icon_on"
+            app:srcCompat="@drawable/close_icon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:elevation="@dimen/white_card_elevation"

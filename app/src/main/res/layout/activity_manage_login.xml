@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/square_round"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin">
+
+
+    <TextView
+        android:text="Authenticate to access the database"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:padding="20dp"
+        android:textColor="@color/black"
+        android:shadowRadius="15.0"
+        android:shadowDy="12.0"
+        android:shadowDx="5.0"
+        android:shadowColor="@color/black"
+        android:gravity="center"
+        android:id="@+id/loginPrompt"
+        android:layout_centerHorizontal="true"/>
+
+    <com.google.android.gms.common.SignInButton
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:id="@+id/googleButton"
+        android:layout_centerHorizontal="true">
+
+    </com.google.android.gms.common.SignInButton>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Log out"
+        android:id="@+id/accountLogOutButton"
+        android:layout_below="@id/googleButton"
+        android:layout_centerHorizontal="true"
+        android:enabled="false"/>
+
+    <com.crystal.crystalpreloaders.widgets.CrystalPreloader
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        app:crs_pl_bg_color="#00000000"
+        app:crs_pl_fg_color="@color/fadedBlack"
+        app:crs_pl_size="medium"
+        app:crs_pl_style="tornado_circle_2"
+        android:visibility="invisible"
+        android:id="@+id/manageLoginLoadingAnimation"/>
+
+
+</RelativeLayout>

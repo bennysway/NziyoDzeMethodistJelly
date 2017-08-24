@@ -2,7 +2,7 @@
     <group android:id="@+id/menu_group_1">
         <item
             android:id="@+id/notifications"
-            android:title="Notifications"
+            android:title="Developer\'s Note"
             android:icon="@android:drawable/stat_notify_chat"
             android:onClick="openNotifications"/>
         <item
@@ -27,5 +27,12 @@
             android:title="Credits"
             android:icon="@android:drawable/ic_menu_myplaces"
             android:onClick="openCredits"/>
+    </group>
+    <group>
+        <item
+            android:id="@+id/toFacebookCommunity"
+            android:title="Facebook Community"
+            android:icon="@drawable/ic_facebook_icon"
+            android:onClick="openFB"/>
     </group>
 </menu>

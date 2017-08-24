@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    tools:context="com.seven.clip.nziyodzemethodist.ReadingDisplay">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/dark_small"
+        android:id="@+id/recBg"
+        android:scaleType="centerCrop"/>
+
+    <TextView
+        android:text="Theme"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:textSize="40sp"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:fontFamily="cursive"
+        android:background="@drawable/square_hymn"
+        android:id="@+id/themeTitle"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="7dp"
+        android:id="@+id/readingEnBut"
+        app:srcCompat="@drawable/sh_icon"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+  <ScrollView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_below="@id/themeTitle">
+      
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="vertical"
+          android:animateLayoutChanges="true"
+          android:id="@+id/readingsLinearHolder">
+
+          <RelativeLayout
+              android:layout_width="match_parent"
+              android:layout_height="90dp">
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:textColor="@color/white"
+                  android:padding="10dp"
+                  android:textSize="20sp"
+                  android:text="Reading"
+                  android:layout_alignParentStart="true"
+                  android:layout_alignParentLeft="true" />
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_alignParentEnd="true"
+                  android:layout_alignParentRight="true"
+                  android:layout_alignParentBottom="true"
+                  android:textColor="@color/white"
+                  android:padding="10dp"
+                  android:textSize="50sp"
+                  android:alpha="0.3"
+                  android:text="Psalm"/>
+          </RelativeLayout>
+
+          <RelativeLayout
+              android:layout_width="match_parent"
+              android:layout_height="90dp">
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:textColor="@color/white"
+                  android:padding="10dp"
+                  android:textSize="20sp"
+                  android:text="Reading"
+                  android:layout_alignParentStart="true"
+                  android:layout_alignParentLeft="true" />
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_alignParentEnd="true"
+                  android:layout_alignParentRight="true"
+                  android:layout_alignParentBottom="true"
+                  android:textColor="@color/white"
+                  android:padding="10dp"
+                  android:textSize="50sp"
+                  android:alpha="0.3"
+                  android:text="Old"/>
+
+          </RelativeLayout>
+          <RelativeLayout
+              android:layout_width="match_parent"
+              android:layout_height="90dp">
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:textColor="@color/white"
+                  android:padding="10dp"
+                  android:textSize="20sp"
+                  android:text="Reading"
+                  android:layout_alignParentStart="true"
+                  android:layout_alignParentLeft="true" />
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_alignParentEnd="true"
+                  android:layout_alignParentRight="true"
+                  android:layout_alignParentBottom="true"
+                  android:textColor="@color/white"
+                  android:padding="10dp"
+                  android:textSize="50sp"
+                  android:alpha="0.3"
+                  android:text="New"/>
+
+          </RelativeLayout>
+
+          <RelativeLayout
+              android:layout_width="match_parent"
+              android:layout_height="90dp">
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:textColor="@color/white"
+                  android:padding="10dp"
+                  android:textSize="20sp"
+                  android:text="Reading"
+                  android:layout_alignParentStart="true"
+                  android:layout_alignParentLeft="true" />
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_alignParentEnd="true"
+                  android:layout_alignParentRight="true"
+                  android:layout_alignParentBottom="true"
+                  android:textColor="@color/white"
+                  android:padding="10dp"
+                  android:textSize="50sp"
+                  android:alpha="0.3"
+                  android:text="Gospel"/>
+
+          </RelativeLayout>
+
+      </LinearLayout>
+
+  </ScrollView>
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/readingAdView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="@string/reading_banner_ad_unit_id">
+    </com.google.android.gms.ads.AdView>
+
+
+
+
+</RelativeLayout>

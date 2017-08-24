@@ -19,35 +19,69 @@
     <string name="topic2sub1sub4">Notifications</string>
 
 
+    <string-array name="topic1_text">
 
-
-    <!-- Splash and Start up -->
-    <string name="body1Para1">
-        This topic will tell you all you need to know about how the application starts and what you can change.\n
+        <!-- Splash and Start up -->
+        <item>
+            This topic will tell you all you need to know about how the application starts and what you can change.\n
         When the application start, you are shown the Methodist Logo and after that, a hymn is quoted.
-        This is just a feature which makes this application unique.
-    </string>
-    <!-- Insert body1picture1 -->
-    <string name="body1Para2">
-        This might be a slow start to a user and can be easily disabled by going to Settings > General > Show a Himn Verse
+        This is just a feature which makes this application unique.\n
+            Below the Quote, there will be a button to quickly open the hymn if you want to view it.\n
+        </item>
+        <!-- Insert hymn Quote picture -->
+        <item>
+             This might be a slow start to a user and can be easily disabled by going to Settings > General > Show a Hymn Verse
         on Splash and then disable it.
-    </string>
-    <!-- Insert body1shortcut1 -->
-    <string name="body1Para3">
-        Sometimes after disabling the feature, a user might still feel that the application is taking time to start.
+        </item>
+        <!-- Insert button to splash settings -->
+        <item>
+              Sometimes after disabling the feature, a user might still feel that the application is taking time to start.
         I have Included a faint Close Button which is always on the top right of the Splash screen.
-    </string>
-    <!--inserts body1picture2 -->
-    <string name="body1Para4">
-        The moment you click this button the Splash will end, taking you straight into the Main Screen.\n
+        </item>
+
+        <item>
+            The moment you click this button the Splash will end, taking you straight into the Main Screen.\n
         Also, the moment you press the back button while the hymnbook is loading, it will close the whole hymnbook
         ,assuming you did not intend to open the application in the first place.
-    </string>
+        </item>
+
+        <item>
+            The splash screen has a Bookmark feature. This allows you to go straight to a hymn number you bookmarked from the splash screen.\n
+        To set a bookmark, open a hymn and press the stanza 3 times. This will highligh the stanza and show you two options, Make Card and Bookmark.\n
+        When it is activated, it is highlighted as shown below.
+        </item>
+        <!-- Insert bookmark icons-->
+
+        <item>
+            Just like how an ordinary bookmark helps you open where you place it, this is exactly what it does, and it stays there until you deactivate it.\n
+        To remove a bookmark, return to the same bookmarked hymn, triple click a stanza, and press the bookmark icon again. Please note you can only save
+        one bookmark for the quick launch, therefore, if you go to another hymn and bookmark it, it will replace the bookmark that was there before.
+        </item>
+
+    </string-array>
 
 
     <!-- Main Screen Side Drawer -->
-    <string name="body2Para1">
+    <string-array name="topic2_text">
+        <item>
+            The Main Screen is where you can see most functions of the app. You can open a Hymn Number, see the Hymn List, Favorites and Recents, and quickly access you saved Captions.\n
+            Top left is the Drawer Button where you can check update notes, share the app, clear app data, access all settings, view Credits, or just check what the Facebook community is saying.\n
+            Top right is the Search Button where you can quickly get a title of a hymn, or search in-depth the whole hymn for you criteria. It searches both English and Shona phrases.\n
+        </item>
+        <!-- insert hymn number button -->
+        <item>
+            Opening a hymn number quite easy. Just type, and press enter, or the open hymn button.\n
+            Beside this button, on the left, is the Favorite button. Its there to easily set a favorite hymn as you  type the number.\n
+            You can try out these features now by pressing the gray button above this paragraph.\n
+        </item>
+        <!-- insert hymn list button -->
 
-    </string>
+        <item>
+            The hymn list is arranged in alphabetical order. Clicking a hymn will open it. Long pressing a hymn will ask you if you want to set is as a favorite, or remove it from favorites if it is.\n
+            One small feature, although personally I it is useless but just fancy and hidden, is the ability to scroll the list with the volume buttons. Pressing a volume button skips you to the next or previous letter index.\n
+            In the list, your favourites are highlighted with a soft white glow behind the title.n\
+            It is also easy to see which Shona hymns have English versions on them by a the "En" logo next to the title.\n
+        </item>
 
+    </string-array>
 </resources>

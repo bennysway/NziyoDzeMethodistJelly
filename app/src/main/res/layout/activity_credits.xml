@@ -5,9 +5,6 @@
     android:fillViewport="true"
     android:scrollbars="none" >
 
-    <LinearLayout android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -99,79 +96,70 @@
         android:layout_below="@id/credit20"
         android:id="@+id/credit21" />
 
-    <ImageView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/blogger"
-        android:id="@+id/credit14"
-        android:layout_alignTop="@+id/credit13"
-        android:layout_alignParentRight="true" />
+        android:orientation="horizontal"
+        android:id="@+id/creditLine1"
+        android:layout_below="@id/credit5">
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/instagram"
-        android:id="@+id/credit13"
-        android:layout_alignTop="@+id/credit12"
-        android:layout_toLeftOf="@+id/credit14" />
-
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/phone"
-        android:id="@+id/credit12"
-        android:layout_alignTop="@+id/credit11"
-        android:layout_toLeftOf="@+id/credit13" />
-
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/google_plus"
-        android:id="@+id/credit11"
-        android:layout_below="@+id/credit5"
-        android:layout_toLeftOf="@+id/credit12" />
-
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/youtube_play"
-        android:id="@+id/credit10"
-        android:layout_alignTop="@+id/credit11"
-        android:layout_toLeftOf="@+id/credit11" />
-
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/skype"
-        android:id="@+id/credit9"
-        android:layout_alignTop="@+id/credit10"
-        android:layout_toLeftOf="@+id/credit10" />
-
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/at"
-        android:id="@+id/credit8"
-        android:layout_alignTop="@+id/credit9"
-        android:layout_toLeftOf="@+id/credit9" />
-
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/facebook"
-        android:id="@+id/credit7"
-        android:layout_alignTop="@+id/credit8"
-        android:layout_toLeftOf="@+id/credit8" />
-
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/twitter"
-        android:id="@+id/credit6"
-        android:layout_alignTop="@+id/credit7"
-        android:layout_toLeftOf="@+id/credit7" />
+        <ImageView
+            android:layout_width="@dimen/smallTableSizeButton"
+            android:layout_height="@dimen/smallTableSizeButton"
+            app:srcCompat="@drawable/twitter"
+            android:id="@+id/credit6"/>
+        <ImageView
+            android:layout_width="@dimen/smallTableSizeButton"
+            android:layout_height="@dimen/smallTableSizeButton"
+            app:srcCompat="@drawable/facebook"
+            android:id="@+id/credit7"/>
+        <ImageView
+            android:layout_width="@dimen/smallTableSizeButton"
+            android:layout_height="@dimen/smallTableSizeButton"
+            app:srcCompat="@drawable/at"
+            android:id="@+id/credit8"/>
+        <ImageView
+            android:layout_width="@dimen/smallTableSizeButton"
+            android:layout_height="@dimen/smallTableSizeButton"
+            app:srcCompat="@drawable/skype"
+            android:id="@+id/credit9"/>
+        <ImageView
+            android:layout_width="@dimen/smallTableSizeButton"
+            android:layout_height="@dimen/smallTableSizeButton"
+            app:srcCompat="@drawable/youtube_play"
+            android:id="@+id/credit10"/>
 
 
-</RelativeLayout>
     </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/creditLine1">
+        <ImageView
+            android:layout_width="@dimen/smallTableSizeButton"
+            android:layout_height="@dimen/smallTableSizeButton"
+            app:srcCompat="@drawable/google_plus"
+            android:id="@+id/credit11"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/phone"
+            android:id="@+id/credit12"/>
+        <ImageView
+            android:layout_width="@dimen/smallTableSizeButton"
+            android:layout_height="@dimen/smallTableSizeButton"
+            app:srcCompat="@drawable/instagram"
+            android:id="@+id/credit13"/>
+        <ImageView
+            android:layout_width="@dimen/smallTableSizeButton"
+            android:layout_height="@dimen/smallTableSizeButton"
+            app:srcCompat="@drawable/blogger"
+            android:id="@+id/credit14"/>
+        <ImageView
+            android:layout_width="@dimen/smallTableSizeButton"
+            android:layout_height="@dimen/smallTableSizeButton"
+            app:srcCompat="@drawable/ic_web_black_24dp"
+            android:id="@+id/credit22"/>
+    </LinearLayout>
+</RelativeLayout>
 </ScrollView>

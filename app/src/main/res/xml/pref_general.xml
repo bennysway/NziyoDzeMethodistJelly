@@ -25,11 +25,11 @@
         android:title="@string/pref_title_display_name" />
 
     <Preference android:title="Display Picture">
-        <intent android:action="clipseven.action.choosepic" />
+        <intent android:action="seven.clip.action.choosepic" />
     </Preference>
 
     <Preference android:title="Color Mode">
-        <intent android:action="clipseven.action.choosecolor" />
+        <intent android:action="seven.clip.action.choosecolor" />
     </Preference>
     <!-- NOTE: Hide buttons to simplify the UI. Users can touch outside the dialog to
          dismiss it. -->

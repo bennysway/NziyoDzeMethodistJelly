@@ -8,6 +8,37 @@
     tools:context="com.seven.clip.nziyodzemethodist.RecList">
 
 
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/dark_small"
+        android:id="@+id/recBg"
+        android:scaleType="centerCrop"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:layout_centerInParent="true"
+        android:text="@string/noRecentText"
+        android:id="@+id/norecText"
+        android:textColor="@color/white"
+        android:textSize="23sp"
+        android:shadowColor="#ffd6a1"
+        android:shadowDx="0.0"
+        android:shadowDy="0.0"
+        android:shadowRadius="25.0"/>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:visibility="invisible"
+        android:id="@+id/RecListView"
+        android:paddingTop="50dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"/>
+
     <android.support.design.widget.FloatingActionButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -18,14 +49,6 @@
         app:srcCompat="@android:drawable/ic_menu_delete"
         android:id="@+id/deleteHistory"
         app:backgroundTint="@color/colorPrimary" />
-
-
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:src="@drawable/dark_small"
-        android:id="@+id/recBg"
-        android:scaleType="centerCrop"/>
 
     <TextView
         android:text="@string/recentButtonText"
@@ -48,27 +71,4 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:layout_centerInParent="true"
-        android:text="@string/norecs"
-        android:id="@+id/norecText"
-        android:textColor="@color/white"
-        android:textSize="23sp"
-        android:shadowColor="#ffd6a1"
-        android:shadowDx="0.0"
-        android:shadowDy="0.0"
-        android:shadowRadius="25.0"/>
-
-    <ListView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:visibility="invisible"
-        android:id="@+id/RecListView"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/recentsTitle" />
 </RelativeLayout>

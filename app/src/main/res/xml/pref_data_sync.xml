@@ -18,4 +18,8 @@
         <intent android:action="android.settings.SYNC_SETTINGS" />
     </Preference>
 
+    <Preference android:title="@string/account_management_title">
+        <intent android:action="seven.clip.action.manageLogin   " />
+    </Preference>
+
 </PreferenceScreen>

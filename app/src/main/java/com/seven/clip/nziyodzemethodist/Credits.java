@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class Credits extends AppCompatActivity {
     private static Context context;
@@ -43,6 +44,7 @@ public class Credits extends AppCompatActivity {
         TextView cr19 = (TextView) findViewById(R.id.credit19);
         ImageView cr20 = (ImageView) findViewById(R.id.credit20);
         TextView cr21 = (TextView) findViewById(R.id.credit21);
+        ImageView cr22 = (ImageView) findViewById(R.id.credit22);
 
 
         cr1.setAlpha(0f);
@@ -66,6 +68,7 @@ public class Credits extends AppCompatActivity {
         cr19.setAlpha(0f);
         cr20.setAlpha(0f);
         cr21.setAlpha(0f);
+        cr22.setAlpha(0f);
 
         int a =100,m=150;
         cr1.animate().alpha(1f).setStartDelay(a);
@@ -95,6 +98,8 @@ public class Credits extends AppCompatActivity {
         cr13.animate().alpha(1f).setStartDelay(a);
         a+=m;
         cr14.animate().alpha(1f).setStartDelay(a);
+        a+=m;
+        cr22.animate().alpha(1f).setStartDelay(a);
         a+=m;
         cr15.animate().alpha(1f).setStartDelay(a);
         a+=m;
@@ -133,20 +138,20 @@ public class Credits extends AppCompatActivity {
                 Intent intent = null;
                 try {
 
-                    context.getPackageManager().getPackageInfo("com.facebook.katana", 0);
-                    String url = "https://www.facebook.com/blessing.f.charumbira";
+                    getPackageManager().getPackageInfo("com.facebook.katana", 0);
+                    String url = "https://www.facebook.com/bennyswayofficial/";
 
                     intent = new Intent(Intent.ACTION_VIEW, Uri.parse("fb://facewebmodal/f?href="+url));
                     startActivity(intent);
                 }
 
-             catch (Exception e) {
+                catch (Exception e) {
 
-                intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.facebook.com/blessing.f.charumbira"));
-                startActivity(intent);
+                    intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.facebook.com/bennyswayofficial/"));
+                    startActivity(intent);
 
-                e.printStackTrace();
-             }
+                    e.printStackTrace();
+                }
             }
         });
 
@@ -164,10 +169,20 @@ public class Credits extends AppCompatActivity {
         cr9.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent skype_intent = new Intent("android.intent.action.VIEW");
-                skype_intent.setClassName("com.skype.raider", "com.skype.raider.Main");
-                skype_intent.setData(Uri.parse("skype:blessing_farai"));
-                startActivity(skype_intent);
+                Intent intent = null;
+                try {
+                    intent = new Intent("android.intent.action.VIEW");
+                    intent.setClassName("com.skype.raider", "com.skype.raider.Main");
+                    intent.setData(Uri.parse("skype:blessing_farai"));
+                    startActivity(intent);
+                } catch (Exception e){
+                    QuickToast("Install Skype to view profile");
+                    QuickToast("Or Skype call this number");
+                    intent = new Intent(Intent.ACTION_DIAL);
+                    intent.setData(Uri.parse("tel:+48739497898"));
+                    startActivity(intent);
+                }
+
             }
         });
 
@@ -207,7 +222,7 @@ public class Credits extends AppCompatActivity {
         cr13.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Uri uri = Uri.parse("http://instagram.com/_u/bennysway30");
+                Uri uri = Uri.parse("http://instagram.com/_u/bennysway");
                 Intent likeIng = new Intent(Intent.ACTION_VIEW, uri);
 
                 likeIng.setPackage("com.instagram.android");
@@ -216,7 +231,7 @@ public class Credits extends AppCompatActivity {
                     startActivity(likeIng);
                 } catch (ActivityNotFoundException e) {
                     startActivity(new Intent(Intent.ACTION_VIEW,
-                            Uri.parse("http://instagram.com/bennysway30")));
+                            Uri.parse("http://instagram.com/bennysway")));
                 }
             }
         });
@@ -250,5 +265,21 @@ public class Credits extends AppCompatActivity {
                 }
             }
         });
+
+        cr22.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String url = "http://faraifatso.wixsite.com/bennysway";
+                Intent i = new Intent(Intent.ACTION_VIEW);
+                i.setData(Uri.parse(url));
+                startActivity(i);
+            }
+        });
+    }
+
+
+    public void QuickToast(String s){
+        Toast.makeText(this, s,
+                Toast.LENGTH_SHORT).show();
     }
 }

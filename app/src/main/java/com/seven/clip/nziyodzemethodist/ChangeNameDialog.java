@@ -25,7 +25,6 @@ public class ChangeNameDialog extends AppCompatActivity {
 
         DisplayMetrics dm = new DisplayMetrics();
         getWindowManager().getDefaultDisplay().getMetrics(dm);
-        getWindow().addFlags(WindowManager.LayoutParams.FLAG_DIM_BEHIND);
 
         int width = dm.widthPixels;
         int height = dm.heightPixels;

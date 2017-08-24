@@ -6,17 +6,22 @@
     <string name="favButtonText">Favourites</string>
     <string name="recentButtonText">Recent</string>
     <string name="captionButtonText">Captions</string>
+    <string name="readingsText">Bible Readings</string>
     <string name="title_activity_pick_num">pickNum</string>
     <string name="Accept">Yes</string>
     <string name="Deny">No</string>
-    <string name="nofavs">No Favorites yet…</string>
-    <string name="nocaps">No Captions found by the update yet…</string>
-    <string name="norecs">No Recent songs yet…</string>
-    <string name="banner_ad_unit_id">ca-app-pub-2945410942325181/9087063951</string>
+    <string name="noFavoritesText">No Favorites yet…</string>
+    <string name="noCaptionsText">No Captions found by the update yet…</string>
+    <string name="noReadings">No Readings found in the database yet…</string>
+    <string name="noRecentText">No Recent songs yet…</string>
+    <string name="noResultsText">No Results found…</string>
+    <string name="account_management_title">Account Management</string>
+    <string name="hymn_banner_ad_unit_id">ca-app-pub-2945410942325181/9087063951</string>
+    <string name="reading_banner_ad_unit_id">ca-app-pub-2945410942325181/5275511400</string>
 
     <string name="title_activity_settings">Settings</string>
 
-    <string name="en_hymn_list">5,10,17,18,23,44,48,49,57,58,63,85,94,98,99,103,104,107,108,120,123,127,138,141,144,147,152,154,153,155,160,164,163,173,181,186,195,204,217,250,251,267,293,</string>
+    <string name="en_hymn_list">2,5,10,13,17,18,20,23,24,26,27,28,32,33,38,39,40,42,43,44,47,48,49,53,57,58,63,85,94,98,99,103,104,107,108,120,123,127,138,141,144,147,152,154,153,155,160,164,163,173,181,186,195,204,217,235,250,251,267,293,</string>
 
     <string name="notification_date_string">21 June 2017</string>
     <string name="notification_text_string">
@@ -80,19 +85,19 @@
 
     <string name="pref_title_sync_frequency">Sync frequency</string>
     <string-array name="pref_sync_frequency_titles">
-        <item>15 minutes</item>
-        <item>30 minutes</item>
-        <item>1 hour</item>
-        <item>3 hours</item>
-        <item>6 hours</item>
+        <item>Every day</item>
+        <item>Every Sunday</item>
+        <item>Every 2 weeks</item>
+        <item>Every month</item>
+        <item>Every quarter</item>
         <item>Never</item>
     </string-array>
     <string-array name="pref_sync_frequency_values">
-        <item>15</item>
-        <item>30</item>
-        <item>60</item>
-        <item>180</item>
-        <item>360</item>
+        <item>1</item>
+        <item>7</item>
+        <item>14</item>
+        <item>31</item>
+        <item>120</item>
         <item>-1</item>
     </string-array>
 
@@ -121,5 +126,8 @@
     <string name="pref_ringtone_silent">Silent</string>
 
     <string name="pref_title_vibrate">Vibrate</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>

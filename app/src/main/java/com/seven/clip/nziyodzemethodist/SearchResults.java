@@ -1,13 +1,23 @@
 package com.seven.clip.nziyodzemethodist;
 
 /**
+ * nothing special here
  * Created by bennysway on 28.12.16.
  */
 
-public class SearchResults {
+class SearchResults {
     private String title = "";
     private String caption = "";
     private String hymnNum = "";
+    private boolean isInEnglish = false;
+
+    boolean getIsInEnglish() {
+        return isInEnglish;
+    }
+
+    void setInEnglish(boolean inEnglish) {
+        isInEnglish = inEnglish;
+    }
 
     public void setTitle(String title) {
         this.title = title;
@@ -17,11 +27,11 @@ public class SearchResults {
         return title;
     }
 
-    public void setCaption(String caption) {
+    void setCaption(String caption) {
         this.caption = caption;
     }
 
-    public String getCaption() {
+    String getCaption() {
         return caption;
     }
     public void setHymnNum(String hymnNum) {

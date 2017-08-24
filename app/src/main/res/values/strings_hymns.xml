@@ -10602,4 +10602,45 @@ Tinom’tumidza Ishe\n
 NoMuponisi wedu\n
 </item>
     </string-array>
+
+    <string-array name="hymn318">
+<item>
+Isu maKristu, tiri kufamba\n
+Kunovatsvaka vakarasika,\n
+Touya navo kuno,\n
+Mufudzi wavo ndiShe Jesu.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn319">
+<item>
+Ndiri kudya chingwa choupenyu,\n
+Ndiri kunwa mvura yesipiti;\n
+Jesu wakati anomwa\'yo\n
+Haachafa nenyotazve\n
+Ko anonzwa nyotazve\n
+Kwete, haazoinzwa\n
+Jesu wakati anomwa\'yo\n
+Haachafa nenyotazve.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn320">
+<item>
+Muzviratidze kwatiri,\n
+Tigowadzana pakudya,\n
+Tiropafadzwe pakudya,\n
+Mutiite vanovonga.\n
+</item>
+    </string-array>
+
+    <string-array name="hymn321">
+<item>
+Tinovonga Ishe wedu\n
+Noku kudya kwamatipa\n
+Kwamazuva namazuva\n
+Tinovonga Ishe wedu\n
+</item>
+    </string-array>
+
 </resources>

@@ -2613,5 +2613,23 @@
 		<item>:l |s :- :f |m :- : }</item>
 	</string-array>
 
+	<string-array name="hymn318caption">
+		<item>No annotations yet…</item>
+	</string-array>
+
+	<string-array name="hymn319caption">
+		<item>No annotations yet…</item>
+	</string-array>
+
+	<string-array name="hymn320caption">
+		<item>No annotations yet…</item>
+	</string-array>
+
+	<string-array name="hymn321caption">
+		<item>No annotations yet…</item>
+	</string-array>
+
+
+
 
 </resources>
