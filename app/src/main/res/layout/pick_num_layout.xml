@@ -1,17 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/activity_pick_num2"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/card_white"
-    tools:context="com.seven.clip.nziyodzemethodist.pickNum2">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <com.github.mmin18.widget.RealtimeBlurView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/pickNumBlur"
+        app:realtimeOverlayColor="#70ffffff" />
 
     <TableLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
         android:stretchColumns="0,1">
         <TableRow>
             <ImageView
@@ -36,32 +39,11 @@
         android:layout_height="wrap_content"
         android:inputType="number"
         android:textSize="35sp"
-        android:shadowColor="@color/black"
+        android:shadowColor="@color/white"
+        android:layout_gravity="center"
         android:shadowDy="0.0"
         android:shadowDx="0.0"
         android:shadowRadius="10.0"
         android:gravity="center"
-        android:ems="7"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"/>
-
-    <TableLayout
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:stretchColumns="0,1,2"
-        android:animateLayoutChanges="true">
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_gravity="center"
-            android:id="@+id/hymnNumNotification">
-
-        </TableRow>
-
-    </TableLayout>
-
-</RelativeLayout>
+        android:ems="7" />
+</FrameLayout>

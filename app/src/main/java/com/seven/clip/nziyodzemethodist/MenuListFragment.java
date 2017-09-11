@@ -1,17 +1,12 @@
 package com.seven.clip.nziyodzemethodist;
 
-/**
- * Created by bennysway on 07.06.17.
- */
-
-
-import android.content.Intent;
+import android.app.Dialog;
+import android.content.DialogInterface;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.annotation.Nullable;
 import android.support.design.widget.NavigationView;
-import android.support.v4.app.DialogFragment;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
@@ -42,10 +37,10 @@ public class MenuListFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_menu, container,
                 false);
 
-        NavigationView vNavigation = (NavigationView) view.findViewById(R.id.vNavigation);
+        NavigationView vNavigation = view.findViewById(R.id.vNavigation);
         View headerLayout = vNavigation.getHeaderView(0);
-        appPic = (ImageView) headerLayout.findViewById(R.id.imageOwner);
-        appOwner = (TextView) headerLayout.findViewById(R.id.navHeaderSubTitle);
+        appPic = headerLayout.findViewById(R.id.imageOwner);
+        appOwner = headerLayout.findViewById(R.id.navHeaderSubTitle);
         vNavigation.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(MenuItem menuItem) {
@@ -92,8 +87,14 @@ public class MenuListFragment extends Fragment {
         appOwner.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MenuListFragment.this.getContext(),ChangeNameDialog.class);
-                startActivity(intent);
+                Dialog changeName = new ChangeNameDialog(MenuListFragment.this.getContext());
+                changeName.setOnDismissListener(new DialogInterface.OnDismissListener() {
+                    @Override
+                    public void onDismiss(DialogInterface dialogInterface) {
+                        setupHeader();
+                    }
+                });
+                changeName.show();
             }
         });
 
@@ -109,9 +110,6 @@ public class MenuListFragment extends Fragment {
     public void onResume(){
         super.onResume();
         setupHeader();
-    }
-    public interface IOnFocusListenable {
-        public void onWindowFocusChanged(boolean hasFocus);
     }
 
 }

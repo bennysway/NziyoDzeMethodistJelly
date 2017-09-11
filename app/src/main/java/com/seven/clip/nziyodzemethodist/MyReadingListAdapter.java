@@ -46,11 +46,11 @@ class MyReadingListAdapter extends BaseAdapter {
         if (convertView == null) {
             convertView = mInflater.inflate(R.layout.reading_list_view_layout,null);
             holder = new ViewHolder();
-            holder.mTitle = (TextView) convertView.findViewById(R.id.readingListTitle);
-            holder.mDate = (TextView) convertView.findViewById(R.id.readingListDate);
-            holder.mCaption = (TextView) convertView
+            holder.mTitle = convertView.findViewById(R.id.readingListTitle);
+            holder.mDate = convertView.findViewById(R.id.readingListDate);
+            holder.mCaption = convertView
                     .findViewById(R.id.readingListCaption);
-            holder.mIcon = (ImageView) convertView.findViewById(R.id.weekPassedIndicator);
+            holder.mIcon = convertView.findViewById(R.id.weekPassedIndicator);
 
             convertView.setTag(holder);
         } else {
@@ -73,7 +73,7 @@ class MyReadingListAdapter extends BaseAdapter {
         }
 
 
-        DateFormat outputFormatter = new SimpleDateFormat("dd",Locale.getDefault());
+        DateFormat outputFormatter = new SimpleDateFormat("yyyyMMdd", Locale.getDefault());
         String s_date = outputFormatter.format(date);
         s_today = outputFormatter.format(today);
 

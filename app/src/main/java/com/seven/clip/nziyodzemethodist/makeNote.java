@@ -4,9 +4,9 @@ import android.content.ClipData;
 import android.content.ClipboardManager;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
@@ -37,12 +37,12 @@ public class makeNote extends AppCompatActivity {
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
 
-        Button share = (Button) findViewById(R.id.shareNote);
-        Button save = (Button) findViewById(R.id.saveNote);
-        final Button cancel = (Button) findViewById(R.id.undoNote);
-        final EditText textField = (EditText) findViewById(R.id.textField);
-        TextView author = (TextView) findViewById(R.id.author);
-        TextView lastEditTime = (TextView) findViewById(R.id.editDate);
+        Button share = findViewById(R.id.shareNote);
+        Button save = findViewById(R.id.saveNote);
+        final Button cancel = findViewById(R.id.undoNote);
+        final EditText textField = findViewById(R.id.textField);
+        TextView author = findViewById(R.id.author);
+        TextView lastEditTime = findViewById(R.id.editDate);
 
         save.setOnClickListener(new View.OnClickListener() {
             @Override

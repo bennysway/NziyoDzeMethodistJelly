@@ -2,13 +2,12 @@ package com.seven.clip.nziyodzemethodist;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.graphics.Typeface;
-import android.media.MediaPlayer;
-import android.net.Uri;
+import android.os.Bundle;
 import android.os.Handler;
 import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.WindowManager;
@@ -16,16 +15,20 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
-import android.widget.VideoView;
+
+import com.rodolfonavalon.shaperipplelibrary.ShapeRipple;
+import com.rodolfonavalon.shaperipplelibrary.model.Circle;
 
 import java.util.Random;
+
+import static android.graphics.Color.parseColor;
 
 public class Splash extends AppCompatActivity {
     Runnable beginActivity;
     Runnable show1,show2,show3,showTitle,hideshows;
     Handler start,timer;
     Intent toStart;
-    ImageView spl;
+    ShapeRipple ripple;
     int i;
     boolean isBookmarkAvail;
 
@@ -38,21 +41,21 @@ public class Splash extends AppCompatActivity {
 
         Typeface custom_font = Typeface.createFromAsset(getAssets(),  "fonts/bh.ttf");
 
-        final Button bookmark = (Button) findViewById(R.id.bookmarkSplashBut);
+        final Button bookmark = findViewById(R.id.bookmarkSplashBut);
         final Data booking = new Data(this,"bookmark");
         isBookmarkAvail = false;
 
         Random r=new Random();
-        spl = (ImageView) findViewById(R.id.splashImage);
-        final TextView line1 = (TextView) findViewById(R.id.line1);
-        final TextView line2 = (TextView) findViewById(R.id.line2);
-        final TextView line3 = (TextView) findViewById(R.id.hymnline);
+        ripple = findViewById(R.id.splashImage);
+        final TextView line1 = findViewById(R.id.line1);
+        final TextView line2 = findViewById(R.id.line2);
+        final TextView line3 = findViewById(R.id.hymnline);
 
         line1.setTypeface(custom_font);
         line2.setTypeface(custom_font);
         line3.setTypeface(custom_font);
 
-        final View skip =findViewById(R.id.skipSplash);
+        final ImageView skip = findViewById(R.id.skipSplash);
         toStart = new Intent(this,MainDrawer.class);
         timer = new Handler();
         i=r.nextInt(321)+1;
@@ -64,12 +67,21 @@ public class Splash extends AppCompatActivity {
         recordFlag.deleteAll();
         start = new Handler();
 
-        int s = r.nextInt(6)+1;
-        spl.setScaleX(1.3f);
-        spl.setScaleY(1.3f);
-        spl.animate().scaleX(1f).scaleY(1f).setDuration(13000);
-        int splId = getResourceId("spl"+s,"drawable",getPackageName());
-        spl.setImageResource(splId);
+//        int s = r.nextInt(6)+1;
+//        spl.setScaleX(1.3f);
+//        spl.setScaleY(1.3f);
+//        spl.animate().scaleX(1f).scaleY(1f).setDuration(13000);
+//        int splId = getResourceId("spl"+s,"drawable",getPackageName());
+//        spl.setImageResource(splId);
+
+        ripple.setBackgroundColor(parseColor("#e0e0e0"));
+        ripple.setRippleCount(40);
+        ripple.setRippleShape(new Circle());
+        ripple.setEnableColorTransition(true);
+        ripple.setEnableRandomPosition(true);
+        ripple.setRippleDuration(10000);
+        ripple.setRippleMaximumRadius(200);
+        ripple.setRippleColor(parseColor("#ffffff"));
 
         int resourceId = getResourceId(h,"array",getPackageName());
         hymn = getResources().getStringArray(resourceId);
@@ -156,6 +168,7 @@ public class Splash extends AppCompatActivity {
                     bookmark.animate().y(-200);
                 line1.setText("Nziyo DzeMethodist");
                 start.postDelayed(beginActivity,4000);
+                ripple.animate().alpha(0f).setDuration(3000);
                 line1.animate().alpha(1).setDuration(100);
                 line1.animate().scaleY(1.1f).scaleX(1.1f).setDuration(3000).withEndAction(new Runnable() {
                     @Override
@@ -182,6 +195,8 @@ public class Splash extends AppCompatActivity {
         else
             showTitle.run();
 
+        skip.setColorFilter(Color.WHITE);
+
         skip.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -197,11 +212,6 @@ public class Splash extends AppCompatActivity {
                 startActivity(toHymn);
             }
         });
-
-        skip.setAlpha(0f);
-        skip.animate().alpha(.5f).setDuration(2000);
-
-
 
 
     }

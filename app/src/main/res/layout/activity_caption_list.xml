@@ -14,6 +14,15 @@
         android:id="@+id/capBg"
         android:scaleType="centerCrop"/>
 
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:visibility="invisible"
+        android:id="@+id/captionsListView"
+        android:paddingTop="50dp"
+        android:clipToPadding="false" />
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -36,6 +45,7 @@
         android:gravity="center"
         android:fontFamily="cursive"
         android:layout_width="match_parent"
+        android:elevation="@dimen/white_card_elevation"
         android:layout_height="50dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
@@ -43,6 +53,7 @@
     <ImageView
         app:srcCompat="@drawable/back_icon"
         android:id="@+id/captionsBackButton"
+        android:elevation="@dimen/white_card_elevation"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_alignParentTop="true"
@@ -50,11 +61,4 @@
         android:layout_alignParentStart="true" />
 
 
-    <ListView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_centerHorizontal="true"
-        android:visibility="invisible"
-        android:id="@+id/captionsListView"
-        android:layout_below="@+id/captionsTitle" />
 </RelativeLayout>

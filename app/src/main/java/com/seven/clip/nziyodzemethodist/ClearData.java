@@ -7,7 +7,6 @@ import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.util.DisplayMetrics;
 import android.view.View;
-import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -19,9 +18,9 @@ public class ClearData extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_clear_data);
 
-        TextView prompt = (TextView) findViewById(R.id.clearDataPrompt);
-        Button yes = (Button) findViewById(R.id.clearDataYesBut);
-        Button no = (Button) findViewById(R.id.clearDataNoBut);
+        TextView prompt = findViewById(R.id.clearDataPrompt);
+        Button yes = findViewById(R.id.clearDataYesBut);
+        Button no = findViewById(R.id.clearDataNoBut);
 
         DisplayMetrics dm = new DisplayMetrics();
         getWindowManager().getDefaultDisplay().getMetrics(dm);
@@ -31,6 +30,8 @@ public class ClearData extends AppCompatActivity {
 
         //favlist,reclist,showsplash,color,image,textsize,recordflag,withcaption
         //colorflag,textsizeflag,accflag,faviterator,reciterator,themecolor,themename
+        //bookmark,bibleoption
+//firstTimes:   biblepickerfirsttime,
 
         getWindow().setLayout((int)(width*.8),(int)(height*.3));
         final Data favList = new Data(this,"favlist");
@@ -45,6 +46,8 @@ public class ClearData extends AppCompatActivity {
         final Data themeColor = new Data(this,"themecolor");
         final Data themeName = new Data(this,"themename");
         final Data booking = new Data(this,"bookmark");
+        final Data bibleOption = new Data(this, "bibleoption");
+        final Data biblePickerFirstTime = new Data(this, "biblepickerfirsttime");
         final Zvinokosha access = new Zvinokosha(this);
 
         Typeface custom_font = Typeface.createFromAsset(getAssets(),  "fonts/bh.ttf");
@@ -75,6 +78,8 @@ public class ClearData extends AppCompatActivity {
                 themeName.deleteAll();
                 textSize.deleteAll();
                 booking.deleteAll();
+                bibleOption.deleteAll();
+                biblePickerFirstTime.deleteAll();
                 SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(ClearData.this);
                 SharedPreferences.Editor editor = preferences.edit();
                 editor.putString("example_text", "Set name");

@@ -3,8 +3,8 @@ package com.seven.clip.nziyodzemethodist;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.GradientDrawable;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.DisplayMetrics;
 import android.view.View;
 import android.view.ViewGroup;
@@ -31,7 +31,7 @@ public class ThemeChooser extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_theme_chooser);
 
-        RelativeLayout themeChooserLayout = (RelativeLayout) findViewById(R.id.themeChooserLayout);
+        RelativeLayout themeChooserLayout = findViewById(R.id.themeChooserLayout);
         DisplayMetrics dm = new DisplayMetrics();
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
@@ -64,9 +64,9 @@ public class ThemeChooser extends AppCompatActivity {
         themeChooserLayout.addView(colorPickerView);
         themeChooserLayout.addView(lightnessSlider);
 
-        Button accept = (Button) findViewById(R.id.themeAcceptBut);
-        Button deny = (Button) findViewById(R.id.themeRejectBut);
-        final TextView themeTitle = (TextView) findViewById(R.id.themeName);
+        Button accept = findViewById(R.id.themeAcceptBut);
+        Button deny = findViewById(R.id.themeRejectBut);
+        final TextView themeTitle = findViewById(R.id.themeName);
         final ColorToName colorToName = new ColorToName();
         gd = new GradientDrawable();
         gd.setGradientType(GradientDrawable.LINEAR_GRADIENT);
@@ -125,6 +125,14 @@ public class ThemeChooser extends AppCompatActivity {
             }
         });
 
+        deny.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                QuickToast("No changes made");
+                finish();
+            }
+        });
+
 
     }
 
@@ -144,11 +152,7 @@ public class ThemeChooser extends AppCompatActivity {
     public boolean isColorDark(String test){
         int color = parseColor(test);
         double darkness = 1-(0.299*Color.red(color) + 0.587*Color.green(color) + 0.114*Color.blue(color))/255;
-        if(darkness<0.333){
-            return false; // It's a light color
-        }else{
-            return true; // It's a dark color
-        }
+        return darkness >= 0.333;
     }
 
     public String intToColor(int a){

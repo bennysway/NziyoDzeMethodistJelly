@@ -1,16 +1,14 @@
 package com.seven.clip.nziyodzemethodist;
 
-import android.content.DialogInterface;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.RelativeLayout;
-import android.widget.Toast;
 
 
 public class ColorMode extends AppCompatActivity {
@@ -26,17 +24,17 @@ public class ColorMode extends AppCompatActivity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
-        bg = (RelativeLayout) findViewById(R.id.activity_color_mode);
-        final RadioGroup colorList = (RadioGroup) findViewById(R.id.colorModeRadioGroup);
-        Button yes = (Button) findViewById(R.id.colorApply);
-        Button no = (Button) findViewById(R.id.colorCancel);
+        bg = findViewById(R.id.activity_color_mode);
+        final RadioGroup colorList = findViewById(R.id.colorModeRadioGroup);
+        Button yes = findViewById(R.id.colorApply);
+        Button no = findViewById(R.id.colorCancel);
         color = new Data(this,"color");
         theme = new Data(this,"themecolor");
         themeName = new Data(this,"themename");
         final Intent intent = new Intent();
 
-        customColorRadioBut = (RadioButton) findViewById(R.id.customColorCheck);
-        Button setCustomColorBut = (Button) findViewById(R.id.pickColorBut);
+        customColorRadioBut = findViewById(R.id.customColorCheck);
+        Button setCustomColorBut = findViewById(R.id.pickColorBut);
 
         if(!theme.get().equals("")){
             customColorRadioBut.setEnabled(true);
@@ -80,7 +78,7 @@ public class ColorMode extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 int choosen = colorList.getCheckedRadioButtonId();
-                RadioButton s = (RadioButton) findViewById(choosen);
+                RadioButton s = findViewById(choosen);
                 String t = s.getText().toString();
                 switch (t){
                     case "Default Hymnbook Theme":

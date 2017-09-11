@@ -1,9 +1,8 @@
 package com.seven.clip.nziyodzemethodist;
 
+import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-import android.util.Log;
 import android.view.WindowManager;
 import android.widget.TextView;
 
@@ -32,7 +31,7 @@ public class EventLog extends AppCompatActivity {
         remoteConfig = FirebaseRemoteConfig.getInstance();
         remoteConfig.setConfigSettings(remoteConfigSettings);
         remoteConfig.setDefaults(R.xml.remote_config_defaults);
-        events = (TextView) findViewById(R.id.logs);
+        events = findViewById(R.id.logs);
 
         Runnable get = new Runnable() {
             @Override

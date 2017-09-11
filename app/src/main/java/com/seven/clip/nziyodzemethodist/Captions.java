@@ -2,16 +2,14 @@ package com.seven.clip.nziyodzemethodist;
 
 import android.content.Intent;
 import android.graphics.Typeface;
+import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.AdapterView;
-import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -30,6 +28,7 @@ public class Captions extends AppCompatActivity {
     boolean barAvail=false,playing;
     RelativeLayout parentLayout;
     String capStoreKey,hymnName;
+    Data recordFlag;
     View bar;
     int hasOption;
 
@@ -41,10 +40,11 @@ public class Captions extends AppCompatActivity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
-        Data recordFlag = new Data(this,"recordflag");
+        recordFlag = new Data(this, "recordflag");
         Data withCaption = new Data(this,"withcaption");
         Typeface custom_font = Typeface.createFromAsset(getAssets(),  "fonts/bh.ttf");
-        final TextView cap = (TextView) findViewById(R.id.captionTitle);
+        final TextView cap = findViewById(R.id.captionTitle);
+
         cap.setTypeface(custom_font);
 
         recordFlag.deleteAll();
@@ -57,7 +57,7 @@ public class Captions extends AppCompatActivity {
         capStoreKey = hymnNumWord;
         Data storedKey = new Data(this,capStoreKey);
 
-        ls = (ListView) findViewById(R.id.captionListView);
+        ls = findViewById(R.id.captionListView);
         final View addCaption =findViewById(R.id.addCaptionBut);
         list = new ArrayList<>();
 
@@ -140,7 +140,7 @@ public class Captions extends AppCompatActivity {
             }
         });
 
-        parentLayout = (RelativeLayout) findViewById(R.id.activity_captions);
+        parentLayout = findViewById(R.id.activity_captions);
         bar = getLayoutInflater().inflate(R.layout.record_bar, parentLayout,false);
         RelativeLayout.LayoutParams params= new RelativeLayout.LayoutParams(
                 ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
@@ -177,7 +177,7 @@ public class Captions extends AppCompatActivity {
     public void inflateBottomRecordingToolbar(final String path, final String deleteRecord){
         vis(bar);
         starttime = System.currentTimeMillis();
-        final TextView text = (TextView) findViewById(R.id.recordingBarText);
+        final TextView text = findViewById(R.id.recordingBarText);
         text.setText("Play");
         final Handler h2 = new Handler();
         final Handler h3 = new Handler();
@@ -289,4 +289,12 @@ public class Captions extends AppCompatActivity {
         }
         return true;
     }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        if (recordFlag.get().equals("true"))
+            finish();
+    }
+
 }

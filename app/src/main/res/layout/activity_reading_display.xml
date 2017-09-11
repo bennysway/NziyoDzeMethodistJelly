@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -11,19 +12,14 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:src="@drawable/dark_small"
-        android:id="@+id/recBg"
+        android:id="@+id/readingDisplayBg"
         android:scaleType="centerCrop"/>
 
-    <TextView
-        android:text="Theme"
+    <TextSwitcher
         android:layout_width="match_parent"
         android:layout_height="100dp"
-        android:textSize="40sp"
-        android:gravity="center"
-        android:textColor="@color/white"
-        android:fontFamily="cursive"
         android:background="@drawable/square_hymn"
-        android:id="@+id/themeTitle"
+        android:id="@+id/readingDisplayThemeTitle"
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true" />
@@ -32,123 +28,131 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="7dp"
-        android:id="@+id/readingEnBut"
+        android:id="@+id/readingLangBut"
         app:srcCompat="@drawable/sh_icon"
         android:layout_alignParentTop="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
 
-  <ScrollView
+    <include
+        android:id="@+id/readingInclude"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:visibility="invisible"
+        layout="@layout/reading_displayer_layout"
+        android:layout_below="@+id/readingDisplayThemeTitle"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_above="@+id/readingAdView" />
+
+    <ScrollView
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      android:layout_below="@id/themeTitle">
+        android:layout_below="@id/readingDisplayThemeTitle"
+        android:id="@+id/readingListSummaryScrollView">
       
       <LinearLayout
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
           android:orientation="vertical"
           android:animateLayoutChanges="true"
+          android:showDividers="middle"
+          android:divider="@color/white"
           android:id="@+id/readingsLinearHolder">
 
           <RelativeLayout
               android:layout_width="match_parent"
-              android:layout_height="90dp">
-              <TextView
+              android:layout_height="90dp"
+              android:background="@drawable/to_right_black"
+              android:id="@+id/psalmLayout">
+
+              <TextSwitcher
                   android:layout_width="wrap_content"
                   android:layout_height="wrap_content"
-                  android:textColor="@color/white"
-                  android:padding="10dp"
-                  android:textSize="20sp"
-                  android:text="Reading"
+                  android:id="@+id/psalmReading"
                   android:layout_alignParentStart="true"
                   android:layout_alignParentLeft="true" />
-              <TextView
+
+              <TextSwitcher
                   android:layout_width="wrap_content"
                   android:layout_height="wrap_content"
                   android:layout_alignParentEnd="true"
                   android:layout_alignParentRight="true"
                   android:layout_alignParentBottom="true"
-                  android:textColor="@color/white"
-                  android:padding="10dp"
-                  android:textSize="50sp"
-                  android:alpha="0.3"
-                  android:text="Psalm"/>
+                  android:id="@+id/psalmFadedText"
+                  android:alpha="0.3" />
           </RelativeLayout>
 
           <RelativeLayout
               android:layout_width="match_parent"
-              android:layout_height="90dp">
-              <TextView
+              android:layout_height="90dp"
+              android:background="@drawable/to_right_black"
+              android:id="@+id/otLayout">
+
+              <TextSwitcher
                   android:layout_width="wrap_content"
                   android:layout_height="wrap_content"
                   android:textColor="@color/white"
-                  android:padding="10dp"
-                  android:textSize="20sp"
-                  android:text="Reading"
+                  android:id="@+id/otReading"
                   android:layout_alignParentStart="true"
                   android:layout_alignParentLeft="true" />
-              <TextView
+
+              <TextSwitcher
                   android:layout_width="wrap_content"
                   android:layout_height="wrap_content"
                   android:layout_alignParentEnd="true"
                   android:layout_alignParentRight="true"
                   android:layout_alignParentBottom="true"
-                  android:textColor="@color/white"
-                  android:padding="10dp"
-                  android:textSize="50sp"
-                  android:alpha="0.3"
-                  android:text="Old"/>
+                  android:id="@+id/otFadedText"
+                  android:alpha="0.3" />
 
           </RelativeLayout>
           <RelativeLayout
               android:layout_width="match_parent"
-              android:layout_height="90dp">
-              <TextView
+              android:background="@drawable/to_right_black"
+              android:layout_height="90dp"
+              android:id="@+id/ntLayout">
+
+              <TextSwitcher
                   android:layout_width="wrap_content"
                   android:layout_height="wrap_content"
-                  android:textColor="@color/white"
-                  android:padding="10dp"
-                  android:textSize="20sp"
-                  android:text="Reading"
+                  android:id="@+id/ntReading"
                   android:layout_alignParentStart="true"
                   android:layout_alignParentLeft="true" />
-              <TextView
+
+              <TextSwitcher
                   android:layout_width="wrap_content"
                   android:layout_height="wrap_content"
                   android:layout_alignParentEnd="true"
                   android:layout_alignParentRight="true"
                   android:layout_alignParentBottom="true"
-                  android:textColor="@color/white"
-                  android:padding="10dp"
-                  android:textSize="50sp"
-                  android:alpha="0.3"
-                  android:text="New"/>
+                  android:id="@+id/ntFadedText"
+                  android:alpha="0.3" />
 
           </RelativeLayout>
 
           <RelativeLayout
               android:layout_width="match_parent"
-              android:layout_height="90dp">
-              <TextView
+              android:background="@drawable/to_right_black"
+              android:layout_height="90dp"
+              android:id="@+id/gospelLayout">
+
+              <TextSwitcher
                   android:layout_width="wrap_content"
                   android:layout_height="wrap_content"
                   android:textColor="@color/white"
-                  android:padding="10dp"
-                  android:textSize="20sp"
-                  android:text="Reading"
+                  android:id="@+id/gospelReading"
                   android:layout_alignParentStart="true"
                   android:layout_alignParentLeft="true" />
-              <TextView
+
+              <TextSwitcher
                   android:layout_width="wrap_content"
                   android:layout_height="wrap_content"
                   android:layout_alignParentEnd="true"
                   android:layout_alignParentRight="true"
                   android:layout_alignParentBottom="true"
-                  android:textColor="@color/white"
-                  android:padding="10dp"
-                  android:textSize="50sp"
-                  android:alpha="0.3"
-                  android:text="Gospel"/>
+                  android:id="@+id/gospelFadedText"
+                  android:alpha="0.3" />
 
           </RelativeLayout>
 
@@ -165,6 +169,86 @@
         ads:adSize="BANNER"
         ads:adUnitId="@string/reading_banner_ad_unit_id">
     </com.google.android.gms.ads.AdView>
+
+    <com.github.clans.fab.FloatingActionMenu
+        android:id="@+id/readingFloatingBut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="50dp"
+        android:layout_marginLeft="10dp"
+        fab:menu_fab_size="normal"
+        fab:menu_showShadow="true"
+        fab:menu_shadowColor="#ff000000"
+        fab:menu_shadowRadius="4dp"
+        fab:menu_shadowXOffset="1dp"
+        fab:menu_shadowYOffset="3dp"
+        fab:menu_colorNormal="@color/burn"
+        fab:menu_colorPressed="@color/burnFaded"
+        fab:menu_colorRipple="#99FFFFFF"
+        fab:menu_animationDelayPerItem="50"
+        fab:menu_icon="@drawable/ic_read_icon"
+        fab:menu_buttonSpacing="0dp"
+        fab:menu_labels_margin="0dp"
+        fab:menu_labels_showAnimation="@anim/fab_slide_in_from_right"
+        fab:menu_labels_hideAnimation="@anim/fab_slide_out_to_right"
+        fab:menu_labels_paddingTop="4dp"
+        fab:menu_labels_paddingRight="8dp"
+        fab:menu_labels_paddingBottom="4dp"
+        fab:menu_labels_paddingLeft="8dp"
+        fab:menu_labels_padding="8dp"
+        fab:menu_labels_textColor="#FFFFFF"
+        fab:menu_labels_textSize="14sp"
+        fab:menu_labels_cornerRadius="3dp"
+        fab:menu_labels_colorNormal="#333333"
+        fab:menu_labels_colorPressed="#444444"
+        fab:menu_labels_colorRipple="#66FFFFFF"
+        fab:menu_labels_showShadow="true"
+        fab:menu_labels_singleLine="false"
+        fab:menu_labels_ellipsize="none"
+        fab:menu_labels_maxLines="-1"
+        fab:menu_labels_position="left"
+        fab:menu_openDirection="up"
+        fab:menu_backgroundColor="@android:color/transparent"
+        fab:menu_fab_show_animation="@anim/slide_in_likes_counter"
+        fab:menu_fab_hide_animation="@anim/slide_out_likes_counter"
+        android:layout_above="@+id/readingAdView">
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/psalmFloatBut"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_ps_menu"
+            fab:fab_size="mini"
+            fab:fab_label="Psalm" />
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/otFloatBut"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_ot_menu"
+            fab:fab_size="mini"
+            fab:fab_label="Old Testament" />
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/ntFloatBut"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_nt_menu"
+            fab:fab_size="mini"
+            fab:fab_label="New Testament" />
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/gospelFloatBut"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_gospel_menu"
+            fab:fab_size="mini"
+            fab:fab_label="Gospel" />
+
+    </com.github.clans.fab.FloatingActionMenu>
 
 
 

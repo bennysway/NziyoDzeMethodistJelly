@@ -5,9 +5,9 @@ import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.graphics.drawable.GradientDrawable;
 import android.net.Uri;
+import android.os.Bundle;
 import android.os.Environment;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.util.Log;
 import android.util.TypedValue;
 import android.view.MotionEvent;
@@ -77,12 +77,12 @@ public class MakeCard extends AppCompatActivity {
         random = new Random();
 
 
-        cardText = (TextView) findViewById(R.id.cardText);
-        hymnNum = (TextView) findViewById(R.id.cardHymnNumber);
-        hymnTitle = (TextView) findViewById(R.id.cardHymnName);
-        bg = (ImageView) findViewById(R.id.cardDisplayBg);
-        cardHolder = (RelativeLayout) findViewById(R.id.cardLayout);
-        shareBut = (Button) findViewById(R.id.shareCardBut);
+        cardText = findViewById(R.id.cardText);
+        hymnNum = findViewById(R.id.cardHymnNumber);
+        hymnTitle = findViewById(R.id.cardHymnName);
+        bg = findViewById(R.id.cardDisplayBg);
+        cardHolder = findViewById(R.id.cardLayout);
+        shareBut = findViewById(R.id.shareCardBut);
 
         String g = textSizeData.get();
         if(g.equals(""))
@@ -193,11 +193,7 @@ public class MakeCard extends AppCompatActivity {
     public boolean isColorDark(String test){
         int color = parseColor(test);
         double darkness = 1-(0.299* Color.red(color) + 0.587*Color.green(color) + 0.114*Color.blue(color))/255;
-        if(darkness<0.333){
-            return false; // It's a light color
-        }else{
-            return true; // It's a dark color
-        }
+        return darkness >= 0.333;
     }
 
     public int getLighterColor(String test){

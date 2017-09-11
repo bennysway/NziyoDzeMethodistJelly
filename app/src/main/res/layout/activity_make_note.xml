@@ -31,7 +31,8 @@
         android:layout_below="@+id/noteTitle"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:id="@+id/author" />
+        android:id="@+id/author"
+        android:layout_marginRight="10dp" />
 
     <TextView
         android:text="time and date"
@@ -41,7 +42,8 @@
         android:layout_below="@+id/author"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:id="@+id/editDate" />
+        android:id="@+id/editDate"
+        android:layout_marginRight="6dp" />
 
     <Button
         android:text="Save"
@@ -78,7 +80,7 @@
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="textMultiLine"
+        android:inputType="textMultiLine|textCapSentences"
         android:gravity="start"
         android:ems="10"
         android:layout_below="@+id/editDate"

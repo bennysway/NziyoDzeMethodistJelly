@@ -14,6 +14,16 @@
         android:id="@+id/favBg"
         android:scaleType="centerCrop"/>
 
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:paddingTop="50dp"
+        android:clipToPadding="false"
+        android:visibility="invisible"
+        android:id="@+id/FavListView" />
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -26,6 +36,20 @@
         />
 
 
+    <TextView
+        android:text="@string/favButtonText"
+        android:id="@+id/favTitle"
+        android:background="@drawable/top_rounded_white"
+        android:textColor="@color/burn"
+        android:textSize="30sp"
+        android:gravity="center"
+        android:fontFamily="cursive"
+        android:elevation="@dimen/white_card_elevation"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"/>
+
     <ImageView
         app:srcCompat="@drawable/back_icon"
         android:id="@+id/favBackBut"
@@ -35,27 +59,4 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
-
-
-    <ListView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="50dp"
-        android:layout_centerHorizontal="true"
-        android:visibility="invisible"
-        android:id="@+id/FavListView"/>
-
-    <TextView
-        android:text="@string/favButtonText"
-        android:id="@+id/favTitle"
-        android:background="@drawable/top_rounded_white"
-        android:textColor="@color/burn"
-        android:textSize="30sp"
-        android:gravity="center"
-        android:fontFamily="cursive"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"/>
 </RelativeLayout>

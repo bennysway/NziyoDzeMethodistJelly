@@ -37,8 +37,8 @@ public class CaptionListViewAdapter extends BaseAdapter {
         if (convertView == null) {
             convertView = mInflater.inflate(R.layout.caption_list_layout, null);
             holder = new CaptionListViewAdapter.ViewHolder();
-            holder.txtName = (TextView) convertView.findViewById(R.id.captionDate);
-            holder.txtCityState = (TextView) convertView
+            holder.txtName = convertView.findViewById(R.id.captionDate);
+            holder.txtCityState = convertView
                     .findViewById(R.id.captionType);
 
             convertView.setTag(holder);

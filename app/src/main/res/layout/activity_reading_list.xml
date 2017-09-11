@@ -35,6 +35,31 @@
         android:id="@+id/readingListLoadingAnimation"/>
 
 
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:paddingTop="50dp"
+        android:clipToPadding="false"
+        android:visibility="invisible"
+        android:id="@+id/readingListListView"/>
+
+    <TextView
+        android:text="@string/readingsText"
+        android:id="@+id/readingListTopTitle"
+        android:background="@drawable/top_rounded_white"
+        android:elevation="@dimen/white_card_elevation"
+        android:textColor="@color/burn"
+        android:textSize="30sp"
+        android:gravity="center"
+        android:fontFamily="cursive"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"/>
+
     <ImageView
         app:srcCompat="@drawable/back_icon"
         android:id="@+id/readingListBackBut"
@@ -44,28 +69,5 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
-
-
-    <ListView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="50dp"
-        android:layout_centerHorizontal="true"
-        android:visibility="invisible"
-        android:id="@+id/readingListListView"/>
-
-    <TextView
-        android:text="@string/readingsText"
-        android:id="@+id/readingListTopTitle"
-        android:background="@drawable/top_rounded_white"
-        android:textColor="@color/burn"
-        android:textSize="30sp"
-        android:gravity="center"
-        android:fontFamily="cursive"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"/>
 
 </RelativeLayout>

@@ -1,11 +1,10 @@
 package com.seven.clip.nziyodzemethodist;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.DisplayMetrics;
 import android.view.View;
-import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.SeekBar;
 import android.widget.TextView;
@@ -29,9 +28,9 @@ public class AdjustTextSize extends AppCompatActivity {
 
         getWindow().setLayout((int)(width*.9),(int)(height*.5));
 
-        SeekBar track = (SeekBar)findViewById(R.id.textSizeSeekBar);
-        final TextView sample = (TextView)findViewById(R.id.textSizeSample);
-        final Button acceptSize = (Button) findViewById(R.id.textSizeApplyBut);
+        SeekBar track = findViewById(R.id.textSizeSeekBar);
+        final TextView sample = findViewById(R.id.textSizeSample);
+        final Button acceptSize = findViewById(R.id.textSizeApplyBut);
         final Data size = new Data(this,"textsize");
 
         track.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {

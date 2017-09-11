@@ -1,6 +1,7 @@
 package com.seven.clip.nziyodzemethodist;
 
 import android.Manifest;
+import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -8,6 +9,7 @@ import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.graphics.Typeface;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.preference.PreferenceManager;
@@ -15,8 +17,11 @@ import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.content.ContextCompat;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
+import android.util.DisplayMetrics;
 import android.view.KeyEvent;
+import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.WindowManager;
@@ -25,11 +30,14 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ViewSwitcher;
 
+import com.getkeepsafe.taptargetview.TapTarget;
+import com.getkeepsafe.taptargetview.TapTargetSequence;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
@@ -51,7 +59,9 @@ public class MainDrawer extends AppCompatActivity {
     Zvinokosha moreFeatures;
     int fromPrevActivity=0;
     RelativeLayout.LayoutParams layoutParams1;
-    int verCode;
+    RelativeLayout display;
+    ImageView bg;
+    int verCode, width, height;
 
     public static final int RequestPermissionCode = 1;
     private static final int RECORD_REQUEST_CODE = 200;
@@ -61,7 +71,6 @@ public class MainDrawer extends AppCompatActivity {
     private FirebaseRemoteConfig remoteConfig;
     private FirebaseAuth mAuth;
     private FirebaseAuth.AuthStateListener mAuthListener;
-
 
 
     @Override
@@ -75,11 +84,7 @@ public class MainDrawer extends AppCompatActivity {
         mAuthListener = new FirebaseAuth.AuthStateListener() {
             @Override
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
-                if(firebaseAuth.getCurrentUser() != null){
-                    request = true;
-                } else {
-                    request = false;
-                }
+                request = firebaseAuth.getCurrentUser() != null;
             }
         };
 
@@ -93,48 +98,57 @@ public class MainDrawer extends AppCompatActivity {
             editor.apply();
         }
 
-        toHymnNums = new Intent(this, pickNum2.class);
-        toHymnNums.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+        if (!prefs.getBoolean("celebrate", false)) {
+            celebrate();
+            SharedPreferences.Editor editor = prefs.edit();
+            editor.putBoolean("celebrate", true);
+            editor.apply();
+        }
+
+        //toHymnNums = new Intent(this, PickNumDialog.class);
+        //toHymnNums.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
         final Intent toHymnList = new Intent(this, hymnList2.class);
-        toHymnNums.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+        //toHymnNums.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
         final Intent toFavList = new Intent(this, FavList.class);
         final Intent toRecList = new Intent(this, RecList.class);
         final Intent toCaptionList = new Intent(this,CaptionList.class);
         final Intent toLogin = new Intent(this,ManageLogin.class);
-        final Intent toTest = new Intent(this, ReadingList.class);
+        final Intent toTest = new Intent(this, BiblePicker.class);
+        final Intent toReadings = new Intent(this, ReadingList.class);
         moreFeatures = new Zvinokosha(this);
         toSettings = new Intent(this, Settings.class);
         toClearData = new Intent(this, ClearData.class);
         Hymns hymns = new Hymns(this);
 
 
-
-        mDrawer = (FlowingDrawer) findViewById(R.id.activity_main_drawer);
+        mDrawer = findViewById(R.id.activity_main_drawer);
         mDrawer.setTouchMode(ElasticDrawer.TOUCH_MODE_BEZEL);
         checkPermissions();
         setupMenu();
 
 
-        Button hymnNumBut = (Button) findViewById(R.id.hymnNumberBut);
-        Button hymnListBut = (Button) findViewById(R.id.hymnListBut);
-        final Button updateHymnBut = (Button) findViewById(R.id.updateHymnBut);
-        final TextView updateHymnButText = (TextView) findViewById(R.id.updateHymnButText);
-        final TextView mainAppTitle = (TextView) findViewById(R.id.mainAppTitle);
-        Button favBut = (Button) findViewById(R.id.favBut);
-        Button recentBut = (Button) findViewById(R.id.recentBut);
-        Button captionsBut = (Button) findViewById(R.id.captionsListBut);
-        Button readingBut = (Button) findViewById(R.id.readingsBut);
+        Button hymnNumBut = findViewById(R.id.hymnNumberBut);
+        Button hymnListBut = findViewById(R.id.hymnListBut);
+        final Button updateHymnBut = findViewById(R.id.updateHymnBut);
+        final TextView updateHymnButText = findViewById(R.id.updateHymnButText);
+        final TextView mainAppTitle = findViewById(R.id.mainAppTitle);
+        Button favBut = findViewById(R.id.favBut);
+        Button recentBut = findViewById(R.id.recentBut);
+        Button captionsBut = findViewById(R.id.captionsListBut);
+        Button readingBut = findViewById(R.id.readingsBut);
         startSearch =  findViewById(R.id.searchButton);
         startSearch_close =  findViewById(R.id.searchButton_on);
-        Button test = (Button) findViewById(R.id.test);
+        Button test = findViewById(R.id.test);
         final View opDrawer =findViewById(R.id.openMainDrawer);
         final View opDrawer_on =findViewById(R.id.openMainDrawer_on);
-        mTitleSwitcher = (ViewSwitcher) findViewById(R.id.mainDrawerTitleSwitcher);
-        mainSearchEditText = (AutoCompleteTextView) findViewById(R.id.mainSearchBar);
+        mTitleSwitcher = findViewById(R.id.mainDrawerTitleSwitcher);
+        mainSearchEditText = findViewById(R.id.mainSearchBar);
         imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
         final String[] hymnStrings = hymns.getAllHymns();
         ArrayAdapter<String> hymnArray = new ArrayAdapter<>(this,R.layout.support_simple_spinner_dropdown_item,hymnStrings);
         mainSearchEditText.setAdapter(hymnArray);
+        display = findViewById(R.id.activity_main);
+        bg = findViewById(R.id.mainBg);
 
         FirebaseRemoteConfigSettings remoteConfigSettings = new FirebaseRemoteConfigSettings.Builder()
                 .setDeveloperModeEnabled(BuildConfig.DEBUG)
@@ -178,6 +192,13 @@ public class MainDrawer extends AppCompatActivity {
             }
         };
 
+
+        DisplayMetrics dm = new DisplayMetrics();
+        getWindowManager().getDefaultDisplay().getMetrics(dm);
+
+
+        width = dm.widthPixels;
+        height = dm.heightPixels;
 
         mainSearchEditText.setOnKeyListener(new View.OnKeyListener() {
             @Override
@@ -241,7 +262,7 @@ public class MainDrawer extends AppCompatActivity {
         test.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(toTest);
+                celebrate();
             }
         });
 
@@ -270,6 +291,7 @@ public class MainDrawer extends AppCompatActivity {
             }
         });
 
+
         opDrawer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -287,7 +309,10 @@ public class MainDrawer extends AppCompatActivity {
 
         hymnNumBut.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) { startActivity(toHymnNums);
+            public void onClick(View view) {
+                PickNumDialog pickNumDialogue = new PickNumDialog(MainDrawer.this);
+                pickNumDialogue.show();
+
             }
         });
 
@@ -320,7 +345,7 @@ public class MainDrawer extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                if(request){
-                   startActivity(toTest);
+                   startActivity(toReadings);
                } else {
                    QuickToast("not logged in");
                    startActivity(toLogin);
@@ -354,6 +379,66 @@ public class MainDrawer extends AppCompatActivity {
         FirebaseUser currentUser = mAuth.getCurrentUser();
         mAuth.addAuthStateListener(mAuthListener);
         //updateUI(currentUser);
+    }
+
+    public void celebrate() {
+        TapTargetSequence sequence = new TapTargetSequence(this)
+                .targets(
+                        TapTarget.forView(findViewById(R.id.mainAppTitle), "Celebrating 5'000+ downloads", "and still growing!")
+                                // All options below are optional
+                                .outerCircleColor(R.color.fav)      // Specify a color for the outer circle
+                                .outerCircleAlpha(0.96f)            // Specify the alpha amount for the outer circle
+                                .targetCircleColor(R.color.white)   // Specify a color for the target circle
+                                .titleTextSize(30)                  // Specify the size (in sp) of the title text
+                                .titleTextColor(R.color.white)      // Specify the color of the title text
+                                .descriptionTextSize(18)            // Specify the size (in sp) of the description text
+                                .descriptionTextColor(R.color.burn)  // Specify the color of the description text
+                                .textColor(R.color.white)            // Specify a color for both the title and description text
+                                .textTypeface(Typeface.SANS_SERIF)  // Specify a typeface for the text
+                                .dimColor(R.color.black)            // If set, will dim behind the view with 30% opacity of the given color
+                                .drawShadow(true)                   // Whether to draw a drop shadow or not
+                                .cancelable(false)                  // Whether tapping outside the outer circle dismisses the view
+                                .tintTarget(true)                   // Whether to tint the target view's color
+                                .transparentTarget(false)           // Specify whether the target is transparent (displays the content underneath)
+                                .icon(getResources().getDrawable(R.drawable.notification_icon))                     // Specify a custom drawable to draw as the target
+                                .targetRadius(60),
+                        TapTarget.forView(findViewById(R.id.openMainDrawer), "Check what we have to say!", "And when we say 'we', it means the people and the developer as well :)")
+                                // All options below are optional
+                                .outerCircleColor(R.color.burn)      // Specify a color for the outer circle
+                                .outerCircleAlpha(0.96f)            // Specify the alpha amount for the outer circle
+                                .targetCircleColor(R.color.white)   // Specify a color for the target circle
+                                .titleTextSize(30)                  // Specify the size (in sp) of the title text
+                                .titleTextColor(R.color.white)      // Specify the color of the title text
+                                .descriptionTextSize(12)            // Specify the size (in sp) of the description text
+                                .descriptionTextColor(R.color.burn)  // Specify the color of the description text
+                                .textColor(R.color.white)            // Specify a color for both the title and description text
+                                .textTypeface(Typeface.SANS_SERIF)  // Specify a typeface for the text
+                                .dimColor(R.color.black)            // If set, will dim behind the view with 30% opacity of the given color
+                                .drawShadow(true)                   // Whether to draw a drop shadow or not
+                                .cancelable(false)                  // Whether tapping outside the outer circle dismisses the view
+                                .tintTarget(true)                   // Whether to tint the target view's color
+                                .transparentTarget(false)           // Specify whether the target is transparent (displays the content underneath)
+                                //.icon(getResources().getDrawable(android.R.drawable.stat_notify_chat))                     // Specify a custom drawable to draw as the target
+                                .targetRadius(60),
+                        TapTarget.forView(findViewById(R.id.readingsBut), "Keeping the Plan Paper for the Days' Readings?", "A quarterly updated database, crowd sourced, that other new feature that makes you fall in love with it more!!!")
+                                // All options below are optional
+                                .outerCircleColor(R.color.green)      // Specify a color for the outer circle
+                                .outerCircleAlpha(0.96f)            // Specify the alpha amount for the outer circle
+                                .targetCircleColor(R.color.white)   // Specify a color for the target circle
+                                .titleTextSize(30)                  // Specify the size (in sp) of the title text
+                                .titleTextColor(R.color.white)      // Specify the color of the title text
+                                .descriptionTextSize(12)            // Specify the size (in sp) of the description text
+                                .descriptionTextColor(R.color.burn)  // Specify the color of the description text
+                                .textColor(R.color.white)            // Specify a color for both the title and description text
+                                .textTypeface(Typeface.SANS_SERIF)  // Specify a typeface for the text
+                                .dimColor(R.color.black)            // If set, will dim behind the view with 30% opacity of the given color
+                                .drawShadow(true)                   // Whether to draw a drop shadow or not
+                                .cancelable(false)                  // Whether tapping outside the outer circle dismisses the view
+                                .tintTarget(true)                   // Whether to tint the target view's color
+                                .transparentTarget(false)           // Specify whether the target is transparent (displays the content underneath)
+                                .icon(getResources().getDrawable(R.drawable.ic_readings_black))                     // Specify a custom drawable to draw as the target
+                                .targetRadius(60));
+        sequence.start();
     }
 
     public void QuickToast(String s){
@@ -474,6 +559,26 @@ public class MainDrawer extends AppCompatActivity {
             mMenuFragment = new MenuListFragment();
             fm.beginTransaction().add(R.id.id_container_menu, mMenuFragment).commit();
         }
+    }
+
+    private void showPopup() {
+        AlertDialog.Builder b = new AlertDialog.Builder(this);
+        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.LOLLIPOP) {
+            LayoutInflater inflater = LayoutInflater.from(this);
+            View layout = inflater.inflate(R.layout.popup_layout, null);
+            b.setView(layout);
+        } else {
+            b.setView(R.layout.popup_layout);
+        }
+        Dialog dlg = b.create();
+        WindowManager.LayoutParams lp = new WindowManager.LayoutParams();
+        lp.copyFrom(dlg.getWindow().getAttributes());
+        double w = width, h = height * .3;
+        lp.width = (int) w;
+        lp.height = (int) h;
+        dlg.show();
+        dlg.getWindow().setAttributes(lp);
+        dlg.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
     }
 
     public void checkPermissions(){

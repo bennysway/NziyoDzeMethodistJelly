@@ -1,22 +1,28 @@
 package com.seven.clip.nziyodzemethodist;
 
-import android.content.Intent;
+import android.app.Dialog;
+import android.content.Context;
 import android.content.SharedPreferences;
-import android.preference.PreferenceManager;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
+import android.support.annotation.NonNull;
 import android.util.DisplayMetrics;
 import android.view.View;
-import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
-public class ChangeNameDialog extends AppCompatActivity {
+public class ChangeNameDialog extends Dialog {
 
     EditText textField;
     InputMethodManager imm;
+    Context context;
+
+    public ChangeNameDialog(@NonNull Context passedContext) {
+        super(passedContext);
+        context = passedContext;
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,17 +30,17 @@ public class ChangeNameDialog extends AppCompatActivity {
         setContentView(R.layout.activity_change_name_dialog);
 
         DisplayMetrics dm = new DisplayMetrics();
-        getWindowManager().getDefaultDisplay().getMetrics(dm);
+        getWindow().getWindowManager().getDefaultDisplay().getMetrics(dm);
 
         int width = dm.widthPixels;
         int height = dm.heightPixels;
-        getWindow().setLayout((int)(width*.8),(int)(height*.3));
+        getWindow().setLayout(width, (int) (height * .3));
 
-        textField = (EditText) findViewById(R.id.usernameEditText);
-        ImageView accept = (ImageView) findViewById(R.id.acceptName);
-        ImageView deny = (ImageView) findViewById(R.id.cancelName);
+        textField = findViewById(R.id.usernameEditText);
+        ImageView accept = findViewById(R.id.acceptName);
+        ImageView deny = findViewById(R.id.cancelName);
 
-        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
+        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(context);
         final String name = preferences.getString("example_text","");
         final SharedPreferences.Editor editor = preferences.edit();
 
@@ -52,7 +58,7 @@ public class ChangeNameDialog extends AppCompatActivity {
                     QuickToast("No changes made");
                 else
                     QuickToast("Name changed");
-                finish();
+                cancel();
             }
         });
 
@@ -60,14 +66,14 @@ public class ChangeNameDialog extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 QuickToast("No changes made");
-                finish();
+                cancel();
             }
         });
 
     }
 
     public void QuickToast(String s){
-        Toast.makeText(this, s,
+        Toast.makeText(context, s,
                 Toast.LENGTH_SHORT).show();
     }
 }

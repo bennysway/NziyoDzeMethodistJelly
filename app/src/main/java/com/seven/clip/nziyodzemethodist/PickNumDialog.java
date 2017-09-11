@@ -1,64 +1,76 @@
 package com.seven.clip.nziyodzemethodist;
 
+import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
-import android.os.Handler;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.support.v4.graphics.ColorUtils;
 import android.text.Editable;
 import android.text.InputFilter;
 import android.text.TextWatcher;
 import android.util.DisplayMetrics;
-import android.util.TypedValue;
-import android.view.Gravity;
 import android.view.KeyEvent;
 import android.view.View;
+import android.view.Window;
 import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
-import android.widget.AdapterView;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.ListView;
-import android.widget.TableRow;
-import android.widget.TextView;
 import android.widget.Toast;
 
+import com.github.mmin18.widget.RealtimeBlurView;
+
+import static android.content.Context.INPUT_METHOD_SERVICE;
 import static android.graphics.Color.parseColor;
 
-public class pickNum2 extends AppCompatActivity {
+public class PickNumDialog extends Dialog {
 
-    EditText numberField;
-    Intent toHymn;
-    InputMethodManager imm;
-    Data favList,color;
-    ImageView makeFavBut;
-    int pressCounter=0;
+    private EditText numberField;
+    private Intent toHymn;
+    private Data favList;
+    private ImageView makeFavBut;
+    RealtimeBlurView blurView;
+    private int pressCounter = 0;
+    Context context;
+
+    PickNumDialog(@NonNull Context passedContext) {
+        super(passedContext);
+        context = passedContext;
+    }
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_pick_num2);
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        getWindow().clearFlags(WindowManager.LayoutParams.FLAG_DIM_BEHIND);
+        setContentView(R.layout.pick_num_layout);
         DisplayMetrics dm = new DisplayMetrics();
-        getWindowManager().getDefaultDisplay().getMetrics(dm);
+        getWindow().getWindowManager().getDefaultDisplay().getMetrics(dm);
+
+        numberField = findViewById(R.id.pickNumSearchBox);
+        ImageView openHymn = findViewById(R.id.pickNumButton);
+        makeFavBut = findViewById(R.id.pickNumMakeFavButton);
+        blurView = findViewById(R.id.pickNumBlur);
+        toHymn = new Intent(context, hymnDisplay.class);
+
+
+        Data recordFlag = new Data(context, "recordflag");
+        favList = new Data(context, "favlist");
+        Data color = new Data(context, "color");
 
 
 
         int width = dm.widthPixels;
         int height = dm.heightPixels;
-        getWindow().setLayout((int)(width*.8),(int)(height*.3));
+        getWindow().setLayout(width, (int) (height * .3));
 
-        toHymn = new Intent(this,hymnDisplay.class);
 
-        numberField = (EditText) findViewById(R.id.pickNumSearchBox);
-        ImageView openHymn = (ImageView) findViewById(R.id.pickNumButton);
-        makeFavBut = (ImageView) findViewById(R.id.pickNumMakeFavButton);
 
-        Data recordFlag = new Data(this,"recordflag");
-        favList = new Data(this,"favlist");
-        color = new Data(this,"color");
+
         recordFlag.deleteAll();
 
         numberField.setFilters(new InputFilter[]{ new HymnNumberFilter("1", "321")});
@@ -67,10 +79,13 @@ public class pickNum2 extends AppCompatActivity {
             numberField.getBackground().mutate().setColorFilter(parseColor(tintColor), PorterDuff.Mode.SRC_ATOP);
             openHymn.setColorFilter(parseColor(tintColor));
             makeFavBut.setColorFilter(parseColor(tintColor));
-            if(!isColorDark(tintColor)){
-                openHymn.setBackgroundDrawable(getResources().getDrawable(R.drawable.faded_black_center));
-                makeFavBut.setBackgroundDrawable(getResources().getDrawable(R.drawable.faded_black_center));
-            }
+            int bgColor = ColorUtils.setAlphaComponent(parseColor(tintColor), 5);
+
+            if (isColorDark(tintColor))
+                bgColor = ColorUtils.blendARGB(bgColor, parseColor("#ffffff"), .1f);
+            else
+                bgColor = ColorUtils.blendARGB(bgColor, parseColor("#000000"), .1f);
+            blurView.setOverlayColor(bgColor);
         }
 
         openHymn.setOnClickListener(new View.OnClickListener() {
@@ -99,6 +114,7 @@ public class pickNum2 extends AppCompatActivity {
                 }
             }
         });
+
 
         makeFavBut.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -134,7 +150,7 @@ public class pickNum2 extends AppCompatActivity {
             }
         });
 
-        imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
+        InputMethodManager imm = (InputMethodManager) context.getSystemService(INPUT_METHOD_SERVICE);
         imm.toggleSoftInput(InputMethodManager.SHOW_FORCED, InputMethodManager.HIDE_IMPLICIT_ONLY);
 
         numberField.setOnKeyListener(new View.OnKeyListener() {
@@ -150,11 +166,16 @@ public class pickNum2 extends AppCompatActivity {
         });
 
     }
-    public Context getActivity() {
-        return this;
+
+    @Override
+    public void dismiss() {
+        hideSoftKeyboard();
+        super.dismiss();
+
     }
+
     public void QuickToast(String s) {
-        Toast.makeText(getActivity(), s,
+        Toast.makeText(context, s,
                 Toast.LENGTH_SHORT).show();
     }
     public void gotoHymn(){
@@ -169,18 +190,19 @@ public class pickNum2 extends AppCompatActivity {
             QuickToast("Please don't try to be smart. :) enter a number out of the range 1 to 321");
         else {
             toHymn.putExtra("hymnNum",numberField.getText().toString());
-            startActivity(toHymn);
+            context.startActivity(toHymn);
         }
 
     }
 
-    public void hideSoftKeyboard() {
+    private void hideSoftKeyboard() {
         if(getCurrentFocus()!=null) {
-            InputMethodManager inputMethodManager = (InputMethodManager) getSystemService(INPUT_METHOD_SERVICE);
+            InputMethodManager inputMethodManager = (InputMethodManager) context.getSystemService(INPUT_METHOD_SERVICE);
             inputMethodManager.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(), 0);
         }
     }
-    public void favAni(String num){
+
+    private void favAni(String num) {
         if(favList.find(num)){
             makeFavBut.animate().scaleX(1.5f).scaleY(1.5f).setDuration(100).withEndAction(new Runnable() {
                 @Override
@@ -194,20 +216,10 @@ public class pickNum2 extends AppCompatActivity {
         }
     }
 
-    @Override
-    protected void onPause(){
-        super.onPause();
-        hideSoftKeyboard();
-    }
-
-    public boolean isColorDark(String test){
+    private boolean isColorDark(String test) {
         int color = parseColor(test);
         double darkness = 1-(0.299* Color.red(color) + 0.587*Color.green(color) + 0.114*Color.blue(color))/255;
-        if(darkness<0.333){
-            return false; // It's a light color
-        }else{
-            return true; // It's a dark color
-        }
+        return darkness >= 0.333;
     }
 
 }

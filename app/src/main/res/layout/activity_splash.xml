@@ -3,14 +3,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/launch">
+    xmlns:custom="http://schemas.android.com/tools"
+    android:background="@color/gray">
 
-    <ImageView
+    <com.rodolfonavalon.shaperipplelibrary.ShapeRipple
+        android:id="@+id/splashImage"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:src="@drawable/spl1"
-        android:scaleType="centerCrop"
-        android:id="@+id/splashImage"/>
+        custom:ripple_stroke_width="2dp" />
 
     <TextView
         android:text="Line1"

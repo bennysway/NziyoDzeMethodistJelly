@@ -1,10 +1,12 @@
 package com.seven.clip.nziyodzemethodist;
 
+import android.content.Intent;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageInfo;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
@@ -18,17 +20,23 @@ import java.util.List;
 public class BiblePicker extends AppCompatActivity {
 
     ListView appList;
-    ArrayList<String> appNames,appPackages;
+    ArrayList<String> appNames, appPackages;
+    Data bibleOption;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bible_picker);
 
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
-        appList = (ListView) findViewById(R.id.appList);
+
+        appList = findViewById(R.id.appList);
         appNames = new ArrayList<>();
         appPackages = new ArrayList<>();
+        bibleOption = new Data(this, "bibleoption");
+
         aquireApps();
 
         ArrayAdapter<String> itemsAdapter =
@@ -36,14 +44,17 @@ public class BiblePicker extends AppCompatActivity {
         appList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                QuickToast(appPackages.get(position));
+                bibleOption.update(appPackages.get(position));
+                Intent intent = new Intent();
+                intent.putExtra("requestCode", appPackages.get(position));
+                setResult(1, intent);
+                finish();
             }
         });
         appList.setAdapter(itemsAdapter);
     }
 
-    public ArrayList<String> aquireApps()
-    {
+    public ArrayList<String> aquireApps() {
         List<PackageInfo> packList = getPackageManager().getInstalledPackages(0);
 
         Comparator<PackageInfo> orderAppPackages = new Comparator<PackageInfo>() {
@@ -53,13 +64,11 @@ public class BiblePicker extends AppCompatActivity {
             }
         };
 
-        Collections.sort(packList,orderAppPackages);
+        Collections.sort(packList, orderAppPackages);
 
-        for (int i=0; i < packList.size(); i++)
-        {
+        for (int i = 0; i < packList.size(); i++) {
             PackageInfo packInfo = packList.get(i);
-            if (  (packInfo.applicationInfo.flags & ApplicationInfo.FLAG_SYSTEM) == 0)
-            {
+            if ((packInfo.applicationInfo.flags & ApplicationInfo.FLAG_SYSTEM) == 0) {
                 appNames.add(packInfo.applicationInfo.loadLabel(getPackageManager()).toString());
                 appPackages.add(packInfo.packageName);
             }
@@ -68,7 +77,7 @@ public class BiblePicker extends AppCompatActivity {
         return appNames;
     }
 
-    public void QuickToast(String s){
+    public void QuickToast(String s) {
         Toast.makeText(this, s,
                 Toast.LENGTH_SHORT).show();
     }

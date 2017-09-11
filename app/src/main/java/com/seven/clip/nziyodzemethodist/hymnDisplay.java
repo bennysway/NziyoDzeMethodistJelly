@@ -5,6 +5,7 @@ import android.content.ClipboardManager;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.content.res.TypedArray;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.graphics.drawable.GradientDrawable;
@@ -79,27 +80,27 @@ public class hymnDisplay extends AppCompatActivity {
 
 
     ScrollView myScroll;
-    int bound,en_bound,totalHeight,en_totalHeight,clength,textcolor,capColor,hymnnumColor,length,en_length,buttonLayoutBg,hasOptions=0,optionsSet=0;
-    int menuSlideStep = 0,windowWidth,windowHeight,click=0;
-    Boolean chorusAvail = false,chorusShown = false,historyChanged = false, isInEnglish = false,isRecording = false,isEnglishAvailable = false,
-    isRecordingSaved=false;
-    ImageView bg,auxBut,makeBookmark,makeCardBut,loadBar;
-    ImageView micBut,editBut,enBut,heartBut,fontBut,colorBut,shareBut,nextBut,prevBut;
-    TableRow micRow,editRow,enRow,heartRow,fontRow,colorRow,shareRow,nextRow,prevRow;
+    int bound, en_bound, totalHeight, en_totalHeight, clength, textcolor, capColor, hymnnumColor, length, en_length, buttonLayoutBg, hasOptions = 0, optionsSet = 0;
+    int menuSlideStep = 0, windowWidth, windowHeight, click = 0, backgroundResource;
+    Boolean chorusAvail = false, chorusShown = false, historyChanged = false, isInEnglish = false, isRecording = false, isEnglishAvailable = false,
+            isRecordingSaved = false;
+    ImageView bg, auxBut, makeBookmark, makeCardBut, loadBar;
+    ImageView micBut, editBut, enBut, heartBut, fontBut, colorBut, shareBut, nextBut, prevBut;
+    TableRow micRow, editRow, enRow, heartRow, fontRow, colorRow, shareRow, nextRow, prevRow;
     TableLayout menuLayout;
-    boolean micButBool,editButBool,enButBool,heartButBool,fontButBool,colorButBool,shareButBool,nextButBool,prevButBool,
-            helpOptions = false,bookmarkAvail=false;
-    float textSize,buttonSize,prevSize;
+    boolean micButBool, editButBool, enButBool, heartButBool, fontButBool, colorButBool, shareButBool, nextButBool, prevButBool,
+            helpOptions = false, bookmarkAvail = false;
+    float textSize, buttonSize, prevSize;
     RelativeLayout display;
-    TextView number,title,chorus,hymnpop;
+    TextView number, title, chorus, hymnpop;
     TextSwitcher captionShow;
     Button showCaption;
-    boolean textSizeChanged,menuOpen,favInit, chorusTrasparent, canSlideRight,canSlideLeft;
+    boolean textSizeChanged, menuOpen, favInit, chorusTrasparent, canSlideRight, canSlideLeft;
     long starttime = 0;
-    String AudioSavePathInDevice,RandomAudioFileName = "ABCDEFGHIJKLMNOP",hymnNum,capStoreKey,s,safe,hymnName;
+    String AudioSavePathInDevice, RandomAudioFileName = "ABCDEFGHIJKLMNOP", hymnNum, capStoreKey, s, safe, hymnName;
     MediaRecorder mediaRecorder;
     Random random;
-    Data favList,recordFlag,color,textSizeData,recList,favIterator,recIterator,withCaption;
+    Data favList, recordFlag, color, textSizeData, recList, favIterator, recIterator, withCaption;
     EnResource engCheck;
     Zvinokosha access;
     ScaleGestureDetector scaleGestureDetector;
@@ -107,9 +108,10 @@ public class hymnDisplay extends AppCompatActivity {
     LinearLayout hymnDispl;
     //stanza handling
     ArrayList<Integer> stanzaBarStack;
-    Runnable passId,clickDuration;
+    Runnable passId, clickDuration;
     Handler tapTimer;
     View.OnTouchListener tapStanza;
+    View.OnLongClickListener longTapStanza;
 
 
     @Override
@@ -126,14 +128,12 @@ public class hymnDisplay extends AppCompatActivity {
         windowHeight = dm.heightPixels;
 
 
-
-
         Handler adHandler = new Handler();
         adHandler.postDelayed(new Runnable() {
             @Override
             public void run() {
                 MobileAds.initialize(getApplicationContext(), "ca-app-pub-2945410942325181~6133597558");
-                AdView mAdView = (AdView) findViewById(R.id.adView);
+                AdView mAdView = findViewById(R.id.adView);
                 AdRequest adRequest = new AdRequest.Builder()
                         .addTestDevice(AdRequest.DEVICE_ID_EMULATOR)        // All emulators
                         .addTestDevice("37AF7727CC5B392008ACD1C889F79F4E")  // An example device ID
@@ -141,24 +141,23 @@ public class hymnDisplay extends AppCompatActivity {
                         .build();
                 mAdView.loadAd(adRequest);
             }
-        },5000);
+        }, 500);
 
 
-
-        favList = new Data(this,"favlist");
-        recList = new Data(this,"reclist");
-        color = new Data(this,"color");
-        textSizeData = new Data(this,"textsize");
-        recordFlag = new Data(this,"recordflag");
-        favIterator = new Data(this,"faviterator");
-        recIterator = new Data(this,"reciterator");
-        withCaption = new Data(this,"withcaption");
+        favList = new Data(this, "favlist");
+        recList = new Data(this, "reclist");
+        color = new Data(this, "color");
+        textSizeData = new Data(this, "textsize");
+        recordFlag = new Data(this, "recordflag");
+        favIterator = new Data(this, "faviterator");
+        recIterator = new Data(this, "reciterator");
+        withCaption = new Data(this, "withcaption");
         hymnDisplayIntent = new Intent();
         engCheck = new EnResource(this);
         access = new Zvinokosha(this);
 
         s = getIntent().getStringExtra("hymnNum");
-        boolean setToEnglish = getIntent().getBooleanExtra("isInEnglish",false);
+        boolean setToEnglish = getIntent().getBooleanExtra("isInEnglish", false);
         recList.pushFront(s);
 
         safe = NumToWord.convert(StrToInt(s)) + "key";
@@ -167,47 +166,46 @@ public class hymnDisplay extends AppCompatActivity {
         favIterator.update("0");
         recIterator.update("0");
 
-        chorus = (TextView) findViewById(R.id.chorusFloat);
+        chorus = findViewById(R.id.chorusFloat);
 
-        captionShow = (TextSwitcher) findViewById(R.id.caption);
-        number = (TextView) findViewById(R.id.hymnDisplayNum);
-        title = (TextView) findViewById(R.id.hymnTitle);
-        hymnpop = (TextView) findViewById(R.id.hymnDisplayNumlight);
-        hymnDispl = (LinearLayout) findViewById(R.id.hymnLayout);
-        myScroll = (ScrollView) findViewById(R.id.scrollHymn);
-        showCaption = (Button) findViewById(R.id.showCaption);
-        final Intent toPasteBin = new Intent(this,ShareCustom.class);
-        bg = (ImageView) findViewById(R.id.hymnDisplayBg);
-        display = (RelativeLayout) findViewById(R.id.activity_hymn_display);
+        captionShow = findViewById(R.id.caption);
+        number = findViewById(R.id.hymnDisplayNum);
+        title = findViewById(R.id.hymnTitle);
+        hymnpop = findViewById(R.id.hymnDisplayNumlight);
+        hymnDispl = findViewById(R.id.hymnLayout);
+        myScroll = findViewById(R.id.scrollHymn);
+        showCaption = findViewById(R.id.showCaption);
+        final Intent toPasteBin = new Intent(this, ShareCustom.class);
+        bg = findViewById(R.id.hymnDisplayBg);
+        display = findViewById(R.id.activity_hymn_display);
         scaleGestureDetector = new ScaleGestureDetector(this, new simpleOnScaleGestureListener());
 
-        micBut = (ImageView) findViewById(R.id.hymnRecordBut);
-        editBut = (ImageView) findViewById(R.id.hymnWriteNoteBut);
-        enBut = (ImageView) findViewById(R.id.hymnEnBut);
-        heartBut = (ImageView) findViewById(R.id.hymnFavBut);
-        fontBut = (ImageView) findViewById(R.id.hymnFontBut);
-        colorBut = (ImageView) findViewById(R.id.hymnColorBut);
-        shareBut = (ImageView) findViewById(R.id.hymnShareBut);
-        nextBut = (ImageView) findViewById(R.id.hymnForwardBut);
-        prevBut = (ImageView) findViewById(R.id.hymnBackBut);
+        micBut = findViewById(R.id.hymnRecordBut);
+        editBut = findViewById(R.id.hymnWriteNoteBut);
+        enBut = findViewById(R.id.hymnEnBut);
+        heartBut = findViewById(R.id.hymnFavBut);
+        fontBut = findViewById(R.id.hymnFontBut);
+        colorBut = findViewById(R.id.hymnColorBut);
+        shareBut = findViewById(R.id.hymnShareBut);
+        nextBut = findViewById(R.id.hymnForwardBut);
+        prevBut = findViewById(R.id.hymnBackBut);
 
-        auxBut = (ImageView) findViewById(R.id.helpIcon);
-        loadBar = (ImageView) findViewById(R.id.loadBar);
+        auxBut = findViewById(R.id.helpIcon);
+        loadBar = findViewById(R.id.loadBar);
 
-        micRow = (TableRow) findViewById(R.id.menuRow1);
-        editRow = (TableRow) findViewById(R.id.menuRow2);
-        enRow = (TableRow) findViewById(R.id.menuRow3);
-        heartRow = (TableRow) findViewById(R.id.menuRow4);
-        fontRow = (TableRow) findViewById(R.id.menuRow5);
-        colorRow = (TableRow) findViewById(R.id.menuRow6);
-        shareRow = (TableRow) findViewById(R.id.menuRow7);
-        prevRow = (TableRow) findViewById(R.id.menuRow8);
-        nextRow = (TableRow) findViewById(R.id.menuRow9);
+        micRow = findViewById(R.id.menuRow1);
+        editRow = findViewById(R.id.menuRow2);
+        enRow = findViewById(R.id.menuRow3);
+        heartRow = findViewById(R.id.menuRow4);
+        fontRow = findViewById(R.id.menuRow5);
+        colorRow = findViewById(R.id.menuRow6);
+        shareRow = findViewById(R.id.menuRow7);
+        prevRow = findViewById(R.id.menuRow8);
+        nextRow = findViewById(R.id.menuRow9);
 
-        menuLayout = (TableLayout) findViewById(R.id.hymnMenuLayout);
+        menuLayout = findViewById(R.id.hymnMenuLayout);
 
         stanzaBarStack = new ArrayList<>();
-
 
 
         textSizeChanged = false;
@@ -215,20 +213,27 @@ public class hymnDisplay extends AppCompatActivity {
         chorusTrasparent = false;
         isEnglishAvailable = engCheck.isEn(s);
 
-        Typeface custom_font = Typeface.createFromAsset(getAssets(),  "fonts/bh.ttf");
+        Typeface custom_font = Typeface.createFromAsset(getAssets(), "fonts/bh.ttf");
         title.setTypeface(custom_font);
         number.setTypeface(custom_font);
         hymnpop.setTypeface(custom_font);
 
+        int[] attrs = new int[]{R.attr.selectableItemBackground};
+        TypedArray typedArray = this.obtainStyledAttributes(attrs);
+        backgroundResource = typedArray.getResourceId(0, 0);
+        typedArray.recycle();
 
         String g = textSizeData.get();
-        if(g.equals(""))
+        if (g.equals(""))
             textSize = 40f;
         else
             textSize = Float.valueOf(g);
         String g1 = recordFlag.get();
-        if (g1.equals("true")){
-            prepareRecording(getIntent().getStringExtra("hymnNumWord"));
+        if (g1.equals("true")) {
+            QuickToast("Open the side menu...");
+            QuickToast("And use the Record Option...");
+            QuickToast("It should be the first icon.");
+            recordFlag.deleteAll();
         }
 
         tapTimer = new Handler();
@@ -236,52 +241,65 @@ public class hymnDisplay extends AppCompatActivity {
         loadBar.animate().scaleX(0.0f);
 
 
-        tapStanza= new View.OnTouchListener() {
+        tapStanza = new View.OnTouchListener() {
             @Override
             public boolean onTouch(final View stanza, MotionEvent event) {
                 passId = new Runnable() {
                     @Override
                     public void run() {
-                        addBar((TextView) stanza,stanza.getId());
+                        addBar((TextView) stanza, stanza.getId());
                     }
                 };
                 clickDuration = new Runnable() {
                     @Override
                     public void run() {
-                        click=0;
+                        click = 0;
                         loadBar.animate().scaleX(0.0f);
                     }
                 };
-                switch (event.getAction()){
+                switch (event.getAction()) {
                     case MotionEvent.ACTION_DOWN:
-                        if(event.getX()<50){
-                            if(canSlideRight){
-                               openNavigationDrawer();
+                        if (event.getX() < 50) {
+                            if (canSlideRight) {
+                                openNavigationDrawer();
+                                return true;
                             }
-                        } else if(event.getX()>50){
-                            if(menuOpen){
+                        } else if (event.getX() > 50) {
+                            if (menuOpen) {
                                 retractMenu();
-                            }else if(canSlideLeft) {
+                            } else if (canSlideLeft) {
                                 closeNavigationDrawer();
-                            } else if(stanzaBarStack.isEmpty()) {
-                                if (click<3) {
-                                    click++;
-                                        loadBar.animate().scaleX((float)click/3);
-                                    tapTimer.postDelayed(clickDuration,1000);
-                                }
-                                if (click==3) {
-                                    addBar((TextView) stanza,stanza.getId());
-                                    stanzaBarStack.add(stanza.getId());
-                                    loadBar.animate().scaleX(1f);
-                                    click=0;
-                                }
+                            } else if (stanzaBarStack.isEmpty()) {
+//                                if (click<3) {
+//                                    click++;
+//                                        loadBar.animate().scaleX((float)click/3);
+//                                    tapTimer.postDelayed(clickDuration,1000);
+//                                }
+//                                if (click==3) {
+//                                    addBar((TextView) stanza,stanza.getId());
+//                                    stanzaBarStack.add(stanza.getId());
+//                                    loadBar.animate().scaleX(1f);
+//                                    click=0;
+//                                }
+                                return false;
                             } else {
                                 int pop = stanzaBarStack.remove(0);
                                 removeBar(pop);
+                                return false;
                             }
                         }
-                        break;
+                        return true;
+                    default:
+                        return false;
                 }
+            }
+        };
+
+        longTapStanza = new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View stanza) {
+                addBar((TextView) stanza, stanza.getId());
+                stanzaBarStack.add(stanza.getId());
                 return true;
             }
         };
@@ -289,22 +307,21 @@ public class hymnDisplay extends AppCompatActivity {
 
         changeColorMode(color.get());
 
-        populateHymn(s,setToEnglish);
+        populateHymn(s, setToEnglish);
 
         myScroll.getViewTreeObserver().addOnScrollChangedListener(new ViewTreeObserver.OnScrollChangedListener() {
             @Override
             public void onScrollChanged() {
                 int scrollY = myScroll.getScrollY(); // For ScrollView
-                View view =  myScroll.getChildAt(myScroll.getChildCount() - 1);
+                View view = myScroll.getChildAt(myScroll.getChildCount() - 1);
                 int diff = (view.getBottom() - (myScroll.getHeight() + myScroll.getScrollY()));
 
-                if(scrollY>bound&&chorusAvail){
+                if (scrollY > bound && chorusAvail) {
                     chorus.setVisibility(View.VISIBLE);
                     hymnpop.setVisibility(View.VISIBLE);
                     chorusShown = true;
 
-                }
-                else {
+                } else {
                     chorus.setVisibility(View.INVISIBLE);
                     hymnpop.setVisibility(View.INVISIBLE);
                     chorusShown = false;
@@ -313,8 +330,7 @@ public class hymnDisplay extends AppCompatActivity {
         });
 
 
-
-        if(favList.find(s)){
+        if (favList.find(s)) {
             Handler heartNotificationHandler = new Handler();
             heartBut.setImageResource(R.drawable.heart_icon_on);
             heartButBool = true;
@@ -324,11 +340,10 @@ public class hymnDisplay extends AppCompatActivity {
         heartBut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(heartButBool){
+                if (heartButBool) {
                     flipHeartIcon();
                     heartButBool = false;
-                }
-                else {
+                } else {
                     flipHeartIcon();
                     heartButBool = true;
                 }
@@ -338,11 +353,10 @@ public class hymnDisplay extends AppCompatActivity {
         chorus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(chorusTrasparent){
+                if (chorusTrasparent) {
                     chorus.animate().alpha(1f);
                     chorusTrasparent = false;
-                }
-                else {
+                } else {
                     chorus.animate().alpha(.0f);
                     chorusTrasparent = true;
                 }
@@ -350,7 +364,7 @@ public class hymnDisplay extends AppCompatActivity {
         });
 
         //micBut,editBut,enBut,heartBut,fontBut,colorBut,shareBut,nextBut,prevBut;
-        micButBool=editButBool=fontButBool=colorButBool=shareButBool=nextButBool=prevButBool=canSlideRight=canSlideLeft=false;
+        micButBool = editButBool = fontButBool = colorButBool = shareButBool = nextButBool = prevButBool = canSlideRight = canSlideLeft = false;
         micBut.setAlpha(0f);
         editBut.setAlpha(0f);
         enBut.setAlpha(0f);
@@ -370,17 +384,16 @@ public class hymnDisplay extends AppCompatActivity {
                 buttonSize = (float) micBut.getWidth();
                 resetSideBarPosition();
             }
-        },4000);
+        }, 4000);
 
         auxBut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(whichMenuRow()!=0){
+                if (whichMenuRow() != 0) {
                     inflateHelpLayout(whichMenuRow());
-                }
-                else {
-                    TextView [] helpCaptions = new TextView[9];
-                    if(!helpOptions){
+                } else {
+                    TextView[] helpCaptions = new TextView[9];
+                    if (!helpOptions) {
                         helpCaptions[0] = createMenuHelpCaption("record");
                         helpCaptions[1] = createMenuHelpCaption("note");
                         helpCaptions[2] = createMenuHelpCaption("english");
@@ -402,9 +415,7 @@ public class hymnDisplay extends AppCompatActivity {
                         helpOptions = true;
                         flipHelpIcon();
                         obfuscateHymn();
-                    }
-                    else
-                    {
+                    } else {
                         micRow.removeViewAt(1);
                         editRow.removeViewAt(1);
                         enRow.removeViewAt(1);
@@ -425,10 +436,10 @@ public class hymnDisplay extends AppCompatActivity {
         micBut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(isAnyMenuOpen()) {
+                if (isAnyMenuOpen()) {
                     retractMenu();
-                }else {
-                    final ImageView [] micOptions = new ImageView[3];
+                } else {
+                    final ImageView[] micOptions = new ImageView[3];
                     micOptions[0] = createFadedButton("record");
                     micOptions[1] = createFadedButton("stop");
                     micOptions[2] = createFadedButton("folder");
@@ -447,10 +458,10 @@ public class hymnDisplay extends AppCompatActivity {
                         public void onClick(View v) {
                             retractMenu();
                             retractMenu();
-                            Intent toCaptions = new Intent(hymnDisplay.this,Captions.class);
-                            toCaptions.putExtra("hymnNumWord",safe);
-                            toCaptions.putExtra("hymnNum",s);
-                            toCaptions.putExtra("hymnName",hymnName);
+                            Intent toCaptions = new Intent(hymnDisplay.this, Captions.class);
+                            toCaptions.putExtra("hymnNumWord", safe);
+                            toCaptions.putExtra("hymnNum", s);
+                            toCaptions.putExtra("hymnName", hymnName);
                             startActivity(toCaptions);
                         }
                     });
@@ -470,10 +481,10 @@ public class hymnDisplay extends AppCompatActivity {
         editBut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(isAnyMenuOpen()) {
+                if (isAnyMenuOpen()) {
                     retractMenu();
-                }else {
-                    ImageView [] editOptions = new ImageView[2];
+                } else {
+                    ImageView[] editOptions = new ImageView[2];
                     editOptions[0] = createFadedButton("new");
                     editOptions[1] = createFadedButton("folder");
                     TextView editText = createMenuHelpCaption("date");
@@ -485,10 +496,10 @@ public class hymnDisplay extends AppCompatActivity {
                     editOptions[0].setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
-                            Intent toNote = new Intent(hymnDisplay.this,makeNote.class);
-                            toNote.putExtra("captionKey",capStoreKey);
-                            toNote.putExtra("captionType","note");
-                            toNote.putExtra("hymnNum",s);
+                            Intent toNote = new Intent(hymnDisplay.this, makeNote.class);
+                            toNote.putExtra("captionKey", capStoreKey);
+                            toNote.putExtra("captionType", "note");
+                            toNote.putExtra("hymnNum", s);
                             startActivity(toNote);
                         }
                     });
@@ -498,17 +509,17 @@ public class hymnDisplay extends AppCompatActivity {
                         public void onClick(View v) {
                             retractMenu();
                             retractMenu();
-                            Intent toCaptions = new Intent(hymnDisplay.this,Captions.class);
-                            toCaptions.putExtra("hymnNumWord",safe);
-                            toCaptions.putExtra("hymnNum",s);
-                            toCaptions.putExtra("hymnName",hymnName);
+                            Intent toCaptions = new Intent(hymnDisplay.this, Captions.class);
+                            toCaptions.putExtra("hymnNumWord", safe);
+                            toCaptions.putExtra("hymnNum", s);
+                            toCaptions.putExtra("hymnName", hymnName);
                             startActivity(toCaptions);
                         }
                     });
                 }
             }
         });
-        if(isEnglishAvailable&&!isInEnglish){
+        if (isEnglishAvailable && !isInEnglish) {
             Handler engNotificationHandler = new Handler();
             final ImageView imageHasEn = createFadedButton("hasEn");
             imageHasEn.setOnClickListener(new View.OnClickListener() {
@@ -529,22 +540,22 @@ public class hymnDisplay extends AppCompatActivity {
                 public void run() {
                     enRow.removeViewAt(1);
                 }
-            },4000);
+            }, 4000);
         }
 
         enBut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                    makeEnglishHymn();
+                makeEnglishHymn();
             }
         });
         fontBut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(!historyChanged){
-                    if(isAnyMenuOpen()) {
+                if (!historyChanged) {
+                    if (isAnyMenuOpen()) {
                         retractMenu();
-                    }else {
+                    } else {
                         final SeekBar track = addSeekBar();
                         final TextView size = createMenuHelpCaption("textSize");
                         ImageView reset = createFadedButton("reset");
@@ -552,7 +563,7 @@ public class hymnDisplay extends AppCompatActivity {
                         reset.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View v) {
-                                changeTextSizeBySeekBar((float)40);
+                                changeTextSizeBySeekBar((float) 40);
                                 size.setText("40");
                                 track.setProgress(15);
                                 flipResetIcon();
@@ -571,11 +582,11 @@ public class hymnDisplay extends AppCompatActivity {
         colorBut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(!historyChanged){
-                    if(isAnyMenuOpen()) {
+                if (!historyChanged) {
+                    if (isAnyMenuOpen()) {
                         retractMenu();
-                    }else {
-                        ImageView [] colorOptions = new ImageView[4];
+                    } else {
+                        ImageView[] colorOptions = new ImageView[4];
                         colorOptions[0] = createFadedButton("sun");
                         colorOptions[1] = createFadedButton("moon");
                         colorOptions[2] = createFadedButton("background");
@@ -608,8 +619,8 @@ public class hymnDisplay extends AppCompatActivity {
                         colorOptions[2].setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View v) {
-                                Intent toThemer = new Intent(hymnDisplay.this,ThemeChooser.class);
-                                startActivityForResult(toThemer,3);
+                                Intent toThemer = new Intent(hymnDisplay.this, ThemeChooser.class);
+                                startActivityForResult(toThemer, 3);
                             }
                         });
 
@@ -631,10 +642,10 @@ public class hymnDisplay extends AppCompatActivity {
         shareBut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(!historyChanged){
-                    if(isAnyMenuOpen()) {
+                if (!historyChanged) {
+                    if (isAnyMenuOpen()) {
                         retractMenu();
-                    }else {
+                    } else {
                         ImageView[] shareOptions = new ImageView[4];
                         shareOptions[0] = createFadedButton("app");
                         shareOptions[1] = createFadedButton("stanza");
@@ -656,12 +667,12 @@ public class hymnDisplay extends AppCompatActivity {
                             public void onClick(View v) {
                                 String text = "";
                                 String[] stanzas = new String[length];
-                                for(int i=0;i<length;i++)
-                                    stanzas[i]= ((TextView) hymnDispl.getChildAt(i)).getText().toString();
-                                for(int l=0; l<length; l++)
-                                    text = text+String.valueOf(l+1)+". "+stanzas[l]+"\n";
+                                for (int i = 0; i < length; i++)
+                                    stanzas[i] = ((TextView) hymnDispl.getChildAt(i)).getText().toString();
+                                for (int l = 0; l < length; l++)
+                                    text = text + String.valueOf(l + 1) + ". " + stanzas[l] + "\n";
 
-                                toPasteBin.putExtra("text",text);
+                                toPasteBin.putExtra("text", text);
                                 startActivity(toPasteBin);
                             }
                         });
@@ -671,12 +682,12 @@ public class hymnDisplay extends AppCompatActivity {
                             public void onClick(View v) {
                                 String text = "";
                                 String[] stanzas = new String[length];
-                                for(int i=0;i<length;i++)
-                                    stanzas[i]= ((TextView) hymnDispl.getChildAt(i)).getText().toString();
-                                for(int l=0; l<length; l++)
-                                    text = text+String.valueOf(l+1)+". "+stanzas[l]+"\n";
+                                for (int i = 0; i < length; i++)
+                                    stanzas[i] = ((TextView) hymnDispl.getChildAt(i)).getText().toString();
+                                for (int l = 0; l < length; l++)
+                                    text = text + String.valueOf(l + 1) + ". " + stanzas[l] + "\n";
 
-                                copy(text,hymnNum);
+                                copy(text, hymnNum);
                             }
                         });
                     }
@@ -687,11 +698,11 @@ public class hymnDisplay extends AppCompatActivity {
         prevBut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(Integer.valueOf(s)>1){
+                if (Integer.valueOf(s) > 1) {
                     nextBut.setColorFilter(null);
                     finalizeFavoriteState();
                     historyChanged = true;
-                    populateHymn(String.valueOf(Integer.valueOf(s)-1),false);
+                    populateHymn(String.valueOf(Integer.valueOf(s) - 1), false);
                     checkFavorite();
                     checkEnglish();
                 } else {
@@ -703,11 +714,11 @@ public class hymnDisplay extends AppCompatActivity {
         nextBut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(Integer.valueOf(s)<321){
+                if (Integer.valueOf(s) < 321) {
                     prevBut.setColorFilter(null);
                     finalizeFavoriteState();
                     historyChanged = true;
-                    populateHymn(String.valueOf(Integer.valueOf(s)+1),false);
+                    populateHymn(String.valueOf(Integer.valueOf(s) + 1), false);
                     checkFavorite();
                     checkEnglish();
                 } else {
@@ -722,11 +733,9 @@ public class hymnDisplay extends AppCompatActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        if(requestCode==3)
-        {
-            if(null!=data)
-            {
-                String fromData=data.getStringExtra("mode");
+        if (requestCode == 3) {
+            if (null != data) {
+                String fromData = data.getStringExtra("mode");
                 changeColorMode(fromData);
                 fadeInHymn();
                 //// TODO: 23.03.17
@@ -737,7 +746,7 @@ public class hymnDisplay extends AppCompatActivity {
     }
 
     @Override
-    protected void onPause(){
+    protected void onPause() {
         super.onPause();
         finalizeFavoriteState();
         favInit = heartButBool;
@@ -746,13 +755,13 @@ public class hymnDisplay extends AppCompatActivity {
     }
 
     @Override
-    public void onResume(){
+    public void onResume() {
         super.onResume();
-        if(hasOptions==1)
+        if (hasOptions == 1)
             finish();
     }
 
-    public void fadeInOut(final View v, int delay, final int duration){
+    public void fadeInOut(final View v, int delay, final int duration) {
         v.animate().alpha(1f).setDuration(duration).setStartDelay(delay).withEndAction(new Runnable() {
             @Override
             public void run() {
@@ -761,20 +770,20 @@ public class hymnDisplay extends AppCompatActivity {
         });
     }
 
-    public void slideRight(View v,float distance, int delay, final int duration){
-        v.animate().alpha(1f).translationXBy(distance).setDuration(duration+3*delay).setStartDelay(delay);
+    public void slideRight(View v, float distance, int delay, final int duration) {
+        v.animate().alpha(1f).translationXBy(distance).setDuration(duration + 3 * delay).setStartDelay(delay);
     }
 
-    public void slideLeft(View v,float distance, int delay, final int duration){
+    public void slideLeft(View v, float distance, int delay, final int duration) {
         v.animate().alpha(1f).translationXBy(distance).setDuration(duration).setStartDelay(delay);
     }
 
-    public ImageView createFadedButton(String name){
+    public ImageView createFadedButton(String name) {
         ImageView button = new ImageView(this);
-        button.setPadding(10,0,10,0);
+        button.setPadding(10, 0, 10, 0);
         button.setBackgroundDrawable(getResources().getDrawable(R.color.transBlack));
         button.setLayoutParams(new LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.MATCH_PARENT));
-        switch (name){
+        switch (name) {
             case "record":
                 button.setImageResource(R.drawable.record_icon);
                 break;
@@ -820,28 +829,28 @@ public class hymnDisplay extends AppCompatActivity {
             //special cases
             case "hasEn":
                 button.setImageResource(R.drawable.en_icon_avail);
-                button.setPadding(20,0,20,0);
+                button.setPadding(20, 0, 20, 0);
                 button.setBackgroundDrawable(getResources().getDrawable(R.drawable.faded_black_center));
                 break;
             case "isFav":
                 button.setImageResource(R.drawable.heart_normal);
-                button.setPadding(20,0,20,0);
+                button.setPadding(20, 0, 20, 0);
                 button.setBackgroundDrawable(getResources().getDrawable(R.drawable.faded_black_center));
                 break;
         }
         return button;
     }
 
-    public TextView createMenuHelpCaption(String name){
+    public TextView createMenuHelpCaption(String name) {
         TextView textView = new TextView(this);
         textView.setBackground(getResources().getDrawable(R.drawable.to_left_black));
         textView.setTextColor(parseColor("#ffffff"));
-        textView.setTextSize(TypedValue.COMPLEX_UNIT_SP,24);
+        textView.setTextSize(TypedValue.COMPLEX_UNIT_SP, 24);
         textView.setGravity(Gravity.CENTER);
         textView.setLayoutParams(new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT));
-        textView.setPadding(10,0,10,0);
-        textView.setShadowLayer(7,0,0,Color.BLACK);
-        switch (name){
+        textView.setPadding(10, 0, 10, 0);
+        textView.setShadowLayer(7, 0, 0, Color.BLACK);
+        switch (name) {
             case "record":
                 textView.setText("Make a recording");
                 break;
@@ -849,7 +858,7 @@ public class hymnDisplay extends AppCompatActivity {
                 textView.setText("Write or open notes");
                 break;
             case "english":
-                if(isInEnglish)
+                if (isInEnglish)
                     textView.setText("Open Shona version");
                 else
                     textView.setText("Open English version");
@@ -874,7 +883,7 @@ public class hymnDisplay extends AppCompatActivity {
                 break;
             case "date":
                 Calendar calendar = Calendar.getInstance();
-                String format = new SimpleDateFormat("E, MMM d, yyyy",Locale.getDefault()).format(calendar.getTime());
+                String format = new SimpleDateFormat("E, MMM d, yyyy", Locale.getDefault()).format(calendar.getTime());
                 textView.setText(format);
                 break;
             case "textSize":
@@ -888,15 +897,15 @@ public class hymnDisplay extends AppCompatActivity {
         return textView;
     }
 
-    public SeekBar addSeekBar(){
+    public SeekBar addSeekBar() {
         SeekBar track = new SeekBar(this);
         track.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
                 prevSize = textSize;
                 TextView sample = (TextView) fontRow.getChildAt(2);
-                sample.setText(String.valueOf(progress+25));
-                changeTextSizeBySeekBar((float)(progress+25));
+                sample.setText(String.valueOf(progress + 25));
+                changeTextSizeBySeekBar((float) (progress + 25));
             }
 
             @Override
@@ -909,24 +918,24 @@ public class hymnDisplay extends AppCompatActivity {
                 flipResetIcon();
             }
         });
-        track.setLayoutParams(new LayoutParams(windowWidth/2, LayoutParams.MATCH_PARENT));
+        track.setLayoutParams(new LayoutParams(windowWidth / 2, LayoutParams.MATCH_PARENT));
         track.setBackgroundDrawable(getResources().getDrawable(R.color.transBlack));
         return track;
     }
 
-    public void introSideBarAnimation(){
-        fadeInOut(micBut,1000,700);
-        fadeInOut(editBut,1100,700);
-        fadeInOut(enBut,1200,700);
-        fadeInOut(heartBut,1300,700);
-        fadeInOut(fontBut,1400,700);
-        fadeInOut(colorBut,1500,700);
-        fadeInOut(shareBut,1600,700);
-        fadeInOut(prevBut,1700,700);
-        fadeInOut(nextBut,1800,700);
+    public void introSideBarAnimation() {
+        fadeInOut(micBut, 1000, 700);
+        fadeInOut(editBut, 1100, 700);
+        fadeInOut(enBut, 1200, 700);
+        fadeInOut(heartBut, 1300, 700);
+        fadeInOut(fontBut, 1400, 700);
+        fadeInOut(colorBut, 1500, 700);
+        fadeInOut(shareBut, 1600, 700);
+        fadeInOut(prevBut, 1700, 700);
+        fadeInOut(nextBut, 1800, 700);
     }
 
-    public void resetSideBarPosition(){
+    public void resetSideBarPosition() {
         micBut.setTranslationX(-buttonSize);
         enBut.setTranslationX(-buttonSize);
         editBut.setTranslationX(-buttonSize);
@@ -939,8 +948,8 @@ public class hymnDisplay extends AppCompatActivity {
         canSlideRight = true;
     }
 
-    public void flipHelpIcon(){
-        if(helpOptions){
+    public void flipHelpIcon() {
+        if (helpOptions) {
             auxBut.animate().scaleX(0f).setDuration(100).withEndAction(new Runnable() {
                 @Override
                 public void run() {
@@ -948,8 +957,7 @@ public class hymnDisplay extends AppCompatActivity {
                     auxBut.animate().scaleX(1f).setDuration(100);
                 }
             });
-        }
-        else {
+        } else {
             auxBut.animate().scaleX(0f).setDuration(100).withEndAction(new Runnable() {
                 @Override
                 public void run() {
@@ -960,9 +968,9 @@ public class hymnDisplay extends AppCompatActivity {
         }
     }
 
-    public void flipEnglishIcon(){
-        if(isEnglishAvailable){
-            if(isInEnglish){
+    public void flipEnglishIcon() {
+        if (isEnglishAvailable) {
+            if (isInEnglish) {
                 enBut.animate().scaleX(0f).setDuration(100).withEndAction(new Runnable() {
                     @Override
                     public void run() {
@@ -970,8 +978,7 @@ public class hymnDisplay extends AppCompatActivity {
                         enBut.animate().scaleX(1f).setDuration(100);
                     }
                 });
-            }
-            else {
+            } else {
                 enBut.animate().scaleX(0f).setDuration(100).withEndAction(new Runnable() {
                     @Override
                     public void run() {
@@ -992,8 +999,8 @@ public class hymnDisplay extends AppCompatActivity {
 
     }
 
-    public void flipHeartIcon(){
-        if(heartButBool){
+    public void flipHeartIcon() {
+        if (heartButBool) {
             heartBut.animate().scaleX(0f).setDuration(100).withEndAction(new Runnable() {
                 @Override
                 public void run() {
@@ -1001,8 +1008,7 @@ public class hymnDisplay extends AppCompatActivity {
                     heartBut.animate().scaleX(1f).setDuration(100);
                 }
             });
-        }
-        else {
+        } else {
             heartBut.animate().scaleX(0f).setDuration(100).withEndAction(new Runnable() {
                 @Override
                 public void run() {
@@ -1013,24 +1019,22 @@ public class hymnDisplay extends AppCompatActivity {
         }
     }
 
-    public void flipRecIcon(){
+    public void flipRecIcon() {
         final ImageView button1 = (ImageView) micRow.getChildAt(1);
         final ImageView button2 = (ImageView) micRow.getChildAt(3);
-        if(isRecording){
+        if (isRecording) {
             button1.animate().scaleX(0f).setDuration(100).withEndAction(new Runnable() {
                 @Override
                 public void run() {
-                    if(isRecordingSaved) {
+                    if (isRecordingSaved) {
                         button1.setImageDrawable(getResources().getDrawable(R.drawable.ic_check_black_24dp));
                         button2.setBackgroundDrawable(getResources().getDrawable(R.drawable.faded_white_center));
-                    }
-                    else
+                    } else
                         button1.setImageDrawable(getResources().getDrawable(R.drawable.close_icon));
                     button1.animate().scaleX(1f).setDuration(100);
                 }
             });
-        }
-        else {
+        } else {
             button1.animate().scaleX(0f).setDuration(100).withEndAction(new Runnable() {
                 @Override
                 public void run() {
@@ -1041,7 +1045,7 @@ public class hymnDisplay extends AppCompatActivity {
         }
     }
 
-    public void flipResetIcon(){
+    public void flipResetIcon() {
         final ImageView v = (ImageView) fontRow.getChildAt(3);
         v.animate().scaleX(0f).setDuration(100).withEndAction(new Runnable() {
             @Override
@@ -1061,7 +1065,7 @@ public class hymnDisplay extends AppCompatActivity {
         });
     }
 
-    public void flipBgResetIcon(){
+    public void flipBgResetIcon() {
         final ImageView v = (ImageView) colorRow.getChildAt(4);
         v.animate().scaleX(0f).setDuration(100).withEndAction(new Runnable() {
             @Override
@@ -1091,13 +1095,13 @@ public class hymnDisplay extends AppCompatActivity {
         });
     }
 
-    public boolean isAnyMenuOpen(){
-            return (micButBool||editButBool||enButBool||fontButBool||colorButBool||shareButBool||nextButBool||prevButBool||helpOptions);
+    public boolean isAnyMenuOpen() {
+        return (micButBool || editButBool || enButBool || fontButBool || colorButBool || shareButBool || nextButBool || prevButBool || helpOptions);
     }
 
-    public boolean retractMenu(){
+    public boolean retractMenu() {
         boolean menuRetracted = false;
-        if(helpOptions){
+        if (helpOptions) {
             micRow.removeViewAt(1);
             editRow.removeViewAt(1);
             enRow.removeViewAt(1);
@@ -1110,39 +1114,34 @@ public class hymnDisplay extends AppCompatActivity {
             helpOptions = false;
             flipHelpIcon();
             menuRetracted = true;
-        }
-        else if(micButBool){
+        } else if (micButBool) {
             micRow.removeViewAt(1);
             micRow.removeViewAt(1);
             micRow.removeViewAt(1);
             micRow.removeViewAt(1);
             micButBool = false;
             menuRetracted = true;
-        }
-        else if(editButBool){
+        } else if (editButBool) {
             editRow.removeViewAt(1);
             editRow.removeViewAt(1);
             editRow.removeViewAt(1);
             editButBool = false;
             menuRetracted = true;
 
-        }
-        else if(fontButBool){
+        } else if (fontButBool) {
             fontRow.removeViewAt(1);
             fontRow.removeViewAt(1);
             fontRow.removeViewAt(1);
             fontButBool = false;
             menuRetracted = true;
-        }
-        else if(colorButBool){
+        } else if (colorButBool) {
             colorRow.removeViewAt(1);
             colorRow.removeViewAt(1);
             colorRow.removeViewAt(1);
             colorRow.removeViewAt(1);
             colorButBool = false;
             menuRetracted = true;
-        }
-        else if(shareButBool){
+        } else if (shareButBool) {
             shareRow.removeViewAt(1);
             shareRow.removeViewAt(1);
             shareRow.removeViewAt(1);
@@ -1150,16 +1149,16 @@ public class hymnDisplay extends AppCompatActivity {
             menuRetracted = true;
         }
         /**/
-        else if(menuOpen){
-            slideLeft(micBut,-buttonSize,50,400);
-            slideLeft(editBut,-buttonSize,50,400);
-            slideLeft(enBut,-buttonSize,50,400);
-            slideLeft(heartBut,-buttonSize,50,400);
-            slideLeft(fontBut,-buttonSize,50,400);
-            slideLeft(colorBut,-buttonSize,50,400);
-            slideLeft(shareBut,-buttonSize,50,400);
-            slideLeft(prevBut,-buttonSize,50,400);
-            slideLeft(nextBut,-buttonSize,50,400);
+        else if (menuOpen) {
+            slideLeft(micBut, -buttonSize, 50, 400);
+            slideLeft(editBut, -buttonSize, 50, 400);
+            slideLeft(enBut, -buttonSize, 50, 400);
+            slideLeft(heartBut, -buttonSize, 50, 400);
+            slideLeft(fontBut, -buttonSize, 50, 400);
+            slideLeft(colorBut, -buttonSize, 50, 400);
+            slideLeft(shareBut, -buttonSize, 50, 400);
+            slideLeft(prevBut, -buttonSize, 50, 400);
+            slideLeft(nextBut, -buttonSize, 50, 400);
             Handler adjuster = new Handler();
             adjuster.postDelayed(new Runnable() {
                 @Override
@@ -1174,7 +1173,7 @@ public class hymnDisplay extends AppCompatActivity {
                     prevBut.setTranslationX(-buttonSize);
                     nextBut.setTranslationX(-buttonSize);
                 }
-            },600);
+            }, 600);
             auxBut.setVisibility(View.INVISIBLE);
             canSlideRight = true;
             canSlideLeft = false;
@@ -1185,59 +1184,59 @@ public class hymnDisplay extends AppCompatActivity {
         return menuRetracted;
     }
 
-    public int whichMenuRow(){
+    public int whichMenuRow() {
         int result;
-        if(micButBool)
+        if (micButBool)
             result = 1;
-        else if(editButBool)
+        else if (editButBool)
             result = 2;
-        else if(fontButBool)
+        else if (fontButBool)
             result = 5;
-        else if(colorButBool)
+        else if (colorButBool)
             result = 6;
-        else if(shareButBool)
+        else if (shareButBool)
             result = 7;
         else result = 0;
 
         return result;
     }
 
-    public void changeTextSizeBySeekBar(float value){
+    public void changeTextSizeBySeekBar(float value) {
 
-        for(int l=0; l<length; l++)
+        for (int l = 0; l < length; l++)
             ((TextView) hymnDispl.getChildAt(l)).setTextSize(value);
         textSize = ((TextView) hymnDispl.getChildAt(0)).getTextSize();
-        textSizeChanged=true;
+        textSizeChanged = true;
     }
 
 
-    public void changeTextSize(int unit,float value){
+    public void changeTextSize(int unit, float value) {
 
-        for(int l=0; l<length; l++){
-            if(value>1f&&value<700f){
+        for (int l = 0; l < length; l++) {
+            if (value > 1f && value < 700f) {
                 ((TextView) hymnDispl.getChildAt(l)).setTextSize(unit, value);
             }
         }
         textSize = ((TextView) hymnDispl.getChildAt(0)).getTextSize();
-        textSizeChanged=true;
+        textSizeChanged = true;
 
     }
 
     //Color Management
-    public void changeColorMode(String mode){
-        switch (mode){
+    public void changeColorMode(String mode) {
+        switch (mode) {
             case "night":
                 bg.animate().alpha(1f).setDuration(2000);
                 bg.setColorFilter(parseColor("#000000"));
                 //display.setBackground(getResources().getDrawable(R.color.black));
                 hymnnumColor = parseColor("#50ffffff");
                 buttonLayoutBg = parseColor("#70ffffff");
-                textcolor= capColor = WHITE;
+                textcolor = capColor = WHITE;
                 break;
             case "day":
                 bg.animate().alpha(1f).setDuration(2000);
                 bg.setColorFilter(parseColor("#ffffff"));
-                textcolor= capColor = BLACK;
+                textcolor = capColor = BLACK;
                 hymnnumColor = parseColor("#50000000");
                 buttonLayoutBg = parseColor("#70000000");
                 break;
@@ -1251,18 +1250,18 @@ public class hymnDisplay extends AppCompatActivity {
                 break;
             default:
                 bg.animate().alpha(0f).setDuration(2000);
-                if(isColorDark(mode)){
+                if (isColorDark(mode)) {
                     hymnnumColor = parseColor("#50ffffff");
                     buttonLayoutBg = parseColor("#70ffffff");
-                    textcolor= capColor = WHITE;
+                    textcolor = capColor = WHITE;
                 } else {
-                    textcolor= capColor = BLACK;
+                    textcolor = capColor = BLACK;
                     hymnnumColor = parseColor("#50000000");
                     buttonLayoutBg = parseColor("#70000000");
                 }
                 GradientDrawable gd = new GradientDrawable(
                         GradientDrawable.Orientation.TOP_BOTTOM,
-                        new int[] {getLighterColor(mode),parseColor(mode),parseColor(mode),parseColor(mode),getDarkerColor(mode)});
+                        new int[]{getLighterColor(mode), parseColor(mode), parseColor(mode), parseColor(mode), getDarkerColor(mode)});
                 gd.setGradientType(GradientDrawable.LINEAR_GRADIENT);
                 display.setBackgroundDrawable(gd);
                 capColor = BLACK;
@@ -1270,18 +1269,14 @@ public class hymnDisplay extends AppCompatActivity {
         number.setTextColor(hymnnumColor);
     }
 
-    public boolean isColorDark(String test){
+    public boolean isColorDark(String test) {
         int color = parseColor(test);
-        double darkness = 1-(0.299*Color.red(color) + 0.587*Color.green(color) + 0.114*Color.blue(color))/255;
-        if(darkness<0.333){
-            return false; // It's a light color
-        }else{
-            return true; // It's a dark color
-        }
+        double darkness = 1 - (0.299 * Color.red(color) + 0.587 * Color.green(color) + 0.114 * Color.blue(color)) / 255;
+        return darkness >= 0.333;
     }
 
-    public void fadeInHymn(){
-        if(!stanzaBarStack.isEmpty()){
+    public void fadeInHymn() {
+        if (!stanzaBarStack.isEmpty()) {
             int pop = stanzaBarStack.remove(0);
             removeBar(pop);
         } else {
@@ -1294,7 +1289,7 @@ public class hymnDisplay extends AppCompatActivity {
 
     }
 
-    public int getDarkerColor(String test){
+    public int getDarkerColor(String test) {
         float[] hsv = new float[3];
         int color = parseColor(test);
         Color.colorToHSV(color, hsv);
@@ -1303,7 +1298,7 @@ public class hymnDisplay extends AppCompatActivity {
         return color;
     }
 
-    public int getLighterColor(String test){
+    public int getLighterColor(String test) {
         float[] hsv = new float[3];
         int color = parseColor(test);
         Color.colorToHSV(color, hsv);
@@ -1312,26 +1307,28 @@ public class hymnDisplay extends AppCompatActivity {
         return color;
     }
 
-    public void saveFavState(){
-        if(heartButBool)
+    public void saveFavState() {
+        if (heartButBool)
             favList.pushBack(s);
         else
             favList.delete(s);
     }
 
 
-
-    public void makeEnglishHymn(){
+    public void makeEnglishHymn() {
         changeColorMode(color.get());
 
-        if(isEnglishAvailable&&!isInEnglish){
+        if (isEnglishAvailable && !isInEnglish) {
             isInEnglish = true;
             flipEnglishIcon();
-            populateHymn(s,true);
+            populateHymn(s, true);
 
             String en_g1 = recordFlag.get();
-            if (en_g1.equals("true")){
-                prepareRecording(getIntent().getStringExtra("hymnNumWord"));
+            if (en_g1.equals("true")) {
+                QuickToast("Open the side menu...");
+                QuickToast("And use the Record Option...");
+                QuickToast("It should be the first icon.");
+                recordFlag.deleteAll();
             }
 
             final Handler en_handler = new Handler();
@@ -1339,25 +1336,26 @@ public class hymnDisplay extends AppCompatActivity {
                 @Override
                 public void run() {
                     totalHeight = myScroll.getChildAt(0).getHeight();
-                    bound =  (totalHeight/length);
-                    String check =((TextView) hymnDispl.getChildAt(0)).getText().toString();
-                    if(check.contains("chorus")){
+                    bound = (totalHeight / length);
+                    String check = ((TextView) hymnDispl.getChildAt(0)).getText().toString();
+                    if (check.contains("chorus")) {
                         chorus.setText(check.substring(check.lastIndexOf("chorus")));
                         chorusAvail = true;
-                    }
-                    else
+                    } else
                         chorusAvail = false;
                 }
-            },300);
-        }
-        else if(isInEnglish&&isEnglishAvailable){
+            }, 300);
+        } else if (isInEnglish && isEnglishAvailable) {
             isInEnglish = false;
             flipEnglishIcon();
-            populateHymn(s,false);
+            populateHymn(s, false);
 
             String en_g1 = recordFlag.get();
-            if (en_g1.equals("true")){
-                prepareRecording(getIntent().getStringExtra("hymnNumWord"));
+            if (en_g1.equals("true")) {
+                QuickToast("Open the side menu...");
+                QuickToast("And use the Record Option...");
+                QuickToast("It should be the first icon.");
+                recordFlag.deleteAll();
             }
             changeColorMode(color.get());
 
@@ -1366,33 +1364,32 @@ public class hymnDisplay extends AppCompatActivity {
                 @Override
                 public void run() {
                     totalHeight = myScroll.getChildAt(0).getHeight();
-                    bound =  (totalHeight/length);
-                    String check =((TextView) hymnDispl.getChildAt(0)).getText().toString();
-                    if(check.contains("chorus")){
+                    bound = (totalHeight / length);
+                    String check = ((TextView) hymnDispl.getChildAt(0)).getText().toString();
+                    if (check.contains("chorus")) {
                         chorus.setText(check.substring(check.lastIndexOf("chorus")));
                         chorusAvail = true;
-                    }
-                    else
+                    } else
                         chorusAvail = false;
                 }
-            },300);
+            }, 300);
         }
     }
 
-    public void inflateHelpLayout(int menu){
-        final RelativeLayout parent = (RelativeLayout) findViewById(R.id.activity_hymn_display);
-        final View helpPopup = getLayoutInflater().inflate(R.layout.help_popup, parent,false);
-        RelativeLayout.LayoutParams params= new RelativeLayout.LayoutParams(
+    public void inflateHelpLayout(int menu) {
+        final RelativeLayout parent = findViewById(R.id.activity_hymn_display);
+        final View helpPopup = getLayoutInflater().inflate(R.layout.help_popup, parent, false);
+        RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(
                 ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
         //params.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM, helpPopup.getId());
         helpPopup.setLayoutParams(params);
         parent.addView(helpPopup);
-        final ImageView icon = (ImageView) findViewById(R.id.helpDisplayIcon);
-        final TextView helpCaption = (TextView) findViewById(R.id.helpText);
+        final ImageView icon = findViewById(R.id.helpDisplayIcon);
+        final TextView helpCaption = findViewById(R.id.helpText);
         Handler timer = new Handler();
         obfuscateHymn();
 
-        switch (menu){
+        switch (menu) {
             case 1:
                 icon.setImageDrawable(getResources().getDrawable(R.drawable.record_icon));
                 helpCaption.setText("Click to start recording audio...");
@@ -1414,7 +1411,7 @@ public class hymnDisplay extends AppCompatActivity {
                             }
                         });
                     }
-                },2000);
+                }, 2000);
                 timer.postDelayed(new Runnable() {
                     @Override
                     public void run() {
@@ -1427,7 +1424,7 @@ public class hymnDisplay extends AppCompatActivity {
                             }
                         });
                     }
-                },4000);
+                }, 4000);
                 timer.postDelayed(new Runnable() {
                     @Override
                     public void run() {
@@ -1446,7 +1443,7 @@ public class hymnDisplay extends AppCompatActivity {
                             }
                         });
                     }
-                },6000);
+                }, 6000);
                 break;
             case 2:
                 icon.setImageDrawable(getResources().getDrawable(R.drawable.add_caption_icon));
@@ -1475,7 +1472,7 @@ public class hymnDisplay extends AppCompatActivity {
                             }
                         });
                     }
-                },2000);
+                }, 2000);
                 break;
             case 5:
                 icon.setImageDrawable(getResources().getDrawable(R.drawable.ic_track_bar_black_24dp));
@@ -1498,7 +1495,7 @@ public class hymnDisplay extends AppCompatActivity {
                             }
                         });
                     }
-                },2000);
+                }, 2000);
                 timer.postDelayed(new Runnable() {
                     @Override
                     public void run() {
@@ -1517,7 +1514,7 @@ public class hymnDisplay extends AppCompatActivity {
                             }
                         });
                     }
-                },4000);
+                }, 4000);
                 break;
             case 6:
                 icon.setImageDrawable(getResources().getDrawable(R.drawable.ic_wb_sunny_black_24dp));
@@ -1540,7 +1537,7 @@ public class hymnDisplay extends AppCompatActivity {
                             }
                         });
                     }
-                },2000);
+                }, 2000);
                 timer.postDelayed(new Runnable() {
                     @Override
                     public void run() {
@@ -1553,7 +1550,7 @@ public class hymnDisplay extends AppCompatActivity {
                             }
                         });
                     }
-                },4000);
+                }, 4000);
                 timer.postDelayed(new Runnable() {
                     @Override
                     public void run() {
@@ -1572,7 +1569,7 @@ public class hymnDisplay extends AppCompatActivity {
                             }
                         });
                     }
-                },6000);
+                }, 6000);
                 break;
             case 7:
                 icon.setImageDrawable(getResources().getDrawable(R.drawable.app_icon));
@@ -1595,7 +1592,7 @@ public class hymnDisplay extends AppCompatActivity {
                             }
                         });
                     }
-                },2000);
+                }, 2000);
                 timer.postDelayed(new Runnable() {
                     @Override
                     public void run() {
@@ -1614,32 +1611,34 @@ public class hymnDisplay extends AppCompatActivity {
                             }
                         });
                     }
-                },4000);
+                }, 4000);
                 break;
 
         }
     }
 
-    public void obfuscateHymn(){
-        for(int q=0; q<length;q++){
+    public void obfuscateHymn() {
+        for (int q = 0; q < length; q++) {
             hymnDispl.getChildAt(q).animate().scaleX(.8f).scaleY(.8f).alpha(.1f);
         }
     }
 
-    public void deobfuscateHymn(){
-        for(int q=0; q<length;q++){
+    public void deobfuscateHymn() {
+        for (int q = 0; q < length; q++) {
             hymnDispl.getChildAt(q).animate().scaleX(1f).scaleY(1f).alpha(1f);
         }
     }
 
-    public void QuickToast(String s){
+    public void QuickToast(String s) {
         Toast.makeText(this, s,
                 Toast.LENGTH_SHORT).show();
     }
-    public int StrToInt(String s){
+
+    public int StrToInt(String s) {
         return Integer.valueOf(s);
     }
-    public int getResourceId(String pVariableName, String pResourcename, String pPackageName){
+
+    public int getResourceId(String pVariableName, String pResourcename, String pPackageName) {
         try {
             return getResources().getIdentifier(pVariableName, pResourcename, pPackageName);
         } catch (Exception e) {
@@ -1647,7 +1646,8 @@ public class hymnDisplay extends AppCompatActivity {
             return -1;
         }
     }
-    public void shareAppFunc(){
+
+    public void shareAppFunc() {
         try {
             Intent i = new Intent(Intent.ACTION_SEND);
             i.setType("text/plain");
@@ -1656,12 +1656,13 @@ public class hymnDisplay extends AppCompatActivity {
             sAux = sAux + "https://play.google.com/store/apps/details?id=com.seven.clip.nziyodzemethodist \n\n";
             i.putExtra(Intent.EXTRA_TEXT, sAux);
             startActivity(Intent.createChooser(i, "Share the Gospel:"));
-        } catch(Exception e) {
+        } catch (Exception e) {
             //e.toString();
         }
 
     }
-    public void copy(String s,String num){
+
+    public void copy(String s, String num) {
         ClipboardManager clipboard = (ClipboardManager) getSystemService(CLIPBOARD_SERVICE);
         ClipData clip = ClipData.newPlainText("Hymn", s);
         clipboard.setPrimaryClip(clip);
@@ -1670,19 +1671,20 @@ public class hymnDisplay extends AppCompatActivity {
             Intent i = new Intent(Intent.ACTION_SEND);
             i.setType("text/plain");
             i.putExtra(Intent.EXTRA_SUBJECT, "Nziyo DzeMethodist");
-            i.putExtra(Intent.EXTRA_TEXT,"Hymn "+num+"\n" +
-                    s+ "\n" +
+            i.putExtra(Intent.EXTRA_TEXT, "Hymn " + num + "\n" +
+                    s + "\n" +
                     "\n" +
                     "Shared via Nziyo DzeMethodist\n" +
                     "https://play.google.com/store/apps/details?id=com.seven.clip.nziyodzemethodist");
             startActivity(Intent.createChooser(i, "Share Hymn via:"));
-        } catch(Exception e) {
+        } catch (Exception e) {
             //e.toString();
         }
     }
-    public boolean MediaRecorderReady(){
+
+    public boolean MediaRecorderReady() {
         boolean canRecord;
-        mediaRecorder=new MediaRecorder();
+        mediaRecorder = new MediaRecorder();
         mediaRecorder.setAudioSource(MediaRecorder.AudioSource.MIC);
         mediaRecorder.setOutputFormat(MediaRecorder.OutputFormat.THREE_GPP);
         mediaRecorder.setAudioEncoder(MediaRecorder.OutputFormat.AMR_NB);
@@ -1699,17 +1701,19 @@ public class hymnDisplay extends AppCompatActivity {
 
         return canRecord;
     }
-    public String CreateRandomAudioFileName(int string){
-        StringBuilder stringBuilder = new StringBuilder( string );
-        int i = 0 ;
-        while(i < string ) {
+
+    public String CreateRandomAudioFileName(int string) {
+        StringBuilder stringBuilder = new StringBuilder(string);
+        int i = 0;
+        while (i < string) {
             stringBuilder.append(RandomAudioFileName.
                     charAt(random.nextInt(RandomAudioFileName.length())));
 
-            i++ ;
+            i++;
         }
         return stringBuilder.toString();
     }
+
     private void requestPermission() {
         ActivityCompat.requestPermissions(hymnDisplay.this, new
                 String[]{WRITE_EXTERNAL_STORAGE, RECORD_AUDIO}, RequestPermissionCode);
@@ -1718,11 +1722,12 @@ public class hymnDisplay extends AppCompatActivity {
         requestMorePermission(android.Manifest.permission.WRITE_EXTERNAL_STORAGE,
                 STORAGE_REQUEST_CODE);
     }
+
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String permissions[], @NonNull int[] grantResults) {
         switch (requestCode) {
             case RequestPermissionCode:
-                if (grantResults.length> 0) {
+                if (grantResults.length > 0) {
                     boolean StoragePermission = grantResults[0] ==
                             PackageManager.PERMISSION_GRANTED;
                     boolean RecordPermission = grantResults[1] ==
@@ -1732,7 +1737,7 @@ public class hymnDisplay extends AppCompatActivity {
                         Toast.makeText(hymnDisplay.this, "Permission Granted",
                                 Toast.LENGTH_LONG).show();
                     } else {
-                        Toast.makeText(hymnDisplay.this,"Permission Denied",Toast.LENGTH_LONG).show();
+                        Toast.makeText(hymnDisplay.this, "Permission Denied", Toast.LENGTH_LONG).show();
                     }
                 }
                 break;
@@ -1759,6 +1764,7 @@ public class hymnDisplay extends AppCompatActivity {
             }
         }
     }
+
     public boolean checkPermission() {
         int result = ContextCompat.checkSelfPermission(getApplicationContext(),
                 WRITE_EXTERNAL_STORAGE);
@@ -1767,23 +1773,24 @@ public class hymnDisplay extends AppCompatActivity {
         return result == PackageManager.PERMISSION_GRANTED &&
                 result1 == PackageManager.PERMISSION_GRANTED;
     }
+
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         if (keyCode == KeyEvent.KEYCODE_BACK && event.getRepeatCount() == 0) {
-            if(retractMenu()){
+            if (retractMenu()) {
                 return true;
             }
-            if(favInit!=heartButBool) {
+            if (favInit != heartButBool) {
                 saveFavState();
-                hymnDisplayIntent.putExtra("isFav",heartButBool);
-                hymnDisplayIntent.putExtra("hymnNum",s);
-                setResult(1,hymnDisplayIntent);
+                hymnDisplayIntent.putExtra("isFav", heartButBool);
+                hymnDisplayIntent.putExtra("hymnNum", s);
+                setResult(1, hymnDisplayIntent);
             }
             favInit = heartButBool;
-            if(textSizeChanged){
+            if (textSizeChanged) {
                 textSizeData.update(String.valueOf(pixelsToSp(textSize)));
             }
-            if(isRecording){
+            if (isRecording) {
                 try {
                     mediaRecorder.stop();
                     mediaRecorder.release();
@@ -1804,24 +1811,26 @@ public class hymnDisplay extends AppCompatActivity {
             finish();
 
         }
-        if (keyCode == KeyEvent.KEYCODE_MENU && event.getRepeatCount() == 0){
+        if (keyCode == KeyEvent.KEYCODE_MENU && event.getRepeatCount() == 0) {
             //// TODO: 23.03.17
-            //side drawer open on menu
+
         }
         return true;
     }
-    public String timeStamp(){
+
+    public String timeStamp() {
         long yourmilliseconds = System.currentTimeMillis();
         SimpleDateFormat sdf = new SimpleDateFormat("MMM-dd-yyyy HH:mm", Locale.US);
         Date resultdate = new Date(yourmilliseconds);
         return sdf.format(resultdate);
     }
-    public void prepareRecording(final String key){
 
-        if(!withCaption.find(s))
+    public void prepareRecording(final String key) {
+
+        if (!withCaption.find(s))
             withCaption.pushFront(s);
 
-        final ImageView rec,stop;
+        final ImageView rec, stop;
         final TextView text = (TextView) micRow.getChildAt(4);
         rec = (ImageView) micRow.getChildAt(1);
         stop = (ImageView) micRow.getChildAt(2);
@@ -1836,8 +1845,8 @@ public class hymnDisplay extends AppCompatActivity {
                 long millis = System.currentTimeMillis() - starttime;
                 int seconds = (int) (millis / 1000);
                 int minutes = seconds / 60;
-                seconds     = seconds % 60;
-                text.setText(String.format(Locale.US,"%d:%02d", minutes, seconds));
+                seconds = seconds % 60;
+                text.setText(String.format(Locale.US, "%d:%02d", minutes, seconds));
                 h2.postDelayed(this, 500);
             }
         };
@@ -1845,7 +1854,8 @@ public class hymnDisplay extends AppCompatActivity {
         stop.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(isRecording){
+                rec.setAlpha(1f);
+                if (isRecording) {
                     h2.removeCallbacks(run);
                     try {
                         mediaRecorder.stop();
@@ -1869,34 +1879,33 @@ public class hymnDisplay extends AppCompatActivity {
                     recordFlag.deleteAll();
                     flipRecIcon();
                     isRecording = false;
-                }
-                else
+                } else
                     QuickToast("Click record first.");
             }
         });
         rec.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(!isRecording){
+                if (!isRecording) {
                     flipRecIcon();
+                    rec.setAlpha(.4f);
 
-                    StorageManager sm = (StorageManager)getSystemService(Context.STORAGE_SERVICE);
-                    if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.N){
+                    StorageManager sm = (StorageManager) getSystemService(Context.STORAGE_SERVICE);
+                    if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.N) {
                         StorageVolume volume = sm.getPrimaryStorageVolume();
                         Intent intent = null;
                         intent = volume.createAccessIntent(getRecordingDir().getPath());
-                        startActivityForResult(intent, 1);
+                        //startActivityForResult(intent, 1);
                     }
 
-                    AudioSavePathInDevice= getRecordingDir().getPath() +  File.separator + CreateRandomAudioFileName(5) + "AudioRecording.3gp";
+                    AudioSavePathInDevice = getRecordingDir().getPath() + File.separator + CreateRandomAudioFileName(5) + "AudioRecording.3gp";
 
 
-                    if(checkPermission()) {
-                        Data save = new Data(hymnDisplay.this,key);
+                    if (checkPermission()) {
+                        Data save = new Data(hymnDisplay.this, key);
 
 
-
-                        if(MediaRecorderReady()){
+                        if (MediaRecorderReady()) {
                             Toast.makeText(hymnDisplay.this, "Recording started",
                                     Toast.LENGTH_LONG).show();
                             isRecording = true;
@@ -1925,7 +1934,7 @@ public class hymnDisplay extends AppCompatActivity {
     }
 
     public File getRecordingDir() {
-        File previewDir = new File(Environment.getExternalStorageDirectory(),"Recordings");
+        File previewDir = new File(Environment.getExternalStorageDirectory(), "Recordings");
         if (!previewDir.exists()) previewDir.mkdir();
         return previewDir;
     }
@@ -1953,10 +1962,9 @@ public class hymnDisplay extends AppCompatActivity {
         }
     }
 
-
-
+    //Scale Handler
     @Override
-    public boolean dispatchTouchEvent(MotionEvent ev){
+    public boolean dispatchTouchEvent(MotionEvent ev) {
         super.dispatchTouchEvent(ev);
         return scaleGestureDetector.onTouchEvent(ev);
     }
@@ -1966,7 +1974,7 @@ public class hymnDisplay extends AppCompatActivity {
 
         @Override
         public boolean onScale(ScaleGestureDetector detector) {
-            if(!stanzaBarStack.isEmpty()){
+            if (!stanzaBarStack.isEmpty()) {
                 int pop = stanzaBarStack.remove(0);
                 removeBar(pop);
             } else {
@@ -1975,7 +1983,7 @@ public class hymnDisplay extends AppCompatActivity {
                 Log.d("TextSizeStart", String.valueOf(size));
                 float factor = detector.getScaleFactor();
                 Log.d("Factor", String.valueOf(factor));
-                float product = size*factor;
+                float product = size * factor;
                 Log.d("TextSize", String.valueOf(product));
                 changeTextSize(TypedValue.COMPLEX_UNIT_PX, product);
 
@@ -1987,25 +1995,25 @@ public class hymnDisplay extends AppCompatActivity {
         }
     }
 
-    public void checkFavorite(){
-        if(favList.find(s)!=heartButBool){
+    public void checkFavorite() {
+        if (favList.find(s) != heartButBool) {
             flipHeartIcon();
             heartButBool = favList.find(s);
             favInit = heartButBool;
         }
     }
 
-    public void finalizeFavoriteState(){
-        if(favInit!=heartButBool) {
+    public void finalizeFavoriteState() {
+        if (favInit != heartButBool) {
             saveFavState();
-            hymnDisplayIntent.putExtra("isFav",heartButBool);
-            hymnDisplayIntent.putExtra("hymnNum",s);
-            setResult(1,hymnDisplayIntent);
+            hymnDisplayIntent.putExtra("isFav", heartButBool);
+            hymnDisplayIntent.putExtra("hymnNum", s);
+            setResult(1, hymnDisplayIntent);
         }
     }
 
-    public void checkEnglish(){
-        if(isEnglishAvailable != engCheck.isEn(s)){
+    public void checkEnglish() {
+        if (isEnglishAvailable != engCheck.isEn(s)) {
             isEnglishAvailable = engCheck.isEn(s);
             flipEnglishIcon();
 
@@ -2014,11 +2022,11 @@ public class hymnDisplay extends AppCompatActivity {
 
     public float pixelsToSp(float px) {
         float scaledDensity = getResources().getDisplayMetrics().scaledDensity;
-        return px/scaledDensity;
+        return px / scaledDensity;
     }
 
-    public void populateHymn(String num,boolean isInEnglish){
-        if(!num.equals("")){
+    public void populateHymn(String num, boolean isInEnglish) {
+        if (!num.equals("")) {
             Hymns hymns = new Hymns(this);
             hymnDispl.removeAllViews();
             hymnName = hymns.getTitle(num, isInEnglish);
@@ -2029,13 +2037,13 @@ public class hymnDisplay extends AppCompatActivity {
 
             TextView[] hymnStanzas = getHymnTextviews(hymns.getHymn(num, isInEnglish));
             for (TextView hymnStanza : hymnStanzas) hymnDispl.addView(hymnStanza);
-            if(chorusShown){
+            if (chorusShown) {
                 chorus.setVisibility(View.INVISIBLE);
                 hymnpop.setVisibility(View.INVISIBLE);
                 chorusShown = false;
             }
         } else {
-            String[] errorMessages = {"There has been a problem","loading the hymn","Please pressback"};
+            String[] errorMessages = {"There has been a problem", "loading the hymn", "Please pressback"};
             hymnDispl.removeAllViews();
             title.setText("Error");
             populateCaption(errorMessages);
@@ -2048,10 +2056,10 @@ public class hymnDisplay extends AppCompatActivity {
             @Override
             public void run() {
                 totalHeight = myScroll.getChildAt(0).getHeight();
-                bound =  (totalHeight/length);
+                bound = (totalHeight / length);
                 TextView firstStanza = (TextView) hymnDispl.getChildAt(0);
-                String check =firstStanza.getText().toString();
-                if(check.contains("chorus")){
+                String check = firstStanza.getText().toString();
+                if (check.contains("chorus")) {
                     chorus.setText(check.substring(check.lastIndexOf("chorus")));
                     chorusAvail = true;
                 } else {
@@ -2060,34 +2068,37 @@ public class hymnDisplay extends AppCompatActivity {
                 }
 
             }
-        },300);
+        }, 300);
     }
 
-    public TextView[] getHymnTextviews(String[] arr){
+    public TextView[] getHymnTextviews(String[] arr) {
         int size = arr.length;
         length = size;
         TextView[] textViews = new TextView[size];
-        for(int i=0;i<size;i++)
-            textViews[i]=new TextView(hymnDisplay.this);
-        for(int i=0;i<size;i++)
+        for (int i = 0; i < size; i++)
+            textViews[i] = new TextView(hymnDisplay.this);
+        for (int i = 0; i < size; i++)
             textViews[i].setText(arr[i]);
         formatTextViewsToHymnStyle(textViews);
         return textViews;
     }
 
-    public void formatTextViewsToHymnStyle(TextView[] arr){
+    public void formatTextViewsToHymnStyle(TextView[] arr) {
         int size = arr.length;
-        for(int i=0;i<size;i++){
+        for (int i = 0; i < size; i++) {
             arr[i].setTextSize(textSize);
             arr[i].setId(i);
             arr[i].setGravity(Gravity.CENTER);
             arr[i].setTextColor(textcolor);
             arr[i].setOnTouchListener(tapStanza);
+            arr[i].setOnLongClickListener(longTapStanza);
+            arr[i].setClickable(true);
+            arr[i].setBackgroundResource(backgroundResource);
         }
     }
 
-    public void populateCaption(final String[] caps){
-        clength= caps.length;
+    public void populateCaption(final String[] caps) {
+        clength = caps.length;
         showCaption.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -2095,7 +2106,7 @@ public class hymnDisplay extends AppCompatActivity {
                 captionShow.setVisibility(View.VISIBLE);
                 number.animate().scaleY(.5f);
                 number.animate().scaleX(.5f);
-                for(int f = 0; f<clength; f++){
+                for (int f = 0; f < clength; f++) {
                     Handler but = new Handler();
                     Handler timer = new Handler();
                     final int finalF = f;
@@ -2104,7 +2115,7 @@ public class hymnDisplay extends AppCompatActivity {
                         public void run() {
                             captionShow.setText(caps[finalF]);
                         }
-                    },(f*3000));
+                    }, (f * 3000));
                     but.postDelayed(new Runnable() {
                         @Override
                         public void run() {
@@ -2113,7 +2124,7 @@ public class hymnDisplay extends AppCompatActivity {
                             number.animate().scaleY(1f);
                             number.animate().scaleX(1f);
                         }
-                    },(clength*3000));
+                    }, (clength * 3000));
                 }
 
             }
@@ -2121,7 +2132,7 @@ public class hymnDisplay extends AppCompatActivity {
 
         number.animate().scaleY(.5f);
         number.animate().scaleX(.5f);
-        for(int f = 0; f<clength; f++){
+        for (int f = 0; f < clength; f++) {
             Handler but = new Handler();
             Handler timer = new Handler();
             final int finalF = f;
@@ -2130,7 +2141,7 @@ public class hymnDisplay extends AppCompatActivity {
                 public void run() {
                     captionShow.setText(caps[finalF]);
                 }
-            },(f*3000));
+            }, (f * 3000));
             but.postDelayed(new Runnable() {
                 @Override
                 public void run() {
@@ -2139,11 +2150,11 @@ public class hymnDisplay extends AppCompatActivity {
                     number.animate().scaleY(1f);
                     number.animate().scaleX(1f);
                 }
-            },(clength*3000));
+            }, (clength * 3000));
         }
     }
 
-    public void createCaption(){
+    public void createCaption() {
         captionShow.setFactory(new ViewSwitcher.ViewFactory() {
             @Override
             public View makeView() {
@@ -2154,14 +2165,14 @@ public class hymnDisplay extends AppCompatActivity {
                 return captionView;
             }
         });
-        Animation in = AnimationUtils.loadAnimation(this,R.anim.zoom_in);
-        Animation out = AnimationUtils.loadAnimation(this,R.anim.slide_out_likes_counter);
+        Animation in = AnimationUtils.loadAnimation(this, R.anim.zoom_in);
+        Animation out = AnimationUtils.loadAnimation(this, R.anim.slide_out_likes_counter);
         captionShow.setInAnimation(in);
         captionShow.setOutAnimation(out);
     }
 
-    public void openNavigationDrawer(){
-        if(canSlideRight) {
+    public void openNavigationDrawer() {
+        if (canSlideRight) {
             slideRight(micBut, buttonSize, 50, 100);
             slideRight(editBut, buttonSize, 100, 100);
             slideRight(enBut, buttonSize, 150, 100);
@@ -2178,8 +2189,8 @@ public class hymnDisplay extends AppCompatActivity {
         }
     }
 
-    public void closeNavigationDrawer(){
-        if(canSlideLeft) {
+    public void closeNavigationDrawer() {
+        if (canSlideLeft) {
             slideLeft(micBut, -buttonSize, 50, 400);
             slideLeft(editBut, -buttonSize, 50, 400);
             slideLeft(enBut, -buttonSize, 50, 400);
@@ -2196,26 +2207,26 @@ public class hymnDisplay extends AppCompatActivity {
         }
     }
 
-    public void addBar(final TextView textView, int pos){
+    public void addBar(final TextView textView, int pos) {
         final LayoutInflater linflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        View stanzaBar = linflater.inflate(R.layout.stanza_bar,null);
-        final Data booking = new Data(this,"bookmark");
+        View stanzaBar = linflater.inflate(R.layout.stanza_bar, null);
+        final Data booking = new Data(this, "bookmark");
 
-        makeBookmark = (ImageView) stanzaBar.findViewById(R.id.makeBookmark);
-        makeCardBut = (ImageView) stanzaBar.findViewById(R.id.makeCardBut);
-        if(booking.get().equals(s)){
+        makeBookmark = stanzaBar.findViewById(R.id.makeBookmark);
+        makeCardBut = stanzaBar.findViewById(R.id.makeCardBut);
+        if (booking.get().equals(s)) {
             bookmarkAvail = true;
             makeBookmark.setColorFilter(getResources().getColor(R.color.burn));
         }
         makeBookmark.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(bookmarkAvail){
-                    bookmarkAvail=false;
+                if (bookmarkAvail) {
+                    bookmarkAvail = false;
                     booking.deleteAll();
                     makeBookmark.setColorFilter(null);
                 } else {
-                    bookmarkAvail=true;
+                    bookmarkAvail = true;
                     booking.update(s);
                     makeBookmark.setColorFilter(getResources().getColor(R.color.burn));
                 }
@@ -2226,23 +2237,24 @@ public class hymnDisplay extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String exportText = textView.getText().toString();
-                Intent toCard = new Intent(hymnDisplay.this,MakeCard.class);
-                toCard.putExtra("text",exportText);
-                toCard.putExtra("title",hymnName);
-                toCard.putExtra("number",s);
+                Intent toCard = new Intent(hymnDisplay.this, MakeCard.class);
+                toCard.putExtra("text", exportText);
+                toCard.putExtra("title", hymnName);
+                toCard.putExtra("number", s);
                 startActivity(toCard);
             }
         });
 
 
-        hymnDispl.addView(stanzaBar,pos);
+        hymnDispl.addView(stanzaBar, pos);
         textView.setBackground(getResources().getDrawable(R.drawable.top_rounded_white));
         textView.setTextColor(parseColor("#000000"));
     }
-    public void removeBar(int pos){
+
+    public void removeBar(int pos) {
         hymnDispl.removeView(hymnDispl.getChildAt(pos));
         TextView textView = (TextView) hymnDispl.getChildAt(pos);
-        textView.setBackground(null);
+        textView.setBackgroundResource(backgroundResource);
         textView.setTextColor(textcolor);
     }
 }

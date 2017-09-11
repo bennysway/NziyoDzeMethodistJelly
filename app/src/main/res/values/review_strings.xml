@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer-array name="reviews_stars">
+        <item>@drawable/ic_1_star</item>
+        <item>@drawable/ic_5_star</item>
+        <item>@drawable/ic_1_star</item>
+        <item>@drawable/ic_5_star</item>
+        <item>@drawable/ic_5_star</item>
+        <item>@drawable/ic_5_star</item>
+        <item>@drawable/ic_1_star</item>
+        <item>@drawable/ic_5_star</item>
+        <item>@drawable/ic_5_star</item>
+        <item>@drawable/ic_1_star</item>
+        <item>@drawable/ic_5_star</item>
+        <item>@drawable/ic_5_star</item>
+        <item>@drawable/ic_5_star</item>
+        <item>@drawable/ic_5_star</item>
+        <item>@drawable/ic_5_star</item>
+        <item>@drawable/ic_5_star</item>
+        <item>@drawable/ic_5_star</item>
+        <item>@drawable/ic_5_star</item>
+        <item>@drawable/ic_5_star</item>
+        <item>@drawable/ic_5_star</item>
+        <item>@drawable/ic_5_star</item>
+        <item>@drawable/ic_5_star</item>
+        <item>@drawable/ic_5_star</item>
+        <item>@drawable/ic_5_star</item>
+        <item>@drawable/ic_5_star</item>
+        <item>@drawable/ic_5_star</item>
+        <item>@drawable/ic_5_star</item>
+        <item>@drawable/ic_5_star</item>
+        <item>@drawable/ic_5_star</item>
+        <item>@drawable/ic_5_star</item>
+        <item>@drawable/ic_3_star</item>
+        <item>@drawable/ic_5_star</item>
+    </integer-array>
+
+    <string-array name="reviews_comments">
+        <item>The hymn book does not open</item>
+        <item>The hymn book was great.Good job!!</item>
+        <item>Upgrade</item>
+        <item>This is awesome</item>
+        <item>T\'s awesome</item>
+        <item>Amazing</item>
+        <item>Thanks for the app, but it is a disaster....not working at all.</item>
+        <item>Awesome</item>
+        <item>This is the best app. It reminds of my days as a youth . Good app. Keep it up. Works on my tablet flawlessly.</item>
+        <item>Am using a samsung note 4. The hymn book does not open at all. Am disappointed really. Wasted my bytes downloading the app.</item>
+        <item>Good</item>
+        <item>It\'s now awesome. After the recent update. Now enjoying it on my Lolipop</item>
+        <item>Wonderfull app I\'m loving It</item>
+        <item>Loved it</item>
+        <item>Love this app just wish there was a Ndebele version too</item>
+        <item>E new version is perfect</item>
+        <item>Love it super</item>
+        <item>Love this app alot</item>
+        <item>Good application totally love it!!!!</item>
+        <item>The best</item>
+        <item>Just nice</item>
+        <item>A kiss in the sky love it</item>
+        <item>Hate this app</item>
+        <item>I love it</item>
+        <item>liked it</item>
+        <item>Loved it</item>
+        <item>Best hym book ever</item>
+        <item>makagadzira app yakanaka zvikuru, ndafara nelatest update, tachikumbirawozve mamwe mapages aye emuhymn book eminamato kana zvvichibvira kuti aiswe muApp umu, tatenda</item>
+        <item>Good work</item>
+        <item>Maita basa ne update dai zvaigona maita kuti kana Paine ma events tikwanise kutumirwa pa hymn ipapa</item>
+        <item>Would\'ve given it 5 stars if it doesn\'t constantly crush on my device Great App though, love it</item>
+        <item>Perfect shona hymn book. why not a ndebele/zulu hymn book?</item>
+    </string-array>
+
+    <string-array name="review_replies">
+        <item>I\'m sure you have Android JellyBean (4.x.x) as your system. This app was made initially targeted at Marshmello (android 5.x.x) and above. We have updated the hymnbook to be compatible (with minor features removed) for it to be compatible but still have a great android experience. Be Blessed.</item>
+        <item>.</item>
+        <item>.Please note the one star defines a lot… An improved app rating will motivate updates. Considering a disadvantage to Android 4 users, it would take hard work to match the interface on Android 5+</item>
+        <item>.</item>
+        <item>.</item>
+        <item>.</item>
+        <item>Update the app, the version available is compatible with all devices now</item>
+        <item>.</item>
+        <item>.</item>
+        <item>.</item>
+        <item>.</item>
+        <item>Glad you liked the update. :) Appreciating the 5 stars.</item>
+        <item>.</item>
+        <item>.</item>
+        <item>.</item>
+        <item>.</item>
+        <item>.</item>
+        <item>.</item>
+        <item>.</item>
+        <item>.</item>
+        <item>.</item>
+        <item>.</item>
+        <item>Can you tell us the reason why you don\'t like it so we can improve on it. Regards Blessing F. Charumbira</item>
+        <item>.</item>
+        <item>.</item>
+        <item>.</item>
+        <item>.</item>
+        <item>Totenda Mwari uye maita basa zvikuru nekutizivisa kuti mafarira this app. Chikumbiro tachinzwa uye tichakuzivisai kana tazvigona in the following updates.</item>
+        <item>.</item>
+        <item>Totenda zvikuru. Tirikutotarisira that feature in the future updates uyezve kuti maevents awa aende kunzvimbo chaidzo.</item>
+        <item>Thank you for the positive review. Please contact via email with the details of the point of crash and an update will be available soon to patch the error. Best regards. Dev.</item>
+        <item>.</item>
+    </string-array>
+
+    <array name="review_colors">
+        <item>#5fcc5f00</item>
+        <item>#5fcc5f00</item>
+        <item>#5fcc5f00</item>
+        <item>#5fcc5f00</item>
+        <item>#5fcc5f00</item>
+        <item>#5fcc5f00</item>
+        <item>#5fcc5f00</item>
+        <item>#5fcc5f00</item>
+        <item>#5fcc5f00</item>
+        <item>#5fcc5f00</item>
+        <item>#5fcc5f00</item>
+        <item>#5fcc5f00</item>
+        <item>#5fcc5f00</item>
+        <item>#5fcc5f00</item>
+        <item>#5fcc5f00</item>
+        <item>#5fcc5f00</item>
+        <item>#5fcc5f00</item>
+        <item>#5fcc5f00</item>
+        <item>#5fcc5f00</item>
+        <item>#5fcc5f00</item>
+        <item>#5fcc5f00</item>
+        <item>#5fcc5f00</item>
+        <item>#5fcc5f00</item>
+        <item>#5fcc5f00</item>
+        <item>#5fcc5f00</item>
+        <item>#5fcc5f00</item>
+        <item>#5fcc5f00</item>
+        <item>#5fcc5f00</item>
+        <item>#5fcc5f00</item>
+        <item>#5fcc5f00</item>
+        <item>#5fcc5f00</item>
+        <item>#5fcc5f00</item>
+    </array>
+
+</resources>

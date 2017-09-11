@@ -38,6 +38,7 @@
         android:layout_height="match_parent"
         android:fastScrollEnabled="true"
         android:paddingTop="50dp"
+        android:clipToPadding="false"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
 
@@ -49,6 +50,7 @@
         android:gravity="center"
         android:fontFamily="cursive"
         android:layout_width="match_parent"
+        android:elevation="@dimen/white_card_elevation"
         android:layout_height="50dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"

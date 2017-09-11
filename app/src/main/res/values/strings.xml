@@ -23,37 +23,34 @@
 
     <string name="en_hymn_list">2,5,10,13,17,18,20,23,24,26,27,28,32,33,38,39,40,42,43,44,47,48,49,53,57,58,63,85,94,98,99,103,104,107,108,120,123,127,138,141,144,147,152,154,153,155,160,164,163,173,181,186,195,204,217,235,250,251,267,293,</string>
 
-    <string name="notification_date_string">21 June 2017</string>
+    <string name="notification_date_string">11 September 2017</string>
     <string name="notification_text_string">
-        Android 7 SDK! A revamped interface and new features\n\n
+        In this update, I won\'t have the say\n\n\n\n
 
-        I would like to present this app, now running with the Android 7 SDK. Its now blazingly fast, less errors and I have to admit, its as more pleasing to use than before.
+        I\'ll just say, enjoy the Bible Readings feature and the English search engine.\n\n\n
 
-        I recall when the shift was necessary: latest phones slowed down, I had optimized for lower devices, at their expense. In short, everything is balanced and everyone has the same experience.\n
-        Small features were added, feel free to try them.\n\n
+        Feel free to star and review the HymnBook. I\'ll be updating the bubbles weekly.\n\n\n
 
-        -New Cloth animation added to main side drawer\n
-        -Permissions rechecked\n
-        -Speed optimized for ultra HD screens\n
-        -New Bookmark Feature. Immediately open your bookmark before you do anything\n
-        -Access the Bookmark Feature by clicking your stanza 3 times\n
-        -Access to Splash Hymn Quote, by clicking the hymn number when the app loads\n
-        -Smooth navigation through Recent and Favourites directly in the menu bar\n
-        -New Card Feature. Share your favourite stanza as an image to Twitter,Snapchat,Whatsapp, Facebook etc\n
-        -Access Card Feature by clicking your stanza 3 times\n
-        -Small changes in the interface, but however, it is still the same\n\n
+        Its been a pleasure listening to the reviews and trying to accomplish them. I hope the foundation is already set and strong, for there will be expansions,extension and upgrades that have to be as trusted like before.But let our might be used for praise. If what I do isn\'t for God\'s glory, then let me glorify God instead.\n\n
 
-        Fixes:\n\n
-
-        -Speed optimized (thanks to Android 7 SDK and compatibility)\n
-        -Scrolling, activity transition, optimized\n\n\n
-
-        Working on this app has been a journey and it is still long before done. Planning on writing a Help Manual in the next update, add a web app that cloud syncs. As for Apple, sadly, development might not start early. However I am sure a masterpiece is worth waiting for. Let our might be used for praise. If what I do isn\'t for God\'s glory, then let me glorify God instead.\n\n
-
-        Blessing F. Charumbira\n\n\n
+        Blessing F. Charumbira\n\n
     </string>
 
     <string name="is_maindrawer_open">false</string>
+
+    <string name="new_features">
+        -Sunday Readings\n
+        -User Authentication\n
+        -Glass panels on Hymn Number\n
+        -Bookmark Feature modified.\n
+        -Access the Bookmark Feature by long clicking your stanza\n
+        -Splash Screen Background new animation\n
+        -Smooth navigation through hymns directly in the menu bar, next and previous hymn\n
+        -Card Feature Modified\n
+        -Access Card Feature by long clicking your stanza\n
+        -Built in KJV Bible for Bible readings, or open in your Bible app.\n
+        -Small help animations added, but however, it is still the same\n\n
+    </string>
 
     <!-- Strings related to Settings -->
 

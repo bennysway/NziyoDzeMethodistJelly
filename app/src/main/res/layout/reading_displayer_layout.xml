@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/readingDisplayContentRelativeView">
+
+    <LinearLayout
+        android:background="@drawable/square_reading"
+        android:id="@+id/readingDisplayBar"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:animateLayoutChanges="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
+
+        <TextView
+            android:text="Reading"
+            android:id="@+id/readingsBarText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:shadowRadius="10.0"
+            android:shadowDy="0.0"
+            android:shadowDx="0.0"
+            android:shadowColor="@color/black"
+            android:textSize="30sp"
+            android:padding="5dp" />
+
+        <TextView
+            android:text="KJV"
+            android:id="@+id/versionBarText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:shadowRadius="10.0"
+            android:shadowDy="0.0"
+            android:shadowDx="0.0"
+            android:shadowColor="@color/black"
+            android:textSize="14sp"
+            android:padding="5dp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_open_external"
+            android:id="@+id/openExternalReadingBut" />
+
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/readingDisplayBar"
+        android:id="@+id/readingListContentScrollView">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/readingDisplayContent"
+            android:animateLayoutChanges="true"
+            android:orientation="vertical">
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

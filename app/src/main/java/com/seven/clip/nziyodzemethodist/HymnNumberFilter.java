@@ -5,15 +5,11 @@ import android.text.Spanned;
 
 /**
  * Created by bennysway on 18.02.17.
+ *
  */
 
 public class HymnNumberFilter implements InputFilter {
     private int min, max;
-
-    public HymnNumberFilter(int min, int max) {
-        this.min = min;
-        this.max = max;
-    }
 
     public HymnNumberFilter(String min, String max) {
         this.min = Integer.parseInt(min);

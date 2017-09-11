@@ -1,11 +1,9 @@
 package com.seven.clip.nziyodzemethodist;
 
 import android.content.Intent;
-import android.graphics.PorterDuff;
 import android.graphics.Typeface;
-import android.media.Image;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.AdapterView;
@@ -13,8 +11,6 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import static android.graphics.Color.parseColor;
 
 public class FavList extends AppCompatActivity {
 
@@ -33,11 +29,11 @@ public class FavList extends AppCompatActivity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
-        nofavText = (TextView) findViewById(R.id.nofavText);
-        TextView favTitle = (TextView) findViewById(R.id.favTitle);
-        ls = (ListView) findViewById(R.id.FavListView);
+        nofavText = findViewById(R.id.nofavText);
+        TextView favTitle = findViewById(R.id.favTitle);
+        ls = findViewById(R.id.FavListView);
         View back = findViewById(R.id.favBackBut);
-        ImageView favBg = (ImageView) findViewById(R.id.favBg);
+        ImageView favBg = findViewById(R.id.favBg);
         final Intent toHymn = new Intent(this,hymnDisplay.class);
         final Intent toRemoveFav = new Intent(this,removeFav.class);
         toRemoveFav.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);

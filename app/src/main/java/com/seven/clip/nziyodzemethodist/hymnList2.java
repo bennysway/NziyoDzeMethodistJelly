@@ -3,9 +3,9 @@ package com.seven.clip.nziyodzemethodist;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Typeface;
+import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.WindowManager;
@@ -38,9 +38,8 @@ public class hymnList2 extends AppCompatActivity {
         recFlag.deleteAll();
 
 
-
-        pop = (TextView) findViewById(R.id.hymnScrollPop);
-        TextView topTitle = (TextView) findViewById(R.id.hymnListTitle);
+        pop = findViewById(R.id.hymnScrollPop);
+        TextView topTitle = findViewById(R.id.hymnListTitle);
         timer = new Handler();
         scroll = new HymnListScroll();
         View back = findViewById(R.id.hymnListBackButton);
@@ -63,7 +62,7 @@ public class hymnList2 extends AppCompatActivity {
                         this,
                         sample
                 );
-        listView = (ListView) findViewById(R.id.hymnList);
+        listView = findViewById(R.id.hymnList);
         listView.setAdapter(adapter);
     }
     public void vis(View v){

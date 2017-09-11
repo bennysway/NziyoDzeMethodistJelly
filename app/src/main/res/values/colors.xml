@@ -16,6 +16,8 @@
     <color name="fadedWhite">#efffffff</color>
     <color name="ogBurn">#cc5f00</color>
     <color name="burnedburn">#deffe4c2</color>
+    <color name="green">#018101</color>
+    <color name="gray">#e0e0e0</color>
 
     <color name="lightbookbg">#e8e8e8</color>
     <color name="micbg">#c95a7b</color>

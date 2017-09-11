@@ -19,7 +19,7 @@
     </Preference>
 
     <Preference android:title="@string/account_management_title">
-        <intent android:action="seven.clip.action.manageLogin   " />
+        <intent android:action="seven.clip.action.manageLogin" />
     </Preference>
 
 </PreferenceScreen>
