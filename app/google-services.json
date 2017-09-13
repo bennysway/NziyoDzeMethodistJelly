@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "622909826164-j49ggpem0uotphsj7c7p41k8g7hao16g.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.seven.clip.nziyodzemethodist",
+            "certificate_hash": "5a8bc4b8ed08d613a05b1902897186027b16e44d"
+          }
+        },
+        {
           "client_id": "622909826164-vbi54jkbqldspe7f8g5j97ddc658ffpe.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
