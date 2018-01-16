@@ -31,16 +31,19 @@
         <meta-data
             android:name="android.max_aspect"
             android:value="2.1" />
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
 
         <activity
             android:name=".MainActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".hymnDisplay"
+            android:name=".HymnDisplay"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateHidden" />
         <activity
-            android:name=".hymnList2"
+            android:name=".HymnList"
             android:screenOrientation="portrait" />
         <activity
             android:name=".MainDrawer"
@@ -48,11 +51,6 @@
         <activity
             android:name=".FavList"
             android:screenOrientation="portrait" />
-        <activity
-            android:name=".MakeFav"
-            android:noHistory="true"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.Popups" />
         <activity
             android:name=".ClearData"
             android:noHistory="true"
@@ -83,10 +81,6 @@
             android:label="@string/title_activity_settings"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.Fullscreen" />
-        <activity
-            android:name=".SandBox"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.Popups" />
         <activity
             android:name=".ChoosePic"
             android:screenOrientation="portrait">
@@ -182,8 +176,11 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name=".ReadingDisplay"
-            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".ReadingDisplay"
+            android:screenOrientation="portrait" />
+        <activity android:name=".SandBox"
+            android:theme="@style/AppTheme.Popups"/>
     </application>
 
 </manifest>

@@ -48,7 +48,7 @@ public class SearchShonaFragment extends Fragment {
             ls.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                 @Override
                 public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                    Intent toHymn = new Intent(getContext(), hymnDisplay.class);
+                    Intent toHymn = new Intent(getContext(), HymnDisplay.class);
                     toHymn.putExtra("hymnNum",shonaResults.get(i).getHymnNum());
                     toHymn.putExtra("isInEnglish",shonaResults.get(i).getIsInEnglish());
                     startActivity(toHymn);

@@ -9,14 +9,17 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.Arrays;
+
 public class CaptionList extends AppCompatActivity {
     ListView ls;
-    String list;
     MyCaptionListAdapter adapter;
-    Data withCaption;
     String[] names;
     int counter = 0;
     TextView noCapsText;
+
+    UserDataIO userData;
+    xHymns hymns;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,7 +32,8 @@ public class CaptionList extends AppCompatActivity {
         TextView capTitle = findViewById(R.id.captionsTitle);
         ls = findViewById(R.id.captionsListView);
         View back = findViewById(R.id.captionsBackButton);
-        withCaption = new Data(this,"withcaption");
+        userData = new UserDataIO(this);
+        hymns = new xHymns(this);
 
         Typeface custom_font = Typeface.createFromAsset(getAssets(),  "fonts/bh.ttf");
         capTitle.setTypeface(custom_font);
@@ -41,21 +45,14 @@ public class CaptionList extends AppCompatActivity {
             }
         });
 
-        list = withCaption.get();
-        for( int i=0; i<list.length(); i++ ) {
-            if( list.charAt(i) == ',' ) {
-                counter++;
-            }
-        }
-        final String[]captionHymns =list.split(",");
-        names = new String[counter];
-        for(int i=0;i<counter;i++){
-            names[i] =captionHymns[i]+". "+ getStringResourceByName("hymn"+captionHymns[i]+"firstline");
-        }
-        if(counter==0){
+        if(userData.getCaptionList().size()<1){
             noCapsText.animate().scaleY(2f).scaleX(2f).setDuration(100000);
         }
         else {
+            String []names = new String[userData.getCaptionList().size()];
+            for(int i=0;i<userData.getCaptionList().size();i++){
+                names[i] = hymns.getTitle(userData.getCaptionList().get(i),false, true);
+            }
             adapter =
                     new MyCaptionListAdapter(
                             this,

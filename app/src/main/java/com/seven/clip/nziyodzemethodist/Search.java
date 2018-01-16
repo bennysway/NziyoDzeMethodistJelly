@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextSwitcher;
@@ -35,12 +36,14 @@ public class Search extends AppCompatActivity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
-        viewPager = (ViewPager) findViewById(R.id.searchViewPager);
-        searchTitle = (LinearLayout) findViewById(R.id.searchTitle);
-        final ImageView shBut = (ImageView) findViewById(R.id.searchShBut);
-        final ImageView enBut = (ImageView) findViewById(R.id.searchEnBut);
-        final CircularTextView shonaCount = (CircularTextView) findViewById(R.id.shonaSearchCount);
-        final CircularTextView englishCount = (CircularTextView) findViewById(R.id.englishSearchCount);
+        viewPager = findViewById(R.id.searchViewPager);
+        searchTitle = findViewById(R.id.searchTitle);
+        final ImageView shBut = findViewById(R.id.searchShBut);
+        final ImageView enBut = findViewById(R.id.searchEnBut);
+        final Button shonaBut = findViewById(R.id.shonaSearchListButton);
+        final Button englishBut = findViewById(R.id.englishSearchListButton);
+        final CircularTextView shonaCount = findViewById(R.id.shonaSearchCount);
+        final CircularTextView englishCount = findViewById(R.id.englishSearchCount);
         View backBut = findViewById(R.id.searchBackBut);
         Data recordFlag = new Data(this,"recordflag");
         recordFlag.deleteAll();
@@ -50,14 +53,14 @@ public class Search extends AppCompatActivity {
 
         viewPager.setAdapter(mAdapter);
 
-        shBut.setOnClickListener(new View.OnClickListener() {
+        shonaBut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 viewPager.setCurrentItem(0,true);
             }
         });
 
-        enBut.setOnClickListener(new View.OnClickListener() {
+        englishBut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 viewPager.setCurrentItem(1,true);
@@ -247,7 +250,6 @@ public class Search extends AppCompatActivity {
     public ArrayList<SearchResults> getShonaResults() {
         return results;
     }
-
     public ArrayList<SearchResults> getEnglishResults() {
         return enResults;
     }

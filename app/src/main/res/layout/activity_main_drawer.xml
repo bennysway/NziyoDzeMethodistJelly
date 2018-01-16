@@ -229,23 +229,9 @@
                 android:layout_alignParentBottom="true"
                 android:layout_alignParentEnd="true"
                 android:id="@+id/test"
-                android:visibility="invisible"
+                android:visibility="visible"
                 android:shadowColor="@color/black"
                 android:layout_alignParentRight="true" />
-
-        <!--TextView
-            android:text=" Nziyo DzeMethodist"
-            android:id="@+id/mainAppTitle"
-            android:background="@drawable/top_rounded_white"
-            android:textColor="@color/burn"
-            android:textSize="30sp"
-            android:gravity="center"
-            android:fontFamily="cursive"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:elevation="@dimen/white_card_elevation"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"/-->
 
         <ViewSwitcher
             xmlns:android="http://schemas.android.com/apk/res/android"

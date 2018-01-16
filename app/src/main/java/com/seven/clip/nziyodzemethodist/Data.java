@@ -13,7 +13,8 @@ import static android.content.Context.MODE_PRIVATE;
 //keys include: favlist,reclist,showsplash,color,image,textsize,recordflag,withcaption
 //              colorflag,textsizeflag,accflag,faviterator,reciterator,themecolor,themename
 //              bookmark,bibleoption
-//firstTimes:   biblepickerfirsttime,
+//firstTimes:   biblepickerfirsttime,jsonhandler
+//              userdatafile
 
 
 public class Data {
@@ -106,6 +107,8 @@ public class Data {
                 //test=test.substring(0,listLength-1);
             if(test.contains(",,"))
                 test=test.replace(",,",",");
+            if(test.contains(",0,"))
+                test=test.replace(",0,",",");
         }
         return test;
 

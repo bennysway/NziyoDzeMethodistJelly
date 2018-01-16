@@ -55,7 +55,7 @@ public class PickNumDialog extends Dialog {
         ImageView openHymn = findViewById(R.id.pickNumButton);
         makeFavBut = findViewById(R.id.pickNumMakeFavButton);
         blurView = findViewById(R.id.pickNumBlur);
-        toHymn = new Intent(context, hymnDisplay.class);
+        toHymn = new Intent(context, HymnDisplay.class);
 
 
         Data recordFlag = new Data(context, "recordflag");

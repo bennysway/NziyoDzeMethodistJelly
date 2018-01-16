@@ -4,13 +4,20 @@
     <string name="hymnListButtonText">Hymn List</string>
     <string name="updateHymnButtonText">Update</string>
     <string name="favButtonText">Favourites</string>
+    <string name="notesButtonText">Notes</string>
+    <string name="recordingsButtonText">Recordings</string>
     <string name="recentButtonText">Recent</string>
+    <string name="splashButtonText">Splash</string>
+    <string name="underlineButtonText">Underlines</string>
     <string name="captionButtonText">Captions</string>
     <string name="readingsText">Bible Readings</string>
     <string name="title_activity_pick_num">pickNum</string>
     <string name="Accept">Yes</string>
     <string name="Deny">No</string>
     <string name="noFavoritesText">No Favorites yet…</string>
+    <string name="noNotesCaptionsText">No Notes yet…</string>
+    <string name="noRecordingsCaptionsText">No Recordings yet…</string>
+    <string name="noUnderlinesText">Nothing underlined yet…</string>
     <string name="noCaptionsText">No Captions found by the update yet…</string>
     <string name="noReadings">No Readings found in the database yet…</string>
     <string name="noRecentText">No Recent songs yet…</string>
@@ -18,6 +25,7 @@
     <string name="account_management_title">Account Management</string>
     <string name="hymn_banner_ad_unit_id">ca-app-pub-2945410942325181/9087063951</string>
     <string name="reading_banner_ad_unit_id">ca-app-pub-2945410942325181/5275511400</string>
+    <string name="facebook_app_id">466941583699230</string>
 
     <string name="title_activity_settings">Settings</string>
 

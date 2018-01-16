@@ -36,7 +36,7 @@ public class addCaption extends AppCompatActivity {
         record.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent toRecord = new Intent(addCaption.this, hymnDisplay.class);
+                Intent toRecord = new Intent(addCaption.this, HymnDisplay.class);
                 toRecord.putExtra("hymnNum", hymnNum);
                 toRecord.putExtra("hymnNumWord", hymnNumWord);
                 toRecord.putExtra("hymnType", hasOption);

@@ -13,38 +13,83 @@
         android:src="@drawable/darktexture_small"
         android:scaleType="centerCrop"/>
 
-    <TextView
+    <android.support.v4.view.ViewPager
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="40sp"
-        android:padding="12dp"
-        android:text="Captions"
-        android:background="@drawable/top_rounded_white"
-        android:textColor="@color/burn"
-        android:shadowDy="0.0"
-        android:shadowRadius="10.0"
-        android:shadowColor="@color/white"
-        android:shadowDx="0.0"
-        android:fontFamily="cursive"
-        android:id="@+id/captionTitle"/>
-    <ListView
+        android:layout_height="match_parent"
+        android:id="@+id/captionListViewPager"/>
+
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/captionTitle"
-        android:id="@+id/captionListView">
-
-
-    </ListView>
-
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:padding="18dp"
+        android:elevation="@dimen/white_card_elevation"
+        android:layout_height="50dp"
         android:layout_alignParentTop="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        app:srcCompat="@drawable/add_caption_icon"
-        android:tint="@color/burn"
-        android:id="@+id/addCaptionBut" />
+        android:layout_centerHorizontal="true">
+        <com.github.mmin18.widget.RealtimeBlurView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:realtimeBlurRadius="20dp"
+            app:realtimeOverlayColor="#afff" />
+        <TextView
+            android:text="@string/notesButtonText"
+            android:textColor="@color/black"
+            android:layout_marginLeft="70dp"
+            android:textSize="30sp"
+            android:gravity="center"
+            android:paddingStart="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingEnd="10dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:fontFamily="cursive"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/notesTitle"
+            android:layout_marginStart="70dp" />
+
+        <TextView
+            android:id="@+id/recordingsTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingStart="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingEnd="10dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:layout_alignBaseline="@+id/notesTitle"
+            android:layout_alignBottom="@+id/notesTitle"
+            android:layout_toEndOf="@+id/notesTitle"
+            android:layout_toRightOf="@+id/notesTitle"
+            android:fontFamily="cursive"
+            android:gravity="center"
+            android:text="@string/recordingsButtonText"
+            android:textColor="@color/black"
+            android:textSize="30sp" />
+
+        <ImageView
+            app:srcCompat="@drawable/back_icon"
+            android:id="@+id/backBut"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:tint="@color/black"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            app:srcCompat="@drawable/add_caption_icon"
+            android:tint="@color/black"
+            android:id="@+id/addCaptionBut" />
+
+    </RelativeLayout>
+
+
+
 
 </RelativeLayout>

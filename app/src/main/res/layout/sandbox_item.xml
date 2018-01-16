@@ -1,23 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:background="@color/fadedBlack"
-    android:id="@+id/sandboxContainer"
-    android:gravity="center_vertical"
-    android:layout_height="50dp">
+<com.chauthai.swipereveallayout.SwipeRevealLayout android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:mode="normal"
+    app:dragEdge="left"
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <Button
+    <!-- Your secondary layout here -->
+    <TextView
+        android:id="@+id/t2"
+        android:text="Clear Entry"
+        android:textColor="@color/black"
+        android:gravity="center_vertical"
+        android:textSize="@dimen/listTextSize"
+        android:alpha="0.0"
+        android:background="@drawable/clear_to_red"
+        android:layout_gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <!-- Your main layout here -->
+    <TextView
         android:text="Sample"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="@dimen/listTextSize"
         android:textAllCaps="false"
-        android:id="@+id/sandboxText"
+        android:id="@+id/t1"
         android:textAlignment="textStart"
-        android:padding="15dp"
-        android:gravity="start"
+        android:gravity="start|center_vertical"
         android:fontFamily="sans-serif-medium"
-        style="@style/Widget.AppCompat.Button.Colored" />
+        style="@style/Widget.AppCompat.Button.Borderless.Colored" />
 
-</LinearLayout>
+</com.chauthai.swipereveallayout.SwipeRevealLayout>

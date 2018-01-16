@@ -4,6 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:id="@+id/reading_list_activity_holder"
     tools:context="com.seven.clip.nziyodzemethodist.ReadingList">
 
     <ImageView
@@ -12,6 +14,39 @@
         android:src="@drawable/dark_small"
         android:id="@+id/readingListBg"
         android:scaleType="centerCrop"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="vertical"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:animateLayoutChanges="true"
+        android:elevation="@dimen/white_card_elevation"
+        android:id="@+id/readingListTopHolder">
+
+        <com.github.mmin18.widget.RealtimeBlurView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:realtimeBlurRadius="20dp"
+            app:realtimeOverlayColor="#afff" />
+
+        <TextView
+            android:text="@string/readingsText"
+            android:id="@+id/readingListTopTitle"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            android:gravity="center"
+            android:fontFamily="cursive"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/readingListTopTitle"
+            android:id="@+id/readingListNotificationHolder" />
+    </RelativeLayout>
 
     <TextView
         android:layout_width="match_parent"
@@ -35,30 +70,25 @@
         android:id="@+id/readingListLoadingAnimation"/>
 
 
-
-    <ListView
+    <android.support.v4.widget.SwipeRefreshLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/swipeRefreshReadingList"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:paddingTop="50dp"
-        android:clipToPadding="false"
-        android:visibility="invisible"
-        android:id="@+id/readingListListView"/>
+        android:layout_height="match_parent">
 
-    <TextView
-        android:text="@string/readingsText"
-        android:id="@+id/readingListTopTitle"
-        android:background="@drawable/top_rounded_white"
-        android:elevation="@dimen/white_card_elevation"
-        android:textColor="@color/burn"
-        android:textSize="30sp"
-        android:gravity="center"
-        android:fontFamily="cursive"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"/>
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:paddingTop="50dp"
+            android:clipToPadding="false"
+            android:visibility="invisible"
+            android:id="@+id/readingListListView"/>
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+
 
     <ImageView
         app:srcCompat="@drawable/back_icon"

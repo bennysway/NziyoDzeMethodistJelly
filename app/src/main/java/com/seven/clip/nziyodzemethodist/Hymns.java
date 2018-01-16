@@ -34,10 +34,16 @@ class Hymns {
         int captionResourceId = getResourceId(c,"array",context.getPackageName());
         return context.getResources().getStringArray(captionResourceId);
     }
-    String[] getAllEnglishHymns(){
-        String c = "hymnfirstlines";
-        int captionResourceId = getResourceId(c,"array",context.getPackageName());
-        return context.getResources().getStringArray(captionResourceId);
+
+    boolean hasChorus(String num, boolean isEnglish){
+        return getHymn(num,isEnglish)[0].contains("chorus");
+    }
+
+    String getChorus(String num,boolean isEnglish){
+        if (hasChorus(num,isEnglish))
+            return getHymn(num,isEnglish)[0].substring(getHymn(num,isEnglish)[0].indexOf("chorus"));
+        else
+            return "No chorus Available";
     }
 
 

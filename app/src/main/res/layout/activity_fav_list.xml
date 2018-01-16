@@ -14,49 +14,68 @@
         android:id="@+id/favBg"
         android:scaleType="centerCrop"/>
 
-    <ListView
+    <android.support.v4.view.ViewPager
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:paddingTop="50dp"
-        android:clipToPadding="false"
-        android:visibility="invisible"
-        android:id="@+id/FavListView" />
+        android:id="@+id/favoriteListViewPager"/>
 
-    <TextView
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:layout_centerInParent="true"
-        android:text="@string/noFavoritesText"
-        android:id="@+id/nofavText"
-        android:textColor="@color/white"
-        android:textSize="23sp"
-        />
-
-
-    <TextView
-        android:text="@string/favButtonText"
-        android:id="@+id/favTitle"
-        android:background="@drawable/top_rounded_white"
-        android:textColor="@color/burn"
-        android:textSize="30sp"
-        android:gravity="center"
-        android:fontFamily="cursive"
         android:elevation="@dimen/white_card_elevation"
-        android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"/>
+        android:layout_centerHorizontal="true">
+        <com.github.mmin18.widget.RealtimeBlurView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:realtimeBlurRadius="20dp"
+            app:realtimeOverlayColor="#afff" />
+        <TextView
+            android:text="@string/favButtonText"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            android:gravity="center"
+            android:paddingStart="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingEnd="10dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:layout_centerInParent="true"
+            android:fontFamily="cursive"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/favTitle" />
 
-    <ImageView
-        app:srcCompat="@drawable/back_icon"
-        android:id="@+id/favBackBut"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:elevation="@dimen/white_card_elevation"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        <TextView
+            android:id="@+id/favoriteUnderlineTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingEnd="10dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:layout_alignBaseline="@+id/favTitle"
+            android:layout_alignBottom="@+id/favTitle"
+            android:layout_toEndOf="@+id/favTitle"
+            android:layout_toRightOf="@+id/favTitle"
+            android:fontFamily="cursive"
+            android:gravity="center"
+            android:text="@string/underlineButtonText"
+            android:textColor="@color/black"
+            android:textSize="30sp" />
+
+        <ImageView
+            app:srcCompat="@drawable/back_icon"
+            android:id="@+id/favBackBut"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+    </RelativeLayout>
+
 </RelativeLayout>

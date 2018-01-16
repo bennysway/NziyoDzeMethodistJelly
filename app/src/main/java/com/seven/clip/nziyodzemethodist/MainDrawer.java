@@ -44,6 +44,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.remoteconfig.FirebaseRemoteConfig;
 import com.google.firebase.remoteconfig.FirebaseRemoteConfigSettings;
+import com.ms_square.etsyblur.BlurSupport;
 import com.mxn.soul.flowingdrawer_core.ElasticDrawer;
 import com.mxn.soul.flowingdrawer_core.FlowingDrawer;
 
@@ -58,14 +59,12 @@ public class MainDrawer extends AppCompatActivity {
     boolean request = false;
     Zvinokosha moreFeatures;
     int fromPrevActivity=0;
-    RelativeLayout.LayoutParams layoutParams1;
     RelativeLayout display;
     ImageView bg;
     int verCode, width, height;
 
     public static final int RequestPermissionCode = 1;
     private static final int RECORD_REQUEST_CODE = 200;
-    private static final int STORAGE_REQUEST_CODE = 102;
     private static final String CURRENT_VERSION_CODE = "current_version_code";
 
     private FirebaseRemoteConfig remoteConfig;
@@ -98,27 +97,18 @@ public class MainDrawer extends AppCompatActivity {
             editor.apply();
         }
 
-        if (!prefs.getBoolean("celebrate", false)) {
-            celebrate();
-            SharedPreferences.Editor editor = prefs.edit();
-            editor.putBoolean("celebrate", true);
-            editor.apply();
-        }
 
-        //toHymnNums = new Intent(this, PickNumDialog.class);
-        //toHymnNums.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
-        final Intent toHymnList = new Intent(this, hymnList2.class);
-        //toHymnNums.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+        final Intent toHymnList = new Intent(this, HymnList.class);
         final Intent toFavList = new Intent(this, FavList.class);
         final Intent toRecList = new Intent(this, RecList.class);
         final Intent toCaptionList = new Intent(this,CaptionList.class);
         final Intent toLogin = new Intent(this,ManageLogin.class);
-        final Intent toTest = new Intent(this, BiblePicker.class);
+        final Intent toTest = new Intent(this, SandBox.class);
         final Intent toReadings = new Intent(this, ReadingList.class);
         moreFeatures = new Zvinokosha(this);
         toSettings = new Intent(this, Settings.class);
         toClearData = new Intent(this, ClearData.class);
-        Hymns hymns = new Hymns(this);
+        final xHymns hymns = new xHymns(this);
 
 
         mDrawer = findViewById(R.id.activity_main_drawer);
@@ -222,22 +212,15 @@ public class MainDrawer extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 String selection = (String) parent.getItemAtPosition(position);
-                int pos = -1;
-                Intent toHymnFromSearchBar = new Intent(MainDrawer.this,hymnDisplay.class);
+                Intent toHymnFromSearchBar = new Intent(MainDrawer.this,HymnDisplay.class);
 
-                for (int i = 0; i < hymnStrings.length; i++) {
-                    if (hymnStrings[i].equals(selection)) {
-                        pos = i;
-                        break;
-                    }
-                }
-                pos++;
-                if(pos>=1&&pos<=321){
-                    toHymnFromSearchBar.putExtra("hymnNum",String.valueOf(pos));
-                    startActivity(toHymnFromSearchBar);
-                    colapseTopBar();
-                }
+                String resultHymnNum = hymns.searchNum(selection);
+                boolean resultHymnIsEnglish = hymns.searchIsEnglish(selection);
 
+                toHymnFromSearchBar.putExtra("hymnNum",resultHymnNum);
+                toHymnFromSearchBar.putExtra("isInEnglish",resultHymnIsEnglish);
+                startActivity(toHymnFromSearchBar);
+                colapseTopBar();
             }
         });
 
@@ -262,7 +245,9 @@ public class MainDrawer extends AppCompatActivity {
         test.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                celebrate();
+                FragmentManager fm = getSupportFragmentManager();
+                CreateDialogDialogFragment editNameDialogFragment = new CreateDialogDialogFragment();
+                editNameDialogFragment.show(fm, "fragment_edit_name");
             }
         });
 
@@ -311,6 +296,7 @@ public class MainDrawer extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 PickNumDialog pickNumDialogue = new PickNumDialog(MainDrawer.this);
+                pickNumDialogue.getWindow().getAttributes().windowAnimations = R.style.TransparentDialogAnimation;
                 pickNumDialogue.show();
 
             }
@@ -398,7 +384,7 @@ public class MainDrawer extends AppCompatActivity {
                                 .dimColor(R.color.black)            // If set, will dim behind the view with 30% opacity of the given color
                                 .drawShadow(true)                   // Whether to draw a drop shadow or not
                                 .cancelable(false)                  // Whether tapping outside the outer circle dismisses the view
-                                .tintTarget(true)                   // Whether to tint the target view's color
+                                .tintTarget(true)                   // Whether to tint the target view'underLine color
                                 .transparentTarget(false)           // Specify whether the target is transparent (displays the content underneath)
                                 .icon(getResources().getDrawable(R.drawable.notification_icon))                     // Specify a custom drawable to draw as the target
                                 .targetRadius(60),
@@ -416,7 +402,7 @@ public class MainDrawer extends AppCompatActivity {
                                 .dimColor(R.color.black)            // If set, will dim behind the view with 30% opacity of the given color
                                 .drawShadow(true)                   // Whether to draw a drop shadow or not
                                 .cancelable(false)                  // Whether tapping outside the outer circle dismisses the view
-                                .tintTarget(true)                   // Whether to tint the target view's color
+                                .tintTarget(true)                   // Whether to tint the target view'underLine color
                                 .transparentTarget(false)           // Specify whether the target is transparent (displays the content underneath)
                                 //.icon(getResources().getDrawable(android.R.drawable.stat_notify_chat))                     // Specify a custom drawable to draw as the target
                                 .targetRadius(60),
@@ -434,7 +420,7 @@ public class MainDrawer extends AppCompatActivity {
                                 .dimColor(R.color.black)            // If set, will dim behind the view with 30% opacity of the given color
                                 .drawShadow(true)                   // Whether to draw a drop shadow or not
                                 .cancelable(false)                  // Whether tapping outside the outer circle dismisses the view
-                                .tintTarget(true)                   // Whether to tint the target view's color
+                                .tintTarget(true)                   // Whether to tint the target view'underLine color
                                 .transparentTarget(false)           // Specify whether the target is transparent (displays the content underneath)
                                 .icon(getResources().getDrawable(R.drawable.ic_readings_black))                     // Specify a custom drawable to draw as the target
                                 .targetRadius(60));

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.seven.clip.nziyodzemethodist.UnderlineCoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/fadedBlack">
+
+    <TextView
+        android:id="@+id/backgroundView"
+        android:text="Remove Underline"
+        android:alpha="0.0"
+        android:textColor="@color/white"
+        android:gravity="center_vertical"
+        android:textSize="@dimen/listTextSize"
+        android:background="@drawable/clear_to_red"
+        android:layout_gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <com.xenione.libs.swipemaker.SwipeLayout
+        android:id="@id/foregroundView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:text="Sample"
+            android:textColor="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/listTextSize"
+            android:textAllCaps="false"
+            android:id="@id/swipeRightTextView"
+            android:textAlignment="textStart"
+            android:gravity="start|center_vertical"
+            android:fontFamily="sans-serif-medium"
+            style="@style/Widget.AppCompat.Button.Borderless.Colored" />
+
+
+    </com.xenione.libs.swipemaker.SwipeLayout>
+
+
+</com.seven.clip.nziyodzemethodist.UnderlineCoordinatorLayout>

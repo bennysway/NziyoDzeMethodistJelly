@@ -154,7 +154,7 @@ public class ManageLogin extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
-                            // Sign in success, update UI with the signed-in user's information
+                            // Sign in success, update UI with the signed-in user'underLine information
                             Log.d("FirebaseLogIn", "signInWithCredential:success");
                             FirebaseUser user = mAuth.getCurrentUser();
                             finish();

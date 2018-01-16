@@ -573,7 +573,7 @@ public class ReadingDisplay extends AppCompatActivity {
                         .dimColor(R.color.black)            // If set, will dim behind the view with 30% opacity of the given color
                         .drawShadow(true)                   // Whether to draw a drop shadow or not
                         .cancelable(true)                  // Whether tapping outside the outer circle dismisses the view
-                        .tintTarget(true)                   // Whether to tint the target view's color
+                        .tintTarget(true)                   // Whether to tint the target view'underLine color
                         .transparentTarget(false)           // Specify whether the target is transparent (displays the content underneath)
                         //.icon(Drawable)                     // Specify a custom drawable to draw as the target
                         .targetRadius(60),                  // Specify the target radius (in dp)
@@ -602,7 +602,7 @@ public class ReadingDisplay extends AppCompatActivity {
                         .dimColor(R.color.black)            // If set, will dim behind the view with 30% opacity of the given color
                         .drawShadow(true)                   // Whether to draw a drop shadow or not
                         .cancelable(true)                  // Whether tapping outside the outer circle dismisses the view
-                        .tintTarget(true)                   // Whether to tint the target view's color
+                        .tintTarget(true)                   // Whether to tint the target view'underLine color
                         .transparentTarget(false)           // Specify whether the target is transparent (displays the content underneath)
                         //.icon(Drawable)                     // Specify a custom drawable to draw as the target
                         .targetRadius(60),                  // Specify the target radius (in dp)
@@ -706,7 +706,7 @@ public class ReadingDisplay extends AppCompatActivity {
                 .setTicker(text)
                 .setSmallIcon(R.drawable.notification_icon)
                 .setContentTitle(text)
-                .setContentText("Today's Reading")
+                .setContentText("Today'underLine Reading")
                 .setAutoCancel(true)
                 .setContentIntent(notifyPIntent)
                 .build();

@@ -25,6 +25,7 @@ public class MenuListFragment extends Fragment {
 
     private ImageView appPic;
     private TextView appOwner;
+    private UserDataIO userData;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -37,6 +38,7 @@ public class MenuListFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_menu, container,
                 false);
 
+        userData = new UserDataIO(getContext());
         NavigationView vNavigation = view.findViewById(R.id.vNavigation);
         View headerLayout = vNavigation.getHeaderView(0);
         appPic = headerLayout.findViewById(R.id.imageOwner);
@@ -53,10 +55,7 @@ public class MenuListFragment extends Fragment {
     }
 
     private void setupHeader() {
-
-
-        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this.getContext());
-        String name = preferences.getString("example_text","Set name");
+        String name = userData.getUserName();
         if(name.equals(""))
             name = "Set name";
         appOwner.setText(name);

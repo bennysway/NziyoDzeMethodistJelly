@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.app.AppCompatDelegate;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.WindowManager;
@@ -31,6 +32,13 @@ public class Splash extends AppCompatActivity {
     ShapeRipple ripple;
     int i;
     boolean isBookmarkAvail;
+    UserDataIO userData;
+
+    @Override
+    protected void onPause() {
+        userData.save();
+        super.onPause();
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,10 +48,11 @@ public class Splash extends AppCompatActivity {
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         Typeface custom_font = Typeface.createFromAsset(getAssets(),  "fonts/bh.ttf");
+        userData = new UserDataIO(this);
 
         final Button bookmark = findViewById(R.id.bookmarkSplashBut);
-        final Data booking = new Data(this,"bookmark");
         isBookmarkAvail = false;
+
 
         Random r=new Random();
         ripple = findViewById(R.id.splashImage);
@@ -58,21 +67,26 @@ public class Splash extends AppCompatActivity {
         final ImageView skip = findViewById(R.id.skipSplash);
         toStart = new Intent(this,MainDrawer.class);
         timer = new Handler();
-        i=r.nextInt(321)+1;
-        String h = "hymn" + IntToStr(i);
-        String [] hymn;
+        //Pick random hymn
+
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
         boolean longSplash = preferences.getBoolean("long_splash",true);
+        boolean includeEnglish = preferences.getBoolean("include_english",true);
         Data recordFlag = new Data(this,"recordflag");
         recordFlag.deleteAll();
         start = new Handler();
 
-//        int s = r.nextInt(6)+1;
-//        spl.setScaleX(1.3f);
-//        spl.setScaleY(1.3f);
-//        spl.animate().scaleX(1f).scaleY(1f).setDuration(13000);
-//        int splId = getResourceId("spl"+s,"drawable",getPackageName());
-//        spl.setImageResource(splId);
+        boolean isEnglish;
+
+        if(includeEnglish)
+            isEnglish = getRandomBoolean();
+        else
+            isEnglish = false;
+
+        xHymns hymns = new xHymns(this);
+        i=r.nextInt(hymns.getAllHymns(isEnglish).length);
+        final String [] hymn = hymns.getAllHymnNumbers(isEnglish);
+
 
         ripple.setBackgroundColor(parseColor("#e0e0e0"));
         ripple.setRippleCount(40);
@@ -83,12 +97,9 @@ public class Splash extends AppCompatActivity {
         ripple.setRippleMaximumRadius(200);
         ripple.setRippleColor(parseColor("#ffffff"));
 
-        int resourceId = getResourceId(h,"array",getPackageName());
-        hymn = getResources().getStringArray(resourceId);
-
         try {
-            final String [] lines = hymn[0].split("\n");
-            lines[2]= "Hymn " + IntToStr(i);
+            final String [] lines = hymns.getHymn(hymn[i],isEnglish)[0].split("\n");
+            lines[2]= "Hymn " + hymn[i];
             line1.setText(lines[0]);
             line2.setText(lines[1]);
             line3.setText(lines[2]);
@@ -97,8 +108,8 @@ public class Splash extends AppCompatActivity {
             line3.setAlpha(0);
         }
         catch(ArrayIndexOutOfBoundsException exception) {
-            final String [] lines = hymn[0].split("\n");
-            lines[1]= "Hymn " + IntToStr(i);
+            final String [] lines = hymns.getHymn(hymn[i],isEnglish)[0].split("\n");
+            lines[1]= "Hymn " + hymn[i];
             line1.setText(lines[0]);
             line2.setText(lines[1]);
             line3.setText("");
@@ -106,17 +117,18 @@ public class Splash extends AppCompatActivity {
             line2.setAlpha(0);
             line3.setAlpha(0);
         }
+        userData.getSplashList().add(0,hymn[i]);
 
-        if(!booking.get().isEmpty()){
+        if(!userData.getBookmark().equals("")){
             isBookmarkAvail = true;
             bookmark.setVisibility(View.VISIBLE);
-            bookmark.setText(booking.get());
+            bookmark.setText(userData.getBookmark());
             bookmark.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     stopAnimation();
-                    Intent toHymn = new Intent(Splash.this,hymnDisplay.class);
-                    toHymn.putExtra("hymnNum", booking.get());
+                    Intent toHymn = new Intent(Splash.this,HymnDisplay.class);
+                    toHymn.putExtra("hymnNum", userData.getBookmark());
                     bookmark.animate().y(-200f);
                     startActivity(toHymn);
                 }
@@ -207,8 +219,8 @@ public class Splash extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 stopAnimation();
-                Intent toHymn = new Intent(Splash.this,hymnDisplay.class);
-                toHymn.putExtra("hymnNum", String.valueOf(i));
+                Intent toHymn = new Intent(Splash.this,HymnDisplay.class);
+                toHymn.putExtra("hymnNum", hymn[i]);
                 startActivity(toHymn);
             }
         });
@@ -216,18 +228,6 @@ public class Splash extends AppCompatActivity {
 
     }
 
-    public int getResourceId(String pVariableName, String pResourcename, String pPackageName)
-    {
-        try {
-            return getResources().getIdentifier(pVariableName, pResourcename, pPackageName);
-        } catch (Exception e) {
-            e.printStackTrace();
-            return -1;
-        }
-    }
-    public String IntToStr(int i){
-        return Integer.toString(i);
-    }
     public void QuickToast(String s){
         Toast.makeText(this, s,
                 Toast.LENGTH_SHORT).show();
@@ -256,6 +256,11 @@ public class Splash extends AppCompatActivity {
         }
 
         return super.onKeyDown(keyCode, event);
+    }
+
+    public boolean getRandomBoolean() {
+        return Math.random() < 0.5;
+        //I tried another approaches here, still the same result
     }
 
 }

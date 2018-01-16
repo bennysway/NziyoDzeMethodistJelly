@@ -24,4 +24,7 @@
     <color name="lookbg">#89c0c7</color>
     <color name="lovebg">#428c7d</color>
     <color name="startbookbg">#3598db</color>
+
+    <color name="custom_handle_color">#90a4ae</color>
+    <color name="custom_bubble_color">#607d8b</color>
 </resources>

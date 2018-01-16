@@ -29,5 +29,14 @@
 
     </style>
 
+    <style name="TransparentDialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowAnimationStyle">@style/TransparentDialogAnimation</item>
+    </style>
+
+    <style name="TransparentDialogAnimation">
+        <item name="android:windowEnterAnimation">@anim/zoom_out_intro</item>
+        <item name="android:windowExitAnimation">@anim/zoom_out_exit</item>
+    </style>
+
 
 </resources>

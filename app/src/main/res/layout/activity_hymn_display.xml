@@ -10,7 +10,7 @@
     android:animateLayoutChanges="true"
     android:background="@color/black"
 
-    tools:context="com.seven.clip.nziyodzemethodist.hymnDisplay">
+    tools:context="com.seven.clip.nziyodzemethodist.HymnDisplay">
 
 
     <ImageView

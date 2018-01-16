@@ -131,8 +131,8 @@ class MyHymnListAdapter extends ArrayAdapter implements SectionIndexer {
         theTextView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent toHymn = new Intent(MyHymnListAdapter.super.getContext(),hymnDisplay.class);
-                toHymn.putExtra("hymnNum",String.valueOf(hym(position)));
+                Intent toHymn = new Intent(MyHymnListAdapter.super.getContext(),HymnDisplay.class);
+                toHymn.putExtra("hymnNum",String.valueOf(hymnToSort(position)));
                 getContext().startActivity(toHymn);
             }
         });
@@ -140,9 +140,9 @@ class MyHymnListAdapter extends ArrayAdapter implements SectionIndexer {
         theTextView.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View v) {
-                Intent toHymn = new Intent(MyHymnListAdapter.super.getContext(),MakeFav.class);
-                toHymn.putExtra("hymnNum",String.valueOf(hym(position)));
-                getContext().startActivity(toHymn);
+                MakeFavDialog dialog = new MakeFavDialog(MyHymnListAdapter.super.getContext(),String.valueOf(hymnToSort(position)));
+                dialog.getWindow().getAttributes().windowAnimations = R.style.TransparentDialogAnimation;
+                dialog.show();
                 return true;
             }
         });
@@ -482,7 +482,7 @@ class MyHymnListAdapter extends ArrayAdapter implements SectionIndexer {
         }
         return found+1;
     }
-    private int hym(int x){
+    private int hymnToSort(int x){
         int sorted[] = new int[321];
         sorted[0]=235;
         sorted[1]=155;

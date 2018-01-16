@@ -25,6 +25,7 @@ public class ThemeChooser extends AppCompatActivity {
     Data color,theme,themeName;
     GradientDrawable gd;
     int lastSave;
+    UserDataIO userData;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

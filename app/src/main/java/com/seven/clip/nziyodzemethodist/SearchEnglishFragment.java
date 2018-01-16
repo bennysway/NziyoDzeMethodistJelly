@@ -49,7 +49,7 @@ public class SearchEnglishFragment extends Fragment {
             ls.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                 @Override
                 public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                    Intent toHymn = new Intent(getContext(), hymnDisplay.class);
+                    Intent toHymn = new Intent(getContext(), HymnDisplay.class);
                     toHymn.putExtra("hymnNum",englishResults.get(i).getHymnNum());
                     toHymn.putExtra("isInEnglish",englishResults.get(i).getIsInEnglish());
                     startActivity(toHymn);

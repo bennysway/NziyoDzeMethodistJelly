@@ -21,22 +21,20 @@ class MyCaptionListAdapter extends ArrayAdapter{
         LayoutInflater theInflater = (LayoutInflater.from(getContext()));
         View theView = theInflater.inflate(R.layout.hymn_list2, parent, false);
         final String hymnEntry = (String) getItem(position);
+        final UserDataIO userData = new UserDataIO(super.getContext());
 
-        Button theTextView = (Button) theView.findViewById(R.id.hymnFirstLinebut);
+        Button theTextView = theView.findViewById(R.id.hymnFirstLinebut);
         theTextView.setText(hymnEntry);
-        Data captList = new Data(MyCaptionListAdapter.super.getContext(), "withcaption");
-        String list = captList.get();
-        final String[] captions = list.split(",");
 
         theTextView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String s = captions[position];
+                String s = userData.getCaptionList().get(position);
                 String safe = NumToWord.convert(StrToInt(s)) + "key";
 
                 Intent toCaptions = new Intent(MyCaptionListAdapter.super.getContext(),Captions.class);
                 toCaptions.putExtra("hymnNumWord",safe);
-                toCaptions.putExtra("hymnNum",captions[position]);
+                toCaptions.putExtra("hymnNum",userData.getCaptionList().get(position));
                 toCaptions.putExtra("hymnName",hymnEntry);
                 getContext().startActivity(toCaptions);
             }
@@ -45,9 +43,9 @@ class MyCaptionListAdapter extends ArrayAdapter{
         theTextView.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View v) {
-                Intent toRemoveFav = new Intent(MyCaptionListAdapter.super.getContext(),MakeFav.class);
-                toRemoveFav.putExtra("hymnNum",captions[position]);
-                getContext().startActivity(toRemoveFav);
+                MakeFavDialog dialog = new MakeFavDialog(MyCaptionListAdapter.super.getContext(),userData.getCaptionList().get(position));
+                dialog.getWindow().getAttributes().windowAnimations = R.style.TransparentDialogAnimation;
+                dialog.show();
 
                 return true;
             }

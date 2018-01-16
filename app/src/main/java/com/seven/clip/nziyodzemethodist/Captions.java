@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.os.Handler;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.KeyEvent;
 import android.view.View;
@@ -16,21 +17,20 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
-import java.util.Collections;
 
 public class Captions extends AppCompatActivity {
 
-    ListView ls;
-    ArrayList<CaptionStorage> list;
-    String[] rawArray;
+    UserData.UserCaption captions;
     long starttime = 0;
-    int barId;
     boolean barAvail=false,playing;
-    RelativeLayout parentLayout;
+    UserDataIO userData;
+    TextView notesTextView, recordingsTextView;
     String capStoreKey,hymnName;
-    Data recordFlag;
     View bar;
     int hasOption;
+    ViewPager viewPager;
+    CaptionsTabAdapter mAdapter;
+    float travelDist;
 
 
     @Override
@@ -40,30 +40,73 @@ public class Captions extends AppCompatActivity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
-        recordFlag = new Data(this, "recordflag");
-        Data withCaption = new Data(this,"withcaption");
+        //Data withCaption = new Data(this,"withcaption");
         Typeface custom_font = Typeface.createFromAsset(getAssets(),  "fonts/bh.ttf");
-        final TextView cap = findViewById(R.id.captionTitle);
+        notesTextView = findViewById(R.id.notesTitle);
+        recordingsTextView = findViewById(R.id.recordingsTitle);
+        viewPager = findViewById(R.id.captionListViewPager);
 
-        cap.setTypeface(custom_font);
-
-        recordFlag.deleteAll();
-
+        notesTextView.setTypeface(custom_font);
+        recordingsTextView.setTypeface(custom_font);
 
         final String hymnNumWord = getIntent().getStringExtra("hymnNumWord");
         final String hymnNum = getIntent().getStringExtra("hymnNum");
         hasOption = getIntent().getIntExtra("isEn",0);
         hymnName = getIntent().getStringExtra("hymnName");
         capStoreKey = hymnNumWord;
-        Data storedKey = new Data(this,capStoreKey);
+        //Data storedKey = new Data(this,capStoreKey);
 
-        ls = findViewById(R.id.captionListView);
+        userData = new UserDataIO(this);
+        captions = userData.getHymnCaptionData(hymnNum);
+
+        viewPager = findViewById(R.id.captionListViewPager);
+        mAdapter = new CaptionsTabAdapter(getSupportFragmentManager());
+        viewPager.setAdapter(mAdapter);
+
+        viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+
+            }
+
+            @Override
+            public void onPageSelected(int position) {
+                if(position==0){
+                    //Recent Focus
+                    notesTextView.animate().xBy(travelDist);
+                    recordingsTextView.animate().xBy(travelDist);
+                    notesTextView.animate().alpha(1f);
+                    recordingsTextView.animate().alpha(.3f);
+                    notesTextView.animate().scaleX(1f);
+                    notesTextView.animate().scaleY(1f);
+                    recordingsTextView.animate().scaleX(.8f);
+                    recordingsTextView.animate().scaleY(.8f);
+                }
+                if(position==1){
+                    //Splash Focus
+                    notesTextView.animate().xBy(-travelDist);
+                    recordingsTextView.animate().xBy(-travelDist);
+                    notesTextView.animate().alpha(.3f);
+                    recordingsTextView.animate().alpha(1f);
+                    recordingsTextView.animate().scaleX(1f);
+                    recordingsTextView.animate().scaleY(1f);
+                    notesTextView.animate().scaleX(.8f);
+                    notesTextView.animate().scaleY(.8f);
+                }
+            }
+
+
+            @Override
+            public void onPageScrollStateChanged(int state) {
+
+            }
+        });
+        recordingsTextView.animate().alpha(.3f);
         final View addCaption =findViewById(R.id.addCaptionBut);
-        list = new ArrayList<>();
 
 
 
-        final String raw = storedKey.get();
+       /* final String raw = storedKey.get();
         if(!raw.equals("")){
             if(!withCaption.find(hymnNum))
                 withCaption.pushFront(hymnNum);
@@ -78,11 +121,11 @@ public class Captions extends AppCompatActivity {
                 item.setPath(rawArray[i+2]);
                 item.setHymnNum(hymnNum);
                 list.add(item);
-            }
+            }*/
 
-            Collections.reverse(list);
+            //Collections.reverse(list);
 
-            ls.setAdapter(new CaptionListViewAdapter(this,list));
+            /*ls.setAdapter(new CaptionListViewAdapter(this,list));
             ls.setVisibility(View.VISIBLE);
 
             ls.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -127,7 +170,7 @@ public class Captions extends AppCompatActivity {
             QuickToast("No captions available");
             if(withCaption.find(hymnNum))
                 withCaption.delete(hymnNum);
-        }
+        }*/
 
         addCaption.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -140,7 +183,7 @@ public class Captions extends AppCompatActivity {
             }
         });
 
-        parentLayout = findViewById(R.id.activity_captions);
+        /*parentLayout = findViewById(R.id.activity_captions);
         bar = getLayoutInflater().inflate(R.layout.record_bar, parentLayout,false);
         RelativeLayout.LayoutParams params= new RelativeLayout.LayoutParams(
                 ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
@@ -167,7 +210,7 @@ public class Captions extends AppCompatActivity {
                 });
 
             }
-        });
+        });*/
 
     }
     public void QuickToast(String s){
@@ -290,11 +333,24 @@ public class Captions extends AppCompatActivity {
         return true;
     }
 
-    @Override
+    /*@Override
     public void onResume() {
         super.onResume();
         if (recordFlag.get().equals("true"))
             finish();
+    }*/
+
+    public ArrayList<UserData.UserCaption.UserNote> getNotes(){
+        return captions.getUserNotes();
+    }
+    public ArrayList<UserData.UserCaption.UserRecording> getRecordings(){
+        return captions.getUserRecordings();
+    }
+
+    @Override
+    public void onWindowFocusChanged(boolean hasFocus) {
+        super.onWindowFocusChanged(hasFocus);
+        travelDist = (notesTextView.getWidth() + recordingsTextView.getWidth())/2f;
     }
 
 }

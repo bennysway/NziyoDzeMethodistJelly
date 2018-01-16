@@ -2,22 +2,32 @@ package com.seven.clip.nziyodzemethodist;
 
 import android.content.Intent;
 import android.graphics.Typeface;
-import android.support.design.widget.FloatingActionButton;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
+import android.support.v4.view.ViewPager;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.DividerItemDecoration;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
+import android.util.TypedValue;
+import android.view.DragEvent;
 import android.view.View;
 import android.view.WindowManager;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.ListView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class RecList extends AppCompatActivity {
+import java.util.ArrayList;
 
-    ListView ls;
-    String list = "";
-    Data recordFlag,recList;
+public class RecList extends AppCompatActivity{
+
+    UserDataIO userData;
+
+    ViewPager viewPager;
+    RecentTabAdapter mAdapter;
+    float travelDist;
+    TextView recTitle,splashTitle;
+    RelativeLayout titleHolder;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,55 +36,80 @@ public class RecList extends AppCompatActivity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
-        recordFlag = new Data(this,"recordflag");
-        recList = new Data(this,"reclist");
-        recordFlag.deleteAll();
+        userData = new UserDataIO(this);
+        mAdapter = new RecentTabAdapter(getSupportFragmentManager());
 
+        recTitle = findViewById(R.id.recentsTitle);
+        splashTitle = findViewById(R.id.recentSplashTitle);
+        titleHolder = findViewById(R.id.recentTitleHolder);
 
-        TextView norecText = (TextView) findViewById(R.id.norecText);
-        TextView recTitle = (TextView) findViewById(R.id.recentsTitle);
         View back = findViewById(R.id.recentBackButton);
-        ls = (ListView) findViewById(R.id.RecListView);
-        final Intent toHome = new Intent(this,MainDrawer.class);
-        FloatingActionButton del = (FloatingActionButton) findViewById(R.id.deleteHistory);
-        int counter = 0;
+        viewPager = findViewById(R.id.recentListViewPager);
 
-        Typeface custom_font = Typeface.createFromAsset(getAssets(),  "fonts/bh.ttf");
-        recTitle.setTypeface(custom_font);
+        viewPager.setAdapter(mAdapter);
 
-        list =recList.get();
-        for( int i=0; i<list.length(); i++ ) {
-            if( list.charAt(i) == ',' ) {
-                counter++;
-            }
-        }
-        final String[]recHymns =list.split(",");
-        String[] names = new String[counter];
-        for(int i=0;i<counter;i++){
-            names[i] =recHymns[i]+". "+ getStringResourceByName("hymn"+recHymns[i]+"firstline");
-        }
-
-        if(counter==0){
-            norecText.animate().scaleY(2f).scaleX(2f).setDuration(100000);
-        }
-        else {
-            MyRecListAdapter adapter =
-                    new MyRecListAdapter(
-                            this,
-                            names
-                    );
-            ls.setAdapter(adapter);
-            ls.setVisibility(View.VISIBLE);
-            norecText.setVisibility(View.INVISIBLE);
-        }
-        del.setOnClickListener(new View.OnClickListener() {
+        viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
-            public void onClick(View view) {
-                recList.deleteAll();
-                QuickToast("History has been cleared.");
-                startActivity(toHome);
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+
+            }
+
+            @Override
+            public void onPageSelected(int position) {
+                if(position==0){
+                    //Recent Focus
+                    recTitle.animate().xBy(travelDist);
+                    splashTitle.animate().xBy(travelDist);
+                    recTitle.animate().alpha(1f);
+                    splashTitle.animate().alpha(.3f);
+                    recTitle.animate().scaleX(1f);
+                    recTitle.animate().scaleY(1f);
+                    splashTitle.animate().scaleX(.8f);
+                    splashTitle.animate().scaleY(.8f);
+                }
+                if(position==1){
+                    //Splash Focus
+                    recTitle.animate().xBy(-travelDist);
+                    splashTitle.animate().xBy(-travelDist);
+                    recTitle.animate().alpha(.3f);
+                    splashTitle.animate().alpha(1f);
+                    splashTitle.animate().scaleX(1f);
+                    splashTitle.animate().scaleY(1f);
+                    recTitle.animate().scaleX(.8f);
+                    recTitle.animate().scaleY(.8f);
+                }
+            }
+
+
+            @Override
+            public void onPageScrollStateChanged(int state) {
+
             }
         });
+
+        splashTitle.animate().alpha(.3f);
+        splashTitle.animate().scaleX(.8f);
+        splashTitle.animate().scaleY(.8f);
+
+        recTitle.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                viewPager.setCurrentItem(0,true);
+            }
+        });
+        splashTitle.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                viewPager.setCurrentItem(1,true);
+            }
+        });
+
+        final Intent toHome = new Intent(this, MainDrawer.class);
+        FloatingActionButton del = findViewById(R.id.deleteHistory);
+
+        Typeface custom_font = Typeface.createFromAsset(getAssets(), "fonts/bh.ttf");
+        recTitle.setTypeface(custom_font);
+        splashTitle.setTypeface(custom_font);
 
         back.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -85,15 +120,29 @@ public class RecList extends AppCompatActivity {
 
     }
 
-    private String getStringResourceByName(String aString) {
-        String packageName = getPackageName();
-        int resId = getResources().getIdentifier(aString, "string", packageName);
-        return getString(resId);
-    }
-    public void QuickToast(String s){
+    public void QuickToast(String s) {
         Toast.makeText(this, s,
                 Toast.LENGTH_SHORT).show();
     }
 
+    public ArrayList<String> getData(int position){
+        if(position==0)
+            return userData.getRecentList();
+        else
+            return userData.getSplashList();
+    }
 
+
+    @Override
+    protected void onPause() {
+        userData.save();
+        super.onPause();
+    }
+
+
+    @Override
+    public void onWindowFocusChanged(boolean hasFocus) {
+        super.onWindowFocusChanged(hasFocus);
+        travelDist = (recTitle.getWidth() + splashTitle.getWidth())/2f;
+    }
 }

@@ -6,31 +6,48 @@
         android:summary="@string/pref_description_social_recommendations"
         android:title="@string/pref_title_social_recommendations" />
 
-    <SwitchPreference
-        android:defaultValue="true"
-        android:key="long_splash"
-        android:title="Show a Hymn Verse on Splash"
-        android:summary="If you thing the start screen is taking long, you can turn this off"/>
+    <PreferenceCategory
+        android:key="key1"
+        android:title="Splash Settings">
 
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="long_splash"
+            android:title="Show a Hymn Verse on Splash"
+            android:summary="If you thing the start screen is taking long, you can turn this off"/>
+
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="include_english"
+            android:title="Include English Hymns in Splash"
+            android:dependency="long_splash"
+            android:summary="If you just want to see Shona verses at the beginning, you can turn this off."/>
+
+    </PreferenceCategory>
     <!-- NOTE: EditTextPreference accepts EditText attributes. -->
     <!-- NOTE: EditTextPreference's summary should be set to its value by the activity code. -->
-    <EditTextPreference
-        android:capitalize="words"
-        android:defaultValue="@string/pref_default_display_name"
-        android:inputType="textCapWords"
-        android:key="example_text"
-        android:maxLines="1"
-        android:selectAllOnFocus="true"
-        android:singleLine="true"
-        android:title="@string/pref_title_display_name" />
 
-    <Preference android:title="Display Picture">
-        <intent android:action="seven.clip.action.choosepic" />
-    </Preference>
+    <PreferenceCategory
+        android:key="personalization"
+        android:title="Personalization">
+        <EditTextPreference
+            android:capitalize="words"
+            android:defaultValue="@string/pref_default_display_name"
+            android:inputType="textCapWords"
+            android:key="example_text"
+            android:maxLines="1"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:title="@string/pref_title_display_name" />
 
-    <Preference android:title="Color Mode">
-        <intent android:action="seven.clip.action.choosecolor" />
-    </Preference>
+        <Preference android:title="Display Picture">
+            <intent android:action="seven.clip.action.choosepic" />
+        </Preference>
+
+        <Preference android:title="Color Mode">
+            <intent android:action="seven.clip.action.choosecolor" />
+        </Preference>
+    </PreferenceCategory>
     <!-- NOTE: Hide buttons to simplify the UI. Users can touch outside the dialog to
          dismiss it. -->
     <!-- NOTE: ListPreference's summary should be set to its value by the activity code. -->
