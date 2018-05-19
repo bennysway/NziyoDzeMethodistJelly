@@ -40,10 +40,10 @@ public class ManageLogin extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_manage_login);
-        final SignInButton mGoogleButton = (SignInButton) findViewById(R.id.googleButton);
-        final Button logOutButton = (Button) findViewById(R.id.accountLogOutButton);
-        final TextView prompt = (TextView) findViewById(R.id.loginPrompt);
-        final CrystalPreloader preloader = (CrystalPreloader) findViewById(R.id.manageLoginLoadingAnimation);
+        final SignInButton mGoogleButton = findViewById(R.id.googleButton);
+        final Button logOutButton = findViewById(R.id.accountLogOutButton);
+        final TextView prompt = findViewById(R.id.loginPrompt);
+        final CrystalPreloader preloader = findViewById(R.id.manageLoginLoadingAnimation);
 
         DisplayMetrics dm = new DisplayMetrics();
         getWindowManager().getDefaultDisplay().getMetrics(dm);
@@ -69,7 +69,6 @@ public class ManageLogin extends AppCompatActivity {
         prompt.setTypeface(custom_font);
 
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-                .requestIdToken(getString(R.string.default_web_client_id))
                 .requestEmail()
                 .build();
         mGoogleApiClient = new GoogleApiClient.Builder(this)

@@ -15,7 +15,7 @@ import android.widget.TextView;
  * Created by bennysway on 23.11.17.
  */
 
-public class SplashListFragment extends android.support.v4.app.Fragment implements MySplashListRVAdapter.OnItemDismissListener {
+public class SplashListFragment extends android.support.v4.app.Fragment {
     @Override
     public Context getContext() {
         return super.getContext();
@@ -45,18 +45,7 @@ public class SplashListFragment extends android.support.v4.app.Fragment implemen
         mLayoutManager = new LinearLayoutManager(getContext());
         mRecyclerView.setLayoutManager(mLayoutManager);
         mAdapter = new MySplashListRVAdapter(((RecList)getActivity()).getData(1),getContext());
-        mAdapter.setOnItemDismissListener(this);
         mRecyclerView.setAdapter(mAdapter);
         return view;
-    }
-
-    @Override
-    public void onRightItemDismissed(int number) {
-        mAdapter.deleteItem(number);
-    }
-
-    @Override
-    public void onLeftItemDismissed(int number) {
-        mAdapter.deleteSimilarItems(number);
     }
 }

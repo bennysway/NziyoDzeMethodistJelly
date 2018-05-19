@@ -179,8 +179,11 @@
         <activity
             android:name=".ReadingDisplay"
             android:screenOrientation="portrait" />
-        <activity android:name=".SandBox"
-            android:theme="@style/AppTheme.Popups"/>
+        <activity
+            android:name=".SandBox"
+            android:screenOrientation="portrait" />
+        <activity android:name=".SwipeSplash"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>

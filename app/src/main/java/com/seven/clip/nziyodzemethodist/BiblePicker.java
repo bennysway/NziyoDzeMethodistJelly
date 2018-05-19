@@ -21,7 +21,7 @@ public class BiblePicker extends AppCompatActivity {
 
     ListView appList;
     ArrayList<String> appNames, appPackages;
-    Data bibleOption;
+    UserDataIO userData;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,7 +35,7 @@ public class BiblePicker extends AppCompatActivity {
         appList = findViewById(R.id.appList);
         appNames = new ArrayList<>();
         appPackages = new ArrayList<>();
-        bibleOption = new Data(this, "bibleoption");
+        userData = new UserDataIO(this);
 
         aquireApps();
 
@@ -44,7 +44,7 @@ public class BiblePicker extends AppCompatActivity {
         appList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                bibleOption.update(appPackages.get(position));
+                userData.setBible(appPackages.get(position));
                 Intent intent = new Intent();
                 intent.putExtra("requestCode", appPackages.get(position));
                 setResult(1, intent);

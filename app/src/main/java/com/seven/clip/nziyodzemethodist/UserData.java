@@ -16,6 +16,7 @@ public class UserData {
     private String theme;
     private String themeName;
     private String image;
+    private String bibleOption;
 
     private boolean showSplash;
     private boolean includeEnglishSplashHymns;
@@ -53,6 +54,15 @@ public class UserData {
     String getThemeName() {
         return themeName;
     }
+
+    public String getBibleOption() {
+        return bibleOption;
+    }
+
+    public void setBibleOption(String bibleOption) {
+        this.bibleOption = bibleOption;
+    }
+
 
     void setThemeName(String themeName) {
         this.themeName = themeName;
@@ -114,6 +124,18 @@ public class UserData {
         return userFavoriteStanzas;
     }
 
+    public ArrayList<UserCaption> getUserCaptions() {
+        return userCaptions;
+    }
+
+    public void setUserCaptions(ArrayList<UserCaption> userCaptions) {
+        this.userCaptions = userCaptions;
+    }
+
+    public void setUserFavoriteStanzas(ArrayList<UserFavoriteStanza> userFavoriteStanzas) {
+        this.userFavoriteStanzas = userFavoriteStanzas;
+    }
+
 
     static class UserCaption{
         private String hymnNum;
@@ -122,8 +144,6 @@ public class UserData {
 
         public UserCaption(String hymnNum) {
             this.hymnNum = hymnNum;
-            userNotes = new ArrayList<>();
-            userRecordings = new ArrayList<>();
         }
 
         public String getHymnNum() {

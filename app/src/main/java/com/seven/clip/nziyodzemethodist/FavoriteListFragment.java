@@ -15,7 +15,7 @@ import android.widget.TextView;
  * Created by bennysway on 23.11.17.
  */
 
-public class FavoriteListFragment extends android.support.v4.app.Fragment implements MyFavoriteListRVAdapter.OnItemDismissListener {
+public class FavoriteListFragment extends android.support.v4.app.Fragment {
     @Override
     public Context getContext() {
         return super.getContext();
@@ -47,7 +47,6 @@ public class FavoriteListFragment extends android.support.v4.app.Fragment implem
         mLayoutManager = new LinearLayoutManager(getContext());
         mRecyclerView.setLayoutManager(mLayoutManager);
         mAdapter = new MyFavoriteListRVAdapter(((FavList)getActivity()).getFavorites(),getContext());
-        mAdapter.setOnItemDismissListener(this);
         mRecyclerView.setAdapter(mAdapter);
 
         if (((FavList)getActivity()).getFavorites().isEmpty()) {
@@ -57,10 +56,5 @@ public class FavoriteListFragment extends android.support.v4.app.Fragment implem
             mRecyclerView.setVisibility(View.VISIBLE);
         }
         return view;
-    }
-
-    @Override
-    public void onItemDismissed(int number) {
-        mAdapter.deleteItem(number);
     }
 }

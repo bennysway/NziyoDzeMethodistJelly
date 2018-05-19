@@ -7,8 +7,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-
-
         <TextView
             android:text="Date Stamp"
             android:layout_width="match_parent"
@@ -16,7 +14,7 @@
             android:textSize="22dp"
             android:textAllCaps="false"
             android:padding="10dp"
-            android:id="@+id/captionDate"
+            android:id="@+id/title"
             android:textAlignment="textStart"
             android:gravity="start"
             android:background="@color/fadedBlack"
@@ -31,13 +29,13 @@
             android:textSize="16dp"
             android:textAllCaps="false"
             android:padding="10dp"
-            android:id="@+id/captionType"
+            android:id="@+id/description"
             android:textAlignment="textStart"
             android:gravity="start"
             android:background="@color/fadedBlack"
             android:textColor="@color/white"
             android:fontFamily="sans-serif-medium"
-            android:layout_below="@+id/captionDate"
+            android:layout_below="@+id/title"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true" />
 

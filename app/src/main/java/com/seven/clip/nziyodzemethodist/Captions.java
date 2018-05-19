@@ -20,12 +20,11 @@ import java.util.ArrayList;
 
 public class Captions extends AppCompatActivity {
 
-    UserData.UserCaption captions;
     long starttime = 0;
     boolean barAvail=false,playing;
     UserDataIO userData;
     TextView notesTextView, recordingsTextView;
-    String capStoreKey,hymnName;
+    String capStoreKey,hymnName,hymnNumber;
     View bar;
     int hasOption;
     ViewPager viewPager;
@@ -50,14 +49,13 @@ public class Captions extends AppCompatActivity {
         recordingsTextView.setTypeface(custom_font);
 
         final String hymnNumWord = getIntent().getStringExtra("hymnNumWord");
-        final String hymnNum = getIntent().getStringExtra("hymnNum");
+        hymnNumber = getIntent().getStringExtra("hymnNum");
         hasOption = getIntent().getIntExtra("isEn",0);
         hymnName = getIntent().getStringExtra("hymnName");
         capStoreKey = hymnNumWord;
         //Data storedKey = new Data(this,capStoreKey);
 
         userData = new UserDataIO(this);
-        captions = userData.getHymnCaptionData(hymnNum);
 
         viewPager = findViewById(R.id.captionListViewPager);
         mAdapter = new CaptionsTabAdapter(getSupportFragmentManager());
@@ -105,246 +103,27 @@ public class Captions extends AppCompatActivity {
         final View addCaption =findViewById(R.id.addCaptionBut);
 
 
-
-       /* final String raw = storedKey.get();
-        if(!raw.equals("")){
-            if(!withCaption.find(hymnNum))
-                withCaption.pushFront(hymnNum);
-
-            rawArray = raw.split(",");
-
-            int size =rawArray.length;
-            for(int i=0;i<size;i+=3){
-                CaptionStorage item = new CaptionStorage();
-                item.setTitle(rawArray[i]);
-                item.setType(rawArray[i+1]);
-                item.setPath(rawArray[i+2]);
-                item.setHymnNum(hymnNum);
-                list.add(item);
-            }*/
-
-            //Collections.reverse(list);
-
-            /*ls.setAdapter(new CaptionListViewAdapter(this,list));
-            ls.setVisibility(View.VISIBLE);
-
-            ls.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-                @Override
-                public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                    if(list.get(position).getType().equals("recording")){
-                        String deleteString = list.get(position).getTitle()+
-                                ","+list.get(position).getType()+
-                                ","+list.get(position).getPath()+",";
-                        inflateBottomRecordingToolbar(list.get(position).getPath(),deleteString);
-
-                    }
-                    if(list.get(position).getType().equals("note")){
-                        Intent toReadNote = new Intent(Captions.this,readNote.class);
-                        toReadNote.putExtra("key",hymnNumWord);
-                        toReadNote.putExtra("fullFile",list.get(position).getPath());
-                        String deleteString = list.get(position).getTitle()+
-                                ","+list.get(position).getType()+
-                                ","+list.get(position).getPath()+",";
-                        toReadNote.putExtra("record",deleteString);
-                        startActivity(toReadNote);
-                    }
-                }
-            });
-            ls.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
-                @Override
-                public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
-                    Intent toDelete = new Intent(Captions.this,DeleteCaption.class);
-                    toDelete.putExtra("key",capStoreKey);
-                    toDelete.putExtra("record",list.get(position).getTitle()+
-                            ","+list.get(position).getType()+
-                            ","+list.get(position).getPath()+",");
-                    toDelete.putExtra("path",list.get(position).getPath());
-                    toDelete.putExtra("type","recording");
-                    startActivity(toDelete);
-                    finish();
-                    return true;
-                }
-            });
-        }
-        else {
-            QuickToast("No captions available");
-            if(withCaption.find(hymnNum))
-                withCaption.delete(hymnNum);
-        }*/
-
         addCaption.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent askType = new Intent(Captions.this,addCaption.class);
-                askType.putExtra("hymnNum",hymnNum);
+                askType.putExtra("hymnNum",hymnNumber);
                 askType.putExtra("hymnNumWord",hymnNumWord);
                 askType.putExtra("isEn",hasOption);
                 startActivity(askType);
             }
         });
 
-        /*parentLayout = findViewById(R.id.activity_captions);
-        bar = getLayoutInflater().inflate(R.layout.record_bar, parentLayout,false);
-        RelativeLayout.LayoutParams params= new RelativeLayout.LayoutParams(
-                ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
-        params.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM, bar.getId());
-        bar.setLayoutParams(params);
-        bar.setVisibility(View.INVISIBLE);
-        parentLayout.addView(bar);
-
-        cap.animate().alpha(0f).setStartDelay(3000).withEndAction(new Runnable() {
-            @Override
-            public void run() {
-                cap.setText(hymnName);
-                cap.animate().alpha(1f).setStartDelay(10).withEndAction(new Runnable() {
-                    @Override
-                    public void run() {
-                        cap.animate().alpha(0f).setStartDelay(7000).withEndAction(new Runnable() {
-                            @Override
-                            public void run() {
-                                cap.setText("Captions");
-                                cap.animate().alpha(1f).setStartDelay(10);
-                            }
-                        });
-                    }
-                });
-
-            }
-        });*/
-
     }
     public void QuickToast(String s){
         Toast.makeText(this, s,
                 Toast.LENGTH_SHORT).show();
     }
-    public void inflateBottomRecordingToolbar(final String path, final String deleteRecord){
-        vis(bar);
-        starttime = System.currentTimeMillis();
-        final TextView text = findViewById(R.id.recordingBarText);
-        text.setText("Play");
-        final Handler h2 = new Handler();
-        final Handler h3 = new Handler();
-        final playRec recording = new playRec(path);
-        final Runnable run = new Runnable() {
-            @Override
-            public void run() {
-                if(recording.isPlaying()){
-                    long millis = System.currentTimeMillis() - starttime;
-                    int seconds = (int) (millis / 1000);
-                    int minutes = seconds / 60;
-                    seconds     = seconds % 60;
-                    text.setText(String.format("%d:%02d", minutes, seconds));
-                    h2.postDelayed(this, 500);
-                }
-            }
-        };
-
-
-
-        h2.removeCallbacks(run);
-
-
-        bar.setAlpha(0f);
-        bar.animate().alpha(1f).setDuration(500);
-
-        final View rec,play,stop,delete,noRec,noDel;
-
-        rec =  findViewById(R.id.recordBut);
-        play =  findViewById(R.id.playRecordingBut);
-        stop =  findViewById(R.id.stopRecordingBut);
-        delete =  findViewById(R.id.deleteRecording);
-        noRec =  findViewById(R.id.recordUnavailBut);
-        noDel = findViewById(R.id.deleteUnavailRecording);
-
-
-
-        invis(rec);
-        vis(noRec);
-
-        play.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                playing = true;
-                invis(play);
-                vis(stop);
-                invis(delete);
-                vis(noDel);
-                h2.postDelayed(run, 0);
-                starttime = System.currentTimeMillis();
-                recording.play();
-
-            }
-        });
-        stop.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                playing = false;
-                invis(stop);
-                vis(play);
-                vis(delete);
-                invis(noDel);
-                h2.removeCallbacks(run);
-                recording.stop();
-                starttime = System.currentTimeMillis();
-                bar.animate().alpha(0f).withEndAction(new Runnable() {
-                    @Override
-                    public void run() {
-                        invis(bar);
-
-                    }
-                });
-
-            }
-        });
-        delete.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent toDelete = new Intent(Captions.this,DeleteCaption.class);
-                toDelete.putExtra("key",capStoreKey);
-                toDelete.putExtra("record",deleteRecord);
-                toDelete.putExtra("path",path);
-                toDelete.putExtra("type","recording");
-                startActivity(toDelete);
-                finish();
-            }
-        });
-    }
-    public void vis(View v){
-        v.setAlpha(0f);
-        v.setVisibility(View.VISIBLE);
-        v.animate().alpha(1f);
-    }
-    public void invis(final View v) {
-        v.animate().alpha(0f).withEndAction(new Runnable() {
-            @Override
-            public void run() {
-                v.setVisibility(View.INVISIBLE);
-            }
-        });
-    }
-    @Override
-    public boolean onKeyDown(int keyCode, KeyEvent event) {
-        if (keyCode == KeyEvent.KEYCODE_BACK && event.getRepeatCount() == 0) {
-            if(playing){
-                QuickToast("You might need to stop the player first...");
-                playing=!playing;
-            } else finish();
-        }
-        return true;
-    }
-
-    /*@Override
-    public void onResume() {
-        super.onResume();
-        if (recordFlag.get().equals("true"))
-            finish();
-    }*/
-
     public ArrayList<UserData.UserCaption.UserNote> getNotes(){
-        return captions.getUserNotes();
+        return userData.getCaptionNotes(hymnNumber);
     }
     public ArrayList<UserData.UserCaption.UserRecording> getRecordings(){
-        return captions.getUserRecordings();
+        return userData.getCaptionRecordings(hymnNumber);
     }
 
     @Override

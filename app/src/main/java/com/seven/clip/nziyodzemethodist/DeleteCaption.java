@@ -56,6 +56,7 @@ public class DeleteCaption extends AppCompatActivity {
                 if(type.equals("note")){
                     MainActivity.userData(DeleteCaption.this,key,"deleteRecord",record);
                     MainActivity.userData(DeleteCaption.this,path,"deleteAll","");
+
                 }
                 else if(type.equals("recording")){
                     MainActivity.userData(DeleteCaption.this,key,"deleteRecord",record);

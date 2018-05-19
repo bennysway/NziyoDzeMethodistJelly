@@ -39,14 +39,10 @@ public class MyHymnListRVAdapter extends RecyclerView.Adapter<MyHymnListRVAdapte
         // each data item is just a string in this case
         View mView;
         TextView mTitle;
-        ImageView mButton;
-        SwipeLayout swipeLayout;
         ViewHolder(View v) {
             super(v);
             mView = v;
-            mTitle = v.findViewById(R.id.swipeRightTextView);
-            swipeLayout = v.findViewById(R.id.foregroundView);
-            mButton = v.findViewById(R.id.backgroundView);
+            mTitle = v.findViewById(R.id.shonaListTextView);
         }
     }
 
@@ -81,12 +77,6 @@ public class MyHymnListRVAdapter extends RecyclerView.Adapter<MyHymnListRVAdapte
                 dialog.getWindow().getAttributes().windowAnimations = R.style.TransparentDialogAnimation;
                 dialog.show();
                 return true;
-            }
-        });
-        holder.mButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                QuickToast("Opening info for Hymn " + holder.mTitle.getText().toString());
             }
         });
 

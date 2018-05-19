@@ -18,6 +18,7 @@ public class ChangeNameDialog extends Dialog {
     EditText textField;
     InputMethodManager imm;
     Context context;
+    UserDataIO userData;
 
     public ChangeNameDialog(@NonNull Context passedContext) {
         super(passedContext);
@@ -39,6 +40,8 @@ public class ChangeNameDialog extends Dialog {
         textField = findViewById(R.id.usernameEditText);
         ImageView accept = findViewById(R.id.acceptName);
         ImageView deny = findViewById(R.id.cancelName);
+
+        userData = new UserDataIO(getContext());
 
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(context);
         final String name = preferences.getString("example_text","");

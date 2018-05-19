@@ -41,7 +41,8 @@ public class HymnList extends AppCompatActivity {
 
         final TextView topTitle = findViewById(R.id.hymnListTitle);
         View back = findViewById(R.id.hymnListBackButton);
-        Hymns hymns = new Hymns(this);
+        //Hymns hymns = new Hymns(this);
+        xHymns hymns = new xHymns(this);
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -52,7 +53,7 @@ public class HymnList extends AppCompatActivity {
         Typeface custom_font = Typeface.createFromAsset(getAssets(), "fonts/bh.ttf");
         topTitle.setTypeface(custom_font);
 
-        final String[] sample = hymns.getAllHymns();
+        final String[] sample = hymns.getAllHymns(false);
         Arrays.sort(sample);
 
         mRecyclerView = findViewById(R.id.hymnList);

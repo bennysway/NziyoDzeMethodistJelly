@@ -22,7 +22,7 @@ import static android.graphics.Color.parseColor;
 
 public class ThemeChooser extends AppCompatActivity {
 
-    Data color,theme,themeName;
+    //Data color,theme,themeName;
     GradientDrawable gd;
     int lastSave;
     UserDataIO userData;
@@ -40,9 +40,7 @@ public class ThemeChooser extends AppCompatActivity {
         final float scale = getResources().getDisplayMetrics().density;
         int pixels = (int) (1 * scale + 0.5f);
 
-        theme = new Data(this,"themecolor");
-        themeName = new Data(this,"themename");
-        color = new Data(this,"color");
+        userData = new UserDataIO(this);
 
         final Intent intent = new Intent();
 
@@ -73,15 +71,15 @@ public class ThemeChooser extends AppCompatActivity {
         gd.setGradientType(GradientDrawable.LINEAR_GRADIENT);
         gd.setCornerRadius(100f);
 
-        if(theme.get().equals("")){
+        if(userData.getTheme().equals("")){
             colorPickerView.setInitialColor(getResources().getColor(R.color.burn),false);
             themeTitle.setText("DefaultHymnTheme");
         } else {
-            colorPickerView.setInitialColor(parseColor(theme.get()),false);
-            themeTitle.setText(colorToName.getColorNameFromHex(theme.get()));
-            gd.setColors(new int[] {getLighterColor(theme.get()),parseColor(theme.get())});
+            colorPickerView.setInitialColor(parseColor(userData.getTheme()),false);
+            themeTitle.setText(colorToName.getColorNameFromHex(userData.getTheme()));
+            gd.setColors(new int[] {getLighterColor(userData.getTheme()),parseColor(userData.getTheme())});
             themeTitle.setBackground(gd);
-            if(isColorDark(theme.get()))
+            if(isColorDark(userData.getTheme()))
                 themeTitle.setTextColor(parseColor("#ffffff"));
             else
                 themeTitle.setTextColor(parseColor("#000000"));
@@ -106,10 +104,10 @@ public class ThemeChooser extends AppCompatActivity {
 
         } catch (Exception e){
             QuickToast("Theme picker is not yet stable, but the Theme : " + themeTitle.getText().toString() + " was set");
-            theme.update(intToColor(lastSave));
-            color.update(intToColor(lastSave));
-            themeName.update(themeTitle.getText().toString());
-            intent.putExtra("mode",theme.get());
+            userData.setTheme(intToColor(lastSave));
+            userData.setUserColor(intToColor(lastSave));
+            userData.setThemeName(themeTitle.getText().toString());
+            intent.putExtra("mode",userData.getTheme());
             setResult(3,intent);
             finish();
         }
@@ -117,10 +115,10 @@ public class ThemeChooser extends AppCompatActivity {
         accept.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                theme.update(intToColor(colorPickerView.getSelectedColor()));
-                color.update(intToColor(colorPickerView.getSelectedColor()));
-                themeName.update(themeTitle.getText().toString());
-                intent.putExtra("mode",theme.get());
+                userData.setTheme(intToColor(colorPickerView.getSelectedColor()));
+                userData.setUserColor(intToColor(colorPickerView.getSelectedColor()));
+                userData.setThemeName(themeTitle.getText().toString());
+                intent.putExtra("mode",userData.getTheme());
                 setResult(3,intent);
                 finish();
             }
@@ -135,6 +133,12 @@ public class ThemeChooser extends AppCompatActivity {
         });
 
 
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        userData.save();
     }
 
     public void QuickToast(String s){

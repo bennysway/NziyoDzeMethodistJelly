@@ -36,6 +36,7 @@ public class UserDataIO {
     private Data bookmarkData;
     private Data usernameData;
     private Data userDataFile;
+    private Data bibleOption;
     SharedPreferences preferences;
     String name;
     SharedPreferences.Editor editor;
@@ -61,6 +62,7 @@ public class UserDataIO {
         this.theme = new Data(context,"themecolor");
         this.themeName = new Data(context,"themename");
         this.image = new Data(context,"image");
+        this.bibleOption = new Data(context, "bibleoption");
         //
 
         if(userDataFile.get().equals("")) {
@@ -85,6 +87,7 @@ public class UserDataIO {
         userData.setTheme(theme.get());
         userData.setThemeName(themeName.get());
         userData.setImage(image.get());
+        userData.setBibleOption(bibleOption.get());
         userData.setShowSplash(preferences.getBoolean("long_splash",true));
         userData.setIncludeEnglishSplashHymns(preferences.getBoolean("include_english",true));
 
@@ -98,7 +101,6 @@ public class UserDataIO {
                 Data storedKey = new Data(context,safe);
                 String raw = storedKey.get();
                 UserData.UserCaption userCaption = new UserData.UserCaption(captions[i]);
-                userCaption.setHymnNum(captions[i]);
                 userCaption.userNotes = new ArrayList<>();
                 userCaption.userRecordings = new ArrayList<>();
 
@@ -124,10 +126,14 @@ public class UserDataIO {
         }
 
         if(favorites.length>0 && !favListData.get().equals("")){
-            userData.setFavList((ArrayList<String>) Arrays.asList(favorites));
+            ArrayList<String> list = new ArrayList<>();
+            list.addAll(Arrays.asList(favorites));
+            userData.setFavList(list);
         }
         if(recent.length>0 && !recListData.get().equals("")){
-            userData.setRecList((ArrayList<String>) Arrays.asList(recent));
+            ArrayList<String> list = new ArrayList<>();
+            list.addAll(Arrays.asList(recent));
+            userData.setRecList(list);
         }
         userDataFile.update(new Gson().toJson(userData));
         return userData;
@@ -161,8 +167,8 @@ public class UserDataIO {
     public void addToRecentList(String hymnNumber){
         userData.recList.add(0,hymnNumber);
     }
-    public void removeFromRecentList(String hymnNumber){
-        userData.recList.remove(hymnNumber);
+    public void removeFromRecentList(int index){
+        userData.recList.remove(index);
     }
     public Map<String,Integer> getFrequencyTable(){
         Map data = new TreeMap();
@@ -185,36 +191,42 @@ public class UserDataIO {
         return caption;
     }
     public void addNote(String hymnNumber,String date, String note){
+        boolean captionSet = false;
         for(UserData.UserCaption caption : userData.userCaptions){
             if(caption.getHymnNum().equals(hymnNumber)){
                 caption.userNotes.add(new UserData.UserCaption.UserNote(date,note));
-            } else {
+                captionSet = true;
+            }
+            if(captionSet) {
                 UserData.UserCaption userCaption = new UserData.UserCaption(hymnNumber);
-                userCaption.setHymnNum(hymnNumber);
-                userCaption.userNotes.add(new UserData.UserCaption.UserNote(date,note));
+                userCaption.userNotes.add(new UserData.UserCaption.UserNote(date, note));
                 userData.userCaptions.add(userCaption);
             }
         }
     }
     public void addRecording(String hymnNumber,String date,String path){
+        boolean captionSet = false;
         for(UserData.UserCaption caption : userData.userCaptions){
             if(caption.getHymnNum().equals(hymnNumber)){
                 caption.userRecordings.add(new UserData.UserCaption.UserRecording(date,path));
-            } else {
+                captionSet = true;
+            }
+            if(captionSet) {
                 UserData.UserCaption userCaption = new UserData.UserCaption(hymnNumber);
-                userCaption.setHymnNum(hymnNumber);
                 userCaption.userRecordings.add(new UserData.UserCaption.UserRecording(date,path));
                 userData.userCaptions.add(userCaption);
             }
         }
     }
     public void addRecording(String hymnNumber,String date,String path,long duration){
+        boolean captionSet = false;
         for(UserData.UserCaption caption : userData.userCaptions){
             if(caption.getHymnNum().equals(hymnNumber)){
                 caption.userRecordings.add(new UserData.UserCaption.UserRecording(date,path,duration));
-            } else {
+                captionSet = true;
+            }
+            if(captionSet) {
                 UserData.UserCaption userCaption = new UserData.UserCaption(hymnNumber);
-                userCaption.setHymnNum(hymnNumber);
                 userCaption.userRecordings.add(new UserData.UserCaption.UserRecording(date,path,duration));
                 userData.userCaptions.add(userCaption);
             }
@@ -310,6 +322,15 @@ public class UserDataIO {
         userDataFile.update(new Gson().toJson(userData));
     }
     public String getUserName(){ return userData.getUserName(); }
+    public void setUserName(String name){ userData.setUserName(name); }
+    public void setBible(String bible){
+        userData.setBibleOption(bible);
+    }
+    public String getBible(){
+        return userData.getBibleOption();
+    }
+    public String getUserImage(){ return userData.getImage();}
+    public void setUserImage(String path){ userData.setImage(path);}
     //Splash
     public ArrayList<String> getSplashList(){ return userData.getSplashList(); }
     public void addToSplashList(String number){

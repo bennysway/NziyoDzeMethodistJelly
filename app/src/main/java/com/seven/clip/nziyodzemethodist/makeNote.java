@@ -23,7 +23,10 @@ public class makeNote extends AppCompatActivity {
     String RandomNoteFileName = "abcdefghijklmnop";
     Random random ;
     String fullFile,key,hymnNum;
-    Data dataKey;
+    EditText textField;
+    Boolean saveOrCancelClicked=false;
+    //Data dataKey;
+    UserDataIO userData;
 
 
     @Override
@@ -32,7 +35,7 @@ public class makeNote extends AppCompatActivity {
         setContentView(R.layout.activity_make_note);
         key = getIntent().getStringExtra("captionKey");
         hymnNum = getIntent().getStringExtra("hymnNum");
-        dataKey = new Data(this,key);
+        userData = new UserDataIO(this);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
@@ -40,7 +43,7 @@ public class makeNote extends AppCompatActivity {
         Button share = findViewById(R.id.shareNote);
         Button save = findViewById(R.id.saveNote);
         final Button cancel = findViewById(R.id.undoNote);
-        final EditText textField = findViewById(R.id.textField);
+        textField = findViewById(R.id.textField);
         TextView author = findViewById(R.id.author);
         TextView lastEditTime = findViewById(R.id.editDate);
 
@@ -49,10 +52,11 @@ public class makeNote extends AppCompatActivity {
             public void onClick(View v) {
                 String data = textField.getText().toString();
                 if(!data.equals("")){
-                    writeToFile(data);
-                    Data withCaption = new Data(makeNote.this,"withcaption");
+                    userData.addNote(hymnNum,timeStamp(),data);
+                    /*Data withCaption = new Data(makeNote.this,"withcaption");
                     if(!withCaption.find(hymnNum))
-                        withCaption.pushFront(hymnNum);
+                        withCaption.pushFront(hymnNum);*/
+                    saveOrCancelClicked = true;
                     finish();
                     QuickToast("Saved.");
                 }
@@ -64,6 +68,7 @@ public class makeNote extends AppCompatActivity {
         cancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                saveOrCancelClicked = true;
                 finish();
                 QuickToast("No changes were made.");
             }
@@ -98,13 +103,14 @@ public class makeNote extends AppCompatActivity {
 
     public void writeToFile(String body)
     {
-        random = new Random();
-        fullFile = CreateRandomAudioFileName(5)+key;
-        Data fullKey = new Data(this,key+fullFile);
-        dataKey.pushBack(timeStamp());
+        //random = new Random();
+        //fullFile = CreateRandomAudioFileName(5)+key;
+        //Data fullKey = new Data(this,key+fullFile);
+
+        /*dataKey.pushBack(timeStamp());
         dataKey.pushBack("note");
         dataKey.pushBack(fullFile);
-        fullKey.update(body);
+        fullKey.update(body);*/
     }
     public String CreateRandomAudioFileName(int string){
         StringBuilder stringBuilder = new StringBuilder( string );
@@ -137,5 +143,16 @@ public class makeNote extends AppCompatActivity {
         }
     }
 
-
+    @Override
+    protected void onPause() {
+        String data = textField.getText().toString();
+        if(!data.equals("") && !saveOrCancelClicked){
+            userData.addNote(hymnNum,timeStamp(),data);
+                    /*Data withCaption = new Data(makeNote.this,"withcaption");
+                    if(!withCaption.find(hymnNum))
+                        withCaption.pushFront(hymnNum);*/
+            QuickToast("Saved.");
+        }
+        super.onPause();
+    }
 }

@@ -13,14 +13,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-
-
     }
-
-
-
-
-
     public static String userData(Context context, String stringKey, String mode, String data){
 
         //keys include: favlist,reclist,showsplash,color,image,textsize,recordflag,withcaptions

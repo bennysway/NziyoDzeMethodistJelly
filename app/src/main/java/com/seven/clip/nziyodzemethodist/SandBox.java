@@ -8,6 +8,7 @@ import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v8.renderscript.RenderScript;
+import android.view.WindowManager;
 import android.widget.RelativeLayout;
 
 public class SandBox extends AppCompatActivity {
@@ -16,13 +17,9 @@ public class SandBox extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sand_box);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
-//        RecyclerView mRecyclerView = findViewById(R.id.sandboxRecycler);
-//        mRecyclerView.addItemDecoration(new DividerItemDecoration(this, DividerItemDecoration.VERTICAL));
-//        LinearLayoutManager mLayoutManager = new LinearLayoutManager(this);
-//        mRecyclerView.setLayoutManager(mLayoutManager);
-//        MySandBoxAdapter mAdapter = new MySandBoxAdapter(new UserDataIO(this).getRecentList(),this);
-//        mRecyclerView.setAdapter(mAdapter);
 
     }
 }

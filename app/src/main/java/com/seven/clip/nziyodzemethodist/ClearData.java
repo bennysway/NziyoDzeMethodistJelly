@@ -13,6 +13,8 @@ import android.widget.Toast;
 
 public class ClearData extends AppCompatActivity {
 
+    UserDataIO userData;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,21 +36,8 @@ public class ClearData extends AppCompatActivity {
 //firstTimes:   biblepickerfirsttime,
 
         getWindow().setLayout((int)(width*.8),(int)(height*.3));
-        final Data favList = new Data(this,"favlist");
-        final Data recList = new Data(this,"reclist");
-        final Data showSplash = new Data(this,"showsplash");
-        final Data image = new Data(this,"image");
-        final Data color = new Data(this,"color");
-        final Data size = new Data(this,"textsize");
-        final Data recordFlag = new Data(this,"recordflag");
-        final Data withCaption = new Data(this,"withcaption");
-        final Data textSize = new Data(this,"textsize");
-        final Data themeColor = new Data(this,"themecolor");
-        final Data themeName = new Data(this,"themename");
-        final Data booking = new Data(this,"bookmark");
-        final Data bibleOption = new Data(this, "bibleoption");
-        final Data biblePickerFirstTime = new Data(this, "biblepickerfirsttime");
-        final Zvinokosha access = new Zvinokosha(this);
+
+        userData = new UserDataIO(this);
 
         Typeface custom_font = Typeface.createFromAsset(getAssets(),  "fonts/bh.ttf");
         prompt.setTypeface(custom_font);
@@ -65,27 +54,22 @@ public class ClearData extends AppCompatActivity {
         yes.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                favList.deleteAll();
-                recList.deleteAll();
-                showSplash.deleteAll();
-                image.deleteAll();
-                color.deleteAll();
-                size.deleteAll();
-                recordFlag.deleteAll();
-                access.clear();
-                withCaption.deleteAll();
-                themeColor.deleteAll();
-                themeName.deleteAll();
-                textSize.deleteAll();
-                booking.deleteAll();
-                bibleOption.deleteAll();
-                biblePickerFirstTime.deleteAll();
-                SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(ClearData.this);
-                SharedPreferences.Editor editor = preferences.edit();
-                editor.putString("example_text", "Set name");
-                editor.apply();
+                userData.clearFavoriteList();
+                userData.clearRecentList();
+                userData.clearSplashList();
+                userData.setShowSplash(true);
+                userData.setUserImage("");
+                userData.clearColor();
+                userData.clearTextSize();
+                userData.setTheme("");
+                userData.setThemeName("");
+                userData.deleteBookmark();
+                userData.setBible("");
+                userData.setUserName("");
                 QuickToast("Everything will be fully cleared when you restart the hymn book.");
+                userData.save();
                 finish();
+
             }
         });
 

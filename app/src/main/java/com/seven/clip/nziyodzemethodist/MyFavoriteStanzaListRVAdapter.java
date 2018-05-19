@@ -5,6 +5,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -20,11 +21,6 @@ public class MyFavoriteStanzaListRVAdapter extends RecyclerView.Adapter<MyFavori
     private ArrayList<UserData.UserFavoriteStanza> dataSet;
     Context context;
     private xHymns hymns;
-    private OnItemDismissListener mOnItemDismissListener;
-
-    public interface OnItemDismissListener {
-        void onItemDismissed(int number);
-    }
 
     public MyFavoriteStanzaListRVAdapter(ArrayList<UserData.UserFavoriteStanza> _dataSet, Context _context) {
         dataSet = _dataSet;
@@ -37,16 +33,12 @@ public class MyFavoriteStanzaListRVAdapter extends RecyclerView.Adapter<MyFavori
     // you provide access to all the views for a data item in a view holder
     public static class ViewHolder extends RecyclerView.ViewHolder {
         // each data item is just a string in this case
-        UnderlineCoordinatorLayout mView;
+        LinearLayout mView;
         TextView mTitle;
-        TextView mDelete;
-        SwipeLayout swipeLayout;
         ViewHolder(View v) {
             super(v);
-            mView = (UnderlineCoordinatorLayout) v;
-            mTitle = v.findViewById(R.id.swipeRightTextView);
-            swipeLayout = v.findViewById(R.id.foregroundView);
-            mDelete = v.findViewById(R.id.backgroundView);
+            mView = (LinearLayout) v;
+            mTitle = v.findViewById(R.id.entryListTextView);
         }
     }
 
@@ -69,7 +61,6 @@ public class MyFavoriteStanzaListRVAdapter extends RecyclerView.Adapter<MyFavori
         String title =hymns.getTitle(number,dataSet.get(position).isEnglish(),true);
         holder.mTitle.setText(title);
         holder.mTitle.setAlpha(1f);
-        holder.mDelete.setAlpha(0f);
         holder.mTitle.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -86,11 +77,5 @@ public class MyFavoriteStanzaListRVAdapter extends RecyclerView.Adapter<MyFavori
     @Override
     public int getItemCount() {
         return dataSet.size();
-    }
-
-    @Override
-    public void onViewRecycled(ViewHolder holder) {
-        holder.mView.sync();
-        super.onViewRecycled(holder);
     }
 }

@@ -102,7 +102,7 @@ public class HymnDisplay extends AppCompatActivity {
     MediaRecorder mediaRecorder;
     Random random;
     //Data favList, recordFlag, color, textSizeData, recList, favIterator, recIterator, withCaption;
-    Data recordFlag;
+    //Data recordFlag;
     UserDataIO userData;
     EnResource engCheck;
     Zvinokosha access;
@@ -149,14 +149,6 @@ public class HymnDisplay extends AppCompatActivity {
         }, 500);
 
 
-//        favList = new Data(this, "favlist");
-//        recList = new Data(this, "reclist");
-//        color = new Data(this, "color");
-//        textSizeData = new Data(this, "textsize");
-        recordFlag = new Data(this, "recordflag");
-//        favIterator = new Data(this, "faviterator");
-//        recIterator = new Data(this, "reciterator");
-//        withCaption = new Data(this, "withcaption");
         hymnDisplayIntent = new Intent();
         engCheck = new EnResource(this);
         access = new Zvinokosha(this);
@@ -165,14 +157,10 @@ public class HymnDisplay extends AppCompatActivity {
 
         s = getIntent().getStringExtra("hymnNum");
         boolean setToEnglish = getIntent().getBooleanExtra("isInEnglish", false);
-        //recList.pushFront(underLine);
         userData.addToRecentList(s);
 
         safe = NumToWord.convert(StrToInt(s)) + "key";
         capStoreKey = safe;
-
-//        favIterator.update("0");
-//        recIterator.update("0");
 
         chorus = findViewById(R.id.chorusFloat);
 
@@ -237,13 +225,6 @@ public class HymnDisplay extends AppCompatActivity {
             textSize = 40f;
         else
             textSize = Float.valueOf(g);
-        String g1 = recordFlag.get();
-        if (g1.equals("true")) {
-            QuickToast("Open the side menu...");
-            QuickToast("And use the Record Option...");
-            QuickToast("It should be the first icon.");
-            recordFlag.deleteAll();
-        }
 
         tapTimer = new Handler();
         createCaption();
@@ -256,7 +237,7 @@ public class HymnDisplay extends AppCompatActivity {
                 passId = new Runnable() {
                     @Override
                     public void run() {
-                        int position = stanzas.indexOf((TextView) stanza);
+                        int position = stanzas.indexOf(stanza);
                         addBar(position,((TextView) stanza).getText().toString());
                     }
                 };
@@ -280,21 +261,9 @@ public class HymnDisplay extends AppCompatActivity {
                             } else if (canSlideLeft) {
                                 closeNavigationDrawer();
                             } else if (stanzaBarStack.isEmpty()) {
-//                                if (click<3) {
-//                                    click++;
-//                                        loadBar.animate().scaleX((float)click/3);
-//                                    tapTimer.postDelayed(clickDuration,1000);
-//                                }
-//                                if (click==3) {
-//                                    addBar((TextView) stanza,stanza.getId());
-//                                    stanzaBarStack.add(stanza.getId());
-//                                    loadBar.animate().scaleX(1f);
-//                                    click=0;
-//                                }
                                 return false;
                             } else {
                                 int pop = stanzaBarStack.remove(0);
-                                removeBar(pop);
                                 return false;
                             }
                         }
@@ -309,7 +278,7 @@ public class HymnDisplay extends AppCompatActivity {
             @Override
             public boolean onLongClick(View stanza) {
                 if(stanzaBarStack.isEmpty()){
-                    int position = stanzas.indexOf((TextView) stanza);
+                    int position = stanzas.indexOf(stanza);
                     addBar(position,((TextView) stanza).getText().toString());
                     stanzaBarStack.add(stanza.getId());
                     return true;
@@ -756,6 +725,8 @@ public class HymnDisplay extends AppCompatActivity {
 
     @Override
     public void onResume() {
+        if(userData!=null)
+            userData = new UserDataIO(this);
         super.onResume();
         if (hasOptions == 1)
             finish();
@@ -1312,19 +1283,10 @@ public class HymnDisplay extends AppCompatActivity {
 
     public void makeEnglishHymn() {
         changeColorMode(userData.getUserColor());
-
         if (isEnglishAvailable && !isInEnglish) {
             isInEnglish = true;
             flipEnglishIcon();
             populateHymn(s, true);
-
-            String en_g1 = recordFlag.get();
-            if (en_g1.equals("true")) {
-                QuickToast("Open the side menu...");
-                QuickToast("And use the Record Option...");
-                QuickToast("It should be the first icon.");
-                recordFlag.deleteAll();
-            }
 
             final Handler en_handler = new Handler();
             en_handler.postDelayed(new Runnable() {
@@ -1344,16 +1306,7 @@ public class HymnDisplay extends AppCompatActivity {
             isInEnglish = false;
             flipEnglishIcon();
             populateHymn(s, false);
-
-            String en_g1 = recordFlag.get();
-            if (en_g1.equals("true")) {
-                QuickToast("Open the side menu...");
-                QuickToast("And use the Record Option...");
-                QuickToast("It should be the first icon.");
-                recordFlag.deleteAll();
-            }
             changeColorMode(userData.getUserColor());
-
             final Handler en_handler = new Handler();
             en_handler.postDelayed(new Runnable() {
                 @Override
@@ -1797,12 +1750,7 @@ public class HymnDisplay extends AppCompatActivity {
                     QuickToast("The application had difficulty in recording and saving.");
                     isRecordingSaved = false;
                 }
-
-                recordFlag.deleteAll();
-                isRecording = false;
-                isRecording = false;
             }
-            recordFlag.deleteAll();
             finish();
 
         }
@@ -1869,8 +1817,6 @@ public class HymnDisplay extends AppCompatActivity {
                         QuickToast("The application had difficulty in recording and saving.");
                         isRecordingSaved = false;
                     }
-
-                    recordFlag.deleteAll();
                     flipRecIcon();
                     isRecording = false;
                 } else
@@ -2216,11 +2162,5 @@ public class HymnDisplay extends AppCompatActivity {
         }
     }
 
-    public void removeBar(int pos) {
-//        hymnDispl.removeView(hymnDispl.getChildAt(pos));
-//        TextView textView = (TextView) hymnDispl.getChildAt(pos);
-//        textView.setBackgroundResource(backgroundResource);
-//        textView.setTextColor(textcolor);
-    }
 }
 
