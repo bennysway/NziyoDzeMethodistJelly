@@ -43,6 +43,7 @@ public class UnderlineListFragment extends android.support.v4.app.Fragment{
         TextView noUnderlinesText = view.findViewById(R.id.noUnderlinesTextView);
         //Recycler View Handling
         mRecyclerView = view.findViewById(R.id.underlineListRecyclerView);
+
         mRecyclerView.addItemDecoration(new DividerItemDecoration(getContext(), DividerItemDecoration.VERTICAL));
         mLayoutManager = new LinearLayoutManager(getContext());
         mRecyclerView.setLayoutManager(mLayoutManager);

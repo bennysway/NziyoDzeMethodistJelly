@@ -35,7 +35,6 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:elevation="@dimen/white_card_elevation"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:id="@+id/recentTitleHolder"

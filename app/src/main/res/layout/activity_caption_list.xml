@@ -37,28 +37,39 @@
         android:shadowDy="0.0"
         android:shadowRadius="25.0"/>
 
-    <TextView
-        android:text="@string/captionButtonText"
-        android:textColor="@color/burn"
-        android:background="@drawable/top_rounded_white"
-        android:textSize="30sp"
-        android:gravity="center"
-        android:fontFamily="cursive"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:elevation="@dimen/white_card_elevation"
-        android:layout_height="50dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:id="@+id/captionsTitle" />
-    <ImageView
-        app:srcCompat="@drawable/back_icon"
-        android:id="@+id/captionsBackButton"
-        android:elevation="@dimen/white_card_elevation"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:id="@+id/recentTitleHolder"
+        android:layout_height="50dp">
+        <com.github.mmin18.widget.RealtimeBlurView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:realtimeBlurRadius="20dp"
+            app:realtimeOverlayColor="#afff" />
+        <TextView
+            android:text="@string/captionButtonText"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            android:gravity="center"
+            android:fontFamily="cursive"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/captionsTitle" />
+        <ImageView
+            app:srcCompat="@drawable/back_icon"
+            android:id="@+id/captionsBackButton"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+    </RelativeLayout>
+
+
 
 
 </RelativeLayout>

@@ -1,0 +1,12 @@
+<vector android:height="100dp"
+    android:viewportHeight="100.0"
+    android:viewportWidth="500.0"
+    android:width="500dp"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <path
+        android:fillColor="@color/burnFaded"
+        android:pathData=" M 0 50 C 46 -47.333 302 103.333 500 30 Q 500 57.318 500 100 L 0 100 L 0 50 Z "/>
+    <path
+        android:fillColor="@color/burn"
+        android:pathData=" M 0 100 L 500 100 Q 500 68.667 500 50 C 420.667 132 201.333 -21.333 0 80 Q 0 95.611 0 100 Z "/>
+    </vector>

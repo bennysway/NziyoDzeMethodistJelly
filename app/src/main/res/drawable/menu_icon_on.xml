@@ -1,16 +1,16 @@
 <vector xmlns:android="http://schemas.android.com/apk/res/android"
     android:width="24dp"
     android:height="24dp"
-    android:viewportHeight="300"
-    android:viewportWidth="300">
+    android:viewportHeight="100"
+    android:viewportWidth="100">
     <path
-        android:name="v"
-        android:fillColor="@color/black"
         android:pathData="
-        M 60 40 c 100 0 100 0 200 0 c 41 -1 41 39 0 40 h -200 c -40 1 -40 -39 0 -40 z
-        M 60 120 h 200 c 40 0 40 40 0 40 h -200 c -40 0 -40 -40 0 -40 z
-        M 60 200 h 200 c 40 0 40 40 0 40 c -100 0 -100 0 -200 0 c -40 0 -40 -40 0 -40 z
+        M 20 30 H 80
+        M 20 70 H 80
+        M 20 50 H 80
         "
-        android:strokeColor="@color/fadedWhite"
-        android:strokeWidth="10"/>
+        android:strokeColor="@color/burn"
+        android:strokeWidth="1"
+
+        />
 </vector>

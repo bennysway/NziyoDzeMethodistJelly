@@ -11,6 +11,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+
 /**
  * Created by bennysway on 23.11.17.
  */
@@ -57,4 +59,5 @@ public class FavoriteListFragment extends android.support.v4.app.Fragment {
         }
         return view;
     }
+
 }

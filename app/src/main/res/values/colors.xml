@@ -9,6 +9,7 @@
     <color name="transBlack">#70000000</color>
     <color name="burn">#cc5f00</color>
     <color name="burnFaded">#5fcc5f00</color>
+    <color name="burnLight">#faa65c</color>
     <color name="fav">#ff0f0f</color>
     <color name="black">#ff000000</color>
     <color name="fadedBlack">#50000000</color>

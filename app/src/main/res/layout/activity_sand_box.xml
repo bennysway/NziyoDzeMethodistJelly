@@ -5,7 +5,9 @@
     android:background="#00000000"
     android:id="@+id/sandboxLayout">
 
-    <Button
-        android:layout_width="50dp"
-        android:layout_height="50dp" />
+    <ListView
+        android:id="@+id/home_landing_list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    </ListView>
 </RelativeLayout>

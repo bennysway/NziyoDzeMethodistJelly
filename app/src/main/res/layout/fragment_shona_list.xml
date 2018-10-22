@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_fav_list"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:id="@+id/hymnList"
+        android:layout_height="match_parent"
+        android:paddingTop="50dp"
+        android:clipToPadding="false" />
+
+    <com.futuremind.recyclerviewfastscroll.FastScroller
+        android:id="@+id/hymnListShonaFastScroller"
+        android:layout_marginTop="50dp"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent" />
+
+
+</FrameLayout>

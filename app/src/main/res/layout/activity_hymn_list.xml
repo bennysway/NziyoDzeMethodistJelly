@@ -15,7 +15,6 @@
         android:textColor="@color/white"
         android:visibility="invisible"
         android:textSize="60sp"
-        android:elevation="10dp"
         android:background="@drawable/scroll_prev"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
@@ -30,6 +29,71 @@
         app:srcCompat="@drawable/natured_small"
         android:scaleType="centerCrop"
         android:id="@+id/hymnNumBg" />
+
+    <!-->
+    <android.support.v4.view.ViewPager
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/favoriteListViewPager"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true">
+        <com.github.mmin18.widget.RealtimeBlurView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:realtimeBlurRadius="20dp"
+            app:realtimeOverlayColor="#afff" />
+        <TextView
+            android:text="@string/favButtonText"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            android:gravity="center"
+            android:paddingStart="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingEnd="10dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:layout_centerInParent="true"
+            android:fontFamily="cursive"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/favTitle" />
+
+        <TextView
+            android:id="@+id/favoriteUnderlineTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingEnd="10dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:layout_alignBaseline="@+id/favTitle"
+            android:layout_alignBottom="@+id/favTitle"
+            android:layout_toEndOf="@+id/favTitle"
+            android:layout_toRightOf="@+id/favTitle"
+            android:fontFamily="cursive"
+            android:gravity="center"
+            android:text="@string/underlineButtonText"
+            android:textColor="@color/black"
+            android:textSize="30sp" />
+
+        <ImageView
+            app:srcCompat="@drawable/back_icon"
+            android:id="@+id/favBackBut"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+    </RelativeLayout>
+    <-->
 
 
     <android.support.v7.widget.RecyclerView
@@ -50,19 +114,29 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
 
-    <TextView
-        android:text="@string/hymnListButtonText"
-        android:textColor="@color/burn"
-        android:background="@drawable/top_rounded_white"
-        android:textSize="30sp"
-        android:gravity="center"
-        android:fontFamily="cursive"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:elevation="@dimen/white_card_elevation"
         android:layout_height="50dp"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:id="@+id/hymnListTitle" />
+        android:layout_centerHorizontal="true">
+        <com.github.mmin18.widget.RealtimeBlurView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:realtimeBlurRadius="20dp"
+            app:realtimeOverlayColor="#afff" />
+        <TextView
+            android:text="@string/hymnListButtonText"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            android:gravity="center"
+            android:fontFamily="cursive"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/hymnListTitle" />
+    </RelativeLayout>
+
 
     <ImageView
         app:srcCompat="@drawable/back_icon"

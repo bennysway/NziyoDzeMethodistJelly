@@ -170,6 +170,8 @@
         ads:adUnitId="@string/reading_banner_ad_unit_id">
     </com.google.android.gms.ads.AdView>
 
+    <!--
+
     <com.github.clans.fab.FloatingActionMenu
         android:id="@+id/readingFloatingBut"
         android:layout_width="wrap_content"
@@ -249,7 +251,7 @@
             fab:fab_label="Gospel" />
 
     </com.github.clans.fab.FloatingActionMenu>
-
+-->
 
 
 

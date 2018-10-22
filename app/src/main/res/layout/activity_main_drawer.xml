@@ -20,219 +20,36 @@
         android:id="@+id/activity_main"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context="com..seven.clip.nziyodzemethodist.MainActivity">
+        tools:context="com.seven.clip.nziyodzemethodist.MainActivity">
 
-        <ImageView
+        <android.support.v4.view.ViewPager
+            android:id="@+id/mainViewPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </android.support.v4.view.ViewPager>
+        <Button
+            android:text="@string/test_button_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:id="@+id/test"
+            android:visibility="visible"
+            android:shadowColor="@color/black"
+            android:layout_alignParentRight="true" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/recentTitleHolder"
+        android:layout_height="50dp">
+        <com.github.mmin18.widget.RealtimeBlurView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:src="@drawable/nature"
-            android:scaleType="centerCrop"
-            android:id="@+id/mainBg" />
-
-        <GridLayout
-            android:layout_width="wrap_content"
-            android:layout_height="380dp"
-            android:layout_marginLeft="-100dp"
-            android:rowCount="4"
-            android:columnCount="4"
-            android:rotation="45"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentStart="true"
-            android:id="@+id/gridLayout"
-            android:layout_alignParentLeft="true">
-
-            <Button
-                android:layout_width="@dimen/buttonSquareSize"
-                android:layout_height="@dimen/buttonSquareSize"
-                android:background="@drawable/circle"
-                android:layout_row="0"
-                android:layout_column="0"
-                android:id="@+id/hymnNumberBut" />
-
-            <Button
-                android:layout_width="@dimen/buttonSquareSize"
-                android:layout_height="@dimen/buttonSquareSize"
-                android:background="@drawable/circle"
-                android:layout_row="0"
-                android:layout_column="1"
-                android:id="@+id/hymnListBut" />
-
-            <Button
-                android:layout_width="@dimen/buttonSquareSize"
-                android:layout_height="@dimen/buttonSquareSize"
-                android:background="@drawable/circle"
-                android:layout_row="0"
-                android:layout_column="2"
-                android:visibility="invisible"
-                android:id="@+id/updateHymnBut" />
-
-            <Button
-                android:layout_width="@dimen/buttonSquareSize"
-                android:layout_height="@dimen/buttonSquareSize"
-                android:background="@drawable/circle"
-                android:layout_row="2"
-                android:layout_column="2"
-                android:id="@+id/captionsListBut"/>
-
-            <Button
-                android:layout_width="@dimen/buttonSquareSize"
-                android:layout_height="@dimen/buttonSquareSize"
-                android:background="@drawable/circle"
-                android:id="@+id/favBut"
-                android:layout_row="1"
-                android:layout_column="1" />
-
-            <Button
-                android:layout_width="@dimen/buttonSquareSize"
-                android:layout_height="@dimen/buttonSquareSize"
-                android:background="@drawable/circle"
-                android:id="@+id/recentBut"
-                android:layout_row="1"
-                android:layout_column="2" />
-
-            <Button
-                android:layout_width="@dimen/buttonSquareSize"
-                android:layout_height="@dimen/buttonSquareSize"
-                android:background="@drawable/circle"
-                android:id="@+id/readingsBut"
-                android:layout_row="1"
-                android:layout_column="3" />
-
-
-            <TextView
-                android:text="@string/hymnNumberButtonText"
-                android:textSize="@dimen/mainTextButtonsSize"
-                android:layout_width="wrap_content"
-                android:layout_gravity="center"
-                android:layout_height="wrap_content"
-                android:rotation="-45"
-                android:textColor="@color/white"
-                android:layout_marginTop="0dp"
-                android:layout_marginLeft="0dp"
-                android:layout_column="0"
-                android:layout_row="0"
-                android:elevation="100dp"
-                android:id="@+id/hymnNumText"
-                android:fontFamily="sans-serif"
-                android:textAlignment="center" />
-
-            <TextView
-                android:text="@string/hymnListButtonText"
-                android:textSize="@dimen/mainTextButtonsSize"
-                android:layout_width="wrap_content"
-                android:layout_gravity="center"
-                android:layout_height="wrap_content"
-                android:rotation="-45"
-                android:textColor="@color/white"
-                android:layout_marginTop="0dp"
-                android:layout_marginLeft="0dp"
-                android:layout_column="1"
-                android:layout_row="0"
-                android:elevation="100dp"
-                android:id="@+id/hymnListText"
-                android:fontFamily="sans-serif"
-                android:textAlignment="center" />
-
-
-            <TextView
-                android:text="@string/updateHymnButtonText"
-                android:textSize="@dimen/mainTextButtonsSize"
-                android:layout_width="wrap_content"
-                android:layout_gravity="center"
-                android:layout_height="wrap_content"
-                android:rotation="-45"
-                android:textColor="@color/white"
-                android:layout_marginTop="0dp"
-                android:layout_marginLeft="0dp"
-                android:visibility="invisible"
-                android:layout_column="2"
-                android:layout_row="0"
-                android:elevation="100dp"
-                android:id="@+id/updateHymnButText"
-                android:fontFamily="sans-serif"
-                android:textAlignment="center" />
-
-            <TextView
-                android:text="@string/favButtonText"
-                android:textSize="@dimen/mainTextButtonsSize"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:rotation="-45"
-                android:textColor="@color/white"
-                android:layout_marginTop="0dp"
-                android:layout_marginLeft="0dp"
-                android:layout_column="1"
-                android:layout_row="1"
-                android:elevation="100dp"
-                android:id="@+id/favText"
-                android:fontFamily="sans-serif"
-                android:textAlignment="center" />
-
-            <TextView
-                android:text="@string/recentButtonText"
-                android:textSize="@dimen/mainTextButtonsSize"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:rotation="-45"
-                android:textColor="@color/white"
-                android:layout_marginTop="0dp"
-                android:layout_marginLeft="0dp"
-                android:layout_column="2"
-                android:layout_row="1"
-                android:elevation="100dp"
-                android:id="@+id/recentText"
-                android:fontFamily="sans-serif"
-                android:textAlignment="center" />
-
-            <TextView
-                android:text="@string/captionButtonText"
-                android:textSize="@dimen/mainTextButtonsSize"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:rotation="-45"
-                android:textColor="@color/white"
-                android:layout_marginTop="0dp"
-                android:layout_marginLeft="0dp"
-                android:layout_column="2"
-                android:layout_row="2"
-                android:elevation="100dp"
-                android:id="@+id/captionText"
-                android:fontFamily="sans-serif"
-                android:textAlignment="center" />
-
-            <TextView
-                android:text="@string/readingsText"
-                android:textSize="@dimen/mainTextButtonsSize"
-                android:layout_width="wrap_content"
-                android:layout_gravity="center"
-                android:layout_height="wrap_content"
-                android:rotation="-45"
-                android:textColor="@color/white"
-                android:layout_marginTop="0dp"
-                android:layout_marginLeft="0dp"
-                android:layout_column="3"
-                android:layout_row="1"
-                android:elevation="100dp"
-                android:id="@+id/readingsText"
-                android:fontFamily="sans-serif"
-                android:textAlignment="center" />
-
-        </GridLayout>
-
-            <Button
-                android:text="test button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                android:layout_alignParentEnd="true"
-                android:id="@+id/test"
-                android:visibility="visible"
-                android:shadowColor="@color/black"
-                android:layout_alignParentRight="true" />
-
+            app:realtimeBlurRadius="20dp"
+            app:realtimeOverlayColor="#afff" />
         <ViewSwitcher
             xmlns:android="http://schemas.android.com/apk/res/android"
             android:id="@+id/mainDrawerTitleSwitcher"
@@ -240,8 +57,6 @@
             android:layout_height="50dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
-            android:background="@drawable/top_rounded_white"
-            android:elevation="5dp"
             android:animateLayoutChanges="true">
 
             <TextView
@@ -250,7 +65,7 @@
                 android:text="@string/app_name"
                 android:textSize="30sp"
                 android:id="@+id/mainAppTitle"
-                android:textColor="@color/burn"
+                android:textColor="@color/black"
                 android:gravity="center"
                 android:fontFamily="cursive"/>
 
@@ -260,22 +75,19 @@
                 android:id="@+id/mainSearchBar"
                 android:imeOptions="actionSearch"
                 android:textSize="30sp"
-                android:textColor="@color/burn"
+                android:textColor="@color/black"
                 android:gravity="center"
                 android:inputType="textNoSuggestions"
                 android:background="#00000000"
                 />
-
-
         </ViewSwitcher>
+    </RelativeLayout>
 
         <ImageView
             app:srcCompat="@drawable/menu_icon"
             android:id="@+id/openMainDrawer"
-            android:layout_margin="5dp"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:elevation="@dimen/white_card_elevation"
             android:layout_alignParentTop="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true" />
@@ -283,10 +95,8 @@
         <ImageView
             app:srcCompat="@drawable/menu_icon_on"
             android:id="@+id/openMainDrawer_on"
-            android:layout_margin="5dp"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:elevation="@dimen/white_card_elevation"
             android:visibility="invisible"
             android:layout_alignParentTop="true"
             android:layout_alignParentLeft="true"
@@ -296,7 +106,6 @@
             app:srcCompat="@drawable/search_icon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:elevation="@dimen/white_card_elevation"
             android:id="@+id/searchButton"
             android:layout_margin="7dp"
             android:layout_alignParentTop="true"
@@ -308,7 +117,6 @@
             app:srcCompat="@drawable/close_icon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:elevation="@dimen/white_card_elevation"
             android:layout_margin="7dp"
             android:id="@+id/searchButton_on"
             android:visibility="invisible"

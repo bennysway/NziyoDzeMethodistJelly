@@ -214,7 +214,7 @@
             android:id="@+id/menuRow4"
             android:layout_weight="1">
             <ImageView
-                app:srcCompat="@drawable/heart_icon"
+                app:srcCompat="@drawable/ic_heart_icon"
                 android:layout_height="match_parent"
                 android:layout_width="wrap_content"
                 android:background="@color/transBlack"

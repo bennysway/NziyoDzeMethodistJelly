@@ -36,8 +36,10 @@ import android.widget.ViewSwitcher;
 
 import com.getkeepsafe.taptargetview.TapTarget;
 import com.getkeepsafe.taptargetview.TapTargetView;
+/*
 import com.github.clans.fab.FloatingActionButton;
 import com.github.clans.fab.FloatingActionMenu;
+*/
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.MobileAds;
@@ -73,8 +75,8 @@ public class ReadingDisplay extends AppCompatActivity {
     LinearLayout contentDisplay, bar;
     float textSize;
     Data textSizeData, bibleOption, biblePickerFirstTime;
-    FloatingActionButton psalmFloatBut, otFloatBut, ntFloatBut, gospelFloatBut;
-    FloatingActionMenu readingsFloatingMenuBut;
+    //FloatingActionButton psalmFloatBut, otFloatBut, ntFloatBut, gospelFloatBut;
+    //FloatingActionMenu readingsFloatingMenuBut;
     ScaleGestureDetector scaleGestureDetector;
 
 
@@ -113,12 +115,14 @@ public class ReadingDisplay extends AppCompatActivity {
         contentScrollLayout = displayLayout.findViewById(R.id.readingListContentScrollView);
         //
         readingBarText = displayLayout.findViewById(R.id.readingsBarText);
+        /*
         psalmFloatBut = findViewById(R.id.psalmFloatBut);
         otFloatBut = findViewById(R.id.otFloatBut);
         ntFloatBut = findViewById(R.id.ntFloatBut);
         gospelFloatBut = findViewById(R.id.gospelFloatBut);
         //
         readingsFloatingMenuBut = findViewById(R.id.readingFloatingBut);
+        */
 
 
         ReadingsTranslator translator = new ReadingsTranslator();
@@ -277,7 +281,7 @@ public class ReadingDisplay extends AppCompatActivity {
         g = biblePickerFirstTime.get();
         isCustomBibleSet = !g.equals("");
 
-        readingsFloatingMenuBut.setClosedOnTouchOutside(true);
+        //readingsFloatingMenuBut.setClosedOnTouchOutside(true);
 
         psalmLayout.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -307,7 +311,7 @@ public class ReadingDisplay extends AppCompatActivity {
             }
         });
 
-        psalmFloatBut.setOnClickListener(new View.OnClickListener() {
+        /*psalmFloatBut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 toggleLayout(1);
@@ -337,7 +341,7 @@ public class ReadingDisplay extends AppCompatActivity {
                 toggleLayout(4);
                 readingsFloatingMenuBut.close(true);
             }
-        });
+        });*/
 
         openExternalBut.setOnClickListener(new View.OnClickListener() {
             @Override

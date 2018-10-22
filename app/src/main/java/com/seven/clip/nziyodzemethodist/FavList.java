@@ -137,4 +137,5 @@ public class FavList extends AppCompatActivity {
         super.onWindowFocusChanged(hasFocus);
         travelDist = (favTitle.getWidth() + underlineTitle.getWidth())/2f;
     }
+
 }

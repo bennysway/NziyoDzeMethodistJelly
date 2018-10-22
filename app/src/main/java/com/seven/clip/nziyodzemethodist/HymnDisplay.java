@@ -20,8 +20,6 @@ import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.app.AppCompatDelegate;
-import android.text.SpannableString;
-import android.text.style.UnderlineSpan;
 import android.util.DisplayMetrics;
 import android.util.Log;
 import android.util.TypedValue;
@@ -975,7 +973,7 @@ public class HymnDisplay extends AppCompatActivity {
             heartBut.animate().scaleX(0f).setDuration(100).withEndAction(new Runnable() {
                 @Override
                 public void run() {
-                    heartBut.setImageDrawable(getResources().getDrawable(R.drawable.heart_icon));
+                    heartBut.setImageDrawable(getResources().getDrawable(R.drawable.ic_heart_icon));
                     heartBut.animate().scaleX(1f).setDuration(100);
                 }
             });

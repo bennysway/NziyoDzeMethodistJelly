@@ -1,15 +1,18 @@
 package com.seven.clip.nziyodzemethodist;
 
-import android.graphics.Bitmap;
-import android.graphics.drawable.BitmapDrawable;
-import android.support.v7.app.AppCompatActivity;
+import android.content.res.TypedArray;
 import android.os.Bundle;
-import android.support.v7.widget.DividerItemDecoration;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.support.v8.renderscript.RenderScript;
+import android.support.v7.app.AppCompatActivity;
 import android.view.WindowManager;
-import android.widget.RelativeLayout;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
+
+import com.seven.clip.nziyodzemethodist.adapters.HomeListAdapter;
+import com.seven.clip.nziyodzemethodist.bidirectionalPager.VerticalViewPager;
+import com.seven.clip.nziyodzemethodist.bidirectionalPager.ViewPagerAdapter;
+import com.seven.clip.nziyodzemethodist.models.HomeListItem;
+
+import java.util.ArrayList;
 
 public class SandBox extends AppCompatActivity {
 

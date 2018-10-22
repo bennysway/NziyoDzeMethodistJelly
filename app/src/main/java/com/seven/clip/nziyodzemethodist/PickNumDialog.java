@@ -36,7 +36,7 @@ public class PickNumDialog extends Dialog {
     private int pressCounter = 0;
     Context context;
 
-    PickNumDialog(@NonNull Context passedContext) {
+    public PickNumDialog(@NonNull Context passedContext) {
         super(passedContext);
         context = passedContext;
     }

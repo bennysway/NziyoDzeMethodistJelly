@@ -22,6 +22,8 @@
     <string name="noReadings">No Readings found in the database yet…</string>
     <string name="noRecentText">No Recent songs yet…</string>
     <string name="noResultsText">No Results found…</string>
+    <string name="thisWeekTitle">This Week</string>
+    <string name="announcements">Announcements</string>
     <string name="account_management_title">Account Management</string>
     <string name="hymn_banner_ad_unit_id">ca-app-pub-2945410942325181/9087063951</string>
     <string name="reading_banner_ad_unit_id">ca-app-pub-2945410942325181/5275511400</string>
@@ -134,5 +136,6 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="test_button_label">Test</string>
 
 </resources>

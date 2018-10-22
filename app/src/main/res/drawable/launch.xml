@@ -2,12 +2,47 @@
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:drawable="@color/white"/>
-
-    <item>
-        <bitmap
-            android:gravity="center"
-            android:src="@drawable/web_hi_res_512"/>
+        android:drawable="@color/white"
+        />
+    <item
+        android:gravity="center">
+        <inset
+            android:drawable="@drawable/logo_circle"/>
+    </item>
+    <item
+        android:gravity="center">
+        <inset
+            android:drawable="@drawable/zimbabwe"/>
+    </item>
+    <item
+        android:gravity="center">
+        <inset
+            android:drawable="@drawable/animated_zim"
+            />
+    </item>
+    <item
+        android:gravity="center">
+        <inset
+            android:layout_height="10dp"
+            android:layout_width="10dp"
+            android:drawable="@drawable/cross"/>
+    </item>
+    <item
+        android:gravity="center">
+        <inset
+            android:drawable="@drawable/shell"/>
+    </item>
+    <item
+        android:gravity="center">
+        <inset
+            android:drawable="@drawable/dove"/>
+    </item>
+    <item
+        android:gravity="center"
+        android:top="500dp">
+        <inset
+            android:drawable="@drawable/label"
+            />
     </item>
 
 </layer-list>

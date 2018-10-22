@@ -36,154 +36,123 @@
             android:value="@string/facebook_app_id" />
 
         <activity
-            android:name=".MainActivity"
-            android:screenOrientation="portrait" />
+            android:name=".MainActivity" />
         <activity
             android:name=".HymnDisplay"
-            android:screenOrientation="portrait"
+
             android:windowSoftInputMode="stateHidden" />
         <activity
-            android:name=".HymnList"
-            android:screenOrientation="portrait" />
+            android:name=".HymnList"/>
         <activity
             android:name=".MainDrawer"
-            android:screenOrientation="portrait" />
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".FavList"
-            android:screenOrientation="portrait" />
+             />
         <activity
             android:name=".ClearData"
             android:noHistory="true"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.Popups" />
+            android:theme="@style/AppTheme.Popups"/>
         <activity
             android:name=".removeFav"
             android:noHistory="true"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.Popups" />
+            
+            android:theme="@style/AppTheme.Popups"/>
         <activity
             android:name=".RecList"
-            android:noHistory="true"
-            android:screenOrientation="portrait" />
+            android:noHistory="true"/>
         <activity
             android:name=".Splash"
             android:noHistory="true"
-            android:screenOrientation="portrait"
             android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
             android:name=".Settings"
             android:label="@string/title_activity_settings"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.Fullscreen" />
+            android:theme="@style/AppTheme.Fullscreen"/>
         <activity
-            android:name=".ChoosePic"
-            android:screenOrientation="portrait">
+            android:name=".ChoosePic">
             <intent-filter>
                 <action android:name="seven.clip.action.choosepic" />
-
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity
             android:name=".ShareCustom"
-            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.Popups" />
         <activity
             android:name=".ColorMode"
-            android:noHistory="true"
-            android:screenOrientation="portrait">
+            android:noHistory="true">
             <intent-filter>
                 <action android:name="seven.clip.action.choosecolor" />
-
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity
-            android:name=".Search"
-            android:screenOrientation="portrait" />
+            android:name=".Search" />
         <activity
             android:name=".AdjustTextSize"
             android:noHistory="true"
-            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.Popups" />
         <activity
-            android:name=".Credits"
-            android:screenOrientation="portrait" />
+            android:name=".Credits" />
         <activity
             android:name=".Recorder"
             android:noHistory="true"
-            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.Popups" />
         <activity
             android:name=".Captions"
-            android:noHistory="true"
-            android:screenOrientation="portrait" />
+            android:noHistory="true" />
         <activity
             android:name=".addCaption"
             android:noHistory="true"
-            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.Popups" />
         <activity
             android:name=".DeleteCaption"
             android:noHistory="true"
-            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.Popups" />
         <activity
-            android:name=".makeNote"
-            android:screenOrientation="portrait" />
+            android:name=".makeNote" />
         <activity
-            android:name=".readNote"
-            android:screenOrientation="portrait" />
+            android:name=".readNote" />
         <activity
             android:name=".IntroActivity"
-            android:label="@string/app_name"
-            android:screenOrientation="portrait" />
+            android:label="@string/app_name" />
         <activity
-            android:name=".Notifications"
-            android:screenOrientation="portrait" />
+            android:name=".Notifications" />
         <activity
             android:name=".CaptionList"
-            android:noHistory="true"
-            android:screenOrientation="portrait" />
+            android:noHistory="true" />
         <activity
-            android:name=".EventLog"
-            android:screenOrientation="portrait" />
+            android:name=".EventLog" />
         <activity
-            android:name=".ThemeChooser"
-            android:screenOrientation="portrait" />
+            android:name=".ThemeChooser" />
         <activity
-            android:name=".MakeCard"
-            android:screenOrientation="portrait" />
+            android:name=".MakeCard" />
         <activity
-            android:name=".BiblePicker"
-            android:screenOrientation="portrait" />
+            android:name=".BiblePicker" />
         <activity
-            android:name=".ReadingList"
-            android:screenOrientation="portrait" />
+            android:name=".ReadingList" />
         <activity
             android:name=".ManageLogin"
-            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.Popups">
             <intent-filter>
                 <action android:name="seven.clip.action.manageLogin" />
-
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity
-            android:name=".ReadingDisplay"
-            android:screenOrientation="portrait" />
+            android:name=".ReadingDisplay" />
         <activity
-            android:name=".SandBox"
-            android:screenOrientation="portrait" />
-        <activity android:name=".SwipeSplash"
-            android:screenOrientation="portrait" />
+            android:name=".SandBox" />
+        <activity android:name=".SwipeSplash" />
     </application>
-
 </manifest>

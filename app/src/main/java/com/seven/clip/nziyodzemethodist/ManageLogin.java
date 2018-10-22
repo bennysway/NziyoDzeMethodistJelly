@@ -69,6 +69,7 @@ public class ManageLogin extends AppCompatActivity {
         prompt.setTypeface(custom_font);
 
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+                .requestIdToken(getString(R.string.default_web_client_id))
                 .requestEmail()
                 .build();
         mGoogleApiClient = new GoogleApiClient.Builder(this)
@@ -140,6 +141,7 @@ public class ManageLogin extends AppCompatActivity {
             } else {
                 // Google Sign In failed, update UI appropriately
                 // ...
+                QuickToast("fail....");
             }
         }
     }
