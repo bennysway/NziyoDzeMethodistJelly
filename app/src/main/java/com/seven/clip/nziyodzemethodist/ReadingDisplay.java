@@ -245,7 +245,7 @@ public class ReadingDisplay extends AppCompatActivity {
         adHandler.postDelayed(new Runnable() {
             @Override
             public void run() {
-                MobileAds.initialize(getApplicationContext(), "ca-app-pub-2945410942325181~6133597558");
+                MobileAds.initialize(getApplicationContext(), getResources().getString(R.string.ADMOB_APP_ID));
                 AdView mAdView = findViewById(R.id.readingAdView);
                 AdRequest adRequest = new AdRequest.Builder()
                         .addTestDevice(AdRequest.DEVICE_ID_EMULATOR)        // All emulators

@@ -44,5 +44,10 @@
             android:drawable="@drawable/label"
             />
     </item>
-
+    <item
+        android:gravity="fill">
+        <inset
+            android:drawable="@drawable/animated_triangle_grid"
+            />
+    </item>
 </layer-list>

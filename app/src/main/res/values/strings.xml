@@ -28,6 +28,7 @@
     <string name="hymn_banner_ad_unit_id">ca-app-pub-2945410942325181/9087063951</string>
     <string name="reading_banner_ad_unit_id">ca-app-pub-2945410942325181/5275511400</string>
     <string name="facebook_app_id">466941583699230</string>
+    <string name="ADMOB_APP_ID">ca-app-pub-2945410942325181~6133597558</string>
 
     <string name="title_activity_settings">Settings</string>
 
