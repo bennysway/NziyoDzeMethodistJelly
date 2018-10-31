@@ -2,9 +2,7 @@ package com.seven.clip.nziyodzemethodist;
 
 import android.app.Dialog;
 import android.content.DialogInterface;
-import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.preference.PreferenceManager;
 import android.support.annotation.Nullable;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
@@ -15,6 +13,8 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.seven.clip.nziyodzemethodist.util.BitmapUtils;
 
 /**
  * Created by mxn on 2016/12/13.

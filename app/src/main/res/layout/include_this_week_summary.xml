@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/include"
+    android:background="@color/cool"
+    android:padding="5dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/shonaTopic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Muenzaniso weChinangwa"
+            android:textColor="@color/white"
+            android:textSize="40sp" />
+
+        <TextView
+            android:id="@+id/englishTopic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:alpha="0.7"
+            android:text="Example of a Topic"
+            android:textColor="@color/white"
+            android:textSize="30sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/psalmSummary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/square_round"
+                android:padding="5dp"
+                android:text="Ps 19"
+                android:textColor="@color/cool" />
+
+            <TextView
+                android:id="@+id/otSummary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/square_round"
+                android:padding="5dp"
+                android:text="Leviticus 19:34-45"
+                android:textColor="@color/cool" />
+
+            <TextView
+                android:id="@+id/ntSummary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/square_round"
+                android:padding="5dp"
+                android:text="Acts 1:20-30"
+                android:textColor="@color/cool" />
+
+            <TextView
+                android:id="@+id/gospelSummary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/square_round"
+                android:padding="5dp"
+                android:text="Ps 19"
+                android:textColor="@color/cool" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+
+
+
+
+</FrameLayout>

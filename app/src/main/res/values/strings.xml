@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">Nziyo DzeMethodist</string>
-    <string name="hymnNumberButtonText">Hymn Number</string>
+    <string name="hymnNumberButtonText">Number</string>
     <string name="hymnListButtonText">Hymn List</string>
     <string name="updateHymnButtonText">Update</string>
     <string name="favButtonText">Favourites</string>
@@ -10,7 +10,7 @@
     <string name="splashButtonText">Splash</string>
     <string name="underlineButtonText">Underlines</string>
     <string name="captionButtonText">Captions</string>
-    <string name="readingsText">Bible Readings</string>
+    <string name="readingsText">Readings</string>
     <string name="title_activity_pick_num">pickNum</string>
     <string name="Accept">Yes</string>
     <string name="Deny">No</string>
@@ -29,6 +29,8 @@
     <string name="reading_banner_ad_unit_id">ca-app-pub-2945410942325181/5275511400</string>
     <string name="facebook_app_id">466941583699230</string>
     <string name="ADMOB_APP_ID">ca-app-pub-2945410942325181~6133597558</string>
+    <string name="fb_login_protocol_scheme">fb466941583699230</string>
+
 
     <string name="title_activity_settings">Settings</string>
 

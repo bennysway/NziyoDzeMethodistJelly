@@ -1,17 +1,3 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <array name="home_icons">
-        <item>@drawable/ic_numpad</item>
-        <item>@drawable/ic_list</item>
-        <item>@drawable/ic_heart_icon</item>
-        <item>@drawable/ic_history</item>
-        <item>@drawable/ic_captions</item>
-    </array>
-    <string-array name="home_labels">
-        <item>Hymn Number</item>
-        <item>Hymn List</item>
-        <item>Favorites</item>
-        <item>Recent</item>
-        <item>Captions</item>
-    </string-array>
 </resources>

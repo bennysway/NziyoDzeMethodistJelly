@@ -1,4 +1,4 @@
-package com.seven.clip.nziyodzemethodist;
+package com.seven.clip.nziyodzemethodist.util;
 
 /**
  * Created by bennysway on 07.06.17.

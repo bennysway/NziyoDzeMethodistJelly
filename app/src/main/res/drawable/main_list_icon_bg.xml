@@ -2,31 +2,30 @@
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:top="10dp"
-        android:left="10dp"
-        android:right="10dp"
-        android:bottom="10dp">
+        android:top="5dp">
         <shape
             android:shape="oval">
             <gradient
-                android:startColor="@color/colorPrimary"
-                android:endColor="@color/burn"
-                android:angle="45"/>
+                android:type="radial"
+                android:gradientRadius="70dp"
+                android:centerColor="@color/cool"/>
+            <size
+                android:width="140dp"
+                android:height="140dp"/>
         </shape>
     </item>
     <item
-        android:top="15dp"
-        android:left="15dp"
-        android:right="15dp"
-        android:bottom="15dp">
+        android:gravity="center">
         <shape
             android:shape="oval">
-            <gradient
-                android:startColor="@color/burn"
-                android:endColor="@color/colorPrimary"
-                android:angle="90"/>
-            <size android:width="70dp" android:height="70dp"/>
+            <solid
+                android:color="@color/cool" />
+            <size
+                android:width="120dp"
+                android:height="120dp"/>
         </shape>
     </item>
+
+
 
 </layer-list>

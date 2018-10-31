@@ -20,6 +20,14 @@
     <color name="green">#018101</color>
     <color name="gray">#e0e0e0</color>
 
+    <!-- Chill theme colors -->
+    <color name="cool">#40c4ff</color>
+    <color name="coolFaded">#5f40c4ff</color>
+    <color name="coolLight">#b3e5fc</color>
+    <color name="coolDark">#0277bd</color>
+
+
+
     <color name="lightbookbg">#e8e8e8</color>
     <color name="micbg">#c95a7b</color>
     <color name="lookbg">#89c0c7</color>

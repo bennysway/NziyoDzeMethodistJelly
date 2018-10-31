@@ -7,7 +7,6 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
-import android.content.res.TypedArray;
 import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.Build;
@@ -33,11 +32,8 @@ import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 import android.widget.ViewSwitcher;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -48,11 +44,11 @@ import com.google.firebase.remoteconfig.FirebaseRemoteConfig;
 import com.google.firebase.remoteconfig.FirebaseRemoteConfigSettings;
 import com.mxn.soul.flowingdrawer_core.ElasticDrawer;
 import com.mxn.soul.flowingdrawer_core.FlowingDrawer;
-import com.seven.clip.nziyodzemethodist.adapters.HomeListAdapter;
-import com.seven.clip.nziyodzemethodist.models.HomeListItem;
 import com.seven.clip.nziyodzemethodist.pageAdapters.HomePageAdapter;
+import com.seven.clip.nziyodzemethodist.util.ColorThemes;
+import com.seven.clip.nziyodzemethodist.util.Util;
 
-import java.util.ArrayList;
+import static android.graphics.Color.parseColor;
 
 public class MainDrawer extends AppCompatActivity {
     Intent toHymnNums,toSettings,toClearData;
@@ -86,6 +82,11 @@ public class MainDrawer extends AppCompatActivity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_main_drawer);
+
+        getWindow().getDecorView().setBackgroundColor(parseColor(
+                ColorThemes.getColor(this,Util.Element.home,Util.Component.background)
+        ));
+
 
         mAuth = FirebaseAuth.getInstance();
         mAuthListener = new FirebaseAuth.AuthStateListener() {
@@ -256,6 +257,7 @@ public class MainDrawer extends AppCompatActivity {
         //Tab Pages
         viewPager = findViewById(R.id.mainViewPager);
         pageAdapter = new HomePageAdapter(getSupportFragmentManager());
+        viewPager.setAdapter(pageAdapter);
 
 
 
@@ -309,10 +311,6 @@ public class MainDrawer extends AppCompatActivity {
         //updateUI(currentUser);
     }
 
-    public void QuickToast(String s){
-        Toast.makeText(this, s,
-                Toast.LENGTH_SHORT).show();
-    }
     public void vis(View v){
         v.setAlpha(0f);
         v.setVisibility(View.VISIBLE);
@@ -411,7 +409,7 @@ public class MainDrawer extends AppCompatActivity {
     public void startSearching(String s){
         Intent toSearch = new Intent(this,Search.class);
         if(s.equals("")){
-            QuickToast("Nothing to search...");
+            Util.quickToast(this,"Nothing to search...");
         }
         else {
             toSearch.putExtra("search",s);

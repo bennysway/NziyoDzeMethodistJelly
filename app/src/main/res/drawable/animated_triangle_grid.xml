@@ -808,15 +808,15 @@
 			<set>
 				<objectAnimator
 					android:propertyName="fillAlpha"
-					android:startOffset="4000"
-					android:duration="300"
+					android:startOffset="0"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
 				<objectAnimator
 					android:propertyName="strokeAlpha"
-					android:startOffset="4000"
-					android:duration="300"
+					android:startOffset="0"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
@@ -828,15 +828,15 @@
 			<set>
 				<objectAnimator
 					android:propertyName="fillAlpha"
-					android:startOffset="4005"
-					android:duration="300"
+					android:startOffset="15"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
 				<objectAnimator
 					android:propertyName="strokeAlpha"
-					android:startOffset="4005"
-					android:duration="300"
+					android:startOffset="15"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
@@ -848,15 +848,15 @@
 			<set>
 				<objectAnimator
 					android:propertyName="fillAlpha"
-					android:startOffset="4010"
-					android:duration="300"
+					android:startOffset="30"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
 				<objectAnimator
 					android:propertyName="strokeAlpha"
-					android:startOffset="4010"
-					android:duration="300"
+					android:startOffset="30"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
@@ -868,15 +868,15 @@
 			<set>
 				<objectAnimator
 					android:propertyName="fillAlpha"
-					android:startOffset="4015"
-					android:duration="300"
+					android:startOffset="45"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
 				<objectAnimator
 					android:propertyName="strokeAlpha"
-					android:startOffset="4015"
-					android:duration="300"
+					android:startOffset="45"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
@@ -888,15 +888,15 @@
 			<set>
 				<objectAnimator
 					android:propertyName="fillAlpha"
-					android:startOffset="4020"
-					android:duration="300"
+					android:startOffset="60"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
 				<objectAnimator
 					android:propertyName="strokeAlpha"
-					android:startOffset="4020"
-					android:duration="300"
+					android:startOffset="60"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
@@ -908,15 +908,15 @@
 			<set>
 				<objectAnimator
 					android:propertyName="fillAlpha"
-					android:startOffset="4025"
-					android:duration="300"
+					android:startOffset="75"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
 				<objectAnimator
 					android:propertyName="strokeAlpha"
-					android:startOffset="4025"
-					android:duration="300"
+					android:startOffset="75"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
@@ -928,15 +928,15 @@
 			<set>
 				<objectAnimator
 					android:propertyName="fillAlpha"
-					android:startOffset="4030"
-					android:duration="300"
+					android:startOffset="90"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
 				<objectAnimator
 					android:propertyName="strokeAlpha"
-					android:startOffset="4030"
-					android:duration="300"
+					android:startOffset="90"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
@@ -948,15 +948,15 @@
 			<set>
 				<objectAnimator
 					android:propertyName="fillAlpha"
-					android:startOffset="4035"
-					android:duration="300"
+					android:startOffset="105"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
 				<objectAnimator
 					android:propertyName="strokeAlpha"
-					android:startOffset="4035"
-					android:duration="300"
+					android:startOffset="105"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
@@ -968,15 +968,15 @@
 			<set>
 				<objectAnimator
 					android:propertyName="fillAlpha"
-					android:startOffset="4040"
-					android:duration="300"
+					android:startOffset="120"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
 				<objectAnimator
 					android:propertyName="strokeAlpha"
-					android:startOffset="4040"
-					android:duration="300"
+					android:startOffset="120"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
@@ -988,15 +988,15 @@
 			<set>
 				<objectAnimator
 					android:propertyName="fillAlpha"
-					android:startOffset="4045"
-					android:duration="300"
+					android:startOffset="135"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
 				<objectAnimator
 					android:propertyName="strokeAlpha"
-					android:startOffset="4045"
-					android:duration="300"
+					android:startOffset="135"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
@@ -1008,15 +1008,15 @@
 			<set>
 				<objectAnimator
 					android:propertyName="fillAlpha"
-					android:startOffset="4050"
-					android:duration="300"
+					android:startOffset="150"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
 				<objectAnimator
 					android:propertyName="strokeAlpha"
-					android:startOffset="4050"
-					android:duration="300"
+					android:startOffset="150"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
@@ -1028,15 +1028,15 @@
 			<set>
 				<objectAnimator
 					android:propertyName="fillAlpha"
-					android:startOffset="4055"
-					android:duration="300"
+					android:startOffset="165"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
 				<objectAnimator
 					android:propertyName="strokeAlpha"
-					android:startOffset="4055"
-					android:duration="300"
+					android:startOffset="165"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
@@ -1048,15 +1048,15 @@
 			<set>
 				<objectAnimator
 					android:propertyName="fillAlpha"
-					android:startOffset="4060"
-					android:duration="300"
+					android:startOffset="180"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
 				<objectAnimator
 					android:propertyName="strokeAlpha"
-					android:startOffset="4060"
-					android:duration="300"
+					android:startOffset="180"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
@@ -1068,15 +1068,15 @@
 			<set>
 				<objectAnimator
 					android:propertyName="fillAlpha"
-					android:startOffset="4065"
-					android:duration="300"
+					android:startOffset="195"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
 				<objectAnimator
 					android:propertyName="strokeAlpha"
-					android:startOffset="4065"
-					android:duration="300"
+					android:startOffset="195"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
@@ -1088,15 +1088,15 @@
 			<set>
 				<objectAnimator
 					android:propertyName="fillAlpha"
-					android:startOffset="4070"
-					android:duration="300"
+					android:startOffset="210"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
 				<objectAnimator
 					android:propertyName="strokeAlpha"
-					android:startOffset="4070"
-					android:duration="300"
+					android:startOffset="210"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
@@ -1108,15 +1108,15 @@
 			<set>
 				<objectAnimator
 					android:propertyName="fillAlpha"
-					android:startOffset="4075"
-					android:duration="300"
+					android:startOffset="225"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
 				<objectAnimator
 					android:propertyName="strokeAlpha"
-					android:startOffset="4075"
-					android:duration="300"
+					android:startOffset="225"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
@@ -1128,15 +1128,15 @@
 			<set>
 				<objectAnimator
 					android:propertyName="fillAlpha"
-					android:startOffset="4080"
-					android:duration="300"
+					android:startOffset="240"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
 				<objectAnimator
 					android:propertyName="strokeAlpha"
-					android:startOffset="4080"
-					android:duration="300"
+					android:startOffset="240"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
@@ -1148,15 +1148,15 @@
 			<set>
 				<objectAnimator
 					android:propertyName="fillAlpha"
-					android:startOffset="4085"
-					android:duration="300"
+					android:startOffset="255"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
 				<objectAnimator
 					android:propertyName="strokeAlpha"
-					android:startOffset="4085"
-					android:duration="300"
+					android:startOffset="255"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
@@ -1168,15 +1168,15 @@
 			<set>
 				<objectAnimator
 					android:propertyName="fillAlpha"
-					android:startOffset="4090"
-					android:duration="300"
+					android:startOffset="270"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
 				<objectAnimator
 					android:propertyName="strokeAlpha"
-					android:startOffset="4090"
-					android:duration="300"
+					android:startOffset="270"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
@@ -1188,15 +1188,15 @@
 			<set>
 				<objectAnimator
 					android:propertyName="fillAlpha"
-					android:startOffset="4095"
-					android:duration="300"
+					android:startOffset="285"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
 				<objectAnimator
 					android:propertyName="strokeAlpha"
-					android:startOffset="4095"
-					android:duration="300"
+					android:startOffset="285"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
@@ -1208,15 +1208,15 @@
 			<set>
 				<objectAnimator
 					android:propertyName="fillAlpha"
-					android:startOffset="4100"
-					android:duration="300"
+					android:startOffset="300"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
 				<objectAnimator
 					android:propertyName="strokeAlpha"
-					android:startOffset="4100"
-					android:duration="300"
+					android:startOffset="300"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
@@ -1228,15 +1228,15 @@
 			<set>
 				<objectAnimator
 					android:propertyName="fillAlpha"
-					android:startOffset="4105"
-					android:duration="300"
+					android:startOffset="315"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
 				<objectAnimator
 					android:propertyName="strokeAlpha"
-					android:startOffset="4105"
-					android:duration="300"
+					android:startOffset="315"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
@@ -1248,15 +1248,15 @@
 			<set>
 				<objectAnimator
 					android:propertyName="fillAlpha"
-					android:startOffset="4110"
-					android:duration="300"
+					android:startOffset="330"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
 				<objectAnimator
 					android:propertyName="strokeAlpha"
-					android:startOffset="4110"
-					android:duration="300"
+					android:startOffset="330"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
@@ -1268,15 +1268,15 @@
 			<set>
 				<objectAnimator
 					android:propertyName="fillAlpha"
-					android:startOffset="4115"
-					android:duration="300"
+					android:startOffset="345"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
 				<objectAnimator
 					android:propertyName="strokeAlpha"
-					android:startOffset="4115"
-					android:duration="300"
+					android:startOffset="345"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
@@ -1288,15 +1288,15 @@
 			<set>
 				<objectAnimator
 					android:propertyName="fillAlpha"
-					android:startOffset="4120"
-					android:duration="300"
+					android:startOffset="360"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
 				<objectAnimator
 					android:propertyName="strokeAlpha"
-					android:startOffset="4120"
-					android:duration="300"
+					android:startOffset="360"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
@@ -1308,15 +1308,15 @@
 			<set>
 				<objectAnimator
 					android:propertyName="fillAlpha"
-					android:startOffset="4125"
-					android:duration="300"
+					android:startOffset="375"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
 				<objectAnimator
 					android:propertyName="strokeAlpha"
-					android:startOffset="4125"
-					android:duration="300"
+					android:startOffset="375"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
@@ -1328,15 +1328,15 @@
 			<set>
 				<objectAnimator
 					android:propertyName="fillAlpha"
-					android:startOffset="4130"
-					android:duration="300"
+					android:startOffset="390"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
 				<objectAnimator
 					android:propertyName="strokeAlpha"
-					android:startOffset="4130"
-					android:duration="300"
+					android:startOffset="390"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
@@ -1348,15 +1348,15 @@
 			<set>
 				<objectAnimator
 					android:propertyName="fillAlpha"
-					android:startOffset="4135"
-					android:duration="300"
+					android:startOffset="405"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
 				<objectAnimator
 					android:propertyName="strokeAlpha"
-					android:startOffset="4135"
-					android:duration="300"
+					android:startOffset="405"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
@@ -1368,15 +1368,15 @@
 			<set>
 				<objectAnimator
 					android:propertyName="fillAlpha"
-					android:startOffset="4140"
-					android:duration="300"
+					android:startOffset="420"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
 				<objectAnimator
 					android:propertyName="strokeAlpha"
-					android:startOffset="4140"
-					android:duration="300"
+					android:startOffset="420"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
@@ -1388,15 +1388,15 @@
 			<set>
 				<objectAnimator
 					android:propertyName="fillAlpha"
-					android:startOffset="4145"
-					android:duration="300"
+					android:startOffset="435"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
 				<objectAnimator
 					android:propertyName="strokeAlpha"
-					android:startOffset="4145"
-					android:duration="300"
+					android:startOffset="435"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
@@ -1408,15 +1408,15 @@
 			<set>
 				<objectAnimator
 					android:propertyName="fillAlpha"
-					android:startOffset="4150"
-					android:duration="300"
+					android:startOffset="450"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
 				<objectAnimator
 					android:propertyName="strokeAlpha"
-					android:startOffset="4150"
-					android:duration="300"
+					android:startOffset="450"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
@@ -1428,15 +1428,15 @@
 			<set>
 				<objectAnimator
 					android:propertyName="fillAlpha"
-					android:startOffset="4155"
-					android:duration="300"
+					android:startOffset="465"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
 				<objectAnimator
 					android:propertyName="strokeAlpha"
-					android:startOffset="4155"
-					android:duration="300"
+					android:startOffset="465"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
@@ -1448,15 +1448,15 @@
 			<set>
 				<objectAnimator
 					android:propertyName="fillAlpha"
-					android:startOffset="4160"
-					android:duration="300"
+					android:startOffset="480"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
 				<objectAnimator
 					android:propertyName="strokeAlpha"
-					android:startOffset="4160"
-					android:duration="300"
+					android:startOffset="480"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
@@ -1468,15 +1468,15 @@
 			<set>
 				<objectAnimator
 					android:propertyName="fillAlpha"
-					android:startOffset="4165"
-					android:duration="300"
+					android:startOffset="495"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
 				<objectAnimator
 					android:propertyName="strokeAlpha"
-					android:startOffset="4165"
-					android:duration="300"
+					android:startOffset="495"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
@@ -1488,15 +1488,15 @@
 			<set>
 				<objectAnimator
 					android:propertyName="fillAlpha"
-					android:startOffset="4170"
-					android:duration="300"
+					android:startOffset="510"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
 				<objectAnimator
 					android:propertyName="strokeAlpha"
-					android:startOffset="4170"
-					android:duration="300"
+					android:startOffset="510"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
@@ -1508,15 +1508,15 @@
 			<set>
 				<objectAnimator
 					android:propertyName="fillAlpha"
-					android:startOffset="4175"
-					android:duration="300"
+					android:startOffset="525"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
 				<objectAnimator
 					android:propertyName="strokeAlpha"
-					android:startOffset="4175"
-					android:duration="300"
+					android:startOffset="525"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
@@ -1528,15 +1528,15 @@
 			<set>
 				<objectAnimator
 					android:propertyName="fillAlpha"
-					android:startOffset="4180"
-					android:duration="300"
+					android:startOffset="540"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
 				<objectAnimator
 					android:propertyName="strokeAlpha"
-					android:startOffset="4180"
-					android:duration="300"
+					android:startOffset="540"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
@@ -1548,15 +1548,15 @@
 			<set>
 				<objectAnimator
 					android:propertyName="fillAlpha"
-					android:startOffset="4185"
-					android:duration="300"
+					android:startOffset="555"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
 				<objectAnimator
 					android:propertyName="strokeAlpha"
-					android:startOffset="4185"
-					android:duration="300"
+					android:startOffset="555"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
@@ -1568,15 +1568,15 @@
 			<set>
 				<objectAnimator
 					android:propertyName="fillAlpha"
-					android:startOffset="4190"
-					android:duration="300"
+					android:startOffset="570"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
 				<objectAnimator
 					android:propertyName="strokeAlpha"
-					android:startOffset="4190"
-					android:duration="300"
+					android:startOffset="570"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
@@ -1588,15 +1588,15 @@
 			<set>
 				<objectAnimator
 					android:propertyName="fillAlpha"
-					android:startOffset="4195"
-					android:duration="300"
+					android:startOffset="585"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
 				<objectAnimator
 					android:propertyName="strokeAlpha"
-					android:startOffset="4195"
-					android:duration="300"
+					android:startOffset="585"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
@@ -1608,15 +1608,15 @@
 			<set>
 				<objectAnimator
 					android:propertyName="fillAlpha"
-					android:startOffset="4200"
-					android:duration="300"
+					android:startOffset="600"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
 				<objectAnimator
 					android:propertyName="strokeAlpha"
-					android:startOffset="4200"
-					android:duration="300"
+					android:startOffset="600"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
@@ -1628,15 +1628,15 @@
 			<set>
 				<objectAnimator
 					android:propertyName="fillAlpha"
-					android:startOffset="4205"
-					android:duration="300"
+					android:startOffset="615"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
 				<objectAnimator
 					android:propertyName="strokeAlpha"
-					android:startOffset="4205"
-					android:duration="300"
+					android:startOffset="615"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
@@ -1648,15 +1648,15 @@
 			<set>
 				<objectAnimator
 					android:propertyName="fillAlpha"
-					android:startOffset="4210"
-					android:duration="300"
+					android:startOffset="630"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
 				<objectAnimator
 					android:propertyName="strokeAlpha"
-					android:startOffset="4210"
-					android:duration="300"
+					android:startOffset="630"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
@@ -1668,15 +1668,15 @@
 			<set>
 				<objectAnimator
 					android:propertyName="fillAlpha"
-					android:startOffset="4215"
-					android:duration="300"
+					android:startOffset="645"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
 				<objectAnimator
 					android:propertyName="strokeAlpha"
-					android:startOffset="4215"
-					android:duration="300"
+					android:startOffset="645"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
@@ -1688,15 +1688,15 @@
 			<set>
 				<objectAnimator
 					android:propertyName="fillAlpha"
-					android:startOffset="4220"
-					android:duration="300"
+					android:startOffset="660"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
 				<objectAnimator
 					android:propertyName="strokeAlpha"
-					android:startOffset="4220"
-					android:duration="300"
+					android:startOffset="660"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
@@ -1708,15 +1708,15 @@
 			<set>
 				<objectAnimator
 					android:propertyName="fillAlpha"
-					android:startOffset="4225"
-					android:duration="300"
+					android:startOffset="675"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
 				<objectAnimator
 					android:propertyName="strokeAlpha"
-					android:startOffset="4225"
-					android:duration="300"
+					android:startOffset="675"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
@@ -1728,15 +1728,15 @@
 			<set>
 				<objectAnimator
 					android:propertyName="fillAlpha"
-					android:startOffset="4230"
-					android:duration="300"
+					android:startOffset="690"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
 				<objectAnimator
 					android:propertyName="strokeAlpha"
-					android:startOffset="4230"
-					android:duration="300"
+					android:startOffset="690"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
@@ -1748,15 +1748,15 @@
 			<set>
 				<objectAnimator
 					android:propertyName="fillAlpha"
-					android:startOffset="4235"
-					android:duration="300"
+					android:startOffset="705"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
 				<objectAnimator
 					android:propertyName="strokeAlpha"
-					android:startOffset="4235"
-					android:duration="300"
+					android:startOffset="705"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
@@ -1768,15 +1768,15 @@
 			<set>
 				<objectAnimator
 					android:propertyName="fillAlpha"
-					android:startOffset="4240"
-					android:duration="300"
+					android:startOffset="720"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
 				<objectAnimator
 					android:propertyName="strokeAlpha"
-					android:startOffset="4240"
-					android:duration="300"
+					android:startOffset="720"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
@@ -1788,15 +1788,15 @@
 			<set>
 				<objectAnimator
 					android:propertyName="fillAlpha"
-					android:startOffset="4245"
-					android:duration="300"
+					android:startOffset="735"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
 				<objectAnimator
 					android:propertyName="strokeAlpha"
-					android:startOffset="4245"
-					android:duration="300"
+					android:startOffset="735"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
@@ -1808,15 +1808,15 @@
 			<set>
 				<objectAnimator
 					android:propertyName="fillAlpha"
-					android:startOffset="4250"
-					android:duration="300"
+					android:startOffset="750"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
 				<objectAnimator
 					android:propertyName="strokeAlpha"
-					android:startOffset="4250"
-					android:duration="300"
+					android:startOffset="750"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
@@ -1828,15 +1828,15 @@
 			<set>
 				<objectAnimator
 					android:propertyName="fillAlpha"
-					android:startOffset="4255"
-					android:duration="300"
+					android:startOffset="765"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
 				<objectAnimator
 					android:propertyName="strokeAlpha"
-					android:startOffset="4255"
-					android:duration="300"
+					android:startOffset="765"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
@@ -1848,15 +1848,15 @@
 			<set>
 				<objectAnimator
 					android:propertyName="fillAlpha"
-					android:startOffset="4260"
-					android:duration="300"
+					android:startOffset="780"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
 				<objectAnimator
 					android:propertyName="strokeAlpha"
-					android:startOffset="4260"
-					android:duration="300"
+					android:startOffset="780"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
@@ -1868,15 +1868,15 @@
 			<set>
 				<objectAnimator
 					android:propertyName="fillAlpha"
-					android:startOffset="4265"
-					android:duration="300"
+					android:startOffset="795"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
 				<objectAnimator
 					android:propertyName="strokeAlpha"
-					android:startOffset="4265"
-					android:duration="300"
+					android:startOffset="795"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
@@ -1888,15 +1888,15 @@
 			<set>
 				<objectAnimator
 					android:propertyName="fillAlpha"
-					android:startOffset="4270"
-					android:duration="300"
+					android:startOffset="810"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
 				<objectAnimator
 					android:propertyName="strokeAlpha"
-					android:startOffset="4270"
-					android:duration="300"
+					android:startOffset="810"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
@@ -1908,15 +1908,15 @@
 			<set>
 				<objectAnimator
 					android:propertyName="fillAlpha"
-					android:startOffset="4275"
-					android:duration="300"
+					android:startOffset="825"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
 				<objectAnimator
 					android:propertyName="strokeAlpha"
-					android:startOffset="4275"
-					android:duration="300"
+					android:startOffset="825"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
@@ -1928,15 +1928,15 @@
 			<set>
 				<objectAnimator
 					android:propertyName="fillAlpha"
-					android:startOffset="4280"
-					android:duration="300"
+					android:startOffset="840"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
 				<objectAnimator
 					android:propertyName="strokeAlpha"
-					android:startOffset="4280"
-					android:duration="300"
+					android:startOffset="840"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
@@ -1948,15 +1948,15 @@
 			<set>
 				<objectAnimator
 					android:propertyName="fillAlpha"
-					android:startOffset="4285"
-					android:duration="300"
+					android:startOffset="855"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
 				<objectAnimator
 					android:propertyName="strokeAlpha"
-					android:startOffset="4285"
-					android:duration="300"
+					android:startOffset="855"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
@@ -1968,15 +1968,15 @@
 			<set>
 				<objectAnimator
 					android:propertyName="fillAlpha"
-					android:startOffset="4290"
-					android:duration="300"
+					android:startOffset="870"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
 				<objectAnimator
 					android:propertyName="strokeAlpha"
-					android:startOffset="4290"
-					android:duration="300"
+					android:startOffset="870"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
@@ -1988,15 +1988,15 @@
 			<set>
 				<objectAnimator
 					android:propertyName="fillAlpha"
-					android:startOffset="4295"
-					android:duration="300"
+					android:startOffset="885"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
 				<objectAnimator
 					android:propertyName="strokeAlpha"
-					android:startOffset="4295"
-					android:duration="300"
+					android:startOffset="885"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
@@ -2008,15 +2008,15 @@
 			<set>
 				<objectAnimator
 					android:propertyName="fillAlpha"
-					android:startOffset="4300"
-					android:duration="300"
+					android:startOffset="900"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
 				<objectAnimator
 					android:propertyName="strokeAlpha"
-					android:startOffset="4300"
-					android:duration="300"
+					android:startOffset="900"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
@@ -2028,15 +2028,15 @@
 			<set>
 				<objectAnimator
 					android:propertyName="fillAlpha"
-					android:startOffset="4305"
-					android:duration="300"
+					android:startOffset="915"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
 				<objectAnimator
 					android:propertyName="strokeAlpha"
-					android:startOffset="4305"
-					android:duration="300"
+					android:startOffset="915"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
@@ -2048,15 +2048,15 @@
 			<set>
 				<objectAnimator
 					android:propertyName="fillAlpha"
-					android:startOffset="4310"
-					android:duration="300"
+					android:startOffset="930"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
 				<objectAnimator
 					android:propertyName="strokeAlpha"
-					android:startOffset="4310"
-					android:duration="300"
+					android:startOffset="930"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
@@ -2068,15 +2068,15 @@
 			<set>
 				<objectAnimator
 					android:propertyName="fillAlpha"
-					android:startOffset="4315"
-					android:duration="300"
+					android:startOffset="945"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
 				<objectAnimator
 					android:propertyName="strokeAlpha"
-					android:startOffset="4315"
-					android:duration="300"
+					android:startOffset="945"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
@@ -2088,15 +2088,15 @@
 			<set>
 				<objectAnimator
 					android:propertyName="fillAlpha"
-					android:startOffset="4320"
-					android:duration="300"
+					android:startOffset="960"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
 				<objectAnimator
 					android:propertyName="strokeAlpha"
-					android:startOffset="4320"
-					android:duration="300"
+					android:startOffset="960"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
@@ -2108,15 +2108,15 @@
 			<set>
 				<objectAnimator
 					android:propertyName="fillAlpha"
-					android:startOffset="4325"
-					android:duration="300"
+					android:startOffset="975"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
 				<objectAnimator
 					android:propertyName="strokeAlpha"
-					android:startOffset="4325"
-					android:duration="300"
+					android:startOffset="975"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
@@ -2128,15 +2128,15 @@
 			<set>
 				<objectAnimator
 					android:propertyName="fillAlpha"
-					android:startOffset="4330"
-					android:duration="300"
+					android:startOffset="990"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
 				<objectAnimator
 					android:propertyName="strokeAlpha"
-					android:startOffset="4330"
-					android:duration="300"
+					android:startOffset="990"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
@@ -2148,15 +2148,15 @@
 			<set>
 				<objectAnimator
 					android:propertyName="fillAlpha"
-					android:startOffset="4335"
-					android:duration="300"
+					android:startOffset="1005"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
 				<objectAnimator
 					android:propertyName="strokeAlpha"
-					android:startOffset="4335"
-					android:duration="300"
+					android:startOffset="1005"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
@@ -2168,15 +2168,15 @@
 			<set>
 				<objectAnimator
 					android:propertyName="fillAlpha"
-					android:startOffset="4340"
-					android:duration="300"
+					android:startOffset="1020"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
 				<objectAnimator
 					android:propertyName="strokeAlpha"
-					android:startOffset="4340"
-					android:duration="300"
+					android:startOffset="1020"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
@@ -2188,15 +2188,15 @@
 			<set>
 				<objectAnimator
 					android:propertyName="fillAlpha"
-					android:startOffset="4345"
-					android:duration="300"
+					android:startOffset="1035"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
 				<objectAnimator
 					android:propertyName="strokeAlpha"
-					android:startOffset="4345"
-					android:duration="300"
+					android:startOffset="1035"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
@@ -2208,15 +2208,15 @@
 			<set>
 				<objectAnimator
 					android:propertyName="fillAlpha"
-					android:startOffset="4350"
-					android:duration="300"
+					android:startOffset="1050"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
 				<objectAnimator
 					android:propertyName="strokeAlpha"
-					android:startOffset="4350"
-					android:duration="300"
+					android:startOffset="1050"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
@@ -2228,15 +2228,15 @@
 			<set>
 				<objectAnimator
 					android:propertyName="fillAlpha"
-					android:startOffset="4355"
-					android:duration="300"
+					android:startOffset="1065"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
 				<objectAnimator
 					android:propertyName="strokeAlpha"
-					android:startOffset="4355"
-					android:duration="300"
+					android:startOffset="1065"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
@@ -2248,15 +2248,15 @@
 			<set>
 				<objectAnimator
 					android:propertyName="fillAlpha"
-					android:startOffset="4360"
-					android:duration="300"
+					android:startOffset="1080"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
 				<objectAnimator
 					android:propertyName="strokeAlpha"
-					android:startOffset="4360"
-					android:duration="300"
+					android:startOffset="1080"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
@@ -2268,15 +2268,15 @@
 			<set>
 				<objectAnimator
 					android:propertyName="fillAlpha"
-					android:startOffset="4365"
-					android:duration="300"
+					android:startOffset="1095"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
 				<objectAnimator
 					android:propertyName="strokeAlpha"
-					android:startOffset="4365"
-					android:duration="300"
+					android:startOffset="1095"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
@@ -2288,15 +2288,15 @@
 			<set>
 				<objectAnimator
 					android:propertyName="fillAlpha"
-					android:startOffset="4370"
-					android:duration="300"
+					android:startOffset="1110"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
 				<objectAnimator
 					android:propertyName="strokeAlpha"
-					android:startOffset="4370"
-					android:duration="300"
+					android:startOffset="1110"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
@@ -2308,15 +2308,15 @@
 			<set>
 				<objectAnimator
 					android:propertyName="fillAlpha"
-					android:startOffset="4375"
-					android:duration="300"
+					android:startOffset="1125"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
 				<objectAnimator
 					android:propertyName="strokeAlpha"
-					android:startOffset="4375"
-					android:duration="300"
+					android:startOffset="1125"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
@@ -2328,15 +2328,15 @@
 			<set>
 				<objectAnimator
 					android:propertyName="fillAlpha"
-					android:startOffset="4380"
-					android:duration="300"
+					android:startOffset="1140"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
 				<objectAnimator
 					android:propertyName="strokeAlpha"
-					android:startOffset="4380"
-					android:duration="300"
+					android:startOffset="1140"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
@@ -2348,15 +2348,15 @@
 			<set>
 				<objectAnimator
 					android:propertyName="fillAlpha"
-					android:startOffset="4385"
-					android:duration="300"
+					android:startOffset="1155"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
 				<objectAnimator
 					android:propertyName="strokeAlpha"
-					android:startOffset="4385"
-					android:duration="300"
+					android:startOffset="1155"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
@@ -2368,15 +2368,15 @@
 			<set>
 				<objectAnimator
 					android:propertyName="fillAlpha"
-					android:startOffset="4390"
-					android:duration="300"
+					android:startOffset="1170"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
 				<objectAnimator
 					android:propertyName="strokeAlpha"
-					android:startOffset="4390"
-					android:duration="300"
+					android:startOffset="1170"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
@@ -2388,15 +2388,15 @@
 			<set>
 				<objectAnimator
 					android:propertyName="fillAlpha"
-					android:startOffset="4395"
-					android:duration="300"
+					android:startOffset="1185"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
 				<objectAnimator
 					android:propertyName="strokeAlpha"
-					android:startOffset="4395"
-					android:duration="300"
+					android:startOffset="1185"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
@@ -2408,15 +2408,15 @@
 			<set>
 				<objectAnimator
 					android:propertyName="fillAlpha"
-					android:startOffset="4400"
-					android:duration="300"
+					android:startOffset="1200"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
 				<objectAnimator
 					android:propertyName="strokeAlpha"
-					android:startOffset="4400"
-					android:duration="300"
+					android:startOffset="1200"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
@@ -2428,15 +2428,15 @@
 			<set>
 				<objectAnimator
 					android:propertyName="fillAlpha"
-					android:startOffset="4405"
-					android:duration="300"
+					android:startOffset="1215"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
 				<objectAnimator
 					android:propertyName="strokeAlpha"
-					android:startOffset="4405"
-					android:duration="300"
+					android:startOffset="1215"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
@@ -2448,15 +2448,15 @@
 			<set>
 				<objectAnimator
 					android:propertyName="fillAlpha"
-					android:startOffset="4410"
-					android:duration="300"
+					android:startOffset="1230"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
 				<objectAnimator
 					android:propertyName="strokeAlpha"
-					android:startOffset="4410"
-					android:duration="300"
+					android:startOffset="1230"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
@@ -2468,15 +2468,15 @@
 			<set>
 				<objectAnimator
 					android:propertyName="fillAlpha"
-					android:startOffset="4415"
-					android:duration="300"
+					android:startOffset="1245"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
 				<objectAnimator
 					android:propertyName="strokeAlpha"
-					android:startOffset="4415"
-					android:duration="300"
+					android:startOffset="1245"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
@@ -2488,15 +2488,15 @@
 			<set>
 				<objectAnimator
 					android:propertyName="fillAlpha"
-					android:startOffset="4420"
-					android:duration="300"
+					android:startOffset="1260"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
 				<objectAnimator
 					android:propertyName="strokeAlpha"
-					android:startOffset="4420"
-					android:duration="300"
+					android:startOffset="1260"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
@@ -2508,15 +2508,15 @@
 			<set>
 				<objectAnimator
 					android:propertyName="fillAlpha"
-					android:startOffset="4425"
-					android:duration="300"
+					android:startOffset="1275"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
 				<objectAnimator
 					android:propertyName="strokeAlpha"
-					android:startOffset="4425"
-					android:duration="300"
+					android:startOffset="1275"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
@@ -2528,15 +2528,15 @@
 			<set>
 				<objectAnimator
 					android:propertyName="fillAlpha"
-					android:startOffset="4430"
-					android:duration="300"
+					android:startOffset="1290"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
 				<objectAnimator
 					android:propertyName="strokeAlpha"
-					android:startOffset="4430"
-					android:duration="300"
+					android:startOffset="1290"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
@@ -2548,15 +2548,15 @@
 			<set>
 				<objectAnimator
 					android:propertyName="fillAlpha"
-					android:startOffset="4435"
-					android:duration="300"
+					android:startOffset="1305"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>
 				<objectAnimator
 					android:propertyName="strokeAlpha"
-					android:startOffset="4435"
-					android:duration="300"
+					android:startOffset="1305"
+					android:duration="350"
 					android:valueFrom="0.0"
 					android:valueTo="1.0"
 					android:valueType="floatType"/>

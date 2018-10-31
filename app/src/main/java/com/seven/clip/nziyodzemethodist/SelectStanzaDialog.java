@@ -168,10 +168,10 @@ public class SelectStanzaDialog extends Dialog {
 //                    if(line.getHymnNum().equals(number)&&line.isEnglish()==isEnglish){
 //                        if(!line.getStanza().contains(position)){
 //                            line.getStanza().add(position);
-//                            QuickToast("Underlined stanza " + position);
+//                            quickToast("Underlined stanza " + position);
 //                        } else {
 //                            line.getStanza().remove(position);
-//                            QuickToast("Removed underline");
+//                            quickToast("Removed underline");
 //                        }
 //                        found = true;
 //                    }
@@ -180,7 +180,7 @@ public class SelectStanzaDialog extends Dialog {
 //                    ArrayList<Integer> arrayList = new ArrayList<>();
 //                    arrayList.add(position);
 //                    userData.getFavoriteStanza().add(new UserData.UserFavoriteStanza(number,isEnglish,arrayList));
-//                    QuickToast("Underlined stanza " + position);
+//                    quickToast("Underlined stanza " + position);
 //
 //                }
 
