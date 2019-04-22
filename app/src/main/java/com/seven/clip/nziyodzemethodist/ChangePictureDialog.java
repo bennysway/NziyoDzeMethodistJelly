@@ -1,15 +1,13 @@
 package com.seven.clip.nziyodzemethodist;
 
-import android.animation.Animator;
 import android.app.Dialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v4.app.DialogFragment;
-import android.support.v4.view.GravityCompat;
-import android.support.v7.app.AlertDialog;
-import android.view.WindowManager;
-import android.view.animation.Animation;
+import androidx.fragment.app.DialogFragment;
+import androidx.core.view.GravityCompat;
+import androidx.appcompat.app.AlertDialog;
+
 import android.widget.Toast;
 
 /**

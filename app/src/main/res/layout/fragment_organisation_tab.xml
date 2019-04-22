@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="50dp"
+        android:clipToPadding="false">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <GridLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+                <ImageView
+                    android:id="@+id/organisationPostsButton"
+                    android:layout_width="@dimen/buttonSquareSize"
+                    android:layout_height="@dimen/buttonSquareSize"
+                    android:layout_row="5"
+                    android:layout_column="0"
+                    android:background="@drawable/main_list_icon_bg"
+                    android:padding="40dp"
+                    app:srcCompat="@drawable/caption_icon" />
+                <TextView
+                    android:id="@+id/postsButtonText"
+                    android:layout_row="6"
+                    android:layout_column="0"
+                    android:layout_gravity="center"
+                    android:text="@string/postsButtonText"
+                    android:textColor="@color/black"
+                    android:textSize="30sp" />
+
+                <ImageView
+                    android:id="@+id/eventsButton"
+                    android:layout_width="@dimen/buttonSquareSize"
+                    android:layout_height="@dimen/buttonSquareSize"
+                    android:layout_row="5"
+                    android:layout_column="1"
+                    android:background="@drawable/main_list_icon_bg"
+                    android:padding="40dp"
+                    app:srcCompat="@drawable/ic_date_icon"/>
+
+                <TextView
+                    android:id="@+id/eventsButtonText"
+                    android:layout_row="6"
+                    android:layout_column="1"
+                    android:layout_gravity="center"
+                    android:text="@string/eventsText"
+                    android:textColor="@color/black"
+                    android:textSize="30sp" />
+
+            </GridLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/top_list"/>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/curve_divider"
+                android:tint="@color/cool"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/announcements"
+                android:textColor="@color/white"
+                android:background="@color/cool"
+                android:padding="20dp"
+                android:textSize="24sp"/>
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>

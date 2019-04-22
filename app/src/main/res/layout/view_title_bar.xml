@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Replace merge > Relative layout to see preview
+    Maintain merge for app to work correctly
+-->
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="50dp"
+    android:orientation="vertical"
+    android:background="@drawable/gradient_background"
+    android:layout_alignParentTop="true"
+    android:layout_centerHorizontal="true"
+    android:animateLayoutChanges="true"
+    android:id="@+id/holder">
+    <com.github.mmin18.widget.RealtimeBlurView
+        app:realtimeBlurRadius="16dp"
+        app:realtimeOverlayColor="@color/fadedWhite"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <ImageView
+        android:layout_width="@dimen/default_icon_size"
+        android:layout_height="@dimen/default_icon_size"
+        android:id="@+id/leftIcon"
+        android:layout_margin="8dp"
+        android:layout_alignParentStart="true"
+        app:srcCompat="@drawable/menu_icon"/>
+
+    <TextSwitcher
+        android:text="@string/title"
+        android:id="@+id/titleBarTitle"
+        android:paddingTop="5dp"
+        android:layout_toStartOf="@id/rightIcon"
+        android:layout_toEndOf="@id/leftIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inAnimation="@anim/smooth_left_in"
+        android:outAnimation="@anim/slide_out_likes_counter">
+        <TextView
+            android:textColor="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="30sp"
+            android:gravity="center"/>
+        <TextView
+            android:textColor="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="30sp"
+            android:gravity="center"/>
+    </TextSwitcher>
+
+
+
+    <ImageView
+        android:id="@+id/rightIcon"
+        android:layout_width="@dimen/default_icon_size"
+        android:layout_height="@dimen/default_icon_size"
+        android:layout_margin="8dp"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/ic_expand" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:animateLayoutChanges="true"
+        android:gravity="center_horizontal"
+        android:foregroundGravity="center_horizontal"
+        android:orientation="vertical"
+        android:layout_below="@id/titleBarTitle"
+        android:id="@+id/titleBarContainer">
+    </LinearLayout>
+</merge>

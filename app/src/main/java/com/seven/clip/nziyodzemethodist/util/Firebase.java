@@ -1,38 +1,20 @@
 package com.seven.clip.nziyodzemethodist.util;
 
-import android.content.Context;
-import android.support.annotation.NonNull;
-import android.support.design.widget.Snackbar;
 import android.util.Log;
 
-import com.google.android.gms.auth.api.signin.GoogleSignIn;
-import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
-import com.google.android.gms.common.api.ApiException;
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
-import com.google.firebase.auth.AuthCredential;
-import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.auth.GoogleAuthProvider;
 import com.google.firebase.database.FirebaseDatabase;
-
-import java.util.concurrent.Executor;
-
-import static com.facebook.AccessTokenManager.TAG;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.FirebaseFirestoreSettings;
 
 /**
  * Created by bennysway on 19.08.17.
  */
 public class Firebase {
-    private static FirebaseAuth mAuth;
     private static FirebaseUser currentUser;
-
     private static FirebaseDatabase mDatabase;
-    private static boolean isLoggedIn
-            ;
-
-    public static FirebaseDatabase getDatabase() {
+    public static FirebaseDatabase getRealTimeDatabase() {
         if (mDatabase == null) {
             mDatabase = FirebaseDatabase.getInstance();
             mDatabase.setPersistenceEnabled(true);
@@ -40,9 +22,32 @@ public class Firebase {
         return mDatabase;
     }
 
+    public static FirebaseFirestore getFirestoreDatabase(){
+        FirebaseFirestore db = FirebaseFirestore.getInstance();
+        FirebaseFirestoreSettings settings = new FirebaseFirestoreSettings.Builder()
+                .setTimestampsInSnapshotsEnabled(true)
+                .build();
+        db.setFirestoreSettings(settings);
+        return db;
+    }
+
+    public static void setNetwork(boolean online){
+        if (online) {
+            getRealTimeDatabase().goOnline();
+            getFirestoreDatabase().enableNetwork();
+        } else {
+            getRealTimeDatabase().goOffline();
+            getFirestoreDatabase();
+        }
+    }
+
     public static boolean init(){
-        mAuth = FirebaseAuth.getInstance();
+        FirebaseAuth mAuth = FirebaseAuth.getInstance();
         currentUser = mAuth.getCurrentUser();
+        if(currentUser!=null)
+            Log.v("Firebase:checkUser","User found");
+        else
+            Log.v("Firebase:checkUser","User not found");
         return currentUser != null;
     }
 

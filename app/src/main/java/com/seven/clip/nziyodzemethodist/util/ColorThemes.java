@@ -3,101 +3,55 @@ package com.seven.clip.nziyodzemethodist.util;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.graphics.Color;
+import android.graphics.PorterDuff;
+import android.graphics.drawable.Drawable;
+import android.os.AsyncTask;
+import android.view.View;
+
+import com.google.gson.Gson;
+import com.google.gson.JsonObject;
+import com.seven.clip.nziyodzemethodist.R;
+
+import java.util.EnumSet;
 
 import static android.graphics.Color.parseColor;
 
 public class ColorThemes {
-
-    private static String white = "#ffffff";
-    private static String black = "#000000";
     private static String cool = "#40c4ff";
-    private static String dimWhite ="#fafafa";
-    private static String dimBlack = "#101010";
 
-    public static String getColor(Context context, Util.Element element, Util.Component component) {
-        String mode = context.getSharedPreferences("color",0).getString("mode","day");
-        boolean isDay = mode.equals("day");
-        String defaultColor = "#40c4ff";
-        switch (component){
-            case icon:
-                defaultColor = isDay ? white : cool;
-                break;
-            case iconBackground:
-                defaultColor = isDay ? cool : black;
-                break;
-            case text:
-                defaultColor = isDay ? black : white;
-                break;
-            case context:
-                defaultColor = isDay ? black : white;
-                break;
-            case contextBackground:
-                defaultColor = isDay ? white : black;
-                break;
-            case textBackground:
-                defaultColor = isDay ? dimWhite : dimBlack;
-                break;
-            case background:
-                defaultColor = isDay ? white : black;
+    public static Theme getTheme(Context context){
+        Theme result;
+        String themeJsonString;
+        themeJsonString = context.getSharedPreferences("theme",0).getString("data","");
+        if(!themeJsonString.equals("")){
+            result = (new Gson()).fromJson(themeJsonString, Theme.class);
+        } else {
+            int color = context.getResources().getColor(R.color.cool);
+            String strColor = String.format("#%06X", 0xFFFFFF & color);
+            result = new Theme(strColor);
+            updateThemePreference(context,result);
         }
-        return context.getSharedPreferences("color",0).getString(element.name() +":"+ component.name() + ":" + mode, defaultColor);
-    }
-    public static void setMode(Context context, boolean isDayMode){
-        SharedPreferences.Editor editor= context.getSharedPreferences("color",0).edit();
-        editor.putString("mode", isDayMode ? "day" : "night");
-        editor.apply();
-        editor.commit();
+        return result;
     }
 
-    public static void setColor(Context context, Util.Element element, String color) {
-        boolean isColorDark = isColorDark(color);
-        SharedPreferences.Editor editor= context.getSharedPreferences("color",0).edit();
-        //Set Day colors
-        editor.putString(element.name() + ":icon:day",isColorDark ? white : black);
-        editor.putString(element.name() + ":iconBackground:day",color);
-        editor.putString(element.name() + ":text:day",black);
-        editor.putString(element.name() + ":textBackground:day",white);
-        editor.putString(element.name() + ":context:day",isColorDark ? white : black);
-        editor.putString(element.name() + ":contextBackground:day",color);
-        editor.putString(element.name() + ":background:day",white);
-        //Set Night colors
-        editor.putString(element.name() + ":icon:night",isColorDark ? black : color);
-        editor.putString(element.name() + ":iconBackground:night",isColorDark ? color : black);
-        editor.putString(element.name() + ":text:night",white);
-        editor.putString(element.name() + ":textBackground:night",black);
-        editor.putString(element.name() + ":context:night",isColorDark ? white : color);
-        editor.putString(element.name() + ":contextBackground:night",black);
-        editor.putString(element.name() + ":background:night",black);
-        //Save
-        editor.apply();
-        editor.commit();
+    private static void updateThemePreference(final Context context, final Theme theme){
+        new AsyncTask<Context, Void, Void>() {
+            @Override
+            protected Void doInBackground(Context... contexts) {
+                String json = new Gson().toJson(theme);
+                SharedPreferences.Editor editor= context.getSharedPreferences("theme",0).edit();
+                editor.putString("data", json);
+                editor.apply();
+                editor.commit();
+                return null;
+            }
+        }.execute(context);
     }
 
-    public static void setDefault(Context context, Util.Element element){
-        SharedPreferences.Editor editor= context.getSharedPreferences("color",0).edit();
-        editor.remove(element.name() + ":icon:day");
-        editor.remove(element.name() + ":iconBackground:day");
-        editor.remove(element.name() + ":text:day");
-        editor.remove(element.name() + ":textBackground:day");
-        editor.remove(element.name() + ":context:day");
-        editor.remove(element.name() + ":contextBackground:day");
-        editor.remove(element.name() + ":background:day");
-        editor.remove(element.name() + ":icon:night");
-        editor.remove(element.name() + ":iconBackground:night");
-        editor.remove(element.name() + ":text:night");
-        editor.remove(element.name() + ":textBackground:night");
-        editor.remove(element.name() + ":context:night");
-        editor.remove(element.name() + ":contextBackground:night");
-        editor.remove(element.name() + ":background:night");
-        editor.apply();
-        editor.commit();
-    }
 
-    public static void setDefaultAll(Context context){
-        SharedPreferences.Editor editor = context.getSharedPreferences("color",0).edit();
-        editor.clear();
-        editor.apply();
-        editor.commit();
+    public static void setMode(Context context, Theme theme){
+        theme.setDayMode(!theme.isInDayMode());
+        updateThemePreference(context,theme);
     }
 
     private static boolean isColorDark(String test) {
@@ -105,5 +59,59 @@ public class ColorThemes {
         double darkness = 1-(0.299* Color.red(color) + 0.587*Color.green(color) + 0.114*Color.blue(color))/255;
         return darkness >= 0.333;
     }
+
+    public static void addBackgroundFilter(View view, String color){
+        view.getBackground().mutate().setColorFilter(parseColor(color), PorterDuff.Mode.SRC_ATOP);
+    }
+    public static void addDrawableFilter(Drawable drawable, String color){
+        drawable.setColorFilter(parseColor(color),PorterDuff.Mode.SRC_ATOP);
+    }
+    public static int getLighterColor(int color){
+        float factor = .2f;
+        int red = (int) ((Color.red(color) * (1 - factor) / 255 + factor) * 255);
+        int green = (int) ((Color.green(color) * (1 - factor) / 255 + factor) * 255);
+        int blue = (int) ((Color.blue(color) * (1 - factor) / 255 + factor) * 255);
+        return Color.argb(Color.alpha(color), red, green, blue);
+    }
+    public static int getDarkerColor(int color){
+        float factor = .15f;
+        int red = (int) ((Color.red(color) * (1 - factor) / 255 - factor) * 255);
+        int green = (int) ((Color.green(color) * (1 - factor) / 255 - factor) * 255);
+        int blue = (int) ((Color.blue(color) * (1 - factor) / 255 - factor) * 255);
+        red = Math.max(red,0);
+        blue = Math.max(blue,0);
+        green = Math.max(green,0);
+        return Color.argb(Color.alpha(color), red, green, blue);
+    }
+    public static int getLowerHue(int color) {
+        float[] hsv = new float[3];
+        Color.colorToHSV(color, hsv);
+        hsv[0] += (hsv[0] * 0.2f);
+        color = Color.HSVToColor(hsv);
+        return color;
+    }
+    public static int getHigherHue(int color) {
+        float[] hsv = new float[3];
+        Color.colorToHSV(color, hsv);
+        hsv[0] = 1.0f - 0.95f * (1.0f - hsv[0]);
+        color = Color.HSVToColor(hsv);
+        return color;
+    }
+    public static String getLighterColor(String color){
+        return String.format("#%06X", (0xFFFFFF & getLighterColor(parseColor(color))));
+    }
+    public static String getDarkerColor(String color){
+        return String.format("#%06X", (0xFFFFFF & getDarkerColor(parseColor(color))));
+
+    }
+    public static String getLowerHue(String color) {
+        return String.format("#%06X", (0xFFFFFF & getLowerHue(parseColor(color))));
+
+    }
+    public static String getHigherHue(String color) {
+        return String.format("#%06X", (0xFFFFFF & getHigherHue(parseColor(color))));
+
+    }
+
 
 }

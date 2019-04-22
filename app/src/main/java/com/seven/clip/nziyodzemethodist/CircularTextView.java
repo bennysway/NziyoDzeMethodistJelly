@@ -5,7 +5,7 @@ import android.graphics.Color;
 import android.graphics.Paint;
 import android.util.AttributeSet;
 
-public class CircularTextView extends android.support.v7.widget.AppCompatTextView
+public class CircularTextView extends androidx.appcompat.widget.AppCompatTextView
 {
     private float strokeWidth;
     int strokeColor,solidColor;

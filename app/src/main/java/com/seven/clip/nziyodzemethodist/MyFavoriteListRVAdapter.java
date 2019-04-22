@@ -2,7 +2,7 @@ package com.seven.clip.nziyodzemethodist;
 
 import android.content.Context;
 import android.content.Intent;
-import android.support.v7.widget.RecyclerView;
+import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,7 +10,6 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.xenione.libs.swipemaker.SwipeLayout;
 
 import java.util.ArrayList;
 
@@ -29,11 +28,7 @@ public class MyFavoriteListRVAdapter extends RecyclerView.Adapter<MyFavoriteList
         hymns = new xHymns(context);
     }
 
-    // Provide a reference to the views for each data item
-    // Complex data items may need more than one view per item, and
-    // you provide access to all the views for a data item in a view holder
     public static class ViewHolder extends RecyclerView.ViewHolder {
-        // each data item is just a string in this case
         LinearLayout mView;
         TextView mTitle;
         ViewHolder(View v) {
@@ -43,18 +38,12 @@ public class MyFavoriteListRVAdapter extends RecyclerView.Adapter<MyFavoriteList
 
         }
     }
-
-
     @Override
     public MyFavoriteListRVAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        // create a new view
         View layout =  LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.favorites_list_layout, parent, false);
-        // set the view'underLine size, margins, paddings and layout parameters
-
         ViewHolder vh = new ViewHolder(layout);
         return vh;
-
     }
 
     @Override

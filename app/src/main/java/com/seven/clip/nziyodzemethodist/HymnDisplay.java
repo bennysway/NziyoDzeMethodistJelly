@@ -15,11 +15,11 @@ import android.os.Environment;
 import android.os.Handler;
 import android.os.storage.StorageManager;
 import android.os.storage.StorageVolume;
-import android.support.annotation.NonNull;
-import android.support.v4.app.ActivityCompat;
-import android.support.v4.content.ContextCompat;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.app.AppCompatDelegate;
+import androidx.annotation.NonNull;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 import android.util.DisplayMetrics;
 import android.util.Log;
 import android.util.TypedValue;
@@ -103,7 +103,6 @@ public class HymnDisplay extends AppCompatActivity {
     //Data recordFlag;
     UserDataIO userData;
     EnResource engCheck;
-    Zvinokosha access;
     ScaleGestureDetector scaleGestureDetector;
     Intent hymnDisplayIntent;
     LinearLayout hymnDispl;
@@ -121,8 +120,6 @@ public class HymnDisplay extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_hymn_display);
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
-                WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         DisplayMetrics dm = new DisplayMetrics();
         getWindowManager().getDefaultDisplay().getMetrics(dm);
@@ -149,7 +146,6 @@ public class HymnDisplay extends AppCompatActivity {
 
         hymnDisplayIntent = new Intent();
         engCheck = new EnResource(this);
-        access = new Zvinokosha(this);
         hymns = new xHymns(this);
         userData = new UserDataIO(this);
 
@@ -1253,18 +1249,18 @@ public class HymnDisplay extends AppCompatActivity {
 
     }
 
-    public int getDarkerColor(String test) {
+    public int getDarkerColor(String hexCode) {
         float[] hsv = new float[3];
-        int color = parseColor(test);
+        int color = parseColor(hexCode);
         Color.colorToHSV(color, hsv);
         hsv[0] += (hsv[0] * 0.2f); // value component
         color = Color.HSVToColor(hsv);
         return color;
     }
 
-    public int getLighterColor(String test) {
+    public int getLighterColor(String hexCode) {
         float[] hsv = new float[3];
-        int color = parseColor(test);
+        int color = parseColor(hexCode);
         Color.colorToHSV(color, hsv);
         hsv[0] = 1.0f - 0.8f * (1.0f - hsv[0]); // value component
         color = Color.HSVToColor(hsv);
@@ -2034,7 +2030,7 @@ public class HymnDisplay extends AppCompatActivity {
         /*for(UserData.UserFavoriteStanza line:userData.getFavoriteStanza()){
             if(line.getHymnNum().equals(s)&&line.isEnglish()==isInEnglish){
                 for(int position:line.getStanza()){
-                    SpannableString content = new SpannableString(stanzas.get(position).getText().toString());
+                    SpannableString content = new SpannableString(stanzas.get(position).getTextColor().toString());
                     content.setSpan(new UnderlineSpan(), 0, content.length(), 0);
                     stanzas.get(position).setText(content);
                 }

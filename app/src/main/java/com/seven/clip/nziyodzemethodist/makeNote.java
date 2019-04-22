@@ -6,7 +6,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
@@ -36,8 +36,6 @@ public class makeNote extends AppCompatActivity {
         key = getIntent().getStringExtra("captionKey");
         hymnNum = getIntent().getStringExtra("hymnNum");
         userData = new UserDataIO(this);
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
-                WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
 
         Button share = findViewById(R.id.shareNote);

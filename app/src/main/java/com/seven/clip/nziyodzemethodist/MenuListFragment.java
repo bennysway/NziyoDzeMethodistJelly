@@ -3,9 +3,9 @@ package com.seven.clip.nziyodzemethodist;
 import android.app.Dialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.design.widget.NavigationView;
-import android.support.v4.app.Fragment;
+import androidx.annotation.Nullable;
+import com.google.android.material.navigation.NavigationView;
+import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
@@ -97,7 +97,7 @@ public class MenuListFragment extends Fragment {
             }
         });
 
-        /*Data image = new Data(this.getContext(),"image");
+        /*Data image = new Data(this.getContextColor(),"image");
         appPic.setImageBitmap(BitmapUtils.decodeSampledBitmapFromFile(
                 image.get(),
                 appPic.getMeasuredWidth(),

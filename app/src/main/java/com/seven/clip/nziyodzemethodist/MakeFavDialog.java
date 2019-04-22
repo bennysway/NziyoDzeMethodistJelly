@@ -2,31 +2,22 @@ package com.seven.clip.nziyodzemethodist;
 
 import android.app.Dialog;
 import android.content.Context;
-import android.content.Intent;
 import android.graphics.Color;
-import android.graphics.PorterDuff;
 import android.graphics.Typeface;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.v4.graphics.ColorUtils;
-import android.text.Editable;
-import android.text.InputFilter;
-import android.text.TextWatcher;
+import androidx.annotation.NonNull;
+import androidx.core.graphics.ColorUtils;
+
 import android.util.DisplayMetrics;
-import android.view.KeyEvent;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
-import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
-import android.widget.EditText;
-import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.github.mmin18.widget.RealtimeBlurView;
 
-import static android.content.Context.INPUT_METHOD_SERVICE;
 import static android.graphics.Color.parseColor;
 
 public class MakeFavDialog extends Dialog {

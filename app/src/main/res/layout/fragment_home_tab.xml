@@ -1,170 +1,95 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/frameHolder"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragments.HomeTab">
-
-
+    tools:context=".fragments.pages.home.HomeTab">
     <ScrollView
+        android:id="@+id/fragmentContentHolder"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:clipToPadding="false"
-        android:paddingTop="50dp">
-
-        <LinearLayout
+        android:layout_height="match_parent"
+        android:paddingTop="200dp"
+        android:clipToPadding="false">
+        <com.google.android.flexbox.FlexboxLayout
+            android:clipToPadding="false"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
-            <!--Buttons-->
-            <GridLayout
+            android:animateLayoutChanges="true"
+            android:id="@+id/menuContainer"
+            android:padding="10dp"
+            app:flexWrap="wrap"
+            app:alignItems="baseline"
+            app:alignContent="space_between">
+            <com.seven.clip.nziyodzemethodist.customViews.MenuItemView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center">
-
-                <ImageView
-                    android:id="@+id/pickNumButton"
-                    android:layout_width="@dimen/buttonSquareSize"
-                    android:layout_height="@dimen/buttonSquareSize"
-                    android:layout_row="0"
-                    android:layout_column="0"
-                    android:background="@drawable/main_list_icon_bg"
-                    android:contentDescription="Pick Hymn Number Button"
-                    android:padding="40dp"
-                    app:srcCompat="@drawable/ic_numpad" />
-                <TextView
-                    android:layout_row="1"
-                    android:layout_column="0"
-                    android:layout_gravity="center"
-                    android:text="@string/hymnNumberButtonText"
-                    android:textColor="@color/black"
-                    android:textSize="30sp" />
-
-                <ImageView
-                    android:id="@+id/hymnListButton"
-                    android:layout_width="@dimen/buttonSquareSize"
-                    android:layout_height="@dimen/buttonSquareSize"
-                    android:layout_row="0"
-                    android:layout_column="1"
-                    android:background="@drawable/main_list_icon_bg"
-                    android:padding="40dp"
-                    app:srcCompat="@drawable/ic_list" />
-
-                <TextView
-                    android:layout_row="1"
-                    android:layout_column="1"
-                    android:layout_gravity="center"
-                    android:text="@string/hymnListButtonText"
-                    android:textColor="@color/black"
-                    android:textSize="30sp" />
-
-                <ImageView
-                    android:id="@+id/favoritesButton"
-                    android:layout_width="@dimen/buttonSquareSize"
-                    android:layout_height="@dimen/buttonSquareSize"
-                    android:layout_row="2"
-                    android:layout_column="0"
-                    android:background="@drawable/main_list_icon_bg"
-                    android:padding="40dp"
-                    app:srcCompat="@drawable/ic_heart_icon" />
-
-                <TextView
-                    android:layout_row="3"
-                    android:layout_column="0"
-                    android:layout_gravity="center"
-                    android:text="@string/favButtonText"
-                    android:textColor="@color/black"
-                    android:textSize="30sp" />
-
-                <ImageView
-                    android:id="@+id/captionsButton"
-                    android:layout_width="@dimen/buttonSquareSize"
-                    android:layout_height="@dimen/buttonSquareSize"
-                    android:layout_row="5"
-                    android:layout_column="0"
-                    android:background="@drawable/main_list_icon_bg"
-                    android:padding="40dp"
-                    app:srcCompat="@drawable/caption_icon" />
-
-                <TextView
-                    android:layout_row="6"
-                    android:layout_column="0"
-                    android:layout_gravity="center"
-                    android:text="@string/captionButtonText"
-                    android:textColor="@color/black"
-                    android:textSize="30sp" />
-
-                <ImageView
-                    android:id="@+id/readingsButton"
-                    android:layout_width="@dimen/buttonSquareSize"
-                    android:layout_height="@dimen/buttonSquareSize"
-                    android:layout_row="5"
-                    android:layout_column="1"
-                    android:background="@drawable/main_list_icon_bg"
-                    android:padding="40dp"
-                    app:srcCompat="@drawable/readings_icon" />
-
-                <TextView
-                    android:layout_row="6"
-                    android:layout_column="1"
-                    android:layout_gravity="center"
-                    android:text="@string/readingsText"
-                    android:textColor="@color/black"
-                    android:textSize="30sp" />
-
-                <ImageView
-                    android:id="@+id/recentButton"
-                    android:layout_width="@dimen/buttonSquareSize"
-                    android:layout_height="@dimen/buttonSquareSize"
-                    android:layout_row="2"
-                    android:layout_column="1"
-                    android:background="@drawable/main_list_icon_bg"
-                    android:padding="40dp"
-                    app:srcCompat="@drawable/ic_history" />
-
-                <TextView
-                    android:layout_row="3"
-                    android:layout_column="1"
-                    android:layout_gravity="center"
-                    android:text="@string/recentButtonText"
-                    android:textColor="@color/black"
-                    android:textSize="30sp" />
-
-            </GridLayout>
-
-
-            <ImageView
-                android:id="@+id/curvedDivider"
-                android:layout_width="match_parent"
+                app:menu_icon="@drawable/ic_numpad"
+                app:menu_title="@string/hymnNumberButtonText"
+                android:id="@+id/hymnNumberButton"/>
+            <com.seven.clip.nziyodzemethodist.customViews.MenuItemView
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:scaleType="fitXY"
-                app:srcCompat="@drawable/curve_divider" />
-
-            <TextView
-                android:id="@+id/thisWeekText"
-                android:layout_width="match_parent"
+                app:menu_icon="@drawable/ic_list"
+                app:menu_title="@string/hymnListButtonText"
+                android:id="@+id/hymnListButton"/>
+            <com.seven.clip.nziyodzemethodist.customViews.MenuItemView
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@color/cool"
-                android:padding="5dp"
-                android:text="@string/thisWeekTitle"
-                android:textColor="@color/white"
-                android:textSize="24sp" />
-            <ViewFlipper
-                android:layout_width="match_parent"
+                app:menu_icon="@drawable/ic_search"
+                app:menu_title="@string/searchButtonText"
+                android:id="@+id/searchButton"/>
+            <com.seven.clip.nziyodzemethodist.customViews.MenuItemView
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/thisWeekViewFlipper">
-                <include
-                    android:id="@+id/readingsInclude"
-                    layout="@layout/include_this_week_summary" />
-                <Button
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:text="Sign In"/>
-
-
-            </ViewFlipper>
-        </LinearLayout>
+                app:menu_icon="@drawable/ic_heart_icon"
+                app:menu_title="@string/favButtonText"
+                android:id="@+id/favoritesButton"/>
+            <com.seven.clip.nziyodzemethodist.customViews.MenuItemView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:menu_icon="@drawable/ic_history"
+                app:menu_title="@string/recentButtonText"
+                android:id="@+id/recentButton"/>
+            <com.seven.clip.nziyodzemethodist.customViews.MenuItemView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:menu_icon="@drawable/ic_captions"
+                app:menu_title="@string/captionButtonText"
+                android:id="@+id/captionsButton"/>
+            <com.seven.clip.nziyodzemethodist.customViews.MenuItemView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:menu_icon="@drawable/ic_date_icon"
+                app:menu_title="@string/eventsText"
+                android:id="@+id/eventsButton"/>
+            <com.seven.clip.nziyodzemethodist.customViews.MenuItemView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:menu_icon="@drawable/ic_praying_hands"
+                app:menu_title="Prayers"
+                android:id="@+id/prayersButton"/>
+            <com.seven.clip.nziyodzemethodist.customViews.MenuItemView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:menu_icon="@drawable/ic_church"
+                app:menu_title="Church"
+                android:id="@+id/churchButton"/>
+            <com.seven.clip.nziyodzemethodist.customViews.MenuItemView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:menu_icon="@drawable/ic_organization"
+                app:menu_title="Organization"
+                android:id="@+id/organizationButton"/>
+            <com.seven.clip.nziyodzemethodist.customViews.MenuItemView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:menu_icon="@drawable/ic_profile"
+                app:menu_title="Prayers"
+                android:id="@+id/profileButton"/>
+        </com.google.android.flexbox.FlexboxLayout>
     </ScrollView>
 
-</FrameLayout>
+</RelativeLayout>

@@ -1,8 +1,8 @@
 package com.seven.clip.nziyodzemethodist;
 
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentPagerAdapter;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentPagerAdapter;
 
 /**
  * Created by bennysway on 23.11.17.
@@ -18,8 +18,6 @@ public class RecentTabAdapter extends FragmentPagerAdapter {
         switch (position){
             case 0:
                 return RecentListFragment.newInstance();
-            case 1:
-                return SplashListFragment.newInstance();
             default:
                 return RecentListFragment.newInstance();
         }
@@ -27,6 +25,6 @@ public class RecentTabAdapter extends FragmentPagerAdapter {
 
     @Override
     public int getCount() {
-        return 2;
+        return 1;
     }
 }

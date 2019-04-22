@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#ff9912</color>
-    <color name="colorPrimaryDark">#9c5912</color>
-    <color name="colorAccent">#cc5f00</color>
-    <color name="navigationBarColor">#cc5f00</color>
+    <color name="colorPrimary">#40c4ff</color>
+    <color name="colorPrimaryDark">#0277bd</color>
+    <color name="colorAccent">#b3e5fc</color>
+    <color name="navigationBarColor">#0277bd</color>
     <color name="white">#ffffff</color>
     <color name="whiteRim">#40ffffff</color>
     <color name="transBlack">#70000000</color>
@@ -12,9 +12,9 @@
     <color name="burnLight">#faa65c</color>
     <color name="fav">#ff0f0f</color>
     <color name="black">#ff000000</color>
-    <color name="fadedBlack">#50000000</color>
+    <color name="fadedBlack">#40000000</color>
     <color name="softGray">#50ffffff</color>
-    <color name="fadedWhite">#efffffff</color>
+    <color name="fadedWhite">#40ffffff</color>
     <color name="ogBurn">#cc5f00</color>
     <color name="burnedburn">#deffe4c2</color>
     <color name="green">#018101</color>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="190dp">
+    <ImageView
+        android:id="@+id/icon"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="@dimen/buttonSquareSize"
+        android:layout_height="@dimen/buttonSquareSize"
+        android:background="@drawable/main_list_icon_bg"
+        android:padding="40dp"
+        app:srcCompat="@drawable/ic_numpad" />
+    <TextView
+        android:id="@+id/text"
+        android:text="@string/hymnNumberButtonText"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:textSize="30sp"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"/>
+
+</LinearLayout>

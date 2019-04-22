@@ -11,8 +11,8 @@ import android.graphics.Typeface;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
-import android.support.v4.app.NotificationCompat;
-import android.support.v7.app.AppCompatActivity;
+import androidx.core.app.NotificationCompat;
+import androidx.appcompat.app.AppCompatActivity;
 import android.util.Log;
 import android.util.TypedValue;
 import android.view.Gravity;
@@ -34,8 +34,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ViewSwitcher;
 
-import com.getkeepsafe.taptargetview.TapTarget;
-import com.getkeepsafe.taptargetview.TapTargetView;
 /*
 import com.github.clans.fab.FloatingActionButton;
 import com.github.clans.fab.FloatingActionMenu;
@@ -43,6 +41,7 @@ import com.github.clans.fab.FloatingActionMenu;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.MobileAds;
+import com.seven.clip.nziyodzemethodist.models.Reading;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -85,8 +84,6 @@ public class ReadingDisplay extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_reading_display);
 
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
-                WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         ImageView bg = findViewById(R.id.readingDisplayBg);
         themeTitle = findViewById(R.id.readingDisplayThemeTitle);
@@ -153,9 +150,9 @@ public class ReadingDisplay extends AppCompatActivity {
             en_gospel_reading = reading.getGospel();
             en_ot_reading = reading.getOt();
             en_nt_reading = reading.getNt();
-            en_theme = reading.getEnglish_theme();
-            sh_theme = reading.getShona_theme();
-            date = reading.getDatename();
+            en_theme = reading.getEnglishTheme();
+            sh_theme = reading.getShonaTheme();
+            date = reading.getDate();
             title = reading.getTitle();
             en_psalm_reading = "Psalm " + String.valueOf(reading.getPsalm());
             //
@@ -395,7 +392,7 @@ public class ReadingDisplay extends AppCompatActivity {
 
 
         } else if (!isLayoutShown && !isCustomBibleSet) {
-            inContentOutBars(index);
+            /*inContentOutBars(index);
             Handler handler = new Handler();
             handler.postDelayed(new Runnable() {
                 @Override
@@ -403,7 +400,7 @@ public class ReadingDisplay extends AppCompatActivity {
                     pickerIntro();
                 }
             }, 1000);
-            isCustomBibleSet = true;
+            isCustomBibleSet = true;*/
             //Check bible and Launch
 
         } else {
@@ -555,12 +552,12 @@ public class ReadingDisplay extends AppCompatActivity {
                 isCustomBibleSet = true;
                 QuickToast("Bible set.");
                 bibleOption.update(data.getStringExtra("requestCode"));
-                deletePickerIntro();
+                //deletePickerIntro();
             }
         }
     }
 
-    public void pickerIntro() {
+    /*public void pickerIntro() {
         biblePickerFirstTime.update("false");
         TapTargetView.showFor(this,                 // `this` is an Activity
                 TapTarget.forView(findViewById(R.id.openExternalReadingBut), "Open Verse externally", "Click here to use your favorite Bible application")
@@ -588,9 +585,9 @@ public class ReadingDisplay extends AppCompatActivity {
                         //doSomething();
                     }
                 });
-    }
+    }*/
 
-    public void deletePickerIntro() {
+    /*public void deletePickerIntro() {
         TapTargetView.showFor(this,                 // `this` is an Activity
                 TapTarget.forView(findViewById(R.id.openExternalReadingBut), "Also remove application setting", "Long click here to clear the application you use as your Bible.")
                         // All options below are optional
@@ -617,7 +614,7 @@ public class ReadingDisplay extends AppCompatActivity {
                         //doSomething();
                     }
                 });
-    }
+    }*/
 
     public TextSwitcher createSwitcher(final TextSwitcher view, final int mode) {
         view.setFactory(new ViewSwitcher.ViewFactory() {

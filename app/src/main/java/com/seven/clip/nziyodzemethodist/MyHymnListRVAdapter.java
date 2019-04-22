@@ -2,16 +2,14 @@ package com.seven.clip.nziyodzemethodist;
 
 import android.content.Context;
 import android.content.Intent;
-import android.support.v7.widget.RecyclerView;
+import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.futuremind.recyclerviewfastscroll.SectionTitleProvider;
-import com.xenione.libs.swipemaker.SwipeLayout;
 
 /**
  * Created by bennysway on 06.11.17.

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:layout_margin="10dp"
+    android:background="@drawable/white_round"
+    android:padding="4dp">
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textColor="@color/white"
+        android:shadowColor="@color/black"
+        android:shadowDx="0.0"
+        android:shadowDy="0.0"
+        android:shadowRadius="12.0"
+        android:layout_marginTop="4dp"
+        android:inputType="number"
+        android:gravity="center"
+        android:textSize="40sp"/>
+
+
+</RelativeLayout>

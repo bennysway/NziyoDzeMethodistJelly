@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer-array name="home_icons">
+        <item>@drawable/facebook</item>
+        <item>@drawable/youtube_play</item>
+        <item>@drawable/ic_help</item>
+        <item>@drawable/ic_web_black_24dp</item>
+        <item>@drawable/ic_star</item>
+        <item>@drawable/google_plus</item>
+    </integer-array>
+    <integer-array name="home_colors">
+        <item>@android:color/white</item>
+        <item>@android:color/white</item>
+        <item>@android:color/holo_purple</item>
+        <item>@color/burn</item>
+        <item>@android:color/holo_orange_light</item>
+        <item>@android:color/white</item>
+    </integer-array>
+</resources>

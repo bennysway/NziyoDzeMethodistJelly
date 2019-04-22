@@ -32,76 +32,48 @@
             android:name="android.max_aspect"
             android:value="2.1" />
         <meta-data
-            android:name="com.facebook.sdk.ApplicationId"
-            android:value="@string/facebook_app_id" />
-        <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="@string/ADMOB_APP_ID"/>
-        <meta-data android:name="com.facebook.sdk.ApplicationId"
-            android:value="@string/facebook_app_id"/>
-
-        <activity android:name="com.facebook.FacebookActivity"
-            android:configChanges=
-                "keyboard|keyboardHidden|screenLayout|screenSize|orientation"
-            android:label="@string/app_name" />
-        <activity
-            android:name="com.facebook.CustomTabActivity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.VIEW" />
-                <category android:name="android.intent.category.DEFAULT" />
-                <category android:name="android.intent.category.BROWSABLE" />
-                <data android:scheme="@string/fb_login_protocol_scheme" />
-            </intent-filter>
-        </activity>
-
-        <activity
-            android:name=".MainActivity" />
+            android:value="@string/ADMOB_APP_ID" />
+        <activity android:name=".MainActivity" />
         <activity
             android:name=".HymnDisplay"
-
             android:windowSoftInputMode="stateHidden" />
-        <activity
-            android:name=".HymnList"/>
+        <activity android:name=".HymnList" />
         <activity
             android:name=".MainDrawer"
             android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="http"
+                    android:host="www.ndm.com"
+                    android:pathPrefix="/hymn" />
+                <data android:scheme="ndmhymn"
+                    android:host="ndmhymn" />
+
             </intent-filter>
         </activity>
-        <activity
-            android:name=".FavList"
-             />
+        <activity android:name=".FavList" />
         <activity
             android:name=".ClearData"
             android:noHistory="true"
-            android:theme="@style/AppTheme.Popups"/>
+            android:theme="@style/AppTheme.Popups" />
         <activity
             android:name=".removeFav"
             android:noHistory="true"
-            
-            android:theme="@style/AppTheme.Popups"/>
+            android:theme="@style/AppTheme.Popups" />
         <activity
             android:name=".RecList"
-            android:noHistory="true"/>
-        <activity
-            android:name=".Splash"
-            android:noHistory="true"
-            android:theme="@style/SplashTheme">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:noHistory="true" />
         <activity
             android:name=".Settings"
-            android:label="@string/title_activity_settings"
-            android:theme="@style/AppTheme.Fullscreen"/>
-        <activity
-            android:name=".ChoosePic">
+            android:label="@string/title_activity_settings" />
+        <activity android:name=".ChoosePic">
             <intent-filter>
                 <action android:name="seven.clip.action.choosepic" />
+
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
@@ -113,21 +85,16 @@
             android:noHistory="true">
             <intent-filter>
                 <action android:name="seven.clip.action.choosecolor" />
+
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".Search" />
+        <activity android:name=".Search" />
         <activity
             android:name=".AdjustTextSize"
             android:noHistory="true"
             android:theme="@style/AppTheme.Popups" />
-        <activity
-            android:name=".Credits" />
-        <activity
-            android:name=".Recorder"
-            android:noHistory="true"
-            android:theme="@style/AppTheme.Popups" />
+        <activity android:name=".Credits" />
         <activity
             android:name=".Captions"
             android:noHistory="true" />
@@ -139,40 +106,40 @@
             android:name=".DeleteCaption"
             android:noHistory="true"
             android:theme="@style/AppTheme.Popups" />
-        <activity
-            android:name=".makeNote" />
-        <activity
-            android:name=".readNote" />
-        <activity
-            android:name=".IntroActivity"
-            android:label="@string/app_name" />
-        <activity
-            android:name=".Notifications" />
+        <activity android:name=".makeNote" />
+        <activity android:name=".readNote" />
+        <activity android:name=".Notifications" />
         <activity
             android:name=".CaptionList"
             android:noHistory="true" />
-        <activity
-            android:name=".EventLog" />
-        <activity
-            android:name=".ThemeChooser" />
-        <activity
-            android:name=".MakeCard" />
-        <activity
-            android:name=".BiblePicker" />
-        <activity
-            android:name=".ReadingList" />
+        <activity android:name=".EventLog" />
+        <activity android:name=".ThemeChooser" />
+        <activity android:name=".MakeCard" />
+        <activity android:name=".BiblePicker" />
+        <activity android:name=".ReadingList" />
         <activity
             android:name=".ManageLogin"
             android:theme="@style/AppTheme.Popups">
             <intent-filter>
                 <action android:name="seven.clip.action.manageLogin" />
+
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".ReadingDisplay" />
-        <activity
-            android:name=".SandBox" />
-        <activity android:name=".SwipeSplash" />
+        <activity android:name=".ReadingDisplay" />
+        <activity android:name=".SandBox">
+
+        </activity>
+        <activity android:name=".EventManager" />
+        <activity android:name=".EventEditor" />
+        <activity android:name=".Splash"
+            android:noHistory="true"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
+
 </manifest>

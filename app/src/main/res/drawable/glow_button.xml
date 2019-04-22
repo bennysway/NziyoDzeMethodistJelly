@@ -1,7 +1,0 @@
-<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
-    <!--the shadow comes from here-->
-    <item
-        android:drawable="@android:drawable/dialog_holo_light_frame">
-
-    </item>
-</layer-list>

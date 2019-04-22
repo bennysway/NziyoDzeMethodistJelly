@@ -25,7 +25,6 @@
 
     <style name="SplashTheme" parent="Theme.AppCompat.NoActionBar">
         <item name="android:windowBackground">@drawable/launch</item>
-        <item name="android:windowFullscreen">true</item>
 
     </style>
 
@@ -33,10 +32,22 @@
         <item name="android:windowAnimationStyle">@style/TransparentDialogAnimation</item>
     </style>
 
-    <style name="TransparentDialogAnimation">
-        <item name="android:windowEnterAnimation">@anim/zoom_out_intro</item>
-        <item name="android:windowExitAnimation">@anim/zoom_out_exit</item>
+    <style name="TransparentDialogAnimation" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:windowEnterAnimation">@anim/slide_in_likes_counter</item>
+        <item name="android:windowExitAnimation">@anim/slide_out_likes_counter</item>
     </style>
 
+    <!-- Text Styles -->
+    <style name="StyledHeader" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">30sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:layout_margin">2dp</item>
+    </style>
+
+    <style name="ContextHeader" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">30sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:layout_margin">5dp</item>
+    </style>
 
 </resources>

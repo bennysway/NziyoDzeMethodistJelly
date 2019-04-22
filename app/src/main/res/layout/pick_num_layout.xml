@@ -5,45 +5,40 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
 
-    <com.github.mmin18.widget.RealtimeBlurView
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/pickNumBlur"
-        app:realtimeOverlayColor="#70ffffff" />
+        android:layout_height="match_parent">
+        <EditText
+            android:hint="hymn number..."
+            android:id="@+id/pickNumSearchBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:textSize="35sp"
+            android:shadowColor="@color/white"
+            android:layout_gravity="center"
+            android:shadowDy="0.0"
+            android:shadowDx="0.0"
+            android:shadowRadius="10.0"
+            android:gravity="center"
+            android:ems="7" />
 
-    <TableLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom"
-        android:stretchColumns="0,1">
-        <TableRow>
+
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="20dp"
                 android:id="@+id/pickNumMakeFavButton"
-                app:srcCompat="@drawable/heart_normal"/>
+                app:srcCompat="@drawable/heart_normal"
+                android:layout_below="@id/pickNumSearchBox"/>
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/pickNumButton"
                 android:padding="20dp"
-                app:srcCompat="@drawable/open_hymn_icon" />
-        </TableRow>
-    </TableLayout>
+                app:srcCompat="@drawable/open_hymn_icon"
+                android:layout_below="@id/pickNumMakeFavButton"/>
+    </RelativeLayout>
 
-    <EditText
-        android:hint="hymn number..."
-        android:id="@+id/pickNumSearchBox"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="number"
-        android:textSize="35sp"
-        android:shadowColor="@color/white"
-        android:layout_gravity="center"
-        android:shadowDy="0.0"
-        android:shadowDx="0.0"
-        android:shadowRadius="10.0"
-        android:gravity="center"
-        android:ems="7" />
+
 </FrameLayout>

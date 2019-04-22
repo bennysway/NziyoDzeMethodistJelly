@@ -4,8 +4,7 @@
     android:layout_height="match_parent"
     android:background="#8c8a8c"
     android:id="@+id/fgChildId"
-
-    tools:context="com.seven.clip.nziyodzemethodist.bidirectionalPager.ChildFragment">
+>
 
     <RelativeLayout
         android:layout_width="match_parent"

@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/include"
-    android:background="@color/cool">
+    android:background="@drawable/square_round">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -32,29 +32,6 @@
                     android:layout_width="match_parent"
                     android:id="@+id/googleButton"
                     android:layout_height="50dp"/>
-                <com.facebook.login.widget.LoginButton
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/facebookButton"
-                    android:layout_marginTop="10dp"/>
-                <com.twitter.sdk.android.core.identity.TwitterLoginButton
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/twitterButton"
-                    android:layout_marginTop="10dp"/>
-
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    app:srcCompat="@drawable/twitter"
-                    android:background="@android:drawable/dialog_holo_light_frame"/>
-                <ImageView
-                    android:id="@+id/githubButton"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    app:srcCompat="@drawable/github_circle"
-                    android:background="@android:drawable/dialog_holo_light_frame"/>
-
             </LinearLayout>
             <TextView
                 android:layout_width="match_parent"

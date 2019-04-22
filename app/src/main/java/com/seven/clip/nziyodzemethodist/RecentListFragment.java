@@ -1,16 +1,15 @@
 package com.seven.clip.nziyodzemethodist;
 
-import android.app.Fragment;
 import android.content.Context;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v7.widget.DividerItemDecoration;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.DividerItemDecoration;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -18,7 +17,7 @@ import android.widget.Toast;
  * Created by bennysway on 23.11.17.
  */
 
-public class RecentListFragment extends android.support.v4.app.Fragment {
+public class RecentListFragment extends Fragment {
     @Override
     public Context getContext() {
         return super.getContext();

@@ -7,7 +7,7 @@
     <LinearLayout
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
-        android:background="@drawable/card_white"
+        android:background="@drawable/white_round"
         android:orientation="vertical"
         android:padding="10dp">
 
@@ -39,11 +39,5 @@
             android:padding="20dp" />
 
     </LinearLayout>
-
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:src="@drawable/indicator_dot_grey" />
 
 </LinearLayout>

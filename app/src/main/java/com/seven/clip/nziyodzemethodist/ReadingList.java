@@ -7,25 +7,31 @@ import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
-import android.support.v4.widget.SwipeRefreshLayout;
-import android.support.v7.app.AppCompatActivity;
+import androidx.annotation.NonNull;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.RecyclerView;
 import android.util.DisplayMetrics;
+import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.WindowManager;
 import android.view.animation.OvershootInterpolator;
-import android.widget.AdapterView;
-import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.crystal.crystalpreloaders.widgets.CrystalPreloader;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.ValueEventListener;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.firestore.CollectionReference;
+import com.google.firebase.firestore.Query;
+import com.google.firebase.firestore.QueryDocumentSnapshot;
+import com.google.firebase.firestore.QuerySnapshot;
+import com.seven.clip.nziyodzemethodist.adapters.ReadingListAdapter;
+import com.seven.clip.nziyodzemethodist.models.Reading;
 import com.seven.clip.nziyodzemethodist.util.Firebase;
+import com.seven.clip.nziyodzemethodist.util.Util;
 
 import java.text.DateFormat;
 import java.text.ParseException;
@@ -36,21 +42,21 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.Date;
 import java.util.Locale;
-import java.util.Map;
 
 public class ReadingList extends AppCompatActivity {
 
     ArrayList<Reading> readings;
-    DatabaseReference databaseReadings;
+    CollectionReference readingsCollection;
     View backBut;
     SwipeRefreshLayout swipeRefreshLayout;
-    ListView readingListView;
+    RecyclerView readingListView;
     TextView readingsTextView,topTitle;
     CrystalPreloader preloader;
     RelativeLayout topHolder, activityHolder,notificationHolder;
     private int _yDelta,_defaultHeight,_height,_travelDist;
     boolean notified=false;
     float startPos;
+    private String TAG = "ReadingListActivity";
 
     @Override
     protected void onStart() {
@@ -65,7 +71,7 @@ public class ReadingList extends AppCompatActivity {
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
 
-        databaseReadings = Firebase.getDatabase().getReference("readings");
+        readingsCollection = Firebase.getFirestoreDatabase().collection("readings");
         DisplayMetrics dm = new DisplayMetrics();
         getWindow().getWindowManager().getDefaultDisplay().getMetrics(dm);
 
@@ -93,20 +99,6 @@ public class ReadingList extends AppCompatActivity {
 
         Typeface custom_font = Typeface.createFromAsset(getAssets(),  "fonts/bh.ttf");
         topTitle.setTypeface(custom_font);
-
-        databaseReadings.addListenerForSingleValueEvent(new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                collectData((Map<String,Object>) dataSnapshot.getValue());
-                loadData();
-            }
-
-
-            @Override
-            public void onCancelled(DatabaseError databaseError) {
-
-            }
-        });
 
 
         View.OnTouchListener topDrag = new View.OnTouchListener() {
@@ -149,24 +141,17 @@ public class ReadingList extends AppCompatActivity {
 
         topHolder.setOnTouchListener(topDrag);
 
+        //Get readings for current month only
+        Calendar calendar = Calendar.getInstance();
+        queryReading(calendar.get(Calendar.MONTH));
+
         swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
             public void onRefresh() {
-                databaseReadings.keepSynced(true);
+                Firebase.setNetwork(true);
                 readings.clear();
-                databaseReadings.addListenerForSingleValueEvent(new ValueEventListener() {
-                    @Override
-                    public void onDataChange(DataSnapshot dataSnapshot) {
-                        collectData((Map<String,Object>) dataSnapshot.getValue());
-                        loadData();
-                    }
-
-
-                    @Override
-                    public void onCancelled(DatabaseError databaseError) {
-
-                    }
-                });
+                Calendar calendar = Calendar.getInstance();
+                queryReading(calendar.get(Calendar.MONTH));
             }
         });
 
@@ -184,26 +169,29 @@ public class ReadingList extends AppCompatActivity {
 
     }
 
-    private void collectData(Map<String,Object> weeks){
-        //iterate through each week, ignoring their UID
-        for (Map.Entry<String, Object> entry : weeks.entrySet()){
+    public void queryReading(int month){
+        Calendar calendar = Calendar.getInstance();
+        calendar.set(Calendar.MONTH, month);
+        final String monthName = calendar.getDisplayName(Calendar.MONTH, Calendar.LONG, Locale.ENGLISH);
+        Query query = readingsCollection.whereEqualTo("monthId", monthName);
+        query.get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                if(task.isSuccessful()){
+                    int counter = 0;
+                    for(QueryDocumentSnapshot document : task.getResult()){
+                        Reading reading = document.toObject(Reading.class);
+                        readings.add(reading);
+                        counter++;
+                    }
+                    if(counter<1)
+                        Util.quickToast(ReadingList.this,"No readings were found");
+                    Log.d(TAG,"Entries added from Query:" + counter + " from month: " + monthName);
+                    loadData();
+                }
+            }
+        });
 
-            //Get weeks map
-            Map singleWeek = (Map) entry.getValue();
-            Reading reading = new Reading();
-            //Get fields and append to list
-            reading.setDate(singleWeek.get("date").toString());
-            reading.setDatename(singleWeek.get("date_name").toString());
-            reading.setEnglish_theme(singleWeek.get("english_theme").toString());
-            reading.setShona_theme(singleWeek.get("shona_theme").toString());
-            reading.setTitle(singleWeek.get("title").toString());
-            reading.setOt(singleWeek.get("ot").toString());
-            reading.setNt(singleWeek.get("nt").toString());
-            reading.setGospel(singleWeek.get("gospel").toString());
-            reading.setPsalm((long) singleWeek.get("psalm"));
-            reading.setReading_id((long) singleWeek.get("reading_id"));
-            readings.add(reading);
-        }
     }
 
     private void loadData(){
@@ -211,23 +199,24 @@ public class ReadingList extends AppCompatActivity {
             Collections.sort(readings, new Comparator<Reading>() {
                 @Override
                 public int compare(Reading o1, Reading o2) {
-                    return Long.valueOf(o1.getReading_id()).compareTo(o2.getReading_id());
+                    return Util.getDate(o1.getDate()).compareTo(Util.getDate(o2.getDate()));
                 }
             });
-            MyReadingListAdapter readingListAdapter = new MyReadingListAdapter(ReadingList.this,readings);
+            ReadingListAdapter readingListAdapter = new ReadingListAdapter(ReadingList.this,readings);
             readingListView.setAdapter(readingListAdapter);
             readingListView.setVisibility(View.VISIBLE);
             readingsTextView.setVisibility(View.INVISIBLE);
             preloader.setVisibility(View.INVISIBLE);
 
-            readingListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            //Todo to fix
+            /*readingListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                 @Override
                 public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                     Intent toReadingDisplay = new Intent(ReadingList.this,ReadingDisplay.class);
                     toReadingDisplay.putExtra("reading",readings.get(position));
                     startActivity(toReadingDisplay);
                 }
-            });
+            });*/
             checkValidity();
         } else {
             readingsTextView.setText("Could not retrieve database.");
@@ -239,7 +228,7 @@ public class ReadingList extends AppCompatActivity {
     @Override
     protected void onStop(){
         super.onStop();
-        databaseReadings.keepSynced(false);
+        Firebase.setNetwork(false);
     }
 
     private void animateSize(final View view,int beginValue,int endValue){
@@ -285,13 +274,6 @@ public class ReadingList extends AppCompatActivity {
                     break;
                 case 1:
                     View uploadLayout = getLayoutInflater().inflate(R.layout.reading_notification_upload_layout, null);
-                    View upload = uploadLayout.findViewById(R.id.readingUploadBut);
-                    upload.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View v) {
-                            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://m.me/nziyodzemethodistapp")));
-                        }
-                    });
                     notificationHolder.addView(uploadLayout);
                     notified=true;
                     break;
@@ -304,7 +286,7 @@ public class ReadingList extends AppCompatActivity {
 
     public void checkValidity(){
         //Date extraction
-        DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'", Locale.getDefault());
+        DateFormat dateFormat = new SimpleDateFormat("yyyy MMMM dd", Locale.getDefault());
         String ss_date = readings.get(readings.size()-1).getDate();
         Date date, today;
         Calendar c = Calendar.getInstance();

@@ -12,11 +12,4 @@
         android:textSize="16sp"
         android:id="@+id/notifyTextView"
         android:textColor="@color/black"/>
-
-    <include layout="@layout/messenger_button_send_white_large"
-        android:layout_below="@id/notifyTextView"
-        android:id="@+id/readingUploadBut"
-        android:layout_height="50dp"
-        android:layout_width="match_parent"/>
-
 </RelativeLayout>

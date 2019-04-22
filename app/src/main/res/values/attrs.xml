@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="TitleBarView">
+        <attr name="title" format="string"/>
+        <attr name="leftIcon" formart="reference"/>
+        <attr name="rightIcon" formart="reference"/>
+    </declare-styleable>
+
+    <declare-styleable name="MenuItemView">
+        <attr name="menu_title" format="string"/>
+        <attr name="menu_icon" formart="reference"/>
+        <attr name="menu_subtitle" formart="string"/>
+        <attr name="menu_notification_count" format="integer"/>
+    </declare-styleable>
+</resources>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ViewFlipper
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:inAnimation="@anim/slide_down_in"
+        android:outAnimation="@anim/slide_down_out"
+        android:id="@+id/viewFlipper">
+        <com.crystal.crystalpreloaders.widgets.CrystalPreloader
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:crs_pl_fg_color="@color/cool"
+            app:crs_pl_style="line_scale"/>
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="4dp"
+            android:id="@+id/homeTabRecyclerView"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No readings at the moment. Use the menu to add readings"
+            android:layout_gravity="center"
+            android:id="@+id/notFoundText"/>
+    </ViewFlipper>
+
+</FrameLayout>

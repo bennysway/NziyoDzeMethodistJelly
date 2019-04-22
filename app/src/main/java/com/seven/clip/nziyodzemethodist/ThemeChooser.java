@@ -4,7 +4,7 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.GradientDrawable;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.util.DisplayMetrics;
 import android.view.View;
 import android.view.ViewGroup;
@@ -34,8 +34,6 @@ public class ThemeChooser extends AppCompatActivity {
 
         RelativeLayout themeChooserLayout = findViewById(R.id.themeChooserLayout);
         DisplayMetrics dm = new DisplayMetrics();
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
-                WindowManager.LayoutParams.FLAG_FULLSCREEN);
         getWindowManager().getDefaultDisplay().getMetrics(dm);
         final float scale = getResources().getDisplayMetrics().density;
         int pixels = (int) (1 * scale + 0.5f);
