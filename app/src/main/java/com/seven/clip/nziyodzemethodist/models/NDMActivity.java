@@ -51,6 +51,11 @@ public abstract class NDMActivity extends AppCompatActivity implements TitleBar,
         FragmentTransaction ft;
         NDMFragment previousFragment =(NDMFragment) getSupportFragmentManager().findFragmentByTag("currentFragment");
         ft = getSupportFragmentManager().beginTransaction();
+        ft.setCustomAnimations(
+                R.anim.frag_fade_zoom_in_enter,
+                R.anim.frag_fade_zoom_in_exit,
+                R.anim.frag_fade_zoom_out_enter,
+                R.anim.frag_fade_zoom_out_exit);
         if(previousFragment != null) ft.hide(previousFragment);
         ft.add(R.id.fragmentPlaceHolder, fragment, "currentFragment");
         if(previousFragment != null) ft.addToBackStack(null);

@@ -17,6 +17,7 @@ import com.seven.clip.nziyodzemethodist.models.NDMActivity;
 import com.seven.clip.nziyodzemethodist.models.NDMFragment;
 import com.seven.clip.nziyodzemethodist.util.ColorThemes;
 import com.seven.clip.nziyodzemethodist.util.Theme;
+import com.seven.clip.nziyodzemethodist.util.Util;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -134,6 +135,20 @@ public class HomeTab extends NDMFragment{
         for(int i=0;i<fabPackage.colorResources.size(); i++){
             fabPackage.iconResources.add(array.getResourceId(i,-1));
         }
+        Runnable run0 = new Runnable() {
+            @Override
+            public void run() {
+                Util.openExternalIntent(getContext(),Util.Intents.AppFacebookPage);
+            }
+        };
+        Runnable run1 = new Runnable() {
+            @Override
+            public void run() {
+                Util.openExternalIntent(getContext(),Util.Intents.AppYouTubePage);
+            }
+        };
+        fabPackage.runnables.append(0,run0);
+        fabPackage.runnables.append(1,run1);
         array.recycle();
         return fabPackage;
     }

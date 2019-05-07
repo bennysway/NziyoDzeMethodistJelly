@@ -120,3 +120,4 @@ public class HymnNumberPage extends NDMFragment {
             inputNumber.setText(check.substring(0,check.length()-1));
     }
 }
+

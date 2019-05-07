@@ -1,8 +1,11 @@
 package com.seven.clip.nziyodzemethodist.util;
 
 import android.animation.ValueAnimator;
+import android.content.ActivityNotFoundException;
 import android.content.Context;
+import android.content.Intent;
 import android.content.res.Resources;
+import android.net.Uri;
 import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.View;
@@ -22,37 +25,49 @@ import java.util.Locale;
 
 public class Util {
 
-    //UI Element
-    public enum Element {
-        home,
-        church,
-        organization,
-        hymnList,
-        hymnNumber,
-        hymn,
-        settings,
-        UI
-    }
-    public enum Component{
-        icon,
-        iconBackground,
-        text,
-        context,
-        textBackground,
-        contextBackground,
-        background
-    }
-    public enum Language{
-        shona,
-        english,
-        ndebele,
-        zulu
-    }
     public enum Storage_old{
         favlist,reclist,showsplash,color,image,textsize,recordflag,withcaption,
         colorflag,textsizeflag,accflag,faviterator,reciterator,themecolor,themename,
         bookmark,bibleoption,
         //firstTimes:biblepickerfirsttime,jsonhandler
+    }
+    public enum Intents{
+        AppFacebookPage,
+        DevFacebookPage,
+        AppYouTubePage,
+        DevYouTubePage,
+        AppMessengerPage,
+
+    }
+
+    public static void openExternalIntent(Context context, Intents intentName){
+        switch (intentName){
+            case AppFacebookPage:
+                try {
+                    context.getPackageManager().getPackageInfo("com.facebook.katana", 0);
+                    String url = "https://www.facebook.com/nziyodzemethodistapp/";
+                    context.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("fb://facewebmodal/f?href="+url)));
+                }
+                catch (Exception e) {
+                    context.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.facebook.com/bennyswayofficial/")));
+                    e.printStackTrace();
+                }
+                break;
+            case AppYouTubePage:
+                Intent intent;
+                String url = "http://www.youtube.com/channel/UC4hJWMPLGaPA_qT92uWnbhg";
+                try {
+                    intent =new Intent(Intent.ACTION_VIEW);
+                    intent.setPackage("com.google.android.youtube");
+                    intent.setData(Uri.parse(url));
+                    context.startActivity(intent);
+                } catch (ActivityNotFoundException e) {
+                    intent = new Intent(Intent.ACTION_VIEW);
+                    intent.setData(Uri.parse(url));
+                    context.startActivity(intent);
+                }
+                break;
+        }
     }
 
     public static String contextName(Context context){

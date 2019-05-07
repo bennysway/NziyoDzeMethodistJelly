@@ -10,7 +10,7 @@
     android:clipToPadding="false"
     app:edPosition="1"
     app:edMenuSize="300dp"
-    app:edMenuBackground="@color/white"
+    app:edMenuBackground="#ca000000"
     tools:context="com.seven.clip.nziyodzemethodist.MainDrawer">
     <RelativeLayout
         xmlns:android="http://schemas.android.com/apk/res/android"

@@ -12,6 +12,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.seven.clip.nziyodzemethodist.util.Util;
+
 public class Credits extends AppCompatActivity {
     private static Context context;
 
@@ -133,23 +135,7 @@ public class Credits extends AppCompatActivity {
         cr7.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = null;
-                try {
-
-                    getPackageManager().getPackageInfo("com.facebook.katana", 0);
-                    String url = "https://www.facebook.com/bennyswayofficial/";
-
-                    intent = new Intent(Intent.ACTION_VIEW, Uri.parse("fb://facewebmodal/f?href="+url));
-                    startActivity(intent);
-                }
-
-                catch (Exception e) {
-
-                    intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.facebook.com/bennyswayofficial/"));
-                    startActivity(intent);
-
-                    e.printStackTrace();
-                }
+                Util.openExternalIntent(Credits.this,Util.Intents.AppFacebookPage);
             }
         });
 
@@ -187,18 +173,7 @@ public class Credits extends AppCompatActivity {
         cr10.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=null;
-                String url = "http://www.youtube.com/channel/UCku3u-BFZL3BKnerFjNiTPw";
-                try {
-                    intent =new Intent(Intent.ACTION_VIEW);
-                    intent.setPackage("com.google.android.youtube");
-                    intent.setData(Uri.parse(url));
-                    startActivity(intent);
-                } catch (ActivityNotFoundException e) {
-                    intent = new Intent(Intent.ACTION_VIEW);
-                    intent.setData(Uri.parse(url));
-                    startActivity(intent);
-                }
+                Util.openExternalIntent(Credits.this, Util.Intents.AppYouTubePage);
             }
         });
 

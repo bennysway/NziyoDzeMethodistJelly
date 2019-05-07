@@ -6,8 +6,7 @@
     android:layout_height="match_parent"
     android:paddingTop="55dp"
     android:paddingLeft="20dp"
-    android:paddingRight="20dp"
-    android:background="@drawable/black_round">
+    android:paddingRight="20dp">
     <TextView
         android:layout_width="wrap_content"
         android:paddingLeft="30dp"

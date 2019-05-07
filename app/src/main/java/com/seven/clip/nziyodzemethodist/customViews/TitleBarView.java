@@ -13,7 +13,6 @@ import android.os.Build;
 import android.os.Handler;
 import android.util.AttributeSet;
 import android.util.DisplayMetrics;
-import android.util.Log;
 import android.util.TypedValue;
 import android.view.MotionEvent;
 import android.view.View;
@@ -23,7 +22,6 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextSwitcher;
-import android.widget.TextView;
 
 import com.google.android.flexbox.FlexDirection;
 import com.google.android.flexbox.FlexboxLayout;
@@ -43,7 +41,6 @@ import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
 import androidx.viewpager.widget.ViewPager;
 import static com.seven.clip.nziyodzemethodist.NziyoDzeMethodist.currentTheme;
-import static com.seven.clip.nziyodzemethodist.util.Util.quickToast;
 
 public class TitleBarView extends RelativeLayout implements ColorChangeListener {
     private static final String TAG = TitleBar.class.getSimpleName();
@@ -149,13 +146,9 @@ public class TitleBarView extends RelativeLayout implements ColorChangeListener 
                         break;
                     case MotionEvent.ACTION_UP:
                         RelativeLayout.LayoutParams layoutParams2 = (RelativeLayout.LayoutParams) view.getLayoutParams();
-                        if(startPos-event.getY()<0) {
-                            animateSize(view,layoutParams2.height,_height/2);
-                            if(!isTitleBarExpanded) {
-                                addFlexBox();
-                            }
-
-                        } else {
+                        if(startPos-event.getY()<0)
+                            animateSize(view, layoutParams2.height, _height / 2);
+                        else {
                             animateSize(view,layoutParams2.height,_defaultHeight);
                         }
                         isTitleBarExpanded = startPos-event.getY()<0;
@@ -175,15 +168,12 @@ public class TitleBarView extends RelativeLayout implements ColorChangeListener 
                         view.setLayoutParams(layoutParams);
                         break;
                 }
-                //_root.invalidate();
                 return true;
             }
         };
         rootView.setOnTouchListener(topDrag);
     }
-
-
-    private void loadTabMenu() {
+    private void showTabMenu() {
         menuView = rootView.findViewWithTag("circleMenu");
         NDMFragment fragment = ((NDMActivity)getContext()).getFragment();
         if(fragment != null){
@@ -217,6 +207,7 @@ public class TitleBarView extends RelativeLayout implements ColorChangeListener 
 
         }
     }
+    private void showNotification(){}
     private void removeTabMenu(){
         menuView = rootView.findViewWithTag("circleMenu");
         if(menuView != null) {
@@ -224,10 +215,6 @@ public class TitleBarView extends RelativeLayout implements ColorChangeListener 
             this.removeView(menuView);
             menuView = null;
         }
-    }
-    public void removeCustomViews(){
-        for(int i=2; i<linearLayout.getChildCount(); i++)
-                linearLayout.removeViewAt(i);
     }
     public void calculateTitleBarDimens(int layoutHeight) {
         DisplayMetrics dm = new DisplayMetrics();
@@ -239,12 +226,6 @@ public class TitleBarView extends RelativeLayout implements ColorChangeListener 
                 TypedValue.COMPLEX_UNIT_DIP, layoutHeight,r.getDisplayMetrics()));
         _height = dm.heightPixels;
         _travelDist = (_height/2) -_defaultHeight;
-    }
-    public void setLeftIconAction(Runnable runnable){
-        leftIconRunnable = runnable;
-    }
-    public void setRightIconAction(Runnable runnable){
-        rightIconRunnable = runnable;
     }
     public void setTitle(String title){
         titleTextView.setText(title);
@@ -269,7 +250,7 @@ public class TitleBarView extends RelativeLayout implements ColorChangeListener 
             public void onAnimationEnd(Animator animation) {
                 super.onAnimationEnd(animation);
                 if(!isTitleBarExpanded) removeTabMenu();
-                else loadTabMenu();
+                else showTabMenu();
             }
         });
         animator.start();
@@ -279,25 +260,11 @@ public class TitleBarView extends RelativeLayout implements ColorChangeListener 
         if(isMenuAvailable) menuView.setAlpha(value);
     }
     private void toggleTitleBar(boolean defaultMenu) {
-        if(isTitleBarExpanded){
-            animateSize(rootView,rootView.getLayoutParams().height,_defaultHeight);
-            //removeTabMenu();
-
-        } else {
-            animateSize(rootView,rootView.getLayoutParams().height,_defaultHeight + _travelDist);
-            if(defaultMenu){
-                addFlexBox();
-            }
-        }
+        if(isTitleBarExpanded)
+            animateSize(rootView, rootView.getLayoutParams().height, _defaultHeight);
+        else
+            animateSize(rootView, rootView.getLayoutParams().height, _defaultHeight + _travelDist);
         isTitleBarExpanded = !isTitleBarExpanded;
-       /* new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                if(!isTitleBarExpanded)
-                    blurListener.onClosed();
-            }
-        }, 500);*/
-
     }
     @Override
     public void transform(Theme previousTheme, final Theme newTheme) {
