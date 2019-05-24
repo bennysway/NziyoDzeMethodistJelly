@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 
 import com.seven.clip.nziyodzemethodist.R;
 import com.seven.clip.nziyodzemethodist.customViews.MenuItemView;
+import com.seven.clip.nziyodzemethodist.fragments.pages.HymnListPage;
 import com.seven.clip.nziyodzemethodist.fragments.pages.HymnNumberPage;
 import com.seven.clip.nziyodzemethodist.models.FabPackage;
 import com.seven.clip.nziyodzemethodist.models.NDMActivity;
@@ -89,7 +90,13 @@ public class HomeTab extends NDMFragment{
         hymnNumberButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                ((NDMActivity)getContext()).pushFragment(new HymnNumberPage());
+                ((NDMActivity)getContext()).pushFragment(new HymnNumberPage(),null);
+            }
+        });
+        hymnListButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ((NDMActivity)getContext()).pushFragment(new HymnListPage(),null);
             }
         });
     }

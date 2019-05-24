@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.seven.clip.nziyodzemethodist.NziyoDzeMethodist;
 import com.seven.clip.nziyodzemethodist.R;
 import com.seven.clip.nziyodzemethodist.models.FabPackage;
 import com.seven.clip.nziyodzemethodist.models.NDMActivity;
@@ -76,7 +77,14 @@ public class HymnNumberPage extends NDMFragment {
         acceptButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Util.quickToast(getContext(),inputNumber.getText().toString());
+                String id = NziyoDzeMethodist.databaseFile.manifest.databaseId + "-" + inputNumber.getText().toString();
+                if(NziyoDzeMethodist.databaseFile.get(id) == null)
+                    Util.quickToast("Hymn not found" + id);
+                else {
+                    Bundle bundle = new Bundle();
+                    bundle.putString("hymnId",id);
+                    ((NDMActivity)getContext()).pushFragment(new HymnDisplayPage(),bundle);
+                }
             }
         });
     }
@@ -110,7 +118,7 @@ public class HymnNumberPage extends NDMFragment {
 
     private void addNumber(int number) {
         String check = inputNumber.getText().toString();
-        if(Integer.valueOf(check + number) < 322)
+        if(Integer.valueOf(check + number) < 322 && !(check.equals("") && number == 0))
             inputNumber.setText(String.valueOf(check + number));
     }
 

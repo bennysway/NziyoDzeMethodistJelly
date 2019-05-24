@@ -61,6 +61,7 @@ public class TitleBarView extends RelativeLayout implements ColorChangeListener 
     private float startPos;
     public boolean isTitleBarExpanded;
     public boolean isMenuAvailable;
+    public boolean menuLock;
 
 
     public TitleBarView(Context context) {
@@ -173,36 +174,64 @@ public class TitleBarView extends RelativeLayout implements ColorChangeListener 
         };
         rootView.setOnTouchListener(topDrag);
     }
-    private void showTabMenu() {
+    public void showTabMenu() {
+        boolean animatingCloseMenu = false;
         menuView = rootView.findViewWithTag("circleMenu");
+        if(menuView != null){
+            menuView.close(true);
+            new Handler().postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    TitleBarView.this.removeView(menuView);
+                    menuView = null;
+                }
+            },400);
+            animatingCloseMenu = true;
+        }
         NDMFragment fragment = ((NDMActivity)getContext()).getFragment();
         if(fragment != null){
             final FabPackage fabPackage = fragment.getMenu();
-            if(menuView != null) {
+            if(fabPackage == null) {
                 isMenuAvailable = false;
                 this.removeView(menuView);
                 menuView = null;
-            }
-            if(fabPackage != null){
-                menuView = new CircleMenuView(getContext(),fabPackage.iconResources,fabPackage.colorResources);
-                RelativeLayout.LayoutParams params = new LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT,ViewGroup.LayoutParams.WRAP_CONTENT);
-                params.addRule(RelativeLayout.CENTER_IN_PARENT, RelativeLayout.TRUE);
-                menuView.setLayoutParams(params);
-                menuView.setTag("circleMenu");
-                menuView.setAlpha(0);
-                menuView.setScaleX(1.5f);
-                menuView.setScaleY(1.5f);
-                menuView.setEventListener(new CircleMenuView.EventListener(){
+            } else {
+                Runnable createNewMenu = new Runnable() {
                     @Override
-                    public void onButtonClickAnimationEnd(@NonNull CircleMenuView view, int buttonIndex) {
-                        super.onButtonClickAnimationEnd(view, buttonIndex);
-                        new Handler().postDelayed(fabPackage.runnables.get(buttonIndex),100);
-                        toggleTitleBar(false);
+                    public void run() {
+                        menuView = new CircleMenuView(getContext(),fabPackage.iconResources,fabPackage.colorResources);
+                        RelativeLayout.LayoutParams params = new LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT,ViewGroup.LayoutParams.WRAP_CONTENT);
+                        params.addRule(RelativeLayout.CENTER_IN_PARENT, RelativeLayout.TRUE);
+                        menuView.setLayoutParams(params);
+                        menuView.setTag("circleMenu");
+                        menuView.setAlpha(0);
+                        menuView.setScaleX(1.5f);
+                        menuView.setScaleY(1.5f);
+                        menuView.setEventListener(new CircleMenuView.EventListener(){
+                            @Override
+                            public void onButtonClickAnimationEnd(@NonNull CircleMenuView view, int buttonIndex) {
+                                super.onButtonClickAnimationEnd(view, buttonIndex);
+                                new Handler().postDelayed(fabPackage.runnables.get(buttonIndex),100);
+                                toggleTitleBar(false);
+                            }
+                        });
+                        TitleBarView.this.addView(menuView);
+                        isMenuAvailable = true;
+                        menuView.animate().alpha(1f).scaleX(1f).scaleY(1f).withEndAction(new Runnable() {
+                            @Override
+                            public void run() {
+                                new Handler().postDelayed(new Runnable() {
+                                    @Override
+                                    public void run() {
+                                        menuView.open(true);
+                                    }
+                                },100);
+                            }
+                        });
                     }
-                });
-                this.addView(menuView);
-                isMenuAvailable = true;
-                menuView.animate().alpha(1f).scaleX(1f).scaleY(1f);
+                };
+                if(animatingCloseMenu) (new Handler()).postDelayed(createNewMenu, 400);
+                else createNewMenu.run();
             }
 
         }
@@ -247,10 +276,17 @@ public class TitleBarView extends RelativeLayout implements ColorChangeListener 
         });
         animator.addListener(new AnimatorListenerAdapter() {
             @Override
+            public void onAnimationStart(Animator animation) {
+                super.onAnimationStart(animation);
+                menuLock = true;
+            }
+
+            @Override
             public void onAnimationEnd(Animator animation) {
                 super.onAnimationEnd(animation);
-                if(!isTitleBarExpanded) removeTabMenu();
+                if(view.getLayoutParams().height==_defaultHeight) removeTabMenu();
                 else showTabMenu();
+                menuLock = false;
             }
         });
         animator.start();

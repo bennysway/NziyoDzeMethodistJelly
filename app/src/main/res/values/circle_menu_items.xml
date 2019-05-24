@@ -1,19 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <resources>
+    <!--HOME
+        Open Facebook
+        Open Youtube
+        Activate Help
+        Settings
+        Rate Application
+        Open Web Version
+    -->
     <integer-array name="home_icons">
         <item>@drawable/facebook</item>
         <item>@drawable/youtube_play</item>
         <item>@drawable/ic_help</item>
-        <item>@drawable/ic_web_black_24dp</item>
+        <item>@drawable/ic_settings</item>
         <item>@drawable/ic_star</item>
-        <item>@drawable/google_plus</item>
+        <item>@drawable/ic_web_black_24dp</item>
     </integer-array>
     <integer-array name="home_colors">
         <item>@android:color/white</item>
         <item>@android:color/white</item>
         <item>@android:color/holo_purple</item>
-        <item>@color/burn</item>
+        <item>@color/coolDark</item>
         <item>@android:color/holo_orange_light</item>
         <item>@android:color/white</item>
     </integer-array>
+
+    <!--HYMN LIST
+        Sorting Options
+        Show Headers
+    -->
+        <integer-array name="hymn_list_icons">
+            <item>@drawable/ic_sort</item>
+            <item>@drawable/thumb_up</item>
+
+        </integer-array>
+        <integer-array name="hymn_list_colors">
+            <item>@android:color/holo_purple</item>
+            <item>@android:color/holo_blue_dark</item>
+        </integer-array>
 </resources>

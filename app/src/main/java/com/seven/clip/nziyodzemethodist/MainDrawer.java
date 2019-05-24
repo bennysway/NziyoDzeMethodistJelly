@@ -18,7 +18,7 @@ import com.seven.clip.nziyodzemethodist.fragments.pages.home.HomeTab;
 import com.seven.clip.nziyodzemethodist.interfaces.FabMenuListener;
 import com.seven.clip.nziyodzemethodist.interfaces.TitleBar;
 import com.seven.clip.nziyodzemethodist.models.FabPackage;
-import com.seven.clip.nziyodzemethodist.models.Hymn;
+import com.seven.clip.nziyodzemethodist.models.HymnDatabaseFile;
 import com.seven.clip.nziyodzemethodist.models.NDMActivity;
 import com.seven.clip.nziyodzemethodist.models.NDMFragment;
 import com.seven.clip.nziyodzemethodist.util.Theme;
@@ -37,7 +37,7 @@ public class MainDrawer extends NDMActivity implements FabMenuListener {
     Intent toSettings,toClearData;
     private FlowingDrawer mDrawer;
     MenuListFragment mMenuFragment;
-    ArrayList<Hymn> Hymns;
+    ArrayList<HymnDatabaseFile.Hymn> Hymns;
 
     RelativeLayout parent;
 
@@ -57,7 +57,6 @@ public class MainDrawer extends NDMActivity implements FabMenuListener {
             @Override
             public void run() {
                 setupMenu();
-                HymnsDB db = new HymnsDB(MainDrawer.this);
             }
         }, 400);
         //Button test = findViewById(R.id.test);
@@ -72,7 +71,7 @@ public class MainDrawer extends NDMActivity implements FabMenuListener {
                 changeTitleName(getFragment().fragmentName);
             }
         });
-        pushFragment(new HomeTab());
+        pushFragment(new HomeTab(),null);
     }
     public void openSettings(MenuItem item) {
         startActivity(toSettings);

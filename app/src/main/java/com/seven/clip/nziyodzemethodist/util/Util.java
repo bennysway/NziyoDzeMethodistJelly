@@ -16,6 +16,7 @@ import android.widget.Toast;
 
 import com.crystal.crystalpreloaders.interpolators.EaseCubicInOutInterpolator;
 import com.google.android.flexbox.FlexboxLayout;
+import com.seven.clip.nziyodzemethodist.NziyoDzeMethodist;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -75,6 +76,10 @@ public class Util {
     }
     public static void quickToast(Context packageContext, String text){
         Toast.makeText(packageContext, text,
+                Toast.LENGTH_SHORT).show();
+    }
+    public static void quickToast( String text){
+        Toast.makeText(NziyoDzeMethodist.getAppContext(), text,
                 Toast.LENGTH_SHORT).show();
     }
 

@@ -1,47 +1,58 @@
 package com.seven.clip.nziyodzemethodist.models;
 
 import java.util.ArrayList;
+import java.util.List;
+
+import androidx.annotation.Nullable;
 
 public class HymnDatabaseFile {
-    public class Database{
-        public class Hymn {
-            public class Header{
-                public String hymnName;
-                String id;
-            }
-            class Attributes{
-                int hymnNumber;
-                String language;
-                String[] relationIds;
-                String[] relationLanguages;
-                boolean hasChorus;
-            }
-            class Captions{
-                String tune;
-                String meter;
-                String key;
-                String tonicSolfa = "";
-                String subtitle;
-                String ndebele;
-            }
+    public class Hymn {
 
-            class Content{
-                String chorus;
-                String[] stanzas;
-            }
-            Header header;
-            Attributes attributes;
-            Captions captions;
-            Content content;
+        public class Header{
+            public String hymnName;
+            public String id;
+        }
+        public class Attributes{
+            public int hymnNumber;
+            public String language;
+            public String[] relationIds;
+            public String[] relationLanguages;
+            public boolean hasChorus;
+        }
+        public class Captions{
+            public String tune;
+            public String meter;
+            public String key;
+            public String tonicSolfa = "";
+            public String subtitle;
+            public String ndebele;
         }
 
-        Hymn[] hymns;
+        public class Content{
+            public String chorus;
+            public String[] stanzas;
+        }
+        public Header header;
+        public Attributes attributes;
+        public Captions captions;
+        public Content
+                content;
     }
-    public class Manifest{
-        String databaseName;
-        long lastModified;
-        int count;
+    public class Manifests{
+        public String databaseName;
+        public String databaseId;
+        public String language;
+        public int count;
+        public long lastModified;
     }
-    Database database;
-    Manifest manifest;
+    public List<Hymn> database;
+    public Manifests manifest;
+
+    public Hymn get(String id){
+        for(Hymn hymn: database){
+            if(hymn.header.id.equals(id))
+                return hymn;
+        }
+        return null;
+    }
 }

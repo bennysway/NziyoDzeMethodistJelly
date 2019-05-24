@@ -1902,7 +1902,6 @@ public class HymnDisplay extends AppCompatActivity {
         public boolean onScale(ScaleGestureDetector detector) {
             float size = (stanzas.get(0)).getTextSize();
             canShowDialog = false;
-
             Log.d("TextSizeStart", String.valueOf(size));
             float factor = detector.getScaleFactor();
             Log.d("Factor", String.valueOf(factor));

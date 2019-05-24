@@ -3,6 +3,7 @@ package com.seven.clip.nziyodzemethodist.models;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
 import android.widget.TextSwitcher;
@@ -34,20 +35,26 @@ public abstract class NDMActivity extends AppCompatActivity implements TitleBar,
                 int height = 50 + ((textView.getLineCount() - 1) * 30);
                 int defaultHeight = Util.convertDpToPixel(50);
                 titleBarView.calculateTitleBarDimens(height);
-                if(height>50){
-                    titleBarView.animateSize(titleBarView,
-                            titleBarView.getHeight(),
-                            Util.convertDpToPixel(height));
+                if(!titleBarView.isTitleBarExpanded){
+                    if(height>50){
+                        titleBarView.animateSize(titleBarView,
+                                titleBarView.getHeight(),
+                                Util.convertDpToPixel(height));
+                    } else {
+                        titleBarView.animateSize(titleBarView,
+                                titleBarView.getHeight(),
+                                defaultHeight);
+                    }
                 } else {
-                    titleBarView.animateSize(titleBarView,
-                            titleBarView.getHeight(),
-                            defaultHeight);
+                    if(!titleBarView.menuLock)
+                        titleBarView.showTabMenu();
                 }
+
             }
         },1000);
     }
     public abstract NDMFragment getFragment();
-    public void pushFragment(NDMFragment fragment) {
+    public void pushFragment(NDMFragment fragment, Bundle bundle) {
         FragmentTransaction ft;
         NDMFragment previousFragment =(NDMFragment) getSupportFragmentManager().findFragmentByTag("currentFragment");
         ft = getSupportFragmentManager().beginTransaction();
@@ -57,6 +64,7 @@ public abstract class NDMActivity extends AppCompatActivity implements TitleBar,
                 R.anim.frag_fade_zoom_out_enter,
                 R.anim.frag_fade_zoom_out_exit);
         if(previousFragment != null) ft.hide(previousFragment);
+        if(bundle != null) fragment.setArguments(bundle);
         ft.add(R.id.fragmentPlaceHolder, fragment, "currentFragment");
         if(previousFragment != null) ft.addToBackStack(null);
         ft.commit();

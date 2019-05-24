@@ -27,7 +27,7 @@ public class MakeFavDialog extends Dialog {
     String s;
     Context context;
 
-    MakeFavDialog(@NonNull Context passedContext,String hymnNum) {
+    public MakeFavDialog(@NonNull Context passedContext,String hymnNum) {
         super(passedContext);
         s = hymnNum;
         context = passedContext;
