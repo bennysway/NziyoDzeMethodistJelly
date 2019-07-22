@@ -22,8 +22,7 @@ import static android.graphics.Color.parseColor;
 
 public class MakeFavDialog extends Dialog {
 
-    private Data favList;
-    RealtimeBlurView blurView;
+    private RealtimeBlurView blurView;
     String s;
     Context context;
 

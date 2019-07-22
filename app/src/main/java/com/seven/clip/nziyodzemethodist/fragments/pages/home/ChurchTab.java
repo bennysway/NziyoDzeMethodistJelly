@@ -120,6 +120,11 @@ public class ChurchTab extends NDMFragment {
     }
 
     @Override
+    public View getAdjustableView() {
+        return null;
+    }
+
+    @Override
     public void setUserVisibleHint(boolean isVisibleToUser) {
         super.setUserVisibleHint(isVisibleToUser);
         if(isVisibleToUser){

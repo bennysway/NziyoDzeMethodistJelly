@@ -4,7 +4,6 @@ import android.content.Context;
 import android.os.Build;
 import android.util.AttributeSet;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.seven.clip.nziyodzemethodist.R;

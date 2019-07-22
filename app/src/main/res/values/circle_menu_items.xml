@@ -25,18 +25,29 @@
         <item>@android:color/holo_orange_light</item>
         <item>@android:color/white</item>
     </integer-array>
-
     <!--HYMN LIST
         Sorting Options
         Show Headers
     -->
-        <integer-array name="hymn_list_icons">
-            <item>@drawable/ic_sort</item>
-            <item>@drawable/thumb_up</item>
+    <integer-array name="hymn_list_icons">
+        <item>@drawable/ic_sort</item>
+        <item>@drawable/thumb_up</item>
 
-        </integer-array>
-        <integer-array name="hymn_list_colors">
+    </integer-array>
+    <integer-array name="hymn_list_colors">
             <item>@android:color/holo_purple</item>
             <item>@android:color/holo_blue_dark</item>
         </integer-array>
+    <!--Hymn Display
+        Show info
+    -->
+    <integer-array name="hymn_display_icons">
+        <item>@drawable/ic_info_black_24dp</item>
+        <item>@drawable/ic_info_black_24dp</item>
+
+    </integer-array>
+    <integer-array name="hymn_display_colors">
+        <item>@android:color/holo_orange_light</item>
+        <item>@android:color/holo_green_dark</item>
+    </integer-array>
 </resources>

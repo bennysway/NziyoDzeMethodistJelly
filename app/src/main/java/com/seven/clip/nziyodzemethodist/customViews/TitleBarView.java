@@ -8,12 +8,14 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.res.Resources;
 import android.content.res.TypedArray;
+import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.os.Handler;
 import android.util.AttributeSet;
 import android.util.DisplayMetrics;
 import android.util.TypedValue;
+import android.view.Gravity;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
@@ -22,24 +24,32 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextSwitcher;
+import android.widget.TextView;
+import android.widget.ViewSwitcher;
 
 import com.google.android.flexbox.FlexDirection;
 import com.google.android.flexbox.FlexboxLayout;
+import com.google.android.material.snackbar.Snackbar;
 import com.ramotion.circlemenu.CircleMenuView;
 import com.seven.clip.nziyodzemethodist.R;
 import com.seven.clip.nziyodzemethodist.interfaces.ColorChangeListener;
 import com.seven.clip.nziyodzemethodist.interfaces.TitleBar;
 import com.seven.clip.nziyodzemethodist.models.FabPackage;
+import com.seven.clip.nziyodzemethodist.models.HymnDatabaseFile.Hymn.Captions;
 import com.seven.clip.nziyodzemethodist.models.NDMActivity;
 import com.seven.clip.nziyodzemethodist.models.NDMFragment;
-import com.seven.clip.nziyodzemethodist.models.NDMPageAdapter;
+import com.seven.clip.nziyodzemethodist.models.SnackPackage;
 import com.seven.clip.nziyodzemethodist.util.ColorThemes;
 import com.seven.clip.nziyodzemethodist.util.Theme;
+import com.seven.clip.nziyodzemethodist.util.Util;
+
+import java.util.ArrayList;
+import java.util.Queue;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
-import androidx.viewpager.widget.ViewPager;
+
 import static com.seven.clip.nziyodzemethodist.NziyoDzeMethodist.currentTheme;
 
 public class TitleBarView extends RelativeLayout implements ColorChangeListener {
@@ -48,12 +58,11 @@ public class TitleBarView extends RelativeLayout implements ColorChangeListener 
     TextSwitcher titleTextView;
     ImageView leftIcon;
     ImageView rightIcon;
-    ViewPager viewPager;
-    NDMPageAdapter pageAdapter;
     LinearLayout linearLayout;
     FlexboxLayout flexboxLayout;
     Drawable flexBackground;
     CircleMenuView menuView;
+    Snackbar snackbar;
 
     private Runnable leftIconRunnable;
     private Runnable rightIconRunnable;
@@ -112,6 +121,30 @@ public class TitleBarView extends RelativeLayout implements ColorChangeListener 
         setTitle(typedArray.getString(R.styleable.TitleBarView_title));
         typedArray.recycle();
     }
+    public void adjustFragmentVisibleSize(int top){
+
+    }
+    public void adjustTitleBarSize(int newHeight){
+        calculateTitleBarDimens(newHeight);
+        if(!isTitleBarExpanded){
+            if(newHeight>50){
+                animateSize(this,
+                        getHeight(),
+                        Util.convertDpToPixel(newHeight));
+                adjustFragmentVisibleSize(Util.convertDpToPixel(newHeight));
+            } else {
+                animateSize(this,
+                        getHeight(),
+                        newHeight);
+                adjustFragmentVisibleSize(_defaultHeight);
+
+            }
+        } else {
+            if(!menuLock)
+                showTabMenu();
+        }
+
+    }
     private void initFunctions() {
         leftIcon.setOnClickListener(new OnClickListener() {
             @Override
@@ -127,6 +160,7 @@ public class TitleBarView extends RelativeLayout implements ColorChangeListener 
         });
 
     }
+
     private void applyColors() {
         //titleTextView.setTextColor(parseColor(currentTheme.getTextBackgroundColor()));
         ColorThemes.addDrawableFilter(leftIcon.getDrawable(),currentTheme.getTextBackgroundColor());
@@ -236,7 +270,41 @@ public class TitleBarView extends RelativeLayout implements ColorChangeListener 
 
         }
     }
-    private void showNotification(){}
+    public void showSnack(final Queue<SnackPackage> queue){
+        final SnackPackage snackPackage = queue.poll();
+        if(snackPackage == null) return;
+        Snackbar.Callback dismissCallback = new Snackbar.Callback(){
+            @Override
+            public void onDismissed(Snackbar snackbar, int event) {
+                switch (event) {
+                    case Snackbar.Callback.DISMISS_EVENT_TIMEOUT:
+                        if (queue.size() > 0) {
+                            showSnack(queue);
+                        }
+                        break;
+                }
+            }
+        };
+        if(snackPackage.isExecutable()){
+            snackbar = Snackbar.make(this,snackPackage.message,Snackbar.LENGTH_LONG);
+            snackbar.setAction(
+                    snackPackage.action,
+                    new OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            snackPackage.runnable.run();
+                        }
+                    }
+            ).addCallback(dismissCallback).show();
+        }
+        else {
+            snackbar = Snackbar.make(this, snackPackage.message, Snackbar.LENGTH_LONG);
+            snackbar.addCallback(dismissCallback).show();
+        }
+    }
+    public void removeSnackBar(){
+        if(snackbar != null) snackbar.dismiss();
+    }
     private void removeTabMenu(){
         menuView = rootView.findViewWithTag("circleMenu");
         if(menuView != null) {

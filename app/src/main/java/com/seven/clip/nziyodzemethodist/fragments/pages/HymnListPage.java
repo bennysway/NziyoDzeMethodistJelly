@@ -6,13 +6,17 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.seven.clip.nziyodzemethodist.HymnList;
 import com.seven.clip.nziyodzemethodist.NziyoDzeMethodist;
 import com.seven.clip.nziyodzemethodist.R;
 import com.seven.clip.nziyodzemethodist.adapters.recyclerViewAdapters.HymnListRecyclerViewAdapter;
 import com.seven.clip.nziyodzemethodist.models.FabPackage;
+import com.seven.clip.nziyodzemethodist.models.HymnDatabaseFile;
 import com.seven.clip.nziyodzemethodist.models.NDMFragment;
 import com.seven.clip.nziyodzemethodist.util.Theme;
 import com.seven.clip.nziyodzemethodist.util.Util;
+
+import java.util.List;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -48,7 +52,7 @@ public class HymnListPage extends NDMFragment {
     public void initViewFunctions() {
         mRecyclerView.addItemDecoration(new DividerItemDecoration(getContext(), DividerItemDecoration.VERTICAL));
         mRecyclerView.setLayoutManager(mLayoutManager);
-        mAdapter = new HymnListRecyclerViewAdapter(NziyoDzeMethodist.databaseFile.database,getContext());
+        mAdapter = new HymnListRecyclerViewAdapter(NziyoDzeMethodist.databaseFile.database,NziyoDzeMethodist.databaseFile.index,getContext());
         mRecyclerView.setAdapter(mAdapter);
     }
 
@@ -60,6 +64,11 @@ public class HymnListPage extends NDMFragment {
     @Override
     public void applyTheme() {
 
+    }
+
+    @Override
+    public View getAdjustableView() {
+        return mRecyclerView;
     }
 
     @Override

@@ -3,12 +3,15 @@ package com.seven.clip.nziyodzemethodist.fragments.pages.home;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.BitmapFactory;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.fede987.statusbaralert.StatusBarAlert;
+import com.fede987.statusbaralert.StatusBarAlertView;
 import com.seven.clip.nziyodzemethodist.R;
 import com.seven.clip.nziyodzemethodist.customViews.MenuItemView;
 import com.seven.clip.nziyodzemethodist.fragments.pages.HymnListPage;
@@ -22,14 +25,13 @@ import com.seven.clip.nziyodzemethodist.util.Util;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.core.content.ContextCompat;
 
 import static android.graphics.Color.parseColor;
 import static com.seven.clip.nziyodzemethodist.NziyoDzeMethodist.currentTheme;
 
 
 public class HomeTab extends NDMFragment{
-
-    private Context context;
 
     private MenuItemView hymnNumberButton;
     private MenuItemView hymnListButton;
@@ -45,44 +47,14 @@ public class HomeTab extends NDMFragment{
 
     public HomeTab(){}
 
-    @Override
-    public void setUserVisibleHint(boolean isVisibleToUser) {
-        super.setUserVisibleHint(isVisibleToUser);
-        if(isVisibleToUser){
-            (new Handler()).postDelayed(new Runnable() {
-                @Override
-                public void run() {
-                    //checkThemeChange();
-                    ((NDMActivity)context).changeTitleName("N");
-                }
-            }, 400);
-
-        }
-    }
-
-    private void checkThemeChange() {
-
-    }
-
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        setUserVisibleHint(false);
         rootView = inflater.inflate(R.layout.fragment_home_tab, container, false);
         fragmentName = "Nziyo DzeMethodist";
         initViewIds();
         applyTheme();
         initOnClicks();
-        String mainColor;
-        int[] mainColors = new int[5];
-
-        mainColor = currentTheme.getIconBackgroundColor();
-        for(int i=0; i<5 ;i++) {
-            mainColors[i] = parseColor(mainColor);
-            mainColor = currentTheme.isInDayMode() ? ColorThemes.getLowerHue(mainColor) : ColorThemes.getDarkerColor(mainColor);
-        }
-
-        LayoutInflater summaryInflater = LayoutInflater.from(getContext());
         return rootView;
     }
     @Override
@@ -97,6 +69,12 @@ public class HomeTab extends NDMFragment{
             @Override
             public void onClick(View view) {
                 ((NDMActivity)getContext()).pushFragment(new HymnListPage(),null);
+            }
+        });
+        searchButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
             }
         });
     }
@@ -124,6 +102,12 @@ public class HomeTab extends NDMFragment{
     @Override
     public void applyTheme(){
     }
+
+    @Override
+    public View getAdjustableView() {
+        return null;
+    }
+
     @Override
     public void transform(final Theme previousTheme, final Theme newTheme) {
         (new Handler()).postDelayed(new Runnable() {

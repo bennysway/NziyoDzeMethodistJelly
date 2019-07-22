@@ -6,6 +6,7 @@ import android.os.Bundle;
 
 import androidx.annotation.Nullable;
 
+import android.view.View;
 import android.widget.Toast;
 
 import com.seven.clip.nziyodzemethodist.R;
@@ -110,5 +111,10 @@ public class EventsTab extends NDMFragment implements BundleListener {
     @Override
     public void applyTheme() {
 
+    }
+
+    @Override
+    public View getAdjustableView() {
+        return null;
     }
 }

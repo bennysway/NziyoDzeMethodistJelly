@@ -271,4 +271,9 @@ public class ReadingsTab extends NDMFragment implements BundleListener {
     public void applyTheme() {
 
     }
+
+    @Override
+    public View getAdjustableView() {
+        return null;
+    }
 }

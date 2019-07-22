@@ -1,13 +1,12 @@
 package com.seven.clip.nziyodzemethodist.models;
 
-import java.util.ArrayList;
-import java.util.List;
+import android.util.SparseArray;
 
-import androidx.annotation.Nullable;
+import java.util.HashMap;
+import java.util.List;
 
 public class HymnDatabaseFile {
     public class Hymn {
-
         public class Header{
             public String hymnName;
             public String id;
@@ -23,7 +22,7 @@ public class HymnDatabaseFile {
             public String tune;
             public String meter;
             public String key;
-            public String tonicSolfa = "";
+            public String tonicSolfa;
             public String subtitle;
             public String ndebele;
         }
@@ -35,8 +34,7 @@ public class HymnDatabaseFile {
         public Header header;
         public Attributes attributes;
         public Captions captions;
-        public Content
-                content;
+        public Content content;
     }
     public class Manifests{
         public String databaseName;
@@ -46,6 +44,7 @@ public class HymnDatabaseFile {
         public long lastModified;
     }
     public List<Hymn> database;
+    public SparseArray<String> index = new SparseArray<>();
     public Manifests manifest;
 
     public Hymn get(String id){

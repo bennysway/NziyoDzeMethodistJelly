@@ -66,6 +66,11 @@ public class ReadingEditorFragment extends NDMFragment implements DialogListener
 
     }
 
+    @Override
+    public View getAdjustableView() {
+        return null;
+    }
+
     class Card {
 
         CardView card;

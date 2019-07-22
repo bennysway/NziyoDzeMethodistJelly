@@ -116,6 +116,11 @@ public class HymnNumberPage extends NDMFragment {
 
     }
 
+    @Override
+    public View getAdjustableView() {
+        return rootView;
+    }
+
     private void addNumber(int number) {
         String check = inputNumber.getText().toString();
         if(Integer.valueOf(check + number) < 322 && !(check.equals("") && number == 0))

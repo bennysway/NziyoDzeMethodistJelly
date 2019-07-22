@@ -1,10 +1,15 @@
 package com.seven.clip.nziyodzemethodist.util;
 
+import android.animation.Animator;
+import android.animation.AnimatorListenerAdapter;
 import android.animation.ValueAnimator;
 import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.Resources;
+import android.media.AudioFormat;
+import android.media.AudioManager;
+import android.media.AudioTrack;
 import android.net.Uri;
 import android.util.DisplayMetrics;
 import android.util.Log;
@@ -23,6 +28,9 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.Locale;
+
+import androidx.recyclerview.widget.LinearSmoothScroller;
+import androidx.recyclerview.widget.RecyclerView;
 
 public class Util {
 
@@ -81,6 +89,39 @@ public class Util {
     public static void quickToast( String text){
         Toast.makeText(NziyoDzeMethodist.getAppContext(), text,
                 Toast.LENGTH_SHORT).show();
+    }
+
+    public static void animatePadding(final View view, int top){
+        ValueAnimator animator = ValueAnimator.ofInt(view.getPaddingTop(), top);
+        animator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
+            @Override
+            public void onAnimationUpdate(ValueAnimator valueAnimator){
+                view.setPadding(view.getPaddingLeft(), (Integer) valueAnimator.getAnimatedValue(),view.getPaddingRight(), view.getPaddingBottom());
+            }
+        });
+        animator.setDuration(200);
+        animator.start();
+    }
+
+    public static void animatePadding(final View view, int left, int top, int right, int bottom){
+        final ValueAnimator animator0 = ValueAnimator.ofInt(view.getPaddingLeft(), left);
+        final ValueAnimator animator1 = ValueAnimator.ofInt(view.getPaddingTop(), top);
+        final ValueAnimator animator2 = ValueAnimator.ofInt(view.getPaddingRight(), right);
+        final ValueAnimator animator3 = ValueAnimator.ofInt(view.getPaddingBottom(), bottom);
+        animator0.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
+            @Override
+            public void onAnimationUpdate(ValueAnimator valueAnimator){
+                view.setPadding(
+                        (Integer) animator0.getAnimatedValue(),
+                        (Integer) animator1.getAnimatedValue(),
+                        (Integer) animator2.getAnimatedValue(),
+                        (Integer) animator3.getAnimatedValue()
+                );
+            }
+        });
+        animator0.setDuration(200);
+        animator0.start();
+
     }
 
     public static class CenterAnimate{
@@ -178,5 +219,20 @@ public class Util {
         DisplayMetrics metrics = Resources.getSystem().getDisplayMetrics();
         float px = dp * (metrics.densityDpi / 160f);
         return Math.round(px);
+    }
+    public static AudioTrack generateTone(double freqHz, int durationMs)
+    {
+        int count = (int)(44100.0 * 2.0 * (durationMs / 1000.0)) & ~1;
+        short[] samples = new short[count];
+        for(int i = 0; i < count; i += 2){
+            short sample = (short)(Math.sin(2 * Math.PI * i / (44100.0 / freqHz)) * 0x7FFF);
+            samples[i + 0] = sample;
+            samples[i + 1] = sample;
+        }
+        AudioTrack track = new AudioTrack(AudioManager.STREAM_MUSIC, 44100,
+                AudioFormat.CHANNEL_OUT_STEREO, AudioFormat.ENCODING_PCM_16BIT,
+                count * (Short.SIZE / 8), AudioTrack.MODE_STATIC);
+        track.write(samples, 0, count);
+        return track;
     }
 }

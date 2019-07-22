@@ -1,6 +1,8 @@
 package com.seven.clip.nziyodzemethodist.fragments.pages;
 
+import android.content.res.TypedArray;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,6 +15,7 @@ import com.seven.clip.nziyodzemethodist.adapters.recyclerViewAdapters.HymnListRe
 import com.seven.clip.nziyodzemethodist.adapters.recyclerViewAdapters.HymnStanzaRecyclerViewAdapter;
 import com.seven.clip.nziyodzemethodist.models.FabPackage;
 import com.seven.clip.nziyodzemethodist.models.HymnDatabaseFile.Hymn;
+import com.seven.clip.nziyodzemethodist.models.NDMActivity;
 import com.seven.clip.nziyodzemethodist.models.NDMFragment;
 import com.seven.clip.nziyodzemethodist.util.Theme;
 import com.seven.clip.nziyodzemethodist.util.Util;
@@ -23,6 +26,8 @@ import java.util.List;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.recyclerview.widget.DividerItemDecoration;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 public class HymnDisplayPage extends NDMFragment {
@@ -61,12 +66,17 @@ public class HymnDisplayPage extends NDMFragment {
 
     @Override
     public void initViewIds() {
-
+        mRecyclerView = rootView.findViewById(R.id.hymnDisplayRecyclerView);
+        mLayoutManager = new LinearLayoutManager(getContext());
     }
 
     @Override
     public void initViewFunctions() {
-
+        mRecyclerView.addItemDecoration(new DividerItemDecoration(getContext(), DividerItemDecoration.VERTICAL));
+        mRecyclerView.setLayoutManager(mLayoutManager);
+        mAdapter = new HymnStanzaRecyclerViewAdapter(currentHymn,getContext());
+        mRecyclerView.setAdapter(mAdapter);
+        ((NDMActivity) getContext()).pushNotification(currentHymn.captions);
     }
 
     @Override
@@ -80,12 +90,39 @@ public class HymnDisplayPage extends NDMFragment {
     }
 
     @Override
+    public View getAdjustableView() {
+        return mRecyclerView;
+    }
+
+    @Override
     public void transform(Theme previousTheme, Theme newTheme) {
 
     }
 
     @Override
     public FabPackage getMenu() {
-        return null;
+        FabPackage fabPackage = new FabPackage();
+        for(int id: getResources().getIntArray(R.array.hymn_display_colors))
+            fabPackage.colorResources.add(id);
+        TypedArray array = getResources().obtainTypedArray(R.array.hymn_display_icons);
+        for(int i=0;i<fabPackage.colorResources.size(); i++){
+            fabPackage.iconResources.add(array.getResourceId(i,-1));
+        }
+        Runnable run0 = new Runnable() {
+            @Override
+            public void run() {
+                ((NDMActivity) getContext()).pushNotification(currentHymn.captions);
+            }
+        };
+        Runnable run1 = new Runnable() {
+            @Override
+            public void run() {
+                Util.openExternalIntent(getContext(),Util.Intents.AppYouTubePage);
+            }
+        };
+        fabPackage.runnables.append(0,run0);
+        fabPackage.runnables.append(1,run1);
+        array.recycle();
+        return fabPackage;
     }
 }

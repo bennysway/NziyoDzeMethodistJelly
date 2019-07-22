@@ -4,18 +4,26 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_marginTop="10dp"
+    android:layout_marginStart="10dp"
+    android:layout_marginEnd="3dp"
     android:layout_marginBottom="10dp">
     <TextView
         android:id="@+id/stanzaNumber"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="20sp"
-        android:layout_alignParentStart="true"/>
+        android:textColor="@color/fadedWhite"
+        android:fontFamily="sans-serif-thin"
+        android:textSize="28sp"
+        android:layout_alignParentEnd="true"/>
     <TextView
         android:id="@+id/stanzaVerse"
         android:textSize="40sp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"/>
+        android:textColor="@color/white"
+        android:shadowColor="@color/black"
+        android:shadowRadius="5.0"
+        android:shadowDy="0.0"
+        android:shadowDx="0.0"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
 
 </com.seven.clip.nziyodzemethodist.models.NDMRoundedRelativeLayout>

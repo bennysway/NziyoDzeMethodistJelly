@@ -1,31 +1,36 @@
-package com.seven.clip.nziyodzemethodist;
+package com.seven.clip.nziyodzemethodist.activities;
 
 import android.content.Intent;
 import android.net.Uri;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
-import com.google.gson.Gson;
-import com.google.gson.reflect.TypeToken;
 import com.mxn.soul.flowingdrawer_core.ElasticDrawer;
 import com.mxn.soul.flowingdrawer_core.FlowingDrawer;
+import com.seven.clip.nziyodzemethodist.ClearData;
+import com.seven.clip.nziyodzemethodist.Credits;
+import com.seven.clip.nziyodzemethodist.MenuListFragment;
+import com.seven.clip.nziyodzemethodist.Notifications;
+import com.seven.clip.nziyodzemethodist.R;
+import com.seven.clip.nziyodzemethodist.SandBox;
+import com.seven.clip.nziyodzemethodist.Settings;
 import com.seven.clip.nziyodzemethodist.fragments.pages.home.HomeTab;
 import com.seven.clip.nziyodzemethodist.interfaces.FabMenuListener;
 import com.seven.clip.nziyodzemethodist.interfaces.TitleBar;
 import com.seven.clip.nziyodzemethodist.models.FabPackage;
 import com.seven.clip.nziyodzemethodist.models.HymnDatabaseFile;
 import com.seven.clip.nziyodzemethodist.models.NDMActivity;
+import com.seven.clip.nziyodzemethodist.models.NDMConstants;
 import com.seven.clip.nziyodzemethodist.models.NDMFragment;
 import com.seven.clip.nziyodzemethodist.util.Theme;
 import com.seven.clip.nziyodzemethodist.util.Util;
 import com.simmorsal.recolor_project.ReColor;
 
-import java.lang.reflect.Type;
 import java.util.ArrayList;
 
 import androidx.fragment.app.FragmentManager;
@@ -157,6 +162,22 @@ public class MainDrawer extends NDMActivity implements FabMenuListener {
     @Override
     public FabPackage getCircleMenu() {
         return null;
+    }
+
+
+    @Override
+    public void broadcast(Bundle bundle) {
+        switch ((NDMConstants.NDMBundleType)bundle.get("NDMBundle")){
+            case TITLE_BAR_HEIGHT:
+                int top = bundle.getInt("top",50);
+                NDMFragment fragment = this.getFragment();
+                if(fragment != null){
+                    View view = fragment.getAdjustableView();
+                    if(view != null)
+                        Util.animateSize(view, view.getLayoutParams().height,top);
+                }
+                break;
+        }
     }
 
     @Override

@@ -7,6 +7,8 @@ import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+
+import com.google.android.material.snackbar.Snackbar;
 import com.seven.clip.nziyodzemethodist.interfaces.ColorChangeListener;
 import com.seven.clip.nziyodzemethodist.interfaces.FabMenuListener;
 
@@ -19,5 +21,6 @@ public abstract class NDMFragment extends Fragment implements FabMenuListener, C
     public abstract void initViewFunctions();
     public abstract void initOnClicks();
     public abstract void applyTheme();
+    public abstract View getAdjustableView();
 
 }

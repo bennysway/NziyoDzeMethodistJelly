@@ -40,7 +40,7 @@
             android:windowSoftInputMode="stateHidden" />
         <activity android:name=".HymnList" />
         <activity
-            android:name=".MainDrawer"
+            android:name=".activities.MainDrawer"
             android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
@@ -132,7 +132,7 @@
         </activity>
         <activity android:name=".EventManager" />
         <activity android:name=".EventEditor" />
-        <activity android:name=".Splash"
+        <activity android:name=".activities.Splash"
             android:noHistory="true"
             android:theme="@style/SplashTheme">
             <intent-filter>
